@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
+import { GlobalProvider } from "./GlobalContext.tsx";
 
 function render() {
 	const root = document.getElementById("root");
@@ -12,7 +13,9 @@ function render() {
 
 	createRoot(root).render(
 		<StrictMode>
-			<App />
+			<GlobalProvider>
+				<App />
+			</GlobalProvider>
 		</StrictMode>,
 	);
 }
