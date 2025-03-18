@@ -1,0 +1,12 @@
+[
+	{
+		"id": "industrie",
+		"name": "Industrie",
+		"color": "#6ECDF5"
+	},
+	{
+		"id": "dienstleistungen",
+		"name": "Dienstlesitungen",
+		"color": "#41B496"
+	}
+]

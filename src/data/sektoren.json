@@ -1,0 +1,92 @@
+[
+	{
+		"id": "energie",
+		"name": "Energie",
+		"color": "#6A017A",
+		"branche": "Industrie"
+	},
+	{
+		"id": "fahrzeugbau",
+		"name": "Maschine / Fahrzeug",
+		"color": "#E66C37",
+		"branche": "Industrie"
+	},
+	{
+		"id": "nahrung",
+		"name": "Nahrung / Getränke",
+		"color": "#D64550",
+		"branche": "Industrie"
+	},
+	{
+		"id": "holz",
+		"name": "Holz / Papier / Druck",
+		"color": "#E044A6",
+		"branche": "Industrie"
+	},
+	{
+		"id": "pharma",
+		"name": "Pharma",
+		"color": "#4092FF",
+		"branche": "Industrie"
+	},
+	{
+		"id": "sonstige_konsumgueter",
+		"name": "Sonstige Konsumgüter",
+		"color": "#D9B400",
+		"branche": "Industrie"
+	},
+	{
+		"id": "elektroindustrie",
+		"name": "Elektro / Technik",
+		"color": "#12229E",
+		"branche": "Industrie"
+	},
+	{
+		"id": "metall",
+		"name": "Metall / Glas / Stein",
+		"color": "#754EC3",
+		"branche": "Industrie"
+	},
+	{
+		"id": "telekommunikation",
+		"name": "Verläge / Funk / Telekommunikation",
+		"color": "#F373D0",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "finanz",
+		"name": "Finanz-Dienstleistung",
+		"color": "#1AAB40",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "kreativ",
+		"name": "Kreativ-Dienstleistung",
+		"color": "#0F8DFF",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "forschung",
+		"name": "Forschung / Entwicklung",
+		"color": "#17C6F4",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "architektur",
+		"name": "Architektur / Ingenieur",
+		"color": "#1A7277",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "unternehmensberatung",
+		"name": "Beratung",
+		"color": "#BE5DC9",
+		"branche": "Dienstleistung"
+	},
+	{
+		"id": "software",
+		"name": "Software",
+		"color": "#FFA057",
+		"branche": "Dienstleistung"
+	}
+]
