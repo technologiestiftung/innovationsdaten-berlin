@@ -1,0 +1,136 @@
+@font-face {
+	font-family: "Clan Pro";
+	src:
+		local("Clan"),
+		url(../fonts/ClanWebPro-News.woff) format("woff");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Clan Pro";
+	src:
+		local("Clan"),
+		url(../fonts/ClanWebPro-Bold.woff) format("woff");
+	font-weight: bold;
+}
+
+$font-size: 16px;
+$mobile-horizontal-padding: 32px;
+$dark: #14161d;
+$blue: #1e3791;
+$white: #ffffff;
+$stroke-width: 2px;
+$all-transition: all 0.3s ease-in-out;
+
+html {
+	&.dark {
+		background-color: $dark;
+		h1,
+		h2,
+		h3,
+		h5,
+		h6,
+		p:not(.ignore) {
+			color: $white;
+		}
+		section,
+		main {
+			background-color: $dark;
+		}
+	}
+	&.light {
+		h1,
+		h2,
+		h3,
+		h5,
+		h6,
+		p:not(.ignore) {
+			color: $blue;
+		}
+	}
+	section,
+	main {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+	font-family: "Clan Pro", sans-serif;
+	font-weight: bold !important;
+	line-height: normal !important;
+}
+
+h1 {
+	font-size: 36px !important;
+}
+h2 {
+	font-size: 28px !important;
+}
+p {
+	font-size: $font-size;
+	font-family: "Clan Pro", sans-serif;
+	font-weight: normal;
+	&.bold {
+		font-weight: bold;
+	}
+	&.white {
+		color: $white;
+	}
+}
+
+section {
+	padding: 0 $font-size;
+	&#treemap {
+	}
+	&#areachart {
+	}
+}
+
+.filter-drop-down {
+	&.dark {
+		& > button,
+		& > div {
+			border: 2px solid $white;
+		}
+		& > div {
+			background: $dark;
+		}
+		hr {
+			color: $white;
+		}
+	}
+	&.light {
+		& > button,
+		& > div {
+			border: 2px solid $blue;
+		}
+		& > div {
+			background: $white;
+		}
+		hr {
+			color: $blue;
+		}
+	}
+	hr {
+		border-top-width: $stroke-width;
+		margin: 12px 0;
+	}
+	ul {
+		max-height: 60vh;
+	}
+	& > div {
+		width: 100%;
+		border-top: none !important;
+		transform: translateY(-2px);
+	}
+	& > button {
+		& > div {
+			transition: $all-transition;
+		}
+	}
+}
