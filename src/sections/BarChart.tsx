@@ -83,7 +83,9 @@ const BarChart: React.FC<BarChartProps> = ({ chart }) => {
 		segments.forEach((segment, index) => {
 			const nextPercentage = accumulatedPercentage + segment.percentage;
 			gradientString += `${segment.color} ${accumulatedPercentage}%, ${segment.color} ${nextPercentage}%`;
-			if (index < segments.length - 1) gradientString += ", ";
+			if (index < segments.length - 1) {
+				gradientString += ", ";
+			}
 			accumulatedPercentage = nextPercentage;
 		});
 		gradientString += ")";
@@ -219,13 +221,12 @@ const BarChart: React.FC<BarChartProps> = ({ chart }) => {
 			const collectData: DataTypeIntensitaet[] = [];
 			const innoIntensitaet: Record<string, number> = innointensitaet;
 			sektoren.forEach((sektor) => {
-				let findValue = innoIntensitaet[sektor.id];
+				const findValue = innoIntensitaet[sektor.id];
 				collectData.push({
 					...sektor,
 					value: findValue,
 				});
 			});
-			console.log("collectData :>> ", collectData);
 			collectData.sort((a, b) => b.value - a.value);
 		} else {
 			const collectData: DataType[] = [];
