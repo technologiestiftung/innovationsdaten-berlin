@@ -1,49 +1,58 @@
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
 import colors from "../data/colors.json";
 import sektoren from "../data/sektoren.json";
-import branchen from "../data/branchen.json";
 import { useGlobalContext } from "../GlobalContext";
 
 interface FilterDropdownProps {
-	filterList: string[];
-	filters: string[];
-	onChange: (selectedFilters: string[]) => void;
+	allFilters: string[]; // ✅ Remove `undefined`
+	activeFilters: string[];
+	setFilters: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const FilterDropdown: React.FC<FilterDropdownProps> = ({
-	filterList,
-	filters,
-	onChange,
+	allFilters,
+	activeFilters,
+	setFilters,
 }) => {
-	const { theme } = useGlobalContext();
+	const { theme, fontSize } = useGlobalContext();
 	const [isOpen, setIsOpen] = useState(false);
-	const [selectedFilters, setSelectedFilters] = useState<string[]>(filters);
+	const dropdownRef = useRef<HTMLDivElement | null>(null);
 
 	const toggleFilter = (filter: string) => {
-		const updatedFilters = selectedFilters.includes(filter)
-			? selectedFilters.filter((f) => f !== filter)
-			: [...selectedFilters, filter];
-
-		setSelectedFilters(updatedFilters);
-		onChange(updatedFilters);
+		const updatedFilters = activeFilters.includes(filter)
+			? activeFilters.filter((f) => f !== filter)
+			: [...activeFilters, filter];
+		setFilters(updatedFilters);
 	};
 
 	const toggleAll = () => {
-		if (selectedFilters.length === filters.length) {
-			setSelectedFilters([]);
-			onChange([]);
+		if (activeFilters.length === allFilters.length) {
+			setFilters([]);
 		} else {
-			setSelectedFilters(filters);
-			onChange(filters);
+			setFilters(allFilters);
 		}
-	};
-	const toggleBranche = (branche: any) => {
-		console.log("", branche);
+		return;
 	};
 
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				dropdownRef.current &&
+				!dropdownRef.current.contains(event.target as Node)
+			) {
+				setIsOpen(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => document.removeEventListener("mousedown", handleClickOutside);
+	}, []);
+
 	return (
-		<div className={`relative inline-block filter-drop-down ${theme}`}>
+		<div
+			ref={dropdownRef}
+			className={`relative inline-block filter-drop-down ${theme}`}
+		>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
 				className="px-4 py-2 flex items-center gap-4"
@@ -60,7 +69,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 				>
 					<Icon
 						id="chevron"
-						size={16}
+						size={fontSize}
 						setColor={theme === "dark" ? colors.white : colors.blue}
 					/>
 				</div>
@@ -68,46 +77,50 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 			{isOpen && (
 				<div className="absolute z-10">
 					<ul className="overflow-y-auto p-2">
-						<li className="flex items-center p-2" onClick={toggleAll}>
-							<input
-								type="checkbox"
-								checked={selectedFilters.length === filters.length}
-								className="mr-2"
-							/>
+						<li
+							className="flex items-center p-2 cursor-pointer"
+							onClick={toggleAll}
+						>
+							<span className="mr-2">
+								<Icon
+									id={
+										activeFilters.length === allFilters.length
+											? "checked"
+											: "unchecked"
+									}
+									size={fontSize}
+								/>
+							</span>
 							<p className="bold">Alle</p>
 						</li>
 
-						{branchen.map((branche) => (
-							<li
-								key={branche.id}
-								className="flex items-center p-2"
-								onClick={() => toggleBranche(branche)}
-							>
-								<input
-									type="checkbox"
-									checked={selectedFilters.length === filters.length}
-									className="mr-2"
-								/>
-								<p className="bold">{branche.name}</p>
-							</li>
-						))}
-
 						<hr />
 
-						{filterList.map((filter) => (
-							<li
-								key={filter}
-								className="flex items-center p-2"
-								onClick={() => toggleFilter(filter)}
-							>
-								<input
-									type="checkbox"
-									checked={!selectedFilters.includes(filter)}
-									className="mr-2"
-								></input>
-								<p>{sektoren.find((sektor) => sektor.id === filter)?.name}</p>
-							</li>
-						))}
+						{allFilters.map(
+							(filter) =>
+								filter && (
+									<li
+										key={filter}
+										className="flex items-center p-2 cursor-pointer"
+										onClick={() => toggleFilter(filter)}
+									>
+										<span className="mr-2">
+											<Icon
+												id={
+													activeFilters.includes(filter)
+														? "checked"
+														: "unchecked"
+												}
+												size={fontSize}
+											/>
+										</span>
+										<p className="line-clamp-1 break-words">
+											{sektoren.find((sektor) => sektor.id === filter)?.name ||
+												filter}
+										</p>
+									</li>
+								),
+						)}
 					</ul>
 				</div>
 			)}
