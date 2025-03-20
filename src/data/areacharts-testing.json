@@ -1,0 +1,155 @@
+[
+	{
+		"id": "branchen",
+		"title": "Wo ist Innovation gewachsen?",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"data": [
+			{ "year": 2018, "dienstleistungen": 1, "industrie": 2 },
+			{ "year": 2019, "dienstleistungen": 2, "industrie": 3 },
+			{ "year": 2020, "dienstleistungen": 2, "industrie": 3.5 },
+			{ "year": 2021, "dienstleistungen": 3, "industrie": 6 },
+			{ "year": 2022, "dienstleistungen": 4, "industrie": 5.5 },
+			{ "year": 2023, "dienstleistungen": 4.5, "industrie": 7 }
+		]
+	},
+	{
+		"id": "industrie",
+		"title": "In der Industrie...",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"data": [
+			{
+				"year": 2018,
+				"energie": 3,
+				"fahrzeugbau": 1,
+				"nahrung": 2,
+				"holz": 3,
+				"pharma": 4,
+				"sonstige_konsumgueter": 2.7,
+				"elektroindustrie": 0.8,
+				"metall": 1.2
+			},
+			{
+				"year": 2019,
+				"energie": 2,
+				"fahrzeugbau": 1.6,
+				"nahrung": 3,
+				"holz": 8,
+				"pharma": 9,
+				"sonstige_konsumgueter": 3,
+				"elektroindustrie": 2,
+				"metall": 2.2
+			},
+			{
+				"year": 2020,
+				"energie": 3.9,
+				"fahrzeugbau": 1.2,
+				"nahrung": 11,
+				"holz": 6,
+				"pharma": 5,
+				"sonstige_konsumgueter": 2.9,
+				"elektroindustrie": 0.2,
+				"metall": 4.0
+			},
+			{
+				"year": 2021,
+				"energie": 2,
+				"fahrzeugbau": 1.6,
+				"nahrung": 3,
+				"holz": 8,
+				"pharma": 9,
+				"sonstige_konsumgueter": 3,
+				"elektroindustrie": 2,
+				"metall": 2.2
+			},
+			{
+				"year": 2022,
+				"energie": 5,
+				"fahrzeugbau": 1,
+				"nahrung": 6,
+				"holz": 9,
+				"pharma": 2.5,
+				"sonstige_konsumgueter": 1.7,
+				"elektroindustrie": 6.8,
+				"metall": 1.9
+			},
+			{
+				"year": 2023,
+				"energie": 2,
+				"fahrzeugbau": 1.6,
+				"nahrung": 3,
+				"holz": 8,
+				"pharma": 9,
+				"sonstige_konsumgueter": 3,
+				"elektroindustrie": 2,
+				"metall": 2.2
+			}
+		]
+	},
+	{
+		"id": "dienstleistungen",
+		"title": "...und in der Dienstleistung.",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"data": [
+			{
+				"year": 2018,
+				"telekommunikation": 4,
+				"finanz": 3,
+				"kreativ": 1,
+				"forschung": 8.7,
+				"architektur": 4.3,
+				"unternehmensberatung": 2.1,
+				"software": 0.9
+			},
+			{
+				"year": 2019,
+				"telekommunikation": 2.5,
+				"finanz": 3.9,
+				"kreativ": 0.6,
+				"forschung": 5,
+				"architektur": 2.3,
+				"unternehmensberatung": 1.1,
+				"software": 2
+			},
+			{
+				"year": 2020,
+				"telekommunikation": 7,
+				"finanz": 3.4,
+				"kreativ": 1.2,
+				"forschung": 1.1,
+				"architektur": 4,
+				"unternehmensberatung": 1.5,
+				"software": 2
+			},
+			{
+				"year": 2021,
+				"telekommunikation": 4.9,
+				"finanz": 1,
+				"kreativ": 1.5,
+				"forschung": 6,
+				"architektur": 3.3,
+				"unternehmensberatung": 2.9,
+				"software": 5
+			},
+			{
+				"year": 2022,
+				"telekommunikation": 4.2,
+				"finanz": 3.6,
+				"kreativ": 1.6,
+				"forschung": 2,
+				"architektur": 3.3,
+				"unternehmensberatung": 6.1,
+				"software": 0.9
+			},
+			{
+				"year": 2023,
+				"telekommunikation": 7,
+				"finanz": 3.4,
+				"kreativ": 1.2,
+				"forschung": 1.1,
+				"architektur": 4,
+				"unternehmensberatung": 1.5,
+				"software": 2
+			}
+		]
+	}
+]

@@ -1,0 +1,46 @@
+[
+	{
+		"id": "umsatz",
+		"title": "Was sind die größten Branchen?",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"data": [
+			{ "branche": "nahrung", "value": 5590 },
+			{ "branche": "pharma", "value": 8639 },
+			{ "branche": "holz", "value": 1323 },
+			{ "branche": "metall", "value": 2567 },
+			{ "branche": "elektroindustrie", "value": 8846 },
+			{ "branche": "fahrzeugbau", "value": 15501 },
+			{ "branche": "sonstige_konsumgueter", "value": 738 },
+			{ "branche": "energie", "value": 28919 },
+			{ "branche": "telekommunikation", "value": 15170 },
+			{ "branche": "software", "value": 16787 },
+			{ "branche": "finanz", "value": 32814 },
+			{ "branche": "unternehmensberatung", "value": 4159 },
+			{ "branche": "architektur", "value": 5302 },
+			{ "branche": "forschung", "value": 1887 },
+			{ "branche": "kreativ", "value": 5260 }
+		]
+	},
+	{
+		"id": "beschaeftigte",
+		"title": "Wer beschäftigt die meisten Menschen?",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"data": [
+			{ "branche": "nahrung", "value": 15843 },
+			{ "branche": "pharma", "value": 20207 },
+			{ "branche": "holz", "value": 7754 },
+			{ "branche": "metall", "value": 10248 },
+			{ "branche": "elektroindustrie", "value": 25926 },
+			{ "branche": "fahrzeugbau", "value": 26601 },
+			{ "branche": "sonstige_konsumgueter", "value": 5629 },
+			{ "branche": "energie", "value": 24033 },
+			{ "branche": "telekommunikation", "value": 32903 },
+			{ "branche": "software", "value": 92676 },
+			{ "branche": "finanz", "value": 32921 },
+			{ "branche": "unternehmensberatung", "value": 22325 },
+			{ "branche": "architektur", "value": 41084 },
+			{ "branche": "forschung", "value": 8532 },
+			{ "branche": "kreativ", "value": 22024 }
+		]
+	}
+]

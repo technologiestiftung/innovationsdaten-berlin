@@ -1,0 +1,13 @@
+{
+	"berlin": {
+		"title": "Der Gesamtumsatz Berlins beträgt...",
+		"fact": "320",
+		"unit": "Mrd. €",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
+	},
+	"berliner_unternehmen": {
+		"title": "Innvation:",
+		"fact": "61%",
+		"unit": "der Berliner Unternehmen sind innovativ"
+	}
+}
