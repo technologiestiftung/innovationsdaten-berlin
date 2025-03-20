@@ -1,10 +1,21 @@
 import sektoren from "../data/sektoren.json";
 import ausgaben from "../data/inno-ausgaben.json";
+import innointensitaet from "../data/inno-intensitaet.json";
 import colors from "../data/colors.json";
 import Icon from "../components/Icons";
 import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
 import { formatNumber } from "../utilities";
+
+type BarChartProps = {
+	chart: {
+		id: string;
+		title: string;
+		text: string;
+		bar_chart_type: string;
+		legend: string;
+	};
+};
 
 type BranchenAusgaben = { "2023": number; "2022": number; delta: number };
 
@@ -23,18 +34,33 @@ type DataType = {
 	};
 } & BranchenAusgaben;
 
+type DataTypeIntensitaet = {
+	id: string;
+	name: string | undefined;
+	color: string | undefined;
+	branche: string | undefined;
+	value: number;
+};
+
 type SubGraphProps = {
 	entry: any;
 };
 
-const CustomBarChart: React.FC = () => {
-	const { fontSize } = useGlobalContext();
+const BarChart: React.FC<BarChartProps> = ({ chart }) => {
+	const { title, text, bar_chart_type, legend, id } = chart;
+	const { fontSize, isMobile } = useGlobalContext();
 
 	const [data, setData] = useState<any[]>([]);
-	const [type, setType] = useState<"delta" | "normal" | "intensity">("delta");
 
 	// const [elementHeight, setElementHeight] = useState<number>(70);
 	const elementHeight = 70;
+	const deltaDisplayType = "delta"; // delta-imgs
+
+	const testingSegments = [
+		{ percentage: 20, color: colors.cyan_light },
+		{ percentage: 30, color: colors.green_light },
+		{ percentage: 50, color: colors.blue },
+	];
 
 	const percentageBreakPoint = 30;
 
@@ -51,42 +77,31 @@ const CustomBarChart: React.FC = () => {
 		return `translateY(${elementHeight * index}px)`;
 	};
 
+	const getGradient = (segments: { percentage: number; color: string }[]) => {
+		let gradientString = "linear-gradient(to right, ";
+		let accumulatedPercentage = 0;
+		segments.forEach((segment, index) => {
+			const nextPercentage = accumulatedPercentage + segment.percentage;
+			gradientString += `${segment.color} ${accumulatedPercentage}%, ${segment.color} ${nextPercentage}%`;
+			if (index < segments.length - 1) gradientString += ", ";
+			accumulatedPercentage = nextPercentage;
+		});
+		gradientString += ")";
+		return gradientString;
+	};
+
 	const getWidth = (
 		barWidthPositiveDelta: string,
 		barWidthNegativeDelta: string,
 		delta: number,
 	) => {
-		if (type === "normal") {
+		if (bar_chart_type === "normal") {
 			return "100%";
 		}
 		if (delta > 0) {
 			return barWidthPositiveDelta;
 		}
 		return barWidthNegativeDelta;
-	};
-
-	const initData = () => {
-		const select = "2023";
-		const collectData: DataType[] = [];
-		sektoren.forEach((sektor) => {
-			const findAusgaben = (ausgaben as Record<string, BranchenAusgaben>)[
-				sektor.id
-			] || { "2023": 0, "2022": 0, delta: 0 };
-			collectData.push({
-				...sektor,
-				...findAusgaben,
-				width: {
-					2022: `${calcWidth(findAusgaben["2022"])}%`,
-					2023: `${calcWidth(findAusgaben["2023"])}%`,
-				},
-				widthBreaksPoint: {
-					2022: calcWidth(findAusgaben["2022"]) >= percentageBreakPoint,
-					2023: calcWidth(findAusgaben["2023"]) >= percentageBreakPoint,
-				},
-			});
-		});
-		collectData.sort((a, b) => (b[select] ?? 0) - (a[select] ?? 0));
-		setData(collectData);
 	};
 
 	const BigGraph: React.FC<SubGraphProps> = ({ entry }) => {
@@ -109,7 +124,10 @@ const CustomBarChart: React.FC = () => {
 				<div
 					className="bar flex justify-end items-center gap-2 pr-2"
 					style={{
-						background: entry.color,
+						background:
+							bar_chart_type === "shares"
+								? getGradient(testingSegments)
+								: entry.color,
 						width: getWidth(
 							barWidthPositiveDelta,
 							barWidthNegativeDelta,
@@ -118,14 +136,15 @@ const CustomBarChart: React.FC = () => {
 						minHeight: minHeightOfBar,
 					}}
 				>
-					<p className="ignore white small">
-						{formatNumber(type === "delta" ? value2022 : value2023)} Mio. €
+					<p className={`ignore white ${isMobile ? "small" : ""}`}>
+						{formatNumber(bar_chart_type === "delta" ? value2022 : value2023)}{" "}
+						Mio. €
 					</p>
 					<Icon id={entry.id} setColor={colors.white} size={fontSize} />
 				</div>
-				{type === "delta" && (
+				{bar_chart_type === "delta" && (
 					<div
-						className={`delta ${delta > 0 ? "positive" : "negative"}`}
+						className={`${deltaDisplayType} ${delta > 0 ? "positive" : "negative"}`}
 						style={{
 							width:
 								delta > 0 ? deltaWidthPositiveDelta : deltaWidthNegativeDelta,
@@ -162,7 +181,10 @@ const CustomBarChart: React.FC = () => {
 					<div
 						className="bar"
 						style={{
-							background: entry.color,
+							background:
+								bar_chart_type === "shares"
+									? getGradient(testingSegments)
+									: entry.color,
 							width: getWidth(
 								barWidthPositiveDelta,
 								barWidthNegativeDelta,
@@ -171,9 +193,9 @@ const CustomBarChart: React.FC = () => {
 							minHeight: minHeightOfBar,
 						}}
 					/>
-					{type === "delta" && (
+					{bar_chart_type === "delta" && (
 						<div
-							className={`delta ${delta > 0 ? "positive" : "negative"}`}
+							className={`${deltaDisplayType} ${delta > 0 ? "positive" : "negative"}`}
 							style={{
 								width:
 									delta > 0 ? deltaWidthPositiveDelta : deltaWidthNegativeDelta,
@@ -182,39 +204,61 @@ const CustomBarChart: React.FC = () => {
 						/>
 					)}
 				</div>
-				<p className="small mx-2">
-					{formatNumber(type === "delta" ? value2022 : value2023)} Mio. €
+				<p className={`mx-2 ${isMobile ? "small" : ""}`}>
+					{formatNumber(bar_chart_type === "delta" ? value2022 : value2023)}{" "}
+					Mio. €
 				</p>
 				<Icon id={entry.id} size={fontSize} />
 			</div>
 		);
 	};
 
+	const initData = () => {
+		const select = "2023";
+		if (id.includes("intensitaet")) {
+			const collectData: DataTypeIntensitaet[] = [];
+			const innoIntensitaet: Record<string, number> = innointensitaet;
+			sektoren.forEach((sektor) => {
+				let findValue = innoIntensitaet[sektor.id];
+				collectData.push({
+					...sektor,
+					value: findValue,
+				});
+			});
+			console.log("collectData :>> ", collectData);
+			collectData.sort((a, b) => b.value - a.value);
+		} else {
+			const collectData: DataType[] = [];
+			sektoren.forEach((sektor) => {
+				const findAusgaben = (ausgaben as Record<string, BranchenAusgaben>)[
+					sektor.id
+				] || { "2023": 0, "2022": 0, delta: 0 };
+				collectData.push({
+					...sektor,
+					...findAusgaben,
+					width: {
+						2022: `${calcWidth(findAusgaben["2022"])}%`,
+						2023: `${calcWidth(findAusgaben["2023"])}%`,
+					},
+					widthBreaksPoint: {
+						2022: calcWidth(findAusgaben["2022"]) >= percentageBreakPoint,
+						2023: calcWidth(findAusgaben["2023"]) >= percentageBreakPoint,
+					},
+				});
+			});
+			collectData.sort((a, b) => (b[select] ?? 0) - (a[select] ?? 0));
+			setData(collectData);
+		}
+	};
+
 	useEffect(initData, []);
 
 	return (
-		<section id="treemap" className="mb-20">
-			<h2 className="mb-4">Wie sahen die Innovations&shy;ausgaben 2022 aus?</h2>
-			<p className="mb-4">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis
-				malesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquam
-				sit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.
-				Ut ut posuere dolor. Fusce nec feugiat ipsum.
-			</p>
-			<p
-				className="my-10"
-				onClick={() =>
-					type === "normal" ? setType("delta") : setType("normal")
-				}
-			>
-				Toggle
-			</p>
-			<hr />
-			<p className="mb-10 mt-2">
-				*Innovationsausgaben in Mio. € 2022
-				<br />
-				delta 2023-2022 in rot oder grün
-			</p>
+		<section id={`treemap-${id}`} className="mb-20">
+			<h2 className="mb-4" dangerouslySetInnerHTML={{ __html: title }} />
+			<p className="mb-4"> {text}</p>
+			<hr className="mt-10" />
+			<p className="mb-10 mt-2" dangerouslySetInnerHTML={{ __html: legend }} />
 			<div
 				className="custom-bar-chart"
 				style={{ height: elementHeight * data.length }}
@@ -227,7 +271,9 @@ const CustomBarChart: React.FC = () => {
 							transform: calcTransform(index),
 						}}
 					>
-						<p className="bold mb-1 small">{entry.name}</p>
+						<p className={`bold mb-1 ${isMobile ? "small" : ""}`}>
+							{entry.name}
+						</p>
 						{entry.widthBreaksPoint["2023"] ? (
 							<BigGraph entry={entry} />
 						) : (
@@ -240,4 +286,4 @@ const CustomBarChart: React.FC = () => {
 	);
 };
 
-export default CustomBarChart;
+export default BarChart;

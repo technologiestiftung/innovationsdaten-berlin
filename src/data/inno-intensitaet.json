@@ -1,0 +1,17 @@
+{
+	"nahrung": 0.5,
+	"pharma": 18.4,
+	"holz": 4.3,
+	"metall": 2.8,
+	"elektroindustrie": 10.9,
+	"fahrzeugbau": 6.1,
+	"sonstige_konsumgueter": 6.4,
+	"energie": 0.7,
+	"telekommunikation": 1.8,
+	"software": 6.5,
+	"finanz": 0.8,
+	"unternehmensberatung": 1.5,
+	"architektur": 2.3,
+	"forschung": 12.7,
+	"kreativ": 3.6
+}

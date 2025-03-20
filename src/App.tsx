@@ -9,6 +9,8 @@ import BigFactComparison from "./sections/BigFactComparison";
 import Sektoren from "./sections/Sektoren";
 import TreeMap from "./sections/TreeMap";
 import AreaChart from "./sections/AreaChart";
+import BarChart from "./sections/BarChart";
+import barcharts from "./data/barcharts.json";
 
 function App() {
 	const { theme } = useGlobalContext();
@@ -23,6 +25,9 @@ function App() {
 				<TreeMap />
 				<BigFact factKey="berliner_unternehmen" />
 				<AreaChart />
+				{barcharts.map((barchart) => (
+					<BarChart key={barchart.id} chart={barchart} />
+				))}
 				<BigFactComparison factKey="kmus" />
 			</main>
 			<ThemeToggle />

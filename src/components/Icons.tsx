@@ -222,7 +222,7 @@ const Icon: React.FC<IconProps> = ({ id, size = 24, setColor }) => {
 			</svg>
 		);
 	}
-	if (id === "softwar") {
+	if (id === "software") {
 		return (
 			<svg
 				width={size}

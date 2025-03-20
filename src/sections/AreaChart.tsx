@@ -62,28 +62,31 @@ const AreaChart: React.FC = () => {
 					{data?.year}
 				</p>
 				{Object.keys(data).map((dataKey) => (
-					<>
-						{dataKey !== "year" && activeFilters.includes(dataKey) && (
-							<div className="flex justify-between gap-6">
-								<p
-									className="max-w-[100px] truncate"
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									{findTitle(dataKey)}:
-								</p>
-								<p
-									className="bold ml-2"
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									{data[dataKey]} Mrd. €
-								</p>
-							</div>
-						)}
-					</>
+					<div key={dataKey}>
+						{dataKey !== "year" &&
+							(activeFilters.includes(dataKey) ||
+								dataKey === "dienstleistungen" ||
+								dataKey === "industrie") && (
+								<div className="flex justify-between gap-6">
+									<p
+										className="max-w-[100px] truncate"
+										style={{
+											color: theme === "dark" ? colors.dark : colors.white,
+										}}
+									>
+										{findTitle(dataKey)}:
+									</p>
+									<p
+										className="bold ml-2"
+										style={{
+											color: theme === "dark" ? colors.dark : colors.white,
+										}}
+									>
+										{data[dataKey]} Mrd. €
+									</p>
+								</div>
+							)}
+					</div>
 				))}
 			</div>
 		);
@@ -101,6 +104,9 @@ const AreaChart: React.FC = () => {
 		const getStrokeOrFill = (id: string, color: string | null) => {
 			if (theme === "dark") {
 				if (activeFilters.indexOf(id) > -1) {
+					if (color) {
+						return color;
+					}
 					return colors.white;
 				}
 				return hexToRgba(colors.white, 0.2);
@@ -147,8 +153,8 @@ const AreaChart: React.FC = () => {
 
 		useEffect(() => {
 			measureXAxis();
-			window.addEventListener("resize", measureXAxis);
-			return () => window.removeEventListener("resize", measureXAxis);
+			// window.addEventListener("resize", measureXAxis);
+			// return () => window.removeEventListener("resize", measureXAxis);
 		}, []);
 
 		return (
