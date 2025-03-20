@@ -1,13 +1,17 @@
 const hexToRgba = (hex: string, opacity: number) => {
 	// Remove # if present
-	hex = hex.replace(/^#/, "");
+	const getHex = hex.replace(/^#/, "");
 
 	// Parse RGB values
-	let r = parseInt(hex.substring(0, 2), 16);
-	let g = parseInt(hex.substring(2, 4), 16);
-	let b = parseInt(hex.substring(4, 6), 16);
+	const r = parseInt(getHex.substring(0, 2), 16);
+	const g = parseInt(getHex.substring(2, 4), 16);
+	const b = parseInt(getHex.substring(4, 6), 16);
 
 	return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
 
-export { hexToRgba };
+const formatNumber = (num: number) => {
+	return new Intl.NumberFormat("de-DE").format(num);
+};
+
+export { hexToRgba, formatNumber };
