@@ -1,24 +1,31 @@
-import { ResponsiveContainer, Tooltip, Treemap } from "recharts";
+import {
+	ResponsiveContainer,
+	Tooltip,
+	Treemap as TreeMapRecharts,
+} from "recharts";
 import sektoren from "../data/sektoren.json";
-import revenueExample from "../data/revenue-example.json";
+import treemaps from "../data/treemaps.json";
 import colors from "../data/colors.json";
 import Icon from "../components/Icons";
 import { useGlobalContext } from "../GlobalContext";
+import { formatNumber } from "../utilities";
+import React from "react";
 
-const TreeMapSection: React.FC = () => {
-	const { theme } = useGlobalContext();
-	const data = sektoren.map((sektor) => {
-		return {
-			name: sektor.name,
-			size: revenueExample[sektor.id as keyof typeof revenueExample] || 0,
-			fill: sektor.color,
-			id: sektor.id,
-		};
-	});
+const TreeMap: React.FC = () => {
+	const { theme, fontSize } = useGlobalContext();
 
 	const CustomTreemapNode = (props: any) => {
-		const { x, y, width, height, id, fill } = props;
-		const iconSize = height <= 16 ? height - 4 : 16;
+		const { x, y, width, height, id, color } = props;
+		const getIconSize = () => {
+			if (window.innerWidth >= 900) {
+				return fontSize * 2;
+			}
+			if (height <= fontSize) {
+				return height - 4;
+			}
+			return fontSize;
+		};
+		const iconSize = getIconSize();
 		const iconX = x + (width - iconSize) / 2;
 		const iconY = y + (height - iconSize) / 2;
 		return (
@@ -28,7 +35,7 @@ const TreeMapSection: React.FC = () => {
 					y={y}
 					width={width}
 					height={height}
-					fill={fill}
+					fill={color}
 					stroke={theme === "dark" ? colors.white : colors.blue}
 					strokeWidth={2}
 				/>
@@ -39,38 +46,69 @@ const TreeMapSection: React.FC = () => {
 		);
 	};
 
-	const CustomTooltip = ({ active, payload }: any) => {
-		if (!active || !payload || !payload.length) return null;
+	const CustomTooltip = ({ active, payload, dataID }: any) => {
+		if (!active || !payload || !payload.length) {
+			return null;
+		}
 		const data = payload[0].payload;
 		return (
 			<div
-				className="p-2 shadow-md"
+				className="p-4"
 				style={{
 					backgroundColor: theme === "dark" ? colors.white : colors.blue,
 				}}
 			>
 				<p
-					className="bold mb-2"
-					style={{ color: theme === "dark" ? colors.dark : colors.white }}
+					className="bold"
+					style={{
+						color: theme === "dark" ? colors.dark : colors.white,
+						marginBottom: fontSize,
+					}}
 				>
 					{data.name}
 				</p>
-				<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>
-					Gesamt: {data.size} Mio. €
-				</p>
+				<div className="flex justify-between">
+					<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>
+						Gesamt:
+					</p>
+					<p
+						className="bold ml-2"
+						style={{ color: theme === "dark" ? colors.dark : colors.white }}
+					>
+						{formatNumber(data.value)}
+						{dataID === "umsatz" ? " Mio. €" : " Tsd."}
+					</p>
+				</div>
+				<div className="flex justify-between">
+					<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>
+						Anteil:
+					</p>
+					<p
+						className="bold"
+						style={{ color: theme === "dark" ? colors.dark : colors.white }}
+					>
+						{Math.ceil((100 / data.totalValue) * data.value)}%
+					</p>
+				</div>
 			</div>
 		);
 	};
 
-	return (
-		<section id="treemap" className="mb-20">
-			<h2>Was sind die größten Branchen?</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis
-				malesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquam
-				sit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.
-				Ut ut posuere dolor. Fusce nec feugiat ipsum.{" "}
-			</p>
+	const SingleTreeMap = ({ treeMapData }: any) => {
+		let totalValue = 0;
+		treeMapData.data.forEach((entry: any) => (totalValue += entry.value));
+		const collectData = sektoren.map((sektor) => {
+			const findData = treeMapData.data.find(
+				(entry: any) => entry.branche === sektor.id,
+			);
+			const returnData = {
+				...sektor,
+				value: findData.value,
+				totalValue,
+			};
+			return returnData;
+		});
+		return (
 			<div
 				style={{
 					border:
@@ -81,21 +119,37 @@ const TreeMapSection: React.FC = () => {
 				}}
 			>
 				<ResponsiveContainer width="100%" height={window.innerHeight * 0.7}>
-					<Treemap
-						data={data}
+					<TreeMapRecharts
+						data={collectData}
 						aspectRatio={1}
-						dataKey="size"
+						dataKey="value"
 						fill="none"
 						content={<CustomTreemapNode />}
 						isAnimationActive={false}
 						isUpdateAnimationActive={false}
 					>
-						<Tooltip content={<CustomTooltip />} />
-					</Treemap>
+						<Tooltip
+							content={(props) => (
+								<CustomTooltip {...props} dataID={treeMapData.id} />
+							)}
+						/>
+					</TreeMapRecharts>
 				</ResponsiveContainer>
 			</div>
+		);
+	};
+
+	return (
+		<section id="treemap" className="py-14">
+			{treemaps.map((treemap, index) => (
+				<div key={treemap.id} className={!index ? "" : "mt-14"}>
+					<h2 className="mb-4">{treemap?.title}</h2>
+					<p className="mb-14">{treemap?.text}</p>
+					<SingleTreeMap treeMapData={treemap} />
+				</div>
+			))}
 		</section>
 	);
 };
 
-export default TreeMapSection;
+export default TreeMap;
