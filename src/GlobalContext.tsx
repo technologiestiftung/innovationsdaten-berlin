@@ -1,4 +1,4 @@
-import {
+import React, {
 	createContext,
 	useState,
 	ReactNode,
@@ -12,6 +12,9 @@ type Theme = "light" | "dark";
 interface GlobalStateType {
 	theme: Theme;
 	toggleTheme: () => void;
+	fontSize: number;
+	breakPoint: number;
+	isMobile: boolean;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -19,7 +22,13 @@ const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	children,
 }) => {
-	const [theme, setTheme] = useState<Theme>("light");
+	const [theme, setTheme] = useState<Theme>("dark");
+
+	const fontSize = 14;
+
+	const breakPoint = 900;
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 900);
+	const checkIfViewPortIsMobile = () => setIsMobile(window.innerWidth < 900);
 
 	// Toggle theme function
 	const toggleTheme = () => {
@@ -31,8 +40,15 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		document.documentElement.classList.add(theme);
 	}, [theme]);
 
+	useEffect(() => {
+		window.addEventListener("resize", checkIfViewPortIsMobile);
+		return () => window.removeEventListener("resize", checkIfViewPortIsMobile);
+	}, []);
+
 	return (
-		<GlobalContext.Provider value={{ theme, toggleTheme }}>
+		<GlobalContext.Provider
+			value={{ theme, toggleTheme, fontSize, breakPoint, isMobile }}
+		>
 			{children}
 		</GlobalContext.Provider>
 	);
