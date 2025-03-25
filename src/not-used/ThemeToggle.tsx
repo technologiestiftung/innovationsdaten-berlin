@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icons";
+import Icon from "../components/Icons";
 import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 
