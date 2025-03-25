@@ -1,107 +1,12 @@
 [
 	{
-		"id": "energie",
-		"name": "Energie",
-		"color": "#6A017A",
-		"branche": "Industrie",
-		"branche_id": "industrie"
+		"id": "industrie",
+		"name": "Industrie",
+		"color": "#6ECDF5"
 	},
 	{
-		"id": "fahrzeugbau",
-		"name": "Maschine / Fahrzeug",
-		"color": "#E66C37",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "nahrung",
-		"name": "Nahrung / Getränke",
-		"color": "#D64550",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "holz",
-		"name": "Holz / Papier / Druck",
-		"color": "#E044A6",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "pharma",
-		"name": "Pharma",
-		"color": "#4092FF",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "sonstige_konsumgueter",
-		"name": "Sonstige Konsumgüter",
-		"color": "#D9B400",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "elektroindustrie",
-		"name": "Elektro / Technik",
-		"color": "#12229E",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "metall",
-		"name": "Metall / Glas / Stein",
-		"color": "#754EC3",
-		"branche": "Industrie",
-		"branche_id": "industrie"
-	},
-	{
-		"id": "telekommunikation",
-		"name": "Verläge / Funk / Telekommunikation",
-		"color": "#F373D0",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "finanz",
-		"name": "Finanz-Dienstleistung",
-		"color": "#1AAB40",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "kreativ",
-		"name": "Kreativ-Dienstleistung",
-		"color": "#0F8DFF",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "forschung",
-		"name": "Forschung / Entwicklung",
-		"color": "#17C6F4",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "architektur",
-		"name": "Architektur / Ingenieur",
-		"color": "#1A7277",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "unternehmensberatung",
-		"name": "Beratung",
-		"color": "#BE5DC9",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
-	},
-	{
-		"id": "software",
-		"name": "Software",
-		"color": "#FFA057",
-		"branche": "Dienstleistung",
-		"branche_id": "dienstleistungen"
+		"id": "dienstleistungen",
+		"name": "Dienstlesitungen",
+		"color": "#41B496"
 	}
 ]

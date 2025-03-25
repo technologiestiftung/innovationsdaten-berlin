@@ -1,16 +1,43 @@
-[
-	{
+{
+	"delta_inno_ausgaben_2022": {
 		"id": "inno-ausgaben-2022",
 		"title": "Aktivität seit 2022",
 		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
 		"legend": "*Innovationsausgaben in Mio. € 2022<br />delta 2023-2022 in rot oder grün",
-		"bar_chart_type": "delta"
+		"bar_chart_type": "delta",
+		"unit": "Mio. €",
+		"data": {
+			"pharma": {
+				"value": 1588,
+				"delta": "positive",
+				"segments": [
+					{ "percentage": 95.96, "color": "blue" },
+					{ "percentage": 95.96, "color": "green" }
+				]
+			},
+			"nahrung": {
+				"value": 48,
+				"delta": "negative",
+				"segments": [
+					{ "percentage": 39, "color": "blue" },
+					{ "percentage": 39, "color": "red" }
+				]
+			}
+		}
 	},
-	{
+	"delta_inno_ausgaben_2023": {
 		"id": "inno-ausgaben-2023",
 		"title": "Innovations&shy;ausgaben 2023",
 		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
 		"legend": "*Innovationsausgaben in Mio. € 2023",
-		"bar_chart_type": "normal"
+		"bar_chart_type": "normal",
+		"unit": "Mio. €",
+		"data": {
+			"pharma": {
+				"value": 1588,
+				"delta": "none",
+				"segments": [{ "percentage": 100, "color": "blue" }]
+			}
+		}
 	}
-]
+}

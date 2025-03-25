@@ -1,0 +1,206 @@
+{
+	"welcome": {
+		"title": "Innovations&shy;daten Berlin",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
+	},
+	"overview": {
+		"title": "Übersicht",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
+	},
+	"big-fact-berlin": {
+		"title": "Der Gesamtumsatz Berlins beträgt...",
+		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem",
+		"fact": "XXX",
+		"unit": "Mrd. €"
+	},
+	"branchen": [
+		{
+			"id": "branchen-list",
+			"title": "Die Branchen",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
+		},
+		{
+			"id": "umsatz",
+			"title": "Die umsatzstärksten Branchen",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"unit": "*Größe nach Umsatz in Mio. € 2023",
+			"data": [
+				{ "branche": "nahrung", "value": 5590 },
+				{ "branche": "pharma", "value": 8639 },
+				{ "branche": "holz", "value": 1323 },
+				{ "branche": "metall", "value": 2567 },
+				{ "branche": "elektroindustrie", "value": 8846 },
+				{ "branche": "fahrzeugbau", "value": 15501 },
+				{ "branche": "sonstige_konsumgueter", "value": 738 },
+				{ "branche": "energie", "value": 28919 },
+				{ "branche": "telekommunikation", "value": 15170 },
+				{ "branche": "software", "value": 16787 },
+				{ "branche": "finanz", "value": 32814 },
+				{ "branche": "unternehmensberatung", "value": 4159 },
+				{ "branche": "architektur", "value": 5302 },
+				{ "branche": "forschung", "value": 1887 },
+				{ "branche": "kreativ", "value": 5260 }
+			]
+		},
+		{
+			"id": "beschaeftigte",
+			"title": "Die größten Arbeitgeber",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"unit": "*Größe nach Anzahl Beschäftigte 2023",
+			"data": [
+				{ "branche": "nahrung", "value": 15843 },
+				{ "branche": "pharma", "value": 20207 },
+				{ "branche": "holz", "value": 7754 },
+				{ "branche": "metall", "value": 10248 },
+				{ "branche": "elektroindustrie", "value": 25926 },
+				{ "branche": "fahrzeugbau", "value": 26601 },
+				{ "branche": "sonstige_konsumgueter", "value": 5629 },
+				{ "branche": "energie", "value": 24033 },
+				{ "branche": "telekommunikation", "value": 32903 },
+				{ "branche": "software", "value": 92676 },
+				{ "branche": "finanz", "value": 32921 },
+				{ "branche": "unternehmensberatung", "value": 22325 },
+				{ "branche": "architektur", "value": 41084 },
+				{ "branche": "forschung", "value": 8532 },
+				{ "branche": "kreativ", "value": 22024 }
+			]
+		}
+	],
+	"berliner_unternehmen": {
+		"title": "Wer innoviert?",
+		"fact": "61%",
+		"unit": "der Berliner Unternehmen sind innovativ"
+	},
+	"who_innovates": [
+		{
+			"id": "sektoren",
+			"title": "Wo ist Innovation gewachsen?",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"unit": "*Innovationsausgaben in Mio. €",
+			"data": [
+				{ "year": 2018, "dienstleistungen": 1, "industrie": 2 },
+				{ "year": 2019, "dienstleistungen": 2, "industrie": 3 },
+				{ "year": 2020, "dienstleistungen": 2, "industrie": 3.5 },
+				{ "year": 2021, "dienstleistungen": 3, "industrie": 6 },
+				{ "year": 2022, "dienstleistungen": 4, "industrie": 5.5 },
+				{ "year": 2023, "dienstleistungen": 4.5, "industrie": 7 }
+			]
+		},
+		{
+			"id": "growth",
+			"title": "Welche Branchen wachsen?",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"unit": "*Innovationsausgaben in Mio. €",
+			"data": [
+				{
+					"year": 2018,
+					"energie": 3,
+					"fahrzeugbau": 1,
+					"nahrung": 2,
+					"holz": 3,
+					"pharma": 4,
+					"sonstige_konsumgueter": 2.7,
+					"elektroindustrie": 0.8,
+					"metall": 1.2,
+					"telekommunikation": 4,
+					"finanz": 3,
+					"kreativ": 1,
+					"forschung": 8.7,
+					"architektur": 4.3,
+					"unternehmensberatung": 2.1,
+					"software": 0.9
+				},
+				{
+					"year": 2019,
+					"energie": 2,
+					"fahrzeugbau": 1.6,
+					"nahrung": 3,
+					"holz": 8,
+					"pharma": 9,
+					"sonstige_konsumgueter": 3,
+					"elektroindustrie": 2,
+					"metall": 2.2,
+					"telekommunikation": 2.5,
+					"finanz": 3.9,
+					"kreativ": 0.6,
+					"forschung": 5,
+					"architektur": 2.3,
+					"unternehmensberatung": 1.1,
+					"software": 2
+				},
+				{
+					"year": 2020,
+					"energie": 3.9,
+					"fahrzeugbau": 1.2,
+					"nahrung": 11,
+					"holz": 6,
+					"pharma": 5,
+					"sonstige_konsumgueter": 2.9,
+					"elektroindustrie": 0.2,
+					"metall": 4.0,
+					"telekommunikation": 7,
+					"finanz": 3.4,
+					"kreativ": 1.2,
+					"forschung": 1.1,
+					"architektur": 4,
+					"unternehmensberatung": 1.5,
+					"software": 2
+				},
+				{
+					"year": 2021,
+					"energie": 2,
+					"fahrzeugbau": 1.6,
+					"nahrung": 3,
+					"holz": 8,
+					"pharma": 9,
+					"sonstige_konsumgueter": 3,
+					"elektroindustrie": 2,
+					"metall": 2.2,
+					"telekommunikation": 4.9,
+					"finanz": 1,
+					"kreativ": 1.5,
+					"forschung": 6,
+					"architektur": 3.3,
+					"unternehmensberatung": 2.9,
+					"software": 5
+				},
+				{
+					"year": 2022,
+					"energie": 5,
+					"fahrzeugbau": 1,
+					"nahrung": 6,
+					"holz": 9,
+					"pharma": 2.5,
+					"sonstige_konsumgueter": 1.7,
+					"elektroindustrie": 6.8,
+					"metall": 1.9,
+					"telekommunikation": 4.2,
+					"finanz": 3.6,
+					"kreativ": 1.6,
+					"forschung": 2,
+					"architektur": 3.3,
+					"unternehmensberatung": 6.1,
+					"software": 0.9
+				},
+				{
+					"year": 2023,
+					"energie": 2,
+					"fahrzeugbau": 1.6,
+					"nahrung": 3,
+					"holz": 8,
+					"pharma": 9,
+					"sonstige_konsumgueter": 3,
+					"elektroindustrie": 2,
+					"metall": 2.2,
+					"telekommunikation": 7,
+					"finanz": 3.4,
+					"kreativ": 1.2,
+					"forschung": 1.1,
+					"architektur": 4,
+					"unternehmensberatung": 1.5,
+					"software": 2
+				}
+			]
+		}
+	]
+}
