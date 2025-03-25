@@ -14,4 +14,8 @@ const formatNumber = (num: number) => {
 	return new Intl.NumberFormat("de-DE").format(num);
 };
 
-export { hexToRgba, formatNumber };
+const isInRange = (num: number, from: number, to: number) => {
+	return num >= from && num <= to;
+};
+
+export { hexToRgba, formatNumber, isInRange };
