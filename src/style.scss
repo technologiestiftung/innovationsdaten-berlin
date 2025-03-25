@@ -14,7 +14,7 @@
 	font-weight: bold;
 }
 
-$font-size: 14px;
+$font-size: 16px;
 $mobile-horizontal-padding: 32px;
 $dark: #14161d;
 $blue: #1e3791;
@@ -24,7 +24,7 @@ $red: #ff0000;
 $stroke-width: 2px;
 $all-transition: all 0.3s ease-in-out;
 $long-transition: all 1s ease-in-out;
-$breakpoint: 900px;
+$breakpoint: 1024px;
 
 html {
 	scroll-behavior: smooth;
@@ -55,11 +55,9 @@ html {
 	}
 	section {
 		max-width: 100vw;
-		overflow-x: hidden;
 	}
 	main {
 		max-width: 100vw;
-		overflow-x: hidden;
 		@media screen and (min-width: $breakpoint) {
 			max-width: $breakpoint !important;
 			margin-left: calc((100vw - $breakpoint) / 2);
@@ -104,15 +102,72 @@ p {
 	}
 }
 
+header {
+	border-bottom: $stroke-width solid $white;
+	padding: calc($font-size * 1.5) calc((100vw - $breakpoint) / 2);
+	&.dark {
+		background: $dark;
+		border-color: $white;
+	}
+	&.light {
+		border-color: $blue;
+		background: $white;
+	}
+}
+
+nav {
+	position: fixed;
+	left: auto;
+	right: 2vw;
+	a {
+		position: relative;
+		& > div:not(.absolute) {
+			width: calc($font-size * 1.25);
+			height: calc($font-size * 1.25);
+			border: 2px solid $white;
+			&.light {
+				border-color: $blue !important;
+			}
+			&:hover,
+			&.open {
+				background: $white;
+				&.light {
+					background: $blue;
+				}
+			}
+		}
+		.absolute {
+			background: $white;
+			&.light {
+				background: $blue;
+				p {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
 section {
-	padding: 0 $font-size;
 	&#overview {
 		a {
 			&.dark {
 				border: 2px solid $white;
+				&:hover {
+					background: $white;
+					p {
+						color: $dark;
+					}
+				}
 			}
 			&.light {
 				border: 2px solid $blue;
+				&:hover {
+					background: $blue;
+					p {
+						color: $white;
+					}
+				}
 			}
 		}
 		p {
@@ -120,10 +175,20 @@ section {
 			line-height: calc($font-size * 1.4) !important;
 		}
 	}
-	&.big-fact {
-		h1 {
-			width: fit-content;
+	&.sticky-section {
+		.card {
+			&.dark {
+				border: $stroke-width solid $white;
+				background: $dark;
+			}
+			&.light {
+				border: $stroke-width solid $blue;
+				background: $white;
+			}
 		}
+	}
+	@media screen and (max-width: $breakpoint) {
+		padding: 0 $font-size;
 	}
 }
 
@@ -185,16 +250,6 @@ section {
 			background: $red;
 		}
 	}
-	.delta-imgs {
-		background-size: auto 100%;
-		background-position: center center;
-		&.positive {
-			background-image: url(/images/Delta-Green.png);
-		}
-		&.negative {
-			background-image: url(/images/Delta-Red.png);
-		}
-	}
 }
 
 .toggle-container {
@@ -223,4 +278,9 @@ section {
 
 .fw-normal {
 	font-weight: normal !important;
+}
+
+.recharts-xAxis,
+.recharts-yAxis {
+	user-select: none !important;
 }
