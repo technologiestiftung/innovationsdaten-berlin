@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
 import colors from "../data/colors.json";
-import sektoren from "../data/sektoren.json";
+import branchen from "../data/branchen.json";
 import { useGlobalContext } from "../GlobalContext";
 
 interface FilterDropdownProps {
@@ -61,7 +61,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 					marginBottom: isOpen ? 2 : 0,
 				}}
 			>
-				<p className="bold">Branche wählen</p>
+				<p className="bold select-none">Branche wählen</p>
 				<div
 					style={{
 						transform: isOpen ? "rotate(180deg)" : "none",
@@ -91,7 +91,7 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 									size={fontSize}
 								/>
 							</span>
-							<p className="bold">Alle</p>
+							<p className="bold select-none">Alle</p>
 						</li>
 
 						<hr />
@@ -114,9 +114,9 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 												size={fontSize}
 											/>
 										</span>
-										<p className="line-clamp-1 break-words">
-											{sektoren.find((sektor) => sektor.id === filter)?.name ||
-												filter}
+										<p className="line-clamp-1 break-words select-none">
+											{branchen.find((branche) => branche.id === filter)
+												?.name || filter}
 										</p>
 									</li>
 								),
