@@ -1,22 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
-import facts from "../data/big-facts.json";
+import data from "../data.json";
 import { useGlobalContext } from "../GlobalContext";
+import { ChapterKeys, ChapterProps } from "../types/global";
 
 interface BigFactProps {
-	factKey: string;
+	factKey: ChapterKeys;
 }
 
-type BigFact = {
-	title: string;
-	fact: string;
-	unit: string;
-	text?: string;
-};
-
 const BigFact: React.FC<BigFactProps> = ({ factKey }) => {
-	const { fontSize: globalFontSize } = useGlobalContext();
-	const bigFact = (facts as Record<string, BigFact>)[factKey];
-
+	const { fontSize: globalFontSize, headerHeight } = useGlobalContext();
+	const dataIndex: ChapterKeys = factKey;
+	const { title, text, fact, unit } = data[
+		dataIndex as keyof typeof data
+	] as ChapterProps;
 	const textRef = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [fontSize, setFontSize] = useState(globalFontSize);
@@ -45,21 +41,22 @@ const BigFact: React.FC<BigFactProps> = ({ factKey }) => {
 	return (
 		<section
 			ref={containerRef}
-			id={`big-fact-${factKey}`}
-			className="big-fact py-14"
+			id={factKey}
+			className="flex flex-col justify-center min-h-screen"
+			style={{ paddingTop: headerHeight }}
 		>
-			<h2 className="mb-8">{bigFact?.title}</h2>
+			<h1 className="mb-8">{title}</h1>
 			<div className="w-full flex justify-center">
 				<h1
 					ref={textRef}
-					className="text-center leading-none ignore"
+					className="text-center leading-none ignore select-none"
 					style={{ fontSize }}
 				>
-					{bigFact?.fact}
+					{fact}
 				</h1>
 			</div>
-			<h2 className="text-center mb-8">{bigFact?.unit}</h2>
-			{!!bigFact?.text && <p>{bigFact?.text}</p>}
+			<h2 className="text-center mb-8">{unit}</h2>
+			{!!text && <p>{text}</p>}
 		</section>
 	);
 };

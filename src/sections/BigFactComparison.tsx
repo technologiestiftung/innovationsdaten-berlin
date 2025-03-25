@@ -63,7 +63,7 @@ const BigFactComparison: React.FC<BigFactComparisonProps> = ({ factKey }) => {
 				<div className="w-full flex justify-center mb-4">
 					<h1
 						ref={textRef}
-						className="text-center leading-none ignore"
+						className="text-center leading-none ignore select-none"
 						style={{ fontSize }}
 					>
 						{fact?.fact}
@@ -79,7 +79,7 @@ const BigFactComparison: React.FC<BigFactComparisonProps> = ({ factKey }) => {
 			id={`big-fact-${factKey}`}
 			className="big-fact py-14"
 		>
-			<h2 className="mb-8">{bigFact?.title}</h2>
+			<h1 className="mb-8">{bigFact?.title}</h1>
 			{bigFact?.facts.map((fact, index) => (
 				<SingleBigFactComparison key={index} fact={fact} />
 			))}

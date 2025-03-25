@@ -1,19 +1,20 @@
 import React from "react";
-import chapters from "../data/chapters.json";
+import data from "../data.json";
+import chapters from "../chapters.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Overview: React.FC = () => {
-	const { theme } = useGlobalContext();
+	const dataKey = "overview";
+	const { theme, headerHeight } = useGlobalContext();
+	const { title, text } = data[dataKey];
 	return (
-		<section id="overview" className="py-14">
-			<h1 className="mb-4">Übersicht</h1>
-			<p className="mb-14">
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-				eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-				voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-				clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-				amet. Lorem
-			</p>
+		<section
+			id={dataKey}
+			style={{ paddingTop: headerHeight }}
+			className="flex flex-col justify-center min-h-screen"
+		>
+			<h1 className="mb-4" dangerouslySetInnerHTML={{ __html: title }} />
+			<p className="mb-14">{text}</p>
 			<div className="grid grid-cols-2 gap-2">
 				{chapters.map((chapter) => (
 					<a

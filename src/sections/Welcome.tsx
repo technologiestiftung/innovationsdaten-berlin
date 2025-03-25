@@ -1,28 +1,26 @@
 import React from "react";
 import Icon from "../components/Icons";
+import data from "../data.json";
+import { useGlobalContext } from "../GlobalContext";
 
 const Welcome: React.FC = () => {
+	const dataKey = "welcome";
+	const { title, text } = data[dataKey];
+	const { headerHeight, fontSize } = useGlobalContext();
 	return (
 		<section
-			id="welcome"
-			className="min-h-screen h-screen flex flex-col justify-between pb-4 pt-10"
+			id={dataKey}
+			className="min-h-screen h-screen flex flex-col justify-between pb-4"
+			style={{ paddingTop: headerHeight }}
 		>
-			<div className="w-full flex justify-end">
-				<Icon id="logo" size={46} />
-			</div>
+			<span />
 			<span>
-				<h1 className="mb-4">Innovations&shy;daten Berlin</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-					sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-					rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-					ipsum dolor sit amet. Lorem
-				</p>
+				<h1 className="mb-4" dangerouslySetInnerHTML={{ __html: title }} />
+				<p className="mb-8">{text}</p>
 			</span>
 			<div className="w-full flex justify-center">
 				<a href="#overview">
-					<Icon id="scroll" size={46} />
+					<Icon id="scroll" size={fontSize * 3} />
 				</a>
 			</div>
 		</section>
