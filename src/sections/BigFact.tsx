@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import data from "../data.json";
+import data from "../data/data.json";
 import { useGlobalContext } from "../GlobalContext";
 import { ChapterKeys, ChapterProps } from "../types/global";
 

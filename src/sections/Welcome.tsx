@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "../components/Icons";
-import data from "../data.json";
+import data from "../data/data.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Welcome: React.FC = () => {

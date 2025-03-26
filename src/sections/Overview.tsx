@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../data.json";
-import chapters from "../chapters.json";
+import data from "../data/data.json";
+import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Overview: React.FC = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import chapters from "../chapters.json";
+import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
 import { isInRange } from "../utilities";
 

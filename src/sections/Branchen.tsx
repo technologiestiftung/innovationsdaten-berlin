@@ -1,6 +1,6 @@
 import Icon from "../components/Icons";
 import branchen from "../data/branchen.json";
-import data from "../data.json";
+import data from "../data/data.json";
 import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
