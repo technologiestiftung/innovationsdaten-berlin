@@ -4,7 +4,7 @@ import data from "../data.json";
 import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
-import TreeMap from "./TreeMap";
+import TreeMap from "../components/TreeMap";
 import { StickyItem } from "../types/global";
 import Card from "../components/Card";
 

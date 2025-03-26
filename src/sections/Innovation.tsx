@@ -3,7 +3,7 @@ import data from "../data.json";
 import { useGlobalContext } from "../GlobalContext";
 import { StickyItem } from "../types/global";
 import Card from "../components/Card";
-import AreaChart from "./AreaChart";
+import AreaChart from "../components/AreaChart";
 
 const Innovation: React.FC = () => {
 	const { headerHeight } = useGlobalContext();
