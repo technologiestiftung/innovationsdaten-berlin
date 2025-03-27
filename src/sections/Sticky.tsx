@@ -1,24 +1,35 @@
-import React, { useEffect, useState } from "react";
 import data from "../data/data.json";
 import { useGlobalContext } from "../GlobalContext";
-import { StickyItem } from "../types/global";
+import React, { useEffect, useState } from "react";
+import { ChapterKeys, StickyItem } from "../types/global";
 import Card from "../components/Card";
-import AreaChart from "../components/AreaChart";
+import LeftStickyContent from "../components/LeftStickyContent";
 
-const Innovation: React.FC = () => {
+type StickyProps = {
+	dataKey: ChapterKeys;
+};
+
+const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 	const { headerHeight } = useGlobalContext();
-	const dataKey = "who_innovates";
 	const dataArray = data[dataKey];
 	const [current, setCurrent] = useState<StickyItem | null>(null);
 
 	useEffect(() => {
-		if (dataArray.length > 0) {
+		if (dataArray) {
 			setCurrent(dataArray[0] as StickyItem);
 		}
 	}, [dataArray]);
 
+	useEffect(() => {
+		// console.log("current :>> ", current);
+	}, [current]);
+
 	return (
-		<section id={dataKey} className="sticky-section relative w-full flex gap-6">
+		<section
+			id={dataKey}
+			className="sticky-section relative w-full flex gap-6"
+			style={{ paddingTop: headerHeight }}
+		>
 			<div
 				className="sticky flex items-center basis-3/5"
 				style={{
@@ -27,21 +38,18 @@ const Innovation: React.FC = () => {
 				}}
 			>
 				<div className="w-full">
-					<AreaChart id={current?.id} data={current?.data} />
-					<div className="mt-2 pt-2 w-full flex justify-end">
-						<p>{current?.unit}</p>
-					</div>
+					<LeftStickyContent data={current as StickyItem} />
 				</div>
 			</div>
 			<div className="basis-2/5">
-				{dataArray.map((item, index) => (
+				{dataArray.map((item: StickyItem, index: number) => (
 					<Card
 						key={item.id}
+						dataKey={dataKey}
 						title={item.title}
 						text={item.text}
-						item={item}
-						current={current}
-						setCurrent={setCurrent}
+						onSetCurrent={() => setCurrent(item as StickyItem)}
+						isNotCurrent={item.id !== current?.id}
 						last={index === dataArray.length - 1}
 					/>
 				))}
@@ -50,4 +58,4 @@ const Innovation: React.FC = () => {
 	);
 };
 
-export default Innovation;
+export default Sticky;

@@ -12,14 +12,15 @@ import React from "react";
 import { StickyItemData } from "../types/global";
 
 type TreeMapProps = {
-	id: string | undefined;
+	id?: string;
+	unit?: string;
 	data: StickyItemData;
 };
 
-const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
+const TreeMap: React.FC<TreeMapProps> = ({ id, unit, data }) => {
 	const { theme, fontSize } = useGlobalContext();
 
-	if (!data) {
+	if (!data || !Array.isArray(data)) {
 		return null;
 	}
 
@@ -112,31 +113,36 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 	};
 
 	return (
-		<div
-			style={{
-				border:
-					theme === "dark"
-						? `1px ${colors.white} solid`
-						: `1px ${colors.blue} solid`,
-				position: "relative",
-			}}
-		>
-			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
-				<TreeMapRecharts
-					data={collectData}
-					aspectRatio={1}
-					dataKey="value"
-					fill="none"
-					content={<CustomTreemapNode />}
-					// isAnimationActive={false}
-					// isUpdateAnimationActive={false}
-				>
-					<Tooltip
-						content={(props) => <CustomTooltip {...props} dataID={id} />}
-					/>
-				</TreeMapRecharts>
-			</ResponsiveContainer>
-		</div>
+		<>
+			<div
+				style={{
+					border:
+						theme === "dark"
+							? `1px ${colors.white} solid`
+							: `1px ${colors.blue} solid`,
+					position: "relative",
+				}}
+			>
+				<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
+					<TreeMapRecharts
+						data={collectData}
+						aspectRatio={1}
+						dataKey="value"
+						fill="none"
+						content={<CustomTreemapNode />}
+						// isAnimationActive={false}
+						// isUpdateAnimationActive={false}
+					>
+						<Tooltip
+							content={(props) => <CustomTooltip {...props} dataID={id} />}
+						/>
+					</TreeMapRecharts>
+				</ResponsiveContainer>
+			</div>
+			<div className={`unit-container flex justify-end pt-4 mt-8 ${theme}`}>
+				<p>{unit}</p>
+			</div>
+		</>
 	);
 };
 

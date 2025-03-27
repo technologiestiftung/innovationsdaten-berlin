@@ -1,19 +1,12 @@
 {
-	"welcome": {
-		"title": "Innovations&shy;daten Berlin",
-		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
-	},
-	"overview": {
-		"title": "Übersicht",
-		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
-	},
-	"big-fact-berlin": {
-		"title": "Der Gesamtumsatz Berlins beträgt...",
-		"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem",
-		"fact": "XXX",
-		"unit": "Mrd. €"
-	},
-	"branchen": [
+	"einleitung": [
+		{
+			"id": "big-fact-berlin",
+			"title": "Der Gesamtumsatz Berlins beträgt...",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem",
+			"fact": "XXX",
+			"unit": "Mrd. €"
+		},
 		{
 			"id": "branchen-list",
 			"title": "Die Branchen",
@@ -66,12 +59,13 @@
 			]
 		}
 	],
-	"berliner_unternehmen": {
-		"title": "Wer innoviert?",
-		"fact": "61%",
-		"unit": "der Berliner Unternehmen sind innovativ"
-	},
 	"who_innovates": [
+		{
+			"id": "berliner_unternehmen",
+			"title": "Wer innoviert?",
+			"fact": "61%",
+			"unit": "der Berliner Unternehmen sind innovativ"
+		},
 		{
 			"id": "sektoren",
 			"title": "Wo ist Innovation gewachsen?",

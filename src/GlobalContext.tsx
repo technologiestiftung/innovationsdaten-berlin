@@ -17,6 +17,8 @@ interface GlobalStateType {
 	isMobile: boolean;
 	headerHeight: number;
 	sectionPaddingTop: number;
+	chapter: string;
+	setChapter: (chapter: string) => void;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -26,6 +28,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
 	const [theme, setTheme] = useState<Theme>("dark");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
+	const [chapter, setChapter] = useState<string>("Willkommen");
 
 	const fontSize = 16;
 	const additionalPaddingTop = fontSize * 4;
@@ -72,6 +75,8 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				isMobile,
 				headerHeight,
 				sectionPaddingTop,
+				chapter,
+				setChapter,
 			}}
 		>
 			{children}

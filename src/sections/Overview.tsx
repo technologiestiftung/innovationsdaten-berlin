@@ -1,15 +1,15 @@
 import React from "react";
-import data from "../data/data.json";
 import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Overview: React.FC = () => {
-	const dataKey = "overview";
 	const { theme, headerHeight } = useGlobalContext();
-	const { title, text } = data[dataKey];
+	const title = "Übersicht";
+	const text =
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget";
 	return (
 		<section
-			id={dataKey}
+			id="overview"
 			style={{ paddingTop: headerHeight }}
 			className="flex flex-col justify-center min-h-screen"
 		>

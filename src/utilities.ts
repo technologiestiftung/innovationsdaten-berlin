@@ -14,7 +14,9 @@ const formatNumber = (num: number) => {
 	return new Intl.NumberFormat("de-DE").format(num);
 };
 
-const isInRange = (num: number, from: number, to: number) => {
+const isInRange = (num: number) => {
+	const from = -50;
+	const to = 50;
 	return num >= from && num <= to;
 };
 

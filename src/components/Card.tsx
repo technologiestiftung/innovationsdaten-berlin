@@ -1,23 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { isInRange } from "../utilities";
-import { StickyItem } from "../types/global";
 import { useGlobalContext } from "../GlobalContext";
 
 type CardProps = {
+	dataKey: string;
 	title: string;
-	text: string;
-	item: StickyItem;
-	current: StickyItem | null;
-	setCurrent: React.Dispatch<React.SetStateAction<StickyItem | null>>;
+	text?: string;
+	onSetCurrent: () => void;
+	isNotCurrent: boolean;
 	last: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
+	dataKey,
 	title,
 	text,
-	item,
-	current,
-	setCurrent,
+	onSetCurrent,
+	isNotCurrent,
 	last,
 }) => {
 	const { theme, headerHeight } = useGlobalContext();
@@ -26,11 +25,8 @@ const Card: React.FC<CardProps> = ({
 	const handleScroll = () => {
 		if (cardRef.current) {
 			const rect = cardRef.current.getBoundingClientRect();
-			if (
-				isInRange(rect.top - window.innerHeight / 1.5, -50, 50) &&
-				current !== item
-			) {
-				setCurrent(item);
+			if (isInRange(rect.top - window.innerHeight / 1.5) && isNotCurrent) {
+				onSetCurrent();
 			}
 		}
 	};
@@ -42,7 +38,7 @@ const Card: React.FC<CardProps> = ({
 	}, []);
 	useEffect(() => {
 		if (last) {
-			const getCard = document.querySelector("#branchen .card:last-of-type");
+			const getCard = document.querySelector(`#${dataKey} .card:last-of-type`);
 			if (!getCard) {
 				return;
 			}
@@ -61,7 +57,7 @@ const Card: React.FC<CardProps> = ({
 				marginBottom: marginBottomOfLastCard,
 			}}
 		>
-			<h2 className="mb-4">{title}</h2>
+			<h2 className={text ? "mb-4" : ""}>{title}</h2>
 			<p>{text}</p>
 		</div>
 	);

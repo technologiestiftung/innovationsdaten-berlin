@@ -1,18 +1,4 @@
-export type ChapterKeys =
-	| "chapters"
-	| "welcome"
-	| "overview"
-	| "big-fact-berlin"
-	| "who_innovates"
-	| "berliner_unternehmen"
-	| "branchen";
-
-export interface ChapterProps {
-	title: string;
-	text?: string;
-	fact?: string;
-	unit?: string;
-}
+export type ChapterKeys = "einleitung" | "who_innovates";
 
 export type StickyItemData =
 	| {
@@ -42,12 +28,40 @@ export type StickyItemData =
 			unternehmensberatung: number;
 			software: number;
 	  }[]
+	| {
+			nahrung: number;
+			pharma: number;
+			holz: number;
+			metall: number;
+			elektroindustrie: number;
+			fahrzeugbau: number;
+			sonstige_konsumgueter: number;
+			energie: number;
+			telekommunikation: number;
+			software: number;
+			finanz: number;
+			unternehmensberatung: number;
+			architektur: number;
+			forschung: number;
+			kreativ: number;
+	  }
+	| {
+			[key: string]: {
+				value: number;
+				delta: string;
+				segments: {
+					percentage: number;
+					color: string;
+				}[];
+			};
+	  }
 	| undefined;
 
 export type StickyItem = {
 	id: string;
 	title: string;
-	text: string;
+	text?: string;
+	fact?: string;
 	unit?: string;
 	data?: StickyItemData;
 };

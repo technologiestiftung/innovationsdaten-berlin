@@ -33,6 +33,7 @@ html {
 		h1,
 		h2,
 		h3,
+		h4,
 		h5,
 		h6,
 		p:not(.ignore) {
@@ -47,6 +48,7 @@ html {
 		h1,
 		h2,
 		h3,
+		h4,
 		h5,
 		h6,
 		p:not(.ignore) {
@@ -68,6 +70,7 @@ html {
 h1,
 h2,
 h3,
+h4,
 h5,
 h6 {
 	font-family: "Clan Pro", sans-serif;
@@ -83,6 +86,9 @@ h2 {
 }
 h3 {
 	font-size: calc($font-size * 1.5) !important;
+}
+h4 {
+	font-size: calc($font-size * 1.3) !important;
 }
 
 p {
@@ -112,6 +118,21 @@ header {
 	&.light {
 		border-color: $blue;
 		background: $white;
+	}
+}
+.nav-ul {
+	z-index: 2;
+	&.dark {
+		background: $dark;
+		border-left: $stroke-width solid $white;
+		border-right: $stroke-width solid $white;
+		border-bottom: $stroke-width solid $white;
+	}
+	&.light {
+		background: $white;
+		border-left: $stroke-width solid $blue;
+		border-right: $stroke-width solid $blue;
+		border-bottom: $stroke-width solid $blue;
 	}
 }
 
@@ -236,22 +257,6 @@ section {
 	}
 }
 
-.custom-bar-chart {
-	position: relative;
-	.bar,
-	.bar-container {
-		transition: $long-transition;
-	}
-	.delta {
-		&.positive {
-			background: $green;
-		}
-		&.negative {
-			background: $red;
-		}
-	}
-}
-
 .toggle-container {
 	bottom: $font-size;
 	left: auto;
@@ -259,25 +264,28 @@ section {
 	border-radius: 200px;
 	z-index: 2;
 	&.dark {
-		border: 1px solid $white;
 		background: $dark;
 	}
 	&.light {
-		border: 1px solid $blue;
 		background: $white;
 	}
 	@media screen and (min-width: $breakpoint) {
 		right: calc(((100vw - $breakpoint) / 2) - $font-size * 5);
 		bottom: 3vh;
-		&.light,
-		&.dark {
-			border-width: 2px;
-		}
 	}
 }
 
 .fw-normal {
 	font-weight: normal !important;
+}
+
+.unit-container {
+	&.dark {
+		border-top: 2px solid $white;
+	}
+	&.light {
+		border-top: 2px solid $blue;
+	}
 }
 
 .recharts-xAxis,

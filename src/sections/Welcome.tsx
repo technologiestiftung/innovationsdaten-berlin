@@ -1,15 +1,15 @@
 import React from "react";
 import Icon from "../components/Icons";
-import data from "../data/data.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Welcome: React.FC = () => {
-	const dataKey = "welcome";
-	const { title, text } = data[dataKey];
+	const title = "Innovations&shy;daten Berlin";
+	const text =
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.";
 	const { headerHeight, fontSize } = useGlobalContext();
 	return (
 		<section
-			id={dataKey}
+			id="welcome"
 			className="min-h-screen h-screen flex flex-col justify-between pb-4"
 			style={{ paddingTop: headerHeight }}
 		>

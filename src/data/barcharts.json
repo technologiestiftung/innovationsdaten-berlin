@@ -1,11 +1,9 @@
-{
-	"delta_inno_ausgaben_2022": {
+[
+	{
 		"id": "inno-ausgaben-2022",
 		"title": "Aktivität seit 2022",
 		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-		"legend": "*Innovationsausgaben in Mio. € 2022<br />delta 2023-2022 in rot oder grün",
-		"bar_chart_type": "delta",
-		"unit": "Mio. €",
+		"unit": "*Innovationsausgaben in Mio. € 2022<br />delta 2023-2022 in rot oder grün",
 		"data": {
 			"pharma": {
 				"value": 1588,
@@ -25,13 +23,11 @@
 			}
 		}
 	},
-	"delta_inno_ausgaben_2023": {
+	{
 		"id": "inno-ausgaben-2023",
 		"title": "Innovations&shy;ausgaben 2023",
 		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-		"legend": "*Innovationsausgaben in Mio. € 2023",
-		"bar_chart_type": "normal",
-		"unit": "Mio. €",
+		"unit": "*Innovationsausgaben in Mio. € 2023",
 		"data": {
 			"pharma": {
 				"value": 1588,
@@ -39,5 +35,28 @@
 				"segments": [{ "percentage": 100, "color": "blue" }]
 			}
 		}
+	},
+	{
+		"id": "inno-intensitaet",
+		"title": "Innovations&shy;intensität",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+		"unit": "*Innovationsintensität",
+		"data": {
+			"nahrung": 0.5,
+			"pharma": 18.4,
+			"holz": 4.3,
+			"metall": 2.8,
+			"elektroindustrie": 10.9,
+			"fahrzeugbau": 6.1,
+			"sonstige_konsumgueter": 6.4,
+			"energie": 0.7,
+			"telekommunikation": 1.8,
+			"software": 6.5,
+			"finanz": 0.8,
+			"unternehmensberatung": 1.5,
+			"architektur": 2.3,
+			"forschung": 12.7,
+			"kreativ": 3.6
+		}
 	}
-}
+]

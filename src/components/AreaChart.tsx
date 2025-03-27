@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {
 	XAxis,
-	YAxis,
 	Tooltip,
 	AreaChart as AreaChartRecharts,
 	Area,
 	ResponsiveContainer,
+	CartesianGrid,
 } from "recharts";
 import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
@@ -16,7 +16,7 @@ import { useGlobalContext } from "../GlobalContext";
 import { StickyItemData } from "../types/global";
 
 type AreaChartProps = {
-	id: string | undefined;
+	id: string;
 	data: StickyItemData;
 };
 
@@ -30,6 +30,11 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 			fontWeight: "bold",
 		},
 	};
+
+	const allFilters = branchen.map((branche) => branche.id);
+	const [activeFilters, setActiveFilters] = useState<string[]>(allFilters);
+
+	const setData = data as StickyItemData[];
 
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
 		if (theme === "dark") {
@@ -49,8 +54,7 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 		}
 		return hexToRgba(colors.blue, 0.2);
 	};
-
-	const CustomTooltip = ({ active, payload, activeFilters }: any) => {
+	const CustomTooltip = ({ active, payload }: any) => {
 		if (!active || !payload || !payload.length) {
 			return null;
 		}
@@ -114,9 +118,6 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 		);
 	};
 
-	const allFilters = branchen.map((branche) => branche.id);
-
-	const [activeFilters, setActiveFilters] = useState<string[]>(allFilters);
 	return (
 		<>
 			{id === "growth" && (
@@ -129,23 +130,15 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 				</div>
 			)}
 			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
-				<AreaChartRecharts data={data}>
+				<AreaChartRecharts data={setData}>
 					<XAxis
 						dataKey="year"
 						stroke={theme === "dark" ? colors.white : colors.blue}
 						strokeWidth={2}
 						tick={axisFontStylings}
 					/>
-					<YAxis
-						stroke={theme === "dark" ? colors.white : colors.blue}
-						strokeWidth={2}
-						tick={axisFontStylings}
-					/>
-					<Tooltip
-						content={(props) => (
-							<CustomTooltip {...props} activeFilters={activeFilters} />
-						)}
-					/>
+					<Tooltip content={<CustomTooltip />} />
+					<CartesianGrid strokeDasharray="3 3" vertical={false} />
 					{id === "sektoren" ? (
 						<>
 							{sektoren.map((sektor) => (
@@ -157,6 +150,7 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 									strokeWidth={3}
 									fill={sektor.color}
 									stackId="1"
+									fillOpacity={1}
 								/>
 							))}
 						</>
@@ -173,6 +167,7 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 										strokeWidth={3}
 										fill={getStrokeOrFill(branche.id, branche.color)}
 										stackId="1"
+										fillOpacity={1}
 									/>
 								))}
 						</>
