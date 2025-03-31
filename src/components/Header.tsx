@@ -36,7 +36,7 @@ const Header: React.FC = () => {
 				<ul
 					className={`fixed nav-ul py-6 px-12 z-[12] ${theme}`}
 					style={{
-						top: headerHeight - 2,
+						top: headerHeight - 3,
 						left: "auto",
 						right: (window.innerWidth - breakPoint) / 2 - fontSize,
 					}}

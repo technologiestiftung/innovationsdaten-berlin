@@ -1,4 +1,11 @@
 {
+	"welcome": [
+		{
+			"id": "welcome",
+			"title": "Innovationsdaten Berlin",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
+		}
+	],
 	"einleitung": [
 		{
 			"id": "big-fact-berlin",
@@ -71,130 +78,375 @@
 			"title": "Wo ist Innovation gewachsen?",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"unit": "*Innovationsausgaben in Mio. €",
-			"data": [
-				{ "year": 2018, "dienstleistungen": 1, "industrie": 2 },
-				{ "year": 2019, "dienstleistungen": 2, "industrie": 3 },
-				{ "year": 2020, "dienstleistungen": 2, "industrie": 3.5 },
-				{ "year": 2021, "dienstleistungen": 3, "industrie": 6 },
-				{ "year": 2022, "dienstleistungen": 4, "industrie": 5.5 },
-				{ "year": 2023, "dienstleistungen": 4.5, "industrie": 7 }
-			]
+			"data": {
+				"ber": [
+					{ "year": 2018, "dienstleistungen": 1447, "industrie": 3206 },
+					{ "year": 2019, "dienstleistungen": 1408, "industrie": 3187 },
+					{ "year": 2020, "dienstleistungen": 1763, "industrie": 3298 },
+					{ "year": 2021, "dienstleistungen": 1916, "industrie": 3457 },
+					{ "year": 2022, "dienstleistungen": 2080, "industrie": 3529 },
+					{ "year": 2023, "dienstleistungen": 2277, "industrie": 3910 }
+				],
+				"de": [
+					{ "year": 2018, "dienstleistungen": 29764, "industrie": 131693 },
+					{ "year": 2019, "dienstleistungen": 32891, "industrie": 132986 },
+					{ "year": 2020, "dienstleistungen": 34099, "industrie": 126636 },
+					{ "year": 2021, "dienstleistungen": 36426, "industrie": 130359 },
+					{ "year": 2022, "dienstleistungen": 40001, "industrie": 137405 },
+					{ "year": 2023, "dienstleistungen": 44152, "industrie": 144860 }
+				]
+			}
 		},
 		{
 			"id": "growth",
 			"title": "Welche Branchen wachsen?",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"unit": "*Innovationsausgaben in Mio. €",
-			"data": [
-				{
-					"year": 2018,
-					"energie": 3,
-					"fahrzeugbau": 1,
-					"nahrung": 2,
-					"holz": 3,
-					"pharma": 4,
-					"sonstige_konsumgueter": 2.7,
-					"elektroindustrie": 0.8,
-					"metall": 1.2,
-					"telekommunikation": 4,
-					"finanz": 3,
-					"kreativ": 1,
-					"forschung": 8.7,
-					"architektur": 4.3,
-					"unternehmensberatung": 2.1,
-					"software": 0.9
+			"data": {
+				"ber": [
+					{
+						"year": 2018,
+						"nahrung": 30,
+						"pharma": 1436,
+						"holz": 51,
+						"metall": 64,
+						"elektroindustrie": 386,
+						"fahrzeugbau": 1096,
+						"sonstige_konsumgueter": 40,
+						"energie": 104,
+						"telekommunikation": 341,
+						"software": 379,
+						"finanz": 342,
+						"unternehmensberatung": 89,
+						"architektur": 68,
+						"forschung": 179,
+						"kreativ": 51
+					},
+					{
+						"year": 2019,
+						"nahrung": 47,
+						"pharma": 1187,
+						"holz": 96,
+						"metall": 52,
+						"elektroindustrie": 517,
+						"fahrzeugbau": 1149,
+						"sonstige_konsumgueter": 69,
+						"energie": 70,
+						"telekommunikation": 287,
+						"software": 462,
+						"finanz": 205,
+						"unternehmensberatung": 60,
+						"architektur": 103,
+						"forschung": 246,
+						"kreativ": 46
+					},
+					{
+						"year": 2020,
+						"nahrung": 42,
+						"pharma": 1286,
+						"holz": 105,
+						"metall": 26,
+						"elektroindustrie": 454,
+						"fahrzeugbau": 1256,
+						"sonstige_konsumgueter": 53,
+						"energie": 75,
+						"telekommunikation": 269,
+						"software": 754,
+						"finanz": 170,
+						"unternehmensberatung": 82,
+						"architektur": 90,
+						"forschung": 292,
+						"kreativ": 105
+					},
+					{
+						"year": 2021,
+						"nahrung": 22,
+						"pharma": 1275,
+						"holz": 131,
+						"metall": 56,
+						"elektroindustrie": 737,
+						"fahrzeugbau": 1136,
+						"sonstige_konsumgueter": 42,
+						"energie": 59,
+						"telekommunikation": 267,
+						"software": 862,
+						"finanz": 175,
+						"unternehmensberatung": 120,
+						"architektur": 127,
+						"forschung": 229,
+						"kreativ": 136
+					},
+					{
+						"year": 2022,
+						"nahrung": 48,
+						"pharma": 1524,
+						"holz": 113,
+						"metall": 88,
+						"elektroindustrie": 864,
+						"fahrzeugbau": 595,
+						"sonstige_konsumgueter": 77,
+						"energie": 220,
+						"telekommunikation": 316,
+						"software": 977,
+						"finanz": 245,
+						"unternehmensberatung": 124,
+						"architektur": 93,
+						"forschung": 269,
+						"kreativ": 56
+					},
+					{
+						"year": 2023,
+						"nahrung": 29,
+						"pharma": 1588,
+						"holz": 57,
+						"metall": 71,
+						"elektroindustrie": 966,
+						"fahrzeugbau": 949,
+						"sonstige_konsumgueter": 47,
+						"energie": 201,
+						"telekommunikation": 273,
+						"software": 1088,
+						"finanz": 266,
+						"unternehmensberatung": 102,
+						"architektur": 122,
+						"forschung": 239,
+						"kreativ": 188
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"nahrung": 2087,
+						"pharma": 21405,
+						"holz": 1518,
+						"metall": 5598,
+						"elektroindustrie": 22116,
+						"fahrzeugbau": 71791,
+						"sonstige_konsumgueter": 2096,
+						"energie": 5082,
+						"telekommunikation": 5027,
+						"software": 11400,
+						"finanz": 5546,
+						"unternehmensberatung": 534,
+						"architektur": 1334,
+						"forschung": 4959,
+						"kreativ": 964
+					},
+					{
+						"year": 2019,
+						"nahrung": 2156,
+						"pharma": 22127,
+						"holz": 1544,
+						"metall": 5980,
+						"elektroindustrie": 20639,
+						"fahrzeugbau": 73974,
+						"sonstige_konsumgueter": 2435,
+						"energie": 4130,
+						"telekommunikation": 7430,
+						"software": 11698,
+						"finanz": 5380,
+						"unternehmensberatung": 419,
+						"architektur": 1573,
+						"forschung": 5383,
+						"kreativ": 1008
+					},
+					{
+						"year": 2020,
+						"nahrung": 2312,
+						"pharma": 22175,
+						"holz": 1362,
+						"metall": 5568,
+						"elektroindustrie": 20183,
+						"fahrzeugbau": 69378,
+						"sonstige_konsumgueter": 2410,
+						"energie": 3249,
+						"telekommunikation": 7501,
+						"software": 12091,
+						"finanz": 5332,
+						"unternehmensberatung": 482,
+						"architektur": 1580,
+						"forschung": 6472,
+						"kreativ": 640
+					},
+					{
+						"year": 2021,
+						"nahrung": 2211,
+						"pharma": 22627,
+						"holz": 1283,
+						"metall": 5490,
+						"elektroindustrie": 20782,
+						"fahrzeugbau": 71413,
+						"sonstige_konsumgueter": 2709,
+						"energie": 3844,
+						"telekommunikation": 7139,
+						"software": 14195,
+						"finanz": 5351,
+						"unternehmensberatung": 616,
+						"architektur": 1818,
+						"forschung": 6634,
+						"kreativ": 673
+					},
+					{
+						"year": 2022,
+						"nahrung": 2305,
+						"pharma": 23473,
+						"holz": 1381,
+						"metall": 5822,
+						"elektroindustrie": 21744,
+						"fahrzeugbau": 75828,
+						"sonstige_konsumgueter": 2829,
+						"energie": 4022,
+						"telekommunikation": 6336,
+						"software": 16594,
+						"finanz": 6631,
+						"unternehmensberatung": 581,
+						"architektur": 1847,
+						"forschung": 7198,
+						"kreativ": 815
+					},
+					{
+						"year": 2023,
+						"nahrung": 2439,
+						"pharma": 24481,
+						"holz": 1176,
+						"metall": 6582,
+						"elektroindustrie": 23553,
+						"fahrzeugbau": 79788,
+						"sonstige_konsumgueter": 2578,
+						"energie": 4263,
+						"telekommunikation": 6669,
+						"software": 18170,
+						"finanz": 7438,
+						"unternehmensberatung": 656,
+						"architektur": 2281,
+						"forschung": 8047,
+						"kreativ": 891
+					}
+				]
+			}
+		},
+		{
+			"id": "inno-ausgaben-2022",
+			"title": "Aktivität seit 2022",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"unit": "*Innovationsausgaben in Mio. € 2022<br />delta 2023-2022 in rot oder grün",
+			"bar_chart_type": "delta",
+			"bar_chart_unit": "Mio. €",
+			"bar_chart_unit_breakpoint": 500,
+			"data": {
+				"nahrung": {
+					"value": 48,
+					"delta": -19
 				},
-				{
-					"year": 2019,
-					"energie": 2,
-					"fahrzeugbau": 1.6,
-					"nahrung": 3,
-					"holz": 8,
-					"pharma": 9,
-					"sonstige_konsumgueter": 3,
-					"elektroindustrie": 2,
-					"metall": 2.2,
-					"telekommunikation": 2.5,
-					"finanz": 3.9,
-					"kreativ": 0.6,
-					"forschung": 5,
-					"architektur": 2.3,
-					"unternehmensberatung": 1.1,
-					"software": 2
+				"pharma": {
+					"value": 1524,
+					"delta": 64
 				},
-				{
-					"year": 2020,
-					"energie": 3.9,
-					"fahrzeugbau": 1.2,
-					"nahrung": 11,
-					"holz": 6,
-					"pharma": 5,
-					"sonstige_konsumgueter": 2.9,
-					"elektroindustrie": 0.2,
-					"metall": 4.0,
-					"telekommunikation": 7,
-					"finanz": 3.4,
-					"kreativ": 1.2,
-					"forschung": 1.1,
-					"architektur": 4,
-					"unternehmensberatung": 1.5,
-					"software": 2
+				"holz": {
+					"value": 113,
+					"delta": -56
 				},
-				{
-					"year": 2021,
-					"energie": 2,
-					"fahrzeugbau": 1.6,
-					"nahrung": 3,
-					"holz": 8,
-					"pharma": 9,
-					"sonstige_konsumgueter": 3,
-					"elektroindustrie": 2,
-					"metall": 2.2,
-					"telekommunikation": 4.9,
-					"finanz": 1,
-					"kreativ": 1.5,
-					"forschung": 6,
-					"architektur": 3.3,
-					"unternehmensberatung": 2.9,
-					"software": 5
+				"metall": {
+					"value": 88,
+					"delta": -17
 				},
-				{
-					"year": 2022,
-					"energie": 5,
-					"fahrzeugbau": 1,
-					"nahrung": 6,
-					"holz": 9,
-					"pharma": 2.5,
-					"sonstige_konsumgueter": 1.7,
-					"elektroindustrie": 6.8,
-					"metall": 1.9,
-					"telekommunikation": 4.2,
-					"finanz": 3.6,
-					"kreativ": 1.6,
-					"forschung": 2,
-					"architektur": 3.3,
-					"unternehmensberatung": 6.1,
-					"software": 0.9
+				"elektroindustrie": {
+					"value": 864,
+					"delta": 102
 				},
-				{
-					"year": 2023,
-					"energie": 2,
-					"fahrzeugbau": 1.6,
-					"nahrung": 3,
-					"holz": 8,
-					"pharma": 9,
-					"sonstige_konsumgueter": 3,
-					"elektroindustrie": 2,
-					"metall": 2.2,
-					"telekommunikation": 7,
-					"finanz": 3.4,
-					"kreativ": 1.2,
-					"forschung": 1.1,
-					"architektur": 4,
-					"unternehmensberatung": 1.5,
-					"software": 2
+				"fahrzeugbau": {
+					"value": 595,
+					"delta": 354
+				},
+				"sonstige_konsumgueter": {
+					"value": 77,
+					"delta": -30
+				},
+				"energie": {
+					"value": 220,
+					"delta": -19
+				},
+				"telekommunikation": {
+					"value": 316,
+					"delta": -43
+				},
+				"software": {
+					"value": 977,
+					"delta": 111
+				},
+				"finanz": {
+					"value": 245,
+					"delta": 21
+				},
+				"unternehmensberatung": {
+					"value": 124,
+					"delta": -22
+				},
+				"architektur": {
+					"value": 93,
+					"delta": 29
+				},
+				"forschung": {
+					"value": 269,
+					"delta": -30
+				},
+				"kreativ": {
+					"value": 56,
+					"delta": 132
 				}
-			]
+			}
+		},
+		{
+			"id": "inno-ausgaben-2023",
+			"title": "Innovations&shy;ausgaben 2023",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"unit": "*Innovationsausgaben in Mio. € 2023",
+			"bar_chart_type": "normal",
+			"bar_chart_unit": "Mio. €",
+			"bar_chart_unit_breakpoint": 500,
+			"data": {
+				"nahrung": 29,
+				"pharma": 1588,
+				"holz": 57,
+				"metall": 71,
+				"elektroindustrie": 966,
+				"fahrzeugbau": 949,
+				"sonstige_konsumgueter": 47,
+				"energie": 201,
+				"telekommunikation": 273,
+				"software": 1088,
+				"finanz": 266,
+				"unternehmensberatung": 102,
+				"architektur": 122,
+				"forschung": 239,
+				"kreativ": 188
+			}
+		},
+		{
+			"id": "inno-intensitaet",
+			"title": "Innovations&shy;intensität",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"unit": "*Innovationsintensität",
+			"bar_chart_type": "normal",
+			"bar_chart_unit": "%",
+			"bar_chart_unit_breakpoint": 5,
+			"data": {
+				"nahrung": 0.5,
+				"pharma": 18.4,
+				"holz": 4.3,
+				"metall": 2.8,
+				"elektroindustrie": 10.9,
+				"fahrzeugbau": 6.1,
+				"sonstige_konsumgueter": 6.4,
+				"energie": 0.7,
+				"telekommunikation": 1.8,
+				"software": 6.5,
+				"finanz": 0.8,
+				"unternehmensberatung": 1.5,
+				"architektur": 2.3,
+				"forschung": 12.7,
+				"kreativ": 3.6
+			}
 		}
 	]
 }

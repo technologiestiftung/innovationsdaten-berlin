@@ -1,4 +1,30 @@
-export type ChapterKeys = "einleitung" | "who_innovates";
+export type ChapterKeys =
+	| "welcome"
+	| "einleitung"
+	| "who_innovates"
+	| "testing";
+
+export type Region = "ber" | "de";
+
+type dataKeys =
+	| "year"
+	| "energie"
+	| "fahrzeugbau"
+	| "nahrung"
+	| "holz"
+	| "pharma"
+	| "sonstige_konsumgueter"
+	| "elektroindustrie"
+	| "metall"
+	| "telekommunikation"
+	| "finanz"
+	| "kreativ"
+	| "forschung"
+	| "architektur"
+	| "unternehmensberatung"
+	| "software"
+	| "industrie"
+	| "dienstleistungen";
 
 export type StickyItemData =
 	| {
@@ -6,54 +32,21 @@ export type StickyItemData =
 			value: number;
 	  }[]
 	| {
-			year: number;
-			dienstleistungen: number;
-			industrie: number;
-	  }[]
-	| {
-			year: number;
-			energie: number;
-			fahrzeugbau: number;
-			nahrung: number;
-			holz: number;
-			pharma: number;
-			sonstige_konsumgueter: number;
-			elektroindustrie: number;
-			metall: number;
-			telekommunikation: number;
-			finanz: number;
-			kreativ: number;
-			forschung: number;
-			architektur: number;
-			unternehmensberatung: number;
-			software: number;
-	  }[]
-	| {
-			nahrung: number;
-			pharma: number;
-			holz: number;
-			metall: number;
-			elektroindustrie: number;
-			fahrzeugbau: number;
-			sonstige_konsumgueter: number;
-			energie: number;
-			telekommunikation: number;
-			software: number;
-			finanz: number;
-			unternehmensberatung: number;
-			architektur: number;
-			forschung: number;
-			kreativ: number;
+			[key: dataKeys]: number;
 	  }
 	| {
-			[key: string]: {
+			[key: dataKeys]: number;
+	  }[]
+	| {
+			[key: dataKeys]: {
 				value: number;
-				delta: string;
-				segments: {
-					percentage: number;
-					color: string;
-				}[];
+				delta: number;
 			};
+	  }[]
+	| {
+			[key: Region]: {
+				[key: dataKeys]: number;
+			}[];
 	  }
 	| undefined;
 
@@ -63,5 +56,15 @@ export type StickyItem = {
 	text?: string;
 	fact?: string;
 	unit?: string;
+	bar_chart_type?: "normal" | "delta";
+	bar_chart_unit?: string;
+	bar_chart_unit_breakpoint?: number;
 	data?: StickyItemData;
+};
+export type BranchenItem = {
+	id: string;
+	name: string;
+	color: string;
+	sektor: string;
+	sektor_id: string;
 };

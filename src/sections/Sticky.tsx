@@ -11,7 +11,8 @@ type StickyProps = {
 
 const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 	const { headerHeight } = useGlobalContext();
-	const dataArray = data[dataKey];
+	const typedData = data as Record<ChapterKeys, StickyItem[]>;
+	const dataArray = typedData[dataKey];
 	const [current, setCurrent] = useState<StickyItem | null>(null);
 
 	useEffect(() => {
@@ -19,10 +20,6 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 			setCurrent(dataArray[0] as StickyItem);
 		}
 	}, [dataArray]);
-
-	useEffect(() => {
-		// console.log("current :>> ", current);
-	}, [current]);
 
 	return (
 		<section
@@ -51,6 +48,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 						onSetCurrent={() => setCurrent(item as StickyItem)}
 						isNotCurrent={item.id !== current?.id}
 						last={index === dataArray.length - 1}
+						first={!index}
 					/>
 				))}
 			</div>

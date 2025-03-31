@@ -5,6 +5,7 @@ import React, {
 	useContext,
 	useEffect,
 } from "react";
+import { Region } from "./types/global";
 
 // Define types for the global state
 type Theme = "light" | "dark";
@@ -19,6 +20,15 @@ interface GlobalStateType {
 	sectionPaddingTop: number;
 	chapter: string;
 	setChapter: (chapter: string) => void;
+	axisFontStylings: {
+		style: {
+			fontFamily: string;
+			fontSize: number;
+			fontWeight: string;
+		};
+	};
+	region: Region;
+	setRegion: (region: Region) => void;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -26,13 +36,22 @@ const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	children,
 }) => {
-	const [theme, setTheme] = useState<Theme>("dark");
+	const [theme, setTheme] = useState<Theme>("light");
+	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
 	const [chapter, setChapter] = useState<string>("Willkommen");
 
 	const fontSize = 16;
 	const additionalPaddingTop = fontSize * 4;
 	const sectionPaddingTop = headerHeight + additionalPaddingTop;
+
+	const axisFontStylings = {
+		style: {
+			fontFamily: "Clan Pro, sans-serif",
+			fontSize: fontSize,
+			fontWeight: "bold",
+		},
+	};
 
 	const breakPoint = 1024;
 	const [isMobile, setIsMobile] = useState<boolean>(
@@ -54,12 +73,20 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		}
 	};
 
+	const detectAndSetTheme = () => {
+		if (typeof window !== "undefined" && window.matchMedia) {
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+			setTheme(prefersDark.matches ? "dark" : "light");
+		}
+	};
+
 	useEffect(() => {
 		document.documentElement.classList.remove("light", "dark");
 		document.documentElement.classList.add(theme);
 	}, [theme]);
 
 	useEffect(() => {
+		detectAndSetTheme();
 		measureHeaderHeight();
 		window.addEventListener("resize", checkIfViewPortIsMobile);
 		return () => window.removeEventListener("resize", checkIfViewPortIsMobile);
@@ -77,6 +104,9 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				sectionPaddingTop,
 				chapter,
 				setChapter,
+				axisFontStylings,
+				region,
+				setRegion,
 			}}
 		>
 			{children}

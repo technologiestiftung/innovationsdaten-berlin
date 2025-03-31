@@ -1,14 +1,30 @@
 [
 	{
-		"link": "overview",
-		"title": "Übersicht"
-	},
-	{
 		"link": "einleitung",
 		"title": "Einleitung"
 	},
 	{
 		"link": "who_innovates",
 		"title": "Wer innoviert?"
+	},
+	{
+		"link": "how_innovates",
+		"title": "Wie wird innoviert?"
+	},
+	{
+		"link": "environment",
+		"title": "Umwelt"
+	},
+	{
+		"link": "berlin",
+		"title": "Standort Berlin"
+	},
+	{
+		"link": "support",
+		"title": "Unterstützung"
+	},
+	{
+		"link": "data_ai",
+		"title": "Daten und KI"
 	}
 ]

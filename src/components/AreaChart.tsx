@@ -6,14 +6,16 @@ import {
 	Area,
 	ResponsiveContainer,
 	CartesianGrid,
+	YAxis,
 } from "recharts";
 import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
 import colors from "../data/colors.json";
-import { hexToRgba } from "../utilities";
+import { formatNumber, hexToRgba } from "../utilities";
 import FilterDropdown from "../components/FilterDropDown";
 import { useGlobalContext } from "../GlobalContext";
 import { StickyItemData } from "../types/global";
+import ScaleToggle from "./ScaleToggle";
 
 type AreaChartProps = {
 	id: string;
@@ -21,18 +23,12 @@ type AreaChartProps = {
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
-	const { theme, fontSize } = useGlobalContext();
-
-	const axisFontStylings = {
-		style: {
-			fontFamily: "Clan Pro, sans-serif",
-			fontSize: fontSize,
-			fontWeight: "bold",
-		},
-	};
+	const { theme, fontSize, axisFontStylings } = useGlobalContext();
 
 	const allFilters = branchen.map((branche) => branche.id);
 	const [activeFilters, setActiveFilters] = useState<string[]>(allFilters);
+
+	const marginRight = 20;
 
 	const setData = data as StickyItemData[];
 
@@ -108,7 +104,7 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 											color: theme === "dark" ? colors.dark : colors.white,
 										}}
 									>
-										{payloadData[dataKey]} Mrd. €
+										{formatNumber(payloadData[dataKey])} Mio. €
 									</p>
 								</div>
 							)}
@@ -120,25 +116,33 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 
 	return (
 		<>
-			{id === "growth" && (
-				<div className="flex w-full justify-end mb-4">
-					<FilterDropdown
-						allFilters={allFilters}
-						activeFilters={activeFilters}
-						setFilters={setActiveFilters}
-					/>
+			<div style={{ marginRight: marginRight }}>
+				<div className="flex w-full justify-end mb-8">
+					<ScaleToggle />
 				</div>
-			)}
+				{id === "growth" && (
+					<div className="flex w-full justify-end mb-8">
+						<FilterDropdown
+							allFilters={allFilters}
+							activeFilters={activeFilters}
+							setFilters={setActiveFilters}
+						/>
+					</div>
+				)}
+			</div>
 			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
-				<AreaChartRecharts data={setData}>
+				<AreaChartRecharts
+					data={setData}
+					margin={{ right: marginRight, left: marginRight }}
+				>
 					<XAxis
 						dataKey="year"
 						stroke={theme === "dark" ? colors.white : colors.blue}
 						strokeWidth={2}
 						tick={axisFontStylings}
+						interval={0}
 					/>
 					<Tooltip content={<CustomTooltip />} />
-					<CartesianGrid strokeDasharray="3 3" vertical={false} />
 					{id === "sektoren" ? (
 						<>
 							{sektoren.map((sektor) => (
@@ -172,6 +176,19 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 								))}
 						</>
 					)}
+					<CartesianGrid
+						strokeDasharray="3 3"
+						vertical={false}
+						stroke={theme === "dark" ? colors.white : colors.blue}
+					/>
+					<YAxis
+						mirror
+						stroke="none"
+						tick={{
+							...axisFontStylings,
+							fill: theme === "dark" ? colors.white : colors.blue,
+						}}
+					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
 		</>

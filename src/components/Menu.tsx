@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
-import { isInRange } from "../utilities";
+// import { isInRange } from "../utilities";
 
 interface NavProps {
 	link: string;
@@ -21,7 +21,11 @@ const Menu: React.FC = () => {
 				setChapter("Willkommen");
 			} else if (element) {
 				const rect = element.getBoundingClientRect();
-				if (isInRange(rect.top) && chapter !== title) {
+				const top = rect.top + window.pageYOffset;
+				const bottom = top + rect.height;
+				const isInRange =
+					window.pageYOffset >= top && window.pageYOffset <= bottom;
+				if (isInRange && chapter !== title) {
 					setChapter(title);
 				}
 			}
@@ -67,7 +71,7 @@ const Menu: React.FC = () => {
 	};
 
 	return (
-		<nav className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2">
+		<nav className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
 			{chapters.map((mapChapter) => (
 				<NavStep
 					key={mapChapter.link}

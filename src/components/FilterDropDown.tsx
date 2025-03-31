@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
 import colors from "../data/colors.json";
 import branchen from "../data/branchen.json";
+import sektoren from "../data/sektoren.json";
 import { useGlobalContext } from "../GlobalContext";
 
 interface FilterDropdownProps {
@@ -18,6 +19,12 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 	const { theme, fontSize } = useGlobalContext();
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
+	const allIndustrieBranchen: string[] = branchen
+		.filter((branche) => branche.sektor_id === "industrie")
+		.map((branche) => branche.id);
+	const allDienstleistungenBranchen: string[] = branchen
+		.filter((branche) => branche.sektor_id === "dienstleistungen")
+		.map((branche) => branche.id);
 
 	const toggleFilter = (filter: string) => {
 		const updatedFilters = activeFilters.includes(filter)
@@ -31,6 +38,45 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 			setFilters([]);
 		} else {
 			setFilters(allFilters);
+		}
+		return;
+	};
+
+	const checkForAllSektorChecked = (id: string) => {
+		let allSektorsChecked = true;
+		branchen.forEach((branche) => {
+			if (branche.sektor_id === id && !activeFilters.includes(branche.id)) {
+				allSektorsChecked = false;
+			}
+		});
+		return allSektorsChecked;
+	};
+
+	const toggleSektor = (id: string) => {
+		if (checkForAllSektorChecked(id)) {
+			if (id === "industrie") {
+				const newFilters = activeFilters.filter(
+					(singleFilter) => !allIndustrieBranchen.includes(singleFilter),
+				);
+				setFilters(newFilters);
+			} else {
+				const newFilters = activeFilters.filter(
+					(singleFilter) => !allDienstleistungenBranchen.includes(singleFilter),
+				);
+				setFilters(newFilters);
+			}
+			return;
+		}
+		if (id === "industrie") {
+			const newFilters = activeFilters.filter(
+				(singleFilter) => !allIndustrieBranchen.includes(singleFilter),
+			);
+			setFilters([...newFilters, ...allIndustrieBranchen]);
+		} else {
+			const newFilters = activeFilters.filter(
+				(singleFilter) => !allDienstleistungenBranchen.includes(singleFilter),
+			);
+			setFilters([...newFilters, ...allDienstleistungenBranchen]);
 		}
 		return;
 	};
@@ -93,6 +139,25 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
 							</span>
 							<p className="bold select-none">Alle</p>
 						</li>
+						{sektoren.map((sektor) => (
+							<li
+								key={sektor.id}
+								className="flex items-center p-2 cursor-pointer"
+								onClick={() => toggleSektor(sektor.id)}
+							>
+								<span className="mr-2">
+									<Icon
+										id={
+											checkForAllSektorChecked(sektor.id)
+												? "checked"
+												: "unchecked"
+										}
+										size={fontSize}
+									/>
+								</span>
+								<p className="bold select-none">{sektor.name}</p>
+							</li>
+						))}
 
 						<hr />
 

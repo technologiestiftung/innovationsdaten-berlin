@@ -57,9 +57,11 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, unit, data }) => {
 					stroke={theme === "dark" ? colors.white : colors.blue}
 					strokeWidth={2}
 				/>
-				<foreignObject x={iconX} y={iconY} width={iconSize} height={iconSize}>
-					<Icon id={nodeID} setColor={colors.white} size={iconSize} />
-				</foreignObject>
+				{width > iconSize + 10 && height > iconSize + 10 && (
+					<foreignObject x={iconX} y={iconY} width={iconSize} height={iconSize}>
+						<Icon id={nodeID} setColor={colors.white} size={iconSize} />
+					</foreignObject>
+				)}
 			</g>
 		);
 	};
@@ -130,8 +132,6 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, unit, data }) => {
 						dataKey="value"
 						fill="none"
 						content={<CustomTreemapNode />}
-						// isAnimationActive={false}
-						// isUpdateAnimationActive={false}
 					>
 						<Tooltip
 							content={(props) => <CustomTooltip {...props} dataID={id} />}

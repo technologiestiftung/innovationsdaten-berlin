@@ -9,6 +9,7 @@ type CardProps = {
 	onSetCurrent: () => void;
 	isNotCurrent: boolean;
 	last: boolean;
+	first: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -18,14 +19,38 @@ const Card: React.FC<CardProps> = ({
 	onSetCurrent,
 	isNotCurrent,
 	last,
+	first,
 }) => {
 	const { theme, headerHeight } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
-	const [marginBottomOfLastCard, setMarginBottomOfLastCard] = useState(0);
+	const [specificMargin, setSpecificMargin] = useState(0);
+	const [cardHeight, setCardHeight] = useState<number | null>(null);
+	const getMarginTop = () => {
+		if (cardHeight) {
+			return (window.innerHeight - cardHeight - headerHeight) / 2;
+		}
+		if (first) {
+			return specificMargin;
+		}
+		return window.innerHeight - headerHeight;
+	};
+	const getMarginBottom = () => {
+		if (cardHeight) {
+			return (window.innerHeight - cardHeight - headerHeight) / 2;
+		}
+		if (last) {
+			return specificMargin;
+		}
+		return 0;
+	};
 	const handleScroll = () => {
 		if (cardRef.current) {
 			const rect = cardRef.current.getBoundingClientRect();
-			if (isInRange(rect.top - window.innerHeight / 1.5) && isNotCurrent) {
+			if (
+				(isInRange(rect.top - window.innerHeight / 2) ||
+					isInRange(rect.bottom - window.innerHeight / 2)) &&
+				isNotCurrent
+			) {
 				onSetCurrent();
 			}
 		}
@@ -37,15 +62,30 @@ const Card: React.FC<CardProps> = ({
 		};
 	}, []);
 	useEffect(() => {
-		if (last) {
-			const getCard = document.querySelector(`#${dataKey} .card:last-of-type`);
+		if (last || first) {
+			const getCard = document.querySelector(
+				last
+					? `#${dataKey} .card:last-of-type`
+					: `#${dataKey} .card:first-of-type`,
+			);
 			if (!getCard) {
 				return;
 			}
-			const cardHeight = getCard?.getBoundingClientRect().height;
-			const subtraction = window.innerHeight - cardHeight - headerHeight;
+			const getCardHeight = getCard?.getBoundingClientRect().height;
+			const subtraction = window.innerHeight - getCardHeight - headerHeight;
 			const getMargin = subtraction / 2;
-			setMarginBottomOfLastCard(getMargin);
+			setSpecificMargin(getMargin);
+		}
+		if (dataKey === "welcome") {
+			const getCard = document.querySelector(
+				last
+					? `#${dataKey} .card:last-of-type`
+					: `#${dataKey} .card:first-of-type`,
+			);
+			if (!getCard) {
+				return;
+			}
+			setCardHeight(getCard?.getBoundingClientRect().height);
 		}
 	}, [headerHeight]);
 	return (
@@ -53,11 +93,14 @@ const Card: React.FC<CardProps> = ({
 			ref={cardRef}
 			className={`card p-6 ${theme}`}
 			style={{
-				marginTop: window.innerHeight - headerHeight,
-				marginBottom: marginBottomOfLastCard,
+				marginTop: getMarginTop(),
+				marginBottom: getMarginBottom(),
 			}}
 		>
-			<h2 className={text ? "mb-4" : ""}>{title}</h2>
+			<h2
+				className={text ? "mb-4" : ""}
+				dangerouslySetInnerHTML={{ __html: title }}
+			/>
 			<p>{text}</p>
 		</div>
 	);
