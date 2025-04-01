@@ -39,7 +39,8 @@ const Card: React.FC<CardProps> = ({
 			return (window.innerHeight - cardHeight - headerHeight) / 2;
 		}
 		if (last) {
-			return specificMargin;
+			return window.innerHeight - headerHeight;
+			return specificMargin + window.innerHeight * 0.2;
 		}
 		return 0;
 	};

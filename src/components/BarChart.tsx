@@ -130,10 +130,19 @@ const BarChart: React.FC<BarChartProps> = ({
 			}
 			return colors.blue;
 		};
+		const setX = () => {
+			if (bar_chart_type === "delta" && !isSmall) {
+				return x - paddingLabel;
+			}
+			if (isSmall) {
+				return x + width + paddingLabel;
+			}
+			return x + width - paddingLabel;
+		};
 		return (
 			<>
 				<text
-					x={isSmall ? x + width + paddingLabel : x + width - paddingLabel}
+					x={setX()}
 					y={y + height / 2}
 					textAnchor={isSmall ? "start" : "end"}
 					dominantBaseline="middle"
@@ -142,7 +151,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				>
 					<tspan
 						fill={getFill()}
-					>{`${formatNumber(value)} ${bar_chart_unit}`}</tspan>
+					>{`${formatNumber(value)} ${bar_chart_unit?.includes("€") ? "" : bar_chart_unit}`}</tspan>
 					{bar_chart_type === "delta" && (
 						<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
 							{positiveDelta ? "↑" : "↓"}
@@ -176,13 +185,16 @@ const BarChart: React.FC<BarChartProps> = ({
 	};
 	const DeltaBar = (props: any) => {
 		const { x, y, width, height, payload } = props;
+		const getColor = payload?.positiveDelta ? colors.green : colors.red;
 		return (
 			<rect
 				x={x}
 				y={y}
 				width={width}
 				height={height}
-				fill={payload?.positiveDelta ? colors.green : colors.red}
+				fill={getColor}
+				stroke={getColor}
+				strokeWidth={2}
 			/>
 		);
 	};
@@ -261,14 +273,10 @@ const BarChart: React.FC<BarChartProps> = ({
 							dataKey="name"
 							width={150}
 							tick={{
-								...axisFontStylings,
+								fontFamily: "Clan Pro",
+								fontSize: 12,
 								fill: theme === "dark" ? colors.white : colors.blue,
-							}}
-							tickFormatter={(label: string) => {
-								const maxLength = 15;
-								return label.length > maxLength
-									? `${label.slice(0, maxLength)}…`
-									: label;
+								fontWeight: "initial",
 							}}
 						/>
 						{bar_chart_type === "stacked" && (
@@ -342,6 +350,9 @@ const BarChart: React.FC<BarChartProps> = ({
 								...axisFontStylings,
 								fill: theme === "dark" ? colors.white : colors.blue,
 								dy: 25,
+							}}
+							tickFormatter={(label: string) => {
+								return `${label} ${bar_chart_unit}`;
 							}}
 						/>
 					</RechartsBarChart>

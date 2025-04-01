@@ -14,9 +14,22 @@ const Menu: React.FC = () => {
 		const [isOpen, setIsOpen] = useState(false);
 		const [mouseIn, setMouseIn] = useState(false);
 
+		const scrollToIdWithOffset = (id: string, offset: number = 2) => {
+			const element = document.getElementById(id);
+			if (element) {
+				const top =
+					element.getBoundingClientRect().top + window.pageYOffset + offset;
+
+				window.scrollTo({
+					top,
+					behavior: "smooth",
+				});
+			}
+		};
+
 		const handleScroll = () => {
 			const element = document.getElementById(link);
-			if (window.pageYOffset === 0 && chapter !== "Willkommen") {
+			if (window.pageYOffset < window.innerHeight) {
 				setChapter("Willkommen");
 			} else if (element) {
 				const rect = element.getBoundingClientRect();
@@ -39,7 +52,6 @@ const Menu: React.FC = () => {
 
 		return (
 			<a
-				href={`#${link}`}
 				onMouseEnter={() => {
 					setIsOpen(true);
 					setMouseIn(true);
@@ -49,11 +61,7 @@ const Menu: React.FC = () => {
 					setMouseIn(false);
 				}}
 				className="relative flex items-center"
-				onClick={() => {
-					if (chapter !== title) {
-						setChapter(title);
-					}
-				}}
+				onClick={() => scrollToIdWithOffset(link)}
 			>
 				<div
 					className={`${theme} ${isOpen || chapter === title ? "open" : ""}`}

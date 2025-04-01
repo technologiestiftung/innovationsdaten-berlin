@@ -13,11 +13,10 @@ import { StickyItemData } from "../types/global";
 
 type TreeMapProps = {
 	id?: string;
-	unit?: string;
 	data: StickyItemData;
 };
 
-const TreeMap: React.FC<TreeMapProps> = ({ id, unit, data }) => {
+const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 	const { theme, fontSize } = useGlobalContext();
 
 	if (!data || !Array.isArray(data)) {
@@ -138,9 +137,6 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, unit, data }) => {
 						/>
 					</TreeMapRecharts>
 				</ResponsiveContainer>
-			</div>
-			<div className={`unit-container flex justify-end pt-4 mt-8 ${theme}`}>
-				<p>{unit}</p>
 			</div>
 		</>
 	);

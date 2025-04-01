@@ -199,7 +199,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								type="linear"
 								dataKey="ber"
 								fill="none"
-								// stroke={theme === "dark" ? colors.white : colors.blue}
 								stroke={colors.cyan_light}
 								strokeWidth={3}
 							/>
@@ -207,7 +206,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								type="linear"
 								dataKey="de"
 								fill="none"
-								// stroke={theme === "dark" ? colors.white : colors.blue}
 								stroke={colors.green_light}
 								strokeWidth={3}
 							/>
@@ -221,9 +219,13 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
+						width={150}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
+						}}
+						tickFormatter={(label: string) => {
+							return `${label} ${id === "berlin_is_ahead" ? "%" : "Mio. €"}`;
 						}}
 					/>
 				</AreaChartRecharts>

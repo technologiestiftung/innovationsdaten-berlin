@@ -5,7 +5,6 @@ import BranchenList from "./BranchenList";
 import TreeMap from "./TreeMap";
 import AreaChart from "./AreaChart";
 import BarChart from "./BarChart";
-import Overview from "./Overview";
 import { useGlobalContext } from "../GlobalContext";
 import BigFactComparison from "./BigFactComparison";
 
@@ -44,12 +43,11 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 
 	return (
 		<>
-			{id === "welcome" && <Overview />}
 			{fact && <BigFact fact={fact} unit={unit} />}
 			{facts && <BigFactComparison facts={facts} />}
 			{id === "branchen-list" && <BranchenList />}
 			{(id === "umsatz" || id === "beschaeftigte") && (
-				<TreeMap id={id} unit={unit} data={content} />
+				<TreeMap id={id} data={content} />
 			)}
 			{(id === "sektoren" || id === "growth") && content !== undefined && (
 				<div className="hide-first-y-axis-tick">

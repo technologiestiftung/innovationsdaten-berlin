@@ -143,6 +143,7 @@ nav {
 	right: 2vw;
 	a {
 		position: relative;
+		cursor: pointer;
 		& > div:not(.absolute) {
 			width: calc($font-size * 1.25);
 			height: calc($font-size * 1.25);
@@ -340,15 +341,6 @@ $toggle-padding-y: calc($toggle-height * 0.15);
 
 .fw-normal {
 	font-weight: normal !important;
-}
-
-.unit-container {
-	&.dark {
-		border-top: 2px solid $white;
-	}
-	&.light {
-		border-top: 2px solid $blue;
-	}
 }
 
 .recharts-xAxis,

@@ -28,7 +28,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 			style={{ paddingTop: headerHeight }}
 		>
 			<div
-				className="sticky flex items-center basis-3/5"
+				className="sticky flex items-center basis-4/6"
 				style={{
 					height: window.innerHeight - headerHeight,
 					top: headerHeight,
@@ -38,7 +38,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 					<LeftStickyContent data={current as StickyItem} />
 				</div>
 			</div>
-			<div className="basis-2/5">
+			<div className="basis-2/6">
 				{dataArray.map((item: StickyItem, index: number) => (
 					<Card
 						key={item.id}

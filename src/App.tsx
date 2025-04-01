@@ -8,6 +8,7 @@ import data from "./data/data.json";
 import Sticky from "./sections/Sticky";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
+import Welcome from "./sections/Welcome";
 
 function App() {
 	const { theme, isMobile } = useGlobalContext();
@@ -25,6 +26,7 @@ function App() {
 						<Menu />
 						<ThemeToggle />
 						<main className={theme}>
+							<Welcome />
 							{Object.keys(data).map((dataKey) => (
 								<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
 							))}
