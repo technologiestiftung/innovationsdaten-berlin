@@ -6,16 +6,12 @@ const Footer: React.FC = () => {
 	const { theme, fontSize } = useGlobalContext();
 	return (
 		<footer className={theme}>
-			<div className="px-10 py-20">
-				<div className="mb-10 flex justify-between">
-					<div>
-						<h3 className="mb-4">Gefördert von:</h3>
-						<Icon id="SenWEB_logo" size={fontSize * 5} />
-					</div>
-					<div>
-						<h3 className="mb-4">Ein Projekt der:</h3>
-						<Icon id="tsb_logo" size={fontSize * 5} />
-					</div>
+			<div className="py-20">
+				<h3 className="mb-4">Gefördert von:</h3>
+				<Icon id="SenWEB_logo" size={fontSize * 5} />
+				<h3 className="mb-4 mt-10">Ein Projekt der:</h3>
+				<div className="mb-10">
+					<Icon id="tsb_logo" size={fontSize * 5} />
 				</div>
 				<a
 					href="https://www.technologiestiftung-berlin.de/datenschutz"

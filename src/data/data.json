@@ -11,7 +11,7 @@
 			"id": "big-fact-berlin",
 			"title": "Der Gesamtumsatz Berlins beträgt...",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem",
-			"fact": "XXX",
+			"fact": "377",
 			"unit": "Mrd. €"
 		},
 		{
@@ -70,7 +70,7 @@
 		{
 			"id": "berliner_unternehmen",
 			"title": "Wer innoviert?",
-			"fact": "61%",
+			"fact": "65%",
 			"unit": "der Berliner Unternehmen sind innovativ"
 		},
 		{
@@ -403,23 +403,45 @@
 			"unit": "*Innovationsausgaben in Mio. € 2023",
 			"bar_chart_type": "normal",
 			"bar_chart_unit": "Mio. €",
-			"bar_chart_unit_breakpoint": 500,
+			"bar_chart_unit_breakpoint": {
+				"ber": 500,
+				"de": 25000
+			},
 			"data": {
-				"nahrung": 29,
-				"pharma": 1588,
-				"holz": 57,
-				"metall": 71,
-				"elektroindustrie": 966,
-				"fahrzeugbau": 949,
-				"sonstige_konsumgueter": 47,
-				"energie": 201,
-				"telekommunikation": 273,
-				"software": 1088,
-				"finanz": 266,
-				"unternehmensberatung": 102,
-				"architektur": 122,
-				"forschung": 239,
-				"kreativ": 188
+				"ber": {
+					"nahrung": 29,
+					"pharma": 1588,
+					"holz": 57,
+					"metall": 71,
+					"elektroindustrie": 966,
+					"fahrzeugbau": 949,
+					"sonstige_konsumgueter": 47,
+					"energie": 201,
+					"telekommunikation": 273,
+					"software": 1088,
+					"finanz": 266,
+					"unternehmensberatung": 102,
+					"architektur": 122,
+					"forschung": 239,
+					"kreativ": 188
+				},
+				"de": {
+					"nahrung": 2439,
+					"pharma": 24481,
+					"holz": 1176,
+					"metall": 6582,
+					"elektroindustrie": 23553,
+					"fahrzeugbau": 79788,
+					"sonstige_konsumgueter": 2578,
+					"energie": 4263,
+					"telekommunikation": 6669,
+					"software": 18170,
+					"finanz": 7438,
+					"unternehmensberatung": 656,
+					"architektur": 2281,
+					"forschung": 8047,
+					"kreativ": 891
+				}
 			}
 		},
 		{
@@ -447,6 +469,370 @@
 				"forschung": 12.7,
 				"kreativ": 3.6
 			}
+		}
+	],
+	"how_innovates": [
+		{
+			"id": "how_innovates_intro",
+			"title": "Wie wird innoviert?",
+			"facts": [
+				{
+					"fact": "36%",
+					"unit": "der Berliner Unternehmen setzen auf Produktinnovation"
+				},
+				{
+					"fact": "55%",
+					"unit": "setzen auf Prozessinnovation."
+				}
+			]
+		},
+		{
+			"id": "added-value-through-product-innovation",
+			"title": "Mehrwert durch Produkt&shy;innovation",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"unit": "*Mehrwert durch Produktinnovation",
+			"bar_chart_type": "stacked",
+			"bar_chart_unit": "%",
+			"data": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"umsatz_markt_neuheiten": 0.3,
+						"umsatz_nachahmer_innovationen": 3.1,
+						"umsatz_produkt_neuheiten": 3.4
+					},
+					{
+						"id": "pharma",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 9.0,
+						"umsatz_produkt_neuheiten": 11.5
+					},
+					{
+						"id": "holz",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 6.4,
+						"umsatz_produkt_neuheiten": 8.9
+					},
+					{
+						"id": "metall",
+						"umsatz_markt_neuheiten": 1.9,
+						"umsatz_nachahmer_innovationen": 6.6,
+						"umsatz_produkt_neuheiten": 8.4
+					},
+					{
+						"id": "elektroindustrie",
+						"umsatz_markt_neuheiten": 4.2,
+						"umsatz_nachahmer_innovationen": 10.0,
+						"umsatz_produkt_neuheiten": 14.3
+					},
+					{
+						"id": "fahrzeugbau",
+						"umsatz_markt_neuheiten": 10.7,
+						"umsatz_nachahmer_innovationen": 25.8,
+						"umsatz_produkt_neuheiten": 36.5
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"umsatz_markt_neuheiten": 1.6,
+						"umsatz_nachahmer_innovationen": 7.9,
+						"umsatz_produkt_neuheiten": 9.4
+					},
+					{
+						"id": "energie",
+						"umsatz_markt_neuheiten": 0.2,
+						"umsatz_nachahmer_innovationen": 1.8,
+						"umsatz_produkt_neuheiten": 2.0
+					},
+					{
+						"id": "telekommunikation",
+						"umsatz_markt_neuheiten": 1.8,
+						"umsatz_nachahmer_innovationen": 10.3,
+						"umsatz_produkt_neuheiten": 12.2
+					},
+					{
+						"id": "software",
+						"umsatz_markt_neuheiten": 2.8,
+						"umsatz_nachahmer_innovationen": 15.4,
+						"umsatz_produkt_neuheiten": 18.3
+					},
+					{
+						"id": "finanz",
+						"umsatz_markt_neuheiten": 2.1,
+						"umsatz_nachahmer_innovationen": 10.5,
+						"umsatz_produkt_neuheiten": 12.6
+					},
+					{
+						"id": "unternehmensberatung",
+						"umsatz_markt_neuheiten": 6.0,
+						"umsatz_nachahmer_innovationen": 5.1,
+						"umsatz_produkt_neuheiten": 11.1
+					},
+					{
+						"id": "architektur",
+						"umsatz_markt_neuheiten": 1.2,
+						"umsatz_nachahmer_innovationen": 6.2,
+						"umsatz_produkt_neuheiten": 7.4
+					},
+					{
+						"id": "forschung",
+						"umsatz_markt_neuheiten": 4.7,
+						"umsatz_nachahmer_innovationen": 5.5,
+						"umsatz_produkt_neuheiten": 10.2
+					},
+					{
+						"id": "kreativ",
+						"umsatz_markt_neuheiten": 1.0,
+						"umsatz_nachahmer_innovationen": 3.6,
+						"umsatz_produkt_neuheiten": 4.6
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"umsatz_markt_neuheiten": 0.8,
+						"umsatz_nachahmer_innovationen": 3.2,
+						"umsatz_produkt_neuheiten": 3.3
+					},
+					{
+						"id": "pharma",
+						"umsatz_markt_neuheiten": 1.7,
+						"umsatz_nachahmer_innovationen": 9.0,
+						"umsatz_produkt_neuheiten": 8.3
+					},
+					{
+						"id": "holz",
+						"umsatz_markt_neuheiten": 1.2,
+						"umsatz_nachahmer_innovationen": 5.2,
+						"umsatz_produkt_neuheiten": 8.6
+					},
+					{
+						"id": "metall",
+						"umsatz_markt_neuheiten": 1.3,
+						"umsatz_nachahmer_innovationen": 4.8,
+						"umsatz_produkt_neuheiten": 9.2
+					},
+					{
+						"id": "elektroindustrie",
+						"umsatz_markt_neuheiten": 3.2,
+						"umsatz_nachahmer_innovationen": 11.7,
+						"umsatz_produkt_neuheiten": 10.9
+					},
+					{
+						"id": "fahrzeugbau",
+						"umsatz_markt_neuheiten": 11.4,
+						"umsatz_nachahmer_innovationen": 22.7,
+						"umsatz_produkt_neuheiten": 22.0
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"umsatz_markt_neuheiten": 1.8,
+						"umsatz_nachahmer_innovationen": 8.1,
+						"umsatz_produkt_neuheiten": 0.4
+					},
+					{
+						"id": "energie",
+						"umsatz_markt_neuheiten": 1.7,
+						"umsatz_nachahmer_innovationen": 3.3,
+						"umsatz_produkt_neuheiten": 2.6
+					},
+					{
+						"id": "telekommunikation",
+						"umsatz_markt_neuheiten": 2.7,
+						"umsatz_nachahmer_innovationen": 8.4,
+						"umsatz_produkt_neuheiten": 16.8
+					},
+					{
+						"id": "software",
+						"umsatz_markt_neuheiten": 6.4,
+						"umsatz_nachahmer_innovationen": 22.8,
+						"umsatz_produkt_neuheiten": 14.4
+					},
+					{
+						"id": "finanz",
+						"umsatz_markt_neuheiten": 2.2,
+						"umsatz_nachahmer_innovationen": 12.4,
+						"umsatz_produkt_neuheiten": 9.9
+					},
+					{
+						"id": "unternehmensberatung",
+						"umsatz_markt_neuheiten": 4.0,
+						"umsatz_nachahmer_innovationen": 8.8,
+						"umsatz_produkt_neuheiten": 6.4
+					},
+					{
+						"id": "architektur",
+						"umsatz_markt_neuheiten": 0.5,
+						"umsatz_nachahmer_innovationen": 6.2,
+						"umsatz_produkt_neuheiten": 9.5
+					},
+					{
+						"id": "forschung",
+						"umsatz_markt_neuheiten": 21.3,
+						"umsatz_nachahmer_innovationen": 9.7,
+						"umsatz_produkt_neuheiten": 4.4
+					},
+					{
+						"id": "kreativ",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 12.6,
+						"umsatz_produkt_neuheiten": 4.7
+					}
+				]
+			}
+		}
+	],
+	"environment": [
+		{
+			"id": "environment_innovation",
+			"title": "Umwelt",
+			"fact": "47%",
+			"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
+		},
+		{
+			"id": "what_drives_environment_innovation",
+			"title": "Was treibt Umweltinnovationen?",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"unit": "*Anteil der Branchen mit Hoher Priorität auf dem jeweiligen Grund",
+			"bar_chart_type": "normal",
+			"bar_chart_unit": "%",
+			"bar_chart_unit_breakpoint": 6,
+			"data": {
+				"ber": {
+					"existing_environmental_taxes_or_charges": 6,
+					"compliance_with_existing_regulations": 19,
+					"public_funding_for_environmental_innovations": 4,
+					"expected_future_regulations_or_environmental_taxes": 11,
+					"current_or_expected_demand_for_environmental_innovations": 4,
+					"improving_company_reputation": 8,
+					"industry_self_commitments_or_standards": 10,
+					"rising_costs_for_energy_or_raw_materials": 14,
+					"requirements_in_public_procurement": 5
+				},
+				"de": {
+					"existing_environmental_taxes_or_charges": 9,
+					"compliance_with_existing_regulations": 22,
+					"public_funding_for_environmental_innovations": 8,
+					"expected_future_regulations_or_environmental_taxes": 12,
+					"current_or_expected_demand_for_environmental_innovations": 9,
+					"improving_company_reputation": 12,
+					"industry_self_commitments_or_standards": 10,
+					"rising_costs_for_energy_or_raw_materials": 24,
+					"requirements_in_public_procurement": 5
+				}
+			}
+		}
+	],
+	"berlin": [
+		{
+			"id": "berlin_intro",
+			"title": "Was macht Berlin aus als Innovationsstandort?",
+			"facts": [
+				{
+					"fact": "19%",
+					"unit": "der Berliner Innovationsausgaben kommen von KMUs, im Vergleich mit"
+				},
+				{
+					"fact": "14%",
+					"unit": "deutschlandweit"
+				}
+			]
+		},
+		{
+			"id": "berlin_is_ahead",
+			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"unit": "*Innovationsintensität / FuE Intensität",
+			"allToggles": ["innovations_intensitaet", "fue_intensitaet"],
+			"data": {
+				"innovations_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 0.05430635129931505,
+						"de": 0.0443060657401294
+					},
+					{
+						"year": 2019,
+						"ber": 0.04642867968757894,
+						"de": 0.04432251169004676
+					},
+					{
+						"year": 2020,
+						"ber": 0.05625020839585209,
+						"de": 0.04538074067047084
+					},
+					{
+						"year": 2021,
+						"ber": 0.047427759188466194,
+						"de": 0.04021695962823456
+					},
+					{
+						"year": 2022,
+						"ber": 0.042166274498011594,
+						"de": 0.03449526999121898
+					},
+					{
+						"year": 2023,
+						"ber": 0.04030566376985316,
+						"de": 0.035090233726962586
+					}
+				],
+				"fue_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 0.02811001295230983,
+						"de": 0.026238259809127397
+					},
+					{
+						"year": 2019,
+						"ber": 0.02581616465762006,
+						"de": 0.027210955243820976
+					},
+					{
+						"year": 2020,
+						"ber": 0.02921987707423338,
+						"de": 0.02863576855240649
+					},
+					{
+						"year": 2021,
+						"ber": 0.026856895653632567,
+						"de": 0.025806033134714097
+					},
+					{
+						"year": 2022,
+						"ber": 0.025665120544876373,
+						"de": 0.02188839465920837
+					},
+					{
+						"year": 2023,
+						"ber": 0.023628356633789788,
+						"de": 0.022495867412636435
+					}
+				]
+			}
+		}
+	],
+	"support": [
+		{
+			"id": "support_intro",
+			"title": "Was macht Berlin aus als Innovationsstandort?",
+			"fact": "22%",
+			"unit": "der Berliner Unternehmen werden staatlich gefördert."
+		}
+	],
+	"data_ai": [
+		{
+			"id": "data_ai_intro",
+			"title": "Daten und KI",
+			"facts": [
+				{
+					"fact": "40%",
+					"unit": "der Berliner Unternehmen benutzen frei zugänglichen Daten, aber nur "
+				},
+				{
+					"fact": "11%",
+					"unit": "kaufen Daten von Dritten."
+				}
+			]
 		}
 	]
 }

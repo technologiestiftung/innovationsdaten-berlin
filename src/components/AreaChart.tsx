@@ -12,17 +12,27 @@ import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
 import colors from "../data/colors.json";
 import { formatNumber, hexToRgba } from "../utilities";
-import FilterDropdown from "../components/FilterDropDown";
+import Dropdown from "./DropDown";
 import { useGlobalContext } from "../GlobalContext";
 import { StickyItemData } from "../types/global";
-import ScaleToggle from "./ScaleToggle";
+import RegionToggle from "./RegionToggle";
+import DataToggleElement from "./DataToggleElement";
 
 type AreaChartProps = {
 	id: string;
 	data: StickyItemData;
+	toggleData?: string;
+	setToggleData?: (toggleData: string) => void;
+	allToggles?: string[];
 };
 
-const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
+const AreaChart: React.FC<AreaChartProps> = ({
+	id,
+	data,
+	toggleData,
+	setToggleData,
+	allToggles,
+}) => {
 	const { theme, fontSize, axisFontStylings } = useGlobalContext();
 
 	const allFilters = branchen.map((branche) => branche.id);
@@ -117,18 +127,25 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 	return (
 		<>
 			<div style={{ marginRight: marginRight }}>
-				<div className="flex w-full justify-end mb-8">
-					<ScaleToggle />
-				</div>
+				{id !== "berlin_is_ahead" && <RegionToggle />}
 				{id === "growth" && (
-					<div className="flex w-full justify-end mb-8">
-						<FilterDropdown
-							allFilters={allFilters}
-							activeFilters={activeFilters}
-							setFilters={setActiveFilters}
-						/>
-					</div>
+					<Dropdown
+						type="filter"
+						allFilters={allFilters}
+						activeFilters={activeFilters}
+						setFilters={setActiveFilters}
+					/>
 				)}
+				{id === "berlin_is_ahead" &&
+					toggleData &&
+					setToggleData &&
+					allToggles && (
+						<DataToggleElement
+							toggleData={toggleData}
+							setToggleData={setToggleData}
+							allToggles={allToggles}
+						/>
+					)}
 			</div>
 			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
 				<AreaChartRecharts
@@ -174,6 +191,26 @@ const AreaChart: React.FC<AreaChartProps> = ({ id, data }) => {
 										fillOpacity={1}
 									/>
 								))}
+						</>
+					)}
+					{id === "berlin_is_ahead" && (
+						<>
+							<Area
+								type="linear"
+								dataKey="ber"
+								fill="none"
+								// stroke={theme === "dark" ? colors.white : colors.blue}
+								stroke={colors.cyan_light}
+								strokeWidth={3}
+							/>
+							<Area
+								type="linear"
+								dataKey="de"
+								fill="none"
+								// stroke={theme === "dark" ? colors.white : colors.blue}
+								stroke={colors.green_light}
+								strokeWidth={3}
+							/>
 						</>
 					)}
 					<CartesianGrid

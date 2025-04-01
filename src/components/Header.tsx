@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 			<header
 				className={`fixed top-0 left-0 w-screen z-[11] flex justify-between items-center ${theme}`}
 			>
-				<Icon id="innodaten_logo_wording" size={window.innerHeight * 0.05} />
+				<Icon id="innodaten_logo_wording" size={fontSize * 3} />
 				<div className="flex items-center gap-8">
 					<div
 						className="flex items-center gap-4 cursor-pointer"
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
 				<ul
 					className={`fixed nav-ul py-6 px-12 z-[12] ${theme}`}
 					style={{
-						top: headerHeight - 3,
+						top: headerHeight - 2,
 						left: "auto",
 						right: (window.innerWidth - breakPoint) / 2 - fontSize,
 					}}

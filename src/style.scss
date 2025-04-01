@@ -236,13 +236,13 @@ footer {
 	}
 }
 
-.filter-drop-down {
+.drop-down {
 	&.dark {
-		& > button,
-		& > div {
+		button,
+		.flyout {
 			border: 2px solid $white;
 		}
-		& > div {
+		.flyout {
 			background: $dark;
 		}
 		hr {
@@ -250,11 +250,11 @@ footer {
 		}
 	}
 	&.light {
-		& > button,
-		& > div {
+		button,
+		.flyout {
 			border: 2px solid $blue;
 		}
-		& > div {
+		.flyout {
 			background: $white;
 		}
 		hr {
@@ -268,12 +268,12 @@ footer {
 	ul {
 		max-height: 60vh;
 	}
-	& > div {
+	.flyout {
 		width: 100%;
 		border-top: none !important;
 		transform: translateY(-2px);
 	}
-	& > button {
+	button {
 		& > div {
 			transition: $all-transition;
 		}
@@ -361,4 +361,17 @@ $toggle-padding-y: calc($toggle-height * 0.15);
 	.recharts-cartesian-axis-ticks
 	.recharts-cartesian-axis-tick:first-of-type {
 	display: none;
+}
+.hide-first-x-axis-tick
+	.recharts-xAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:first-of-type {
+	display: none;
+}
+
+.recharts-wrapper {
+	user-select: none;
+}
+.recharts-surface {
+	overflow: visible !important;
 }

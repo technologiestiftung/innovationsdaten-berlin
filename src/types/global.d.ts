@@ -2,9 +2,15 @@ export type ChapterKeys =
 	| "welcome"
 	| "einleitung"
 	| "who_innovates"
-	| "testing";
+	| "how_innovates"
+	| "environment"
+	| "berlin"
+	| "support"
+	| "data_ai";
 
 export type Region = "ber" | "de";
+
+export type BarChartTypes = "normal" | "delta" | "stacked";
 
 type dataKeys =
 	| "year"
@@ -24,7 +30,20 @@ type dataKeys =
 	| "unternehmensberatung"
 	| "software"
 	| "industrie"
-	| "dienstleistungen";
+	| "dienstleistungen"
+	| "ber"
+	| "de"
+	| "existing_environmental_taxes_or_charges"
+	| "compliance_with_existing_regulations"
+	| "public_funding_for_environmental_innovations"
+	| "expected_future_regulations_or_environmental_taxes"
+	| "current_or_expected_demand_for_environmental_innovations"
+	| "improving_company_reputation"
+	| "industry_self_commitments_or_standards"
+	| "rising_costs_for_energy_or_raw_materials"
+	| "requirements_in_public_procurement"
+	| "innovations_intensitaet"
+	| "fue_intensitaet";
 
 export type StickyItemData =
 	| {
@@ -48,6 +67,11 @@ export type StickyItemData =
 				[key: dataKeys]: number;
 			}[];
 	  }
+	| {
+			[key: dataKeys]: {
+				[key: dataKeys]: number;
+			}[];
+	  }
 	| undefined;
 
 export type StickyItem = {
@@ -56,9 +80,15 @@ export type StickyItem = {
 	text?: string;
 	fact?: string;
 	unit?: string;
-	bar_chart_type?: "normal" | "delta";
+	facts?: { fact: string; unit: string }[];
+	bar_chart_type?: BarChartTypes;
 	bar_chart_unit?: string;
-	bar_chart_unit_breakpoint?: number;
+	bar_chart_unit_breakpoint?:
+		| number
+		| {
+				[key: Region]: number;
+		  };
+	allToggles?: string[];
 	data?: StickyItemData;
 };
 export type BranchenItem = {

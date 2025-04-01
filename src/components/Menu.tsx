@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
-// import { isInRange } from "../utilities";
 
 interface NavProps {
 	link: string;
