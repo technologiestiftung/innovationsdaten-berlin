@@ -20,4 +20,37 @@ const isInRange = (num: number) => {
 	return num >= from && num <= to;
 };
 
-export { hexToRgba, formatNumber, isInRange };
+function roundToTwoDecimals(num: number): number {
+	return Math.round(num * 100) / 100;
+}
+
+function formatEuroNumber(value: number): string {
+	if (value >= 1000) {
+		const billions = value / 1000;
+		let formatted = billions.toFixed(1).replace(".", ","); // 3.2 → "3,2"
+		if (formatted.endsWith(",0")) {
+			formatted = formatted.slice(0, -2); // Remove trailing ",0"
+		}
+		return `${formatted} Mrd. €`;
+	}
+	return `${value.toString().replace(".", ",")} Mio. €`;
+}
+
+function formatThousand(value: number): string {
+	if (value < 10000) {
+		return `${value.toLocaleString("de-DE")} Tsd.`;
+	}
+	const millions = value / 1000000;
+	const rounded = Math.round(millions * 10) / 10; // e.g., 2.3
+	const formatted = rounded % 1 === 0 ? rounded.toFixed(0) : rounded.toFixed(1);
+	return `${formatted.replace(".", ",")} Mio.`;
+}
+
+export {
+	hexToRgba,
+	formatNumber,
+	isInRange,
+	roundToTwoDecimals,
+	formatEuroNumber,
+	formatThousand,
+};

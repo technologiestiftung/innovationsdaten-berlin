@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BarChartTypes, BranchenItem } from "../types/global";
+import { BarChartTypes, BranchenItem, Region } from "../../types/global";
 import {
 	BarChart as RechartsBarChart,
 	Bar,
@@ -10,13 +10,13 @@ import {
 	CartesianGrid,
 	Tooltip,
 } from "recharts";
-import { useGlobalContext } from "../GlobalContext";
-import branchen from "../data/branchen.json";
-import colors from "../data/colors.json";
-import RegionToggle from "./RegionToggle";
-import { formatNumber } from "../utilities";
-import wordings from "../data/wordings.json";
-import Dropdown from "./DropDown";
+import { useGlobalContext } from "../../GlobalContext";
+import branchen from "../../data/branchen.json";
+import colors from "../../data/colors.json";
+import { formatNumber } from "../../utilities";
+import wordings from "../../data/wordings.json";
+import Dropdown from "./../DropDown";
+import DataToggle from "../DataToggle";
 
 type BarChartProps = {
 	id: string;
@@ -35,7 +35,8 @@ const BarChart: React.FC<BarChartProps> = ({
 	bar_chart_unit_breakpoint,
 	hasToggle,
 }) => {
-	const { axisFontStylings, theme, fontSize } = useGlobalContext();
+	const { axisFontStylings, theme, fontSize, region, setRegion } =
+		useGlobalContext();
 	const [sortBy, setSortBy] = useState<string | null>("umsatz_markt_neuheiten");
 	const sortingAfter: Record<string, string[]> = {
 		"added-value-through-product-innovation": [
@@ -83,7 +84,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				name: wordings[key as keyof typeof wordings],
 				value: numValue,
 				isSmall: numValue < (bar_chart_unit_breakpoint || 0),
-				color: colors.blue,
+				color: theme === "dark" ? colors.blue : colors.green_light,
 				delta: 0,
 				positiveDelta: false,
 			});
@@ -123,7 +124,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				: false;
 		const getFill = () => {
 			if (bar_chart_type === "normal") {
-				return colors.white;
+				return isSmall && theme === "light" ? colors.blue : colors.white;
 			}
 			if (theme === "dark") {
 				return colors.white;
@@ -149,9 +150,10 @@ const BarChart: React.FC<BarChartProps> = ({
 					fontWeight="bold"
 					fontFamily="Clan Pro"
 				>
-					<tspan
-						fill={getFill()}
-					>{`${formatNumber(value)} ${bar_chart_unit?.includes("€") ? "" : bar_chart_unit}`}</tspan>
+					<tspan fill={getFill()}>
+						{/* Value Display */}
+						{`${formatNumber(value)} ${bar_chart_unit?.includes("€") ? "" : bar_chart_unit}`}
+					</tspan>
 					{bar_chart_type === "delta" && (
 						<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
 							{positiveDelta ? "↑" : "↓"}
@@ -239,6 +241,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								color: theme === "dark" ? colors.dark : colors.white,
 							}}
 						>
+							{/* Value Display */}
 							{formatNumber(payloadData[key])}
 							{bar_chart_unit}
 						</p>
@@ -256,16 +259,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	return (
 		<>
-			{hasToggle && <RegionToggle />}
-			{sortingAfter[id] && (
-				<Dropdown
-					type="sort"
-					sortingAfter={sortingAfter[id]}
-					sortBy={sortBy}
-					setSortBy={setSortBy}
-				/>
-			)}
-			<div className="move-x-axis-tick-to-bottom hide-first-x-axis-tick">
+			<div className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label">
 				<ResponsiveContainer width="100%" height={window.innerHeight * 0.6}>
 					<RechartsBarChart layout="vertical" data={collectData}>
 						<YAxis
@@ -277,6 +271,12 @@ const BarChart: React.FC<BarChartProps> = ({
 								fontSize: 12,
 								fill: theme === "dark" ? colors.white : colors.blue,
 								fontWeight: "initial",
+							}}
+							tickFormatter={(label: string) => {
+								const maxLength = 40;
+								return label.length > maxLength
+									? `${label.slice(0, maxLength)}…`
+									: label;
 							}}
 						/>
 						{bar_chart_type === "stacked" && (
@@ -351,12 +351,30 @@ const BarChart: React.FC<BarChartProps> = ({
 								fill: theme === "dark" ? colors.white : colors.blue,
 								dy: 25,
 							}}
+							// Value Display
 							tickFormatter={(label: string) => {
 								return `${label} ${bar_chart_unit}`;
 							}}
 						/>
 					</RechartsBarChart>
 				</ResponsiveContainer>
+			</div>
+			<div className="mt-12 flex gap-8 items-center justify-end">
+				{hasToggle && (
+					<DataToggle
+						data={region}
+						setData={(value: string) => setRegion(value as Region)}
+						allDatas={["ber", "de"]}
+					/>
+				)}
+				{sortingAfter[id] && (
+					<Dropdown
+						type="sort"
+						sortingAfter={sortingAfter[id]}
+						sortBy={sortBy}
+						setSortBy={setSortBy}
+					/>
+				)}
 			</div>
 		</>
 	);

@@ -21,10 +21,13 @@ $blue: #1e3791;
 $white: #ffffff;
 $green: #00ff00;
 $red: #ff0000;
+$dark-grey: #616161;
+$light-grey: #d9d9d9;
 $stroke-width: 2px;
 $all-transition: all 0.3s ease-in-out;
 $long-transition: all 1s ease-in-out;
-$breakpoint: 1024px;
+$breakpoint: 80vw;
+$toggle-height: 40px;
 
 html {
 	scroll-behavior: smooth;
@@ -267,14 +270,16 @@ footer {
 		margin: 12px 0;
 	}
 	ul {
-		max-height: 60vh;
+		max-height: 50vh;
 	}
 	.flyout {
 		width: 100%;
-		border-top: none !important;
-		transform: translateY(-2px);
+		border-bottom: none !important;
+		transform: translateY(calc(-100% - 36px));
+		padding: calc($font-size * 1.5) 0;
 	}
 	button {
+		min-height: calc($toggle-height + $stroke-width * 2);
 		& > div {
 			transition: $all-transition;
 		}
@@ -299,42 +304,32 @@ footer {
 	}
 }
 
-$toggle-width: 150px;
-$toggle-padding-x: 25px;
-$toggle-height: 40px;
-$toggle-padding-y: calc($toggle-height * 0.15);
-.scale-toggle {
+.data-toggle {
 	position: relative;
-	height: $toggle-height;
+	height: $toggle-height + 4px;
 	.toggle-button {
-		width: $toggle-width;
-		height: 100%;
+		height: $toggle-height;
 		z-index: 2;
 	}
 	#indicator {
 		position: absolute;
-		height: calc($toggle-height - $toggle-padding-y * 2);
-		width: calc($toggle-width - $toggle-padding-x);
-		top: $toggle-padding-y;
+		height: $toggle-height;
+		top: 0;
 		z-index: 1;
 		transition: $all-transition;
-		&.left {
-			left: calc($toggle-padding-x / 2);
-		}
-		&.right {
-			left: calc($toggle-width + $toggle-padding-x / 2);
-		}
 	}
 	&.dark {
-		background: $white;
+		background: $dark;
+		border: $stroke-width solid $white;
 		#indicator {
-			background: $dark;
+			background: $white;
 		}
 	}
 	&.light {
-		background: $blue;
+		background: $white;
+		border: $stroke-width solid $blue;
 		#indicator {
-			background: $white;
+			background: $blue;
 		}
 	}
 }
@@ -351,14 +346,39 @@ $toggle-padding-y: calc($toggle-height * 0.15);
 .hide-first-y-axis-tick
 	.recharts-yAxis
 	.recharts-cartesian-axis-ticks
-	.recharts-cartesian-axis-tick:first-of-type {
-	display: none;
-}
+	.recharts-cartesian-axis-tick:first-of-type,
 .hide-first-x-axis-tick
 	.recharts-xAxis
 	.recharts-cartesian-axis-ticks
 	.recharts-cartesian-axis-tick:first-of-type {
 	display: none;
+}
+.move-last-x-axis-tick
+	.recharts-xAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:last-of-type
+	text {
+	transform: translateX(-20px);
+}
+
+.move-first-x-axis-tick
+	.recharts-xAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:first-of-type
+	text {
+	transform: translateX(20px);
+}
+
+.move-first-y-axis-tick
+	.recharts-yAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:last-of-type
+	text {
+	transform: translateY(8px);
+}
+
+.move-recharts-label .recharts-label-list {
+	transform: translateY(1px);
 }
 
 .recharts-wrapper {
@@ -366,4 +386,73 @@ $toggle-padding-y: calc($toggle-height * 0.15);
 }
 .recharts-surface {
 	overflow: visible !important;
+}
+
+.matrix-grid {
+	row-gap: calc($font-size * 1.5);
+}
+
+.matrix-cell {
+	color: white !important;
+}
+.label-x {
+	min-height: 30px;
+}
+.value-cell {
+	text-align: center;
+	.inner-value-cell {
+		width: 100%;
+		aspect-ratio: 1;
+		&.dark {
+			border: 1px solid $dark-grey;
+		}
+		&.light {
+			border: 1px solid $light-grey;
+		}
+		.inner-value-cell-child {
+			aspect-ratio: 1;
+			&.dark {
+				background: $white;
+			}
+			&.light {
+				background: $blue;
+			}
+		}
+	}
+	.tooltip {
+		z-index: 9;
+		position: absolute;
+		left: 50%;
+		width: 300px;
+		height: auto;
+		&.above {
+			top: 0;
+			transform: translateX(-50%) translateY(-100%);
+		}
+		&.below {
+			top: 100%;
+			transform: translateX(-50%) translateY(0);
+		}
+		&.dark {
+			background: $white;
+			p {
+				color: $dark !important;
+			}
+			.placeholder {
+				background: $dark !important;
+			}
+		}
+		&.light {
+			background: $blue;
+			.placeholder {
+				background: $white !important;
+			}
+			p {
+				color: $white !important;
+			}
+		}
+		.placeholder {
+			height: $stroke-width;
+		}
+	}
 }

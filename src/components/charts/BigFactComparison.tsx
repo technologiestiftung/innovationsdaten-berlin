@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useGlobalContext } from "../GlobalContext";
+import { useGlobalContext } from "../../GlobalContext";
 
 interface BigFactComparisonProps {
 	facts: { fact: string; unit: string }[];

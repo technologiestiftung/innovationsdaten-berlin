@@ -117,145 +117,141 @@ const Dropdown: React.FC<DropdownProps> = ({
 	}, []);
 
 	return (
-		<div className="flex w-full justify-end mb-8">
-			<div
-				ref={dropdownRef}
-				className={`relative inline-block drop-down ${theme}`}
-			>
-				<div className="flex items-center" style={{ gap: fontSize }}>
+		<div
+			ref={dropdownRef}
+			className={`relative inline-block drop-down ${theme}`}
+		>
+			<div className="flex items-center" style={{ gap: fontSize }}>
+				<div className="flex-1">
 					<Icon id={type} size={fontSize * 1.5} />
-					<button
-						onClick={() => setIsOpen(!isOpen)}
-						className="px-4 py-2 flex items-center gap-4"
-						style={{
-							borderBottomWidth: isOpen ? 0 : 2,
-							marginBottom: isOpen ? 2 : 0,
-						}}
-					>
-						<p className="bold select-none">
-							{type === "filter" ? "Branche wählen" : "Sortieren nach"}
-						</p>
-						<div
-							style={{
-								transform: isOpen ? "rotate(180deg)" : "none",
-							}}
-						>
-							<Icon
-								id="chevron"
-								size={fontSize}
-								setColor={theme === "dark" ? colors.white : colors.blue}
-							/>
-						</div>
-					</button>
 				</div>
-				{isOpen && (
+				<button
+					onClick={() => setIsOpen(!isOpen)}
+					className="px-4 py-2 flex items-center gap-4"
+				>
+					<p className="bold select-none">
+						{type === "filter" ? "Branche wählen" : "Sortieren nach"}
+					</p>
 					<div
-						className="flyout absolute z-10"
 						style={{
-							width: `calc(100% - ${fontSize * 2.5}px)`,
-							marginLeft: fontSize * 2.5,
+							transform: isOpen ? "none" : "rotate(180deg)",
 						}}
 					>
-						<ul className="overflow-y-auto p-2">
-							{type === "filter" && (
-								<>
+						<Icon
+							id="chevron"
+							size={fontSize}
+							setColor={theme === "dark" ? colors.white : colors.blue}
+						/>
+					</div>
+				</button>
+			</div>
+			{isOpen && (
+				<div
+					className="flyout absolute z-10"
+					style={{
+						width: `calc(100% - ${fontSize * 2.5}px)`,
+						marginLeft: fontSize * 2.5,
+					}}
+				>
+					<ul className="overflow-y-auto px-2">
+						{type === "filter" && (
+							<>
+								<li
+									className="flex items-center p-2 cursor-pointer"
+									onClick={toggleAll}
+								>
+									<span className="mr-2">
+										<Icon
+											id={
+												activeFilters?.length === allFilters?.length
+													? "checked"
+													: "unchecked"
+											}
+											size={fontSize}
+										/>
+									</span>
+									<p className="bold select-none">Alle</p>
+								</li>
+								{sektoren.map((sektor) => (
 									<li
+										key={sektor.id}
 										className="flex items-center p-2 cursor-pointer"
-										onClick={toggleAll}
+										onClick={() => toggleSektor(sektor.id)}
 									>
 										<span className="mr-2">
 											<Icon
 												id={
-													activeFilters?.length === allFilters?.length
+													checkForAllSektorChecked(sektor.id)
 														? "checked"
 														: "unchecked"
 												}
 												size={fontSize}
 											/>
 										</span>
-										<p className="bold select-none">Alle</p>
+										<p className="bold select-none">{sektor.name}</p>
 									</li>
-									{sektoren.map((sektor) => (
-										<li
-											key={sektor.id}
-											className="flex items-center p-2 cursor-pointer"
-											onClick={() => toggleSektor(sektor.id)}
-										>
-											<span className="mr-2">
-												<Icon
-													id={
-														checkForAllSektorChecked(sektor.id)
-															? "checked"
-															: "unchecked"
-													}
-													size={fontSize}
-												/>
-											</span>
-											<p className="bold select-none">{sektor.name}</p>
-										</li>
-									))}
+								))}
 
-									<hr />
+								<hr />
 
-									{allFilters?.map(
-										(filter) =>
-											filter && (
-												<li
-													key={filter}
-													className="flex items-center p-2 cursor-pointer"
-													onClick={() => toggleFilter(filter)}
-												>
-													<span className="mr-2">
-														<Icon
-															id={
-																activeFilters?.includes(filter)
-																	? "checked"
-																	: "unchecked"
-															}
-															size={fontSize}
-														/>
-													</span>
-													<p className="line-clamp-1 break-words select-none">
-														{branchen.find((branche) => branche.id === filter)
-															?.name || filter}
-													</p>
-												</li>
-											),
-									)}
-								</>
-							)}
-							{type === "sort" && sortingAfter && (
-								<>
-									{sortingAfter.map((item: string) => (
-										<li
-											key={item}
-											className="flex items-center p-2 cursor-pointer"
-											onClick={() => {
-												if (setSortBy) {
-													setSortBy(item);
-													setIsOpen(false);
-												}
-											}}
-										>
-											<span className="mr-2">
-												<Icon
-													id={sortBy === item ? "checked" : "unchecked"}
-													size={fontSize}
-												/>
-											</span>
-											{wordings[item as keyof typeof wordings] && (
-												<p className="bold select-none line-clamp-1 break-words">
-													{wordings[item as keyof typeof wordings]}
+								{allFilters?.map(
+									(filter) =>
+										filter && (
+											<li
+												key={filter}
+												className="flex items-center p-2 cursor-pointer"
+												onClick={() => toggleFilter(filter)}
+											>
+												<span className="mr-2">
+													<Icon
+														id={
+															activeFilters?.includes(filter)
+																? "checked"
+																: "unchecked"
+														}
+														size={fontSize}
+													/>
+												</span>
+												<p className="line-clamp-1 break-words select-none">
+													{branchen.find((branche) => branche.id === filter)
+														?.name || filter}
 												</p>
-											)}
-										</li>
-									))}
-								</>
-							)}
-						</ul>
-					</div>
-				)}
-			</div>
+											</li>
+										),
+								)}
+							</>
+						)}
+						{type === "sort" && sortingAfter && (
+							<>
+								{sortingAfter.map((item: string) => (
+									<li
+										key={item}
+										className="flex items-center p-2 cursor-pointer"
+										onClick={() => {
+											if (setSortBy) {
+												setSortBy(item);
+												setIsOpen(false);
+											}
+										}}
+									>
+										<span className="mr-2">
+											<Icon
+												id={sortBy === item ? "checked" : "unchecked"}
+												size={fontSize}
+											/>
+										</span>
+										{wordings[item as keyof typeof wordings] && (
+											<p className="bold select-none line-clamp-1 break-words">
+												{wordings[item as keyof typeof wordings]}
+											</p>
+										)}
+									</li>
+								))}
+							</>
+						)}
+					</ul>
+				</div>
+			)}
 		</div>
 	);
 };

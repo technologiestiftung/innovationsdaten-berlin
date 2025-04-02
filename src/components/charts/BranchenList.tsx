@@ -1,8 +1,8 @@
 import React from "react";
-import branchen from "../data/branchen.json";
-import colors from "../data/colors.json";
-import Icon from "./Icons";
-import { useGlobalContext } from "../GlobalContext";
+import branchen from "../../data/branchen.json";
+import colors from "../../data/colors.json";
+import Icon from "../Icons";
+import { useGlobalContext } from "../../GlobalContext";
 
 const BranchenList: React.FC = () => {
 	const { fontSize } = useGlobalContext();

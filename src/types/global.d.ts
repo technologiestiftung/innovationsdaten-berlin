@@ -12,6 +12,16 @@ export type Region = "ber" | "de";
 
 export type BarChartTypes = "normal" | "delta" | "stacked";
 
+export type ChartTypes =
+	| "big_fact"
+	| "big_fact_comparison"
+	| "bar_chart"
+	| "bar_chart_delta"
+	| "bar_chart_stacked"
+	| "area_chart"
+	| "tree_map"
+	| "matrix";
+
 type dataKeys =
 	| "year"
 	| "energie"
@@ -77,6 +87,7 @@ export type StickyItemData =
 export type StickyItem = {
 	id: string;
 	title: string;
+	chart_type?: ChartTypes;
 	text?: string;
 	fact?: string;
 	unit?: string;

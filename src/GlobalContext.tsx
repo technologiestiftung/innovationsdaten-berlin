@@ -17,7 +17,7 @@ interface GlobalStateType {
 	breakPoint: number;
 	isMobile: boolean;
 	headerHeight: number;
-	sectionPaddingTop: number;
+	verticalAligment: string[];
 	chapter: string;
 	setChapter: (chapter: string) => void;
 	axisFontStylings: {
@@ -29,6 +29,8 @@ interface GlobalStateType {
 	};
 	region: Region;
 	setRegion: (region: Region) => void;
+	widthOfStickyContainer: number;
+	setWidthOfStickyContainer: (num: number) => void;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -40,10 +42,11 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
 	const [chapter, setChapter] = useState<string>("Willkommen");
+	const [widthOfStickyContainer, setWidthOfStickyContainer] =
+		useState<number>(0);
 
 	const fontSize = 16;
-	const additionalPaddingTop = fontSize * 4;
-	const sectionPaddingTop = headerHeight + additionalPaddingTop;
+	const verticalAligment = ["basis-3/5", "basis-2/5"];
 
 	const axisFontStylings = {
 		style: {
@@ -53,10 +56,8 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		},
 	};
 
-	const breakPoint = 1024;
-	const [isMobile, setIsMobile] = useState<boolean>(
-		window.innerWidth < breakPoint,
-	);
+	const breakPoint = window.innerWidth * 0.8;
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const checkIfViewPortIsMobile = () =>
 		setIsMobile(window.innerWidth < breakPoint);
 
@@ -101,12 +102,14 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				breakPoint,
 				isMobile,
 				headerHeight,
-				sectionPaddingTop,
+				verticalAligment,
 				chapter,
 				setChapter,
 				axisFontStylings,
 				region,
 				setRegion,
+				widthOfStickyContainer,
+				setWidthOfStickyContainer,
 			}}
 		>
 			{children}

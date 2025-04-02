@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useGlobalContext } from "../GlobalContext";
+import { useGlobalContext } from "../../GlobalContext";
 
 interface BigFactProps {
 	fact: string;

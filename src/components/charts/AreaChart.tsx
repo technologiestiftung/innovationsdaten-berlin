@@ -8,15 +8,19 @@ import {
 	CartesianGrid,
 	YAxis,
 } from "recharts";
-import branchen from "../data/branchen.json";
-import sektoren from "../data/sektoren.json";
-import colors from "../data/colors.json";
-import { formatNumber, hexToRgba } from "../utilities";
-import Dropdown from "./DropDown";
-import { useGlobalContext } from "../GlobalContext";
-import { StickyItemData } from "../types/global";
-import RegionToggle from "./RegionToggle";
-import DataToggleElement from "./DataToggleElement";
+import branchen from "../../data/branchen.json";
+import sektoren from "../../data/sektoren.json";
+import colors from "../../data/colors.json";
+import {
+	formatEuroNumber,
+	formatNumber,
+	hexToRgba,
+	roundToTwoDecimals,
+} from "../../utilities";
+import Dropdown from "../DropDown";
+import { useGlobalContext } from "../../GlobalContext";
+import { Region, StickyItemData } from "../../types/global";
+import DataToggle from "../DataToggle";
 
 type AreaChartProps = {
 	id: string;
@@ -33,12 +37,11 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	setToggleData,
 	allToggles,
 }) => {
-	const { theme, fontSize, axisFontStylings } = useGlobalContext();
+	const { theme, fontSize, axisFontStylings, region, setRegion } =
+		useGlobalContext();
 
 	const allFilters = branchen.map((branche) => branche.id);
 	const [activeFilters, setActiveFilters] = useState<string[]>(allFilters);
-
-	const marginRight = 20;
 
 	const setData = data as StickyItemData[];
 
@@ -93,65 +96,76 @@ const AreaChart: React.FC<AreaChartProps> = ({
 				>
 					{payloadData?.year}
 				</p>
-				{Object.keys(payloadData).map((dataKey) => (
-					<div key={dataKey}>
-						{dataKey !== "year" &&
-							(activeFilters.includes(dataKey) ||
-								dataKey === "dienstleistungen" ||
-								dataKey === "industrie") && (
-								<div className="flex justify-between gap-6">
-									<p
-										className="max-w-[100px] truncate"
-										style={{
-											color: theme === "dark" ? colors.dark : colors.white,
-										}}
-									>
-										{findTitle(dataKey)}:
-									</p>
-									<p
-										className="bold ml-2"
-										style={{
-											color: theme === "dark" ? colors.dark : colors.white,
-										}}
-									>
-										{formatNumber(payloadData[dataKey])} Mio. €
-									</p>
-								</div>
-							)}
-					</div>
-				))}
+				{id !== "berlin_is_ahead" && (
+					<>
+						{Object.keys(payloadData).map((dataKey) => (
+							<div key={dataKey}>
+								{dataKey !== "year" &&
+									(activeFilters.includes(dataKey) ||
+										dataKey === "dienstleistungen" ||
+										dataKey === "industrie") && (
+										<div className="flex justify-between gap-6">
+											<p
+												className="max-w-[100px] truncate"
+												style={{
+													color: theme === "dark" ? colors.dark : colors.white,
+												}}
+											>
+												{findTitle(dataKey)}:
+											</p>
+											<p
+												className="bold ml-2"
+												style={{
+													color: theme === "dark" ? colors.dark : colors.white,
+												}}
+											>
+												{/* Value Display */}
+												{formatEuroNumber(payloadData[dataKey])}
+											</p>
+										</div>
+									)}
+							</div>
+						))}
+					</>
+				)}
+				{id === "berlin_is_ahead" && (
+					<>
+						{Object.keys(payloadData).map((dataKey) => (
+							<div key={dataKey}>
+								{dataKey !== "year" && (
+									<>
+										<div className="flex justify-between gap-6">
+											<p
+												className="max-w-[100px] truncate"
+												style={{
+													color: theme === "dark" ? colors.dark : colors.white,
+												}}
+											>
+												{dataKey === "ber" ? "Berlin" : "Deutschland"}:
+											</p>
+											<p
+												className="bold ml-2"
+												style={{
+													color: theme === "dark" ? colors.dark : colors.white,
+												}}
+											>
+												{roundToTwoDecimals(payloadData[dataKey])}%
+											</p>
+										</div>
+									</>
+								)}
+							</div>
+						))}
+					</>
+				)}
 			</div>
 		);
 	};
 
 	return (
 		<>
-			<div style={{ marginRight: marginRight }}>
-				{id !== "berlin_is_ahead" && <RegionToggle />}
-				{id === "growth" && (
-					<Dropdown
-						type="filter"
-						allFilters={allFilters}
-						activeFilters={activeFilters}
-						setFilters={setActiveFilters}
-					/>
-				)}
-				{id === "berlin_is_ahead" &&
-					toggleData &&
-					setToggleData &&
-					allToggles && (
-						<DataToggleElement
-							toggleData={toggleData}
-							setToggleData={setToggleData}
-							allToggles={allToggles}
-						/>
-					)}
-			</div>
 			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
-				<AreaChartRecharts
-					data={setData}
-					margin={{ right: marginRight, left: marginRight }}
-				>
+				<AreaChartRecharts data={setData}>
 					<XAxis
 						dataKey="year"
 						stroke={theme === "dark" ? colors.white : colors.blue}
@@ -224,12 +238,42 @@ const AreaChart: React.FC<AreaChartProps> = ({
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
 						}}
+						// Value Display
 						tickFormatter={(label: string) => {
-							return `${label} ${id === "berlin_is_ahead" ? "%" : "Mio. €"}`;
+							return id === "berlin_is_ahead"
+								? `${formatNumber(+label)}%`
+								: formatEuroNumber(+label);
 						}}
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
+			<div className="mt-8 flex gap-8 items-center justify-end">
+				{id !== "berlin_is_ahead" && (
+					<DataToggle
+						data={region}
+						setData={(value: string) => setRegion(value as Region)}
+						allDatas={["ber", "de"]}
+					/>
+				)}
+				{id === "growth" && (
+					<Dropdown
+						type="filter"
+						allFilters={allFilters}
+						activeFilters={activeFilters}
+						setFilters={setActiveFilters}
+					/>
+				)}
+				{id === "berlin_is_ahead" &&
+					toggleData &&
+					setToggleData &&
+					allToggles && (
+						<DataToggle
+							data={toggleData}
+							setData={(value: string) => setToggleData(value)}
+							allDatas={allToggles}
+						/>
+					)}
+			</div>
 		</>
 	);
 };

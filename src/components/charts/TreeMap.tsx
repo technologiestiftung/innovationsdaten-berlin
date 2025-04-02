@@ -3,13 +3,13 @@ import {
 	Tooltip,
 	Treemap as TreeMapRecharts,
 } from "recharts";
-import branchen from "../data/branchen.json";
-import colors from "../data/colors.json";
-import Icon from "../components/Icons";
-import { useGlobalContext } from "../GlobalContext";
-import { formatNumber } from "../utilities";
+import branchen from "../../data/branchen.json";
+import colors from "../../data/colors.json";
+import Icon from "../Icons";
+import { useGlobalContext } from "../../GlobalContext";
+import { formatEuroNumber, formatNumber } from "../../utilities";
 import React from "react";
-import { StickyItemData } from "../types/global";
+import { StickyItemData } from "../../types/global";
 
 type TreeMapProps = {
 	id?: string;
@@ -86,17 +86,33 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 				>
 					{payloadData.name}
 				</p>
-				<div className="flex justify-between">
-					<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>
-						Gesamt:
-					</p>
+				<div className="flex justify-between items-end">
 					<p
-						className="bold ml-2"
 						style={{ color: theme === "dark" ? colors.dark : colors.white }}
-					>
-						{formatNumber(payloadData.value)}
-						{dataID === "umsatz" ? " Mio. €" : " Tsd."}
-					</p>
+						dangerouslySetInnerHTML={{
+							__html:
+								dataID === "beschaeftigte"
+									? "Anzahl der<br/>Beschäftigten:"
+									: "Gesamt:",
+						}}
+					/>
+					{dataID === "beschaeftigte" ? (
+						<p
+							className="bold ml-2"
+							style={{ color: theme === "dark" ? colors.dark : colors.white }}
+						>
+							{/* Value Display */}
+							{formatNumber(payloadData.value)}
+						</p>
+					) : (
+						<p
+							className="bold ml-2"
+							style={{ color: theme === "dark" ? colors.dark : colors.white }}
+						>
+							{/* Value Display */}
+							{formatEuroNumber(payloadData.value)}
+						</p>
+					)}
 				</div>
 				<div className="flex justify-between">
 					<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>

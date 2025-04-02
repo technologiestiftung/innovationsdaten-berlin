@@ -722,6 +722,283 @@
 			]
 		},
 		{
+			"id": "collaboration_regions",
+			"title": "Mit welchen Regionen wird kollaboriert?",
+			"chart_type": "matrix",
+			"data": {
+				"ber": [
+					{ "x": "nahrung", "y": "own_region", "value": 1 },
+					{ "x": "nahrung", "y": "different_regions_in_germany", "value": 6 },
+					{ "x": "nahrung", "y": "eu_foreign", "value": 6 },
+					{ "x": "nahrung", "y": "usa", "value": 0 },
+					{ "x": "nahrung", "y": "asia", "value": 5 },
+					{ "x": "nahrung", "y": "other_countries", "value": 0 },
+
+					{ "x": "pharma", "y": "own_region", "value": 25 },
+					{ "x": "pharma", "y": "different_regions_in_germany", "value": 20 },
+					{ "x": "pharma", "y": "eu_foreign", "value": 21 },
+					{ "x": "pharma", "y": "usa", "value": 6 },
+					{ "x": "pharma", "y": "asia", "value": 1 },
+					{ "x": "pharma", "y": "other_countries", "value": 1 },
+
+					{ "x": "holz", "y": "own_region", "value": 41 },
+					{ "x": "holz", "y": "different_regions_in_germany", "value": 5 },
+					{ "x": "holz", "y": "eu_foreign", "value": 1 },
+					{ "x": "holz", "y": "usa", "value": 0 },
+					{ "x": "holz", "y": "asia", "value": 0 },
+					{ "x": "holz", "y": "other_countries", "value": 0 },
+
+					{ "x": "metall", "y": "own_region", "value": 8 },
+					{ "x": "metall", "y": "different_regions_in_germany", "value": 1 },
+					{ "x": "metall", "y": "eu_foreign", "value": 1 },
+					{ "x": "metall", "y": "usa", "value": 0 },
+					{ "x": "metall", "y": "asia", "value": 0 },
+					{ "x": "metall", "y": "other_countries", "value": 0 },
+
+					{ "x": "elektroindustrie", "y": "own_region", "value": 23 },
+					{
+						"x": "elektroindustrie",
+						"y": "different_regions_in_germany",
+
+						"value": 23
+					},
+					{ "x": "elektroindustrie", "y": "eu_foreign", "value": 2 },
+					{ "x": "elektroindustrie", "y": "usa", "value": 0 },
+					{ "x": "elektroindustrie", "y": "asia", "value": 6 },
+					{ "x": "elektroindustrie", "y": "other_countries", "value": 0 },
+
+					{ "x": "fahrzeugbau", "y": "own_region", "value": 26 },
+					{
+						"x": "fahrzeugbau",
+						"y": "different_regions_in_germany",
+
+						"value": 21
+					},
+					{ "x": "fahrzeugbau", "y": "eu_foreign", "value": 8 },
+					{ "x": "fahrzeugbau", "y": "usa", "value": 1 },
+					{ "x": "fahrzeugbau", "y": "asia", "value": 5 },
+					{ "x": "fahrzeugbau", "y": "other_countries", "value": 0 },
+
+					{ "x": "sonstige_konsumgueter", "y": "own_region", "value": 37 },
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "different_regions_in_germany",
+
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "eu_foreign",
+
+						"value": 4
+					},
+					{ "x": "sonstige_konsumgueter", "y": "usa", "value": 0 },
+					{ "x": "sonstige_konsumgueter", "y": "asia", "value": 0 },
+					{ "x": "sonstige_konsumgueter", "y": "other_countries", "value": 0 },
+
+					{ "x": "energie", "y": "own_region", "value": 15 },
+					{ "x": "energie", "y": "different_regions_in_germany", "value": 9 },
+					{ "x": "energie", "y": "eu_foreign", "value": 1 },
+					{ "x": "energie", "y": "usa", "value": 0 },
+					{ "x": "energie", "y": "asia", "value": 0 },
+					{ "x": "energie", "y": "other_countries", "value": 0 },
+
+					{ "x": "telekommunikation", "y": "own_region", "value": 1 },
+					{
+						"x": "telekommunikation",
+						"y": "different_regions_in_germany",
+
+						"value": 22
+					},
+					{ "x": "telekommunikation", "y": "eu_foreign", "value": 0 },
+					{ "x": "telekommunikation", "y": "usa", "value": 0 },
+					{ "x": "telekommunikation", "y": "asia", "value": 0 },
+					{ "x": "telekommunikation", "y": "other_countries", "value": 0 },
+
+					{ "x": "software", "y": "own_region", "value": 15 },
+					{ "x": "software", "y": "different_regions_in_germany", "value": 22 },
+					{ "x": "software", "y": "eu_foreign", "value": 6 },
+					{ "x": "software", "y": "usa", "value": 0 },
+					{ "x": "software", "y": "asia", "value": 0 },
+					{ "x": "software", "y": "other_countries", "value": 0 },
+
+					{ "x": "finanz", "y": "own_region", "value": 7 },
+					{ "x": "finanz", "y": "different_regions_in_germany", "value": 2 },
+					{ "x": "finanz", "y": "eu_foreign", "value": 6 },
+					{ "x": "finanz", "y": "usa", "value": 0 },
+					{ "x": "finanz", "y": "asia", "value": 0 },
+					{ "x": "finanz", "y": "other_countries", "value": 0 },
+
+					{ "x": "unternehmensberatung", "y": "own_region", "value": 18 },
+					{
+						"x": "unternehmensberatung",
+						"y": "different_regions_in_germany",
+
+						"value": 20
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "eu_foreign",
+
+						"value": 9
+					},
+					{ "x": "unternehmensberatung", "y": "usa", "value": 1 },
+					{ "x": "unternehmensberatung", "y": "asia", "value": 1 },
+					{ "x": "unternehmensberatung", "y": "other_countries", "value": 1 },
+
+					{ "x": "architektur", "y": "own_region", "value": 16 },
+					{
+						"x": "architektur",
+						"y": "different_regions_in_germany",
+
+						"value": 11
+					},
+					{ "x": "architektur", "y": "eu_foreign", "value": 4 },
+					{ "x": "architektur", "y": "usa", "value": 0 },
+					{ "x": "architektur", "y": "asia", "value": 1 },
+					{ "x": "architektur", "y": "other_countries", "value": 1 },
+
+					{ "x": "forschung", "y": "own_region", "value": 59 },
+					{
+						"x": "forschung",
+						"y": "different_regions_in_germany",
+						"value": 60
+					},
+					{ "x": "forschung", "y": "eu_foreign", "value": 52 },
+					{ "x": "forschung", "y": "usa", "value": 25 },
+					{ "x": "forschung", "y": "asia", "value": 25 },
+					{ "x": "forschung", "y": "other_countries", "value": 21 },
+
+					{ "x": "kreativ", "y": "own_region", "value": 14 },
+					{ "x": "kreativ", "y": "different_regions_in_germany", "value": 12 },
+					{ "x": "kreativ", "y": "eu_foreign", "value": 7 },
+					{ "x": "kreativ", "y": "usa", "value": 6 },
+					{ "x": "kreativ", "y": "asia", "value": 6 },
+					{ "x": "kreativ", "y": "other_countries", "value": 2 }
+				],
+				"de": [
+					{ "x": "nahrung", "y": "own_region", "value": 6 },
+					{ "x": "nahrung", "y": "different_regions_in_germany", "value": 5 },
+					{ "x": "nahrung", "y": "eu_foreign", "value": 1 },
+					{ "x": "nahrung", "y": "usa", "value": 0 },
+					{ "x": "nahrung", "y": "asia", "value": 0 },
+					{ "x": "nahrung", "y": "other_countries", "value": 0 },
+					{ "x": "pharma", "y": "own_region", "value": 20 },
+					{ "x": "pharma", "y": "different_regions_in_germany", "value": 25 },
+					{ "x": "pharma", "y": "eu_foreign", "value": 11 },
+					{ "x": "pharma", "y": "usa", "value": 4 },
+					{ "x": "pharma", "y": "asia", "value": 2 },
+					{ "x": "pharma", "y": "other_countries", "value": 2 },
+					{ "x": "holz", "y": "own_region", "value": 6 },
+					{ "x": "holz", "y": "different_regions_in_germany", "value": 4 },
+					{ "x": "holz", "y": "eu_foreign", "value": 2 },
+					{ "x": "holz", "y": "usa", "value": 0 },
+					{ "x": "holz", "y": "asia", "value": 0 },
+					{ "x": "holz", "y": "other_countries", "value": 0 },
+					{ "x": "metall", "y": "own_region", "value": 13 },
+					{ "x": "metall", "y": "different_regions_in_germany", "value": 9 },
+					{ "x": "metall", "y": "eu_foreign", "value": 5 },
+					{ "x": "metall", "y": "usa", "value": 1 },
+					{ "x": "metall", "y": "asia", "value": 1 },
+					{ "x": "metall", "y": "other_countries", "value": 0 },
+					{ "x": "elektroindustrie", "y": "own_region", "value": 23 },
+					{
+						"x": "elektroindustrie",
+						"y": "different_regions_in_germany",
+						"value": 31
+					},
+					{ "x": "elektroindustrie", "y": "eu_foreign", "value": 10 },
+					{ "x": "elektroindustrie", "y": "usa", "value": 3 },
+					{ "x": "elektroindustrie", "y": "asia", "value": 3 },
+					{ "x": "elektroindustrie", "y": "other_countries", "value": 1 },
+					{ "x": "fahrzeugbau", "y": "own_region", "value": 22 },
+					{
+						"x": "fahrzeugbau",
+						"y": "different_regions_in_germany",
+						"value": 18
+					},
+					{ "x": "fahrzeugbau", "y": "eu_foreign", "value": 8 },
+					{ "x": "fahrzeugbau", "y": "usa", "value": 3 },
+					{ "x": "fahrzeugbau", "y": "asia", "value": 6 },
+					{ "x": "fahrzeugbau", "y": "other_countries", "value": 1 },
+					{ "x": "sonstige_konsumgueter", "y": "own_region", "value": 6 },
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "different_regions_in_germany",
+						"value": 6
+					},
+					{ "x": "sonstige_konsumgueter", "y": "eu_foreign", "value": 3 },
+					{ "x": "sonstige_konsumgueter", "y": "usa", "value": 0 },
+					{ "x": "sonstige_konsumgueter", "y": "asia", "value": 0 },
+					{ "x": "sonstige_konsumgueter", "y": "other_countries", "value": 0 },
+					{ "x": "energie", "y": "own_region", "value": 16 },
+					{ "x": "energie", "y": "different_regions_in_germany", "value": 7 },
+					{ "x": "energie", "y": "eu_foreign", "value": 1 },
+					{ "x": "energie", "y": "usa", "value": 0 },
+					{ "x": "energie", "y": "asia", "value": 0 },
+					{ "x": "energie", "y": "other_countries", "value": 0 },
+					{ "x": "telekommunikation", "y": "own_region", "value": 10 },
+					{
+						"x": "telekommunikation",
+						"y": "different_regions_in_germany",
+						"value": 13
+					},
+					{ "x": "telekommunikation", "y": "eu_foreign", "value": 1 },
+					{ "x": "telekommunikation", "y": "usa", "value": 0 },
+					{ "x": "telekommunikation", "y": "asia", "value": 0 },
+					{ "x": "telekommunikation", "y": "other_countries", "value": 2 },
+					{ "x": "software", "y": "own_region", "value": 21 },
+					{ "x": "software", "y": "different_regions_in_germany", "value": 20 },
+					{ "x": "software", "y": "eu_foreign", "value": 6 },
+					{ "x": "software", "y": "usa", "value": 1 },
+					{ "x": "software", "y": "asia", "value": 1 },
+					{ "x": "software", "y": "other_countries", "value": 1 },
+					{ "x": "finanz", "y": "own_region", "value": 17 },
+					{ "x": "finanz", "y": "different_regions_in_germany", "value": 10 },
+					{ "x": "finanz", "y": "eu_foreign", "value": 2 },
+					{ "x": "finanz", "y": "usa", "value": 1 },
+					{ "x": "finanz", "y": "asia", "value": 1 },
+					{ "x": "finanz", "y": "other_countries", "value": 0 },
+					{ "x": "unternehmensberatung", "y": "own_region", "value": 21 },
+					{
+						"x": "unternehmensberatung",
+						"y": "different_regions_in_germany",
+						"value": 24
+					},
+					{ "x": "unternehmensberatung", "y": "eu_foreign", "value": 14 },
+					{ "x": "unternehmensberatung", "y": "usa", "value": 6 },
+					{ "x": "unternehmensberatung", "y": "asia", "value": 1 },
+					{ "x": "unternehmensberatung", "y": "other_countries", "value": 1 },
+					{ "x": "architektur", "y": "own_region", "value": 8 },
+					{
+						"x": "architektur",
+						"y": "different_regions_in_germany",
+						"value": 12
+					},
+					{ "x": "architektur", "y": "eu_foreign", "value": 3 },
+					{ "x": "architektur", "y": "usa", "value": 0 },
+					{ "x": "architektur", "y": "asia", "value": 0 },
+					{ "x": "architektur", "y": "other_countries", "value": 0 },
+					{ "x": "forschung", "y": "own_region", "value": 56 },
+					{
+						"x": "forschung",
+						"y": "different_regions_in_germany",
+						"value": 59
+					},
+					{ "x": "forschung", "y": "eu_foreign", "value": 36 },
+					{ "x": "forschung", "y": "usa", "value": 24 },
+					{ "x": "forschung", "y": "asia", "value": 5 },
+					{ "x": "forschung", "y": "other_countries", "value": 11 },
+					{ "x": "kreativ", "y": "own_region", "value": 8 },
+					{ "x": "kreativ", "y": "different_regions_in_germany", "value": 4 },
+					{ "x": "kreativ", "y": "eu_foreign", "value": 1 },
+					{ "x": "kreativ", "y": "usa", "value": 1 },
+					{ "x": "kreativ", "y": "asia", "value": 0 },
+					{ "x": "kreativ", "y": "other_countries", "value": 4 }
+				]
+			}
+		},
+		{
 			"id": "berlin_is_ahead",
 			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -730,65 +1007,65 @@
 				"innovations_intensitaet": [
 					{
 						"year": 2018,
-						"ber": 0.05430635129931505,
-						"de": 0.0443060657401294
+						"ber": 54.30635129931505,
+						"de": 44.3060657401294
 					},
 					{
 						"year": 2019,
-						"ber": 0.04642867968757894,
-						"de": 0.04432251169004676
+						"ber": 46.42867968757894,
+						"de": 44.32251169004676
 					},
 					{
 						"year": 2020,
-						"ber": 0.05625020839585209,
-						"de": 0.04538074067047084
+						"ber": 56.25020839585209,
+						"de": 45.38074067047084
 					},
 					{
 						"year": 2021,
-						"ber": 0.047427759188466194,
-						"de": 0.04021695962823456
+						"ber": 47.427759188466194,
+						"de": 40.21695962823456
 					},
 					{
 						"year": 2022,
-						"ber": 0.042166274498011594,
-						"de": 0.03449526999121898
+						"ber": 42.166274498011594,
+						"de": 34.49526999121898
 					},
 					{
 						"year": 2023,
-						"ber": 0.04030566376985316,
-						"de": 0.035090233726962586
+						"ber": 40.30566376985316,
+						"de": 35.090233726962586
 					}
 				],
 				"fue_intensitaet": [
 					{
 						"year": 2018,
-						"ber": 0.02811001295230983,
-						"de": 0.026238259809127397
+						"ber": 28.11001295230983,
+						"de": 26.238259809127397
 					},
 					{
 						"year": 2019,
-						"ber": 0.02581616465762006,
-						"de": 0.027210955243820976
+						"ber": 25.81616465762006,
+						"de": 27.210955243820976
 					},
 					{
 						"year": 2020,
-						"ber": 0.02921987707423338,
-						"de": 0.02863576855240649
+						"ber": 29.21987707423338,
+						"de": 28.63576855240649
 					},
 					{
 						"year": 2021,
-						"ber": 0.026856895653632567,
-						"de": 0.025806033134714097
+						"ber": 26.856895653632567,
+						"de": 25.806033134714097
 					},
 					{
 						"year": 2022,
-						"ber": 0.025665120544876373,
-						"de": 0.02188839465920837
+						"ber": 25.665120544876373,
+						"de": 21.88839465920837
 					},
 					{
 						"year": 2023,
-						"ber": 0.023628356633789788,
-						"de": 0.022495867412636435
+						"ber": 23.628356633789788,
+						"de": 22.495867412636435
 					}
 				]
 			}

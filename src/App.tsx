@@ -12,6 +12,7 @@ import Welcome from "./sections/Welcome";
 
 function App() {
 	const { theme, isMobile } = useGlobalContext();
+	const testing = false;
 
 	return (
 		<>
@@ -26,10 +27,16 @@ function App() {
 						<Menu />
 						<ThemeToggle />
 						<main className={theme}>
-							<Welcome />
-							{Object.keys(data).map((dataKey) => (
-								<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
-							))}
+							{testing ? (
+								<Sticky dataKey="berlin" />
+							) : (
+								<>
+									<Welcome />
+									{Object.keys(data).map((dataKey) => (
+										<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
+									))}
+								</>
+							)}
 							<div className="w-full min-h-[20vh]" />
 						</main>
 						<Footer />

@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
 
 const Welcome: React.FC = () => {
-	const { headerHeight, theme } = useGlobalContext();
+	const { headerHeight, theme, verticalAligment, setWidthOfStickyContainer } =
+		useGlobalContext();
+	const selfRef = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		const handleResize = () => {
+			if (selfRef.current) {
+				setWidthOfStickyContainer(selfRef.current.offsetWidth);
+			}
+		};
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, [setWidthOfStickyContainer]);
+
 	return (
 		<section
 			id="welcome"
@@ -11,17 +26,17 @@ const Welcome: React.FC = () => {
 			style={{ paddingTop: headerHeight }}
 		>
 			<div
-				className="flex items-center basis-4/6"
+				ref={selfRef}
+				className={`flex items-center ${verticalAligment[0]}`}
 				style={{
 					height: window.innerHeight - headerHeight,
-					// top: headerHeight,
 				}}
 			>
 				<div className="w-full">
 					<Overview />
 				</div>
 			</div>
-			<div className="flex items-center basis-2/6">
+			<div className={`flex items-center ${verticalAligment[1]}`}>
 				<div className={`card p-6 ${theme}`}>
 					<h2
 						className="mb-4"
