@@ -44,6 +44,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 						key={item.id}
 						dataKey={dataKey}
 						title={item.title}
+						displayNumber={item.displayNumber}
 						text={item.text}
 						onSetCurrent={() => setCurrent(item as StickyItem)}
 						isNotCurrent={item.id !== current?.id}

@@ -10,17 +10,19 @@ export type ChapterKeys =
 
 export type Region = "ber" | "de";
 
-export type BarChartTypes = "normal" | "delta" | "stacked";
-
 export type ChartTypes =
 	| "big_fact"
 	| "big_fact_comparison"
 	| "bar_chart"
 	| "bar_chart_delta"
 	| "bar_chart_stacked"
+	| "bar_chart_full"
+	| "bar_chart_filter_keys"
 	| "area_chart"
 	| "tree_map"
 	| "matrix";
+
+export type ChartUnits = "" | "€" | "%";
 
 type dataKeys =
 	| "year"
@@ -87,19 +89,18 @@ export type StickyItemData =
 export type StickyItem = {
 	id: string;
 	title: string;
+	displayNumber?: string;
 	chart_type?: ChartTypes;
+	chart_unit?: ChartUnits;
 	text?: string;
-	fact?: string;
-	unit?: string;
 	facts?: { fact: string; unit: string }[];
-	bar_chart_type?: BarChartTypes;
-	bar_chart_unit?: string;
 	bar_chart_unit_breakpoint?:
 		| number
 		| {
 				[key: Region]: number;
 		  };
-	allToggles?: string[];
+	sortsAfter?: dataKeys[];
+	togglesBetween?: dataKeys[];
 	data?: StickyItemData;
 };
 export type BranchenItem = {

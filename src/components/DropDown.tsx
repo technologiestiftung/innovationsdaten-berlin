@@ -5,13 +5,17 @@ import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
 import wordings from "../data/wordings.json";
 import { useGlobalContext } from "../GlobalContext";
+import { dataKeys } from "../types/global";
+import { capitalizeFirstLetter } from "../utilities";
 
 interface DropdownProps {
 	type: "filter" | "sort";
 	allFilters?: string[];
-	activeFilters?: string[];
-	setFilters?: React.Dispatch<React.SetStateAction<string[]>>;
-	sortingAfter?: string[];
+	activeFilters?: string[] | null;
+	setFilters?: React.Dispatch<React.SetStateAction<string[] | null>>;
+	activeFilter?: string;
+	setActiveFilter?: React.Dispatch<React.SetStateAction<string | null>>;
+	sortsAfter?: dataKeys[];
 	sortBy?: string | null;
 	setSortBy?: (value: string | null) => void;
 }
@@ -21,7 +25,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 	allFilters,
 	activeFilters,
 	setFilters,
-	sortingAfter,
+	activeFilter,
+	setActiveFilter,
+	sortsAfter,
 	sortBy,
 	setSortBy,
 }) => {
@@ -35,13 +41,31 @@ const Dropdown: React.FC<DropdownProps> = ({
 		.filter((branche) => branche.sektor_id === "dienstleistungen")
 		.map((branche) => branche.id);
 
+	const setName = () => {
+		if (
+			type === "filter" &&
+			allFilters?.includes("insgesamt") &&
+			activeFilter
+		) {
+			return capitalizeFirstLetter(activeFilter);
+		}
+		if (type === "filter") {
+			return "Branche wählen";
+		}
+		return "Sortieren nach";
+	};
+
 	const toggleFilter = (filter: string) => {
+		if (allFilters?.includes("insgesamt")) {
+			return setActiveFilter?.(filter);
+		}
 		const updatedFilters = activeFilters?.includes(filter)
 			? activeFilters?.filter((f) => f !== filter)
 			: [...(activeFilters || []), filter];
 		if (setFilters) {
-			setFilters(updatedFilters);
+			return setFilters(updatedFilters);
 		}
+		return null;
 	};
 
 	const toggleAll = () => {
@@ -127,11 +151,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
-					className="px-4 py-2 flex items-center gap-4"
+					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between"
 				>
-					<p className="bold select-none">
-						{type === "filter" ? "Branche wählen" : "Sortieren nach"}
-					</p>
+					<p className="bold select-none text-left">{setName()}</p>
 					<div
 						style={{
 							transform: isOpen ? "none" : "rotate(180deg)",
@@ -156,43 +178,47 @@ const Dropdown: React.FC<DropdownProps> = ({
 					<ul className="overflow-y-auto px-2">
 						{type === "filter" && (
 							<>
-								<li
-									className="flex items-center p-2 cursor-pointer"
-									onClick={toggleAll}
-								>
-									<span className="mr-2">
-										<Icon
-											id={
-												activeFilters?.length === allFilters?.length
-													? "checked"
-													: "unchecked"
-											}
-											size={fontSize}
-										/>
-									</span>
-									<p className="bold select-none">Alle</p>
-								</li>
-								{sektoren.map((sektor) => (
-									<li
-										key={sektor.id}
-										className="flex items-center p-2 cursor-pointer"
-										onClick={() => toggleSektor(sektor.id)}
-									>
-										<span className="mr-2">
-											<Icon
-												id={
-													checkForAllSektorChecked(sektor.id)
-														? "checked"
-														: "unchecked"
-												}
-												size={fontSize}
-											/>
-										</span>
-										<p className="bold select-none">{sektor.name}</p>
-									</li>
-								))}
+								{!allFilters?.includes("insgesamt") && (
+									<>
+										<li
+											className="flex items-center p-2 cursor-pointer"
+											onClick={toggleAll}
+										>
+											<span className="mr-2">
+												<Icon
+													id={
+														activeFilters?.length === allFilters?.length
+															? "checked"
+															: "unchecked"
+													}
+													size={fontSize}
+												/>
+											</span>
+											<p className="bold select-none">Alle</p>
+										</li>
+										{sektoren.map((sektor) => (
+											<li
+												key={sektor.id}
+												className="flex items-center p-2 cursor-pointer"
+												onClick={() => toggleSektor(sektor.id)}
+											>
+												<span className="mr-2">
+													<Icon
+														id={
+															checkForAllSektorChecked(sektor.id)
+																? "checked"
+																: "unchecked"
+														}
+														size={fontSize}
+													/>
+												</span>
+												<p className="bold select-none">{sektor.name}</p>
+											</li>
+										))}
 
-								<hr />
+										<hr />
+									</>
+								)}
 
 								{allFilters?.map(
 									(filter) =>
@@ -205,7 +231,8 @@ const Dropdown: React.FC<DropdownProps> = ({
 												<span className="mr-2">
 													<Icon
 														id={
-															activeFilters?.includes(filter)
+															activeFilters?.includes(filter) ||
+															filter === activeFilter
 																? "checked"
 																: "unchecked"
 														}
@@ -214,16 +241,16 @@ const Dropdown: React.FC<DropdownProps> = ({
 												</span>
 												<p className="line-clamp-1 break-words select-none">
 													{branchen.find((branche) => branche.id === filter)
-														?.name || filter}
+														?.name || capitalizeFirstLetter(filter)}
 												</p>
 											</li>
 										),
 								)}
 							</>
 						)}
-						{type === "sort" && sortingAfter && (
+						{type === "sort" && sortsAfter && (
 							<>
-								{sortingAfter.map((item: string) => (
+								{sortsAfter.map((item: string) => (
 									<li
 										key={item}
 										className="flex items-center p-2 cursor-pointer"

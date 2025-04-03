@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 				className={`fixed top-0 left-0 w-screen z-[11] flex justify-between items-center ${theme}`}
 			>
 				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
-					<Icon id="innodaten_logo_wording" size={fontSize * 3} />
+					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
 				</div>
 				<div className="flex items-center gap-8">
 					<div

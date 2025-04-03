@@ -3,18 +3,22 @@
 		{
 			"id": "big-fact-berlin",
 			"title": "Der Gesamtumsatz Berlins beträgt...",
+			"displayNumber": "1.1",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem",
-			"fact": "377",
-			"unit": "Mrd. €"
+			"chart_type": "big_fact",
+			"facts": [{ "fact": "377", "unit": "Mrd. €" }]
 		},
 		{
 			"id": "branchen-list",
 			"title": "Die Branchen",
+			"displayNumber": "1.2",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem"
 		},
 		{
 			"id": "umsatz",
 			"title": "Die umsatzstärksten Branchen",
+			"displayNumber": "1.3",
+			"chart_type": "tree_map",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"data": [
 				{ "branche": "nahrung", "value": 5590 },
@@ -37,6 +41,8 @@
 		{
 			"id": "beschaeftigte",
 			"title": "Die größten Arbeitgeber",
+			"displayNumber": "1.4",
+			"chart_type": "tree_map",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"data": [
 				{ "branche": "nahrung", "value": 15843 },
@@ -61,12 +67,18 @@
 		{
 			"id": "berliner_unternehmen",
 			"title": "Wer innoviert?",
-			"fact": "65%",
-			"unit": "der Berliner Unternehmen sind innovativ"
+			"displayNumber": "2.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"facts": [
+				{ "fact": "65%", "unit": "der Berliner Unternehmen sind innovativ" }
+			]
 		},
 		{
 			"id": "sektoren",
 			"title": "Wo ist Innovation gewachsen?",
+			"displayNumber": "2.2",
+			"chart_type": "area_chart",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"data": {
 				"ber": [
@@ -90,6 +102,8 @@
 		{
 			"id": "growth",
 			"title": "Welche Branchen wachsen?",
+			"displayNumber": "2.3",
+			"chart_type": "area_chart",
 			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"data": {
 				"ber": [
@@ -315,81 +329,150 @@
 			}
 		},
 		{
-			"id": "inno-ausgaben-2022",
+			"id": "inno_ausgaben_2022",
 			"title": "Aktivität seit 2022",
+			"displayNumber": "2.4",
+			"chart_type": "bar_chart_delta",
+			"chart_unit": "€",
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-			"bar_chart_type": "delta",
-			"bar_chart_unit": "Mio. €",
-			"bar_chart_unit_breakpoint": 500,
+			"bar_chart_unit_breakpoint": {
+				"ber": 500,
+				"de": 25000
+			},
 			"data": {
-				"nahrung": {
-					"value": 48,
-					"delta": -19
+				"ber": {
+					"nahrung": {
+						"value": 48,
+						"delta": -19
+					},
+					"pharma": {
+						"value": 1524,
+						"delta": 64
+					},
+					"holz": {
+						"value": 113,
+						"delta": -56
+					},
+					"metall": {
+						"value": 88,
+						"delta": -17
+					},
+					"elektroindustrie": {
+						"value": 864,
+						"delta": 102
+					},
+					"fahrzeugbau": {
+						"value": 595,
+						"delta": 354
+					},
+					"sonstige_konsumgueter": {
+						"value": 77,
+						"delta": -30
+					},
+					"energie": {
+						"value": 220,
+						"delta": -19
+					},
+					"telekommunikation": {
+						"value": 316,
+						"delta": -43
+					},
+					"software": {
+						"value": 977,
+						"delta": 111
+					},
+					"finanz": {
+						"value": 245,
+						"delta": 21
+					},
+					"unternehmensberatung": {
+						"value": 124,
+						"delta": -22
+					},
+					"architektur": {
+						"value": 93,
+						"delta": 29
+					},
+					"forschung": {
+						"value": 269,
+						"delta": -30
+					},
+					"kreativ": {
+						"value": 56,
+						"delta": 132
+					}
 				},
-				"pharma": {
-					"value": 1524,
-					"delta": 64
-				},
-				"holz": {
-					"value": 113,
-					"delta": -56
-				},
-				"metall": {
-					"value": 88,
-					"delta": -17
-				},
-				"elektroindustrie": {
-					"value": 864,
-					"delta": 102
-				},
-				"fahrzeugbau": {
-					"value": 595,
-					"delta": 354
-				},
-				"sonstige_konsumgueter": {
-					"value": 77,
-					"delta": -30
-				},
-				"energie": {
-					"value": 220,
-					"delta": -19
-				},
-				"telekommunikation": {
-					"value": 316,
-					"delta": -43
-				},
-				"software": {
-					"value": 977,
-					"delta": 111
-				},
-				"finanz": {
-					"value": 245,
-					"delta": 21
-				},
-				"unternehmensberatung": {
-					"value": 124,
-					"delta": -22
-				},
-				"architektur": {
-					"value": 93,
-					"delta": 29
-				},
-				"forschung": {
-					"value": 269,
-					"delta": -30
-				},
-				"kreativ": {
-					"value": 56,
-					"delta": 132
+				"de": {
+					"nahrung": {
+						"value": 2211,
+						"delta": 228
+					},
+					"pharma": {
+						"value": 22627,
+						"delta": 1854
+					},
+					"holz": {
+						"value": 1283,
+						"delta": -107
+					},
+					"metall": {
+						"value": 5490,
+						"delta": 1092
+					},
+					"elektroindustrie": {
+						"value": 20782,
+						"delta": 2771
+					},
+					"fahrzeugbau": {
+						"value": 71413,
+						"delta": 8375
+					},
+					"sonstige_konsumgueter": {
+						"value": 2709,
+						"delta": -131
+					},
+					"energie": {
+						"value": 3844,
+						"delta": 419
+					},
+					"telekommunikation": {
+						"value": 7139,
+						"delta": -470
+					},
+					"software": {
+						"value": 14195,
+						"delta": 3975
+					},
+					"finanz": {
+						"value": 5351,
+						"delta": 2087
+					},
+					"unternehmensberatung": {
+						"value": 616,
+						"delta": 40
+					},
+					"architektur": {
+						"value": 1818,
+						"delta": 463
+					},
+					"forschung": {
+						"value": 6634,
+						"delta": 1413
+					},
+					"kreativ": {
+						"value": 673,
+						"delta": 218
+					}
 				}
 			}
 		},
 		{
-			"id": "inno-ausgaben-2023",
+			"id": "inno_ausgaben_2023",
 			"title": "Innovations&shy;ausgaben 2023",
+			"displayNumber": "2.5",
+			"chart_type": "bar_chart",
+			"chart_unit": "€",
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-			"bar_chart_type": "normal",
-			"bar_chart_unit": "Mio. €",
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
@@ -432,28 +515,168 @@
 			}
 		},
 		{
-			"id": "inno-intensitaet",
+			"id": "inno_intensitaet",
 			"title": "Innovations&shy;intensität",
+			"displayNumber": "2.6",
+			"chart_type": "bar_chart_stacked",
+			"chart_unit": "%",
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-			"bar_chart_type": "normal",
-			"bar_chart_unit": "%",
-			"bar_chart_unit_breakpoint": 5,
+			"sortsAfter": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
-				"nahrung": 0.5,
-				"pharma": 18.4,
-				"holz": 4.3,
-				"metall": 2.8,
-				"elektroindustrie": 10.9,
-				"fahrzeugbau": 6.1,
-				"sonstige_konsumgueter": 6.4,
-				"energie": 0.7,
-				"telekommunikation": 1.8,
-				"software": 6.5,
-				"finanz": 0.8,
-				"unternehmensberatung": 1.5,
-				"architektur": 2.3,
-				"forschung": 12.7,
-				"kreativ": 3.6
+				"ber": [
+					{
+						"id": "nahrung",
+						"innovations_intensitaet": 0.52,
+						"fue_intensitaet": 0.27
+					},
+					{
+						"id": "pharma",
+						"innovations_intensitaet": 18.38,
+						"fue_intensitaet": 10.6
+					},
+					{
+						"id": "holz",
+						"innovations_intensitaet": 4.31,
+						"fue_intensitaet": 2.49
+					},
+					{
+						"id": "metall",
+						"innovations_intensitaet": 2.77,
+						"fue_intensitaet": 1.99
+					},
+					{
+						"id": "elektroindustrie",
+						"innovations_intensitaet": 10.92,
+						"fue_intensitaet": 8.12
+					},
+					{
+						"id": "fahrzeugbau",
+						"innovations_intensitaet": 6.12,
+						"fue_intensitaet": 3.23
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"innovations_intensitaet": 6.37,
+						"fue_intensitaet": 4.47
+					},
+					{
+						"id": "energie",
+						"innovations_intensitaet": 0.7,
+						"fue_intensitaet": 0.05
+					},
+					{
+						"id": "telekommunikation",
+						"innovations_intensitaet": 1.8,
+						"fue_intensitaet": 1.12
+					},
+					{
+						"id": "software",
+						"innovations_intensitaet": 6.48,
+						"fue_intensitaet": 4.85
+					},
+					{
+						"id": "finanz",
+						"innovations_intensitaet": 0.81,
+						"fue_intensitaet": 0.24
+					},
+					{
+						"id": "unternehmensberatung",
+						"innovations_intensitaet": 2.45,
+						"fue_intensitaet": 1.56
+					},
+					{
+						"id": "architektur",
+						"innovations_intensitaet": 2.3,
+						"fue_intensitaet": 0.91
+					},
+					{
+						"id": "forschung",
+						"innovations_intensitaet": 12.67,
+						"fue_intensitaet": 6.57
+					},
+					{
+						"id": "kreativ",
+						"innovations_intensitaet": 3.57,
+						"fue_intensitaet": 0.61
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"innovations_intensitaet": 0.94,
+						"fue_intensitaet": 0.29
+					},
+					{
+						"id": "pharma",
+						"innovations_intensitaet": 5.19,
+						"fue_intensitaet": 3.53
+					},
+					{
+						"id": "holz",
+						"innovations_intensitaet": 1.25,
+						"fue_intensitaet": 0.47
+					},
+					{
+						"id": "metall",
+						"innovations_intensitaet": 1.83,
+						"fue_intensitaet": 0.87
+					},
+					{
+						"id": "elektroindustrie",
+						"innovations_intensitaet": 9.62,
+						"fue_intensitaet": 7.28
+					},
+					{
+						"id": "fahrzeugbau",
+						"innovations_intensitaet": 7.3,
+						"fue_intensitaet": 4.79
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"innovations_intensitaet": 3.78,
+						"fue_intensitaet": 2.11
+					},
+					{
+						"id": "energie",
+						"innovations_intensitaet": 0.35,
+						"fue_intensitaet": 0.05
+					},
+					{
+						"id": "telekommunikation",
+						"innovations_intensitaet": 4.37,
+						"fue_intensitaet": 1.24
+					},
+					{
+						"id": "software",
+						"innovations_intensitaet": 8.01,
+						"fue_intensitaet": 6.0
+					},
+					{
+						"id": "finanz",
+						"innovations_intensitaet": 0.76,
+						"fue_intensitaet": 0.34
+					},
+					{
+						"id": "unternehmensberatung",
+						"innovations_intensitaet": 1.64,
+						"fue_intensitaet": 0.88
+					},
+					{
+						"id": "architektur",
+						"innovations_intensitaet": 2.3,
+						"fue_intensitaet": 1.43
+					},
+					{
+						"id": "forschung",
+						"innovations_intensitaet": 35.51,
+						"fue_intensitaet": 30.67
+					},
+					{
+						"id": "kreativ",
+						"innovations_intensitaet": 1.56,
+						"fue_intensitaet": 0.84
+					}
+				]
 			}
 		}
 	],
@@ -461,6 +684,9 @@
 		{
 			"id": "how_innovates_intro",
 			"title": "Wie wird innoviert?",
+			"displayNumber": "3.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"facts": [
 				{
 					"fact": "36%",
@@ -473,11 +699,177 @@
 			]
 		},
 		{
-			"id": "added-value-through-product-innovation",
-			"title": "Mehrwert durch Produkt&shy;innovation",
+			"id": "process_product_innovators",
+			"title": "Prozess & Produktinnovatoren",
+			"displayNumber": "3.2",
+			"chart_type": "bar_chart_full",
+			"chart_unit": "",
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-			"bar_chart_type": "stacked",
-			"bar_chart_unit": "%",
+			"data": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"product_innovation_share": 19,
+						"process_innovation_share": 55
+					},
+					{
+						"id": "pharma",
+						"product_innovation_share": 74,
+						"process_innovation_share": 69
+					},
+					{
+						"id": "holz",
+						"product_innovation_share": 18,
+						"process_innovation_share": 37
+					},
+					{
+						"id": "metall",
+						"product_innovation_share": 13,
+						"process_innovation_share": 36
+					},
+					{
+						"id": "elektroindustrie",
+						"product_innovation_share": 40,
+						"process_innovation_share": 62
+					},
+					{
+						"id": "fahrzeugbau",
+						"product_innovation_share": 41,
+						"process_innovation_share": 54
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"product_innovation_share": 21,
+						"process_innovation_share": 51
+					},
+					{
+						"id": "energie",
+						"product_innovation_share": 3,
+						"process_innovation_share": 19
+					},
+					{
+						"id": "telekommunikation",
+						"product_innovation_share": 33,
+						"process_innovation_share": 59
+					},
+					{
+						"id": "software",
+						"product_innovation_share": 50,
+						"process_innovation_share": 65
+					},
+					{
+						"id": "finanz",
+						"product_innovation_share": 20,
+						"process_innovation_share": 54
+					},
+					{
+						"id": "unternehmensberatung",
+						"product_innovation_share": 33,
+						"process_innovation_share": 49
+					},
+					{
+						"id": "architektur",
+						"product_innovation_share": 37,
+						"process_innovation_share": 51
+					},
+					{
+						"id": "forschung",
+						"product_innovation_share": 52,
+						"process_innovation_share": 67
+					},
+					{
+						"id": "kreativ",
+						"product_innovation_share": 22,
+						"process_innovation_share": 55
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"product_innovation_share": 14,
+						"process_innovation_share": 33
+					},
+					{
+						"id": "pharma",
+						"product_innovation_share": 32,
+						"process_innovation_share": 57
+					},
+					{
+						"id": "holz",
+						"product_innovation_share": 14,
+						"process_innovation_share": 48
+					},
+					{
+						"id": "metall",
+						"product_innovation_share": 18,
+						"process_innovation_share": 44
+					},
+					{
+						"id": "elektroindustrie",
+						"product_innovation_share": 47,
+						"process_innovation_share": 56
+					},
+					{
+						"id": "fahrzeugbau",
+						"product_innovation_share": 37,
+						"process_innovation_share": 54
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"product_innovation_share": 37,
+						"process_innovation_share": 54
+					},
+					{
+						"id": "energie",
+						"product_innovation_share": 13,
+						"process_innovation_share": 40
+					},
+					{
+						"id": "telekommunikation",
+						"product_innovation_share": 32,
+						"process_innovation_share": 50
+					},
+					{
+						"id": "software",
+						"product_innovation_share": 55,
+						"process_innovation_share": 70
+					},
+					{
+						"id": "finanz",
+						"product_innovation_share": 31,
+						"process_innovation_share": 54
+					},
+					{
+						"id": "unternehmensberatung",
+						"product_innovation_share": 31,
+						"process_innovation_share": 56
+					},
+					{
+						"id": "architektur",
+						"product_innovation_share": 30,
+						"process_innovation_share": 50
+					},
+					{
+						"id": "forschung",
+						"product_innovation_share": 36,
+						"process_innovation_share": 47
+					},
+					{
+						"id": "kreativ",
+						"product_innovation_share": 35,
+						"process_innovation_share": 72
+					}
+				]
+			}
+		},
+		{
+			"id": "added_value_through_product_innovation",
+			"title": "Mehrwert durch Produkt&shy;innovation",
+			"displayNumber": "3.3",
+			"chart_type": "bar_chart_stacked",
+			"chart_unit": "%",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"sortsAfter": ["umsatz_produkt_neuheiten", "umsatz_markt_neuheiten"],
 			"data": {
 				"ber": [
 					{
@@ -664,45 +1056,383 @@
 					}
 				]
 			}
+		},
+		{
+			"id": "savings_through_process_innovation",
+			"title": "Ersparnisse durch Prozessinnovation",
+			"displayNumber": "3.4",
+			"chart_type": "bar_chart",
+			"chart_unit": "%",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"bar_chart_unit_breakpoint": 2,
+			"data": {
+				"ber": {
+					"nahrung": 0.6,
+					"pharma": 3.3,
+					"holz": 2.7,
+					"metall": 1.2,
+					"elektroindustrie": 3.9,
+					"fahrzeugbau": 3.2,
+					"sonstige_konsumgueter": 1.2,
+					"energie": 5.5,
+					"telekommunikation": 1.7,
+					"software": 2.7,
+					"finanz": 2.9,
+					"unternehmensberatung": 0.8,
+					"architektur": 2.6,
+					"forschung": 5.2,
+					"kreativ": 1
+				},
+				"de": {
+					"nahrung": 1.7,
+					"pharma": 2.4,
+					"holz": 1.4,
+					"metall": 1.8,
+					"elektroindustrie": 3.8,
+					"fahrzeugbau": 3.4,
+					"sonstige_konsumgueter": 2.4,
+					"energie": 4.2,
+					"telekommunikation": 2.5,
+					"software": 1.9,
+					"finanz": 2.9,
+					"unternehmensberatung": 2.7,
+					"architektur": 1.3,
+					"forschung": 3.6,
+					"kreativ": 2
+				}
+			}
 		}
 	],
 	"environment": [
 		{
 			"id": "environment_innovation",
 			"title": "Umwelt",
-			"fact": "47%",
-			"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
+			"displayNumber": "4.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"facts": [
+				{
+					"fact": "47%",
+					"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
+				}
+			]
+		},
+		{
+			"id": "positive_effects_within_the_company",
+			"title": "Positive Effekte im Unternehmen",
+			"displayNumber": "4.2",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"data": {
+				"ber": [
+					{
+						"id": "lower_energy_consumption_per_unit",
+						"industrie": 4,
+						"dienstleistungen": 2,
+						"insgesamt": 2
+					},
+					{
+						"id": "lower_material_water_consumption_per_unit",
+						"industrie": 3,
+						"dienstleistungen": 3,
+						"insgesamt": 3
+					},
+					{
+						"id": "lower_co2_emissions_per_unit",
+						"industrie": 5,
+						"dienstleistungen": 2,
+						"insgesamt": 3
+					},
+					{
+						"id": "lower_other_air_emissions",
+						"industrie": 4,
+						"dienstleistungen": 1,
+						"insgesamt": 2
+					},
+					{
+						"id": "lower_water_or_soil_pollution",
+						"industrie": 3,
+						"dienstleistungen": 1,
+						"insgesamt": 2
+					},
+					{
+						"id": "lower_noise_emissions",
+						"industrie": 3,
+						"dienstleistungen": 1,
+						"insgesamt": 1
+					},
+					{
+						"id": "replace_fossil_with_renewable_energy",
+						"industrie": 7,
+						"dienstleistungen": 3,
+						"insgesamt": 4
+					},
+					{
+						"id": "replace_hazardous_materials",
+						"industrie": 3,
+						"dienstleistungen": 1,
+						"insgesamt": 2
+					},
+					{
+						"id": "recycling_for_internal_or_sales_use",
+						"industrie": 7,
+						"dienstleistungen": 2,
+						"insgesamt": 3
+					}
+				],
+				"de": [
+					{
+						"id": "lower_energy_consumption_per_unit",
+						"industrie": 12,
+						"dienstleistungen": 4,
+						"insgesamt": 9
+					},
+					{
+						"id": "lower_material_water_consumption_per_unit",
+						"industrie": 6,
+						"dienstleistungen": 3,
+						"insgesamt": 5
+					},
+					{
+						"id": "lower_co2_emissions_per_unit",
+						"industrie": 9,
+						"dienstleistungen": 4,
+						"insgesamt": 7
+					},
+					{
+						"id": "lower_other_air_emissions",
+						"industrie": 6,
+						"dienstleistungen": 3,
+						"insgesamt": 5
+					},
+					{
+						"id": "lower_water_or_soil_pollution",
+						"industrie": 5,
+						"dienstleistungen": 1,
+						"insgesamt": 4
+					},
+					{
+						"id": "lower_noise_emissions",
+						"industrie": 6,
+						"dienstleistungen": 2,
+						"insgesamt": 4
+					},
+					{
+						"id": "replace_fossil_with_renewable_energy",
+						"industrie": 8,
+						"dienstleistungen": 4,
+						"insgesamt": 6
+					},
+					{
+						"id": "replace_hazardous_materials",
+						"industrie": 5,
+						"dienstleistungen": 2,
+						"insgesamt": 4
+					},
+					{
+						"id": "recycling_for_internal_or_sales_use",
+						"industrie": 10,
+						"dienstleistungen": 4,
+						"insgesamt": 7
+					}
+				]
+			}
+		},
+		{
+			"id": "positive_effects_on_products",
+			"title": "Positive Effekte auf Produkte",
+			"displayNumber": "4.3",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"data": {
+				"ber": [
+					{
+						"id": "total",
+						"industrie": 40,
+						"dienstleistungen": 28,
+						"insgesamt": 31
+					},
+					{
+						"id": "lower_energy_consumption_or_co2_balance",
+						"industrie": 9,
+						"dienstleistungen": 3,
+						"insgesamt": 5
+					},
+					{
+						"id": "emissions_air_water_soil_noise",
+						"industrie": 4,
+						"dienstleistungen": 3,
+						"insgesamt": 3
+					},
+					{
+						"id": "recyclability_after_use",
+						"industrie": 8,
+						"dienstleistungen": 2,
+						"insgesamt": 4
+					},
+					{
+						"id": "longer_product_lifespan",
+						"industrie": 9,
+						"dienstleistungen": 3,
+						"insgesamt": 4
+					}
+				],
+				"de": [
+					{
+						"id": "total",
+						"industrie": 46,
+						"dienstleistungen": 33,
+						"insgesamt": 41
+					},
+					{
+						"id": "lower_energy_consumption_or_co2_balance",
+						"industrie": 13,
+						"dienstleistungen": 7,
+						"insgesamt": 10
+					},
+					{
+						"id": "emissions_air_water_soil_noise",
+						"industrie": 9,
+						"dienstleistungen": 5,
+						"insgesamt": 7
+					},
+					{
+						"id": "recyclability_after_use",
+						"industrie": 9,
+						"dienstleistungen": 4,
+						"insgesamt": 7
+					},
+					{
+						"id": "longer_product_lifespan",
+						"industrie": 10,
+						"dienstleistungen": 4,
+						"insgesamt": 8
+					}
+				]
+			}
 		},
 		{
 			"id": "what_drives_environment_innovation",
 			"title": "Was treibt Umweltinnovationen?",
+			"displayNumber": "4.4",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
-			"bar_chart_type": "normal",
-			"bar_chart_unit": "%",
-			"bar_chart_unit_breakpoint": 6,
 			"data": {
-				"ber": {
-					"existing_environmental_taxes_or_charges": 6,
-					"compliance_with_existing_regulations": 19,
-					"public_funding_for_environmental_innovations": 4,
-					"expected_future_regulations_or_environmental_taxes": 11,
-					"current_or_expected_demand_for_environmental_innovations": 4,
-					"improving_company_reputation": 8,
-					"industry_self_commitments_or_standards": 10,
-					"rising_costs_for_energy_or_raw_materials": 14,
-					"requirements_in_public_procurement": 5
-				},
-				"de": {
-					"existing_environmental_taxes_or_charges": 9,
-					"compliance_with_existing_regulations": 22,
-					"public_funding_for_environmental_innovations": 8,
-					"expected_future_regulations_or_environmental_taxes": 12,
-					"current_or_expected_demand_for_environmental_innovations": 9,
-					"improving_company_reputation": 12,
-					"industry_self_commitments_or_standards": 10,
-					"rising_costs_for_energy_or_raw_materials": 24,
-					"requirements_in_public_procurement": 5
-				}
+				"ber": [
+					{
+						"id": "existing_environmental_taxes_or_charges",
+						"industrie": 11,
+						"dienstleistungen": 3,
+						"insgesamt": 6
+					},
+					{
+						"id": "compliance_with_existing_regulations",
+						"industrie": 30,
+						"dienstleistungen": 14,
+						"insgesamt": 19
+					},
+					{
+						"id": "public_funding_for_environmental_innovations",
+						"industrie": 8,
+						"dienstleistungen": 3,
+						"insgesamt": 4
+					},
+					{
+						"id": "expected_future_regulations_or_environmental_taxes",
+						"industrie": 20,
+						"dienstleistungen": 7,
+						"insgesamt": 11
+					},
+					{
+						"id": "current_or_expected_demand_for_environmental_innovations",
+						"industrie": 7,
+						"dienstleistungen": 2,
+						"insgesamt": 4
+					},
+					{
+						"id": "improving_company_reputation",
+						"industrie": 9,
+						"dienstleistungen": 8,
+						"insgesamt": 8
+					},
+					{
+						"id": "industry_self_commitments_or_standards",
+						"industrie": 10,
+						"dienstleistungen": 11,
+						"insgesamt": 10
+					},
+					{
+						"id": "rising_costs_for_energy_or_raw_materials",
+						"industrie": 27,
+						"dienstleistungen": 8,
+						"insgesamt": 14
+					},
+					{
+						"id": "requirements_in_public_procurement",
+						"industrie": 8,
+						"dienstleistungen": 4,
+						"insgesamt": 5
+					}
+				],
+				"de": [
+					{
+						"id": "existing_environmental_taxes_or_charges",
+						"industrie": 10,
+						"dienstleistungen": 6,
+						"insgesamt": 9
+					},
+					{
+						"id": "compliance_with_existing_regulations",
+						"industrie": 24,
+						"dienstleistungen": 18,
+						"insgesamt": 22
+					},
+					{
+						"id": "public_funding_for_environmental_innovations",
+						"industrie": 9,
+						"dienstleistungen": 5,
+						"insgesamt": 8
+					},
+					{
+						"id": "expected_future_regulations_or_environmental_taxes",
+						"industrie": 14,
+						"dienstleistungen": 9,
+						"insgesamt": 12
+					},
+					{
+						"id": "current_or_expected_demand_for_environmental_innovations",
+						"industrie": 9,
+						"dienstleistungen": 8,
+						"insgesamt": 9
+					},
+					{
+						"id": "improving_company_reputation",
+						"industrie": 13,
+						"dienstleistungen": 11,
+						"insgesamt": 12
+					},
+					{
+						"id": "industry_self_commitments_or_standards",
+						"industrie": 11,
+						"dienstleistungen": 9,
+						"insgesamt": 10
+					},
+					{
+						"id": "rising_costs_for_energy_or_raw_materials",
+						"industrie": 31,
+						"dienstleistungen": 9,
+						"insgesamt": 24
+					},
+					{
+						"id": "requirements_in_public_procurement",
+						"industrie": 5,
+						"dienstleistungen": 5,
+						"insgesamt": 5
+					}
+				]
 			}
 		}
 	],
@@ -710,6 +1440,9 @@
 		{
 			"id": "berlin_intro",
 			"title": "Was macht Berlin aus als Innovationsstandort?",
+			"displayNumber": "5.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
 			"facts": [
 				{
 					"fact": "19%",
@@ -722,9 +1455,85 @@
 			]
 		},
 		{
+			"id": "berlin_is_ahead",
+			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
+			"displayNumber": "5.2",
+			"chart_type": "area_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
+			"data": {
+				"innovations_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 5.430635129931505,
+						"de": 4.43060657401294
+					},
+					{
+						"year": 2019,
+						"ber": 4.642867968757894,
+						"de": 4.432251169004676
+					},
+					{
+						"year": 2020,
+						"ber": 5.625020839585209,
+						"de": 4.538074067047084
+					},
+					{
+						"year": 2021,
+						"ber": 4.742775918846619,
+						"de": 4.021695962823456
+					},
+					{
+						"year": 2022,
+						"ber": 4.216627449801159,
+						"de": 3.449526999121898
+					},
+					{
+						"year": 2023,
+						"ber": 4.030566376985316,
+						"de": 3.5090233726962586
+					}
+				],
+				"fue_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 2.811001295230983,
+						"de": 2.6238259809127397
+					},
+					{
+						"year": 2019,
+						"ber": 2.581616465762006,
+						"de": 2.7210955243820976
+					},
+					{
+						"year": 2020,
+						"ber": 2.921987707423338,
+						"de": 2.863576855240649
+					},
+					{
+						"year": 2021,
+						"ber": 2.6856895653632567,
+						"de": 2.5806033134714097
+					},
+					{
+						"year": 2022,
+						"ber": 2.5665120544876373,
+						"de": 2.188839465920837
+					},
+					{
+						"year": 2023,
+						"ber": 2.362835663378979,
+						"de": 2.2495867412636435
+					}
+				]
+			}
+		},
+		{
 			"id": "collaboration_regions",
 			"title": "Mit welchen Regionen wird kollaboriert?",
+			"displayNumber": "5.3",
 			"chart_type": "matrix",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"data": {
 				"ber": [
 					{ "x": "nahrung", "y": "own_region", "value": 1 },
@@ -999,90 +1808,63 @@
 			}
 		},
 		{
-			"id": "berlin_is_ahead",
-			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-			"allToggles": ["innovations_intensitaet", "fue_intensitaet"],
-			"data": {
-				"innovations_intensitaet": [
-					{
-						"year": 2018,
-						"ber": 54.30635129931505,
-						"de": 44.3060657401294
-					},
-					{
-						"year": 2019,
-						"ber": 46.42867968757894,
-						"de": 44.32251169004676
-					},
-					{
-						"year": 2020,
-						"ber": 56.25020839585209,
-						"de": 45.38074067047084
-					},
-					{
-						"year": 2021,
-						"ber": 47.427759188466194,
-						"de": 40.21695962823456
-					},
-					{
-						"year": 2022,
-						"ber": 42.166274498011594,
-						"de": 34.49526999121898
-					},
-					{
-						"year": 2023,
-						"ber": 40.30566376985316,
-						"de": 35.090233726962586
-					}
-				],
-				"fue_intensitaet": [
-					{
-						"year": 2018,
-						"ber": 28.11001295230983,
-						"de": 26.238259809127397
-					},
-					{
-						"year": 2019,
-						"ber": 25.81616465762006,
-						"de": 27.210955243820976
-					},
-					{
-						"year": 2020,
-						"ber": 29.21987707423338,
-						"de": 28.63576855240649
-					},
-					{
-						"year": 2021,
-						"ber": 26.856895653632567,
-						"de": 25.806033134714097
-					},
-					{
-						"year": 2022,
-						"ber": 25.665120544876373,
-						"de": 21.88839465920837
-					},
-					{
-						"year": 2023,
-						"ber": 23.628356633789788,
-						"de": 22.495867412636435
-					}
-				]
-			}
+			"id": "collaboration_partners",
+			"title": "Mit welchen Partnern wird kollaboriert?",
+			"displayNumber": "🚨 5.4",
+			"chart_type": "matrix",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 		}
 	],
 	"support": [
 		{
 			"id": "support_intro",
 			"title": "Was macht Berlin aus als Innovationsstandort?",
-			"fact": "22%",
-			"unit": "der Berliner Unternehmen werden staatlich gefördert."
+			"displayNumber": "6.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"facts": [
+				{
+					"fact": "22%",
+					"unit": "der Berliner Unternehmen werden staatlich gefördert."
+				}
+			]
+		},
+		{
+			"id": "most_supported_branchen",
+			"title": "Welche Branchen werden am meisten gefördert?",
+			"displayNumber": "🚨 6.2",
+			"chart_type": "bar_chart_stacked",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "public_funding_fue_projects",
+			"title": "Wer erhält öffentliche Zuschüsse für FuE-Vorhaben?",
+			"displayNumber": "🚨 6.3",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "applications_fue_funding",
+			"title": "Wer beantragt steuerlichen FuE-Förderung?",
+			"displayNumber": "🚨 6.4",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "protective_measures_intellectual_property",
+			"title": "Schutzmaßnahmen für geistigen Eigentum",
+			"displayNumber": "🚨 6.5",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 		}
 	],
 	"data_ai": [
 		{
 			"id": "data_ai_intro",
 			"title": "Daten und KI",
+			"displayNumber": "7.1",
+			"chart_type": "big_fact",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
 			"facts": [
 				{
 					"fact": "40%",
@@ -1093,6 +1875,48 @@
 					"unit": "kaufen Daten von Dritten."
 				}
 			]
+		},
+		{
+			"id": "data_application",
+			"title": "Anwendungen von Daten",
+			"displayNumber": "🚨 7.2",
+			"chart_type": "bar_chart_stacked",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "strategies_data_use",
+			"title": "Strategien der Datennutzung",
+			"displayNumber": "🚨 7.3",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "most_common_data_skills",
+			"title": "Die häufigsten Datakompetenzen",
+			"displayNumber": "🚨 7.4",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "ai_use",
+			"title": "Einsatz von KI",
+			"displayNumber": "🚨 7.5",
+			"chart_type": "bar_chart",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "use_ai_processes",
+			"title": "Einsatz von KI Verfahren",
+			"displayNumber": "🚨 7.6",
+			"chart_type": "matrix",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+		},
+		{
+			"id": "ai_applications",
+			"title": "Anwendungen von KI",
+			"displayNumber": "🚨 7.7",
+			"chart_type": "matrix",
+			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 		}
 	]
 }

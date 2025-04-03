@@ -47,8 +47,8 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	const { fontSize, theme, region, setRegion } = useGlobalContext();
 	const [maxValue, setMaxValue] = React.useState(0);
 	const [minValue, setMinValue] = React.useState(0);
-	const xLabels = Array.from(new Set(data.map((d) => d.x)));
-	const yLabels = Array.from(new Set(data.map((d) => d.y)));
+	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
+	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
 
 	const templateAreas = [
 		[".", ...xLabels.map((x) => `x_${sanitize(x)}`)],
@@ -161,10 +161,16 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	};
 
 	useEffect(() => {
-		const { min, max } = getMinMax(data);
-		setMinValue(min);
-		setMaxValue(max);
+		if (data) {
+			const { min, max } = getMinMax(data);
+			setMinValue(min);
+			setMaxValue(max);
+		}
 	}, [data]);
+
+	if (!data) {
+		return <h4>Matrix Chart Data missing</h4>;
+	}
 
 	return (
 		<>

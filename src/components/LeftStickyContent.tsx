@@ -1,14 +1,11 @@
-/* eslint-disable complexity */
-
 import React, { useEffect, useState } from "react";
 import { StickyItem } from "../types/global";
-import BigFact from "./charts/BigFact";
 import BranchenList from "./charts/BranchenList";
 import TreeMap from "./charts/TreeMap";
 import AreaChart from "./charts/AreaChart";
 import BarChart from "./charts/BarChart";
 import { useGlobalContext } from "../GlobalContext";
-import BigFactComparison from "./charts/BigFactComparison";
+import BigFact from "./charts/BigFact";
 import MatrixChart from "./charts/MatrixChart";
 
 type LeftStickyContentProps = {
@@ -20,72 +17,82 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 	const [toggleData, setToggleData] = useState<string | null>(null);
 
 	useEffect(() => {
-		if (data?.allToggles) {
-			setToggleData(data?.allToggles[0]);
+		if (data?.togglesBetween) {
+			setToggleData(data?.togglesBetween[0]);
 		}
-	}, [data?.allToggles]);
+	}, [data?.togglesBetween]);
 
 	if (!data) {
 		return null;
 	}
 	const {
 		id,
-		fact,
-		facts,
 		chart_type,
-		unit,
-		data: content,
-		bar_chart_type,
-		bar_chart_unit,
+		chart_unit,
+		facts,
 		bar_chart_unit_breakpoint,
-		allToggles,
+		togglesBetween,
+		sortsAfter,
+		data: content,
 	} = data;
-	const hasToggle = "ber" in (content || {});
+
+	const hasRegionToggle = "ber" in (content || {});
+
 	const hasMultipleBreakpoints =
 		!!bar_chart_unit_breakpoint &&
 		typeof bar_chart_unit_breakpoint !== "number";
 
 	return (
 		<>
-			{fact && <BigFact fact={fact} unit={unit} />}
-			{facts && <BigFactComparison facts={facts} />}
+			{/* BIG FACT */}
+			{chart_type === "big_fact" && <BigFact facts={facts} />}
+			{/* BRANCHEN LISTE */}
 			{id === "branchen-list" && <BranchenList />}
-			{(id === "umsatz" || id === "beschaeftigte") && (
-				<TreeMap id={id} data={content} />
-			)}
-			{(id === "sektoren" || id === "growth") && content !== undefined && (
+			{/* TREEMAP */}
+			{chart_type === "tree_map" && <TreeMap id={id} data={content} />}
+			{/* AREA CHART */}
+			{chart_type === "area_chart" && (
 				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-first-y-axis-tick">
-					<AreaChart id={id} data={(content as Record<string, any>)[region]} />
+					{toggleData ? (
+						<AreaChart
+							id={id}
+							data={(content as Record<string, any>)[toggleData]}
+							toggleData={toggleData}
+							setToggleData={setToggleData}
+							togglesBetween={togglesBetween}
+						/>
+					) : (
+						<AreaChart
+							id={id}
+							data={(content as Record<string, any>)[region]}
+						/>
+					)}
 				</div>
 			)}
-			{id === "berlin_is_ahead" && content !== undefined && toggleData && (
-				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-first-y-axis-tick">
-					<AreaChart
-						id={id}
-						data={(content as Record<string, any>)[toggleData]}
-						toggleData={toggleData}
-						setToggleData={setToggleData}
-						allToggles={allToggles}
-					/>
-				</div>
-			)}
-			{bar_chart_type && (
+			{/* BAR CHART */}
+			{chart_type?.includes("bar_chart") && (
 				<BarChart
 					id={id}
-					data={hasToggle ? (content as Record<string, any>)[region] : content}
-					bar_chart_type={bar_chart_type}
-					bar_chart_unit={bar_chart_unit}
+					chart_type={chart_type}
+					chart_unit={chart_unit}
 					bar_chart_unit_breakpoint={
 						hasMultipleBreakpoints
 							? (bar_chart_unit_breakpoint as Record<string, any>)[region]
 							: bar_chart_unit_breakpoint
 					}
-					hasToggle={hasToggle}
+					hasRegionToggle={hasRegionToggle}
+					sortsAfter={sortsAfter}
+					data={
+						hasRegionToggle ? (content as Record<string, any>)[region] : content
+					}
 				/>
 			)}
+			{/* MATRIX CHART */}
 			{chart_type === "matrix" && (
 				<MatrixChart
-					data={hasToggle ? (content as Record<string, any>)[region] : content}
+					data={
+						hasRegionToggle ? (content as Record<string, any>)[region] : content
+					}
 				/>
 			)}
 		</>

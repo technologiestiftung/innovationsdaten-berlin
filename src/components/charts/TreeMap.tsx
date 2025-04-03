@@ -147,6 +147,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 						dataKey="value"
 						fill="none"
 						content={<CustomTreemapNode />}
+						animationDuration={300}
 					>
 						<Tooltip
 							content={(props) => <CustomTooltip {...props} dataID={id} />}

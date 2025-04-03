@@ -10,8 +10,13 @@ const hexToRgba = (hex: string, opacity: number) => {
 	return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
 
-const formatNumber = (num: number) => {
-	return new Intl.NumberFormat("de-DE").format(num);
+const formatNumber = (num: number): number => {
+	if (num < 1000) {
+		return num;
+	}
+
+	const billions = num / 1000;
+	return Math.round(billions * 10) / 10; // one decimal
 };
 
 const isInRange = (num: number) => {
@@ -36,14 +41,11 @@ function formatEuroNumber(value: number): string {
 	return `${value.toString().replace(".", ",")} Mio. €`;
 }
 
-function formatThousand(value: number): string {
-	if (value < 10000) {
-		return `${value.toLocaleString("de-DE")} Tsd.`;
+function capitalizeFirstLetter(str: string): string {
+	if (!str) {
+		return "";
 	}
-	const millions = value / 1000000;
-	const rounded = Math.round(millions * 10) / 10; // e.g., 2.3
-	const formatted = rounded % 1 === 0 ? rounded.toFixed(0) : rounded.toFixed(1);
-	return `${formatted.replace(".", ",")} Mio.`;
+	return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export {
@@ -52,5 +54,5 @@ export {
 	isInRange,
 	roundToTwoDecimals,
 	formatEuroNumber,
-	formatThousand,
+	capitalizeFirstLetter,
 };

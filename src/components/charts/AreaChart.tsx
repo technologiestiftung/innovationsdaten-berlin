@@ -27,7 +27,7 @@ type AreaChartProps = {
 	data: StickyItemData;
 	toggleData?: string;
 	setToggleData?: (toggleData: string) => void;
-	allToggles?: string[];
+	togglesBetween?: string[];
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({
@@ -35,31 +35,41 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	data,
 	toggleData,
 	setToggleData,
-	allToggles,
+	togglesBetween,
 }) => {
-	const { theme, fontSize, axisFontStylings, region, setRegion } =
-		useGlobalContext();
+	const {
+		theme,
+		fontSize,
+		axisFontStylings,
+		region,
+		setRegion,
+		widthOfStickyContainer,
+	} = useGlobalContext();
 
 	const allFilters = branchen.map((branche) => branche.id);
-	const [activeFilters, setActiveFilters] = useState<string[]>(allFilters);
+	const [activeFilters, setActiveFilters] = useState<string[] | null>(
+		allFilters,
+	);
 
 	const setData = data as StickyItemData[];
 
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
-		if (theme === "dark") {
+		if (activeFilters) {
+			if (theme === "dark") {
+				if (activeFilters.indexOf(brancheID) > -1) {
+					if (color) {
+						return color;
+					}
+					return colors.white;
+				}
+				return hexToRgba(colors.white, 0.2);
+			}
 			if (activeFilters.indexOf(brancheID) > -1) {
 				if (color) {
 					return color;
 				}
-				return colors.white;
+				return colors.blue;
 			}
-			return hexToRgba(colors.white, 0.2);
-		}
-		if (activeFilters.indexOf(brancheID) > -1) {
-			if (color) {
-				return color;
-			}
-			return colors.blue;
 		}
 		return hexToRgba(colors.blue, 0.2);
 	};
@@ -101,7 +111,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						{Object.keys(payloadData).map((dataKey) => (
 							<div key={dataKey}>
 								{dataKey !== "year" &&
-									(activeFilters.includes(dataKey) ||
+									(activeFilters?.includes(dataKey) ||
 										dataKey === "dienstleistungen" ||
 										dataKey === "industrie") && (
 										<div className="flex justify-between gap-6">
@@ -192,7 +202,11 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					) : (
 						<>
 							{branchen
-								.filter((branche) => activeFilters.indexOf(branche.id) > -1)
+								.filter((branche) =>
+									activeFilters
+										? activeFilters?.indexOf(branche.id) > -1
+										: false,
+								)
 								.map((branche) => (
 									<Area
 										key={branche.id}
@@ -233,7 +247,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
-						width={150}
+						width={widthOfStickyContainer * 0.2}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
@@ -266,11 +280,11 @@ const AreaChart: React.FC<AreaChartProps> = ({
 				{id === "berlin_is_ahead" &&
 					toggleData &&
 					setToggleData &&
-					allToggles && (
+					togglesBetween && (
 						<DataToggle
 							data={toggleData}
 							setData={(value: string) => setToggleData(value)}
-							allDatas={allToggles}
+							allDatas={togglesBetween}
 						/>
 					)}
 			</div>

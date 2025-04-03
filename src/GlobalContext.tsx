@@ -59,7 +59,9 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const breakPoint = window.innerWidth * 0.8;
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 	const checkIfViewPortIsMobile = () =>
-		setIsMobile(window.innerWidth < breakPoint);
+		setIsMobile(
+			window.innerWidth < 768 && window.innerWidth < window.innerHeight,
+		);
 
 	// Toggle theme function
 	const toggleTheme = () => {

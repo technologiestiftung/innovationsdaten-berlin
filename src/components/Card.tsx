@@ -5,6 +5,7 @@ import { useGlobalContext } from "../GlobalContext";
 type CardProps = {
 	dataKey: string;
 	title: string;
+	displayNumber?: string;
 	text?: string;
 	onSetCurrent: () => void;
 	isNotCurrent: boolean;
@@ -15,6 +16,7 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({
 	dataKey,
 	title,
+	displayNumber,
 	text,
 	onSetCurrent,
 	isNotCurrent,
@@ -98,6 +100,7 @@ const Card: React.FC<CardProps> = ({
 				marginBottom: getMarginBottom(),
 			}}
 		>
+			{displayNumber && <h4>{displayNumber}</h4>}
 			<h2
 				className={text ? "mb-4" : ""}
 				dangerouslySetInnerHTML={{ __html: title }}

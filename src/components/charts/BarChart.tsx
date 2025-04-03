@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { BarChartTypes, BranchenItem, Region } from "../../types/global";
+/* eslint-disable complexity */
+
+import React, { useEffect, useMemo, useState } from "react";
+import { BranchenItem, ChartTypes, dataKeys, Region } from "../../types/global";
 import {
 	BarChart as RechartsBarChart,
 	Bar,
@@ -13,7 +15,11 @@ import {
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
 import colors from "../../data/colors.json";
-import { formatNumber } from "../../utilities";
+import {
+	capitalizeFirstLetter,
+	formatEuroNumber,
+	formatNumber,
+} from "../../utilities";
 import wordings from "../../data/wordings.json";
 import Dropdown from "./../DropDown";
 import DataToggle from "../DataToggle";
@@ -21,97 +27,138 @@ import DataToggle from "../DataToggle";
 type BarChartProps = {
 	id: string;
 	data: any;
-	bar_chart_type?: BarChartTypes;
-	bar_chart_unit?: string;
+	chart_type: ChartTypes;
+	chart_unit?: string;
 	bar_chart_unit_breakpoint?: number;
-	hasToggle?: boolean;
+	hasRegionToggle?: boolean;
+	sortsAfter?: dataKeys[];
 };
 
 const BarChart: React.FC<BarChartProps> = ({
 	id,
 	data,
-	bar_chart_type,
-	bar_chart_unit,
+	chart_type,
+	chart_unit,
 	bar_chart_unit_breakpoint,
-	hasToggle,
+	hasRegionToggle,
+	sortsAfter,
 }) => {
-	const { axisFontStylings, theme, fontSize, region, setRegion } =
-		useGlobalContext();
-	const [sortBy, setSortBy] = useState<string | null>("umsatz_markt_neuheiten");
-	const sortingAfter: Record<string, string[]> = {
-		"added-value-through-product-innovation": [
-			"umsatz_produkt_neuheiten",
-			"umsatz_markt_neuheiten",
-		],
-	};
+	const {
+		axisFontStylings,
+		theme,
+		fontSize,
+		region,
+		setRegion,
+		widthOfStickyContainer,
+	} = useGlobalContext();
+	const sortOutDataKeysFromBranch = [
+		"color",
+		"id",
+		"name",
+		"sektor",
+		"sektor_id",
+		"umsatz_produkt_neuheiten",
+	];
+	const [sortBy, setSortBy] = useState<string | null>(null);
+	const [allFilters, setAllFilters] = useState<string[] | null>([]);
+	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
 	if (!data) {
-		return null;
+		return <h4>BarChart Data missing</h4>;
 	}
 
-	let collectData = branchen.map((branche: BranchenItem) => {
-		if (bar_chart_type === "stacked") {
-			const getData = data.find((item: any) => item.id === branche.id);
-			return {
-				...branche,
-				umsatz_markt_neuheiten: getData.umsatz_markt_neuheiten,
-				umsatz_nachahmer_innovationen: getData.umsatz_nachahmer_innovationen,
-				umsatz_produkt_neuheiten: getData.umsatz_produkt_neuheiten,
-			};
+	const collectData = useMemo(() => {
+		if (!data) {
+			return [];
 		}
-		if (id === "what_drives_environment_innovation") {
-			return branche;
-		}
-		const getDelta = bar_chart_type === "normal" ? 0 : data[branche.id].delta;
-		const getValue =
-			bar_chart_type === "normal" ? data[branche.id] : data[branche.id].value;
-		const getBreakPoint = bar_chart_unit_breakpoint || 0;
-		return {
-			name: branche.name,
-			value: getValue,
-			delta: getDelta > 0 ? getDelta : -getDelta,
-			positiveDelta: getDelta > 0,
-			isSmall: getValue < getBreakPoint,
-			color: branche.color,
-		};
-	});
+		let result: any = [];
 
-	if (id === "what_drives_environment_innovation") {
-		collectData = [];
-		Object.entries(data).map(([key, value]) => {
-			const numValue = value as number;
-			collectData.push({
-				name: wordings[key as keyof typeof wordings],
-				value: numValue,
-				isSmall: numValue < (bar_chart_unit_breakpoint || 0),
-				color: theme === "dark" ? colors.blue : colors.green_light,
-				delta: 0,
-				positiveDelta: false,
+		if (!chart_type.includes("filter_keys")) {
+			// stacked / full / normal
+			result = branchen.map((branche: BranchenItem) => {
+				if (chart_type.includes("stacked")) {
+					const getData = data.find((item: any) => item.id === branche.id);
+					return {
+						...branche,
+						...getData,
+					};
+				}
+				if (chart_type.includes("full")) {
+					const getData = data
+						.map((item: any) => {
+							const total =
+								item.product_innovation_share + item.process_innovation_share;
+
+							const rawProduct = (item.product_innovation_share / total) * 100;
+							const roundedProduct = Math.round(rawProduct);
+							const roundedProcess = Math.round(100 - roundedProduct);
+
+							return {
+								id: item.id,
+								product_innovation_share: roundedProduct,
+								process_innovation_share: roundedProcess,
+								display_product_innovation_share: item.product_innovation_share,
+								display_process_innovation_share: item.process_innovation_share,
+							};
+						})
+						.find((item: any) => item.id === branche.id);
+
+					return {
+						...branche,
+						...getData,
+					};
+				}
+				const getDelta =
+					chart_type === "bar_chart" ? 0 : data[branche.id].delta;
+				const getValue =
+					chart_type === "bar_chart"
+						? data[branche.id]
+						: data[branche.id].value;
+				const getBreakPoint = bar_chart_unit_breakpoint || 0;
+				return {
+					name: branche.name,
+					value: getValue,
+					delta: getDelta > 0 ? getDelta : -getDelta,
+					positiveDelta: getDelta > 0,
+					isSmall: getValue < getBreakPoint,
+					color: branche.color,
+				};
 			});
-		});
-	}
+		}
 
-	if (bar_chart_type !== "stacked") {
-		collectData.sort((a: any, b: any) => {
-			if (a.value < b.value) {
+		if (chart_type.includes("filter_keys")) {
+			result = data.map((item: any) => {
+				const getID = item.id;
+				return {
+					name: wordings[getID as keyof typeof wordings],
+					...item,
+				};
+			});
+		}
+
+		// Sort
+		const getSortBy =
+			sortBy ?? (Array.isArray(sortsAfter) ? sortsAfter[0] : null);
+
+		result.sort((a: any, b: any) => {
+			const key = getSortBy || "value";
+			if (a[key] < b[key]) {
 				return 1;
 			}
-			if (a.value > b.value) {
+			if (a[key] > b[key]) {
 				return -1;
 			}
 			return 0;
 		});
-	} else if (sortBy) {
-		collectData.sort((a: any, b: any) => {
-			if (a[sortBy] < b[sortBy]) {
-				return 1;
-			}
-			if (a[sortBy] > b[sortBy]) {
-				return -1;
-			}
-			return 0;
-		});
-	}
+
+		return result;
+	}, [data, sortBy, chart_type, id, theme]);
+
+	const objectKeys = Object.keys(collectData[0]).filter(
+		(dataKey) =>
+			!sortOutDataKeysFromBranch.includes(dataKey) &&
+			!dataKey.includes("display"),
+	);
 
 	const RenderValueLabel = ({ x, y, width, height, value, index }: any) => {
 		const paddingLabel = 10;
@@ -123,7 +170,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				? collectData[index].positiveDelta
 				: false;
 		const getFill = () => {
-			if (bar_chart_type === "normal") {
+			if (chart_type === "bar_chart") {
 				return isSmall && theme === "light" ? colors.blue : colors.white;
 			}
 			if (theme === "dark") {
@@ -132,7 +179,7 @@ const BarChart: React.FC<BarChartProps> = ({
 			return colors.blue;
 		};
 		const setX = () => {
-			if (bar_chart_type === "delta" && !isSmall) {
+			if (chart_type.includes("delta") && !isSmall) {
 				return x - paddingLabel;
 			}
 			if (isSmall) {
@@ -150,14 +197,22 @@ const BarChart: React.FC<BarChartProps> = ({
 					fontWeight="bold"
 					fontFamily="Clan Pro"
 				>
-					<tspan fill={getFill()}>
-						{/* Value Display */}
-						{`${formatNumber(value)} ${bar_chart_unit?.includes("€") ? "" : bar_chart_unit}`}
-					</tspan>
-					{bar_chart_type === "delta" && (
-						<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
-							{positiveDelta ? "↑" : "↓"}
-							{delta}
+					{(chart_type.includes("delta") || chart_unit === "€") && (
+						<>
+							{/* Value Display */}
+							<tspan fill={getFill()}>{formatNumber(value)}</tspan>
+							{chart_type.includes("delta") && (
+								<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
+									{positiveDelta ? "↑" : "↓"}
+									{delta}
+								</tspan>
+							)}
+						</>
+					)}
+					{chart_unit === "%" && (
+						<tspan fill={getFill()}>
+							{/* Value Display */}
+							{formatNumber(value)} {chart_unit}
 						</tspan>
 					)}
 				</text>
@@ -201,12 +256,21 @@ const BarChart: React.FC<BarChartProps> = ({
 		);
 	};
 
+	const getColorBar = (index: number) => {
+		if (!index) {
+			return colors.blue;
+		}
+		if (index === 1) {
+			return colors.cyan_light;
+		}
+		return colors.green_light;
+	};
+
 	const CustomTooltip = ({ active, payload }: any) => {
 		if (!active || !payload || !payload.length) {
 			return null;
 		}
 		const payloadData = payload[0].payload;
-		const tollTipData = ["umsatz_markt_neuheiten", "umsatz_produkt_neuheiten"];
 		return (
 			<div
 				className="p-4 select-none"
@@ -215,7 +279,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				}}
 			>
 				<p
-					className="bold"
+					className="bold max-w-[350px]"
 					style={{
 						color: theme === "dark" ? colors.dark : colors.white,
 						marginBottom: fontSize,
@@ -223,49 +287,112 @@ const BarChart: React.FC<BarChartProps> = ({
 				>
 					{payloadData.name}
 				</p>
-				{tollTipData.map((key: string) => (
-					<div className="flex justify-between gap-6" key={key}>
-						{wordings[key as keyof typeof wordings] && (
+				{!chart_type.includes("filter_keys") ? (
+					<>
+						{objectKeys.map((key: string) => (
+							<div className="flex justify-between gap-6" key={key}>
+								{wordings[key as keyof typeof wordings] && (
+									<p
+										style={{
+											color: theme === "dark" ? colors.dark : colors.white,
+										}}
+									>
+										{wordings[key as keyof typeof wordings]}:
+									</p>
+								)}
+								<p
+									className="bold ml-2"
+									style={{
+										color: theme === "dark" ? colors.dark : colors.white,
+									}}
+								>
+									{/* Value Display */}
+									{chart_type.includes("full")
+										? `${formatNumber(payloadData[key])} | ${formatNumber(payloadData[`display_${key}`])}%`
+										: formatNumber(payloadData[key])}
+									{chart_unit}
+								</p>
+							</div>
+						))}
+						{id === "added_value_through_product_innovation" && (
+							<div className="flex justify-between gap-6">
+								<p
+									style={{
+										color: theme === "dark" ? colors.dark : colors.white,
+									}}
+								>
+									Gesamtwert:
+								</p>
+								<p
+									className="bold ml-2"
+									style={{
+										color: theme === "dark" ? colors.dark : colors.white,
+									}}
+								>
+									{/* Value Display */}
+									{formatNumber(payloadData["umsatz_produkt_neuheiten"])}
+									{chart_unit}
+								</p>
+							</div>
+						)}
+					</>
+				) : (
+					<>
+						<div className="flex justify-between gap-6">
 							<p
-								className="max-w-[150px] truncate"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
 							>
-								{wordings[key as keyof typeof wordings]}
+								{capitalizeFirstLetter(activeFilter || "")}:
 							</p>
-						)}
-						<p
-							className="bold ml-2"
-							style={{
-								color: theme === "dark" ? colors.dark : colors.white,
-							}}
-						>
-							{/* Value Display */}
-							{formatNumber(payloadData[key])}
-							{bar_chart_unit}
-						</p>
-					</div>
-				))}
+							<p
+								className="bold ml-2"
+								style={{
+									color: theme === "dark" ? colors.dark : colors.white,
+								}}
+							>
+								{/* Value Display */}
+								{formatNumber(payloadData[activeFilter || ""])}
+								{chart_unit}
+							</p>
+						</div>
+					</>
+				)}
 			</div>
 		);
 	};
 
 	useEffect(() => {
-		if (sortingAfter[id]) {
-			setSortBy(sortingAfter[id][0]);
+		if (Array.isArray(sortsAfter) && sortsAfter.length > 0) {
+			setSortBy(sortsAfter[0]);
+		} else {
+			setSortBy(null);
 		}
-	}, []);
+	}, [sortsAfter, id]);
+
+	useEffect(() => {
+		if (chart_type.includes("filter_keys") && !!collectData.length) {
+			const getAllFilters = Object.keys(collectData[0]).filter(
+				(key) => key !== "id" && key !== "name",
+			);
+			if (getAllFilters.length) {
+				setAllFilters(getAllFilters);
+				setActiveFilter("insgesamt");
+			}
+		}
+	}, [id]);
 
 	return (
 		<>
 			<div className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label">
 				<ResponsiveContainer width="100%" height={window.innerHeight * 0.6}>
 					<RechartsBarChart layout="vertical" data={collectData}>
+						{/* YAxis */}
 						<YAxis
 							type="category"
 							dataKey="name"
-							width={150}
+							width={widthOfStickyContainer * 0.2}
 							tick={{
 								fontFamily: "Clan Pro",
 								fontSize: 12,
@@ -279,16 +406,21 @@ const BarChart: React.FC<BarChartProps> = ({
 									: label;
 							}}
 						/>
-						{bar_chart_type === "stacked" && (
+						{/* ToolTip */}
+						{(chart_type.includes("stacked") ||
+							chart_type.includes("full") ||
+							chart_type.includes("filter_keys")) && (
 							<Tooltip content={<CustomTooltip />} />
 						)}
+						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
-						{bar_chart_type !== "stacked" && (
+						{/* Bars */}
+						{(chart_type.includes("delta") || chart_type === "bar_chart") && (
 							<Bar
 								dataKey="value"
 								stackId="a"
 								shape={
-									bar_chart_type === "normal" ? <FilledBar /> : <BorderedBar />
+									chart_type === "bar_chart" ? <FilledBar /> : <BorderedBar />
 								}
 							>
 								<LabelList
@@ -298,7 +430,7 @@ const BarChart: React.FC<BarChartProps> = ({
 											return null;
 										}
 										const current = collectData[index];
-										if ("isSmall" in current && bar_chart_type === "delta") {
+										if ("isSmall" in current && chart_type.includes("delta")) {
 											return null;
 										}
 										return <RenderValueLabel {...props} />;
@@ -306,7 +438,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								/>
 							</Bar>
 						)}
-						{bar_chart_type === "delta" && (
+						{chart_type.includes("delta") && (
 							<Bar dataKey="delta" stackId="a" shape={<DeltaBar />}>
 								<LabelList
 									content={(props) => {
@@ -323,29 +455,34 @@ const BarChart: React.FC<BarChartProps> = ({
 								/>
 							</Bar>
 						)}
-						{bar_chart_type === "stacked" && (
+						{(chart_type.includes("stacked") ||
+							chart_type.includes("full")) && (
 							<>
-								<Bar
-									dataKey="umsatz_markt_neuheiten"
-									stackId="1"
-									fill={colors.blue}
-								/>
-								<Bar
-									dataKey="umsatz_nachahmer_innovationen"
-									stackId="1"
-									fill={colors.cyan_light}
-								/>
-								<Bar
-									dataKey="umsatz_produkt_neuheiten"
-									stackId="1"
-									fill={colors.green_light}
-								/>
+								{objectKeys.map((dataKey, index) => (
+									<Bar
+										key={dataKey}
+										dataKey={dataKey}
+										stackId="1"
+										fill={getColorBar(index)}
+									/>
+								))}
 							</>
 						)}
+						{chart_type.includes("filter_keys") && activeFilter && (
+							<Bar
+								key={activeFilter}
+								dataKey={activeFilter}
+								stackId="1"
+								fill={colors.blue}
+							/>
+						)}
+						{/* XAxis */}
 						<XAxis
 							type="number"
 							mirror
 							stroke="none"
+							hide={chart_type.includes("full")}
+							domain={chart_type.includes("full") ? [0, 100] : ["auto", "auto"]}
 							tick={{
 								...axisFontStylings,
 								fill: theme === "dark" ? colors.white : colors.blue,
@@ -353,26 +490,37 @@ const BarChart: React.FC<BarChartProps> = ({
 							}}
 							// Value Display
 							tickFormatter={(label: string) => {
-								return `${label} ${bar_chart_unit}`;
+								if (chart_unit === "€") {
+									return formatEuroNumber(Number(label));
+								}
+								return `${label} ${chart_unit}`;
 							}}
 						/>
 					</RechartsBarChart>
 				</ResponsiveContainer>
 			</div>
 			<div className="mt-12 flex gap-8 items-center justify-end">
-				{hasToggle && (
+				{hasRegionToggle && (
 					<DataToggle
 						data={region}
 						setData={(value: string) => setRegion(value as Region)}
 						allDatas={["ber", "de"]}
 					/>
 				)}
-				{sortingAfter[id] && (
+				{sortBy && (
 					<Dropdown
 						type="sort"
-						sortingAfter={sortingAfter[id]}
+						sortsAfter={sortsAfter}
 						sortBy={sortBy}
 						setSortBy={setSortBy}
+					/>
+				)}
+				{chart_type.includes("filter_keys") && allFilters && activeFilter && (
+					<Dropdown
+						type="filter"
+						allFilters={allFilters}
+						activeFilter={activeFilter}
+						setActiveFilter={setActiveFilter}
 					/>
 				)}
 			</div>
