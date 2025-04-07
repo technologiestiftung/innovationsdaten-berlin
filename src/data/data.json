@@ -19,7 +19,7 @@
 			"title": "Die umsatzstärksten Branchen",
 			"displayNumber": "1.3",
 			"chart_type": "tree_map",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "msatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"data": [
 				{ "branche": "nahrung", "value": 5590 },
 				{ "branche": "pharma", "value": 8639 },
