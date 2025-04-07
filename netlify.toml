@@ -8,7 +8,7 @@
   # a base has not been set. This sample publishes the directory
   # located at the absolute path "root/project/build-output"
 
-  publish = "build/"
+  publish = "dist/"
 
   # Default build command.
   command = "curl --fail $FONTS_URL --output fonts.zip && unzip -j fonts.zip -d src/fonts && rm fonts.zip && yarn install && yarn build"
