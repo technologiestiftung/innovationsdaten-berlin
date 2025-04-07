@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"
+  command = "mkdir -p public/fonts && curl --fail $FONTS_URL_1 --output public/fonts/ClanWebPro-News.woff && curl --fail $FONTS_URL_2 --output public/fonts/ClanWebPro-Bold.woff && npm install && npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
