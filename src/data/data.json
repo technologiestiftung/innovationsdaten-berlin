@@ -19,7 +19,7 @@
 			"title": "Die umsatzstärksten Branchen",
 			"displayNumber": "1.3",
 			"chart_type": "tree_map",
-			"text": "msatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
+			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"data": [
 				{ "branche": "nahrung", "value": 5590 },
 				{ "branche": "pharma", "value": 8639 },
