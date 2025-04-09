@@ -133,13 +133,15 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 
 		// Sort
-		const getSortBy =
-			sortBy ??
-			(result.some((findSome: any) => "insgesamt" in findSome)
-				? "insgesamt"
-				: Array.isArray(sortsAfter)
-					? sortsAfter[0]
-					: null);
+		let getSortBy: string | null = null;
+
+		if (sortBy) {
+			getSortBy = sortBy;
+		} else if (result.some((item: any) => "insgesamt" in item)) {
+			getSortBy = "insgesamt";
+		} else if (Array.isArray(sortsAfter)) {
+			getSortBy = sortsAfter[0];
+		}
 
 		result.sort((a: any, b: any) => {
 			const key = getSortBy || "value";
@@ -383,7 +385,6 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	useEffect(() => {
 		if (chart_type.includes("filter_keys")) {
-			console.log("activeFilter in filter_keys:>> ", activeFilter);
 			setSortBy(activeFilter);
 		}
 	}, [activeFilter]);
