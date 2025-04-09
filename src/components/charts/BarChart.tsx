@@ -63,10 +63,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
-	if (!data) {
-		return <h4>BarChart Data missing</h4>;
-	}
-
 	const collectData = useMemo(() => {
 		if (!data) {
 			return [];
@@ -138,7 +134,12 @@ const BarChart: React.FC<BarChartProps> = ({
 
 		// Sort
 		const getSortBy =
-			sortBy ?? (Array.isArray(sortsAfter) ? sortsAfter[0] : null);
+			sortBy ??
+			(result.some((findSome: any) => "insgesamt" in findSome)
+				? "insgesamt"
+				: Array.isArray(sortsAfter)
+					? sortsAfter[0]
+					: null);
 
 		result.sort((a: any, b: any) => {
 			const key = getSortBy || "value";
@@ -154,11 +155,14 @@ const BarChart: React.FC<BarChartProps> = ({
 		return result;
 	}, [data, sortBy, chart_type, id, theme]);
 
-	const objectKeys = Object.keys(collectData[0]).filter(
-		(dataKey) =>
-			!sortOutDataKeysFromBranch.includes(dataKey) &&
-			!dataKey.includes("display"),
-	);
+	let objectKeys: any[] = [];
+	if (data && collectData.length > 0) {
+		objectKeys = Object.keys(collectData[0]).filter(
+			(dataKey) =>
+				!sortOutDataKeysFromBranch.includes(dataKey) &&
+				!dataKey.includes("display"),
+		);
+	}
 
 	const RenderValueLabel = ({ x, y, width, height, value, index }: any) => {
 		const paddingLabel = 10;
@@ -263,7 +267,13 @@ const BarChart: React.FC<BarChartProps> = ({
 		if (index === 1) {
 			return colors.cyan_light;
 		}
-		return colors.green_light;
+		if (index === 2) {
+			return colors.green_light;
+		}
+		if (index === 3) {
+			return colors.green;
+		}
+		return colors.red;
 	};
 
 	const CustomTooltip = ({ active, payload }: any) => {
@@ -372,6 +382,19 @@ const BarChart: React.FC<BarChartProps> = ({
 	}, [sortsAfter, id]);
 
 	useEffect(() => {
+		if (chart_type.includes("filter_keys")) {
+			console.log("activeFilter in filter_keys:>> ", activeFilter);
+			setSortBy(activeFilter);
+		}
+	}, [activeFilter]);
+
+	useEffect(() => {
+		if (chart_type.includes("full")) {
+			setSortBy("process_innovation_share");
+		}
+	}, [region]);
+
+	useEffect(() => {
 		if (chart_type.includes("filter_keys") && !!collectData.length) {
 			const getAllFilters = Object.keys(collectData[0]).filter(
 				(key) => key !== "id" && key !== "name",
@@ -383,27 +406,32 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 	}, [id]);
 
+	if (!data) {
+		return <h4>BarChart Data missing</h4>;
+	}
+
 	return (
 		<>
 			<div className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label">
-				<ResponsiveContainer width="100%" height={window.innerHeight * 0.6}>
+				<ResponsiveContainer
+					width="100%"
+					height={
+						Object.keys(collectData).length <= 4
+							? window.innerHeight * 0.4
+							: window.innerHeight * 0.6
+					}
+				>
 					<RechartsBarChart layout="vertical" data={collectData}>
 						{/* YAxis */}
 						<YAxis
 							type="category"
 							dataKey="name"
-							width={widthOfStickyContainer * 0.2}
+							width={widthOfStickyContainer * 0.25}
 							tick={{
 								fontFamily: "Clan Pro",
 								fontSize: 12,
 								fill: theme === "dark" ? colors.white : colors.blue,
 								fontWeight: "initial",
-							}}
-							tickFormatter={(label: string) => {
-								const maxLength = 40;
-								return label.length > maxLength
-									? `${label.slice(0, maxLength)}…`
-									: label;
 							}}
 						/>
 						{/* ToolTip */}
@@ -458,14 +486,16 @@ const BarChart: React.FC<BarChartProps> = ({
 						{(chart_type.includes("stacked") ||
 							chart_type.includes("full")) && (
 							<>
-								{objectKeys.map((dataKey, index) => (
-									<Bar
-										key={dataKey}
-										dataKey={dataKey}
-										stackId="1"
-										fill={getColorBar(index)}
-									/>
-								))}
+								{objectKeys
+									.filter((objectKey) => objectKey !== "insgesamt")
+									.map((dataKey, index) => (
+										<Bar
+											key={dataKey}
+											dataKey={dataKey}
+											stackId="1"
+											fill={getColorBar(index)}
+										/>
+									))}
 							</>
 						)}
 						{chart_type.includes("filter_keys") && activeFilter && (
@@ -507,7 +537,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						allDatas={["ber", "de"]}
 					/>
 				)}
-				{sortBy && (
+				{sortBy && !activeFilter && !chart_type.includes("full") && (
 					<Dropdown
 						type="sort"
 						sortsAfter={sortsAfter}

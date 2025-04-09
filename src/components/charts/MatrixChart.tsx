@@ -126,7 +126,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 								setColor={theme === "dark" ? colors.dark : colors.white}
 							/>
 							<p
-								className="max-w-[150px] truncate my-4 bold"
+								className="my-4 bold"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
@@ -204,7 +204,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 						style={{ gridArea: `y_${sanitize(y)}` }}
 					>
 						<p
-							className="small bold"
+							className="small"
 							dangerouslySetInnerHTML={{
 								__html: wordings[y as keyof typeof wordings],
 							}}

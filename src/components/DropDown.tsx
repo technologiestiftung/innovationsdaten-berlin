@@ -52,6 +52,12 @@ const Dropdown: React.FC<DropdownProps> = ({
 		if (type === "filter") {
 			return "Branche wählen";
 		}
+		if (type === "sort" && sortBy) {
+			return (
+				wordings[sortBy as keyof typeof wordings] ||
+				capitalizeFirstLetter(sortBy)
+			);
+		}
 		return "Sortieren nach";
 	};
 

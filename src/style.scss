@@ -107,8 +107,8 @@ p {
 		color: $white;
 	}
 	&.small {
-		font-size: calc($font-size * 0.8) !important;
-		line-height: calc($font-size * 0.8 * 1.2) !important;
+		font-size: 12px !important;
+		line-height: 14.4px !important;
 	}
 }
 
@@ -386,10 +386,6 @@ footer {
 }
 .recharts-surface {
 	overflow: visible !important;
-}
-
-.matrix-grid {
-	row-gap: calc($font-size * 1.5);
 }
 
 .matrix-cell {

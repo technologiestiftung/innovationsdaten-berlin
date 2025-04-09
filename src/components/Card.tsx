@@ -100,7 +100,10 @@ const Card: React.FC<CardProps> = ({
 				marginBottom: getMarginBottom(),
 			}}
 		>
-			{displayNumber && <h4>{displayNumber}</h4>}
+			{typeof window !== "undefined" &&
+				(window.location.href.includes("localhost") ||
+					window.location.href.includes("staging")) &&
+				displayNumber && <h4>{displayNumber}</h4>}
 			<h2
 				className={text ? "mb-4" : ""}
 				dangerouslySetInnerHTML={{ __html: title }}

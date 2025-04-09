@@ -1,0 +1,258 @@
+{
+	"ber": [
+		{
+			"id": "Dienstleistungen",
+			"insgesamt": 21,
+			"from_country": 9,
+			"from_national": 13,
+			"from_eu": 7
+		},
+		{
+			"id": "Industrie",
+			"insgesamt": 25,
+			"from_country": 10,
+			"from_national": 17,
+			"from_eu": 8
+		},
+		{
+			"id": "Insgesamt",
+			"insgesamt": 22,
+			"from_country": 9,
+			"from_national": 14,
+			"from_eu": 7
+		},
+		{
+			"id": "architektur",
+			"insgesamt": 13,
+			"from_country": 3,
+			"from_national": 9,
+			"from_eu": 1
+		},
+		{
+			"id": "elektroindustrie",
+			"insgesamt": 44,
+			"from_country": 12,
+			"from_national": 44,
+			"from_eu": 7
+		},
+		{
+			"id": "energie",
+			"insgesamt": 22,
+			"from_country": 3,
+			"from_national": 22,
+			"from_eu": 3
+		},
+		{
+			"id": "fahrzeugbau",
+			"insgesamt": 42,
+			"from_country": 15,
+			"from_national": 28,
+			"from_eu": 20
+		},
+		{
+			"id": "finanz",
+			"insgesamt": 0,
+			"from_country": 0,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "forschung",
+			"insgesamt": 70,
+			"from_country": 30,
+			"from_national": 55,
+			"from_eu": 27
+		},
+		{
+			"id": "holz",
+			"insgesamt": 9,
+			"from_country": 8,
+			"from_national": 1,
+			"from_eu": 1
+		},
+		{
+			"id": "kreativ",
+			"insgesamt": 12,
+			"from_country": 13,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "metall",
+			"insgesamt": 13,
+			"from_country": 5,
+			"from_national": 0,
+			"from_eu": 7
+		},
+		{
+			"id": "nahrung",
+			"insgesamt": 0,
+			"from_country": 0,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "pharma",
+			"insgesamt": 26,
+			"from_country": 5,
+			"from_national": 21,
+			"from_eu": 3
+		},
+		{
+			"id": "software",
+			"insgesamt": 26,
+			"from_country": 6,
+			"from_national": 20,
+			"from_eu": 12
+		},
+		{
+			"id": "sonstige_konsumgueter",
+			"insgesamt": 29,
+			"from_country": 21,
+			"from_national": 9,
+			"from_eu": 11
+		},
+		{
+			"id": "telekommunikation",
+			"insgesamt": 19,
+			"from_country": 19,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "unternehmensberatung",
+			"insgesamt": 18,
+			"from_country": 9,
+			"from_national": 14,
+			"from_eu": 4
+		}
+	],
+	"de": [
+		{
+			"id": "Dienstleistungen",
+			"insgesamt": 21,
+			"from_country": 8,
+			"from_national": 17,
+			"from_eu": 3
+		},
+		{
+			"id": "Industrie",
+			"insgesamt": 25,
+			"from_country": 5,
+			"from_national": 22,
+			"from_eu": 5
+		},
+		{
+			"id": "Insgesamt",
+			"insgesamt": 23,
+			"from_country": 7,
+			"from_national": 19,
+			"from_eu": 4
+		},
+		{
+			"id": "architektur",
+			"insgesamt": 21,
+			"from_country": 3,
+			"from_national": 19,
+			"from_eu": 0
+		},
+		{
+			"id": "elektroindustrie",
+			"insgesamt": 52,
+			"from_country": 14,
+			"from_national": 41,
+			"from_eu": 14
+		},
+		{
+			"id": "energie",
+			"insgesamt": 11,
+			"from_country": 4,
+			"from_national": 10,
+			"from_eu": 4
+		},
+		{
+			"id": "fahrzeugbau",
+			"insgesamt": 40,
+			"from_country": 5,
+			"from_national": 36,
+			"from_eu": 6
+		},
+		{
+			"id": "finanz",
+			"insgesamt": 8,
+			"from_country": 0,
+			"from_national": 0,
+			"from_eu": 2
+		},
+		{
+			"id": "forschung",
+			"insgesamt": 43,
+			"from_country": 25,
+			"from_national": 43,
+			"from_eu": 14
+		},
+		{
+			"id": "holz",
+			"insgesamt": 1,
+			"from_country": 0,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "kreativ",
+			"insgesamt": 5,
+			"from_country": 3,
+			"from_national": 5,
+			"from_eu": 0
+		},
+		{
+			"id": "metall",
+			"insgesamt": 20,
+			"from_country": 1,
+			"from_national": 17,
+			"from_eu": 5
+		},
+		{
+			"id": "nahrung",
+			"insgesamt": 0,
+			"from_country": 0,
+			"from_national": 0,
+			"from_eu": 0
+		},
+		{
+			"id": "pharma",
+			"insgesamt": 37,
+			"from_country": 7,
+			"from_national": 34,
+			"from_eu": 10
+		},
+		{
+			"id": "software",
+			"insgesamt": 36,
+			"from_country": 9,
+			"from_national": 33,
+			"from_eu": 8
+		},
+		{
+			"id": "sonstige_konsumgueter",
+			"insgesamt": 15,
+			"from_country": 13,
+			"from_national": 15,
+			"from_eu": 1
+		},
+		{
+			"id": "telekommunikation",
+			"insgesamt": 16,
+			"from_country": 8,
+			"from_national": 11,
+			"from_eu": 3
+		},
+		{
+			"id": "unternehmensberatung",
+			"insgesamt": 17,
+			"from_country": 16,
+			"from_national": 6,
+			"from_eu": 0
+		}
+	]
+}

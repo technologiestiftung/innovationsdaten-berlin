@@ -1,0 +1,126 @@
+{
+	"ber": [
+		{
+			"id": "nahrung",
+			"Anteil": 41
+		},
+		{
+			"id": "pharma",
+			"Anteil": 20
+		},
+		{
+			"id": "holz",
+			"Anteil": 10
+		},
+		{
+			"id": "metall",
+			"Anteil": 16
+		},
+		{
+			"id": "elektroindustrie",
+			"Anteil": 27
+		},
+		{
+			"id": "fahrzeugbau",
+			"Anteil": 9
+		},
+		{
+			"id": "sonstige_konsumgueter",
+			"Anteil": 6
+		},
+		{
+			"id": "energie",
+			"Anteil": 6
+		},
+		{
+			"id": "telekommunikation",
+			"Anteil": 0
+		},
+		{
+			"id": "software",
+			"Anteil": 28
+		},
+		{
+			"id": "finanz",
+			"Anteil": 10
+		},
+		{
+			"id": "unternehmensberatung",
+			"Anteil": 4
+		},
+		{
+			"id": "architektur",
+			"Anteil": 22
+		},
+		{
+			"id": "forschung",
+			"Anteil": 9
+		},
+		{
+			"id": "kreativ",
+			"Anteil": 15
+		}
+	],
+	"de": [
+		{
+			"id": "nahrung",
+			"Anteil": 3
+		},
+		{
+			"id": "pharma",
+			"Anteil": 21
+		},
+		{
+			"id": "holz",
+			"Anteil": 12
+		},
+		{
+			"id": "metall",
+			"Anteil": 19
+		},
+		{
+			"id": "elektroindustrie",
+			"Anteil": 31
+		},
+		{
+			"id": "fahrzeugbau",
+			"Anteil": 21
+		},
+		{
+			"id": "sonstige_konsumgueter",
+			"Anteil": 11
+		},
+		{
+			"id": "energie",
+			"Anteil": 40
+		},
+		{
+			"id": "telekommunikation",
+			"Anteil": 18
+		},
+		{
+			"id": "software",
+			"Anteil": 28
+		},
+		{
+			"id": "finanz",
+			"Anteil": 6
+		},
+		{
+			"id": "unternehmensberatung",
+			"Anteil": 10
+		},
+		{
+			"id": "architektur",
+			"Anteil": 15
+		},
+		{
+			"id": "forschung",
+			"Anteil": 25
+		},
+		{
+			"id": "kreativ",
+			"Anteil": 4
+		}
+	]
+}

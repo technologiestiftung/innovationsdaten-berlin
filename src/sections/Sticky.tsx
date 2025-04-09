@@ -28,7 +28,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 			style={{ paddingTop: headerHeight }}
 		>
 			<div
-				className={`sticky flex items-center ${verticalAligment[0]} ${current?.chart_type === "matrix" ? "" : "overflow-hidden"}`}
+				className={`sticky flex items-center ${verticalAligment[0]} `}
 				style={{
 					height: window.innerHeight - headerHeight,
 					top: headerHeight,
