@@ -12,8 +12,7 @@
 			"id": "branchen-list",
 			"title": "Die Branchen",
 			"displayNumber": "1.2",
-			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben.
-"
+			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben."
 		},
 		{
 			"id": "umsatz",
@@ -44,8 +43,7 @@
 			"title": "Die größten Arbeitgeber",
 			"displayNumber": "1.4",
 			"chart_type": "tree_map",
-			"text": "Gemessen an der Zahl der Beschäftigten ist die Branche Software und Datenverarbeitung, gefolgt von Architektur- und Ingenieurbüros, Medien (einschließlich Telekommunikation) und Finanzdienstleistungen der größte Arbeitgeber unter den befragten Branchen.
-",
+			"text": "Gemessen an der Zahl der Beschäftigten ist die Branche Software und Datenverarbeitung, gefolgt von Architektur- und Ingenieurbüros, Medien (einschließlich Telekommunikation) und Finanzdienstleistungen der größte Arbeitgeber unter den befragten Branchen.",
 			"data": [
 				{ "branche": "nahrung", "value": 15843 },
 				{ "branche": "pharma", "value": 20207 },
@@ -71,7 +69,7 @@
 			"title": "Wer innoviert?",
 			"displayNumber": "2.1",
 			"chart_type": "big_fact",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"facts": [
 				{ "fact": "65%", "unit": "der Berliner Unternehmen sind Innovatoren." }
 			]
@@ -106,9 +104,7 @@
 			"title": "Welche Branchen wachsen?",
 			"displayNumber": "2.3",
 			"chart_type": "area_chart",
-			"text": "Die Top 4 der innovierenden Branchen sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.
-
-",
+			"text": "Die Top 4 der innovierenden Branchen sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"data": {
 				"ber": [
 					{
@@ -338,8 +334,7 @@
 			"displayNumber": "2.4",
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
-			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.
-",
+			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
@@ -528,161 +523,191 @@
 			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte 'Barroso-Ziel'. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
 			"sortsAfter": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
-				"ber": [
-					{
-						"id": "nahrung",
-						"innovations_intensitaet": 0.52,
-						"fue_intensitaet": 0.27
-					},
-					{
-						"id": "pharma",
-						"innovations_intensitaet": 18.38,
-						"fue_intensitaet": 10.6
-					},
-					{
-						"id": "holz",
-						"innovations_intensitaet": 4.31,
-						"fue_intensitaet": 2.49
-					},
-					{
-						"id": "metall",
-						"innovations_intensitaet": 2.77,
-						"fue_intensitaet": 1.99
-					},
-					{
-						"id": "elektroindustrie",
-						"innovations_intensitaet": 10.92,
-						"fue_intensitaet": 8.12
-					},
-					{
-						"id": "fahrzeugbau",
-						"innovations_intensitaet": 6.12,
-						"fue_intensitaet": 3.23
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 6.37,
-						"fue_intensitaet": 4.47
-					},
-					{
-						"id": "energie",
-						"innovations_intensitaet": 0.7,
-						"fue_intensitaet": 0.05
-					},
-					{
-						"id": "telekommunikation",
-						"innovations_intensitaet": 1.8,
-						"fue_intensitaet": 1.12
-					},
-					{
-						"id": "software",
-						"innovations_intensitaet": 6.48,
-						"fue_intensitaet": 4.85
-					},
-					{
-						"id": "finanz",
-						"innovations_intensitaet": 0.81,
-						"fue_intensitaet": 0.24
-					},
-					{
-						"id": "unternehmensberatung",
-						"innovations_intensitaet": 2.45,
-						"fue_intensitaet": 1.56
-					},
-					{
-						"id": "architektur",
-						"innovations_intensitaet": 2.3,
-						"fue_intensitaet": 0.91
-					},
-					{
-						"id": "forschung",
-						"innovations_intensitaet": 12.67,
-						"fue_intensitaet": 6.57
-					},
-					{
-						"id": "kreativ",
-						"innovations_intensitaet": 3.57,
-						"fue_intensitaet": 0.61
-					}
-				],
-				"de": [
-					{
-						"id": "nahrung",
-						"innovations_intensitaet": 0.94,
-						"fue_intensitaet": 0.29
-					},
-					{
-						"id": "pharma",
-						"innovations_intensitaet": 5.19,
-						"fue_intensitaet": 3.53
-					},
-					{
-						"id": "holz",
-						"innovations_intensitaet": 1.25,
-						"fue_intensitaet": 0.47
-					},
-					{
-						"id": "metall",
-						"innovations_intensitaet": 1.83,
-						"fue_intensitaet": 0.87
-					},
-					{
-						"id": "elektroindustrie",
-						"innovations_intensitaet": 9.62,
-						"fue_intensitaet": 7.28
-					},
-					{
-						"id": "fahrzeugbau",
-						"innovations_intensitaet": 7.3,
-						"fue_intensitaet": 4.79
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 3.78,
-						"fue_intensitaet": 2.11
-					},
-					{
-						"id": "energie",
-						"innovations_intensitaet": 0.35,
-						"fue_intensitaet": 0.05
-					},
-					{
-						"id": "telekommunikation",
-						"innovations_intensitaet": 4.37,
-						"fue_intensitaet": 1.24
-					},
-					{
-						"id": "software",
-						"innovations_intensitaet": 8.01,
-						"fue_intensitaet": 6.0
-					},
-					{
-						"id": "finanz",
-						"innovations_intensitaet": 0.76,
-						"fue_intensitaet": 0.34
-					},
-					{
-						"id": "unternehmensberatung",
-						"innovations_intensitaet": 1.64,
-						"fue_intensitaet": 0.88
-					},
-					{
-						"id": "architektur",
-						"innovations_intensitaet": 2.3,
-						"fue_intensitaet": 1.43
-					},
-					{
-						"id": "forschung",
-						"innovations_intensitaet": 35.51,
-						"fue_intensitaet": 30.67
-					},
-					{
-						"id": "kreativ",
-						"innovations_intensitaet": 1.56,
-						"fue_intensitaet": 0.84
-					}
-				]
-			}
+				  "ber": [
+				    {
+				      "id": "nahrung",
+				      "innovations_intensitaet": 0.52,
+				      "fue_intensitaet": 0.27,
+				      "differenz_intensitaet": 0.25
+				    },
+				    {
+				      "id": "pharma",
+				      "innovations_intensitaet": 18.38,
+				      "fue_intensitaet": 10.6,
+				      "differenz_intensitaet": 7.78
+				    },
+				    {
+				      "id": "holz",
+				      "innovations_intensitaet": 4.31,
+				      "fue_intensitaet": 2.49,
+				      "differenz_intensitaet": 1.82
+				    },
+				    {
+				      "id": "metall",
+				      "innovations_intensitaet": 2.77,
+				      "fue_intensitaet": 1.99,
+				      "differenz_intensitaet": 0.78
+				    },
+				    {
+				      "id": "elektroindustrie",
+				      "innovations_intensitaet": 10.92,
+				      "fue_intensitaet": 8.12,
+				      "differenz_intensitaet": 2.8
+				    },
+				    {
+				      "id": "fahrzeugbau",
+				      "innovations_intensitaet": 6.12,
+				      "fue_intensitaet": 3.23,
+				      "differenz_intensitaet": 2.89
+				    },
+				    {
+				      "id": "sonstige_konsumgueter",
+				      "innovations_intensitaet": 6.37,
+				      "fue_intensitaet": 4.47,
+				      "differenz_intensitaet": 1.9
+				    },
+				    {
+				      "id": "energie",
+				      "innovations_intensitaet": 0.7,
+				      "fue_intensitaet": 0.05,
+				      "differenz_intensitaet": 0.65
+				    },
+				    {
+				      "id": "telekommunikation",
+				      "innovations_intensitaet": 1.8,
+				      "fue_intensitaet": 1.12,
+				      "differenz_intensitaet": 0.68
+				    },
+				    {
+				      "id": "software",
+				      "innovations_intensitaet": 6.48,
+				      "fue_intensitaet": 4.85,
+				      "differenz_intensitaet": 1.63
+				    },
+				    {
+				      "id": "finanz",
+				      "innovations_intensitaet": 0.81,
+				      "fue_intensitaet": 0.24,
+				      "differenz_intensitaet": 0.57
+				    },
+				    {
+				      "id": "unternehmensberatung",
+				      "innovations_intensitaet": 2.45,
+				      "fue_intensitaet": 1.56,
+				      "differenz_intensitaet": 0.89
+				    },
+				    {
+				      "id": "architektur",
+				      "innovations_intensitaet": 2.3,
+				      "fue_intensitaet": 0.91,
+				      "differenz_intensitaet": 1.39
+				    },
+				    {
+				      "id": "forschung",
+				      "innovations_intensitaet": 12.67,
+				      "fue_intensitaet": 6.57,
+				      "differenz_intensitaet": 6.1
+				    },
+				    {
+				      "id": "kreativ",
+				      "innovations_intensitaet": 3.57,
+				      "fue_intensitaet": 0.61,
+				      "differenz_intensitaet": 2.96
+				    }
+				  ],
+				  "de": [
+				    {
+				      "id": "nahrung",
+				      "innovations_intensitaet": 0.94,
+				      "fue_intensitaet": 0.29,
+				      "differenz_intensitaet": 0.65
+				    },
+				    {
+				      "id": "pharma",
+				      "innovations_intensitaet": 5.19,
+				      "fue_intensitaet": 3.53,
+				      "differenz_intensitaet": 1.66
+				    },
+				    {
+				      "id": "holz",
+				      "innovations_intensitaet": 1.25,
+				      "fue_intensitaet": 0.47,
+				      "differenz_intensitaet": 0.78
+				    },
+				    {
+				      "id": "metall",
+				      "innovations_intensitaet": 1.83,
+				      "fue_intensitaet": 0.87,
+				      "differenz_intensitaet": 0.96
+				    },
+				    {
+				      "id": "elektroindustrie",
+				      "innovations_intensitaet": 9.62,
+				      "fue_intensitaet": 7.28,
+				      "differenz_intensitaet": 2.34
+				    },
+				    {
+				      "id": "fahrzeugbau",
+				      "innovations_intensitaet": 7.3,
+				      "fue_intensitaet": 4.79,
+				      "differenz_intensitaet": 2.51
+				    },
+				    {
+				      "id": "sonstige_konsumgueter",
+				      "innovations_intensitaet": 3.78,
+				      "fue_intensitaet": 2.11,
+				      "differenz_intensitaet": 1.67
+				    },
+				    {
+				      "id": "energie",
+				      "innovations_intensitaet": 0.35,
+				      "fue_intensitaet": 0.05,
+				      "differenz_intensitaet": 0.3
+				    },
+				    {
+				      "id": "telekommunikation",
+				      "innovations_intensitaet": 4.37,
+				      "fue_intensitaet": 1.24,
+				      "differenz_intensitaet": 3.13
+				    },
+				    {
+				      "id": "software",
+				      "innovations_intensitaet": 8.01,
+				      "fue_intensitaet": 6.0,
+				      "differenz_intensitaet": 2.01
+				    },
+				    {
+				      "id": "finanz",
+				      "innovations_intensitaet": 0.76,
+				      "fue_intensitaet": 0.34,
+				      "differenz_intensitaet": 0.42
+				    },
+				    {
+				      "id": "unternehmensberatung",
+				      "innovations_intensitaet": 1.64,
+				      "fue_intensitaet": 0.88,
+				      "differenz_intensitaet": 0.76
+				    },
+				    {
+				      "id": "architektur",
+				      "innovations_intensitaet": 2.3,
+				      "fue_intensitaet": 1.43,
+				      "differenz_intensitaet": 0.87
+				    },
+				    {
+				      "id": "forschung",
+				      "innovations_intensitaet": 35.51,
+				      "fue_intensitaet": 30.67,
+				      "differenz_intensitaet": 4.84
+				    },
+				    {
+				      "id": "kreativ",
+				      "innovations_intensitaet": 1.56,
+				      "fue_intensitaet": 0.84,
+				      "differenz_intensitaet": 0.72
+				    }
+				  ]
+				}
 		}
 	],
 	"how_innovates": [
@@ -1128,7 +1153,7 @@
 			"displayNumber": "4.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen "bedeutende" Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den Daten leider nicht ermittelt werden.",
+			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen 'bedeutende' Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den Daten leider nicht ermittelt werden.",
 			"data": {
 				"ber": [
 					{
@@ -1447,7 +1472,7 @@
 			"title": "Was macht Berlin aus als Innovationsstandort?",
 			"displayNumber": "5.1",
 			"chart_type": "big_fact",
-			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculismalesuada nulla sit amet luctus. Suspendisse eget tellus orci. Aliquamsit amet viverra turpis. Maecenas facilisis eros at convallis vulputate.Ut ut posuere dolor. Fusce nec feugiat ipsum.",
+			"text": "Berlin ist ein überregional sehr bedeutender Strandort der öffentlichen Forschung (in Universitäten, Hochschulen, außeruniversitären staatlichen Forschungsinstituten und einer ganzen Reihe forschender Bundesoberbehörden). Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen bei oft noch geringer Unternehmensgröße einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
 			"facts": [
 				{
 					"fact": "19%",
@@ -1464,7 +1489,7 @@
 			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
 			"displayNumber": "5.2",
 			"chart_type": "area_chart",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
 			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
 				"innovations_intensitaet": [
@@ -1538,7 +1563,7 @@
 			"title": "Mit welchen Regionen wird kollaboriert?",
 			"displayNumber": "5.3",
 			"chart_type": "matrix",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Kollaboration ist ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die Innovationskooperationen in der jeweiligen Region pflegen.",
 			"data": {
 				"ber": [
 					{ "x": "nahrung", "y": "own_region", "value": 1 },
@@ -1817,7 +1842,7 @@
 			"title": "Mit welchen Partnern wird kollaboriert?",
 			"displayNumber": "5.4",
 			"chart_type": "matrix",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die mit den jeweiligen Kategorien von Partnern kooperieren.",
 			"data": {
 				"ber": [
 					{
@@ -3482,7 +3507,7 @@
 			"title": "Was macht Berlin aus als Innovationsstandort?",
 			"displayNumber": "6.1",
 			"chart_type": "big_fact",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "In Berlin - wie überall in der Welt - wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen können als quantitative Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal macht. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
 			"facts": [
 				{
 					"fact": "22%",
@@ -3495,7 +3520,7 @@
 			"title": "Welche Branchen werden am meisten gefördert?",
 			"displayNumber": "6.2",
 			"chart_type": "bar_chart_stacked",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
 			"data": {
 				"ber": [
 					{
@@ -4025,13 +4050,253 @@
 			"id": "protective_measures_intellectual_property",
 			"title": "Schutzmaßnahmen für geistigen Eigentum",
 			"displayNumber": "🚨 6.5",
-			"chart_type": "bar_chart",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"chart_type": "bar_chart_stacked",
+			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"data": {
 				"ber": [
-
-				],
+					  {
+					    "id": "nahrung",
+					    "Anmeldung von Patenten": 14,
+					    "Anmeldung von Gebrauchs-mustern": 5,
+					    "Eintragung von Geschmacks-mustern": 5,
+					    "Eintragung von Marken": 37,
+					    "Geltend-machung von Urheber-rechten": 1
+					  },
+					  {
+					    "id": "pharma",
+					    "Anmeldung von Patenten": 16,
+					    "Anmeldung von Gebrauchs-mustern": 10,
+					    "Eintragung von Geschmacks-mustern": 10,
+					    "Eintragung von Marken": 27,
+					    "Geltend-machung von Urheber-rechten": 4
+					  },
+					  {
+					    "id": "holz",
+					    "Anmeldung von Patenten": 0,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 4,
+					    "Geltend-machung von Urheber-rechten": 0
+					  },
+					  {
+					    "id": "metall",
+					    "Anmeldung von Patenten": 0,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 0,
+					    "Geltend-machung von Urheber-rechten": 0
+					  },
+					  {
+					    "id": "elektroindustrie",
+					    "Anmeldung von Patenten": 6,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 8,
+					    "Geltend-machung von Urheber-rechten": 6
+					  },
+					  {
+					    "id": "fahrzeugbau",
+					    "Anmeldung von Patenten": 23,
+					    "Anmeldung von Gebrauchs-mustern": 14,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 18,
+					    "Geltend-machung von Urheber-rechten": 10
+					  },
+					  {
+					    "id": "sonstige_konsumgueter",
+					    "Anmeldung von Patenten": 10,
+					    "Anmeldung von Gebrauchs-mustern": 20,
+					    "Eintragung von Geschmacks-mustern": 5,
+					    "Eintragung von Marken": 21,
+					    "Geltend-machung von Urheber-rechten": 10
+					  },
+					  {
+					    "id": "energie",
+					    "Anmeldung von Patenten": 3,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 0,
+					    "Geltend-machung von Urheber-rechten": 0
+					  },
+					  {
+					    "id": "telekommunikation",
+					    "Anmeldung von Patenten": 3,
+					    "Anmeldung von Gebrauchs-mustern": 1,
+					    "Eintragung von Geschmacks-mustern": 1,
+					    "Eintragung von Marken": 7,
+					    "Geltend-machung von Urheber-rechten": 31
+					  },
+					  {
+					    "id": "software",
+					    "Anmeldung von Patenten": 6,
+					    "Anmeldung von Gebrauchs-mustern": 3,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 24,
+					    "Geltend-machung von Urheber-rechten": 12
+					  },
+					  {
+					    "id": "finanz",
+					    "Anmeldung von Patenten": 1,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 20,
+					    "Geltend-machung von Urheber-rechten": 1
+					  },
+					  {
+					    "id": "unternehmensberatung",
+					    "Anmeldung von Patenten": 5,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 6,
+					    "Eintragung von Marken": 32,
+					    "Geltend-machung von Urheber-rechten": 5
+					  },
+					  {
+					    "id": "architektur",
+					    "Anmeldung von Patenten": 4,
+					    "Anmeldung von Gebrauchs-mustern": 7,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 8,
+					    "Geltend-machung von Urheber-rechten": 6
+					  },
+					  {
+					    "id": "forschung",
+					    "Anmeldung von Patenten": 36,
+					    "Anmeldung von Gebrauchs-mustern": 17,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 22,
+					    "Geltend-machung von Urheber-rechten": 9
+					  },
+					  {
+					    "id": "kreativ",
+					    "Anmeldung von Patenten": 0,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 1,
+					    "Eintragung von Marken": 20,
+					    "Geltend-machung von Urheber-rechten": 30
+					  }
+					],
 				"de": [
+					  {
+					    "id": "nahrung",
+					    "Anmeldung von Patenten": 3,
+					    "Anmeldung von Gebrauchs-mustern": 3,
+					    "Eintragung von Geschmacks-mustern": 2,
+					    "Eintragung von Marken": 9,
+					    "Geltend-machung von Urheber-rechten": 2
+					  },
+					  {
+					    "id": "pharma",
+					    "Anmeldung von Patenten": 18,
+					    "Anmeldung von Gebrauchs-mustern": 14,
+					    "Eintragung von Geschmacks-mustern": 5,
+					    "Eintragung von Marken": 23,
+					    "Geltend-machung von Urheber-rechten": 3
+					  },
+					  {
+					    "id": "holz",
+					    "Anmeldung von Patenten": 5,
+					    "Anmeldung von Gebrauchs-mustern": 6,
+					    "Eintragung von Geschmacks-mustern": 1,
+					    "Eintragung von Marken": 11,
+					    "Geltend-machung von Urheber-rechten": 4
+					  },
+					  {
+					    "id": "metall",
+					    "Anmeldung von Patenten": 12,
+					    "Anmeldung von Gebrauchs-mustern": 10,
+					    "Eintragung von Geschmacks-mustern": 6,
+					    "Eintragung von Marken": 13,
+					    "Geltend-machung von Urheber-rechten": 3
+					  },
+					  {
+					    "id": "elektroindustrie",
+					    "Anmeldung von Patenten": 28,
+					    "Anmeldung von Gebrauchs-mustern": 12,
+					    "Eintragung von Geschmacks-mustern": 8,
+					    "Eintragung von Marken": 19,
+					    "Geltend-machung von Urheber-rechten": 5
+					  },
+					  {
+					    "id": "fahrzeugbau",
+					    "Anmeldung von Patenten": 35,
+					    "Anmeldung von Gebrauchs-mustern": 16,
+					    "Eintragung von Geschmacks-mustern": 4,
+					    "Eintragung von Marken": 19,
+					    "Geltend-machung von Urheber-rechten": 3
+					  },
+					  {
+					    "id": "sonstige_konsumgueter",
+					    "Anmeldung von Patenten": 11,
+					    "Anmeldung von Gebrauchs-mustern": 18,
+					    "Eintragung von Geschmacks-mustern": 10,
+					    "Eintragung von Marken": 25,
+					    "Geltend-machung von Urheber-rechten": 9
+					  },
+					  {
+					    "id": "energie",
+					    "Anmeldung von Patenten": 2,
+					    "Anmeldung von Gebrauchs-mustern": 1,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 7,
+					    "Geltend-machung von Urheber-rechten": 1
+					  },
+					  {
+					    "id": "telekommunikation",
+					    "Anmeldung von Patenten": 6,
+					    "Anmeldung von Gebrauchs-mustern": 6,
+					    "Eintragung von Geschmacks-mustern": 3,
+					    "Eintragung von Marken": 23,
+					    "Geltend-machung von Urheber-rechten": 31
+					  },
+					  {
+					    "id": "software",
+					    "Anmeldung von Patenten": 6,
+					    "Anmeldung von Gebrauchs-mustern": 2,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 16,
+					    "Geltend-machung von Urheber-rechten": 8
+					  },
+					  {
+					    "id": "finanz",
+					    "Anmeldung von Patenten": 2,
+					    "Anmeldung von Gebrauchs-mustern": 0,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 13,
+					    "Geltend-machung von Urheber-rechten": 3
+					  },
+					  {
+					    "id": "unternehmensberatung",
+					    "Anmeldung von Patenten": 1,
+					    "Anmeldung von Gebrauchs-mustern": 5,
+					    "Eintragung von Geschmacks-mustern": 1,
+					    "Eintragung von Marken": 33,
+					    "Geltend-machung von Urheber-rechten": 16
+					  },
+					  {
+					    "id": "architektur",
+					    "Anmeldung von Patenten": 4,
+					    "Anmeldung von Gebrauchs-mustern": 1,
+					    "Eintragung von Geschmacks-mustern": 0,
+					    "Eintragung von Marken": 4,
+					    "Geltend-machung von Urheber-rechten": 2
+					  },
+					  {
+					    "id": "forschung",
+					    "Anmeldung von Patenten": 38,
+					    "Anmeldung von Gebrauchs-mustern": 5,
+					    "Eintragung von Geschmacks-mustern": 3,
+					    "Eintragung von Marken": 22,
+					    "Geltend-machung von Urheber-rechten": 9
+					  },
+					  {
+					    "id": "kreativ",
+					    "Anmeldung von Patenten": 1,
+					    "Anmeldung von Gebrauchs-mustern": 2,
+					    "Eintragung von Geschmacks-mustern": 1,
+					    "Eintragung von Marken": 11,
+					    "Geltend-machung von Urheber-rechten": 6
+					  }
+
 
 				]
 			}
@@ -4043,7 +4308,7 @@
 			"title": "Daten und KI",
 			"displayNumber": "7.1",
 			"chart_type": "big_fact",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "In hier nicht dargestellten früheren Jahrgängen der Innovationserhebung finden Interessierte Daten zum tatsächlichen Stand die Digitalisierung in Unternehmen und den damit verfolgten Zielen, zu Digitalisierungshemmnissen und zu digitalen und datengetriebenen Geschäftsmodellen, die wir hier aus Aktualitätsgründen nicht zeigen. Die aktuelle Zusaemmenstellung bezieht sich auf die Datennutzung durch Unternehmen und auf die Nutzung von KI.",
 			"facts": [
 				{
 					"fact": "40%",
@@ -4060,7 +4325,7 @@
 			"title": "Anwendungen von Daten",
 			"displayNumber": "🚨 7.2",
 			"chart_type": "bar_chart_filter_keys",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"data": {
 				"ber": [
 					{
@@ -4169,7 +4434,7 @@
 			"title": "Strategien der Datennutzung",
 			"displayNumber": "🚨 7.3",
 			"chart_type": "bar_chart_filter_keys",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"data": {
 				"ber": [
 					{
@@ -4266,7 +4531,7 @@
 			"title": "Die häufigsten Datakompetenzen",
 			"displayNumber": "🚨 7.4",
 			"chart_type": "bar_chart_filter_keys",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungsesektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie  eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spiel als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"data": {
 				"ber": [
 					{
@@ -4351,7 +4616,7 @@
 			"title": "Einsatz von KI",
 			"displayNumber": "🚨 7.5",
 			"chart_type": "bar_chart_filter_keys",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": [
 					{
@@ -4484,14 +4749,762 @@
 			"title": "Einsatz von KI Verfahren",
 			"displayNumber": "🚨 7.6",
 			"chart_type": "matrix",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"data": {
 				"ber": [
-
-				],
-				"de": [
-
-				]
+					  {
+					    "x": "nahrung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Daten-analyse",
+					    "value": 15
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 7
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Daten-analyse",
+					    "value": 8
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 18
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 0
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 0
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Daten-analyse",
+					    "value": 18
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 0
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Daten-analyse",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 3
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 10
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Daten-analyse",
+					    "value": 3
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 7
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 15
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Daten-analyse",
+					    "value": 2
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 3
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 9
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 2
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Daten-analyse",
+					    "value": 3
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Daten-analyse",
+					    "value": 4
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 7
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 0
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Daten-analyse",
+					    "value": 7
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "software",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 25
+					  },
+					  {
+					    "x": "software",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 11
+					  },
+					  {
+					    "x": "software",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 9
+					  },
+					  {
+					    "x": "software",
+					    "y": "Daten-analyse",
+					    "value": 22
+					  },
+					  {
+					    "x": "software",
+					    "y": "Andere Bereiche",
+					    "value": 4
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 13
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 5
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 5
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Daten-analyse",
+					    "value": 16
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 11
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 11
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 0
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Daten-analyse",
+					    "value": 11
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 7
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Daten-analyse",
+					    "value": 6
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 28
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 13
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 8
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Daten-analyse",
+					    "value": 14
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Andere Bereiche",
+					    "value": 14
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 22
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 10
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 10
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Daten-analyse",
+					    "value": 21
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  }
+					],
+				"de": 	[
+					  {
+					    "x": "nahrung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 0
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Daten-analyse",
+					    "value": 2
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Daten-analyse",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 2
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Daten-analyse",
+					    "value": 3
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 4
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 5
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Daten-analyse",
+					    "value": 2
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Andere Bereiche",
+					    "value": 2
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 7
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Daten-analyse",
+					    "value": 7
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 5
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 7
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 2
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Daten-analyse",
+					    "value": 4
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 2
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 3
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Daten-analyse",
+					    "value": 1
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 1
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 5
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Daten-analyse",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 5
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 2
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Daten-analyse",
+					    "value": 5
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "software",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 18
+					  },
+					  {
+					    "x": "software",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 16
+					  },
+					  {
+					    "x": "software",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "software",
+					    "y": "Daten-analyse",
+					    "value": 16
+					  },
+					  {
+					    "x": "software",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 10
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 17
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 9
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Daten-analyse",
+					    "value": 9
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 9
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 5
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Daten-analyse",
+					    "value": 7
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Andere Bereiche",
+					    "value": 1
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 7
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 6
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 4
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Daten-analyse",
+					    "value": 4
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 22
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 15
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 0
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Daten-analyse",
+					    "value": 9
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Andere Bereiche",
+					    "value": 3
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Produkte, Dienst-leistun-gen",
+					    "value": 4
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Automa-tisierung von Prozes-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Kunden-kommuni-kation",
+					    "value": 1
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Daten-analyse",
+					    "value": 5
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Andere Bereiche",
+					    "value": 0
+					  }
+					]
 			}
 		},
 		{
@@ -4499,14 +5512,612 @@
 			"title": "Anwendungen von KI",
 			"displayNumber": "🚨 7.7",
 			"chart_type": "matrix",
-			"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"text": "Während der Einsatz in den unterschiedlichen Unternehmensbereichen in Berlin in 2023 nur noch moderat über dem deutschen Durchschnitt liegt, ist der Anteil von Unternehmen, bei denen KI das Produkt oder die Dienstleistung ist, erheblich höher.",
 			"data": {
 				"ber": [
-
-				],
+					  {
+					    "x": "nahrung",
+					    "y": "Sprach-verste-hen",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Bilder-kennung",
+					    "value": 4
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 11
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Sprach-verste-hen",
+					    "value": 1
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Bilder-kennung",
+					    "value": 1
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 8
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Sprach-verste-hen",
+					    "value": 0
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Bilder-kennung",
+					    "value": 18
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 0
+					  },
+					  {
+					    "x": "holz",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 0
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Sprach-verste-hen",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Bilder-kennung",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 1
+					  },
+					  {
+					    "x": "metall",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 0
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Sprach-verste-hen",
+					    "value": 5
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Bilder-kennung",
+					    "value": 5
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 2
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 7
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Sprach-verste-hen",
+					    "value": 16
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Bilder-kennung",
+					    "value": 13
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 6
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 6
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Sprach-verste-hen",
+					    "value": 3
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Bilder-kennung",
+					    "value": 9
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 9
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Sprach-verste-hen",
+					    "value": 2
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Bilder-kennung",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 2
+					  },
+					  {
+					    "x": "energie",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 3
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Sprach-verste-hen",
+					    "value": 12
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Bilder-kennung",
+					    "value": 6
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 5
+					  },
+					  {
+					    "x": "software",
+					    "y": "Sprach-verste-hen",
+					    "value": 12
+					  },
+					  {
+					    "x": "software",
+					    "y": "Bilder-kennung",
+					    "value": 17
+					  },
+					  {
+					    "x": "software",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 28
+					  },
+					  {
+					    "x": "software",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 18
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Sprach-verste-hen",
+					    "value": 17
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Bilder-kennung",
+					    "value": 9
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 9
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Sprach-verste-hen",
+					    "value": 8
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Bilder-kennung",
+					    "value": 7
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 7
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Sprach-verste-hen",
+					    "value": 8
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Bilder-kennung",
+					    "value": 5
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 4
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Sprach-verste-hen",
+					    "value": 9
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Bilder-kennung",
+					    "value": 22
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 29
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 22
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Sprach-verste-hen",
+					    "value": 17
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Bilder-kennung",
+					    "value": 4
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 14
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 14
+					  }
+					],
 				"de": [
-
-				]
+					  {
+					    "x": "nahrung",
+					    "y": "Sprach-verste-hen",
+					    "value": 0
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Bilder-kennung",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 1
+					  },
+					  {
+					    "x": "nahrung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 2
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Sprach-verste-hen",
+					    "value": 4
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Bilder-kennung",
+					    "value": 4
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "pharma",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 4
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Sprach-verste-hen",
+					    "value": 5
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Bilder-kennung",
+					    "value": 4
+					  },
+					  {
+					    "x": "holz",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "holz",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 2
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Sprach-verste-hen",
+					    "value": 4
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Bilder-kennung",
+					    "value": 3
+					  },
+					  {
+					    "x": "metall",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 3
+					  },
+					  {
+					    "x": "metall",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 4
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Sprach-verste-hen",
+					    "value": 7
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Bilder-kennung",
+					    "value": 10
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 8
+					  },
+					  {
+					    "x": "elektroindustrie",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 8
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Sprach-verste-hen",
+					    "value": 4
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Bilder-kennung",
+					    "value": 7
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 5
+					  },
+					  {
+					    "x": "fahrzeugbau",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 4
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Sprach-verste-hen",
+					    "value": 4
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Bilder-kennung",
+					    "value": 2
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 2
+					  },
+					  {
+					    "x": "sonstige_konsumgueter",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 2
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Sprach-verste-hen",
+					    "value": 1
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Bilder-kennung",
+					    "value": 3
+					  },
+					  {
+					    "x": "energie",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 2
+					  },
+					  {
+					    "x": "energie",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 3
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Sprach-verste-hen",
+					    "value": 4
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Bilder-kennung",
+					    "value": 3
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "telekommunikation",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 5
+					  },
+					  {
+					    "x": "software",
+					    "y": "Sprach-verste-hen",
+					    "value": 8
+					  },
+					  {
+					    "x": "software",
+					    "y": "Bilder-kennung",
+					    "value": 13
+					  },
+					  {
+					    "x": "software",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 11
+					  },
+					  {
+					    "x": "software",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 14
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Sprach-verste-hen",
+					    "value": 14
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Bilder-kennung",
+					    "value": 13
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 12
+					  },
+					  {
+					    "x": "finanz",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 12
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Sprach-verste-hen",
+					    "value": 9
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Bilder-kennung",
+					    "value": 6
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 9
+					  },
+					  {
+					    "x": "unternehmensberatung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 8
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Sprach-verste-hen",
+					    "value": 9
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Bilder-kennung",
+					    "value": 6
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "architektur",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 7
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Sprach-verste-hen",
+					    "value": 2
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Bilder-kennung",
+					    "value": 16
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 25
+					  },
+					  {
+					    "x": "forschung",
+					    "y": "wissens-baiserte  Systeme",
+					    "value": 18
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Sprach-verste-hen",
+					    "value": 6
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Bilder-kennung",
+					    "value": 3
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "Maschi-nelles Lernen, maschi-nelles Bewei-sen",
+					    "value": 4
+					  },
+					  {
+					    "x": "kreativ",
+					    "y": "wissens-baiserte Systeme",
+					    "value": 5
+					  }
+					]
 			}
 		}
 	]
