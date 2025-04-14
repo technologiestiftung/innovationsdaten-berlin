@@ -898,7 +898,7 @@
 			"displayNumber": "3.3",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
-			"text": "Der Anteil der Produktneuheiten am Umsatz ist zischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
+			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["umsatz_produkt_neuheiten", "umsatz_markt_neuheiten"],
 			"data": {
 				"ber": [
