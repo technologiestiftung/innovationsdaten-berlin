@@ -12,7 +12,7 @@
 			"id": "branchen-list",
 			"title": "Die Branchen",
 			"displayNumber": "1.2",
-			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben."
+			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben. Aussagen zur Berliner Wirtschaft oder zur deutschen Wirtschaft in Folgenden beziehen sich selbstverständlich nur auf die Branchen, in denen die Befragung auch durchgeführt wurde, auch wenn dies nicht immer explizit genannt ist."
 		},
 		{
 			"id": "umsatz",
@@ -472,7 +472,7 @@
 			"displayNumber": "2.5",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
-			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der 'Innovatorenmix' in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie",
+			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der 'Innovatorenmix' in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
@@ -520,7 +520,7 @@
 			"displayNumber": "2.6",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
-			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte - Maschinen- und Fahrzeugbau Unternehmen bleiben ganz vorne, mit mehr als zweimal die Ausgaben für Forschung und Entwicklung als jede andere Branche.",
+			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Maschinen- und Fahrzeugbau Unternehmen bleiben ganz vorne, mit mehr als zweimal die Ausgaben für Forschung und Entwicklung als jede andere Branche.",
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
@@ -3848,7 +3848,7 @@
 			"title": "Wer beantragt steuerlichen FuE-Förderung?",
 			"displayNumber": "🚨 6.4",
 			"chart_type": "bar_chart",
-			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keinem so viel wie in der Branche Nährung, Getränke und Tabak in Berlin. ",
+			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keinem so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": [
 					{
