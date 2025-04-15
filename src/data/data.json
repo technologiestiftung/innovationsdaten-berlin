@@ -1162,64 +1162,64 @@
 					{
 						"id": "lower_energy_consumption_per_unit",
 						"industrie": 4,
+						"dienstleistungen": 4,
+						"insgesamt": 4
+					},
+					{
+						"id": "lower_material_water_consumption_per_unit",
+						"industrie": 3,
 						"dienstleistungen": 2,
 						"insgesamt": 2
 					},
 					{
-						"id": "lower_material_water_consumption_per_unit",
+						"id": "lower_co2_emissions_per_unit",
 						"industrie": 3,
 						"dienstleistungen": 3,
 						"insgesamt": 3
 					},
 					{
-						"id": "lower_co2_emissions_per_unit",
-						"industrie": 5,
-						"dienstleistungen": 2,
-						"insgesamt": 3
-					},
-					{
 						"id": "lower_other_air_emissions",
-						"industrie": 4,
-						"dienstleistungen": 1,
+						"industrie": 2,
+						"dienstleistungen": 2,
 						"insgesamt": 2
 					},
 					{
 						"id": "lower_water_or_soil_pollution",
 						"industrie": 3,
-						"dienstleistungen": 1,
-						"insgesamt": 2
+						"dienstleistungen": 2,
+						"insgesamt": 3
 					},
 					{
 						"id": "lower_noise_emissions",
-						"industrie": 3,
+						"industrie": 2,
+						"dienstleistungen": 2,
+						"insgesamt": 2
+					},
+					{
+						"id": "replace_fossil_with_renewable_energy",
+						"industrie": 2,
 						"dienstleistungen": 1,
 						"insgesamt": 1
 					},
 					{
-						"id": "replace_fossil_with_renewable_energy",
-						"industrie": 7,
-						"dienstleistungen": 3,
-						"insgesamt": 4
-					},
-					{
 						"id": "replace_hazardous_materials",
 						"industrie": 3,
-						"dienstleistungen": 1,
-						"insgesamt": 2
+						"dienstleistungen": 0,
+						"insgesamt": 1
 					},
 					{
 						"id": "recycling_for_internal_or_sales_use",
-						"industrie": 7,
-						"dienstleistungen": 2,
+						"industrie": 4,
+						"dienstleistungen": 3,
 						"insgesamt": 3
 					}
 				],
 				"de": [
 					{
 						"id": "lower_energy_consumption_per_unit",
-						"industrie": 12,
-						"dienstleistungen": 4,
-						"insgesamt": 9
+						"industrie": 9,
+						"dienstleistungen": 5,
+						"insgesamt": 7
 					},
 					{
 						"id": "lower_material_water_consumption_per_unit",
@@ -1229,45 +1229,45 @@
 					},
 					{
 						"id": "lower_co2_emissions_per_unit",
-						"industrie": 9,
-						"dienstleistungen": 4,
-						"insgesamt": 7
-					},
-					{
-						"id": "lower_other_air_emissions",
 						"industrie": 6,
-						"dienstleistungen": 3,
+						"dienstleistungen": 4,
 						"insgesamt": 5
 					},
 					{
+						"id": "lower_other_air_emissions",
+						"industrie": 3,
+						"dienstleistungen": 2,
+						"insgesamt": 2
+					},
+					{
 						"id": "lower_water_or_soil_pollution",
-						"industrie": 5,
-						"dienstleistungen": 1,
-						"insgesamt": 4
+						"industrie": 3,
+						"dienstleistungen": 2,
+						"insgesamt": 3
 					},
 					{
 						"id": "lower_noise_emissions",
-						"industrie": 6,
-						"dienstleistungen": 2,
-						"insgesamt": 4
+						"industrie": 4,
+						"dienstleistungen": 1,
+						"insgesamt": 3
 					},
 					{
 						"id": "replace_fossil_with_renewable_energy",
 						"industrie": 8,
-						"dienstleistungen": 4,
-						"insgesamt": 6
+						"dienstleistungen": 5,
+						"insgesamt": 7
 					},
 					{
 						"id": "replace_hazardous_materials",
-						"industrie": 5,
-						"dienstleistungen": 2,
-						"insgesamt": 4
+						"industrie": 3,
+						"dienstleistungen": 1,
+						"insgesamt": 3
 					},
 					{
 						"id": "recycling_for_internal_or_sales_use",
-						"industrie": 10,
-						"dienstleistungen": 4,
-						"insgesamt": 7
+						"industrie": 8,
+						"dienstleistungen": 3,
+						"insgesamt": 6
 					}
 				]
 			}
