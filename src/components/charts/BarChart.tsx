@@ -263,19 +263,16 @@ const BarChart: React.FC<BarChartProps> = ({
 	};
 
 	const getColorBar = (index: number) => {
-		if (!index) {
+		if (!index || index === 3 || index === 6) {
 			return colors.blue;
 		}
-		if (index === 1) {
+		if (index === 1 || index === 4 || index === 7) {
 			return colors.cyan_light;
 		}
-		if (index === 2) {
+		if (index === 2 || index === 5 || index === 8) {
 			return colors.green_light;
 		}
-		if (index === 3) {
-			return colors.green;
-		}
-		return colors.red;
+		return colors.blue;
 	};
 
 	const CustomTooltip = ({ active, payload }: any) => {

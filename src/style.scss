@@ -99,7 +99,7 @@ p {
 	font-size: $font-size;
 	font-family: "Clan Pro", sans-serif;
 	font-weight: normal;
-	line-height: calc($font-size * 1.2) !important;
+	line-height: calc($font-size * 1.4) !important;
 	&.bold {
 		font-weight: bold;
 	}
@@ -393,6 +393,7 @@ footer {
 }
 .label-x {
 	min-height: 30px;
+	padding-bottom: 8px;
 }
 .value-cell {
 	text-align: center;

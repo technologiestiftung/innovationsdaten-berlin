@@ -2,65 +2,83 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {template-vite-react}
+# Innovationsdaten Berlin
 
-## TODO (after you generated the repo)
+Welcome to the **Innovationsdaten** repository! This project is built using React.js, Vite and Recharts.js. It is designed to visualize innovation data in Berlin and Germany.
 
-- [ ] Review the content of the README.md and adjust to your liking
-- [ ] Read the README.md till the end and adjust the content licensing,
-      logos, etc (I know you stopped at tbd...)
-- [ ] Adjust the file [.github/CODEOWNERS](./.github/CODEOWNERS)
-- [ ] Adjust the files under [.github/ISSUE_TEMPLATE](./.github/ISSUE_TEMPLATE)
-- [ ] If you need unit, 2e2, a11y tests, or releases, you can enable them in this file: [pipeline.yml](.github/workflows/pipeline.yml)
-- [ ] If you use staging and main branches use this template for [.github/renovate.json](./.github/renovate.json)
+Below are setup instructions for running the project locally and steps for deploying it to Netlify.
 
-```json
-{
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["github>technologiestiftung/renovate-config"],
-	"baseBranches": ["staging"]
-}
-```
+---
 
-- [ ] Do you want to honor all kinds of contributions? Use [all-contributors](https://allcontributors.org/)
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- **Node.js** (v22 or higher)
+- **npm** (usually included with Node.js)
+
+---
+
+### Installation
+
+1. **Clone the Repository from the Staging Branch**
+
+   `git clone --branch staging https://github.com/technologiestiftung/innovationsdaten-berlin.git && cd innovationsdaten-berlin `
+
+2. **Install Dependencies**
+
+   Run the following command to install all necessary packages and add the .env:
+
+   ```bash
+   nvm use 22 && npm install
+   ```
+
+Then update the content of the env files accordingly
+
+## Running the Project
+
+To start a local development server, use the following command:
 
 ```bash
-npx all-contributors-cli check
-npx all-contributors-cli add ff6347 doc
+nvm use 22 && npm run dev
 ```
 
-You can use it on GitHub just by commenting on PRs and issues:
+This will start the development server, usually accessible at `http://localhost:5173/` (check the terminal output to confirm).
 
-```plain
-@all-contributors please add @ff6347 for infrastructure, tests and code
+## Building for Production
+
+To build the project for production, run:
+
+```bash
+nvm use 22 && npm run lint && npm run build
 ```
 
-- [ ] Add your project description
-- [ ] Get fancy shields at https://shields.io
+## Deploying to Netlify
 
-## Prerequisites
+### Steps to Deploy
 
-tbd...
+1. **Login to Netlify**: Go to [Netlify](https://www.netlify.com/) and log in to your account (or create one if you haven’t already).
 
-## Installation
+2. **Create a New Site**:
 
-tbd...
+   - Click **"New site from Git"** and connect your GitHub (or other Git provider) account.
+   - Select the repository for **Project Name**.
 
-## Usage or Deployment
+3. **Configure Build Settings**:
 
-tbd...
+   - **Build Command**: `npm run build`
+   - **Publish Directory**: ``
 
-## Development
+4. **Deploy**:
+   - Click **"Deploy Site"**. Netlify will automatically build and deploy your project.
 
-tbd...
+### Netlify Continuous Deployment
 
-## Tests
-
-tbd...
+After the initial setup, every push to the main branch will automatically trigger a redeployment on Netlify, ensuring your site stays up-to-date.
 
 ## Contributing
 
@@ -68,14 +86,17 @@ Before you create a pull request, write an issue so we can discuss your changes.
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ❤️
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JS-TSB"><img src="https://avatars.githubusercontent.com/u/185074060?v=4" width="64px;" alt="Jakob Sawalv"/><br /><sub><b>Jakob Sawal</b></sub></a><br />💻</td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
@@ -89,34 +110,25 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
 
-Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
+Illustrations by {tba}, all rights reserved.
 
 ## Credits
 
 <table>
   <tr>
     <td>
-      Made by <a href="https://citylab-berlin.org/de/start/">
+      Made by  <a href="https://www.technologiestiftung-berlin.de/">
         <br />
         <br />
-        <img width="200" src="https://logos.citylab-berlin.org/logo-citylab-color.svg" alt="Link to the CityLAB Berlin website" />
+        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-de.svg" />
       </a>
     </td>
     <td>
-      A project by <a href="https://www.technologiestiftung-berlin.de/">
+      Supported by <a href="https://www.berlin.de/">
         <br />
         <br />
-        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-de.svg" alt="Link to the Technologiestiftung Berlin website" />
-      </a>
-    </td>
-    <td>
-      Supported by <a href="https://www.berlin.de/rbmskzl/">
-        <br />
-        <br />
-        <img width="80" src="https://logos.citylab-berlin.org/logo-berlin-senatskanzelei-de.svg" alt="Link to the Senate Chancellery of Berlin"/>
+        <img width="150" src="https://logos.citylab-berlin.org/logo-berlin.svg" />
       </a>
     </td>
   </tr>
 </table>
-
-## Related Projects
