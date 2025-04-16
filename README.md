@@ -6,7 +6,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# Innovationsdaten Berlin
+![My Logo](src/logo/LogoWording_Light.svg)
 
 Welcome to the **Innovationsdaten** repository! This project is built using React.js, Vite and Recharts.js. It is designed to visualize innovation data in Berlin and Germany.
 
