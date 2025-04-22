@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Icon from "./Icons";
+import InnoDatenLogoWording from "../assets/innodaten_logo_wording.svg";
+import Chevron from "../assets/chevron.svg";
+import Moon from "../assets/moon.svg";
+import Sun from "../assets/sun.svg";
 import chapters from "../data/chapters.json";
-import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Header: React.FC = () => {
@@ -15,13 +17,13 @@ const Header: React.FC = () => {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
+				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center `}
 			>
 				<div
 					onClick={() => window.scrollTo(0, 0)}
 					className="cursor-pointer size-24"
 				>
-					<Icon id="innodaten_logo_wording" />
+					<img src={InnoDatenLogoWording} alt="InnoDatenLogoWording" />
 				</div>
 				<div className="flex items-center gap-8">
 					<div className="flex items-center gap-8">
@@ -33,22 +35,20 @@ const Header: React.FC = () => {
 							<h4>{globalChapter}</h4>
 							{/* @refactor */}
 							<div className={`size-24 ${open && "rotate-180"}`}>
-								<Icon id="chevron" />
+								<img src={Chevron} alt="chevron" />
 							</div>
 						</div>
 					</div>
 					<div className={`cursor-pointer size-24 `} onClick={toggleTheme}>
-						{theme === "dark" ? (
-							<Icon id="moon" setColor={colors.white} />
-						) : (
-							<Icon id="sun" setColor={colors.blue} />
+						{(theme === "dark" && <img src={Sun} alt="sun" />) || (
+							<img src={Moon} alt="moon" />
 						)}
 					</div>
 				</div>
 			</header>
 			{open && (
 				<ul
-					className={`fixed nav-ul py-6 px-12 z-12 ${theme}`}
+					className={`fixed nav-ul py-6 px-12 z-12`}
 					style={{
 						left: "auto",
 						right: window.innerWidth / 2,

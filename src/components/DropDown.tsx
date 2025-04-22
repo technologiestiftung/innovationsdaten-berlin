@@ -159,10 +159,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 						{setName()}
 					</p>
 					<div className={`size-24 ${isOpen && "rotate-180"}`}>
-						<Icon
-							id="chevron"
-							setColor={theme === "dark" ? colors.white : colors.blue}
-						/>
+						<Icon id="chevron" />
 					</div>
 				</button>
 			</div>
