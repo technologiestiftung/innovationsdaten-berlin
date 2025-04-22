@@ -467,6 +467,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								shape={
 									chart_type === "bar_chart" ? <FilledBar /> : <BorderedBar />
 								}
+								cursor={has_tooltip ? "pointer" : "default"}
 							>
 								<LabelList
 									content={(props) => {
@@ -511,6 +512,7 @@ const BarChart: React.FC<BarChartProps> = ({
 											dataKey={dataKey}
 											stackId="1"
 											fill={getColorBar(index)}
+											cursor={has_tooltip ? "pointer" : "default"}
 										/>
 									))}
 							</>
@@ -521,6 +523,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								dataKey={activeFilter}
 								stackId="1"
 								fill={colors.blue}
+								cursor={has_tooltip ? "pointer" : "default"}
 							>
 								<LabelList content={<RenderValueLabel />} />
 							</Bar>
