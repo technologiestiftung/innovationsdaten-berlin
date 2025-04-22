@@ -34,6 +34,12 @@
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentcolor);
 	}
+
+	body {
+		@apply bg-white text-blue dark:bg-dark dark:text-white;
+		/* Ensure full height if needed, though often handled by root/app divs */
+		min-height: 100vh;
+	}
 }
 
 @theme {

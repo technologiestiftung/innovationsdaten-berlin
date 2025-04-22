@@ -47,17 +47,7 @@ html {
 			background-color: var(--color-dark);
 		}
 	}
-	&.light {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		p:not(.ignore) {
-			color: var(--color-blue);
-		}
-	}
+
 	section {
 		//	max-width: 100vw;
 	}

@@ -13,13 +13,14 @@ function App() {
 		<div className="h-full w-full">
 			<Header />
 			<Menu />
-			<main className="h-[calc(100vh-6rem)] top-24 w-full relative">
+			<main className="pt-24 w-full relative">
+				{" "}
 				<div className="container mx-auto">
 					<Welcome />
 					{Object.keys(data).map((dataKey) => (
 						<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
 					))}
-					<div className="w-full min-h-[20vh]" />
+					<div className="w-full min-h-[20vh]" /> {/* Spacer */}
 				</div>
 			</main>
 			{/* <Footer /> */}

@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const Menu: React.FC = () => {
-	const { theme, chapter, setChapter } = useGlobalContext();
+	const { chapter, setChapter } = useGlobalContext();
 
 	const NavStep: React.FC<NavProps> = ({ link, title }) => {
 		const [isOpen, setIsOpen] = useState(false);
@@ -60,17 +60,18 @@ const Menu: React.FC = () => {
 					setIsOpen(false);
 					setMouseIn(false);
 				}}
-				className="relative flex items-center size-6 border-2 border-blue dark:border-white cursor-pointer bg-white dark:bg-dark"
+				className={`relative flex items-center size-6 border-2 border-blue dark:border-white cursor-pointer ${
+					isOpen || chapter === title
+						? "bg-blue dark:bg-white"
+						: "bg-white dark:bg-dark"
+				}`}
 				onClick={() => scrollToIdWithOffset(link)}
 			>
-				<div
-					className={`${theme} ${isOpen || chapter === title ? "open" : ""}`}
-				/>
 				{(isOpen || mouseIn) && (
 					<div
-						className={`absolute right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap ${theme}`}
+						className={`absolute bg-blue text-white dark:text-dark dark:bg-white right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap`}
 					>
-						<p className="ignore bold">{title}</p>
+						<p className="bold">{title}</p>
 					</div>
 				)}
 			</a>
