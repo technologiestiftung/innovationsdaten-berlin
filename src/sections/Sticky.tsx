@@ -24,7 +24,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 	return (
 		<section
 			id={dataKey}
-			className="sticky-section relative w-full flex gap-6"
+			className="sticky-section relative w-full flex gap-6 px-20"
 			style={{ paddingTop: headerHeight }}
 		>
 			<div

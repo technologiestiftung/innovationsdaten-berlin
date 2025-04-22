@@ -1,20 +1,17 @@
 import React from "react";
 import branchen from "../../data/branchen.json";
-import colors from "../../data/colors.json";
-import Icon from "../Icons";
-import { useGlobalContext } from "../../GlobalContext";
 import { BranchenItem } from "../../types/global";
+import { LazySvg } from "../LazySVG";
 
 const BranchenList: React.FC = () => {
-	const { fontSize } = useGlobalContext();
 	const DisplayBranche = ({ branche }: { branche: BranchenItem }) => {
 		return (
 			<div
 				className="flex items-center gap-3 py-2 px-5"
 				style={{ backgroundColor: branche.color }}
 			>
-				<Icon id={branche.id} setColor={colors.white} size={fontSize * 1.5} />
-				<p className="line-clamp-1 break-words ignore white bold">
+				<LazySvg name={branche.id} className="size-6" />
+				<p className="line-clamp-1 break-words ignore text-white bold">
 					{branche.name}
 				</p>
 			</div>

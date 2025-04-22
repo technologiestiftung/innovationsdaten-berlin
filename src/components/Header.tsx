@@ -49,11 +49,11 @@ const Header: React.FC = () => {
 			</header>
 			{open && (
 				<ul
-					className={`fixed nav-ul py-6 px-12 z-12 w-full h-full md:w-auto md:h-auto bg-white dark:bg-dark text-black dark:text-white md:top-24 md:right-48`}
+					className={`fixed nav-ul py-6 px-12 z-12 w-full h-full md:w-auto md:h-auto bg-white dark:bg-dark text-black dark:text-white md:top-23.5 md:right-48 border-2 border-t-0 border-blue dark:border-white space-y-2`}
 					onMouseLeave={() => setOpen(false)}
 				>
 					{chapters.map((chapter) => (
-						<li key={chapter.link} className="my-4">
+						<li key={chapter.link}>
 							<a
 								href={`#${chapter.link}`}
 								onClick={() => {

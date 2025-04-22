@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { isInRange } from "../utilities";
-import { useGlobalContext } from "../GlobalContext";
 
 type CardProps = {
 	dataKey: string;
@@ -23,7 +22,6 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
@@ -93,7 +91,7 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card p-6 ${theme}`}
+			className={`card p-6 border-2 border-blue dark:border-white bg-white dark:bg-dark`}
 			style={{
 				marginTop: getMarginTop(),
 				marginBottom: getMarginBottom(),

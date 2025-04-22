@@ -12,9 +12,11 @@ const Overview: React.FC = () => {
 					<a
 						key={chapter.link}
 						href={`#${chapter.link}`}
-						className={`p-2 ${theme}`}
+						className={`p-2 ${theme}
+							border-2 border-blue dark:border-white
+							`}
 					>
-						<p className="bold text-center">{chapter.title}</p>
+						<p className="bold large text-center">{chapter.title}</p>
 					</a>
 				))}
 			</div>

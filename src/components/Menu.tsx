@@ -60,7 +60,7 @@ const Menu: React.FC = () => {
 					setIsOpen(false);
 					setMouseIn(false);
 				}}
-				className="relative flex items-center"
+				className="relative flex items-center size-6 border-2 border-blue dark:border-white cursor-pointer bg-white dark:bg-dark"
 				onClick={() => scrollToIdWithOffset(link)}
 			>
 				<div
@@ -78,7 +78,7 @@ const Menu: React.FC = () => {
 	};
 
 	return (
-		<nav className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
+		<nav className="fixed top-1/2 right-10 -translate-y-1/2 flex flex-col gap-2 z-10">
 			{chapters.map((mapChapter) => (
 				<NavStep
 					key={mapChapter.link}

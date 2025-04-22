@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
-import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
 
 const Welcome: React.FC = () => {
-	const { theme } = useGlobalContext();
 	const selfRef = useRef<HTMLDivElement>(null);
 
 	return (
@@ -14,7 +12,9 @@ const Welcome: React.FC = () => {
 				</div>
 			</div>
 			<div className="flex items-center basis-1/2">
-				<div className={`card p-6 ${theme}`}>
+				<div
+					className={`card p-6 border-2 border-blue dark:border-white bg-white dark:bg-dark`}
+				>
 					<h2 className="mb-4">Innovationsdaten Berlin</h2>
 					<p>
 						In modernen wissensbasierten Gesellschaften ist Innovation der
