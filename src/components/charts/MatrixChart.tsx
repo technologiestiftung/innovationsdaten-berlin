@@ -130,6 +130,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
+								// @refactor
 								dangerouslySetInnerHTML={{
 									__html: wordings[y as keyof typeof wordings],
 								}}
@@ -143,6 +144,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 									style={{
 										color: theme === "dark" ? colors.dark : colors.white,
 									}}
+									// @refactor
 									dangerouslySetInnerHTML={{
 										__html: `${wordings[y as keyof typeof wordings]}:`,
 									}}
@@ -208,6 +210,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 					>
 						<p
 							className="small"
+							// @refactor
 							dangerouslySetInnerHTML={{
 								__html: wordings[y as keyof typeof wordings],
 							}}

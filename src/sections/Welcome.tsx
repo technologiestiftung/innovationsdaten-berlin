@@ -37,10 +37,7 @@ const Welcome: React.FC = () => {
 			</div>
 			<div className="flex items-center basis-1/2">
 				<div className={`card p-6 ${theme}`}>
-					<h2
-						className="mb-4"
-						dangerouslySetInnerHTML={{ __html: "Innovationsdaten Berlin" }}
-					/>
+					<h2 className="mb-4">Innovationsdaten Berlin</h2>
 					<p>
 						In modernen wissensbasierten Gesellschaften ist Innovation der
 						Schlüsselfaktor für Wettbewerbsfähigkeit und damit für

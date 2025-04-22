@@ -6,7 +6,6 @@ import sektoren from "../data/sektoren.json";
 import wordings from "../data/wordings.json";
 import { useGlobalContext } from "../GlobalContext";
 import { dataKeys } from "../types/global";
-import { capitalizeFirstLetter } from "../utilities";
 
 interface DropdownProps {
 	type: "filter" | "sort";
@@ -47,16 +46,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 			allFilters?.includes("insgesamt") &&
 			activeFilter
 		) {
-			return capitalizeFirstLetter(activeFilter);
+			return activeFilter;
 		}
 		if (type === "filter") {
 			return "Branche wählen";
 		}
 		if (type === "sort" && sortBy) {
-			return (
-				wordings[sortBy as keyof typeof wordings] ||
-				capitalizeFirstLetter(sortBy)
-			);
+			return wordings[sortBy as keyof typeof wordings] || sortBy;
 		}
 		return "Sortieren nach";
 	};
@@ -159,7 +155,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 					onClick={() => setIsOpen(!isOpen)}
 					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between"
 				>
-					<p className="bold select-none text-left">{setName()}</p>
+					<p className="bold select-none text-left first-letter:capitalize">
+						{setName()}
+					</p>
 					<div
 						style={{
 							transform: isOpen ? "none" : "rotate(180deg)",
@@ -245,9 +243,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 														size={fontSize}
 													/>
 												</span>
-												<p className="line-clamp-1 break-words select-none">
+												<p className="line-clamp-1 break-words select-none first-letter:capitalize">
 													{branchen.find((branche) => branche.id === filter)
-														?.name || capitalizeFirstLetter(filter)}
+														?.name || filter}
 												</p>
 											</li>
 										),

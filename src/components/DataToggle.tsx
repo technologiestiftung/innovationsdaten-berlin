@@ -27,7 +27,7 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 		return colors.blue;
 	};
 
-	const SingleToggleButton = ({ item }: any) => {
+	const SingleToggleButton = ({ item }: { item: string }) => {
 		const titleRef = useRef<HTMLParagraphElement>(null);
 		const maxWidest = 275;
 		useEffect(() => {

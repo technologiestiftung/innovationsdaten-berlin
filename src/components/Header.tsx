@@ -33,7 +33,11 @@ const Header: React.FC = () => {
 							onMouseEnter={() => setOpen(true)}
 						>
 							<h4>{globalChapter}</h4>
-							<div style={{ transform: open ? "rotate(180deg)" : "none" }}>
+							{/* @refactor */}
+							<div
+								className={open ? "tailwind" : "tailwind"}
+								style={{ transform: open ? "rotate(180deg)" : "none" }}
+							>
 								<Icon id="chevron" size={fontSize * 1.5} />
 							</div>
 						</div>

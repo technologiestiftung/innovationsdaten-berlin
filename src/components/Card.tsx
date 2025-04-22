@@ -42,7 +42,6 @@ const Card: React.FC<CardProps> = ({
 		}
 		if (last) {
 			return window.innerHeight - headerHeight;
-			return specificMargin + window.innerHeight * 0.2;
 		}
 		return 0;
 	};
@@ -104,11 +103,9 @@ const Card: React.FC<CardProps> = ({
 				(window.location.href.includes("localhost") ||
 					window.location.href.includes("staging")) &&
 				displayNumber && <h4>{displayNumber}</h4>}
-			<h2
-				className={text ? "mb-4" : ""}
-				dangerouslySetInnerHTML={{ __html: title }}
-			/>
-			<p>{text}</p>
+			{/* @refactor: hypens & break-words for title */}
+			<h2 className="">{title}</h2>
+			<p className="mt-4">{text}</p>
 		</div>
 	);
 };

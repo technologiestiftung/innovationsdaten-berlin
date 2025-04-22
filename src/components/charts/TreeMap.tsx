@@ -89,6 +89,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 				<div className="flex justify-between items-end">
 					<p
 						style={{ color: theme === "dark" ? colors.dark : colors.white }}
+						// @refactor
 						dangerouslySetInnerHTML={{
 							__html:
 								dataID === "beschaeftigte"

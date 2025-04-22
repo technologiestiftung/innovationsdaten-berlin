@@ -41,18 +41,10 @@ function formatEuroNumber(value: number): string {
 	return `${value.toString()} Mio. €`;
 }
 
-function capitalizeFirstLetter(str: string): string {
-	if (!str) {
-		return "";
-	}
-	return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
 export {
 	hexToRgba,
 	formatNumber,
 	isInRange,
 	roundToTwoDecimals,
 	formatEuroNumber,
-	capitalizeFirstLetter,
 };

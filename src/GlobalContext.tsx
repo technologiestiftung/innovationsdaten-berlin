@@ -17,7 +17,6 @@ interface GlobalStateType {
 	breakPoint: number;
 	isMobile: boolean;
 	headerHeight: number;
-	verticalAligment: string[];
 	chapter: string;
 	setChapter: (chapter: string) => void;
 	axisFontStylings: {
@@ -45,8 +44,10 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [widthOfStickyContainer, setWidthOfStickyContainer] =
 		useState<number>(0);
 
+	const oneRemInPixels = parseFloat(
+		getComputedStyle(document.documentElement).fontSize,
+	);
 	const fontSize = 16;
-	const verticalAligment = ["basis-3/5", "basis-2/5"];
 
 	const axisFontStylings = {
 		style: {
@@ -104,7 +105,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				breakPoint,
 				isMobile,
 				headerHeight,
-				verticalAligment,
 				chapter,
 				setChapter,
 				axisFontStylings,

@@ -468,7 +468,7 @@
 		},
 		{
 			"id": "inno_ausgaben_2023",
-			"title": "Innovations&shy;ausgaben 2023",
+			"title": "Innovationsausgaben 2023",
 			"displayNumber": "2.5",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
@@ -564,7 +564,7 @@
 		},
 		{
 			"id": "inno_intensitaet",
-			"title": "Innovations&shy;intensität",
+			"title": "Innovationsintensität",
 			"displayNumber": "2.7",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
@@ -944,7 +944,7 @@
 		},
 		{
 			"id": "added_value_through_product_innovation",
-			"title": "Mehrwert durch Produkt&shy;innovation",
+			"title": "Mehrwert durch Produktinnovation",
 			"displayNumber": "3.3",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",

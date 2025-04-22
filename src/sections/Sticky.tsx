@@ -10,7 +10,7 @@ type StickyProps = {
 };
 
 const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
-	const { headerHeight, verticalAligment } = useGlobalContext();
+	const { headerHeight } = useGlobalContext();
 	const typedData = data as Record<ChapterKeys, StickyItem[]>;
 	const dataArray = typedData[dataKey];
 	const [current, setCurrent] = useState<StickyItem | null>(null);
@@ -28,7 +28,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 			style={{ paddingTop: headerHeight }}
 		>
 			<div
-				className={`sticky flex items-center ${verticalAligment[0]} `}
+				className="sticky flex items-center basis-3/5"
 				style={{
 					height: window.innerHeight - headerHeight,
 					top: headerHeight,
@@ -38,7 +38,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 					<LeftStickyContent data={current as StickyItem} />
 				</div>
 			</div>
-			<div className={verticalAligment[1]}>
+			<div className="basis-2/5">
 				{dataArray.map((item: StickyItem, index: number) => (
 					<Card
 						key={item.id}

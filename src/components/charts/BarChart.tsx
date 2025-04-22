@@ -15,11 +15,7 @@ import {
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
 import colors from "../../data/colors.json";
-import {
-	capitalizeFirstLetter,
-	formatEuroNumber,
-	formatNumber,
-} from "../../utilities";
+import { formatEuroNumber, formatNumber } from "../../utilities";
 import wordings from "../../data/wordings.json";
 import Dropdown from "./../DropDown";
 import DataToggle from "../DataToggle";
@@ -375,11 +371,12 @@ const BarChart: React.FC<BarChartProps> = ({
 					<>
 						<div className="flex justify-between gap-6">
 							<p
+								className="first-letter:capitalize"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
 							>
-								{capitalizeFirstLetter(activeFilter || "")}:
+								{activeFilter}
 							</p>
 							<p
 								className="bold ml-2"
