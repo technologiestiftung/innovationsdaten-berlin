@@ -17,7 +17,7 @@ const Header: React.FC = () => {
 		<>
 			<header
 				className={`fixed top-0 py-6 px-48 left-0 w-screen z-11 flex justify-between items-center h-24
-					bg-white dark:bg-dark text-black dark:text-white border-b-2 border-blue dark:border-white
+					bg-white dark:bg-dark border-b-2 border-blue dark:border-white
 					`}
 			>
 				<div
@@ -34,7 +34,6 @@ const Header: React.FC = () => {
 							onMouseEnter={() => setOpen(true)}
 						>
 							<h4>{globalChapter}</h4>
-							{/* @refactor */}
 							<div className={`${open && "rotate-180"}`}>
 								<Chevron className="size-6 fill-blue dark:fill-white" />
 							</div>

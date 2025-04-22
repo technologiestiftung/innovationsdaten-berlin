@@ -44,8 +44,7 @@
 
 @theme {
 	--font-display: "Clan Pro", sans-serif;
-	--breakpoint-md: 46.5rem;
-
+	--breakpoint-md: 66.5rem;
 	--color-dark: var(--dark);
 	--color-blue: var(--blue);
 	--color-white: var(--white);

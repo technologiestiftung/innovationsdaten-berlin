@@ -5,13 +5,17 @@ const Welcome: React.FC = () => {
 	const selfRef = useRef<HTMLDivElement>(null);
 
 	return (
-		<section id="welcome" className="sticky-section relative w-full flex gap-6">
-			<div ref={selfRef} className="flex items-center basis-1/2">
+		<section
+			id="welcome"
+			className="sticky-section relative w-full grid gap-6 grid-cols-1 md:grid-cols-2 px-20
+			h-[calc(100vh-6rem)] mt-24 md:mt-0"
+		>
+			<div ref={selfRef} className="flex items-center">
 				<div className="w-full">
 					<Overview />
 				</div>
 			</div>
-			<div className="flex items-center basis-1/2">
+			<div className="flex items-center">
 				<div
 					className={`card p-6 border-2 border-blue dark:border-white bg-white dark:bg-dark`}
 				>
