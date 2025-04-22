@@ -29,6 +29,8 @@ type BarChartProps = {
 	data: any;
 	chart_type: ChartTypes;
 	chart_unit?: string;
+	has_tooltip?: boolean;
+	multiline_y_axis_label?: boolean;
 	bar_chart_unit_breakpoint?: number;
 	hasRegionToggle?: boolean;
 	sortsAfter?: dataKeys[];
@@ -39,10 +41,13 @@ const BarChart: React.FC<BarChartProps> = ({
 	data,
 	chart_type,
 	chart_unit,
+	has_tooltip,
+	multiline_y_axis_label,
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
 	sortsAfter,
 }) => {
+	// Global Context
 	const {
 		axisFontStylings,
 		theme,
@@ -51,7 +56,9 @@ const BarChart: React.FC<BarChartProps> = ({
 		setRegion,
 		widthOfStickyContainer,
 	} = useGlobalContext();
-	const sortOutDataKeysFromBranch = [
+
+	// Exclude keys from data
+	const excludeKeyFromBranch = [
 		"color",
 		"id",
 		"name",
@@ -59,10 +66,19 @@ const BarChart: React.FC<BarChartProps> = ({
 		"sektor_id",
 		"umsatz_produkt_neuheiten",
 	];
+	const excludeKeyFromToolTip = ["umsatz_nachahmer_innovationen"];
+	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
+
+	const yAxisWidth = multiline_y_axis_label
+		? widthOfStickyContainer * 0.4
+		: widthOfStickyContainer * 0.25;
+
+	// State
 	const [sortBy, setSortBy] = useState<string | null>(null);
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
+	// set Data
 	const collectData = useMemo(() => {
 		if (!data) {
 			return [];
@@ -125,8 +141,11 @@ const BarChart: React.FC<BarChartProps> = ({
 		if (chart_type.includes("filter_keys")) {
 			result = data.map((item: any) => {
 				const getID = item.id;
+				const getBreakPoint = bar_chart_unit_breakpoint || 0;
+				const getValue = item[activeFilter || "insgesamt"];
 				return {
 					name: wordings[getID as keyof typeof wordings],
+					isSmall: getValue < getBreakPoint,
 					...item,
 				};
 			});
@@ -161,8 +180,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	if (data && collectData.length > 0) {
 		objectKeys = Object.keys(collectData[0]).filter(
 			(dataKey) =>
-				!sortOutDataKeysFromBranch.includes(dataKey) &&
-				!dataKey.includes("display"),
+				!excludeKeyFromBranch.includes(dataKey) && !dataKey.includes("display"),
 		);
 	}
 
@@ -263,14 +281,20 @@ const BarChart: React.FC<BarChartProps> = ({
 	};
 
 	const getColorBar = (index: number) => {
-		if (!index || index === 3 || index === 6) {
+		if (!index) {
 			return colors.blue;
 		}
-		if (index === 1 || index === 4 || index === 7) {
+		if (index === 1) {
 			return colors.cyan_light;
 		}
-		if (index === 2 || index === 5 || index === 8) {
+		if (index === 2) {
 			return colors.green_light;
+		}
+		if (index === 3) {
+			return colors.bar_chart_3;
+		}
+		if (index === 4) {
+			return colors.bar_chart_4;
 		}
 		return colors.blue;
 	};
@@ -298,31 +322,33 @@ const BarChart: React.FC<BarChartProps> = ({
 				</p>
 				{!chart_type.includes("filter_keys") ? (
 					<>
-						{objectKeys.map((key: string) => (
-							<div className="flex justify-between gap-6" key={key}>
-								{wordings[key as keyof typeof wordings] && (
+						{objectKeys
+							.filter((objectKey) => !excludeKeyFromToolTip.includes(objectKey))
+							.map((key: string) => (
+								<div className="flex justify-between gap-6" key={key}>
+									{wordings[key as keyof typeof wordings] && (
+										<p
+											style={{
+												color: theme === "dark" ? colors.dark : colors.white,
+											}}
+										>
+											{wordings[key as keyof typeof wordings]}:
+										</p>
+									)}
 									<p
+										className="bold ml-2"
 										style={{
 											color: theme === "dark" ? colors.dark : colors.white,
 										}}
 									>
-										{wordings[key as keyof typeof wordings]}:
+										{/* Value Display */}
+										{chart_type.includes("full")
+											? `${formatNumber(payloadData[key])} | ${formatNumber(payloadData[`display_${key}`])}%`
+											: formatNumber(payloadData[key])}
+										{chart_unit}
 									</p>
-								)}
-								<p
-									className="bold ml-2"
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									{/* Value Display */}
-									{chart_type.includes("full")
-										? `${formatNumber(payloadData[key])} | ${formatNumber(payloadData[`display_${key}`])}%`
-										: formatNumber(payloadData[key])}
-									{chart_unit}
-								</p>
-							</div>
-						))}
+								</div>
+							))}
 						{id === "added_value_through_product_innovation" && (
 							<div className="flex justify-between gap-6">
 								<p
@@ -395,7 +421,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	useEffect(() => {
 		if (chart_type.includes("filter_keys") && !!collectData.length) {
 			const getAllFilters = Object.keys(collectData[0]).filter(
-				(key) => key !== "id" && key !== "name",
+				(key) => !excludeKeyFromAllFilters.includes(key),
 			);
 			if (getAllFilters.length) {
 				setAllFilters(getAllFilters);
@@ -424,7 +450,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						<YAxis
 							type="category"
 							dataKey="name"
-							width={widthOfStickyContainer * 0.25}
+							width={yAxisWidth}
 							tick={{
 								fontFamily: "Clan Pro",
 								fontSize: 12,
@@ -433,11 +459,7 @@ const BarChart: React.FC<BarChartProps> = ({
 							}}
 						/>
 						{/* ToolTip */}
-						{(chart_type.includes("stacked") ||
-							chart_type.includes("full") ||
-							chart_type.includes("filter_keys")) && (
-							<Tooltip content={<CustomTooltip />} />
-						)}
+						{has_tooltip && <Tooltip content={<CustomTooltip />} />}
 						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
 						{/* Bars */}
@@ -502,7 +524,9 @@ const BarChart: React.FC<BarChartProps> = ({
 								dataKey={activeFilter}
 								stackId="1"
 								fill={colors.blue}
-							/>
+							>
+								<LabelList content={<RenderValueLabel />} />
+							</Bar>
 						)}
 						{/* XAxis */}
 						<XAxis

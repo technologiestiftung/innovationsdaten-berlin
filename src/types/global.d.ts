@@ -92,6 +92,8 @@ export type StickyItem = {
 	displayNumber?: string;
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
+	has_tooltip?: boolean;
+	multiline_y_axis_label?: boolean;
 	text?: string;
 	facts?: { fact: string; unit: string }[];
 	bar_chart_unit_breakpoint?:

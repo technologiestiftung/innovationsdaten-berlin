@@ -32,13 +32,13 @@ function roundToTwoDecimals(num: number): number {
 function formatEuroNumber(value: number): string {
 	if (value >= 1000) {
 		const billions = value / 1000;
-		let formatted = billions.toFixed(1).replace(".", ","); // 3.2 → "3,2"
+		let formatted = billions.toFixed(1);
 		if (formatted.endsWith(",0")) {
-			formatted = formatted.slice(0, -2); // Remove trailing ",0"
+			formatted = formatted.slice(0, -2);
 		}
 		return `${formatted} Mrd. €`;
 	}
-	return `${value.toString().replace(".", ",")} Mio. €`;
+	return `${value.toString()} Mio. €`;
 }
 
 function capitalizeFirstLetter(str: string): string {

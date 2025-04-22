@@ -102,7 +102,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 							style={{ color: theme === "dark" ? colors.dark : colors.white }}
 						>
 							{/* Value Display */}
-							{formatNumber(payloadData.value)}
+							{formatNumber(payloadData.value)} Tsd.
 						</p>
 					) : (
 						<p

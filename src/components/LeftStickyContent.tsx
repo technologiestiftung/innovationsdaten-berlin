@@ -29,6 +29,8 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 		id,
 		chart_type,
 		chart_unit,
+		has_tooltip,
+		multiline_y_axis_label,
 		facts,
 		bar_chart_unit_breakpoint,
 		togglesBetween,
@@ -75,6 +77,8 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 					id={id}
 					chart_type={chart_type}
 					chart_unit={chart_unit}
+					has_tooltip={has_tooltip}
+					multiline_y_axis_label={multiline_y_axis_label}
 					bar_chart_unit_breakpoint={
 						hasMultipleBreakpoints
 							? (bar_chart_unit_breakpoint as Record<string, any>)[region]

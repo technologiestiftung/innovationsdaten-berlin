@@ -137,14 +137,17 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 						</div>
 						<div className="placeholder w-full" />
 						<div className="flex justify-between items-end gap-6 mt-4">
-							<p
-								className="text-left"
-								style={{
-									color: theme === "dark" ? colors.dark : colors.white,
-								}}
-							>
-								Anteil Firmen der Branche die mit der Region kollaborieren:
-							</p>
+							{wordings[y as keyof typeof wordings] && (
+								<p
+									className="text-left"
+									style={{
+										color: theme === "dark" ? colors.dark : colors.white,
+									}}
+									dangerouslySetInnerHTML={{
+										__html: `${wordings[y as keyof typeof wordings]}:`,
+									}}
+								/>
+							)}
 							<p
 								className="bold min-w-[50px]"
 								style={{

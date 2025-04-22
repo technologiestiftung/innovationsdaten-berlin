@@ -286,24 +286,6 @@ footer {
 	}
 }
 
-.toggle-container {
-	bottom: $font-size;
-	left: auto;
-	right: $font-size;
-	border-radius: 200px;
-	z-index: 2;
-	&.dark {
-		background: $dark;
-	}
-	&.light {
-		background: $white;
-	}
-	@media screen and (min-width: $breakpoint) {
-		right: calc(((100vw - $breakpoint) / 2) - $font-size * 5);
-		bottom: 3vh;
-	}
-}
-
 .data-toggle {
 	position: relative;
 	height: $toggle-height + 4px;

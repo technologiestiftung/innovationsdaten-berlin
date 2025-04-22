@@ -3,7 +3,6 @@ import "./index.css";
 import { useGlobalContext } from "./GlobalContext";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import ThemeToggle from "./components/ThemeToggle";
 import data from "./data/data.json";
 import Sticky from "./sections/Sticky";
 import { ChapterKeys } from "./types/global";
@@ -25,7 +24,6 @@ function App() {
 					<>
 						<Header />
 						<Menu />
-						<ThemeToggle />
 						<main className={theme}>
 							{testing ? (
 								<>

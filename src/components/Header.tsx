@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import Icon from "./Icons";
 import chapters from "../data/chapters.json";
+import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Header: React.FC = () => {
 	const {
 		fontSize,
 		theme,
+		toggleTheme,
 		chapter: globalChapter,
 		setChapter,
 		headerHeight,
 		breakPoint,
+		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
+	const toggleIconSize = isMobile ? fontSize * 1.25 : fontSize * 2;
 	return (
 		<>
 			<header
@@ -22,15 +26,24 @@ const Header: React.FC = () => {
 					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
 				</div>
 				<div className="flex items-center gap-8">
-					<div
-						className="flex items-center gap-4 cursor-pointer"
-						onClick={() => setOpen(!open)}
-						onMouseEnter={() => setOpen(true)}
-					>
-						<h4>{globalChapter}</h4>
-						<div style={{ transform: open ? "rotate(180deg)" : "none" }}>
-							<Icon id="chevron" size={fontSize * 1.5} />
+					<div className="flex items-center gap-8">
+						<div
+							className="flex items-center gap-4 cursor-pointer"
+							onClick={() => setOpen(!open)}
+							onMouseEnter={() => setOpen(true)}
+						>
+							<h4>{globalChapter}</h4>
+							<div style={{ transform: open ? "rotate(180deg)" : "none" }}>
+								<Icon id="chevron" size={fontSize * 1.5} />
+							</div>
 						</div>
+					</div>
+					<div className={`cursor-pointer ${theme}`} onClick={toggleTheme}>
+						{theme === "dark" ? (
+							<Icon id="moon" size={toggleIconSize} setColor={colors.white} />
+						) : (
+							<Icon id="sun" size={toggleIconSize} setColor={colors.blue} />
+						)}
 					</div>
 				</div>
 			</header>
@@ -40,7 +53,7 @@ const Header: React.FC = () => {
 					style={{
 						top: headerHeight - 2,
 						left: "auto",
-						right: (window.innerWidth - breakPoint) / 2 - fontSize,
+						right: (window.innerWidth - breakPoint) / 2,
 					}}
 					onMouseLeave={() => setOpen(false)}
 				>

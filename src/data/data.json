@@ -568,6 +568,7 @@
 			"displayNumber": "2.7",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
+			"has_tooltip": true,
 			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte 'Barroso-Ziel'. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
 			"sortsAfter": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
@@ -782,6 +783,7 @@
 			"displayNumber": "3.2",
 			"chart_type": "bar_chart_full",
 			"chart_unit": "",
+			"has_tooltip": true,
 			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
 			"data": {
 				"ber": [
@@ -946,6 +948,7 @@
 			"displayNumber": "3.3",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
+			"has_tooltip": true,
 			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["umsatz_produkt_neuheiten", "umsatz_markt_neuheiten"],
 			"data": {
@@ -1145,7 +1148,7 @@
 			"text": "Umweltinnovationen sind eine Vielzahl von Maßnahmen, die sich sowohl auf die Herstellungsprozesse (z.B. den damit verbundenen Energieverbrauch) als auch auf die Produkte (z.B. deren Recyclingfähigkeit) beziehen können. Details gehen aus den Folgediagrammen hervor.",
 			"facts": [
 				{
-					"fact": "47%",
+					"fact": "52%",
 					"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
 				}
 			]
@@ -1156,6 +1159,7 @@
 			"displayNumber": "4.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
+			"multiline_y_axis_label": true,
 			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen 'bedeutende' Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den Daten leider nicht ermittelt werden.",
 			"data": {
 				"ber": [
@@ -1278,6 +1282,7 @@
 			"displayNumber": "4.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
+			"multiline_y_axis_label": true,
 			"text": "Bereits etwas älter, nämlich aus dem Jahr 2021 sind die Daten zur Motivation von Umweltinnovationen. Wegen der hohen Relevanz zeigen wir diese Daten trotzdem. Das Diagramm zeigt den Anteil der Unternehmen, die Umweltinnovationen eingeführt haben, die den jeweils genannten Grund als hoch relevant genannt haben (Alternativen waren 'mittel' oder 'gering'). Es fällt auf, dass staatliche Maßnahmen (Regulierung, Erwartung künftiger Regulierung und Vorschriften im Beschaffungswesen) mit Abstand die wichtigsten Treiber sind, die Unternehmen zu Umweltinnovationen bewegen. Kundennachfrage oder Reputationsgründe gehören nicht zu den wesentlichen Treibern von Umweltinnovationen, auch nicht eine etwaige öffentliche Förderung.",
 			"data": {
 				"ber": [
@@ -3769,6 +3774,7 @@
 			"displayNumber": "5.5",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
+			"has_tooltip": true,
 			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"data": {
 				"ber": [
@@ -4038,262 +4044,263 @@
 			"displayNumber": "6.2",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
+			"has_tooltip": true,
 			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
 			"data": {
 				"ber": [
 					{
 						"id": "dienstleistungen",
-						"insgesamt": 21,
 						"from_land": 9,
 						"from_bund": 13,
-						"from_eu": 7
+						"from_eu": 7,
+						"insgesamt": 21
 					},
 					{
 						"id": "industrie",
-						"insgesamt": 25,
 						"from_land": 10,
 						"from_bund": 17,
-						"from_eu": 8
+						"from_eu": 8,
+						"insgesamt": 25
 					},
 					{
-						"id": "ingesamt",
-						"insgesamt": 22,
+						"id": "insgesamt",
 						"from_land": 9,
 						"from_bund": 14,
-						"from_eu": 7
+						"from_eu": 7,
+						"insgesamt": 22
 					},
 					{
 						"id": "architektur",
-						"insgesamt": 13,
 						"from_land": 3,
 						"from_bund": 9,
-						"from_eu": 1
+						"from_eu": 1,
+						"insgesamt": 13
 					},
 					{
 						"id": "elektroindustrie",
-						"insgesamt": 44,
 						"from_land": 12,
 						"from_bund": 44,
-						"from_eu": 7
+						"from_eu": 7,
+						"insgesamt": 44
 					},
 					{
 						"id": "energie",
-						"insgesamt": 22,
 						"from_land": 3,
 						"from_bund": 22,
-						"from_eu": 3
+						"from_eu": 3,
+						"insgesamt": 22
 					},
 					{
 						"id": "fahrzeugbau",
-						"insgesamt": 42,
 						"from_land": 15,
 						"from_bund": 28,
-						"from_eu": 20
+						"from_eu": 20,
+						"insgesamt": 42
 					},
 					{
 						"id": "finanz",
-						"insgesamt": 0,
 						"from_land": 0,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 0
 					},
 					{
 						"id": "forschung",
-						"insgesamt": 70,
 						"from_land": 30,
 						"from_bund": 55,
-						"from_eu": 27
+						"from_eu": 27,
+						"insgesamt": 70
 					},
 					{
 						"id": "holz",
-						"insgesamt": 9,
 						"from_land": 8,
 						"from_bund": 1,
-						"from_eu": 1
+						"from_eu": 1,
+						"insgesamt": 9
 					},
 					{
 						"id": "kreativ",
-						"insgesamt": 12,
 						"from_land": 13,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 12
 					},
 					{
 						"id": "metall",
-						"insgesamt": 13,
 						"from_land": 5,
 						"from_bund": 0,
-						"from_eu": 7
+						"from_eu": 7,
+						"insgesamt": 13
 					},
 					{
 						"id": "nahrung",
-						"insgesamt": 0,
 						"from_land": 0,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 0
 					},
 					{
 						"id": "pharma",
-						"insgesamt": 26,
 						"from_land": 5,
 						"from_bund": 21,
-						"from_eu": 3
+						"from_eu": 3,
+						"insgesamt": 26
 					},
 					{
 						"id": "software",
-						"insgesamt": 26,
 						"from_land": 6,
 						"from_bund": 20,
-						"from_eu": 12
+						"from_eu": 12,
+						"insgesamt": 26
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"insgesamt": 29,
 						"from_land": 21,
 						"from_bund": 9,
-						"from_eu": 11
+						"from_eu": 11,
+						"insgesamt": 29
 					},
 					{
 						"id": "telekommunikation",
-						"insgesamt": 19,
 						"from_land": 19,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 19
 					},
 					{
 						"id": "unternehmensberatung",
-						"insgesamt": 18,
 						"from_land": 9,
 						"from_bund": 14,
-						"from_eu": 4
+						"from_eu": 4,
+						"insgesamt": 18
 					}
 				],
 				"de": [
 					{
 						"id": "dienstleistungen",
-						"insgesamt": 21,
 						"from_land": 8,
 						"from_bund": 17,
-						"from_eu": 3
+						"from_eu": 3,
+						"insgesamt": 21
 					},
 					{
 						"id": "industrie",
-						"insgesamt": 25,
 						"from_land": 5,
 						"from_bund": 22,
-						"from_eu": 5
+						"from_eu": 5,
+						"insgesamt": 25
 					},
 					{
-						"id": "ingesamt",
-						"insgesamt": 23,
+						"id": "insgesamt",
 						"from_land": 7,
 						"from_bund": 19,
-						"from_eu": 4
+						"from_eu": 4,
+						"insgesamt": 23
 					},
 					{
 						"id": "architektur",
-						"insgesamt": 21,
 						"from_land": 3,
 						"from_bund": 19,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 21
 					},
 					{
 						"id": "elektroindustrie",
-						"insgesamt": 52,
 						"from_land": 14,
 						"from_bund": 41,
-						"from_eu": 14
+						"from_eu": 14,
+						"insgesamt": 52
 					},
 					{
 						"id": "energie",
-						"insgesamt": 11,
 						"from_land": 4,
 						"from_bund": 10,
-						"from_eu": 4
+						"from_eu": 4,
+						"insgesamt": 11
 					},
 					{
 						"id": "fahrzeugbau",
-						"insgesamt": 40,
 						"from_land": 5,
 						"from_bund": 36,
-						"from_eu": 6
+						"from_eu": 6,
+						"insgesamt": 40
 					},
 					{
 						"id": "finanz",
-						"insgesamt": 8,
 						"from_land": 0,
 						"from_bund": 0,
-						"from_eu": 2
+						"from_eu": 2,
+						"insgesamt": 8
 					},
 					{
 						"id": "forschung",
-						"insgesamt": 43,
 						"from_land": 25,
 						"from_bund": 43,
-						"from_eu": 14
+						"from_eu": 14,
+						"insgesamt": 43
 					},
 					{
 						"id": "holz",
-						"insgesamt": 1,
 						"from_land": 0,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 1
 					},
 					{
 						"id": "kreativ",
-						"insgesamt": 5,
 						"from_land": 3,
 						"from_bund": 5,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 5
 					},
 					{
 						"id": "metall",
-						"insgesamt": 20,
 						"from_land": 1,
 						"from_bund": 17,
-						"from_eu": 5
+						"from_eu": 5,
+						"insgesamt": 20
 					},
 					{
 						"id": "nahrung",
-						"insgesamt": 0,
 						"from_land": 0,
 						"from_bund": 0,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 0
 					},
 					{
 						"id": "pharma",
-						"insgesamt": 37,
 						"from_land": 7,
 						"from_bund": 34,
-						"from_eu": 10
+						"from_eu": 10,
+						"insgesamt": 37
 					},
 					{
 						"id": "software",
-						"insgesamt": 36,
 						"from_land": 9,
 						"from_bund": 33,
-						"from_eu": 8
+						"from_eu": 8,
+						"insgesamt": 36
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"insgesamt": 15,
 						"from_land": 13,
 						"from_bund": 15,
-						"from_eu": 1
+						"from_eu": 1,
+						"insgesamt": 15
 					},
 					{
 						"id": "telekommunikation",
-						"insgesamt": 16,
 						"from_land": 8,
 						"from_bund": 11,
-						"from_eu": 3
+						"from_eu": 3,
+						"insgesamt": 16
 					},
 					{
 						"id": "unternehmensberatung",
-						"insgesamt": 17,
 						"from_land": 16,
 						"from_bund": 6,
-						"from_eu": 0
+						"from_eu": 0,
+						"insgesamt": 17
 					}
 				]
 			}
@@ -4301,9 +4308,10 @@
 		{
 			"id": "public_funding_fue_projects",
 			"title": "Wer erhält öffentliche Zuschüsse für FuE-Vorhaben?",
-			"displayNumber": "🚨 6.3",
+			"displayNumber": "6.3",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
+			"bar_chart_unit_breakpoint": 10,
 			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"data": {
 				"ber": {
@@ -4345,9 +4353,10 @@
 		{
 			"id": "applications_fue_funding",
 			"title": "Wer beantragt steuerlichen FuE-Förderung?",
-			"displayNumber": "🚨 6.4",
+			"displayNumber": "6.4",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
+			"bar_chart_unit_breakpoint": 10,
 			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keinem so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": {
@@ -4408,9 +4417,11 @@
 		{
 			"id": "data_application",
 			"title": "Anwendungen von Daten",
-			"displayNumber": "🚨 7.2",
+			"displayNumber": "7.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
+			"multiline_y_axis_label": true,
+			"bar_chart_unit_breakpoint": 10,
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"data": {
 				"ber": [
@@ -4534,9 +4545,11 @@
 		{
 			"id": "strategies_data_use",
 			"title": "Strategien der Datennutzung",
-			"displayNumber": "🚨 7.3",
+			"displayNumber": "7.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
+			"multiline_y_axis_label": true,
+			"bar_chart_unit_breakpoint": 10,
 			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"data": {
 				"ber": [
@@ -4544,7 +4557,7 @@
 						"id": "check_data_use",
 						"industrie": 37,
 						"dienstleistungen": 33,
-						"ingesamt": 34,
+						"insgesamt": 34,
 						"software": 34,
 						"pharma": 55
 					},
@@ -4552,7 +4565,7 @@
 						"id": "collect_process_data",
 						"industrie": 27,
 						"dienstleistungen": 27,
-						"ingesamt": 27,
+						"insgesamt": 27,
 						"software": 21,
 						"pharma": 43
 					},
@@ -4560,7 +4573,7 @@
 						"id": "buy_external_data",
 						"industrie": 5,
 						"dienstleistungen": 13,
-						"ingesamt": 11,
+						"insgesamt": 11,
 						"software": 12,
 						"pharma": 7
 					},
@@ -4568,7 +4581,7 @@
 						"id": "sell_data",
 						"industrie": 3,
 						"dienstleistungen": 4,
-						"ingesamt": 4,
+						"insgesamt": 4,
 						"software": 5,
 						"pharma": 0
 					},
@@ -4576,7 +4589,7 @@
 						"id": "use_open_data",
 						"industrie": 35,
 						"dienstleistungen": 42,
-						"ingesamt": 40,
+						"insgesamt": 40,
 						"software": 43,
 						"pharma": 62
 					},
@@ -4584,7 +4597,7 @@
 						"id": "exchange_data",
 						"industrie": 27,
 						"dienstleistungen": 26,
-						"ingesamt": 26,
+						"insgesamt": 26,
 						"software": 33,
 						"pharma": 46
 					},
@@ -4592,7 +4605,7 @@
 						"id": "offer_data",
 						"industrie": 9,
 						"dienstleistungen": 19,
-						"ingesamt": 17,
+						"insgesamt": 17,
 						"software": 16,
 						"pharma": 4
 					}
@@ -4602,7 +4615,7 @@
 						"id": "check_data_use",
 						"industrie": 35,
 						"dienstleistungen": 36,
-						"ingesamt": 36,
+						"insgesamt": 36,
 						"software": 37,
 						"pharma": 42
 					},
@@ -4610,7 +4623,7 @@
 						"id": "collect_process_data",
 						"industrie": 27,
 						"dienstleistungen": 29,
-						"ingesamt": 28,
+						"insgesamt": 28,
 						"software": 28,
 						"pharma": 25
 					},
@@ -4618,7 +4631,7 @@
 						"id": "buy_external_data",
 						"industrie": 5,
 						"dienstleistungen": 7,
-						"ingesamt": 6,
+						"insgesamt": 6,
 						"software": 6,
 						"pharma": 8
 					},
@@ -4626,7 +4639,7 @@
 						"id": "sell_data",
 						"industrie": 1,
 						"dienstleistungen": 2,
-						"ingesamt": 1,
+						"insgesamt": 1,
 						"software": 2,
 						"pharma": 1
 					},
@@ -4634,7 +4647,7 @@
 						"id": "use_open_data",
 						"industrie": 42,
 						"dienstleistungen": 43,
-						"ingesamt": 43,
+						"insgesamt": 43,
 						"software": 44,
 						"pharma": 46
 					},
@@ -4642,7 +4655,7 @@
 						"id": "exchange_data",
 						"industrie": 24,
 						"dienstleistungen": 22,
-						"ingesamt": 23,
+						"insgesamt": 23,
 						"software": 23,
 						"pharma": 27
 					},
@@ -4650,7 +4663,7 @@
 						"id": "offer_data",
 						"industrie": 8,
 						"dienstleistungen": 15,
-						"ingesamt": 11,
+						"insgesamt": 11,
 						"software": 17,
 						"pharma": 11
 					}
@@ -4660,9 +4673,10 @@
 		{
 			"id": "most_common_data_skills",
 			"title": "Die häufigsten Datakompetenzen",
-			"displayNumber": "🚨 7.4",
+			"displayNumber": "7.4",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
+			"multiline_y_axis_label": true,
 			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"data": {
 				"ber": [
@@ -4670,7 +4684,7 @@
 						"id": "employees_data_skills",
 						"industrie": 24,
 						"dienstleistungen": 46,
-						"ingesamt": 41,
+						"insgesamt": 41,
 						"software": 56,
 						"pharma": 20
 					},
@@ -4678,7 +4692,7 @@
 						"id": "employees_data_responsibilities",
 						"industrie": 13,
 						"dienstleistungen": 22,
-						"ingesamt": 20,
+						"insgesamt": 20,
 						"software": 29,
 						"pharma": 33
 					},
@@ -4686,7 +4700,7 @@
 						"id": "data_privacy_compliance",
 						"industrie": 35,
 						"dienstleistungen": 56,
-						"ingesamt": 51,
+						"insgesamt": 51,
 						"software": 66,
 						"pharma": 50
 					},
@@ -4694,7 +4708,7 @@
 						"id": "big_data_analyses",
 						"industrie": 4,
 						"dienstleistungen": 14,
-						"ingesamt": 12,
+						"insgesamt": 12,
 						"software": 18,
 						"pharma": 11
 					},
@@ -4702,7 +4716,7 @@
 						"id": "use_ai_methods",
 						"industrie": 20,
 						"dienstleistungen": 29,
-						"ingesamt": 27,
+						"insgesamt": 27,
 						"software": 33,
 						"pharma": 20
 					},
@@ -4710,7 +4724,7 @@
 						"id": "real_time_analysis",
 						"industrie": 29,
 						"dienstleistungen": 26,
-						"ingesamt": 27,
+						"insgesamt": 27,
 						"software": 45,
 						"pharma": 46
 					}
@@ -4720,7 +4734,7 @@
 						"id": "employees_data_skills",
 						"industrie": 21,
 						"dienstleistungen": 44,
-						"ingesamt": 31,
+						"insgesamt": 31,
 						"software": 58,
 						"pharma": 29
 					},
@@ -4728,7 +4742,7 @@
 						"id": "employees_data_responsibilities",
 						"industrie": 11,
 						"dienstleistungen": 21,
-						"ingesamt": 15,
+						"insgesamt": 15,
 						"software": 24,
 						"pharma": 13
 					},
@@ -4736,7 +4750,7 @@
 						"id": "data_privacy_compliance",
 						"industrie": 29,
 						"dienstleistungen": 51,
-						"ingesamt": 39,
+						"insgesamt": 39,
 						"software": 57,
 						"pharma": 43
 					},
@@ -4744,7 +4758,7 @@
 						"id": "big_data_analyses",
 						"industrie": 6,
 						"dienstleistungen": 9,
-						"ingesamt": 8,
+						"insgesamt": 8,
 						"software": 15,
 						"pharma": 10
 					},
@@ -4752,7 +4766,7 @@
 						"id": "use_ai_methods",
 						"industrie": 9,
 						"dienstleistungen": 29,
-						"ingesamt": 18,
+						"insgesamt": 18,
 						"software": 36,
 						"pharma": 12
 					},
@@ -4760,7 +4774,7 @@
 						"id": "real_time_analysis",
 						"industrie": 32,
 						"dienstleistungen": 25,
-						"ingesamt": 29,
+						"insgesamt": 29,
 						"software": 29,
 						"pharma": 42
 					}
@@ -4770,9 +4784,10 @@
 		{
 			"id": "ai_use",
 			"title": "Einsatz von KI",
-			"displayNumber": "🚨 7.5",
+			"displayNumber": "7.5",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
+			"bar_chart_unit_breakpoint": 10,
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": {
@@ -4814,762 +4829,762 @@
 		{
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI Verfahren",
-			"displayNumber": "🚨 7.6",
+			"displayNumber": "7.6",
 			"chart_type": "matrix",
 			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"data": {
 				"ber": [
 					{
 						"x": "nahrung",
-						"y": "products_and_services",
+						"y": "speech_comprehension",
+						"value": 6
+					},
+					{
+						"x": "nahrung",
+						"y": "image_recognition",
+						"value": 5
+					},
+					{
+						"x": "nahrung",
+						"y": "machine_learning",
+						"value": 7
+					},
+					{
+						"x": "nahrung",
+						"y": "automation",
 						"value": 1
 					},
 					{
 						"x": "nahrung",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "data_analysis",
-						"value": 15
-					},
-					{
-						"x": "nahrung",
-						"y": "other_fields",
-						"value": 0
+						"y": "knowledge_based_systems",
+						"value": 3
 					},
 					{
 						"x": "pharma",
-						"y": "products_and_services",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "process_automation",
+						"y": "speech_comprehension",
 						"value": 7
 					},
 					{
 						"x": "pharma",
-						"y": "client_communication",
-						"value": 1
+						"y": "image_recognition",
+						"value": 5
 					},
 					{
 						"x": "pharma",
-						"y": "data_analysis",
-						"value": 8
+						"y": "machine_learning",
+						"value": 5
 					},
 					{
 						"x": "pharma",
-						"y": "other_fields",
-						"value": 1
+						"y": "automation",
+						"value": 2
 					},
 					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 18
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "data_analysis",
-						"value": 18
-					},
-					{
-						"x": "holz",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "products_and_services",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "data_analysis",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
+						"x": "pharma",
+						"y": "knowledge_based_systems",
 						"value": 10
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
+						"x": "holz",
+						"y": "speech_comprehension",
 						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "data_analysis",
-						"value": 3
+						"x": "holz",
+						"y": "image_recognition",
+						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "other_fields",
-						"value": 3
+						"x": "holz",
+						"y": "machine_learning",
+						"value": 1
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "products_and_services",
-						"value": 7
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "process_automation",
-						"value": 8
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 15
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "data_analysis",
-						"value": 2
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
+						"x": "holz",
+						"y": "automation",
 						"value": 0
 					},
 					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 9
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 2
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "data_analysis",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
+						"x": "holz",
+						"y": "knowledge_based_systems",
 						"value": 1
 					},
 					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "data_analysis",
+						"x": "metall",
+						"y": "speech_comprehension",
 						"value": 4
 					},
 					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 0
+						"x": "metall",
+						"y": "image_recognition",
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 7
+						"x": "metall",
+						"y": "machine_learning",
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
-						"y": "process_automation",
-						"value": 8
+						"x": "metall",
+						"y": "automation",
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
-						"y": "client_communication",
-						"value": 0
+						"x": "metall",
+						"y": "knowledge_based_systems",
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
-						"y": "data_analysis",
-						"value": 7
+						"x": "elektroindustrie",
+						"y": "speech_comprehension",
+						"value": 6
 					},
 					{
-						"x": "telekommunikation",
-						"y": "other_fields",
+						"x": "elektroindustrie",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "machine_learning",
+						"value": 1
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
 						"value": 3
 					},
 					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "speech_comprehension",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "image_recognition",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 14
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
+						"value": 12
+					},
+					{
+						"x": "telekommunikation",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "telekommunikation",
+						"y": "automation",
+						"value": 12
+					},
+					{
+						"x": "telekommunikation",
+						"y": "knowledge_based_systems",
+						"value": 9
+					},
+					{
 						"x": "software",
-						"y": "products_and_services",
+						"y": "speech_comprehension",
+						"value": 24
+					},
+					{
+						"x": "software",
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "software",
+						"y": "machine_learning",
 						"value": 25
 					},
 					{
 						"x": "software",
-						"y": "process_automation",
-						"value": 11
+						"y": "automation",
+						"value": 15
 					},
 					{
 						"x": "software",
-						"y": "client_communication",
-						"value": 9
-					},
-					{
-						"x": "software",
-						"y": "data_analysis",
-						"value": 22
-					},
-					{
-						"x": "software",
-						"y": "other_fields",
-						"value": 4
+						"y": "knowledge_based_systems",
+						"value": 24
 					},
 					{
 						"x": "finanz",
-						"y": "products_and_services",
-						"value": 13
+						"y": "speech_comprehension",
+						"value": 2
 					},
 					{
 						"x": "finanz",
-						"y": "process_automation",
-						"value": 5
+						"y": "image_recognition",
+						"value": 2
 					},
 					{
 						"x": "finanz",
-						"y": "client_communication",
-						"value": 5
+						"y": "machine_learning",
+						"value": 3
 					},
 					{
 						"x": "finanz",
-						"y": "data_analysis",
+						"y": "automation",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "speech_comprehension",
 						"value": 16
 					},
 					{
-						"x": "finanz",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
 						"x": "unternehmensberatung",
-						"y": "products_and_services",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "process_automation",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "data_analysis",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "architektur",
-						"y": "products_and_services",
-						"value": 7
-					},
-					{
-						"x": "architektur",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "data_analysis",
+						"y": "image_recognition",
 						"value": 6
 					},
 					{
+						"x": "unternehmensberatung",
+						"y": "machine_learning",
+						"value": 15
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 6
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
+						"value": 18
+					},
+					{
 						"x": "architektur",
-						"y": "other_fields",
-						"value": 0
+						"y": "speech_comprehension",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "knowledge_based_systems",
+						"value": 1
 					},
 					{
 						"x": "forschung",
-						"y": "products_and_services",
-						"value": 28
+						"y": "speech_comprehension",
+						"value": 7
 					},
 					{
 						"x": "forschung",
-						"y": "process_automation",
-						"value": 13
+						"y": "image_recognition",
+						"value": 33
 					},
 					{
 						"x": "forschung",
-						"y": "client_communication",
-						"value": 8
+						"y": "machine_learning",
+						"value": 33
 					},
 					{
 						"x": "forschung",
-						"y": "data_analysis",
-						"value": 14
+						"y": "automation",
+						"value": 20
 					},
 					{
 						"x": "forschung",
-						"y": "other_fields",
-						"value": 14
-					},
-					{
-						"x": "kreativ",
-						"y": "products_and_services",
-						"value": 22
-					},
-					{
-						"x": "kreativ",
-						"y": "process_automation",
-						"value": 10
-					},
-					{
-						"x": "kreativ",
-						"y": "client_communication",
-						"value": 10
-					},
-					{
-						"x": "kreativ",
-						"y": "data_analysis",
+						"y": "knowledge_based_systems",
 						"value": 21
 					},
 					{
 						"x": "kreativ",
-						"y": "other_fields",
+						"y": "speech_comprehension",
+						"value": 12
+					},
+					{
+						"x": "kreativ",
+						"y": "image_recognition",
+						"value": 10
+					},
+					{
+						"x": "kreativ",
+						"y": "machine_learning",
+						"value": 7
+					},
+					{
+						"x": "kreativ",
+						"y": "automation",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "knowledge_based_systems",
 						"value": 3
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
-						"y": "products_and_services",
+						"y": "speech_comprehension",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "image_recognition",
 						"value": 0
 					},
 					{
 						"x": "nahrung",
-						"y": "process_automation",
+						"y": "machine_learning",
 						"value": 1
 					},
 					{
 						"x": "nahrung",
-						"y": "client_communication",
+						"y": "automation",
 						"value": 1
 					},
 					{
 						"x": "nahrung",
-						"y": "data_analysis",
-						"value": 2
-					},
-					{
-						"x": "nahrung",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "pharma",
-						"y": "products_and_services",
+						"y": "knowledge_based_systems",
 						"value": 2
 					},
 					{
 						"x": "pharma",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "client_communication",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "data_analysis",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "data_analysis",
+						"y": "speech_comprehension",
 						"value": 3
 					},
 					{
+						"x": "pharma",
+						"y": "image_recognition",
+						"value": 3
+					},
+					{
+						"x": "pharma",
+						"y": "machine_learning",
+						"value": 2
+					},
+					{
+						"x": "pharma",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "pharma",
+						"y": "knowledge_based_systems",
+						"value": 2
+					},
+					{
 						"x": "holz",
-						"y": "other_fields",
+						"y": "speech_comprehension",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "image_recognition",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "machine_learning",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "knowledge_based_systems",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "speech_comprehension",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "image_recognition",
 						"value": 3
 					},
 					{
 						"x": "metall",
-						"y": "products_and_services",
-						"value": 4
+						"y": "machine_learning",
+						"value": 3
 					},
 					{
 						"x": "metall",
-						"y": "process_automation",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "knowledge_based_systems",
+						"value": 2
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "speech_comprehension",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "speech_comprehension",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "image_recognition",
 						"value": 5
 					},
 					{
-						"x": "metall",
-						"y": "client_communication",
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
 						"value": 1
 					},
 					{
-						"x": "metall",
-						"y": "data_analysis",
-						"value": 2
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 1
 					},
 					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 2
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 7
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 1
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 12
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
 						"value": 8
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "data_analysis",
+						"x": "telekommunikation",
+						"y": "machine_learning",
 						"value": 7
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "products_and_services",
-						"value": 5
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "process_automation",
-						"value": 7
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 2
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "data_analysis",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 2
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "data_analysis",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 5
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "data_analysis",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
 						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 5
-					},
-					{
-						"x": "telekommunikation",
-						"y": "process_automation",
+						"y": "automation",
 						"value": 4
 					},
 					{
 						"x": "telekommunikation",
-						"y": "client_communication",
-						"value": 2
-					},
-					{
-						"x": "telekommunikation",
-						"y": "data_analysis",
-						"value": 5
-					},
-					{
-						"x": "telekommunikation",
-						"y": "other_fields",
-						"value": 1
+						"y": "knowledge_based_systems",
+						"value": 8
 					},
 					{
 						"x": "software",
-						"y": "products_and_services",
-						"value": 18
+						"y": "speech_comprehension",
+						"value": 19
 					},
 					{
 						"x": "software",
-						"y": "process_automation",
-						"value": 16
+						"y": "image_recognition",
+						"value": 14
 					},
 					{
 						"x": "software",
-						"y": "client_communication",
-						"value": 4
+						"y": "machine_learning",
+						"value": 22
 					},
 					{
 						"x": "software",
-						"y": "data_analysis",
-						"value": 16
+						"y": "automation",
+						"value": 17
 					},
 					{
 						"x": "software",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "finanz",
-						"y": "products_and_services",
-						"value": 10
-					},
-					{
-						"x": "finanz",
-						"y": "process_automation",
+						"y": "knowledge_based_systems",
 						"value": 17
 					},
 					{
 						"x": "finanz",
-						"y": "client_communication",
-						"value": 9
-					},
-					{
-						"x": "finanz",
-						"y": "data_analysis",
-						"value": 9
-					},
-					{
-						"x": "finanz",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "products_and_services",
-						"value": 9
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "process_automation",
-						"value": 5
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "data_analysis",
-						"value": 7
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "architektur",
-						"y": "products_and_services",
-						"value": 7
-					},
-					{
-						"x": "architektur",
-						"y": "process_automation",
+						"y": "speech_comprehension",
 						"value": 6
 					},
 					{
-						"x": "architektur",
-						"y": "client_communication",
+						"x": "finanz",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "machine_learning",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "automation",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "knowledge_based_systems",
 						"value": 4
 					},
 					{
-						"x": "architektur",
-						"y": "data_analysis",
-						"value": 4
+						"x": "unternehmensberatung",
+						"y": "speech_comprehension",
+						"value": 18
 					},
 					{
-						"x": "architektur",
-						"y": "other_fields",
-						"value": 3
+						"x": "unternehmensberatung",
+						"y": "image_recognition",
+						"value": 8
 					},
 					{
-						"x": "forschung",
-						"y": "products_and_services",
-						"value": 22
+						"x": "unternehmensberatung",
+						"y": "machine_learning",
+						"value": 16
 					},
 					{
-						"x": "forschung",
-						"y": "process_automation",
+						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
 						"value": 15
 					},
 					{
-						"x": "forschung",
-						"y": "client_communication",
-						"value": 0
+						"x": "architektur",
+						"y": "speech_comprehension",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 1
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "knowledge_based_systems",
+						"value": 1
 					},
 					{
 						"x": "forschung",
-						"y": "data_analysis",
+						"y": "speech_comprehension",
 						"value": 9
 					},
 					{
 						"x": "forschung",
-						"y": "other_fields",
-						"value": 3
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "forschung",
+						"y": "machine_learning",
+						"value": 21
+					},
+					{
+						"x": "forschung",
+						"y": "automation",
+						"value": 14
+					},
+					{
+						"x": "forschung",
+						"y": "knowledge_based_systems",
+						"value": 13
 					},
 					{
 						"x": "kreativ",
-						"y": "products_and_services",
-						"value": 4
+						"y": "speech_comprehension",
+						"value": 15
 					},
 					{
 						"x": "kreativ",
-						"y": "process_automation",
-						"value": 3
+						"y": "image_recognition",
+						"value": 8
 					},
 					{
 						"x": "kreativ",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "kreativ",
-						"y": "data_analysis",
+						"y": "machine_learning",
 						"value": 5
 					},
 					{
 						"x": "kreativ",
-						"y": "other_fields",
-						"value": 0
+						"y": "automation",
+						"value": 1
+					},
+					{
+						"x": "kreativ",
+						"y": "knowledge_based_systems",
+						"value": 3
 					}
 				]
 			}
@@ -5577,612 +5592,762 @@
 		{
 			"id": "ai_applications",
 			"title": "Anwendungen von KI",
-			"displayNumber": "🚨 7.7",
+			"displayNumber": "7.7",
 			"chart_type": "matrix",
 			"text": "Während der Einsatz in den unterschiedlichen Unternehmensbereichen in Berlin in 2023 nur noch moderat über dem deutschen Durchschnitt liegt, ist der Anteil von Unternehmen, bei denen KI das Produkt oder die Dienstleistung ist, erheblich höher.",
 			"data": {
 				"ber": [
 					{
 						"x": "nahrung",
-						"y": "speech_comprehension",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "image_recognition",
+						"y": "products_and_services",
 						"value": 4
 					},
 					{
 						"x": "nahrung",
-						"y": "machine_learning",
+						"y": "process_automation",
 						"value": 1
 					},
 					{
 						"x": "nahrung",
-						"y": "knowledge_based_systems",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "it_admin",
+						"value": 4
+					},
+					{
+						"x": "nahrung",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "pharma",
+						"y": "products_and_services",
+						"value": 10
+					},
+					{
+						"x": "pharma",
+						"y": "process_automation",
+						"value": 4
+					},
+					{
+						"x": "pharma",
+						"y": "client_communication",
+						"value": 6
+					},
+					{
+						"x": "pharma",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "pharma",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "products_and_services",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "products_and_services",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "client_communication",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "it_admin",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "other_fields",
+						"value": 4
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "products_and_services",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "client_communication",
+						"value": 5
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "it_admin",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_fields",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "products_and_services",
+						"value": 5
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "process_automation",
+						"value": 1
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "client_communication",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "products_and_services",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "products_and_services",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "products_and_services",
+						"value": 10
+					},
+					{
+						"x": "telekommunikation",
+						"y": "process_automation",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "client_communication",
+						"value": 8
+					},
+					{
+						"x": "telekommunikation",
+						"y": "it_admin",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_fields",
+						"value": 8
+					},
+					{
+						"x": "software",
+						"y": "products_and_services",
+						"value": 36
+					},
+					{
+						"x": "software",
+						"y": "process_automation",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "client_communication",
+						"value": 14
+					},
+					{
+						"x": "software",
+						"y": "it_admin",
+						"value": 4
+					},
+					{
+						"x": "software",
+						"y": "other_fields",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "products_and_services",
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "products_and_services",
+						"value": 18
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "process_automation",
+						"value": 3
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "client_communication",
+						"value": 4
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "it_admin",
+						"value": 6
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_fields",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "products_and_services",
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "architektur",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "other_fields",
+						"value": 3
+					},
+					{
+						"x": "forschung",
+						"y": "products_and_services",
+						"value": 34
+					},
+					{
+						"x": "forschung",
+						"y": "process_automation",
+						"value": 6
+					},
+					{
+						"x": "forschung",
+						"y": "client_communication",
+						"value": 7
+					},
+					{
+						"x": "forschung",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "forschung",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "kreativ",
+						"y": "products_and_services",
 						"value": 11
 					},
 					{
-						"x": "pharma",
-						"y": "speech_comprehension",
-						"value": 1
-					},
-					{
-						"x": "pharma",
-						"y": "image_recognition",
-						"value": 1
-					},
-					{
-						"x": "pharma",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "knowledge_based_systems",
-						"value": 8
-					},
-					{
-						"x": "holz",
-						"y": "speech_comprehension",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "image_recognition",
-						"value": 18
-					},
-					{
-						"x": "holz",
-						"y": "machine_learning",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "knowledge_based_systems",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "speech_comprehension",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "image_recognition",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "machine_learning",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "knowledge_based_systems",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "speech_comprehension",
-						"value": 5
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "image_recognition",
-						"value": 5
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "knowledge_based_systems",
-						"value": 7
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "speech_comprehension",
-						"value": 16
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "image_recognition",
-						"value": 13
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "machine_learning",
-						"value": 6
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "knowledge_based_systems",
-						"value": 6
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "speech_comprehension",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "image_recognition",
-						"value": 9
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "machine_learning",
-						"value": 9
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "speech_comprehension",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "telekommunikation",
-						"y": "speech_comprehension",
-						"value": 12
-					},
-					{
-						"x": "telekommunikation",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "telekommunikation",
-						"y": "machine_learning",
-						"value": 8
-					},
-					{
-						"x": "telekommunikation",
-						"y": "knowledge_based_systems",
-						"value": 5
-					},
-					{
-						"x": "software",
-						"y": "speech_comprehension",
-						"value": 12
-					},
-					{
-						"x": "software",
-						"y": "image_recognition",
-						"value": 17
-					},
-					{
-						"x": "software",
-						"y": "machine_learning",
-						"value": 28
-					},
-					{
-						"x": "software",
-						"y": "knowledge_based_systems",
-						"value": 18
-					},
-					{
-						"x": "finanz",
-						"y": "speech_comprehension",
-						"value": 17
-					},
-					{
-						"x": "finanz",
-						"y": "image_recognition",
-						"value": 9
-					},
-					{
-						"x": "finanz",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "finanz",
-						"y": "knowledge_based_systems",
-						"value": 9
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "speech_comprehension",
-						"value": 8
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "image_recognition",
-						"value": 7
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "machine_learning",
-						"value": 8
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "knowledge_based_systems",
-						"value": 7
-					},
-					{
-						"x": "architektur",
-						"y": "speech_comprehension",
-						"value": 8
-					},
-					{
-						"x": "architektur",
-						"y": "image_recognition",
-						"value": 5
-					},
-					{
-						"x": "architektur",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "architektur",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "forschung",
-						"y": "speech_comprehension",
-						"value": 9
-					},
-					{
-						"x": "forschung",
-						"y": "image_recognition",
-						"value": 22
-					},
-					{
-						"x": "forschung",
-						"y": "machine_learning",
-						"value": 29
-					},
-					{
-						"x": "forschung",
-						"y": "knowledge_based_systems",
-						"value": 22
-					},
-					{
 						"x": "kreativ",
-						"y": "speech_comprehension",
-						"value": 17
-					},
-					{
-						"x": "kreativ",
-						"y": "image_recognition",
+						"y": "process_automation",
 						"value": 4
 					},
 					{
 						"x": "kreativ",
-						"y": "machine_learning",
-						"value": 14
+						"y": "client_communication",
+						"value": 7
 					},
 					{
 						"x": "kreativ",
-						"y": "knowledge_based_systems",
-						"value": 14
+						"y": "it_admin",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "other_fields",
+						"value": 1
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
-						"y": "speech_comprehension",
-						"value": 0
+						"y": "products_and_services",
+						"value": 12
 					},
 					{
 						"x": "nahrung",
-						"y": "image_recognition",
-						"value": 1
+						"y": "process_automation",
+						"value": 2
 					},
 					{
 						"x": "nahrung",
-						"y": "machine_learning",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "image_recognition",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "machine_learning",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "speech_comprehension",
-						"value": 5
-					},
-					{
-						"x": "holz",
-						"y": "image_recognition",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "holz",
-						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "metall",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "metall",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "speech_comprehension",
-						"value": 7
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "image_recognition",
-						"value": 10
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "machine_learning",
-						"value": 8
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "knowledge_based_systems",
-						"value": 8
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "image_recognition",
-						"value": 7
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "machine_learning",
-						"value": 5
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "image_recognition",
-						"value": 2
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "speech_comprehension",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "telekommunikation",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "telekommunikation",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "telekommunikation",
-						"y": "machine_learning",
-						"value": 4
-					},
-					{
-						"x": "telekommunikation",
-						"y": "knowledge_based_systems",
-						"value": 5
-					},
-					{
-						"x": "software",
-						"y": "speech_comprehension",
-						"value": 8
-					},
-					{
-						"x": "software",
-						"y": "image_recognition",
-						"value": 13
-					},
-					{
-						"x": "software",
-						"y": "machine_learning",
+						"y": "client_communication",
 						"value": 11
 					},
 					{
-						"x": "software",
-						"y": "knowledge_based_systems",
-						"value": 14
+						"x": "nahrung",
+						"y": "it_admin",
+						"value": 5
 					},
 					{
-						"x": "finanz",
-						"y": "speech_comprehension",
-						"value": 14
-					},
-					{
-						"x": "finanz",
-						"y": "image_recognition",
-						"value": 13
-					},
-					{
-						"x": "finanz",
-						"y": "machine_learning",
-						"value": 12
-					},
-					{
-						"x": "finanz",
-						"y": "knowledge_based_systems",
-						"value": 12
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "speech_comprehension",
-						"value": 9
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "machine_learning",
-						"value": 9
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "knowledge_based_systems",
-						"value": 8
-					},
-					{
-						"x": "architektur",
-						"y": "speech_comprehension",
-						"value": 9
-					},
-					{
-						"x": "architektur",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "architektur",
-						"y": "machine_learning",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "knowledge_based_systems",
-						"value": 7
-					},
-					{
-						"x": "forschung",
-						"y": "speech_comprehension",
+						"x": "nahrung",
+						"y": "other_fields",
 						"value": 2
 					},
 					{
-						"x": "forschung",
-						"y": "image_recognition",
-						"value": 16
-					},
-					{
-						"x": "forschung",
-						"y": "machine_learning",
-						"value": 25
-					},
-					{
-						"x": "forschung",
-						"y": "knowledge_based_systems",
-						"value": 18
-					},
-					{
-						"x": "kreativ",
-						"y": "speech_comprehension",
+						"x": "pharma",
+						"y": "products_and_services",
 						"value": 6
 					},
 					{
-						"x": "kreativ",
-						"y": "image_recognition",
+						"x": "pharma",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "pharma",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "pharma",
+						"y": "it_admin",
 						"value": 3
 					},
 					{
-						"x": "kreativ",
-						"y": "machine_learning",
+						"x": "pharma",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "products_and_services",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "process_automation",
 						"value": 4
 					},
 					{
-						"x": "kreativ",
-						"y": "knowledge_based_systems",
+						"x": "holz",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "it_admin",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "products_and_services",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "process_automation",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "it_admin",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "products_and_services",
+						"value": 16
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "process_automation",
+						"value": 4
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "client_communication",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "it_admin",
+						"value": 7
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_fields",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "products_and_services",
+						"value": 13
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "process_automation",
 						"value": 5
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "client_communication",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "it_admin",
+						"value": 5
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_fields",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "products_and_services",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "process_automation",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "products_and_services",
+						"value": 5
+					},
+					{
+						"x": "energie",
+						"y": "process_automation",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "client_communication",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "it_admin",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "other_fields",
+						"value": 2
+					},
+					{
+						"x": "telekommunikation",
+						"y": "products_and_services",
+						"value": 19
+					},
+					{
+						"x": "telekommunikation",
+						"y": "process_automation",
+						"value": 1
+					},
+					{
+						"x": "telekommunikation",
+						"y": "client_communication",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_fields",
+						"value": 2
+					},
+					{
+						"x": "software",
+						"y": "products_and_services",
+						"value": 38
+					},
+					{
+						"x": "software",
+						"y": "process_automation",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "client_communication",
+						"value": 16
+					},
+					{
+						"x": "software",
+						"y": "it_admin",
+						"value": 9
+					},
+					{
+						"x": "software",
+						"y": "other_fields",
+						"value": 11
+					},
+					{
+						"x": "finanz",
+						"y": "products_and_services",
+						"value": 7
+					},
+					{
+						"x": "finanz",
+						"y": "process_automation",
+						"value": 7
+					},
+					{
+						"x": "finanz",
+						"y": "client_communication",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "it_admin",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "other_fields",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "products_and_services",
+						"value": 39
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "client_communication",
+						"value": 9
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "it_admin",
+						"value": 2
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_fields",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "products_and_services",
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "process_automation",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "architektur",
+						"y": "it_admin",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "forschung",
+						"y": "products_and_services",
+						"value": 22
+					},
+					{
+						"x": "forschung",
+						"y": "process_automation",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "client_communication",
+						"value": 0
+					},
+					{
+						"x": "forschung",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "products_and_services",
+						"value": 24
+					},
+					{
+						"x": "kreativ",
+						"y": "process_automation",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "client_communication",
+						"value": 16
+					},
+					{
+						"x": "kreativ",
+						"y": "it_admin",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "other_fields",
+						"value": 11
 					}
 				]
 			}
