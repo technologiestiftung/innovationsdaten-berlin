@@ -26,7 +26,6 @@
 
 $stroke-width: 2px;
 $all-transition: all 0.3s ease-in-out;
-$breakpoint: 80vw;
 $toggle-height: 40px;
 
 html {
@@ -64,10 +63,10 @@ html {
 	}
 	main {
 		max-width: 100vw;
-		@media screen and (min-width: $breakpoint) {
-			max-width: $breakpoint !important;
-			margin-left: calc((100vw - $breakpoint) / 2);
-		}
+		// @media screen and (min-width: $breakpoint) {
+		// 	max-width: $breakpoint !important;
+		// 	margin-left: calc((100vw - $breakpoint) / 2);
+		// }
 	}
 }
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
-import colors from "../data/colors.json";
 import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
 import wordings from "../data/wordings.json";

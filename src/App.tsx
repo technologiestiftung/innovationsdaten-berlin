@@ -10,10 +10,10 @@ import Welcome from "./sections/Welcome";
 
 function App() {
 	return (
-		<>
+		<div className="h-full w-full">
 			<Header />
 			<Menu />
-			<main>
+			<main className="h-[calc(100vh-6rem)] top-24 w-full relative">
 				<Welcome />
 				{Object.keys(data).map((dataKey) => (
 					<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
@@ -21,7 +21,7 @@ function App() {
 				<div className="w-full min-h-[20vh]" />
 			</main>
 			<Footer />
-		</>
+		</div>
 	);
 }
 
