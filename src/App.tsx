@@ -5,7 +5,7 @@ import Menu from "./components/Menu";
 import data from "./data/data.json";
 import Sticky from "./sections/Sticky";
 import { ChapterKeys } from "./types/global";
-import Footer from "./sections/Footer";
+// import Footer from "./sections/Footer";
 import Welcome from "./sections/Welcome";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 				))}
 				<div className="w-full min-h-[20vh]" />
 			</main>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
