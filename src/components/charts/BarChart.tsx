@@ -124,6 +124,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						: data[branche.id].value;
 				const getBreakPoint = bar_chart_unit_breakpoint || 0;
 				return {
+					id: branche.id,
 					name: branche.name,
 					value: getValue,
 					delta: getDelta > 0 ? getDelta : -getDelta,
@@ -189,6 +190,9 @@ const BarChart: React.FC<BarChartProps> = ({
 			"positiveDelta" in collectData[index]
 				? collectData[index].positiveDelta
 				: false;
+		const getValue = chart_type.includes("delta")
+			? collectData[index].value
+			: value;
 		const getFill = () => {
 			if (chart_type === "bar_chart") {
 				return isSmall && theme === "light" ? colors.blue : colors.white;
@@ -208,35 +212,33 @@ const BarChart: React.FC<BarChartProps> = ({
 			return x + width - paddingLabel;
 		};
 		return (
-			<>
-				<text
-					x={setX()}
-					y={y + height / 2}
-					textAnchor={isSmall ? "start" : "end"}
-					dominantBaseline="middle"
-					fontWeight="bold"
-					fontFamily="Clan Pro"
-				>
-					{(chart_type.includes("delta") || chart_unit === "€") && (
-						<>
-							{/* Value Display */}
-							<tspan fill={getFill()}>{formatNumber(value)}</tspan>
-							{chart_type.includes("delta") && (
-								<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
-									{positiveDelta ? "↑" : "↓"}
-									{delta}
-								</tspan>
-							)}
-						</>
-					)}
-					{chart_unit === "%" && (
-						<tspan fill={getFill()}>
-							{/* Value Display */}
-							{formatNumber(value)} {chart_unit}
-						</tspan>
-					)}
-				</text>
-			</>
+			<text
+				x={setX()}
+				y={y + height / 2}
+				textAnchor={isSmall ? "start" : "end"}
+				dominantBaseline="middle"
+				fontWeight="bold"
+				fontFamily="Clan Pro"
+			>
+				{(chart_type.includes("delta") || chart_unit === "€") && (
+					<>
+						{/* Value Display */}
+						<tspan fill={getFill()}>{getValue}</tspan>
+						{chart_type.includes("delta") && (
+							<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
+								{positiveDelta ? "↑" : "↓"}
+								{delta}
+							</tspan>
+						)}
+					</>
+				)}
+				{chart_unit === "%" && (
+					<tspan fill={getFill()}>
+						{/* Value Display */}
+						{formatNumber(value)} {chart_unit}
+					</tspan>
+				)}
+			</text>
 		);
 	};
 
