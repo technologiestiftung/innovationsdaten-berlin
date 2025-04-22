@@ -30,7 +30,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 	sortBy,
 	setSortBy,
 }) => {
-	const { theme, fontSize } = useGlobalContext();
+	const { theme } = useGlobalContext();
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
 	const allIndustrieBranchen: string[] = branchen
@@ -147,9 +147,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 			ref={dropdownRef}
 			className={`relative inline-block drop-down ${theme}`}
 		>
-			<div className="flex items-center" style={{ gap: fontSize }}>
-				<div className="flex-1">
-					<Icon id={type} size={fontSize * 1.5} />
+			<div className="flex items-center gap-16">
+				<div className="flex-1 size-24">
+					<Icon id={type} />
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
@@ -158,14 +158,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 					<p className="bold select-none text-left first-letter:capitalize">
 						{setName()}
 					</p>
-					<div
-						style={{
-							transform: isOpen ? "none" : "rotate(180deg)",
-						}}
-					>
+					<div className={`size-24 ${isOpen && "rotate-180"}`}>
 						<Icon
 							id="chevron"
-							size={fontSize}
 							setColor={theme === "dark" ? colors.white : colors.blue}
 						/>
 					</div>
@@ -174,10 +169,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 			{isOpen && (
 				<div
 					className="flyout absolute z-10"
-					style={{
-						width: `calc(100% - ${fontSize * 2.5}px)`,
-						marginLeft: fontSize * 2.5,
-					}}
+					// style={{
+					// 	width: `calc(100% - ${fontSize * 2.5}px)`,
+					// 	marginLeft: fontSize * 2.5,
+					// }}
 				>
 					<ul className="overflow-y-auto px-2">
 						{type === "filter" && (
@@ -188,14 +183,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 											className="flex items-center p-2 cursor-pointer"
 											onClick={toggleAll}
 										>
-											<span className="mr-2">
+											<span className="mr-2 size-24">
 												<Icon
 													id={
 														activeFilters?.length === allFilters?.length
 															? "checked"
 															: "unchecked"
 													}
-													size={fontSize}
 												/>
 											</span>
 											<p className="bold select-none">Alle</p>
@@ -206,14 +200,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 												className="flex items-center p-2 cursor-pointer"
 												onClick={() => toggleSektor(sektor.id)}
 											>
-												<span className="mr-2">
+												<span className="mr-2 size-24">
 													<Icon
 														id={
 															checkForAllSektorChecked(sektor.id)
 																? "checked"
 																: "unchecked"
 														}
-														size={fontSize}
 													/>
 												</span>
 												<p className="bold select-none">{sektor.name}</p>
@@ -232,7 +225,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 												className="flex items-center p-2 cursor-pointer"
 												onClick={() => toggleFilter(filter)}
 											>
-												<span className="mr-2">
+												<span className="mr-2 size-14">
 													<Icon
 														id={
 															activeFilters?.includes(filter) ||
@@ -240,7 +233,6 @@ const Dropdown: React.FC<DropdownProps> = ({
 																? "checked"
 																: "unchecked"
 														}
-														size={fontSize}
 													/>
 												</span>
 												<p className="line-clamp-1 break-words select-none first-letter:capitalize">
@@ -265,11 +257,8 @@ const Dropdown: React.FC<DropdownProps> = ({
 											}
 										}}
 									>
-										<span className="mr-2">
-											<Icon
-												id={sortBy === item ? "checked" : "unchecked"}
-												size={fontSize}
-											/>
+										<span className="mr-2 size-24">
+											<Icon id={sortBy === item ? "checked" : "unchecked"} />
 										</span>
 										{wordings[item as keyof typeof wordings] && (
 											<p className="bold select-none line-clamp-1 break-words">

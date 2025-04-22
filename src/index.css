@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
 	font-family: "Clan Pro";
 	src:
@@ -98,6 +100,11 @@
 			font-size: 0.875rem;
 			line-height: 1.2;
 		}
+	}
+
+	.iconSize {
+		font-size: 2rem;
+		line-height: 1.2;
 	}
 	button {
 		font-family: var(--font-display);

@@ -38,20 +38,12 @@ const BarChart: React.FC<BarChartProps> = ({
 	chart_type,
 	chart_unit,
 	has_tooltip,
-	multiline_y_axis_label,
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
 	sortsAfter,
 }) => {
 	// Global Context
-	const {
-		axisFontStylings,
-		theme,
-		fontSize,
-		region,
-		setRegion,
-		widthOfStickyContainer,
-	} = useGlobalContext();
+	const { theme, region, setRegion } = useGlobalContext();
 
 	// Exclude keys from data
 	const excludeKeyFromBranch = [
@@ -64,10 +56,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	];
 	const excludeKeyFromToolTip = ["umsatz_nachahmer_innovationen"];
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
-
-	const yAxisWidth = multiline_y_axis_label
-		? widthOfStickyContainer * 0.4
-		: widthOfStickyContainer * 0.25;
 
 	// State
 	const [sortBy, setSortBy] = useState<string | null>(null);
@@ -311,7 +299,6 @@ const BarChart: React.FC<BarChartProps> = ({
 					className="bold max-w-[350px]"
 					style={{
 						color: theme === "dark" ? colors.dark : colors.white,
-						marginBottom: fontSize,
 					}}
 				>
 					{payloadData.name}
@@ -447,7 +434,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						<YAxis
 							type="category"
 							dataKey="name"
-							width={yAxisWidth}
+							// width={yAxisWidth}
 							tick={{
 								fontFamily: "Clan Pro",
 								fontSize: 12,
@@ -533,7 +520,6 @@ const BarChart: React.FC<BarChartProps> = ({
 							hide={chart_type.includes("full")}
 							domain={chart_type.includes("full") ? [0, 100] : ["auto", "auto"]}
 							tick={{
-								...axisFontStylings,
 								fill: theme === "dark" ? colors.white : colors.blue,
 								dy: 25,
 							}}

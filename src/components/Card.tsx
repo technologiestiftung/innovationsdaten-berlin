@@ -23,25 +23,25 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme, headerHeight } = useGlobalContext();
+	const { theme } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
 	const getMarginTop = () => {
 		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
+			return (window.innerHeight - cardHeight) / 2;
 		}
 		if (first) {
 			return specificMargin;
 		}
-		return window.innerHeight - headerHeight;
+		return window.innerHeight;
 	};
 	const getMarginBottom = () => {
 		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
+			return (window.innerHeight - cardHeight) / 2;
 		}
 		if (last) {
-			return window.innerHeight - headerHeight;
+			return window.innerHeight;
 		}
 		return 0;
 	};
@@ -74,7 +74,7 @@ const Card: React.FC<CardProps> = ({
 				return;
 			}
 			const getCardHeight = getCard?.getBoundingClientRect().height;
-			const subtraction = window.innerHeight - getCardHeight - headerHeight;
+			const subtraction = window.innerHeight - getCardHeight;
 			const getMargin = subtraction / 2;
 			setSpecificMargin(getMargin);
 		}
@@ -89,7 +89,7 @@ const Card: React.FC<CardProps> = ({
 			}
 			setCardHeight(getCard?.getBoundingClientRect().height);
 		}
-	}, [headerHeight]);
+	}, []);
 	return (
 		<div
 			ref={cardRef}

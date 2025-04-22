@@ -37,14 +37,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	setToggleData,
 	togglesBetween,
 }) => {
-	const {
-		theme,
-		fontSize,
-		axisFontStylings,
-		region,
-		setRegion,
-		widthOfStickyContainer,
-	} = useGlobalContext();
+	const { theme, region, setRegion } = useGlobalContext();
 
 	const allFilters = branchen.map((branche) => branche.id);
 	const [activeFilters, setActiveFilters] = useState<string[] | null>(
@@ -101,7 +94,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					className="bold"
 					style={{
 						color: theme === "dark" ? colors.dark : colors.white,
-						marginBottom: fontSize,
 					}}
 				>
 					{payloadData?.year}
@@ -180,7 +172,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						dataKey="year"
 						stroke={theme === "dark" ? colors.white : colors.blue}
 						strokeWidth={2}
-						tick={axisFontStylings}
 						interval={0}
 					/>
 					<Tooltip content={<CustomTooltip />} />
@@ -247,9 +238,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
-						width={widthOfStickyContainer * 0.2}
 						tick={{
-							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
 						}}
 						// Value Display

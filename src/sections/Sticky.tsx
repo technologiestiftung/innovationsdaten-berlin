@@ -1,5 +1,4 @@
 import data from "../data/data.json";
-import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
 import { ChapterKeys, StickyItem } from "../types/global";
 import Card from "../components/Card";
@@ -10,7 +9,6 @@ type StickyProps = {
 };
 
 const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
-	const { headerHeight } = useGlobalContext();
 	const typedData = data as Record<ChapterKeys, StickyItem[]>;
 	const dataArray = typedData[dataKey];
 	const [current, setCurrent] = useState<StickyItem | null>(null);
@@ -22,18 +20,8 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 	}, [dataArray]);
 
 	return (
-		<section
-			id={dataKey}
-			className="sticky-section relative w-full flex gap-6"
-			style={{ paddingTop: headerHeight }}
-		>
-			<div
-				className="sticky flex items-center basis-3/5"
-				style={{
-					height: window.innerHeight - headerHeight,
-					top: headerHeight,
-				}}
-			>
+		<section id={dataKey} className="sticky-section relative w-full flex gap-6">
+			<div className="sticky flex items-center basis-3/5 h-full">
 				<div className="w-full">
 					<LeftStickyContent data={current as StickyItem} />
 				</div>

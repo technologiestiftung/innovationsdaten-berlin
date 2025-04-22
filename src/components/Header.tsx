@@ -6,24 +6,22 @@ import { useGlobalContext } from "../GlobalContext";
 
 const Header: React.FC = () => {
 	const {
-		fontSize,
 		theme,
 		toggleTheme,
 		chapter: globalChapter,
 		setChapter,
-		headerHeight,
-		breakPoint,
-		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
-	const toggleIconSize = isMobile ? fontSize * 1.25 : fontSize * 2;
 	return (
 		<>
 			<header
 				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
 			>
-				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
-					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
+				<div
+					onClick={() => window.scrollTo(0, 0)}
+					className="cursor-pointer size-24"
+				>
+					<Icon id="innodaten_logo_wording" />
 				</div>
 				<div className="flex items-center gap-8">
 					<div className="flex items-center gap-8">
@@ -34,19 +32,16 @@ const Header: React.FC = () => {
 						>
 							<h4>{globalChapter}</h4>
 							{/* @refactor */}
-							<div
-								className={open ? "tailwind" : "tailwind"}
-								style={{ transform: open ? "rotate(180deg)" : "none" }}
-							>
-								<Icon id="chevron" size={fontSize * 1.5} />
+							<div className={`size-24 ${open && "rotate-180"}`}>
+								<Icon id="chevron" />
 							</div>
 						</div>
 					</div>
-					<div className={`cursor-pointer ${theme}`} onClick={toggleTheme}>
+					<div className={`cursor-pointer size-24 `} onClick={toggleTheme}>
 						{theme === "dark" ? (
-							<Icon id="moon" size={toggleIconSize} setColor={colors.white} />
+							<Icon id="moon" setColor={colors.white} />
 						) : (
-							<Icon id="sun" size={toggleIconSize} setColor={colors.blue} />
+							<Icon id="sun" setColor={colors.blue} />
 						)}
 					</div>
 				</div>
@@ -55,9 +50,8 @@ const Header: React.FC = () => {
 				<ul
 					className={`fixed nav-ul py-6 px-12 z-12 ${theme}`}
 					style={{
-						top: headerHeight - 2,
 						left: "auto",
-						right: (window.innerWidth - breakPoint) / 2,
+						right: window.innerWidth / 2,
 					}}
 					onMouseLeave={() => setOpen(false)}
 				>

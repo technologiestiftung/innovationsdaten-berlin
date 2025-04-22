@@ -1,36 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
 
 const Welcome: React.FC = () => {
-	const { headerHeight, theme, setWidthOfStickyContainer } = useGlobalContext();
+	const { theme } = useGlobalContext();
 	const selfRef = useRef<HTMLDivElement>(null);
-	useEffect(() => {
-		const handleResize = () => {
-			if (selfRef.current) {
-				setWidthOfStickyContainer(selfRef.current.offsetWidth);
-			}
-		};
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, [setWidthOfStickyContainer]);
 
 	return (
-		<section
-			id="welcome"
-			className="sticky-section relative w-full flex gap-6"
-			style={{ paddingTop: headerHeight }}
-		>
-			<div
-				ref={selfRef}
-				className="flex items-center basis-1/2"
-				style={{
-					height: window.innerHeight - headerHeight,
-				}}
-			>
+		<section id="welcome" className="sticky-section relative w-full flex gap-6">
+			<div ref={selfRef} className="flex items-center basis-1/2">
 				<div className="w-full">
 					<Overview />
 				</div>
