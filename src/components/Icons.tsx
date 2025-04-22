@@ -14,7 +14,6 @@ const Icon: React.FC<IconProps> = ({ id }) => {
 			</svg>
 		);
 	}
-
 	if (id === "fahrzeugbau") {
 		return (
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.54 21.5">
@@ -174,6 +173,7 @@ const Icon: React.FC<IconProps> = ({ id }) => {
 			</svg>
 		);
 	}
+<<<<<<< HEAD
 	if (id === "scroll") {
 		return (
 			<svg viewBox="0 0 16 44">
@@ -184,6 +184,8 @@ const Icon: React.FC<IconProps> = ({ id }) => {
 			</svg>
 		);
 	}
+=======
+>>>>>>> origin/feat/add-svgs
 	if (id === "tsb_logo") {
 		return (
 			<svg viewBox="0 0 150 46.06">
@@ -355,6 +357,7 @@ const Icon: React.FC<IconProps> = ({ id }) => {
 			</svg>
 		);
 	}
+<<<<<<< HEAD
 	if (id === "delta_negative") {
 		return (
 			<svg viewBox="0 0 36 77.54">
@@ -369,6 +372,8 @@ const Icon: React.FC<IconProps> = ({ id }) => {
 			</svg>
 		);
 	}
+=======
+>>>>>>> origin/feat/add-svgs
 	if (id === "SenWEB_logo") {
 		return (
 			<svg viewBox="0 0 264 48" fill="none">
