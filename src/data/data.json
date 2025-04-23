@@ -4017,7 +4017,7 @@
 			"chart_unit": "%",
 			"has_tooltip": true,
 			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
-			"sortsAfterOnStart": "insgesamt",
+			"sortsAfterOnStart": "total",
 			"data": {
 				"ber": [
 					{

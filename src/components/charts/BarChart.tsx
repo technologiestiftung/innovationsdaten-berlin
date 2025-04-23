@@ -72,6 +72,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	const excludeKeyFromToolTip = [
 		"umsatz_nachahmer_innovationen",
 		"differenz_intensitaet",
+		"total",
 	];
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
 
@@ -96,6 +97,14 @@ const BarChart: React.FC<BarChartProps> = ({
 				// stacked
 				if (chart_type.includes("stacked")) {
 					const getData = data.find((item: any) => item.id === branche.id);
+					if (id === "most_supported_branchen") {
+						const getTotal = sumNumericValues(getData);
+						return {
+							...branche,
+							...getData,
+							total: getTotal,
+						};
+					}
 					if ("insgesamt" in getData) {
 						return {
 							...branche,
@@ -173,7 +182,10 @@ const BarChart: React.FC<BarChartProps> = ({
 
 		if (sortBy) {
 			getSortBy = sortBy;
-		} else if (result.some((item: any) => "insgesamt" in item)) {
+		} else if (
+			result.some((item: any) => "insgesamt" in item) &&
+			!result.some((item: any) => "total" in item)
+		) {
 			getSortBy = "insgesamt";
 		} else if (Array.isArray(sortsAfter)) {
 			getSortBy = sortsAfter[0];
@@ -182,6 +194,13 @@ const BarChart: React.FC<BarChartProps> = ({
 		if (!getSortBy && sortsAfterOnStart) {
 			getSortBy = sortsAfterOnStart;
 		}
+
+		console.log("");
+		console.log("");
+		console.log("");
+		console.log("");
+		console.log("");
+		console.log("getSortBy :>> ", getSortBy);
 
 		result.sort((a: any, b: any) => {
 			const key = getSortBy || "value";
@@ -511,7 +530,10 @@ const BarChart: React.FC<BarChartProps> = ({
 							<>
 								{objectKeys
 									.filter(
-										(objectKey) => !excludeKeyFromChart.includes(objectKey),
+										(objectKey) =>
+											id === "most_supported_branchen" ||
+											(id !== "most_supported_branchen" &&
+												!excludeKeyFromChart.includes(objectKey)),
 									)
 									.map((dataKey, index) => (
 										<Bar
