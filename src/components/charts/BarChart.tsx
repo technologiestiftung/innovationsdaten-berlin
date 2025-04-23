@@ -195,13 +195,6 @@ const BarChart: React.FC<BarChartProps> = ({
 			getSortBy = sortsAfterOnStart;
 		}
 
-		console.log("");
-		console.log("");
-		console.log("");
-		console.log("");
-		console.log("");
-		console.log("getSortBy :>> ", getSortBy);
-
 		result.sort((a: any, b: any) => {
 			const key = getSortBy || "value";
 			if (a[key] < b[key]) {
