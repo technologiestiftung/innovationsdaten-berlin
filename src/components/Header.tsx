@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 w-screen z-[11] flex justify-between items-center ${theme}`}
+				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
 			>
 				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
 					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
 			</header>
 			{open && (
 				<ul
-					className={`fixed nav-ul py-6 px-12 z-[12] ${theme}`}
+					className={`fixed nav-ul py-6 px-12 ${theme}`}
 					style={{
 						top: headerHeight - 2,
 						left: "auto",

@@ -15,7 +15,11 @@ import {
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
 import colors from "../../data/colors.json";
-import { formatEuroNumber, formatNumber } from "../../utilities";
+import {
+	formatEuroNumber,
+	formatNumber,
+	sumNumericValues,
+} from "../../utilities";
 import wordings from "../../data/wordings.json";
 import Dropdown from "./../DropDown";
 import DataToggle from "../DataToggle";
@@ -30,6 +34,7 @@ type BarChartProps = {
 	bar_chart_unit_breakpoint?: number;
 	hasRegionToggle?: boolean;
 	sortsAfter?: dataKeys[];
+	sortsAfterOnStart?: string;
 };
 
 const BarChart: React.FC<BarChartProps> = ({
@@ -42,6 +47,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
 	sortsAfter,
+	sortsAfterOnStart,
 }) => {
 	// Global Context
 	const {
@@ -62,7 +68,12 @@ const BarChart: React.FC<BarChartProps> = ({
 		"sektor_id",
 		"umsatz_produkt_neuheiten",
 	];
-	const excludeKeyFromToolTip = ["umsatz_nachahmer_innovationen"];
+	const excludeKeyFromChart = ["insgesamt", "innovations_intensitaet"];
+	const excludeKeyFromToolTip = [
+		"umsatz_nachahmer_innovationen",
+		"differenz_intensitaet",
+		"total",
+	];
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
 
 	const yAxisWidth = multiline_y_axis_label
@@ -82,15 +93,32 @@ const BarChart: React.FC<BarChartProps> = ({
 		let result: any = [];
 
 		if (!chart_type.includes("filter_keys")) {
-			// stacked / full / normal
 			result = branchen.map((branche: BranchenItem) => {
+				// stacked
 				if (chart_type.includes("stacked")) {
 					const getData = data.find((item: any) => item.id === branche.id);
+					if (id === "most_supported_branchen") {
+						const getTotal = sumNumericValues(getData);
+						return {
+							...branche,
+							...getData,
+							total: getTotal,
+						};
+					}
+					if ("insgesamt" in getData) {
+						return {
+							...branche,
+							...getData,
+						};
+					}
+					const getIngesamt = sumNumericValues(getData);
 					return {
 						...branche,
 						...getData,
+						insgesamt: getIngesamt,
 					};
 				}
+				// full
 				if (chart_type.includes("full")) {
 					const getData = data
 						.map((item: any) => {
@@ -116,6 +144,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						...getData,
 					};
 				}
+				// delta & normal
 				const getDelta =
 					chart_type === "bar_chart" ? 0 : data[branche.id].delta;
 				const getValue =
@@ -124,6 +153,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						: data[branche.id].value;
 				const getBreakPoint = bar_chart_unit_breakpoint || 0;
 				return {
+					id: branche.id,
 					name: branche.name,
 					value: getValue,
 					delta: getDelta > 0 ? getDelta : -getDelta,
@@ -148,14 +178,21 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 
 		// Sort
-		let getSortBy: string | null = null;
+		let getSortBy: string | null | undefined = null;
 
 		if (sortBy) {
 			getSortBy = sortBy;
-		} else if (result.some((item: any) => "insgesamt" in item)) {
+		} else if (
+			result.some((item: any) => "insgesamt" in item) &&
+			!result.some((item: any) => "total" in item)
+		) {
 			getSortBy = "insgesamt";
 		} else if (Array.isArray(sortsAfter)) {
 			getSortBy = sortsAfter[0];
+		}
+
+		if (!getSortBy && sortsAfterOnStart) {
+			getSortBy = sortsAfterOnStart;
 		}
 
 		result.sort((a: any, b: any) => {
@@ -189,6 +226,9 @@ const BarChart: React.FC<BarChartProps> = ({
 			"positiveDelta" in collectData[index]
 				? collectData[index].positiveDelta
 				: false;
+		const getValue = chart_type.includes("delta")
+			? collectData[index].value
+			: value;
 		const getFill = () => {
 			if (chart_type === "bar_chart") {
 				return isSmall && theme === "light" ? colors.blue : colors.white;
@@ -208,35 +248,33 @@ const BarChart: React.FC<BarChartProps> = ({
 			return x + width - paddingLabel;
 		};
 		return (
-			<>
-				<text
-					x={setX()}
-					y={y + height / 2}
-					textAnchor={isSmall ? "start" : "end"}
-					dominantBaseline="middle"
-					fontWeight="bold"
-					fontFamily="Clan Pro"
-				>
-					{(chart_type.includes("delta") || chart_unit === "€") && (
-						<>
-							{/* Value Display */}
-							<tspan fill={getFill()}>{formatNumber(value)}</tspan>
-							{chart_type.includes("delta") && (
-								<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
-									{positiveDelta ? "↑" : "↓"}
-									{delta}
-								</tspan>
-							)}
-						</>
-					)}
-					{chart_unit === "%" && (
-						<tspan fill={getFill()}>
-							{/* Value Display */}
-							{formatNumber(value)} {chart_unit}
-						</tspan>
-					)}
-				</text>
-			</>
+			<text
+				x={setX()}
+				y={y + height / 2}
+				textAnchor={isSmall ? "start" : "end"}
+				dominantBaseline="middle"
+				fontWeight="bold"
+				fontFamily="Clan Pro"
+			>
+				{(chart_type.includes("delta") || chart_unit === "€") && (
+					<>
+						{/* Value Display */}
+						<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
+						{chart_type.includes("delta") && (
+							<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
+								{positiveDelta ? "↑" : "↓"}
+								{formatNumber(delta)}
+							</tspan>
+						)}
+					</>
+				)}
+				{chart_unit === "%" && (
+					<tspan fill={getFill()}>
+						{/* Value Display */}
+						{formatNumber(value)} {chart_unit}
+					</tspan>
+				)}
+			</text>
 		);
 	};
 
@@ -345,27 +383,6 @@ const BarChart: React.FC<BarChartProps> = ({
 									</p>
 								</div>
 							))}
-						{id === "added_value_through_product_innovation" && (
-							<div className="flex justify-between gap-6">
-								<p
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									Gesamtwert:
-								</p>
-								<p
-									className="bold ml-2"
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									{/* Value Display */}
-									{formatNumber(payloadData["umsatz_produkt_neuheiten"])}
-									{chart_unit}
-								</p>
-							</div>
-						)}
 					</>
 				) : (
 					<>
@@ -467,6 +484,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								shape={
 									chart_type === "bar_chart" ? <FilledBar /> : <BorderedBar />
 								}
+								cursor={has_tooltip ? "pointer" : "default"}
 							>
 								<LabelList
 									content={(props) => {
@@ -504,13 +522,19 @@ const BarChart: React.FC<BarChartProps> = ({
 							chart_type.includes("full")) && (
 							<>
 								{objectKeys
-									.filter((objectKey) => objectKey !== "insgesamt")
+									.filter(
+										(objectKey) =>
+											id === "most_supported_branchen" ||
+											(id !== "most_supported_branchen" &&
+												!excludeKeyFromChart.includes(objectKey)),
+									)
 									.map((dataKey, index) => (
 										<Bar
 											key={dataKey}
 											dataKey={dataKey}
 											stackId="1"
 											fill={getColorBar(index)}
+											cursor={has_tooltip ? "pointer" : "default"}
 										/>
 									))}
 							</>
@@ -521,6 +545,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								dataKey={activeFilter}
 								stackId="1"
 								fill={colors.blue}
+								cursor={has_tooltip ? "pointer" : "default"}
 							>
 								<LabelList content={<RenderValueLabel />} />
 							</Bar>

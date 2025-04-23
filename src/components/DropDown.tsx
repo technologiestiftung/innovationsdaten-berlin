@@ -153,7 +153,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
-					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between"
+					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer"
 				>
 					<p className="bold select-none text-left first-letter:capitalize">
 						{setName()}

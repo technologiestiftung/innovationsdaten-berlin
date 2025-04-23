@@ -247,7 +247,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
-						width={widthOfStickyContainer * 0.2}
+						width={widthOfStickyContainer * 0.3}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,

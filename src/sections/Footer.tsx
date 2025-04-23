@@ -28,7 +28,6 @@ const Footer: React.FC = () => {
 					>
 						<h4>Impressum</h4>
 					</a>
-					<p className="mt-10 bold">2025 Technologiestiftung Berlin</p>
 					<p className="mt-10">
 						Die Technologiestiftung Berlin führt seit 2013 mit Unterstützung des
 						Zentrums für Europäische Wirtschaftsforschung (ZEW) die
