@@ -99,10 +99,9 @@ const Card: React.FC<CardProps> = ({
 				marginBottom: getMarginBottom(),
 			}}
 		>
-			{typeof window !== "undefined" &&
-				(window.location.href.includes("localhost") ||
-					window.location.href.includes("staging")) &&
-				displayNumber && <h4>{displayNumber}</h4>}
+			{typeof window !== "undefined" && displayNumber && (
+				<h4>{displayNumber}</h4>
+			)}
 			{/* @refactor: hypens & break-words for title */}
 			<h2 className="">{title}</h2>
 			<p className="mt-4">{text}</p>
