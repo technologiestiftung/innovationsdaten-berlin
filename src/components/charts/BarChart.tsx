@@ -62,7 +62,11 @@ const BarChart: React.FC<BarChartProps> = ({
 		"sektor_id",
 		"umsatz_produkt_neuheiten",
 	];
-	const excludeKeyFromToolTip = ["umsatz_nachahmer_innovationen"];
+	const excludeKeyFromChart = ["insgesamt", "innovations_intensitaet"];
+	const excludeKeyFromToolTip = [
+		"umsatz_nachahmer_innovationen",
+		"differenz_intensitaet",
+	];
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
 
 	const yAxisWidth = multiline_y_axis_label
@@ -507,7 +511,9 @@ const BarChart: React.FC<BarChartProps> = ({
 							chart_type.includes("full")) && (
 							<>
 								{objectKeys
-									.filter((objectKey) => objectKey !== "insgesamt")
+									.filter(
+										(objectKey) => !excludeKeyFromChart.includes(objectKey),
+									)
 									.map((dataKey, index) => (
 										<Bar
 											key={dataKey}
