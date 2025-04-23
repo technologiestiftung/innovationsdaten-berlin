@@ -3,19 +3,19 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-News.woff) format("woff");
-	font-weight: normal;
+  font-family: "Clan Pro";
+  src:
+    local("Clan"),
+    url(../fonts/ClanWebPro-News.woff) format("woff");
+  font-weight: normal;
 }
 
 @font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-Bold.woff) format("woff");
-	font-weight: bold;
+  font-family: "Clan Pro";
+  src:
+    local("Clan"),
+    url(../fonts/ClanWebPro-Bold.woff) format("woff");
+  font-weight: bold;
 }
 
 /*
@@ -27,94 +27,98 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-	*,
-	::after,
-	::before,
-	::backdrop,
-	::file-selector-button {
-		border-color: var(--color-gray-200, currentcolor);
-	}
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 
-	body {
-		@apply bg-white text-blue dark:bg-dark dark:text-white;
-		/* Ensure full height if needed, though often handled by root/app divs */
-		min-height: 100vh;
-	}
+  body {
+    @apply text-blue dark:bg-dark bg-white dark:text-white;
+    /* Ensure full height if needed, though often handled by root/app divs */
+    min-height: 100vh;
+  }
 }
 
 @theme {
-	--font-display: "Clan Pro", sans-serif;
-	--breakpoint-md: 66.5rem;
-	--color-dark: var(--dark);
-	--color-blue: var(--blue);
-	--color-white: var(--white);
-	--color-green: var(--green);
-	--color-red: var(--red);
-	--color-dark-grey: var(--dark-grey);
-	--color-light-grey: var(--light-grey);
+  --font-display: "Clan Pro", sans-serif;
+  --breakpoint-md: 66.5rem;
+  --color-dark: var(--dark);
+  --color-blue: var(--blue);
+  --color-white: var(--white);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-dark-grey: var(--dark-grey);
+  --color-light-grey: var(--light-grey);
 }
 
 @layer base {
-	:root {
-		--dark: #14161d;
-		--blue: #1e3791;
-		--white: #ffffff;
-		--green: #00ff00;
-		--red: #ff0000;
-		--dark-grey: #616161;
-		--light-grey: #d9d9d9;
-	}
+  :root {
+    --dark: #14161d;
+    --blue: #1e3791;
+    --white: #ffffff;
+    --green: #00ff00;
+    --red: #ff0000;
+    --dark-grey: #616161;
+    --light-grey: #d9d9d9;
+  }
 }
 
 @layer components {
-	h1 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2.5rem;
-		line-height: 1.2;
-	}
-	h2 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2rem;
-		line-height: 1.2;
-	}
-	h3 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 1.5rem;
-		line-height: 1.2;
-	}
-	h4 {
-		font-family: var(--font-display);
-		font-weight: 700;
-		font-size: 1.3rem;
-		line-height: 1.2;
-	}
-	p {
-		font-family: var(--font-display);
-		font-size: 1rem;
-		font-weight: normal;
-		line-height: 1.4;
+  h1 {
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  p {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
 
-		&.bold {
-			font-weight: bold;
-		}
+    &.bold {
+      font-weight: bold;
+    }
 
-		&.small {
-			font-size: 0.875rem;
-			line-height: 1.2;
-		}
-		&.large {
-			font-family: var(--font-display);
-			font-size: 1.25rem;
-			font-weight: bold;
-			line-height: 1.2;
-		}
-	}
+    &.small {
+      font-size: 0.875rem;
+      line-height: 1.2;
+    }
+    &.large {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
 
-	.iconSize {
-		font-size: 2rem;
-		line-height: 1.2;
-	}
+  .iconSize {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .recharts-text {
+    font-family: var(--font-display);
+  }
 }

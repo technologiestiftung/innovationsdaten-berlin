@@ -38,7 +38,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className={`cursor-pointer`} onClick={toggleTheme}>
-            {(theme === "dark" && (
+            {(theme !== "dark" && (
               <Sun className="fill-blue size-8 dark:fill-white" />
             )) || <Moon className="fill-blue size-8 dark:fill-white" />}
           </div>
