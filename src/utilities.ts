@@ -34,10 +34,23 @@ function formatNumber(value: number): string {
 	return new Intl.NumberFormat("de-DE").format(value);
 }
 
+function sumNumericValues(obj: any) {
+	let total = 0;
+
+	for (const key in obj) {
+		if (typeof obj[key] === "number") {
+			total += obj[key];
+		}
+	}
+
+	return total;
+}
+
 export {
 	hexToRgba,
 	isInRange,
 	roundToTwoDecimals,
 	formatEuroNumber,
 	formatNumber,
+	sumNumericValues,
 };

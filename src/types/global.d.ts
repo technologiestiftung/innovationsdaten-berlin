@@ -108,6 +108,7 @@ export type StickyItem = {
 				[key: Region]: number;
 		  };
 	sortsAfter?: dataKeys[];
+	sortsAfterOnStart?: string;
 	togglesBetween?: dataKeys[];
 	data?: StickyItemData;
 };

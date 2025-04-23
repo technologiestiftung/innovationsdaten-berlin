@@ -35,6 +35,7 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 		bar_chart_unit_breakpoint,
 		togglesBetween,
 		sortsAfter,
+		sortsAfterOnStart,
 		data: content,
 	} = data;
 
@@ -86,6 +87,7 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 					}
 					hasRegionToggle={hasRegionToggle}
 					sortsAfter={sortsAfter}
+					sortsAfterOnStart={sortsAfterOnStart}
 					data={
 						hasRegionToggle ? (content as Record<string, any>)[region] : content
 					}

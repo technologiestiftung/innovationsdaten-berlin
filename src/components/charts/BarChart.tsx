@@ -15,7 +15,11 @@ import {
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
 import colors from "../../data/colors.json";
-import { formatEuroNumber, formatNumber } from "../../utilities";
+import {
+	formatEuroNumber,
+	formatNumber,
+	sumNumericValues,
+} from "../../utilities";
 import wordings from "../../data/wordings.json";
 import Dropdown from "./../DropDown";
 import DataToggle from "../DataToggle";
@@ -30,6 +34,7 @@ type BarChartProps = {
 	bar_chart_unit_breakpoint?: number;
 	hasRegionToggle?: boolean;
 	sortsAfter?: dataKeys[];
+	sortsAfterOnStart?: string;
 };
 
 const BarChart: React.FC<BarChartProps> = ({
@@ -42,6 +47,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
 	sortsAfter,
+	sortsAfterOnStart,
 }) => {
 	// Global Context
 	const {
@@ -86,15 +92,24 @@ const BarChart: React.FC<BarChartProps> = ({
 		let result: any = [];
 
 		if (!chart_type.includes("filter_keys")) {
-			// stacked / full / normal
 			result = branchen.map((branche: BranchenItem) => {
+				// stacked
 				if (chart_type.includes("stacked")) {
 					const getData = data.find((item: any) => item.id === branche.id);
+					if ("insgesamt" in getData) {
+						return {
+							...branche,
+							...getData,
+						};
+					}
+					const getIngesamt = sumNumericValues(getData);
 					return {
 						...branche,
 						...getData,
+						insgesamt: getIngesamt,
 					};
 				}
+				// full
 				if (chart_type.includes("full")) {
 					const getData = data
 						.map((item: any) => {
@@ -120,6 +135,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						...getData,
 					};
 				}
+				// delta & normal
 				const getDelta =
 					chart_type === "bar_chart" ? 0 : data[branche.id].delta;
 				const getValue =
@@ -153,7 +169,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 
 		// Sort
-		let getSortBy: string | null = null;
+		let getSortBy: string | null | undefined = null;
 
 		if (sortBy) {
 			getSortBy = sortBy;
@@ -161,6 +177,10 @@ const BarChart: React.FC<BarChartProps> = ({
 			getSortBy = "insgesamt";
 		} else if (Array.isArray(sortsAfter)) {
 			getSortBy = sortsAfter[0];
+		}
+
+		if (!getSortBy && sortsAfterOnStart) {
+			getSortBy = sortsAfterOnStart;
 		}
 
 		result.sort((a: any, b: any) => {
@@ -231,7 +251,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						{chart_type.includes("delta") && (
 							<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
 								{positiveDelta ? "↑" : "↓"}
-								{delta}
+								{formatNumber(delta)}
 							</tspan>
 						)}
 					</>
@@ -351,27 +371,6 @@ const BarChart: React.FC<BarChartProps> = ({
 									</p>
 								</div>
 							))}
-						{id === "added_value_through_product_innovation" && (
-							<div className="flex justify-between gap-6">
-								<p
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									Gesamtwert:
-								</p>
-								<p
-									className="bold ml-2"
-									style={{
-										color: theme === "dark" ? colors.dark : colors.white,
-									}}
-								>
-									{/* Value Display */}
-									{formatNumber(payloadData["umsatz_produkt_neuheiten"])}
-									{chart_unit}
-								</p>
-							</div>
-						)}
 					</>
 				) : (
 					<>
