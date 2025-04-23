@@ -45,11 +45,11 @@ const Header: React.FC = () => {
         </div>
       </header>
       {open && (
-        <div className="dark:bg-dark border-blue fixed top-24 z-12 mt-24 flex h-[calc(100vh-6rem)] w-full flex-col items-center justify-start border-t-0 bg-white px-12 py-6 text-left md:top-23.5 md:right-48 md:mt-0 md:h-auto md:w-auto md:border-2 dark:border-white">
-          <ul
-            className={`space-y-4 md:space-y-2`}
-            onMouseLeave={() => setOpen(false)}
-          >
+        <div
+          onMouseLeave={() => setOpen(false)}
+          className="dark:bg-dark border-blue fixed top-24 z-12 flex h-[calc(100vh-6rem)] w-full flex-col items-center justify-start border-t-0 bg-white px-12 py-6 text-left md:top-23.5 md:right-48 md:h-auto md:w-auto md:border-2 md:border-t-0 dark:border-white"
+        >
+          <ul className={`mt-24 space-y-4 md:mt-0 md:space-y-2`}>
             {chapters.map((chapter) => (
               <li key={chapter.link}>
                 <a
