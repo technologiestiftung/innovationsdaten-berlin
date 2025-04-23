@@ -1,9 +1,7 @@
 import React from "react";
 import chapters from "../data/chapters.json";
-import { useGlobalContext } from "../GlobalContext";
 
 const Overview: React.FC = () => {
-	const { theme } = useGlobalContext();
 	return (
 		<>
 			<h2 className="mb-4">Übersicht</h2>
@@ -12,8 +10,8 @@ const Overview: React.FC = () => {
 					<a
 						key={chapter.link}
 						href={`#${chapter.link}`}
-						className={`p-2 ${theme}
-							border-2 border-blue dark:border-white
+						className={`p-2 flex items-center justify-center cursor-pointer
+							border-2 border-blue dark:border-white overflow-hidden wrap-break-word break-all
 							`}
 					>
 						<p className="bold large text-center">{chapter.title}</p>
