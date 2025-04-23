@@ -53,7 +53,7 @@ const Header: React.FC = () => {
 			</header>
 			{open && (
 				<ul
-					className={`fixed nav-ul py-6 px-12 z-12 ${theme}`}
+					className={`fixed nav-ul py-6 px-12 ${theme}`}
 					style={{
 						top: headerHeight - 2,
 						left: "auto",
