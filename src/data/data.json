@@ -785,6 +785,7 @@
 			"chart_unit": "",
 			"has_tooltip": true,
 			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
+			"sortsAfterOnStart": "process_innovation_share",
 			"data": {
 				"ber": [
 					{
@@ -950,190 +951,160 @@
 			"chart_unit": "%",
 			"has_tooltip": true,
 			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
-			"sortsAfter": ["umsatz_produkt_neuheiten", "umsatz_markt_neuheiten"],
+			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
 			"data": {
 				"ber": [
 					{
 						"id": "nahrung",
 						"umsatz_markt_neuheiten": 0.3,
-						"umsatz_nachahmer_innovationen": 3.1,
-						"umsatz_produkt_neuheiten": 3.4
+						"umsatz_nachahmer_innovationen": 3.1
 					},
 					{
 						"id": "pharma",
 						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 9.0,
-						"umsatz_produkt_neuheiten": 11.5
+						"umsatz_nachahmer_innovationen": 9.0
 					},
 					{
 						"id": "holz",
 						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 6.4,
-						"umsatz_produkt_neuheiten": 8.9
+						"umsatz_nachahmer_innovationen": 6.4
 					},
 					{
 						"id": "metall",
 						"umsatz_markt_neuheiten": 1.9,
-						"umsatz_nachahmer_innovationen": 6.6,
-						"umsatz_produkt_neuheiten": 8.4
+						"umsatz_nachahmer_innovationen": 6.6
 					},
 					{
 						"id": "elektroindustrie",
 						"umsatz_markt_neuheiten": 4.2,
-						"umsatz_nachahmer_innovationen": 10.0,
-						"umsatz_produkt_neuheiten": 14.3
+						"umsatz_nachahmer_innovationen": 10.0
 					},
 					{
 						"id": "fahrzeugbau",
 						"umsatz_markt_neuheiten": 10.7,
-						"umsatz_nachahmer_innovationen": 25.8,
-						"umsatz_produkt_neuheiten": 36.5
+						"umsatz_nachahmer_innovationen": 25.8
 					},
 					{
 						"id": "sonstige_konsumgueter",
 						"umsatz_markt_neuheiten": 1.6,
-						"umsatz_nachahmer_innovationen": 7.9,
-						"umsatz_produkt_neuheiten": 9.4
+						"umsatz_nachahmer_innovationen": 7.9
 					},
 					{
 						"id": "energie",
 						"umsatz_markt_neuheiten": 0.2,
-						"umsatz_nachahmer_innovationen": 1.8,
-						"umsatz_produkt_neuheiten": 2.0
+						"umsatz_nachahmer_innovationen": 1.8
 					},
 					{
 						"id": "telekommunikation",
 						"umsatz_markt_neuheiten": 1.8,
-						"umsatz_nachahmer_innovationen": 10.3,
-						"umsatz_produkt_neuheiten": 12.2
+						"umsatz_nachahmer_innovationen": 10.3
 					},
 					{
 						"id": "software",
 						"umsatz_markt_neuheiten": 2.8,
-						"umsatz_nachahmer_innovationen": 15.4,
-						"umsatz_produkt_neuheiten": 18.3
+						"umsatz_nachahmer_innovationen": 15.4
 					},
 					{
 						"id": "finanz",
 						"umsatz_markt_neuheiten": 2.1,
-						"umsatz_nachahmer_innovationen": 10.5,
-						"umsatz_produkt_neuheiten": 12.6
+						"umsatz_nachahmer_innovationen": 10.5
 					},
 					{
 						"id": "unternehmensberatung",
 						"umsatz_markt_neuheiten": 6.0,
-						"umsatz_nachahmer_innovationen": 5.1,
-						"umsatz_produkt_neuheiten": 11.1
+						"umsatz_nachahmer_innovationen": 5.1
 					},
 					{
 						"id": "architektur",
 						"umsatz_markt_neuheiten": 1.2,
-						"umsatz_nachahmer_innovationen": 6.2,
-						"umsatz_produkt_neuheiten": 7.4
+						"umsatz_nachahmer_innovationen": 6.2
 					},
 					{
 						"id": "forschung",
 						"umsatz_markt_neuheiten": 4.7,
-						"umsatz_nachahmer_innovationen": 5.5,
-						"umsatz_produkt_neuheiten": 10.2
+						"umsatz_nachahmer_innovationen": 5.5
 					},
 					{
 						"id": "kreativ",
 						"umsatz_markt_neuheiten": 1.0,
-						"umsatz_nachahmer_innovationen": 3.6,
-						"umsatz_produkt_neuheiten": 4.6
+						"umsatz_nachahmer_innovationen": 3.6
 					}
 				],
 				"de": [
 					{
 						"id": "nahrung",
 						"umsatz_markt_neuheiten": 0.8,
-						"umsatz_nachahmer_innovationen": 3.2,
-						"umsatz_produkt_neuheiten": 3.3
+						"umsatz_nachahmer_innovationen": 3.2
 					},
 					{
 						"id": "pharma",
 						"umsatz_markt_neuheiten": 1.7,
-						"umsatz_nachahmer_innovationen": 9.0,
-						"umsatz_produkt_neuheiten": 8.3
+						"umsatz_nachahmer_innovationen": 9.0
 					},
 					{
 						"id": "holz",
 						"umsatz_markt_neuheiten": 1.2,
-						"umsatz_nachahmer_innovationen": 5.2,
-						"umsatz_produkt_neuheiten": 8.6
+						"umsatz_nachahmer_innovationen": 5.2
 					},
 					{
 						"id": "metall",
 						"umsatz_markt_neuheiten": 1.3,
-						"umsatz_nachahmer_innovationen": 4.8,
-						"umsatz_produkt_neuheiten": 9.2
+						"umsatz_nachahmer_innovationen": 4.8
 					},
 					{
 						"id": "elektroindustrie",
 						"umsatz_markt_neuheiten": 3.2,
-						"umsatz_nachahmer_innovationen": 11.7,
-						"umsatz_produkt_neuheiten": 10.9
+						"umsatz_nachahmer_innovationen": 11.7
 					},
 					{
 						"id": "fahrzeugbau",
 						"umsatz_markt_neuheiten": 11.4,
-						"umsatz_nachahmer_innovationen": 22.7,
-						"umsatz_produkt_neuheiten": 22.0
+						"umsatz_nachahmer_innovationen": 22.7
 					},
 					{
 						"id": "sonstige_konsumgueter",
 						"umsatz_markt_neuheiten": 1.8,
-						"umsatz_nachahmer_innovationen": 8.1,
-						"umsatz_produkt_neuheiten": 0.4
+						"umsatz_nachahmer_innovationen": 8.1
 					},
 					{
 						"id": "energie",
 						"umsatz_markt_neuheiten": 1.7,
-						"umsatz_nachahmer_innovationen": 3.3,
-						"umsatz_produkt_neuheiten": 2.6
+						"umsatz_nachahmer_innovationen": 3.3
 					},
 					{
 						"id": "telekommunikation",
 						"umsatz_markt_neuheiten": 2.7,
-						"umsatz_nachahmer_innovationen": 8.4,
-						"umsatz_produkt_neuheiten": 16.8
+						"umsatz_nachahmer_innovationen": 8.4
 					},
 					{
 						"id": "software",
 						"umsatz_markt_neuheiten": 6.4,
-						"umsatz_nachahmer_innovationen": 22.8,
-						"umsatz_produkt_neuheiten": 14.4
+						"umsatz_nachahmer_innovationen": 22.8
 					},
 					{
 						"id": "finanz",
 						"umsatz_markt_neuheiten": 2.2,
-						"umsatz_nachahmer_innovationen": 12.4,
-						"umsatz_produkt_neuheiten": 9.9
+						"umsatz_nachahmer_innovationen": 12.4
 					},
 					{
 						"id": "unternehmensberatung",
 						"umsatz_markt_neuheiten": 4.0,
-						"umsatz_nachahmer_innovationen": 8.8,
-						"umsatz_produkt_neuheiten": 6.4
+						"umsatz_nachahmer_innovationen": 8.8
 					},
 					{
 						"id": "architektur",
 						"umsatz_markt_neuheiten": 0.5,
-						"umsatz_nachahmer_innovationen": 6.2,
-						"umsatz_produkt_neuheiten": 9.5
+						"umsatz_nachahmer_innovationen": 6.2
 					},
 					{
 						"id": "forschung",
 						"umsatz_markt_neuheiten": 21.3,
-						"umsatz_nachahmer_innovationen": 9.7,
-						"umsatz_produkt_neuheiten": 4.4
+						"umsatz_nachahmer_innovationen": 9.7
 					},
 					{
 						"id": "kreativ",
 						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 12.6,
-						"umsatz_produkt_neuheiten": 4.7
+						"umsatz_nachahmer_innovationen": 12.6
 					}
 				]
 			}
@@ -4046,6 +4017,7 @@
 			"chart_unit": "%",
 			"has_tooltip": true,
 			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
+			"sortsAfterOnStart": "total",
 			"data": {
 				"ber": [
 					{

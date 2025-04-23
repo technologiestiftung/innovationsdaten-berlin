@@ -55,7 +55,13 @@ type dataKeys =
 	| "rising_costs_for_energy_or_raw_materials"
 	| "requirements_in_public_procurement"
 	| "innovations_intensitaet"
-	| "fue_intensitaet";
+	| "fue_intensitaet"
+	| "product_innovation_share"
+	| "process_innovation_share"
+	| "umsatz_markt_neuheiten"
+	| "umsatz_nachahmer_innovationen"
+	| "umsatz_produkt_neuheiten"
+	| "insgesamt";
 
 export type StickyItemData =
 	| {
@@ -102,6 +108,7 @@ export type StickyItem = {
 				[key: Region]: number;
 		  };
 	sortsAfter?: dataKeys[];
+	sortsAfterOnStart?: string;
 	togglesBetween?: dataKeys[];
 	data?: StickyItemData;
 };
