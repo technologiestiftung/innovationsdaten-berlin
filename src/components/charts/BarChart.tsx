@@ -223,7 +223,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				{(chart_type.includes("delta") || chart_unit === "€") && (
 					<>
 						{/* Value Display */}
-						<tspan fill={getFill()}>{getValue}</tspan>
+						<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
 						{chart_type.includes("delta") && (
 							<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
 								{positiveDelta ? "↑" : "↓"}

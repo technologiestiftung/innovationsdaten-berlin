@@ -10,15 +10,6 @@ const hexToRgba = (hex: string, opacity: number) => {
 	return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
 
-const formatNumber = (num: number): number => {
-	if (num < 1000) {
-		return num;
-	}
-
-	const billions = num / 1000;
-	return Math.round(billions * 10) / 10; // one decimal
-};
-
 const isInRange = (num: number) => {
 	const from = -50;
 	const to = 50;
@@ -30,21 +21,23 @@ function roundToTwoDecimals(num: number): number {
 }
 
 function formatEuroNumber(value: number): string {
-	if (value >= 1000) {
-		const billions = value / 1000;
-		let formatted = billions.toFixed(1);
-		if (formatted.endsWith(",0")) {
-			formatted = formatted.slice(0, -2);
-		}
-		return `${formatted} Mrd. €`;
-	}
-	return `${value.toString()} Mio. €`;
+	const getNumber = new Intl.NumberFormat("de-DE", {
+		style: "currency",
+		currency: "EUR",
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 2,
+	}).format(value);
+	return `${getNumber.toString()} Mio. €`;
+}
+
+function formatNumber(value: number): string {
+	return new Intl.NumberFormat("de-DE").format(value);
 }
 
 export {
 	hexToRgba,
-	formatNumber,
 	isInRange,
 	roundToTwoDecimals,
 	formatEuroNumber,
+	formatNumber,
 };

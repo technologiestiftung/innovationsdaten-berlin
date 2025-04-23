@@ -7,7 +7,7 @@ import branchen from "../../data/branchen.json";
 import colors from "../../data/colors.json";
 import Icon from "../Icons";
 import { useGlobalContext } from "../../GlobalContext";
-import { formatEuroNumber, formatNumber } from "../../utilities";
+import { formatEuroNumber } from "../../utilities";
 import React from "react";
 import { StickyItemData } from "../../types/global";
 
@@ -39,6 +39,14 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 		}
 		return null;
 	});
+
+	const formatNumber = (num: number): number => {
+		if (num < 1000) {
+			return num;
+		}
+		const billions = num / 1000;
+		return Math.round(billions * 10) / 10;
+	};
 
 	const CustomTreemapNode = (props: any) => {
 		const { x, y, width, height, id: nodeID, color } = props;
