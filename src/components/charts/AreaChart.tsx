@@ -56,47 +56,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
-	// const legendFormatter = (value: string) => {
-	// 	if (!value) {
-	// 		return null;
-	// 	}
-	// 	// 'value' is the dataKey from the <Area> component
-	// 	let label = "";
-
-	// 	// Determine the label based on chart ID and dataKey ('value')
-	// 	if (id === "berlin_is_ahead") {
-	// 		if (value === "ber") {
-	// 			label = "Berlin";
-	// 		} else if (value === "de") {
-	// 			label = "Deutschland";
-	// 		} else {
-	// 			return null;
-	// 		}
-	// 	} else if (id === "sektoren") {
-	// 		// Assuming sektoren.json items have 'id' and 'name' fields
-	// 		const sektor = sektoren.find((s) => s.id === value);
-	// 		label = sektor?.name || value; // Use sektor name or fallback to id
-	// 	} else {
-	// 		// Default case (assuming it's branchen)
-	// 		const branche = branchen.find((b) => b.id === value);
-	// 		label = branche?.name || value.toUpperCase(); // Use branche name or fallback
-	// 	}
-
-	// 	// Return the styled span
-	// 	return (
-	// 		label && (
-	// 			<span
-	// 				style={{
-	// 					color: theme === "dark" ? colors.white : colors.blue,
-	// 					paddingLeft: "4px", // Add a little space between icon and text
-	// 					display: "inline-block", // Helps with alignment sometimes
-	// 				}}
-	// 			>
-	// 				{label}
-	// 			</span>
-	// 		)
-	// 	);
-	// };
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
 		if (activeFilters) {
 			if (theme === "dark") {
@@ -134,6 +93,22 @@ const AreaChart: React.FC<AreaChartProps> = ({
 			);
 			return branche?.name || dataKey.toUpperCase();
 		};
+		const getBGColor = (dataKey: any) => {
+			if (sektoren.some((someSektor) => someSektor.id === dataKey)) {
+				const getSektor = sektoren.find(
+					(findSektor) => findSektor.id === dataKey,
+				);
+				return getSektor?.color;
+			}
+			if (branchen.some((branche) => branche.id === dataKey)) {
+				const findBranche = branchen.find((branche) => branche.id === dataKey);
+				return findBranche?.color;
+			}
+			if (dataKey === "ber" || dataKey === "de") {
+				return dataKey === "ber" ? colors.cyan_light : colors.green_light;
+			}
+			return colors.blue;
+		};
 		return (
 			<div
 				className="p-4 select-none"
@@ -159,14 +134,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 										dataKey === "dienstleistungen" ||
 										dataKey === "industrie") && (
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{findTitle(dataKey)}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													className="max-w-[100px] truncate"
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{findTitle(dataKey)}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
@@ -189,14 +176,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								{dataKey !== "year" && (
 									<>
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{dataKey === "ber" ? "Berlin" : "Deutschland"}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													className="max-w-[100px] truncate"
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{dataKey === "ber" ? "Berlin" : "Deutschland"}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
@@ -320,21 +319,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								: formatEuroNumber(+label);
 						}}
 					/>
-					{/* <Legend
-						verticalAlign="bottom"
-						align="center"
-						layout="vertical"
-						height={36}
-						iconSize={10}
-						formatter={legendFormatter}
-						wrapperStyle={{
-							width: "100%",
-							paddingLeft: 20, // Avoid hitting edge
-							paddingRight: 20,
-							paddingTop: 30,
-							pointerEvents: "none",
-						}}
-					/> */}
 				</AreaChartRecharts>
 			</ResponsiveContainer>
 			<div

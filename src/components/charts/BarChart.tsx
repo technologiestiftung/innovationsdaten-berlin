@@ -96,11 +96,39 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
-	const legendFormatter = (value: string) => {
+	const RenderCustomLegend = (props: any) => {
+		const { payload } = props;
+
 		return (
-			<span style={{ color: theme === "dark" ? colors.white : colors.blue }}>
-				{wordings[value as keyof typeof wordings] || value}
-			</span>
+			<ul
+				style={{
+					display: "flex",
+					flexWrap: "wrap",
+					listStyle: "none",
+					padding: 0,
+					marginTop: 40,
+				}}
+			>
+				{payload.map((entry: any, index: number) => (
+					<li
+						key={`item-${index}`}
+						style={{ display: "flex", alignItems: "center", marginRight: 16 }}
+					>
+						<span
+							style={{
+								display: "inline-block",
+								width: 12,
+								height: 12,
+								backgroundColor: entry.color,
+								marginRight: 8,
+							}}
+						/>
+						<p className="small">
+							{wordings[entry.value as keyof typeof wordings] || entry.value}
+						</p>
+					</li>
+				))}
+			</ul>
 		);
 	};
 	// set Data
@@ -595,23 +623,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						{has_tooltip && <Tooltip content={<CustomTooltip />} />}
 						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
-						{showLegend && (
-							<Legend
-								verticalAlign="bottom"
-								align="center"
-								layout="vertical"
-								height={36}
-								iconSize={10}
-								formatter={legendFormatter}
-								wrapperStyle={{
-									width: "100%",
-									paddingLeft: 20, // Avoid hitting edge
-									paddingRight: 20,
-									paddingTop: 30,
-									pointerEvents: "none",
-								}}
-							/>
-						)}
+						{showLegend && <Legend content={RenderCustomLegend} />}
 						{/* Bars */}
 						{(chart_type.includes("delta") || chart_type === "bar_chart") && (
 							<Bar
