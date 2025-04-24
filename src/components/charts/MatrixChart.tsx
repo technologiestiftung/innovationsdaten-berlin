@@ -86,6 +86,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 		const [isOpen, setIsOpen] = useState(false);
 		const selfRef = useRef<HTMLDivElement>(null);
 		const getCorrectLabel = isMobile ? x : y;
+		const getCorrectBranchenID = isMobile ? y : x;
 		useEffect(() => {
 			const handleClickOutside = (event: MouseEvent) => {
 				if (
@@ -99,6 +100,12 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 			return () =>
 				document.removeEventListener("mousedown", handleClickOutside);
 		}, []);
+		useEffect(() => {
+			window.addEventListener("scroll", () => setIsOpen(false));
+			return () => {
+				window.removeEventListener("scroll", () => setIsOpen(false));
+			};
+		}, []);
 		return (
 			<div
 				ref={selfRef}
@@ -107,7 +114,11 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 			>
 				<div
 					className={`inner-value-cell cursor-pointer flex items-center justify-center ${theme}`}
-					onMouseEnter={() => setIsOpen(true)}
+					onMouseEnter={() => {
+						if (!isMobile) {
+							setIsOpen(true);
+						}
+					}}
 					onMouseLeave={() => {
 						if (!isMobile) {
 							setIsOpen(false);
@@ -123,6 +134,11 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 				{isOpen && (
 					<div
 						className={`tooltip p-4 select-none ${theme} ${y === "own_region" || y === "different_regions_in_germany" || y === "eu_foreign" ? "below" : "above"}`}
+						onClick={() => {
+							if (isMobile) {
+								setIsOpen(false);
+							}
+						}}
 					>
 						<div className="flex flex-col items-center">
 							<p
@@ -131,8 +147,9 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
 							>
-								{branchen.find((findBranche: any) => findBranche.id === x)
-									?.name || y.toUpperCase()}{" "}
+								{branchen.find(
+									(findBranche: any) => findBranche.id === getCorrectBranchenID,
+								)?.name || y.toUpperCase()}{" "}
 							</p>
 							<Icon
 								id="sort"
