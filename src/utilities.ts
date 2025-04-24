@@ -27,7 +27,7 @@ function formatEuroNumber(value: number): string {
 		minimumFractionDigits: 0,
 		maximumFractionDigits: 2,
 	}).format(value);
-	return `${getNumber.toString()} Mio. €`;
+	return `${getNumber.toString().replace("€", "")}Mio. €`;
 }
 
 function formatNumber(value: number): string {

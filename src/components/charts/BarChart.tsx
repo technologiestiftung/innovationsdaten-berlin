@@ -77,6 +77,12 @@ const BarChart: React.FC<BarChartProps> = ({
 		"differenz_intensitaet",
 		"total",
 	];
+	if (
+		id === "inno_intensitaet" ||
+		id === "protective_measures_intellectual_property"
+	) {
+		excludeKeyFromToolTip.push("insgesamt");
+	}
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
 
 	let yAxisWidth = 0;

@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const Menu: React.FC = () => {
-	const { theme, chapter, setChapter } = useGlobalContext();
+	const { theme, chapter, setChapter, isMobile } = useGlobalContext();
 
 	const NavStep: React.FC<NavProps> = ({ link, title }) => {
 		const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +78,16 @@ const Menu: React.FC = () => {
 	};
 
 	return (
-		<nav className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
+		<nav
+			className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10"
+			style={
+				isMobile
+					? {
+							transform: "translateX(100vw)",
+						}
+					: {}
+			}
+		>
 			{chapters.map((mapChapter) => (
 				<NavStep
 					key={mapChapter.link}

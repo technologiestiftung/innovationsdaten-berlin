@@ -16,7 +16,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			{!isMobile && <Menu />}
+			<Menu />
 			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
 				<Welcome />
 				{Object.keys(data).map((dataKey) => (
