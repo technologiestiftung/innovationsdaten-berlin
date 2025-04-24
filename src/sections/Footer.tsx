@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
 						<div className="flex justify-end mt-4">
 							<button
 								onClick={() => setIsModalOpen(false)}
-								className="px-4 py-2 bg-blue text-white  hover:bg-blue"
+								className="px-4 py-2 cursor-pointer"
 							>
 								<h4>Schließen</h4>
 							</button>
