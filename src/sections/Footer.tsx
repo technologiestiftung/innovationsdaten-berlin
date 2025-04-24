@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Icon from "../components/Icons";
-import wordings from "../data/wordings.json";
+import methodic from "../data/methodic.json";
 
 const Footer: React.FC = () => {
 	const { theme, fontSize, isMobile } = useGlobalContext();
@@ -74,8 +74,8 @@ const Footer: React.FC = () => {
 				>
 					<div className="bg-white dark:bg-dark overflow-auto p-12 flex flex-col items-center overflow-auto h-screen">
 						<h2 className="text-xl font-bold mb-4 ">Methodik</h2>
-						{wordings.methodic_text &&
-							Object.entries(wordings.methodic_text).map(
+						{methodic.methodic_text &&
+							Object.entries(methodic.methodic_text).map(
 								([sectionKey, html]) => (
 									<div
 										key={sectionKey}
