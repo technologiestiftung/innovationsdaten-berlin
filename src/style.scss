@@ -15,7 +15,6 @@
 }
 
 $font-size: 16px;
-$mobile-horizontal-padding: 32px;
 $dark: #14161d;
 $blue: #1e3791;
 $white: #ffffff;
@@ -25,9 +24,16 @@ $dark-grey: #616161;
 $light-grey: #d9d9d9;
 $stroke-width: 2px;
 $all-transition: all 0.3s ease-in-out;
-$long-transition: all 1s ease-in-out;
+$mobile: 768px;
 $breakpoint: 80vw;
 $toggle-height: 40px;
+
+/* 
+
+@media screen and (min-width: $mobile) {
+} 
+
+*/
 
 html {
 	scroll-behavior: smooth;
@@ -63,10 +69,14 @@ html {
 		max-width: 100vw;
 	}
 	main {
-		max-width: 100vw;
-		@media screen and (min-width: $breakpoint) {
+		@media screen and (min-width: $mobile) {
 			max-width: $breakpoint !important;
 			margin-left: calc((100vw - $breakpoint) / 2);
+			padding: 0 !important;
+		}
+		@media screen and (max-width: $mobile) {
+			max-width: 100vw;
+			overflow-x: hidden;
 		}
 	}
 }
@@ -114,7 +124,10 @@ p {
 
 header {
 	border-bottom: $stroke-width solid $white;
-	padding: calc($font-size * 1.5) calc((100vw - $breakpoint) / 2);
+	padding: calc($font-size * 1) calc($font-size * 1.5);
+	@media screen and (min-width: $mobile) {
+		padding: calc($font-size * 1.5) calc((100vw - $breakpoint) / 2);
+	}
 	&.dark {
 		background: $dark;
 		border-color: $white;
@@ -128,15 +141,19 @@ header {
 	z-index: 12;
 	&.dark {
 		background: $dark;
-		border-left: $stroke-width solid $white;
-		border-right: $stroke-width solid $white;
-		border-bottom: $stroke-width solid $white;
+		@media screen and (min-width: $mobile) {
+			border-left: $stroke-width solid $white;
+			border-right: $stroke-width solid $white;
+			border-bottom: $stroke-width solid $white;
+		}
 	}
 	&.light {
 		background: $white;
-		border-left: $stroke-width solid $blue;
-		border-right: $stroke-width solid $blue;
-		border-bottom: $stroke-width solid $blue;
+		@media screen and (min-width: $mobile) {
+			border-left: $stroke-width solid $blue;
+			border-right: $stroke-width solid $blue;
+			border-bottom: $stroke-width solid $blue;
+		}
 	}
 }
 
@@ -180,17 +197,18 @@ section {
 	&.sticky-section {
 		.card {
 			&.dark {
-				border: $stroke-width solid $white;
 				background: $dark;
+				@media screen and (min-width: $mobile) {
+					border: $stroke-width solid $white;
+				}
 			}
 			&.light {
-				border: $stroke-width solid $blue;
 				background: $white;
+				@media screen and (min-width: $mobile) {
+					border: $stroke-width solid $blue;
+				}
 			}
 		}
-	}
-	@media screen and (max-width: $breakpoint) {
-		padding: 0 $font-size;
 	}
 }
 
@@ -224,7 +242,7 @@ section {
 footer {
 	width: 100vw;
 	& > div {
-		@media screen and (min-width: $breakpoint) {
+		@media screen and (min-width: $mobile) {
 			max-width: $breakpoint !important;
 			margin-left: calc((100vw - $breakpoint) / 2);
 		}
@@ -374,8 +392,16 @@ footer {
 	color: white !important;
 }
 .label-x {
-	min-height: 30px;
-	padding-bottom: 8px;
+	@media screen and (min-width: $mobile) {
+		min-height: 30px;
+		padding-bottom: 8px;
+	}
+}
+.matrix-grid {
+	@media screen and (max-width: $mobile) {
+		grid-template-columns: 30px repeat(auto-fit, minmax(0, 1fr));
+		width: 100%;
+	}
 }
 .value-cell {
 	text-align: center;
@@ -433,5 +459,23 @@ footer {
 		.placeholder {
 			height: $stroke-width;
 		}
+	}
+}
+
+.mobile-grid-labels {
+	// padding-left: 30px;
+	width: 100%;
+	margin: 5vh 0;
+	position: relative;
+	// display: grid;
+	// grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	p {
+		height: fit-content;
+		width: fit-content;
+		position: absolute;
+		// flex-grow: 1;
+		transform: rotate(60deg);
+		transform-origin: center right;
+		bottom: 0;
 	}
 }
