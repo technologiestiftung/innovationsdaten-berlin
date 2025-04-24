@@ -40,7 +40,7 @@ const Welcome: React.FC = () => {
 			<div className="flex items-center basis-1/2">
 				<div className={`card ${theme} ${isMobile ? "mt-10" : "p-6"}`}>
 					<h2 className="mb-4">{wordings.welcome_title}</h2>
-					<p>{wordings.welcome_text}</p>
+					<p dangerouslySetInnerHTML={{ __html: wordings.welcome_text }} />
 				</div>
 			</div>
 		</section>
