@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-News.woff) format("woff");
-	font-weight: normal;
+  font-family: "Clan Pro";
+  src:
+    local("Clan"),
+    url(../fonts/ClanWebPro-News.woff) format("woff");
+  font-weight: normal;
 }
 
 @font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-Bold.woff) format("woff");
-	font-weight: bold;
+  font-family: "Clan Pro";
+  src:
+    local("Clan"),
+    url(../fonts/ClanWebPro-Bold.woff) format("woff");
+  font-weight: bold;
 }
 
 /*
@@ -25,84 +27,105 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-	*,
-	::after,
-	::before,
-	::backdrop,
-	::file-selector-button {
-		border-color: var(--color-gray-200, currentcolor);
-	}
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  body {
+    @apply text-blue dark:bg-dark bg-white dark:text-white;
+    /* Ensure full height if needed, though often handled by root/app divs */
+    min-height: 100vh;
+  }
 }
 
 @theme {
-	--font-display: "Clan Pro", sans-serif;
-	--breakpoint-md: 46.5rem;
-
-	--color-dark: var(--dark);
-	--color-blue: var(--blue);
-	--color-white: var(--white);
-	--color-green: var(--green);
-	--color-red: var(--red);
-	--color-dark-grey: var(--dark-grey);
-	--color-light-grey: var(--light-grey);
+  --font-display: "Clan Pro", sans-serif;
+  --breakpoint-md: 66.5rem;
+  --header-height: 6rem;
+  --color-dark: var(--dark);
+  --color-blue: var(--blue);
+  --color-white: var(--white);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-dark-grey: var(--dark-grey);
+  --color-light-grey: var(--light-grey);
 }
 
 @layer base {
-	:root {
-		--dark: #14161d;
-		--blue: #1e3791;
-		--white: #ffffff;
-		--green: #00ff00;
-		--red: #ff0000;
-		--dark-grey: #616161;
-		--light-grey: #d9d9d9;
-	}
+  :root {
+    --dark: #14161d;
+    --blue: #1e3791;
+    --white: #ffffff;
+    --green: #00ff00;
+    --red: #ff0000;
+    --dark-grey: #616161;
+    --light-grey: #d9d9d9;
+  }
 }
 
 @layer components {
-	h1 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2.5rem;
-		line-height: 1.2;
-	}
-	h2 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2rem;
-		line-height: 1.2;
-	}
-	h3 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 1.5rem;
-		line-height: 1.2;
-	}
-	h4 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 1.3rem;
-		line-height: 1.2;
-	}
-	p {
-		font-family: var(--font-display);
-		font-size: 1rem;
-		font-weight: normal;
-		line-height: 1.4;
+  h1 {
+    @apply font-display text-2xl leading-tight font-bold;
+    @apply md:text-[2.5rem] md:leading-[1.2];
+  }
+  h2 {
+    @apply font-display text-3xl leading-tight font-bold;
+    @apply md:text-[2rem] md:leading-[1.2];
+  }
+  h3 {
+    @apply font-display text-lg leading-tight font-bold;
+    @apply md:text-[1.5rem] md:leading-[1.2];
+  }
+  h4 {
+    @apply font-display text-base leading-tight font-semibold;
+    @apply md:text-[1.3rem] md:leading-[1.2];
+  }
+  p {
+    @apply font-display text-sm leading-relaxed font-normal;
+    @apply md:text-base md:leading-[1.4];
 
-		&.bold {
-			font-weight: bold;
-		}
+    &.bold {
+      @apply font-bold;
+    }
 
-		&.small {
-			font-size: 0.875rem;
-			line-height: 1.2;
-		}
-	}
-	button {
-		font-family: var(--font-display);
-		font-size: 1.2rem;
-		font-weight: bold;
-		line-height: 1.2;
-	}
+    &.small {
+      @apply text-sm leading-[1.2];
+    }
+    &.large {
+      @apply font-display leading-[1.2] font-bold md:text-xl;
+    }
+  }
+
+  .xAxis {
+    font-weight: bold;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    @apply text-blue dark:bg-dark fill-blue dark:fill-white;
+  }
+
+  .yAxis {
+    font-weight: bold;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--color-blue);
+    @apply text-blue dark:bg-dark fill-blue dark:fill-white;
+  }
+
+  tspan {
+    font-family: var(--font-display);
+    @apply text-blue fill-blue dark:bg-dark flex max-w-10 text-wrap break-words hyphens-auto dark:fill-white;
+  }
+
+  .iconSize {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .recharts-text {
+    font-family: var(--font-display);
+  }
 }

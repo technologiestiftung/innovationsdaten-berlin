@@ -1,87 +1,77 @@
 import React, { useState } from "react";
-import Icon from "./Icons";
+import Chevron from "../assets/chevron.svg?react";
+import Moon from "../assets/moon.svg?react";
+import Sun from "../assets/sun.svg?react";
 import chapters from "../data/chapters.json";
-import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
-
+import InnoDatenLogo from "../assets/innodaten_logo_wording.svg?react";
 const Header: React.FC = () => {
-	const {
-		fontSize,
-		theme,
-		toggleTheme,
-		chapter: globalChapter,
-		setChapter,
-		headerHeight,
-		breakPoint,
-		isMobile,
-	} = useGlobalContext();
-	const [open, setOpen] = useState<boolean>(false);
-	const toggleIconSize = isMobile ? fontSize * 1.25 : fontSize * 2;
-	return (
-		<>
-			<header
-				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
-			>
-				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
-					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
-				</div>
-				<div className="flex items-center gap-8">
-					<div className="flex items-center gap-8">
-						<div
-							className="flex items-center gap-4 cursor-pointer"
-							onClick={() => setOpen(!open)}
-							onMouseEnter={() => setOpen(true)}
-						>
-							<h4>{globalChapter}</h4>
-							{/* @refactor */}
-							<div
-								className={open ? "tailwind" : "tailwind"}
-								style={{ transform: open ? "rotate(180deg)" : "none" }}
-							>
-								<Icon id="chevron" size={fontSize * 1.5} />
-							</div>
-						</div>
-					</div>
-					<div className={`cursor-pointer ${theme}`} onClick={toggleTheme}>
-						{theme === "dark" ? (
-							<Icon id="moon" size={toggleIconSize} setColor={colors.white} />
-						) : (
-							<Icon id="sun" size={toggleIconSize} setColor={colors.blue} />
-						)}
-					</div>
-				</div>
-			</header>
-			{open && (
-				<ul
-					className={`fixed nav-ul py-6 px-12 ${theme}`}
-					style={{
-						top: headerHeight - 2,
-						left: "auto",
-						right: (window.innerWidth - breakPoint) / 2,
-					}}
-					onMouseLeave={() => setOpen(false)}
-				>
-					{chapters.map((chapter) => (
-						<li key={chapter.link} className="my-4">
-							<a
-								href={`#${chapter.link}`}
-								onClick={() => {
-									setChapter(chapter.title);
-									setOpen(false);
-								}}
-							>
-								<h4
-									className={`select-none ${globalChapter === chapter.title ? "underline" : ""}`}
-								>
-									{chapter.title}
-								</h4>
-							</a>
-						</li>
-					))}
-				</ul>
-			)}
-		</>
-	);
+  const {
+    theme,
+    toggleTheme,
+    chapter: globalChapter,
+    setChapter,
+  } = useGlobalContext();
+  const [open, setOpen] = useState<boolean>(false);
+  return (
+    <>
+      <header
+        className={`dark:bg-dark border-blue fixed top-0 left-0 z-11 flex h-[var(--header-height)] w-screen items-center justify-between border-b-2 bg-white px-6 py-6 md:px-48 dark:border-white`}
+      >
+        <div
+          onClick={() => window.scrollTo(0, 0)}
+          className="cursor-pointer dark:text-white"
+        >
+          <InnoDatenLogo className="fill-blue size-40 h-full md:size-64 dark:fill-white" />
+        </div>
+        <div className="flex items-center gap-8">
+          <div className="flex items-center gap-8">
+            <div
+              className="flex cursor-pointer items-center gap-4"
+              onClick={() => setOpen(!open)}
+              onMouseEnter={() => setOpen(true)}
+            >
+              <h4 className="hidden md:block">{globalChapter}</h4>
+              <div className={`${open && "rotate-180"}`}>
+                <Chevron className="fill-blue size-6 dark:fill-white" />
+              </div>
+            </div>
+          </div>
+          <div className={`cursor-pointer`} onClick={toggleTheme}>
+            {(theme !== "dark" && (
+              <Sun className="fill-blue size-8 dark:fill-white" />
+            )) || <Moon className="fill-blue size-8 dark:fill-white" />}
+          </div>
+        </div>
+      </header>
+      {open && (
+        <div
+          onMouseLeave={() => setOpen(false)}
+          className="dark:bg-dark border-blue fixed top-24 z-12 flex h-[calc(100vh-var(--header-height))] w-full flex-col items-center justify-start border-t-0 bg-white px-12 py-6 text-left md:top-23.5 md:right-48 md:h-auto md:w-auto md:border-2 md:border-t-0 dark:border-white"
+        >
+          <ul className={`mt-24 space-y-4 md:mt-0 md:space-y-2`}>
+            {chapters.map((chapter) => (
+              <li key={chapter.link}>
+                <a
+                  href={`#${chapter.link}`}
+                  onClick={() => {
+                    setChapter(chapter.title);
+                    setOpen(false);
+                  }}
+                >
+                  <h4
+                    className={`select-none ${globalChapter === chapter.title ? "underline" : ""}`}
+                  >
+                    {chapter.title}
+                  </h4>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Header;

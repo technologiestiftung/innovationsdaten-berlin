@@ -1,11 +1,11 @@
 {
-	"dark": "#14161d",
-	"blue": "#1e3791",
-	"white": "#ffffff",
-	"cyan_light": "#6ECDF5",
-	"green_light": "#41B496",
-	"green": "#00FF00",
-	"red": "#FF0000",
-	"bar_chart_3": "#1A7277",
-	"bar_chart_4": "#754EC3"
+  "dark": "#14161d",
+  "blue": "#1e3791",
+  "white": "#ffffff",
+  "cyan_light": "#6ECDF5",
+  "green_light": "#41B496",
+  "green": "#00FF00",
+  "red": "#FF0000",
+  "bar_chart_3": "#1A7277",
+  "bar_chart_4": "#754EC3"
 }
