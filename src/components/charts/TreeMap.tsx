@@ -17,7 +17,7 @@ type TreeMapProps = {
 };
 
 const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
-	const { theme, fontSize } = useGlobalContext();
+	const { theme, fontSize, isMobile, headerHeight } = useGlobalContext();
 
 	if (!data || !Array.isArray(data)) {
 		return null;
@@ -46,6 +46,13 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 		}
 		const billions = num / 1000;
 		return Math.round(billions * 10) / 10;
+	};
+
+	const getHeight = () => {
+		if (isMobile) {
+			return window.innerHeight - headerHeight - window.innerHeight * 0.075;
+		}
+		return window.innerHeight * 0.5;
 	};
 
 	const CustomTreemapNode = (props: any) => {
@@ -149,7 +156,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 					position: "relative",
 				}}
 			>
-				<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
+				<ResponsiveContainer width="100%" height={getHeight()}>
 					<TreeMapRecharts
 						// data={collectData}
 						data={collectData.sort((a, b) => b.value - a.value)}
