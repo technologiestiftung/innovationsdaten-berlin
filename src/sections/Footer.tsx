@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Icon from "../components/Icons";
 import methodic from "../data/methodic.json";
+import colors from "../data/colors.json";
 
 const Footer: React.FC = () => {
 	const { theme, fontSize, isMobile } = useGlobalContext();
@@ -70,16 +71,22 @@ const Footer: React.FC = () => {
 			{isModalOpen && (
 				<div
 					onClick={() => setIsModalOpen(false)}
-					className="fixed w-screen h-screen inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+					className={`fixed w-screen h-screen inset-0 bg-opacity-75 flex justify-center items-center bg-black z-50 ${theme}`}
 				>
-					<div className="bg-white dark:bg-dark overflow-auto p-12 flex flex-col items-center overflow-auto h-screen">
+					<div
+						style={{
+							background: theme === "dark" ? colors.dark : colors.white,
+							color: theme === "dark" ? colors.white : colors.dark,
+						}}
+						className="bg-white  overflow-auto p-12 flex flex-col items-center overflow-auto h-screen"
+					>
 						<h2 className="text-xl font-bold mb-4 ">Methodik</h2>
 						{methodic.methodic_text &&
 							Object.entries(methodic.methodic_text).map(
 								([sectionKey, html]) => (
 									<div
 										key={sectionKey}
-										className="prose prose-lg dark:prose-invert mb-8"
+										className=" prose-lg mb-8"
 										dangerouslySetInnerHTML={{ __html: html }}
 									/>
 								),
