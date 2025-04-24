@@ -6,7 +6,7 @@ interface BigFactProps {
 }
 
 const BigFact: React.FC<BigFactProps> = ({ facts }) => {
-	const { fontSize: globalFontSize } = useGlobalContext();
+	const { fontSize: globalFontSize, isMobile } = useGlobalContext();
 
 	const SingleFact = ({ fact, unit }: any) => {
 		const textRef = useRef<HTMLDivElement>(null);
@@ -51,7 +51,7 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 	};
 
 	return (
-		<div className="flex gap-8">
+		<div className={`flex gap-8 ${isMobile ? "flex-col w-full " : ""}`}>
 			{facts?.map((item, index) => (
 				<SingleFact key={index} fact={item.fact} unit={item.unit} />
 			))}
