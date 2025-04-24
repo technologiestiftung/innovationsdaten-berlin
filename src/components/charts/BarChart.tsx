@@ -449,7 +449,6 @@ const BarChart: React.FC<BarChartProps> = ({
 				</p>
 				{!chart_type.includes("filter_keys") ? (
 					<>
-						{/* inno_intensitaet | protective_measures_intellectual_property */}
 						{objectKeys
 							.filter((objectKey) => !excludeKeyFromToolTip.includes(objectKey))
 							.map((key: string) => (
