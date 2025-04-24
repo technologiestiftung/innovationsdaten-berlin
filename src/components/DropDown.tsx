@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
-import Chevron from "../assets/Chevron.svg?react";
-import Checked from "../assets/Checked.svg?react";
-import Unchecked from "../assets/Unchecked.svg?react";
+import Chevron from "../assets/chevron.svg?react";
+import Checked from "../assets/checked.svg?react";
+import Unchecked from "../assets/unchecked.svg?react";
 import wordings from "../data/wordings.json";
 import { dataKeys } from "../types/global";
 import { LazySvg } from "./LazySVG";

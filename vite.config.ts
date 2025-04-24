@@ -4,14 +4,12 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		svgr({
-			svgrOptions: {
-				// SVGR options here
-				icon: true,
-				// ... other options
-			},
-		}),
-	],
+  plugins: [
+    react(),
+    svgr({
+      svgrOptions: {
+        icon: true,
+      },
+    }),
+  ],
 });
