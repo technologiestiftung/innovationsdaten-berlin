@@ -11,6 +11,7 @@ import {
 	ResponsiveContainer,
 	CartesianGrid,
 	Tooltip,
+	Legend,
 } from "recharts";
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
@@ -95,7 +96,13 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
-
+	const legendFormatter = (value: string) => {
+		return (
+			<span style={{ color: theme === "dark" ? colors.white : colors.blue }}>
+				{wordings[value as keyof typeof wordings] || value}
+			</span>
+		);
+	};
 	// set Data
 	const collectData = useMemo(() => {
 		if (!data) {
@@ -395,6 +402,9 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 		return colors.blue;
 	};
+	const showLegend =
+		chart_type.includes("stacked") || chart_type.includes("full");
+
 	const getHeight = () => {
 		if (isMobile) {
 			return (
@@ -585,6 +595,23 @@ const BarChart: React.FC<BarChartProps> = ({
 						{has_tooltip && <Tooltip content={<CustomTooltip />} />}
 						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
+						{showLegend && (
+							<Legend
+								verticalAlign="bottom"
+								align="center"
+								layout="vertical"
+								height={36}
+								iconSize={10}
+								formatter={legendFormatter}
+								wrapperStyle={{
+									width: "100%",
+									paddingLeft: 20, // Avoid hitting edge
+									paddingRight: 20,
+									paddingTop: 30,
+									pointerEvents: "none",
+								}}
+							/>
+						)}
 						{/* Bars */}
 						{(chart_type.includes("delta") || chart_type === "bar_chart") && (
 							<Bar
@@ -691,7 +718,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				</ResponsiveContainer>
 			</div>
 			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-8 gap-2" : "items-center mt-8 gap-8 justify-end"}`}
+				className={`flex ${isMobile ? "flex-col items-end mt-16 gap-2" : "items-center mt-12 gap-8 justify-end"}`}
 				ref={optionsRef}
 			>
 				{hasRegionToggle && (
