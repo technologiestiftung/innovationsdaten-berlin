@@ -109,8 +109,10 @@ const Card: React.FC<CardProps> = ({
 			{typeof window !== "undefined" &&
 				!window.location.toString().includes("innovationsdaten.ts.berlin") &&
 				displayNumber && <h4>{displayNumber}</h4>}
-			<h2>{title}</h2>
-			<p className="mt-4">{text}</p>
+			<h2 dangerouslySetInnerHTML={{ __html: title }} />
+			{text && (
+				<p className="mt-4" dangerouslySetInnerHTML={{ __html: text }} />
+			)}
 		</div>
 	);
 };
