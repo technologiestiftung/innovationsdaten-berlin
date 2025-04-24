@@ -106,10 +106,10 @@ const Card: React.FC<CardProps> = ({
 				marginBottom: getMarginBottom(),
 			}}
 		>
-			{typeof window !== "undefined" && displayNumber && (
-				<h4>{displayNumber}</h4>
-			)}
-			<h2 className="">{title}</h2>
+			{typeof window !== "undefined" &&
+				!window.location.toString().includes("innovationsdaten.ts.berlin") &&
+				displayNumber && <h4>{displayNumber}</h4>}
+			<h2>{title}</h2>
 			<p className="mt-4">{text}</p>
 		</div>
 	);
