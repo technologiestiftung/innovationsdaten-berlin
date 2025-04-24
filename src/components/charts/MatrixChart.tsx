@@ -6,6 +6,14 @@ import Icon from "../Icons";
 import { useGlobalContext } from "../../GlobalContext";
 import DataToggle from "../DataToggle";
 import { Region } from "../../types/global";
+import MatrixLabel1Dark from "../../assets/MatrixLabel1_dark.png";
+import MatrixLabel1Light from "../../assets/MatrixLabel1_light.png";
+import MatrixLabel2Dark from "../../assets/MatrixLabel2_dark.png";
+import MatrixLabel2Light from "../../assets/MatrixLabel2_light.png";
+import MatrixLabel3Dark from "../../assets/MatrixLabel3_dark.png";
+import MatrixLabel3Light from "../../assets/MatrixLabel3_light.png";
+import MatrixLabel4Dark from "../../assets/MatrixLabel4_dark.png";
+import MatrixLabel4Light from "../../assets/MatrixLabel4_light.png";
 
 type MatrixData = {
 	x: string;
@@ -14,6 +22,7 @@ type MatrixData = {
 }[];
 
 type MatrixChartProps = {
+	id: string;
 	data: MatrixData;
 };
 
@@ -43,8 +52,8 @@ function getMinMax(data: MatrixData): { min: number; max: number } {
 	return { min, max };
 }
 
-const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
-	const { fontSize, theme, region, setRegion } = useGlobalContext();
+const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
+	const { fontSize, theme, region, setRegion, isMobile } = useGlobalContext();
 	const [maxValue, setMaxValue] = React.useState(0);
 	const [minValue, setMinValue] = React.useState(0);
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
@@ -76,6 +85,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	}) => {
 		const [isOpen, setIsOpen] = useState(false);
 		const selfRef = useRef<HTMLDivElement>(null);
+		const getCorrectLabel = isMobile ? x : y;
 		useEffect(() => {
 			const handleClickOutside = (event: MouseEvent) => {
 				if (
@@ -98,7 +108,11 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 				<div
 					className={`inner-value-cell cursor-pointer flex items-center justify-center ${theme}`}
 					onMouseEnter={() => setIsOpen(true)}
-					onMouseLeave={() => setIsOpen(false)}
+					onMouseLeave={() => {
+						if (!isMobile) {
+							setIsOpen(false);
+						}
+					}}
 					onClick={() => setIsOpen(true)}
 				>
 					<div
@@ -130,23 +144,21 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
-								// @refactor
 								dangerouslySetInnerHTML={{
-									__html: wordings[y as keyof typeof wordings],
+									__html: wordings[getCorrectLabel as keyof typeof wordings],
 								}}
 							/>
 						</div>
 						<div className="placeholder w-full" />
 						<div className="flex justify-between items-end gap-6 mt-4">
-							{wordings[y as keyof typeof wordings] && (
+							{wordings[getCorrectLabel as keyof typeof wordings] && (
 								<p
 									className="text-left"
 									style={{
 										color: theme === "dark" ? colors.dark : colors.white,
 									}}
-									// @refactor
 									dangerouslySetInnerHTML={{
-										__html: `${wordings[y as keyof typeof wordings]}:`,
+										__html: `${wordings[getCorrectLabel as keyof typeof wordings]}:`,
 									}}
 								/>
 							)}
@@ -165,6 +177,18 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 		);
 	};
 
+	const setSRC = () => {
+		if (id === "collaboration_regions") {
+			return theme === "dark" ? MatrixLabel2Dark : MatrixLabel2Light;
+		} else if (id === "collaboration_partners") {
+			return theme === "dark" ? MatrixLabel1Dark : MatrixLabel1Light;
+		} else if (id === "use_ai_processes") {
+			return theme === "dark" ? MatrixLabel3Dark : MatrixLabel3Light;
+		}
+		// ai_applications
+		return theme === "dark" ? MatrixLabel4Dark : MatrixLabel4Light;
+	};
+
 	useEffect(() => {
 		if (data) {
 			const { min, max } = getMinMax(data);
@@ -179,6 +203,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 
 	return (
 		<>
+			{isMobile && <img className="mb-2" src={setSRC()} />}
 			<div
 				className={`matrix-grid ${theme}`}
 				style={{
@@ -187,34 +212,45 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 				}}
 			>
 				{/* X Labels */}
-				{xLabels.map((x) => (
-					<div
-						key={x}
-						className="matrix-cell label-x flex items-center justify-center"
-						style={{ gridArea: `x_${sanitize(x)}` }}
-					>
-						<Icon
-							id={x}
-							setColor={theme === "dark" ? colors.white : colors.blue}
-							size={fontSize * 1.25}
-						/>
-					</div>
-				))}
+				{!isMobile && (
+					<>
+						{xLabels.map((x) => (
+							<div
+								key={x}
+								className={`matrix-cell label-x ${isMobile ? "" : "flex items-center justify-center"}`}
+								style={{ gridArea: `x_${sanitize(x)}` }}
+							>
+								<Icon
+									id={x}
+									setColor={theme === "dark" ? colors.white : colors.blue}
+									size={fontSize * 1.25}
+								/>
+							</div>
+						))}
+					</>
+				)}
 
 				{/* Y Labels */}
 				{yLabels.map((y) => (
 					<div
 						key={y}
-						className="matrix-cell label-y flex items-center"
+						className={`matrix-cell label-y flex items-center ${isMobile ? "" : ""}`}
 						style={{ gridArea: `y_${sanitize(y)}` }}
 					>
-						<p
-							className="small"
-							// @refactor
-							dangerouslySetInnerHTML={{
-								__html: wordings[y as keyof typeof wordings],
-							}}
-						/>
+						{isMobile ? (
+							<Icon
+								id={y}
+								setColor={theme === "dark" ? colors.white : colors.blue}
+								size={fontSize * 1.25}
+							/>
+						) : (
+							<p
+								className="small"
+								dangerouslySetInnerHTML={{
+									__html: wordings[y as keyof typeof wordings],
+								}}
+							/>
+						)}
 					</div>
 				))}
 
