@@ -1,21 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-News.woff) format("woff");
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: "Clan Pro";
-	src:
-		local("Clan"),
-		url(../fonts/ClanWebPro-Bold.woff) format("woff");
-	font-weight: bold;
-}
-
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -31,78 +15,5 @@
 	::backdrop,
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentcolor);
-	}
-}
-
-@theme {
-	--font-display: "Clan Pro", sans-serif;
-	--breakpoint-md: 46.5rem;
-
-	--color-dark: var(--dark);
-	--color-blue: var(--blue);
-	--color-white: var(--white);
-	--color-green: var(--green);
-	--color-red: var(--red);
-	--color-dark-grey: var(--dark-grey);
-	--color-light-grey: var(--light-grey);
-}
-
-@layer base {
-	:root {
-		--dark: #14161d;
-		--blue: #1e3791;
-		--white: #ffffff;
-		--green: #00ff00;
-		--red: #ff0000;
-		--dark-grey: #616161;
-		--light-grey: #d9d9d9;
-	}
-}
-
-@layer components {
-	h1 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2.5rem;
-		line-height: 1.2;
-	}
-	h2 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 2rem;
-		line-height: 1.2;
-	}
-	h3 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 1.5rem;
-		line-height: 1.2;
-	}
-	h4 {
-		font-family: var(--font-display);
-		font-weight: bold;
-		font-size: 1.3rem;
-		line-height: 1.2;
-	}
-	p {
-		font-family: var(--font-display);
-		font-size: 1rem;
-		font-weight: normal;
-		line-height: 1.4;
-
-		&.bold {
-			font-weight: bold;
-		}
-
-		&.small {
-			font-size: 0.875rem;
-			line-height: 1.2;
-		}
-	}
-	button {
-		font-family: var(--font-display);
-		font-size: 1.2rem;
-		font-weight: bold;
-		line-height: 1.2;
 	}
 }

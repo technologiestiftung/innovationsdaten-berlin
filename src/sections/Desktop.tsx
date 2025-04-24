@@ -3,13 +3,13 @@ import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
 import { ChapterKeys, StickyItem } from "../types/global";
 import Card from "../components/Card";
-import LeftStickyContent from "../components/LeftStickyContent";
+import Graph from "../components/Graph";
 
-type StickyProps = {
+type DesktopProps = {
 	dataKey: ChapterKeys;
 };
 
-const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
+const Desktop: React.FC<DesktopProps> = ({ dataKey }) => {
 	const { headerHeight } = useGlobalContext();
 	const typedData = data as Record<ChapterKeys, StickyItem[]>;
 	const dataArray = typedData[dataKey];
@@ -35,7 +35,7 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 				}}
 			>
 				<div className="w-full">
-					<LeftStickyContent data={current as StickyItem} />
+					<Graph data={current as StickyItem} />
 				</div>
 			</div>
 			<div className="basis-2/5">
@@ -57,4 +57,4 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
 	);
 };
 
-export default Sticky;
+export default Desktop;

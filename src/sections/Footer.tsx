@@ -3,16 +3,21 @@ import Icon from "../components/Icons";
 import { useGlobalContext } from "../GlobalContext";
 
 const Footer: React.FC = () => {
-	const { theme, fontSize } = useGlobalContext();
+	const { theme, fontSize, isMobile } = useGlobalContext();
 	return (
 		<footer className={theme}>
-			<div className="py-20 flex">
+			<div
+				className={`py-20 flex ${isMobile ? "flex-col px-3 gap-20" : "flex-row"}`}
+			>
 				<div className="basis-1/2">
 					<h3 className="mb-4">Gefördert von:</h3>
-					<Icon id="SenWEB_logo" size={fontSize * 5} />
+					<Icon
+						id="SenWEB_logo"
+						size={isMobile ? fontSize * 3 : fontSize * 5}
+					/>
 					<h3 className="mb-4 mt-10">Ein Projekt der:</h3>
-					<div className="mb-10">
-						<Icon id="tsb_logo" size={fontSize * 5} />
+					<div className={isMobile ? "" : "mb-10"}>
+						<Icon id="tsb_logo" size={isMobile ? fontSize * 3 : fontSize * 5} />
 					</div>
 				</div>
 				<div className="basis-1/2">

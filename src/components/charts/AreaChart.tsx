@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
 	XAxis,
 	Tooltip,
@@ -44,12 +44,16 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		region,
 		setRegion,
 		widthOfStickyContainer,
+		isMobile,
+		headerHeight,
 	} = useGlobalContext();
 
+	const optionsRef = useRef<HTMLDivElement>(null);
 	const allFilters = branchen.map((branche) => branche.id);
 	const [activeFilters, setActiveFilters] = useState<string[] | null>(
 		allFilters,
 	);
+	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
 
@@ -172,9 +176,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		);
 	};
 
+	useEffect(() => {
+		if (optionsRef.current) {
+			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
+			setHeightOfOptions(optionsHeight);
+		}
+	}, [optionsRef.current]);
+
 	return (
 		<>
-			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
+			<ResponsiveContainer
+				width="100%"
+				height={
+					isMobile
+						? window.innerHeight -
+							headerHeight -
+							heightOfOptions -
+							window.innerHeight * 0.075
+						: window.innerHeight * 0.5
+				}
+			>
 				<AreaChartRecharts data={setData}>
 					<XAxis
 						dataKey="year"
@@ -247,7 +268,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
-						width={widthOfStickyContainer * 0.3}
+						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
@@ -261,7 +282,10 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
-			<div className="mt-8 flex gap-8 items-center justify-end">
+			<div
+				className={`flex ${isMobile ? "flex-col items-end mt-2 gap-2" : "items-center mt-8 gap-8 justify-end"}`}
+				ref={optionsRef}
+			>
 				{id !== "berlin_is_ahead" && (
 					<DataToggle
 						data={region}

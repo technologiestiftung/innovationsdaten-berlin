@@ -4,7 +4,8 @@ import Overview from "../components/Overview";
 import wordings from "../data/wordings.json";
 
 const Welcome: React.FC = () => {
-	const { headerHeight, theme, setWidthOfStickyContainer } = useGlobalContext();
+	const { headerHeight, theme, setWidthOfStickyContainer, isMobile } =
+		useGlobalContext();
 	const selfRef = useRef<HTMLDivElement>(null);
 	useEffect(() => {
 		const handleResize = () => {
@@ -22,7 +23,7 @@ const Welcome: React.FC = () => {
 	return (
 		<section
 			id="welcome"
-			className="sticky-section relative w-full flex gap-6"
+			className={`sticky-section relative w-full flex ${isMobile ? "flex-col-reverse gap-12" : "flex-row gap-6"}`}
 			style={{ paddingTop: headerHeight }}
 		>
 			<div
@@ -37,9 +38,9 @@ const Welcome: React.FC = () => {
 				</div>
 			</div>
 			<div className="flex items-center basis-1/2">
-				<div className={`card p-6 ${theme}`}>
+				<div className={`card ${theme} ${isMobile ? "mt-10" : "p-6"}`}>
 					<h2 className="mb-4">{wordings.welcome_title}</h2>
-					<p>{wordings.welcome_text}</p>
+					<p dangerouslySetInnerHTML={{ __html: wordings.welcome_text }} />
 				</div>
 			</div>
 		</section>
