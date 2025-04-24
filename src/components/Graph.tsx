@@ -7,13 +7,14 @@ import BarChart from "./charts/BarChart";
 import { useGlobalContext } from "../GlobalContext";
 import BigFact from "./charts/BigFact";
 import MatrixChart from "./charts/MatrixChart";
+import mobilematrix from "../data/mobile-matrix.json";
 
-type LeftStickyContentProps = {
+type GraphProps = {
 	data: StickyItem;
 };
 
-const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
-	const { region } = useGlobalContext();
+const Graph: React.FC<GraphProps> = ({ data }) => {
+	const { region, isMobile } = useGlobalContext();
 	const [toggleData, setToggleData] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -40,6 +41,9 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 	} = data;
 
 	const hasRegionToggle = "ber" in (content || {});
+	const matrixData = (mobilematrix as Record<string, Record<string, any>>)[
+		id
+	]?.[region];
 
 	const hasMultipleBreakpoints =
 		!!bar_chart_unit_breakpoint &&
@@ -96,8 +100,9 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 			{/* MATRIX CHART */}
 			{chart_type === "matrix" && (
 				<MatrixChart
+					id={id}
 					data={
-						hasRegionToggle ? (content as Record<string, any>)[region] : content
+						isMobile ? matrixData : (content as Record<string, any>)[region]
 					}
 				/>
 			)}
@@ -105,4 +110,4 @@ const LeftStickyContent: React.FC<LeftStickyContentProps> = ({ data }) => {
 	);
 };
 
-export default LeftStickyContent;
+export default Graph;
