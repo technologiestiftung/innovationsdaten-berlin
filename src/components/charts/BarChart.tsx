@@ -11,6 +11,7 @@ import {
 	ResponsiveContainer,
 	CartesianGrid,
 	Tooltip,
+	Legend,
 } from "recharts";
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
@@ -101,7 +102,41 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
+	const RenderCustomLegend = (props: any) => {
+		const { payload } = props;
 
+		return (
+			<ul
+				style={{
+					display: "flex",
+					flexWrap: "wrap",
+					listStyle: "none",
+					padding: 0,
+					marginTop: 40,
+				}}
+			>
+				{payload.map((entry: any, index: number) => (
+					<li
+						key={`item-${index}`}
+						style={{ display: "flex", alignItems: "center", marginRight: 16 }}
+					>
+						<span
+							style={{
+								display: "inline-block",
+								width: 12,
+								height: 12,
+								backgroundColor: entry.color,
+								marginRight: 8,
+							}}
+						/>
+						<p className="small">
+							{wordings[entry.value as keyof typeof wordings] || entry.value}
+						</p>
+					</li>
+				))}
+			</ul>
+		);
+	};
 	// set Data
 	const collectData = useMemo(() => {
 		if (!data) {
@@ -401,6 +436,9 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 		return colors.blue;
 	};
+	const showLegend =
+		chart_type.includes("stacked") || chart_type.includes("full");
+
 	const getHeight = () => {
 		if (isMobile) {
 			return (
@@ -591,6 +629,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						{has_tooltip && <Tooltip content={<CustomTooltip />} />}
 						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
+						{showLegend && <Legend content={RenderCustomLegend} />}
 						{/* Bars */}
 						{(chart_type.includes("delta") || chart_type === "bar_chart") && (
 							<Bar
@@ -697,7 +736,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				</ResponsiveContainer>
 			</div>
 			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-8 gap-2" : "items-center mt-8 gap-8 justify-end"}`}
+				className={`flex ${isMobile ? "flex-col items-end mt-16 gap-2" : "items-center mt-12 gap-8 justify-end"}`}
 				ref={optionsRef}
 			>
 				{hasRegionToggle && (

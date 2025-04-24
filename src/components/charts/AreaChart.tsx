@@ -56,7 +56,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
-
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
 		if (activeFilters) {
 			if (theme === "dark") {
@@ -94,6 +93,22 @@ const AreaChart: React.FC<AreaChartProps> = ({
 			);
 			return branche?.name || dataKey.toUpperCase();
 		};
+		const getBGColor = (dataKey: any) => {
+			if (sektoren.some((someSektor) => someSektor.id === dataKey)) {
+				const getSektor = sektoren.find(
+					(findSektor) => findSektor.id === dataKey,
+				);
+				return getSektor?.color;
+			}
+			if (branchen.some((branche) => branche.id === dataKey)) {
+				const findBranche = branchen.find((branche) => branche.id === dataKey);
+				return findBranche?.color;
+			}
+			if (dataKey === "ber" || dataKey === "de") {
+				return dataKey === "ber" ? colors.cyan_light : colors.green_light;
+			}
+			return colors.blue;
+		};
 		return (
 			<div
 				className="p-4 select-none"
@@ -119,14 +134,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 										dataKey === "dienstleistungen" ||
 										dataKey === "industrie") && (
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{findTitle(dataKey)}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													className="max-w-[100px] truncate"
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{findTitle(dataKey)}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
@@ -149,14 +176,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								{dataKey !== "year" && (
 									<>
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{dataKey === "ber" ? "Berlin" : "Deutschland"}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													className="max-w-[100px] truncate"
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{dataKey === "ber" ? "Berlin" : "Deutschland"}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
