@@ -3,11 +3,14 @@ import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Overview: React.FC = () => {
-	const { theme } = useGlobalContext();
+	const { theme, isMobile } = useGlobalContext();
 	return (
 		<>
 			<h2 className="mb-4">Übersicht</h2>
-			<div id="overview" className="grid grid-cols-2 gap-2">
+			<div
+				id="overview"
+				className={`grid gap-2 ${isMobile ? "" : "grid-cols-2"}`}
+			>
 				{chapters.map((chapter) => (
 					<a
 						key={chapter.link}

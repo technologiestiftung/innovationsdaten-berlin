@@ -16,27 +16,32 @@ const Header: React.FC = () => {
 		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
-	const toggleIconSize = isMobile ? fontSize * 1.25 : fontSize * 2;
+	const toggleIconSize = isMobile ? fontSize * 1.5 : fontSize * 2;
 	return (
 		<>
 			<header
 				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
 			>
 				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
-					<Icon id="innodaten_logo_wording" size={fontSize * 2.5} />
+					<Icon
+						id={isMobile ? "innodaten_logo" : "innodaten_logo_wording"}
+						size={fontSize * 2.5}
+					/>
 				</div>
-				<div className="flex items-center gap-8">
-					<div className="flex items-center gap-8">
+				<div className={`flex items-center ${isMobile ? "gap-4" : "gap-8"}`}>
+					<div className="flex items-center">
 						<div
-							className="flex items-center gap-4 cursor-pointer"
+							className={`flex items-center cursor-pointer ${isMobile ? "gap-2" : "gap-4"}`}
 							onClick={() => setOpen(!open)}
 							onMouseEnter={() => setOpen(true)}
 						>
 							<h4>{globalChapter}</h4>
-							{/* @refactor */}
 							<div
-								className={open ? "tailwind" : "tailwind"}
-								style={{ transform: open ? "rotate(180deg)" : "none" }}
+								className={
+									open
+										? "rotate-180 transition-transform"
+										: "transition-transform"
+								}
 							>
 								<Icon id="chevron" size={fontSize * 1.5} />
 							</div>
@@ -53,11 +58,12 @@ const Header: React.FC = () => {
 			</header>
 			{open && (
 				<ul
-					className={`fixed nav-ul py-6 px-12 ${theme}`}
+					className={`fixed nav-ul py-6 px-12 ${theme} ${isMobile ? "w-full" : ""}`}
 					style={{
 						top: headerHeight - 2,
 						left: "auto",
-						right: (window.innerWidth - breakPoint) / 2,
+						right: isMobile ? 0 : (window.innerWidth - breakPoint) / 2,
+						height: isMobile ? window.innerHeight - headerHeight + 2 : "auto",
 					}}
 					onMouseLeave={() => setOpen(false)}
 				>

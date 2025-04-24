@@ -7,10 +7,10 @@ type CardProps = {
 	title: string;
 	displayNumber?: string;
 	text?: string;
-	onSetCurrent: () => void;
-	isNotCurrent: boolean;
-	last: boolean;
-	first: boolean;
+	onSetCurrent?: () => void;
+	isNotCurrent?: boolean;
+	last?: boolean;
+	first?: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -23,11 +23,14 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme, headerHeight } = useGlobalContext();
+	const { theme, headerHeight, isMobile } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
 	const getMarginTop = () => {
+		if (isMobile) {
+			return 0;
+		}
 		if (cardHeight) {
 			return (window.innerHeight - cardHeight - headerHeight) / 2;
 		}
@@ -46,12 +49,16 @@ const Card: React.FC<CardProps> = ({
 		return 0;
 	};
 	const handleScroll = () => {
+		if (isMobile) {
+			return;
+		}
 		if (cardRef.current) {
 			const rect = cardRef.current.getBoundingClientRect();
 			if (
 				(isInRange(rect.top - window.innerHeight / 2) ||
 					isInRange(rect.bottom - window.innerHeight / 2)) &&
-				isNotCurrent
+				isNotCurrent &&
+				onSetCurrent
 			) {
 				onSetCurrent();
 			}
@@ -93,7 +100,7 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card p-6 ${theme}`}
+			className={`card ${theme} ${isMobile ? "" : "p-6"}`}
 			style={{
 				marginTop: getMarginTop(),
 				marginBottom: getMarginBottom(),
@@ -102,7 +109,6 @@ const Card: React.FC<CardProps> = ({
 			{typeof window !== "undefined" && displayNumber && (
 				<h4>{displayNumber}</h4>
 			)}
-			{/* @refactor: hypens & break-words for title */}
 			<h2 className="">{title}</h2>
 			<p className="mt-4">{text}</p>
 		</div>
