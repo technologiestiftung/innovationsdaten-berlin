@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import wordings from "../../data/wordings.json";
-import colors from "../../data/colors.json";
 import branchen from "../../data/branchen.json";
 import { useGlobalContext } from "../../GlobalContext";
 import DataToggle from "../DataToggle";
@@ -17,211 +16,176 @@ type MatrixChartProps = {
   data: MatrixData;
 };
 
-const sanitize = (str: string) =>
-  str
-    .toLowerCase()
-    .replace(/\s+/g, "_")
-    .replace(/[^a-z0-9_]/g, "");
-
 function getMinMax(data: MatrixData): { min: number; max: number } {
   if (data.length === 0) {
-    throw new Error("Data array is empty");
+    return { min: 0, max: 0 };
   }
-
   let min = data[0].value;
   let max = data[0].value;
-
-  for (const { value } of data) {
+  data.forEach(({ value }) => {
     if (value < min) {
       min = value;
     }
     if (value > max) {
       max = value;
     }
-  }
-
+  });
   return { min, max };
 }
 
-const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
-  const { theme, region, setRegion } = useGlobalContext();
-  const [maxValue, setMaxValue] = React.useState(0);
-  const [minValue, setMinValue] = React.useState(0);
-  const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
-  const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
+const ValueCell = ({
+  x,
+  y,
+  value,
+  minValue,
+  maxValue,
+}: {
+  x: string;
+  y: string;
+  value: number;
+  minValue: number;
+  maxValue: number;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const templateAreas = [
-    [".", ...xLabels.map((x) => `x_${sanitize(x)}`)],
-    ...yLabels.map((y) => [
-      `y_${sanitize(y)}`,
-      ...xLabels.map((x) => `cell_${sanitize(x)}_${sanitize(y)}`),
-    ]),
-  ]
-    .map((row) => `"${row.join(" ")}"`)
-    .join("\n");
+  let widthPct: string;
+  if (maxValue === minValue) {
+    widthPct = value > 0 ? "100%" : "0%";
+  } else {
+    widthPct = `${((value - minValue) / (maxValue - minValue)) * 100}%`;
+  }
 
-  const getWidth = (self: number) => {
-    return `${((self - minValue) / (maxValue - minValue)) * 100}%`;
-  };
-
-  const ValueCell = ({
-    x,
-    y,
-    value,
-  }: {
-    x: string;
-    y: string;
-    value: number;
-    index: number;
-  }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const selfRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        if (
-          selfRef.current &&
-          !selfRef.current.contains(event.target as Node)
-        ) {
-          setIsOpen(false);
-        }
-      };
-      document.addEventListener("mousedown", handleClickOutside);
-      return () =>
-        document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
-    return (
-      <div
-        ref={selfRef}
-        className={`matrix-cell value-cell relative flex items-center justify-center ${theme}`}
-        style={{ gridArea: `cell_${sanitize(x)}_${sanitize(y)}` }}
-      >
-        <div
-          className={`inner-value-cell flex cursor-pointer items-center justify-center ${theme}`}
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          onClick={() => setIsOpen(true)}
-        >
-          <div
-            className={`inner-value-cell-child ${theme}`}
-            style={{ width: getWidth(value) }}
-          />
-        </div>
-        {isOpen && (
-          <div
-            className={`tooltip p-4 select-none ${theme} ${y === "own_region" || y === "different_regions_in_germany" || y === "eu_foreign" ? "below" : "above"}`}
-          >
-            <div className="flex flex-col items-center">
-              <p
-                className="bold mb-4"
-                style={{
-                  color: theme === "dark" ? colors.dark : colors.white,
-                }}
-              >
-                {branchen.find((findBranche: any) => findBranche.id === x)
-                  ?.name || y.toUpperCase()}{" "}
-              </p>
-              <LazySvg name="sort" />
-              <p
-                className="bold my-4"
-                style={{
-                  color: theme === "dark" ? colors.dark : colors.white,
-                }}
-                // @refactor
-                dangerouslySetInnerHTML={{
-                  __html: wordings[y as keyof typeof wordings],
-                }}
-              />
-            </div>
-            <div className="placeholder w-full" />
-            <div className="mt-4 flex items-end justify-between gap-6">
-              {wordings[y as keyof typeof wordings] && (
-                <p
-                  className="text-left"
-                  style={{
-                    color: theme === "dark" ? colors.dark : colors.white,
-                  }}
-                  // @refactor
-                  dangerouslySetInnerHTML={{
-                    __html: `${wordings[y as keyof typeof wordings]}:`,
-                  }}
-                />
-              )}
-              <p
-                className="bold min-w-[50px]"
-                style={{
-                  color: theme === "dark" ? colors.dark : colors.white,
-                }}
-              >
-                {value} %
-              </p>
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  };
+  const tooltipPos = [
+    "own_region",
+    "different_regions_in_germany",
+    "eu_foreign",
+  ].includes(y)
+    ? "top-full -translate-x-1/2 mt-2"
+    : "bottom-full -translate-x-1/2 mb-2";
 
   useEffect(() => {
-    if (data) {
-      const { min, max } = getMinMax(data);
-      setMinValue(min);
-      setMaxValue(max);
-    }
-  }, [data]);
+    const handleOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    return () => document.removeEventListener("mousedown", handleOutside);
+  }, []);
 
-  if (!data) {
-    return <h4>Matrix Chart Data missing</h4>;
+  return (
+    <div ref={ref} className="relative flex flex-1 items-center justify-center">
+      <div
+        className="flex aspect-square w-full cursor-pointer items-center justify-center border border-gray-300 dark:border-gray-600"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        onClick={() => setIsOpen((o) => !o)}
+      >
+        <div
+          className="bg-blue aspect-square w-full dark:bg-white"
+          style={{ width: widthPct }}
+        />
+      </div>
+      {isOpen && (
+        <div
+          className={`bg-blue absolute left-1/2 z-10 w-[300px] p-4 text-white select-none dark:bg-white dark:text-gray-900 ${tooltipPos}`}
+          onMouseDown={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col items-center">
+            <p className="mb-4 font-bold">
+              {branchen.find((b) => b.id === x)?.name || y.toUpperCase()}
+            </p>
+            <LazySvg name="sort" className="fill-current" />
+            <p
+              className="my-4 text-center font-bold"
+              dangerouslySetInnerHTML={{
+                __html: wordings[y as keyof typeof wordings] || y,
+              }}
+            />
+          </div>
+          <div className="h-[2px] w-full bg-white dark:bg-gray-900" />
+          <div className="mt-4 flex items-end justify-between gap-6">
+            <p
+              className="text-left"
+              dangerouslySetInnerHTML={{
+                __html: `${wordings[y as keyof typeof wordings] || y}:`,
+              }}
+            />
+            <p className="min-w-[50px] text-right font-bold">{value} %</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
+  const { region, setRegion } = useGlobalContext();
+  const { min: minValue, max: maxValue } = React.useMemo(
+    () => getMinMax(data || []),
+    [data],
+  );
+  const xLabels = React.useMemo(
+    () => Array.from(new Set(data.map((d) => d.x))),
+    [data],
+  );
+  const yLabels = React.useMemo(
+    () => Array.from(new Set(data.map((d) => d.y))),
+    [data],
+  );
+
+  if (!data.length) {
+    return (
+      <h4 className="p-4 text-center">
+        Matrix Chart data is missing or empty.
+      </h4>
+    );
   }
 
   return (
     <>
-      <div
-        className={`matrix-grid ${theme}`}
-        style={{
-          display: "grid",
-          gridTemplateAreas: templateAreas,
-        }}
-      >
-        {/* X Labels */}
-        {xLabels.map((x) => (
-          <div
-            key={x}
-            className="matrix-cell label-x flex items-center justify-center"
-            style={{ gridArea: `x_${sanitize(x)}` }}
-          >
-            <LazySvg name={x} />
-          </div>
-        ))}
-
-        {/* Y Labels */}
+      <div className="">
+        {/* Header Row */}
+        <div className="flex">
+          <div className="w-32" />
+          {xLabels.map((x) => (
+            <div key={x} className="flex flex-1 items-end justify-center pb-2">
+              <LazySvg
+                name={x}
+                className="fill-blue size-3 md:size-6 dark:fill-white"
+              />
+            </div>
+          ))}
+        </div>
+        {/* Data Rows */}
         {yLabels.map((y) => (
-          <div
-            key={y}
-            className="matrix-cell label-y flex items-center"
-            style={{ gridArea: `y_${sanitize(y)}` }}
-          >
-            <p
-              className="small"
-              // @refactor
+          <div key={y} className="flex items-center">
+            <div
+              className="text-blue w-32 pr-2 text-right text-xs dark:text-white"
               dangerouslySetInnerHTML={{
-                __html: wordings[y as keyof typeof wordings],
+                __html: wordings[y as keyof typeof wordings] || y,
               }}
             />
+            {xLabels.map((x) => {
+              const cell = data.find((d) => d.x === x && d.y === y);
+              return (
+                <ValueCell
+                  key={`${x}-${y}`}
+                  x={x}
+                  y={y}
+                  value={cell?.value || 0}
+                  minValue={minValue}
+                  maxValue={maxValue}
+                />
+              );
+            })}
           </div>
         ))}
-
-        {/* Values */}
-        {data.map(({ x, y, value }, index) => (
-          <ValueCell
-            key={`${x}-${y}`}
-            x={x}
-            y={y}
-            value={value}
-            index={index}
-          />
-        ))}
       </div>
-      <div className="mt-8 flex items-center justify-end gap-8">
+
+      {/* Toggle */}
+      <div className="4 mt-8 flex items-center justify-end gap-4">
         <DataToggle
           data={region}
           setData={(value: string) => setRegion(value as Region)}

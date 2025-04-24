@@ -16,13 +16,13 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`dark:bg-dark border-blue fixed top-0 left-0 z-11 flex h-24 w-screen items-center justify-between border-b-2 bg-white px-6 py-6 md:px-48 dark:border-white`}
+        className={`dark:bg-dark border-blue fixed top-0 left-0 z-11 flex h-[var(--header-height)] w-screen items-center justify-between border-b-2 bg-white px-6 py-6 md:px-48 dark:border-white`}
       >
         <div
           onClick={() => window.scrollTo(0, 0)}
           className="cursor-pointer dark:text-white"
         >
-          <InnoDatenLogo className="fill-blue size-64 h-full dark:fill-white" />
+          <InnoDatenLogo className="fill-blue size-40 h-full md:size-64 dark:fill-white" />
         </div>
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-8">
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
               onClick={() => setOpen(!open)}
               onMouseEnter={() => setOpen(true)}
             >
-              <h4>{globalChapter}</h4>
+              <h4 className="hidden md:block">{globalChapter}</h4>
               <div className={`${open && "rotate-180"}`}>
                 <Chevron className="fill-blue size-6 dark:fill-white" />
               </div>
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
       {open && (
         <div
           onMouseLeave={() => setOpen(false)}
-          className="dark:bg-dark border-blue fixed top-24 z-12 flex h-[calc(100vh-6rem)] w-full flex-col items-center justify-start border-t-0 bg-white px-12 py-6 text-left md:top-23.5 md:right-48 md:h-auto md:w-auto md:border-2 md:border-t-0 dark:border-white"
+          className="dark:bg-dark border-blue fixed top-24 z-12 flex h-[calc(100vh-var(--header-height))] w-full flex-col items-center justify-start border-t-0 bg-white px-12 py-6 text-left md:top-23.5 md:right-48 md:h-auto md:w-auto md:border-2 md:border-t-0 dark:border-white"
         >
           <ul className={`mt-24 space-y-4 md:mt-0 md:space-y-2`}>
             {chapters.map((chapter) => (

@@ -36,7 +36,7 @@ export const LazySvg = ({ name, ...props }: LazySvgProps) => {
   const { loading, error, Svg } = useLazySvgImport(name);
 
   if (error) {
-    return "No Icon found";
+    return "";
   }
 
   if (loading) {

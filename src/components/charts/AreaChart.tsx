@@ -37,8 +37,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
   setToggleData,
   togglesBetween,
 }) => {
-  const { theme, region, setRegion, widthOfStickyContainer } =
-    useGlobalContext();
+  const { theme, region, setRegion } = useGlobalContext();
 
   const allFilters = branchen.map((branche) => branche.id);
   const [activeFilters, setActiveFilters] = useState<string[] | null>(
@@ -239,7 +238,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
           <YAxis
             mirror
             stroke="none"
-            width={widthOfStickyContainer * 0.3}
             tick={{
               fill: theme === "dark" ? colors.white : colors.blue,
             }}
@@ -252,7 +250,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
           />
         </AreaChartRecharts>
       </ResponsiveContainer>
-      <div className="mt-8 flex items-center justify-end gap-8">
+      <div className="mt-8 flex flex-wrap items-center justify-end gap-4">
         {id !== "berlin_is_ahead" && (
           <DataToggle
             data={region}

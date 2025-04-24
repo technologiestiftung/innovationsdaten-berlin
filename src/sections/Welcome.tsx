@@ -8,7 +8,7 @@ const Welcome: React.FC = () => {
   return (
     <section
       id="welcome"
-      className="sticky-section relative mt-24 grid h-[calc(100vh-6rem)] w-full grid-cols-1 gap-6 px-20 md:mt-0 md:grid-cols-2"
+      className="sticky-section relative mt-24 grid w-full grid-cols-1 gap-6 px-4 md:mt-0 md:h-[calc(100vh-var(--header-height))] md:grid-cols-2 md:px-20"
     >
       <div ref={selfRef} className="flex items-center">
         <div className="w-full">

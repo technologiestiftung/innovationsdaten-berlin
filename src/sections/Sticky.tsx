@@ -1,5 +1,4 @@
 import data from "../data/data.json";
-import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
 import { ChapterKeys, StickyItem } from "../types/global";
 import Card from "../components/Card";
@@ -10,7 +9,6 @@ type StickyProps = {
 };
 
 const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
-  const { headerHeight } = useGlobalContext();
   const typedData = data as Record<ChapterKeys, StickyItem[]>;
   const dataArray = typedData[dataKey];
   const [current, setCurrent] = useState<StickyItem | null>(null);
@@ -24,33 +22,31 @@ const Sticky: React.FC<StickyProps> = ({ dataKey }) => {
   return (
     <section
       id={dataKey}
-      className="sticky-section relative flex w-full gap-6 px-20"
-      style={{ paddingTop: headerHeight }}
+      className="sticky-section relative grid w-full grid-cols-3 gap-6 px-4 md:grid-cols-5 md:px-20"
     >
-      <div
-        className="sticky flex basis-3/5 items-center"
-        style={{
-          height: window.innerHeight - headerHeight,
-          top: headerHeight,
-        }}
-      >
-        <div className="w-full">
+      <div className="top-24 col-span-3 flex hidden h-[calc(100vh-var(--header-height))] items-center md:sticky md:block">
+        <div className="flex h-full w-full flex-col justify-center">
           <LeftStickyContent data={current as StickyItem} />
         </div>
       </div>
-      <div className="basis-2/5">
+      <div className="dark:bg-dark z-9 col-span-3 flex flex-col gap-8 bg-white md:col-span-2">
         {dataArray.map((item: StickyItem, index: number) => (
-          <Card
-            key={item.id}
-            dataKey={dataKey}
-            title={item.title}
-            displayNumber={item.displayNumber}
-            text={item.text}
-            onSetCurrent={() => setCurrent(item as StickyItem)}
-            isNotCurrent={item.id !== current?.id}
-            last={index === dataArray.length - 1}
-            first={!index}
-          />
+          <>
+            <div className="block w-full md:hidden">
+              <LeftStickyContent data={item} />
+            </div>
+            <Card
+              key={item.id}
+              dataKey={dataKey}
+              title={item.title}
+              displayNumber={item.displayNumber}
+              text={item.text}
+              onSetCurrent={() => setCurrent(item as StickyItem)}
+              isNotCurrent={item.id !== current?.id}
+              last={index === dataArray.length - 1}
+              first={!index}
+            />
+          </>
         ))}
       </div>
     </section>

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-4">
             <h3>Gefördert von:</h3>
-            <SenWebLogo className="fill-blue flex size-24 w-114 dark:fill-white" />
+            <SenWebLogo className="fill-blue flex size-24 w-64 md:w-114 dark:fill-white" />
           </div>
           <div>
             <h3>Ein Projekt der:</h3>

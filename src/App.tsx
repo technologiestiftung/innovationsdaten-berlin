@@ -15,8 +15,7 @@ function App() {
       <Header />
       <Menu />
       <main className="relative w-full pt-24">
-        {" "}
-        <div className="container mx-auto">
+        <div className="container mx-auto grid gap-8">
           <Welcome />
           {Object.keys(data).map((dataKey) => (
             <Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />

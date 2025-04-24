@@ -23,6 +23,7 @@ import {
 import wordings from "../../data/wordings.json";
 import Dropdown from "./../DropDown";
 import DataToggle from "../DataToggle";
+import { LazySvg } from "../LazySVG";
 
 type BarChartProps = {
   id: string;
@@ -50,6 +51,65 @@ const BarChart: React.FC<BarChartProps> = ({
 }) => {
   // Global Context
   const { theme, region, setRegion } = useGlobalContext();
+
+  interface CustomTickProps {
+    x?: number;
+    y?: number;
+    payload: { value: string };
+  }
+
+  const CustomTick = ({ x = 0, y, payload }: CustomTickProps) => {
+    const branch = branchen.find((b) => b.name === payload.value);
+    const words = payload.value.split(" ");
+
+    // track whether we should show the text on mobile
+    const [showOnMobile, setShowOnMobile] = useState(false);
+
+    return (
+      <g
+        transform={`translate(${x}, ${y})`}
+        className="group cursor-pointer"
+        // toggle on click/tap
+        onClick={() => setShowOnMobile((s) => !s)}
+        // also clear if user drags off or pointer leaves
+        onPointerLeave={() => setShowOnMobile(false)}
+      >
+        {/* mobile: icon only */}
+        <g className="block md:hidden" transform="translate(-25, -5)">
+          {branch?.id && (
+            <LazySvg
+              className="fill-blue h-8 w-8 dark:fill-white"
+              name={branch.id}
+            />
+          )}
+        </g>
+
+        {/* text: 
+          - hidden by default on mobile unless showOnMobile is true
+          - shown on desktop always (md:block)
+          - also shown on hover of the group (group-hover:block)
+      */}
+        <text
+          className={`fill-current text-xs md:text-sm ${showOnMobile ? "block" : "hidden"} group-hover:block md:block`}
+          x={-8}
+          y={0}
+          textAnchor="end"
+          dominantBaseline="middle"
+        >
+          {words.map((word, i) => (
+            <tspan
+              key={i}
+              x={-8}
+              dy={i === 0 ? 0 : "1.2em"}
+              className="whitespace-pre-wrap"
+            >
+              {word}
+            </tspan>
+          ))}
+        </text>
+      </g>
+    );
+  };
 
   // Exclude keys from data
   const excludeKeyFromBranch = [
@@ -217,15 +277,7 @@ const BarChart: React.FC<BarChartProps> = ({
     const getValue = chart_type.includes("delta")
       ? collectData[index].value
       : value;
-    const getFill = () => {
-      if (chart_type === "bar_chart") {
-        return isSmall && theme === "light" ? colors.blue : colors.white;
-      }
-      if (theme === "dark") {
-        return colors.white;
-      }
-      return colors.blue;
-    };
+
     const setX = () => {
       if (chart_type.includes("delta") && !isSmall) {
         return x - paddingLabel;
@@ -247,7 +299,9 @@ const BarChart: React.FC<BarChartProps> = ({
         {(chart_type.includes("delta") || chart_unit === "€") && (
           <>
             {/* Value Display */}
-            <tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
+            <tspan className={`${isSmall ? "fill-blue" : "fill-white"}`}>
+              {formatNumber(getValue)}
+            </tspan>
             {chart_type.includes("delta") && (
               <tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
                 {positiveDelta ? "↑" : "↓"}
@@ -257,7 +311,7 @@ const BarChart: React.FC<BarChartProps> = ({
           </>
         )}
         {chart_unit === "%" && (
-          <tspan fill={getFill()}>
+          <tspan className={`${isSmall ? "fill-blue" : "fill-white"}`}>
             {/* Value Display */}
             {formatNumber(value)} {chart_unit}
           </tspan>
@@ -328,7 +382,7 @@ const BarChart: React.FC<BarChartProps> = ({
     const payloadData = payload[0].payload;
     return (
       <div
-        className="p-4 select-none"
+        className="dark:bg-dark p-4 select-none dark:text-white"
         style={{
           backgroundColor: theme === "dark" ? colors.white : colors.blue,
         }}
@@ -374,20 +428,8 @@ const BarChart: React.FC<BarChartProps> = ({
         ) : (
           <>
             <div className="flex justify-between gap-6">
-              <p
-                className="first-letter:capitalize"
-                style={{
-                  color: theme === "dark" ? colors.dark : colors.white,
-                }}
-              >
-                {activeFilter}
-              </p>
-              <p
-                className="bold ml-2"
-                style={{
-                  color: theme === "dark" ? colors.dark : colors.white,
-                }}
-              >
+              <p className="first-letter:capitalize">{activeFilter}</p>
+              <p className="bold ml-2">
                 {/* Value Display */}
                 {formatNumber(payloadData[activeFilter || ""])}
                 {chart_unit}
@@ -446,18 +488,16 @@ const BarChart: React.FC<BarChartProps> = ({
               : window.innerHeight * 0.6
           }
         >
-          <RechartsBarChart layout="vertical" data={collectData}>
+          <RechartsBarChart
+            layout="vertical"
+            data={collectData}
+            barCategoryGap="20%"
+          >
             {/* YAxis */}
             <YAxis
               type="category"
               dataKey="name"
-              // width={yAxisWidth}
-              tick={{
-                fontFamily: "Clan Pro",
-                fontSize: 12,
-                fill: theme === "dark" ? colors.white : colors.blue,
-                fontWeight: "initial",
-              }}
+              tick={(props) => <CustomTick {...props} />}
             />
             {/* ToolTip */}
             {has_tooltip && <Tooltip content={<CustomTooltip />} />}
@@ -537,7 +577,6 @@ const BarChart: React.FC<BarChartProps> = ({
                 <LabelList content={<RenderValueLabel />} />
               </Bar>
             )}
-            {/* XAxis */}
             <XAxis
               type="number"
               mirror
@@ -548,7 +587,6 @@ const BarChart: React.FC<BarChartProps> = ({
                 fill: theme === "dark" ? colors.white : colors.blue,
                 dy: 25,
               }}
-              // Value Display
               tickFormatter={(label: string) => {
                 if (chart_unit === "€") {
                   return formatEuroNumber(Number(label));
@@ -559,7 +597,7 @@ const BarChart: React.FC<BarChartProps> = ({
           </RechartsBarChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-12 flex items-center justify-end gap-8">
+      <div className="mt-8 flex flex-wrap items-center justify-end gap-4">
         {hasRegionToggle && (
           <DataToggle
             data={region}
