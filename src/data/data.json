@@ -6,7 +6,12 @@
 			"displayNumber": "1.1",
 			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
 			"chart_type": "big_fact",
-			"facts": [{ "fact": "153", "unit": "Mrd. €" }]
+			"facts": [
+				{
+					"fact": "153",
+					"unit": "Mrd. €"
+				}
+			]
 		},
 		{
 			"id": "branchen-list",
@@ -21,21 +26,66 @@
 			"chart_type": "tree_map",
 			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"data": [
-				{ "branche": "nahrung", "value": 5590 },
-				{ "branche": "pharma", "value": 8639 },
-				{ "branche": "holz", "value": 1323 },
-				{ "branche": "metall", "value": 2567 },
-				{ "branche": "elektroindustrie", "value": 8846 },
-				{ "branche": "fahrzeugbau", "value": 15501 },
-				{ "branche": "sonstige_konsumgueter", "value": 738 },
-				{ "branche": "energie", "value": 28919 },
-				{ "branche": "telekommunikation", "value": 15170 },
-				{ "branche": "software", "value": 16787 },
-				{ "branche": "finanz", "value": 32814 },
-				{ "branche": "unternehmensberatung", "value": 4159 },
-				{ "branche": "architektur", "value": 5302 },
-				{ "branche": "forschung", "value": 1887 },
-				{ "branche": "kreativ", "value": 5260 }
+				{
+					"branche": "nahrung",
+					"value": 5590
+				},
+				{
+					"branche": "pharma",
+					"value": 8639
+				},
+				{
+					"branche": "holz",
+					"value": 1323
+				},
+				{
+					"branche": "metall",
+					"value": 2567
+				},
+				{
+					"branche": "elektroindustrie",
+					"value": 8846
+				},
+				{
+					"branche": "fahrzeugbau",
+					"value": 15501
+				},
+				{
+					"branche": "sonstige_konsumgueter",
+					"value": 738
+				},
+				{
+					"branche": "energie",
+					"value": 28919
+				},
+				{
+					"branche": "telekommunikation",
+					"value": 15170
+				},
+				{
+					"branche": "software",
+					"value": 16787
+				},
+				{
+					"branche": "finanz",
+					"value": 32814
+				},
+				{
+					"branche": "unternehmensberatung",
+					"value": 4159
+				},
+				{
+					"branche": "architektur",
+					"value": 5302
+				},
+				{
+					"branche": "forschung",
+					"value": 1887
+				},
+				{
+					"branche": "kreativ",
+					"value": 5260
+				}
 			]
 		},
 		{
@@ -45,21 +95,66 @@
 			"chart_type": "tree_map",
 			"text": "Gemessen an der Zahl der Beschäftigten ist die Branche Software und Datenverarbeitung, gefolgt von Architektur- und Ingenieurbüros, Medien (einschließlich Telekommunikation) und Finanzdienstleistungen der größte Arbeitgeber unter den befragten Branchen.",
 			"data": [
-				{ "branche": "nahrung", "value": 15843 },
-				{ "branche": "pharma", "value": 20207 },
-				{ "branche": "holz", "value": 7754 },
-				{ "branche": "metall", "value": 10248 },
-				{ "branche": "elektroindustrie", "value": 25926 },
-				{ "branche": "fahrzeugbau", "value": 26601 },
-				{ "branche": "sonstige_konsumgueter", "value": 5629 },
-				{ "branche": "energie", "value": 24033 },
-				{ "branche": "telekommunikation", "value": 32903 },
-				{ "branche": "software", "value": 92676 },
-				{ "branche": "finanz", "value": 32921 },
-				{ "branche": "unternehmensberatung", "value": 22325 },
-				{ "branche": "architektur", "value": 41084 },
-				{ "branche": "forschung", "value": 8532 },
-				{ "branche": "kreativ", "value": 22024 }
+				{
+					"branche": "nahrung",
+					"value": 15843
+				},
+				{
+					"branche": "pharma",
+					"value": 20207
+				},
+				{
+					"branche": "holz",
+					"value": 7754
+				},
+				{
+					"branche": "metall",
+					"value": 10248
+				},
+				{
+					"branche": "elektroindustrie",
+					"value": 25926
+				},
+				{
+					"branche": "fahrzeugbau",
+					"value": 26601
+				},
+				{
+					"branche": "sonstige_konsumgueter",
+					"value": 5629
+				},
+				{
+					"branche": "energie",
+					"value": 24033
+				},
+				{
+					"branche": "telekommunikation",
+					"value": 32903
+				},
+				{
+					"branche": "software",
+					"value": 92676
+				},
+				{
+					"branche": "finanz",
+					"value": 32921
+				},
+				{
+					"branche": "unternehmensberatung",
+					"value": 22325
+				},
+				{
+					"branche": "architektur",
+					"value": 41084
+				},
+				{
+					"branche": "forschung",
+					"value": 8532
+				},
+				{
+					"branche": "kreativ",
+					"value": 22024
+				}
 			]
 		}
 	],
@@ -71,7 +166,10 @@
 			"chart_type": "big_fact",
 			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"facts": [
-				{ "fact": "61%", "unit": "der Berliner Unternehmen sind Innovatoren." }
+				{
+					"fact": "61%",
+					"unit": "der Berliner Unternehmen sind Innovatoren."
+				}
 			]
 		},
 		{
@@ -82,20 +180,68 @@
 			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerding höher als in Deutschland und wächst auch etwas schneller.",
 			"data": {
 				"ber": [
-					{ "year": 2018, "dienstleistungen": 1447, "industrie": 3206 },
-					{ "year": 2019, "dienstleistungen": 1408, "industrie": 3187 },
-					{ "year": 2020, "dienstleistungen": 1763, "industrie": 3298 },
-					{ "year": 2021, "dienstleistungen": 1916, "industrie": 3457 },
-					{ "year": 2022, "dienstleistungen": 2080, "industrie": 3529 },
-					{ "year": 2023, "dienstleistungen": 2277, "industrie": 3910 }
+					{
+						"year": 2018,
+						"dienstleistungen": 1447,
+						"industrie": 3206
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 1408,
+						"industrie": 3187
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 1763,
+						"industrie": 3298
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 1916,
+						"industrie": 3457
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 2080,
+						"industrie": 3529
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 2277,
+						"industrie": 3910
+					}
 				],
 				"de": [
-					{ "year": 2018, "dienstleistungen": 29764, "industrie": 131693 },
-					{ "year": 2019, "dienstleistungen": 32891, "industrie": 132986 },
-					{ "year": 2020, "dienstleistungen": 34099, "industrie": 126636 },
-					{ "year": 2021, "dienstleistungen": 36426, "industrie": 130359 },
-					{ "year": 2022, "dienstleistungen": 40001, "industrie": 137405 },
-					{ "year": 2023, "dienstleistungen": 44152, "industrie": 144860 }
+					{
+						"year": 2018,
+						"dienstleistungen": 29764,
+						"industrie": 131693
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 32891,
+						"industrie": 132986
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 34099,
+						"industrie": 126636
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 36426,
+						"industrie": 130359
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 40001,
+						"industrie": 137405
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 44152,
+						"industrie": 144860
+					}
 				]
 			}
 		},
@@ -4020,218 +4166,218 @@
 			"sortsAfterOnStart": "total",
 			"data": {
 				"ber": [
-						  {
-							"id": "nahrung",
-							"from_land": 0,
-							"from_bund": 0,
-							"from_eu": 0,
-							"insgesamt": 4
-						  },
-						  {
-							"id": "pharma",
-							"from_land": 25,
-							"from_bund": 25,
-							"from_eu": 16,
-							"insgesamt": 34
-						  },
-						  {
-							"id": "holz",
-							"from_land": 5,
-							"from_bund": 3,
-							"from_eu": 3,
-							"insgesamt": 3
-						  },
-						  {
-							"id": "metall",
-							"from_land": 0,
-							"from_bund": 8,
-							"from_eu": 0,
-							"insgesamt": 8
-						  },
-						  {
-							"id": "elektroindustrie",
-							"from_land": 17,
-							"from_bund": 46,
-							"from_eu": 4,
-							"insgesamt": 53
-						  },
-						  {
-							"id": "fahrzeugbau",
-							"from_land": 23,
-							"from_bund": 41,
-							"from_eu": 27,
-							"insgesamt": 48
-						  },
-						  {
-							"id": "sonstige_konsumgueter",
-							"from_land": 27,
-							"from_bund": 23,
-							"from_eu": 0,
-							"insgesamt": 48
-						  },
-						  {
-							"id": "energie",
-							"from_land": 5,
-							"from_bund": 5,
-							"from_eu": 5,
-							"insgesamt": 5
-						  },
-						  {
-							"id": "telekommunikation",
-							"from_land": 12,
-							"from_bund": 0,
-							"from_eu": 0,
-							"insgesamt": 11
-						  },
-						  {
-							"id": "software",
-							"from_land": 9,
-							"from_bund": 15,
-							"from_eu": 8,
-							"insgesamt": 24
-						  },
-						  {
-							"id": "finanz",
-							"from_land": 0,
-							"from_bund": 0,
-							"from_eu": 0,
-							"insgesamt": 0
-						  },
-						  {
-							"id": "unternehmensberatung",
-							"from_land": 0,
-							"from_bund": 10,
-							"from_eu": 1,
-							"insgesamt": 10
-						  },
-						  {
-							"id": "architektur",
-							"from_land": 4,
-							"from_bund": 6,
-							"from_eu": 2,
-							"insgesamt": 6
-						  },
-						  {
-							"id": "forschung",
-							"from_land": 18,
-							"from_bund": 60,
-							"from_eu": 21,
-							"insgesamt": 60
-						  },
-						  {
-							"id": "kreativ",
-							"from_land": 4,
-							"from_bund": 5,
-							"from_eu": 2,
-							"insgesamt": 10
-						  }
-						],
+					{
+						"id": "nahrung",
+						"from_land": 0,
+						"from_bund": 0,
+						"from_eu": 0,
+						"insgesamt": 4
+					},
+					{
+						"id": "pharma",
+						"from_land": 25,
+						"from_bund": 25,
+						"from_eu": 16,
+						"insgesamt": 34
+					},
+					{
+						"id": "holz",
+						"from_land": 5,
+						"from_bund": 3,
+						"from_eu": 3,
+						"insgesamt": 3
+					},
+					{
+						"id": "metall",
+						"from_land": 0,
+						"from_bund": 8,
+						"from_eu": 0,
+						"insgesamt": 8
+					},
+					{
+						"id": "elektroindustrie",
+						"from_land": 17,
+						"from_bund": 46,
+						"from_eu": 4,
+						"insgesamt": 53
+					},
+					{
+						"id": "fahrzeugbau",
+						"from_land": 23,
+						"from_bund": 41,
+						"from_eu": 27,
+						"insgesamt": 48
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"from_land": 27,
+						"from_bund": 23,
+						"from_eu": 0,
+						"insgesamt": 48
+					},
+					{
+						"id": "energie",
+						"from_land": 5,
+						"from_bund": 5,
+						"from_eu": 5,
+						"insgesamt": 5
+					},
+					{
+						"id": "telekommunikation",
+						"from_land": 12,
+						"from_bund": 0,
+						"from_eu": 0,
+						"insgesamt": 11
+					},
+					{
+						"id": "software",
+						"from_land": 9,
+						"from_bund": 15,
+						"from_eu": 8,
+						"insgesamt": 24
+					},
+					{
+						"id": "finanz",
+						"from_land": 0,
+						"from_bund": 0,
+						"from_eu": 0,
+						"insgesamt": 0
+					},
+					{
+						"id": "unternehmensberatung",
+						"from_land": 0,
+						"from_bund": 10,
+						"from_eu": 1,
+						"insgesamt": 10
+					},
+					{
+						"id": "architektur",
+						"from_land": 4,
+						"from_bund": 6,
+						"from_eu": 2,
+						"insgesamt": 6
+					},
+					{
+						"id": "forschung",
+						"from_land": 18,
+						"from_bund": 60,
+						"from_eu": 21,
+						"insgesamt": 60
+					},
+					{
+						"id": "kreativ",
+						"from_land": 4,
+						"from_bund": 5,
+						"from_eu": 2,
+						"insgesamt": 10
+					}
+				],
 				"de": [
-				  {
-					"id": "nahrung",
-					"from_land": 3,
-					"from_bund": 2,
-					"from_eu": 1,
-					"insgesamt": 1
-				  },
-				  {
-					"id": "pharma",
-					"from_land": 25,
-					"from_bund": 11,
-					"from_eu": 18,
-					"insgesamt": 6
-				  },
-				  {
-					"id": "holz",
-					"from_land": 8,
-					"from_bund": 3,
-					"from_eu": 4,
-					"insgesamt": 2
-				  },
-				  {
-					"id": "metall",
-					"from_land": 9,
-					"from_bund": 3,
-					"from_eu": 6,
-					"insgesamt": 2
-				  },
-				  {
-					"id": "elektroindustrie",
-					"from_land": 34,
-					"from_bund": 10,
-					"from_eu": 27,
-					"insgesamt": 5
-				  },
-				  {
-					"id": "fahrzeugbau",
-					"from_land": 18,
-					"from_bund": 5,
-					"from_eu": 13,
-					"insgesamt": 5
-				  },
-				  {
-					"id": "sonstige_konsumgueter",
-					"from_land": 13,
-					"from_bund": 6,
-					"from_eu": 9,
-					"insgesamt": 0
-				  },
-				  {
-					"id": "energie",
-					"from_land": 9,
-					"from_bund": 2,
-					"from_eu": 6,
-					"insgesamt": 2
-				  },
-				  {
-					"id": "telekommunikation",
-					"from_land": 13,
-					"from_bund": 6,
-					"from_eu": 8,
-					"insgesamt": 1
-				  },
-				  {
-					"id": "software",
-					"from_land": 21,
-					"from_bund": 10,
-					"from_eu": 12,
-					"insgesamt": 5
-				  },
-				  {
-					"id": "finanz",
-					"from_land": 2,
-					"from_bund": 2,
-					"from_eu": 0,
-					"insgesamt": 0
-				  },
-				  {
-					"id": "unternehmensberatung",
-					"from_land": 18,
-					"from_bund": 15,
-					"from_eu": 8,
-					"insgesamt": 1
-				  },
-				  {
-					"id": "architektur",
-					"from_land": 20,
-					"from_bund": 7,
-					"from_eu": 14,
-					"insgesamt": 3
-				  },
-				  {
-					"id": "forschung",
-					"from_land": 59,
-					"from_bund": 29,
-					"from_eu": 50,
-					"insgesamt": 26
-				  },
-				  {
-					"id": "kreativ",
-					"from_land": 13,
-					"from_bund": 5,
-					"from_eu": 9,
-					"insgesamt": 0
-				  }
+					{
+						"id": "nahrung",
+						"from_land": 3,
+						"from_bund": 2,
+						"from_eu": 1,
+						"insgesamt": 1
+					},
+					{
+						"id": "pharma",
+						"from_land": 25,
+						"from_bund": 11,
+						"from_eu": 18,
+						"insgesamt": 6
+					},
+					{
+						"id": "holz",
+						"from_land": 8,
+						"from_bund": 3,
+						"from_eu": 4,
+						"insgesamt": 2
+					},
+					{
+						"id": "metall",
+						"from_land": 9,
+						"from_bund": 3,
+						"from_eu": 6,
+						"insgesamt": 2
+					},
+					{
+						"id": "elektroindustrie",
+						"from_land": 34,
+						"from_bund": 10,
+						"from_eu": 27,
+						"insgesamt": 5
+					},
+					{
+						"id": "fahrzeugbau",
+						"from_land": 18,
+						"from_bund": 5,
+						"from_eu": 13,
+						"insgesamt": 5
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"from_land": 13,
+						"from_bund": 6,
+						"from_eu": 9,
+						"insgesamt": 0
+					},
+					{
+						"id": "energie",
+						"from_land": 9,
+						"from_bund": 2,
+						"from_eu": 6,
+						"insgesamt": 2
+					},
+					{
+						"id": "telekommunikation",
+						"from_land": 13,
+						"from_bund": 6,
+						"from_eu": 8,
+						"insgesamt": 1
+					},
+					{
+						"id": "software",
+						"from_land": 21,
+						"from_bund": 10,
+						"from_eu": 12,
+						"insgesamt": 5
+					},
+					{
+						"id": "finanz",
+						"from_land": 2,
+						"from_bund": 2,
+						"from_eu": 0,
+						"insgesamt": 0
+					},
+					{
+						"id": "unternehmensberatung",
+						"from_land": 18,
+						"from_bund": 15,
+						"from_eu": 8,
+						"insgesamt": 1
+					},
+					{
+						"id": "architektur",
+						"from_land": 20,
+						"from_bund": 7,
+						"from_eu": 14,
+						"insgesamt": 3
+					},
+					{
+						"id": "forschung",
+						"from_land": 59,
+						"from_bund": 29,
+						"from_eu": 50,
+						"insgesamt": 26
+					},
+					{
+						"id": "kreativ",
+						"from_land": 13,
+						"from_bund": 5,
+						"from_eu": 9,
+						"insgesamt": 0
+					}
 				]
 			}
 		},
