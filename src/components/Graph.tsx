@@ -37,6 +37,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 		togglesBetween,
 		sortsAfter,
 		sortsAfterOnStart,
+		max_value,
 		data: content,
 	} = data;
 
@@ -84,6 +85,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 					chart_unit={chart_unit}
 					has_tooltip={has_tooltip}
 					multiline_y_axis_label={multiline_y_axis_label}
+					max_value={max_value}
 					bar_chart_unit_breakpoint={
 						hasMultipleBreakpoints
 							? (bar_chart_unit_breakpoint as Record<string, any>)[region]

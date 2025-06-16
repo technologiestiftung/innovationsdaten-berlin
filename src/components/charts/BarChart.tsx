@@ -33,6 +33,7 @@ type BarChartProps = {
 	chart_unit?: string;
 	has_tooltip?: boolean;
 	multiline_y_axis_label?: boolean;
+	max_value?: number;
 	bar_chart_unit_breakpoint?: number;
 	hasRegionToggle?: boolean;
 	sortsAfter?: dataKeys[];
@@ -46,6 +47,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	chart_unit,
 	has_tooltip,
 	multiline_y_axis_label,
+	max_value,
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
 	sortsAfter,
@@ -718,7 +720,13 @@ const BarChart: React.FC<BarChartProps> = ({
 							mirror
 							stroke="none"
 							hide={chart_type.includes("full")}
-							domain={chart_type.includes("full") ? [0, 100] : ["auto", "auto"]}
+							domain={
+								max_value
+									? [0, max_value]
+									: chart_type.includes("full")
+										? [0, 100]
+										: ["auto", "auto"]
+							}
 							tick={{
 								...axisFontStylings,
 								fill: theme === "dark" ? colors.white : colors.blue,
