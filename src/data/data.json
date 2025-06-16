@@ -2,7 +2,7 @@
 	"einleitung": [
 		{
 			"id": "big-fact-berlin",
-			"title": "Der Gesamtumsatz Berlins beträgt...",
+			"title": "Der Gesamtumsatz der befragten Berliner Unternehmen beträgt...",
 			"displayNumber": "1.1",
 			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
 			"chart_type": "big_fact",
@@ -71,7 +71,7 @@
 			"chart_type": "big_fact",
 			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"facts": [
-				{ "fact": "65%", "unit": "der Berliner Unternehmen sind Innovatoren." }
+				{ "fact": "61%", "unit": "der Berliner Unternehmen sind Innovatoren." }
 			]
 		},
 		{
@@ -104,7 +104,7 @@
 			"title": "Welche Branchen wachsen?",
 			"displayNumber": "2.3",
 			"chart_type": "area_chart",
-			"text": "Die Top 4 der innovierenden Branchen sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
+			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"data": {
 				"ber": [
 					{
@@ -520,7 +520,7 @@
 			"displayNumber": "2.6",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
-			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Maschinen- und Fahrzeugbau Unternehmen bleiben ganz vorne, mit mehr als zweimal die Ausgaben für Forschung und Entwicklung als jede andere Branche.",
+			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
@@ -1131,7 +1131,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"multiline_y_axis_label": true,
-			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen 'bedeutende' Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den Daten leider nicht ermittelt werden.",
+			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 'bedeutende' Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
 			"data": {
 				"ber": [
 					{
@@ -1377,11 +1377,11 @@
 			"title": "Was macht Berlin aus als Innovationsstandort?",
 			"displayNumber": "5.1",
 			"chart_type": "big_fact",
-			"text": "Berlin ist ein überregional sehr bedeutender Strandort der öffentlichen Forschung (in Universitäten, Hochschulen, außeruniversitären staatlichen Forschungsinstituten und einer ganzen Reihe forschender Bundesoberbehörden). Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen bei oft noch geringer Unternehmensgröße einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
+			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
 			"facts": [
 				{
 					"fact": "19%",
-					"unit": "der Berliner Innovationsausgaben kommen von KMUs, im Vergleich mit"
+					"unit": "der Berliner Innovationsausgaben kommen von KMU, im Vergleich mit"
 				},
 				{
 					"fact": "14%",
@@ -3998,14 +3998,14 @@
 	"support": [
 		{
 			"id": "support_intro",
-			"title": "Was macht Berlin aus als Innovationsstandort?",
+			"title": "Öffentliche Förderung",
 			"displayNumber": "6.1",
 			"chart_type": "big_fact",
-			"text": "In Berlin - wie überall in der Welt - wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen können als quantitative Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal macht. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
+			"text": "In Berlin - wie überall in der Welt - wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen, können als im Rahmen einer quantitativen Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das die das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal machten. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
 			"facts": [
 				{
 					"fact": "35%",
-					"unit": "der Berliner Unternehmen erhalten staatliche Förderung."
+					"unit": "der forschenden Berliner Unternehmen erhalten staatliche Zuschüsse."
 				}
 			]
 		},
@@ -4020,260 +4020,218 @@
 			"sortsAfterOnStart": "total",
 			"data": {
 				"ber": [
-					{
-						"id": "dienstleistungen",
-						"from_land": 9,
-						"from_bund": 13,
-						"from_eu": 7,
-						"insgesamt": 21
-					},
-					{
-						"id": "industrie",
-						"from_land": 10,
-						"from_bund": 17,
-						"from_eu": 8,
-						"insgesamt": 25
-					},
-					{
-						"id": "insgesamt",
-						"from_land": 9,
-						"from_bund": 14,
-						"from_eu": 7,
-						"insgesamt": 22
-					},
-					{
-						"id": "architektur",
-						"from_land": 3,
-						"from_bund": 9,
-						"from_eu": 1,
-						"insgesamt": 13
-					},
-					{
-						"id": "elektroindustrie",
-						"from_land": 12,
-						"from_bund": 44,
-						"from_eu": 7,
-						"insgesamt": 44
-					},
-					{
-						"id": "energie",
-						"from_land": 3,
-						"from_bund": 22,
-						"from_eu": 3,
-						"insgesamt": 22
-					},
-					{
-						"id": "fahrzeugbau",
-						"from_land": 15,
-						"from_bund": 28,
-						"from_eu": 20,
-						"insgesamt": 42
-					},
-					{
-						"id": "finanz",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "forschung",
-						"from_land": 30,
-						"from_bund": 55,
-						"from_eu": 27,
-						"insgesamt": 70
-					},
-					{
-						"id": "holz",
-						"from_land": 8,
-						"from_bund": 1,
-						"from_eu": 1,
-						"insgesamt": 9
-					},
-					{
-						"id": "kreativ",
-						"from_land": 13,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 12
-					},
-					{
-						"id": "metall",
-						"from_land": 5,
-						"from_bund": 0,
-						"from_eu": 7,
-						"insgesamt": 13
-					},
-					{
-						"id": "nahrung",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "pharma",
-						"from_land": 5,
-						"from_bund": 21,
-						"from_eu": 3,
-						"insgesamt": 26
-					},
-					{
-						"id": "software",
-						"from_land": 6,
-						"from_bund": 20,
-						"from_eu": 12,
-						"insgesamt": 26
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"from_land": 21,
-						"from_bund": 9,
-						"from_eu": 11,
-						"insgesamt": 29
-					},
-					{
-						"id": "telekommunikation",
-						"from_land": 19,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 19
-					},
-					{
-						"id": "unternehmensberatung",
-						"from_land": 9,
-						"from_bund": 14,
-						"from_eu": 4,
-						"insgesamt": 18
-					}
-				],
+						  {
+							"id": "nahrung",
+							"from_land": 0,
+							"from_bund": 0,
+							"from_eu": 0,
+							"insgesamt": 4
+						  },
+						  {
+							"id": "pharma",
+							"from_land": 25,
+							"from_bund": 25,
+							"from_eu": 16,
+							"insgesamt": 34
+						  },
+						  {
+							"id": "holz",
+							"from_land": 5,
+							"from_bund": 3,
+							"from_eu": 3,
+							"insgesamt": 3
+						  },
+						  {
+							"id": "metall",
+							"from_land": 0,
+							"from_bund": 8,
+							"from_eu": 0,
+							"insgesamt": 8
+						  },
+						  {
+							"id": "elektroindustrie",
+							"from_land": 17,
+							"from_bund": 46,
+							"from_eu": 4,
+							"insgesamt": 53
+						  },
+						  {
+							"id": "fahrzeugbau",
+							"from_land": 23,
+							"from_bund": 41,
+							"from_eu": 27,
+							"insgesamt": 48
+						  },
+						  {
+							"id": "sonstige_konsumgueter",
+							"from_land": 27,
+							"from_bund": 23,
+							"from_eu": 0,
+							"insgesamt": 48
+						  },
+						  {
+							"id": "energie",
+							"from_land": 5,
+							"from_bund": 5,
+							"from_eu": 5,
+							"insgesamt": 5
+						  },
+						  {
+							"id": "telekommunikation",
+							"from_land": 12,
+							"from_bund": 0,
+							"from_eu": 0,
+							"insgesamt": 11
+						  },
+						  {
+							"id": "software",
+							"from_land": 9,
+							"from_bund": 15,
+							"from_eu": 8,
+							"insgesamt": 24
+						  },
+						  {
+							"id": "finanz",
+							"from_land": 0,
+							"from_bund": 0,
+							"from_eu": 0,
+							"insgesamt": 0
+						  },
+						  {
+							"id": "unternehmensberatung",
+							"from_land": 0,
+							"from_bund": 10,
+							"from_eu": 1,
+							"insgesamt": 10
+						  },
+						  {
+							"id": "architektur",
+							"from_land": 4,
+							"from_bund": 6,
+							"from_eu": 2,
+							"insgesamt": 6
+						  },
+						  {
+							"id": "forschung",
+							"from_land": 18,
+							"from_bund": 60,
+							"from_eu": 21,
+							"insgesamt": 60
+						  },
+						  {
+							"id": "kreativ",
+							"from_land": 4,
+							"from_bund": 5,
+							"from_eu": 2,
+							"insgesamt": 10
+						  }
+						],
 				"de": [
-					{
-						"id": "dienstleistungen",
-						"from_land": 8,
-						"from_bund": 17,
-						"from_eu": 3,
-						"insgesamt": 21
-					},
-					{
-						"id": "industrie",
-						"from_land": 5,
-						"from_bund": 22,
-						"from_eu": 5,
-						"insgesamt": 25
-					},
-					{
-						"id": "insgesamt",
-						"from_land": 7,
-						"from_bund": 19,
-						"from_eu": 4,
-						"insgesamt": 23
-					},
-					{
-						"id": "architektur",
-						"from_land": 3,
-						"from_bund": 19,
-						"from_eu": 0,
-						"insgesamt": 21
-					},
-					{
-						"id": "elektroindustrie",
-						"from_land": 14,
-						"from_bund": 41,
-						"from_eu": 14,
-						"insgesamt": 52
-					},
-					{
-						"id": "energie",
-						"from_land": 4,
-						"from_bund": 10,
-						"from_eu": 4,
-						"insgesamt": 11
-					},
-					{
-						"id": "fahrzeugbau",
-						"from_land": 5,
-						"from_bund": 36,
-						"from_eu": 6,
-						"insgesamt": 40
-					},
-					{
-						"id": "finanz",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 2,
-						"insgesamt": 8
-					},
-					{
-						"id": "forschung",
-						"from_land": 25,
-						"from_bund": 43,
-						"from_eu": 14,
-						"insgesamt": 43
-					},
-					{
-						"id": "holz",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 1
-					},
-					{
-						"id": "kreativ",
-						"from_land": 3,
-						"from_bund": 5,
-						"from_eu": 0,
-						"insgesamt": 5
-					},
-					{
-						"id": "metall",
-						"from_land": 1,
-						"from_bund": 17,
-						"from_eu": 5,
-						"insgesamt": 20
-					},
-					{
-						"id": "nahrung",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "pharma",
-						"from_land": 7,
-						"from_bund": 34,
-						"from_eu": 10,
-						"insgesamt": 37
-					},
-					{
-						"id": "software",
-						"from_land": 9,
-						"from_bund": 33,
-						"from_eu": 8,
-						"insgesamt": 36
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"from_land": 13,
-						"from_bund": 15,
-						"from_eu": 1,
-						"insgesamt": 15
-					},
-					{
-						"id": "telekommunikation",
-						"from_land": 8,
-						"from_bund": 11,
-						"from_eu": 3,
-						"insgesamt": 16
-					},
-					{
-						"id": "unternehmensberatung",
-						"from_land": 16,
-						"from_bund": 6,
-						"from_eu": 0,
-						"insgesamt": 17
-					}
+				  {
+					"id": "nahrung",
+					"from_land": 3,
+					"from_bund": 2,
+					"from_eu": 1,
+					"insgesamt": 1
+				  },
+				  {
+					"id": "pharma",
+					"from_land": 25,
+					"from_bund": 11,
+					"from_eu": 18,
+					"insgesamt": 6
+				  },
+				  {
+					"id": "holz",
+					"from_land": 8,
+					"from_bund": 3,
+					"from_eu": 4,
+					"insgesamt": 2
+				  },
+				  {
+					"id": "metall",
+					"from_land": 9,
+					"from_bund": 3,
+					"from_eu": 6,
+					"insgesamt": 2
+				  },
+				  {
+					"id": "elektroindustrie",
+					"from_land": 34,
+					"from_bund": 10,
+					"from_eu": 27,
+					"insgesamt": 5
+				  },
+				  {
+					"id": "fahrzeugbau",
+					"from_land": 18,
+					"from_bund": 5,
+					"from_eu": 13,
+					"insgesamt": 5
+				  },
+				  {
+					"id": "sonstige_konsumgueter",
+					"from_land": 13,
+					"from_bund": 6,
+					"from_eu": 9,
+					"insgesamt": 0
+				  },
+				  {
+					"id": "energie",
+					"from_land": 9,
+					"from_bund": 2,
+					"from_eu": 6,
+					"insgesamt": 2
+				  },
+				  {
+					"id": "telekommunikation",
+					"from_land": 13,
+					"from_bund": 6,
+					"from_eu": 8,
+					"insgesamt": 1
+				  },
+				  {
+					"id": "software",
+					"from_land": 21,
+					"from_bund": 10,
+					"from_eu": 12,
+					"insgesamt": 5
+				  },
+				  {
+					"id": "finanz",
+					"from_land": 2,
+					"from_bund": 2,
+					"from_eu": 0,
+					"insgesamt": 0
+				  },
+				  {
+					"id": "unternehmensberatung",
+					"from_land": 18,
+					"from_bund": 15,
+					"from_eu": 8,
+					"insgesamt": 1
+				  },
+				  {
+					"id": "architektur",
+					"from_land": 20,
+					"from_bund": 7,
+					"from_eu": 14,
+					"insgesamt": 3
+				  },
+				  {
+					"id": "forschung",
+					"from_land": 59,
+					"from_bund": 29,
+					"from_eu": 50,
+					"insgesamt": 26
+				  },
+				  {
+					"id": "kreativ",
+					"from_land": 13,
+					"from_bund": 5,
+					"from_eu": 9,
+					"insgesamt": 0
+				  }
 				]
 			}
 		},
@@ -4329,7 +4287,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keinem so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
+			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": {
 					"nahrung": 41,
@@ -4402,42 +4360,42 @@
 						"insgesamt": 36,
 						"industrie": 27,
 						"dienstleistungen": 39,
-						"finanz": 32
+						"finanz": 49
 					},
 					{
 						"id": "tailor_offer_to_customer",
 						"insgesamt": 37,
 						"industrie": 30,
 						"dienstleistungen": 39,
-						"finanz": 16
+						"finanz": 68
 					},
 					{
 						"id": "reach_new_customer_groups",
 						"insgesamt": 25,
 						"industrie": 19,
 						"dienstleistungen": 28,
-						"finanz": 24
+						"finanz": 36
 					},
 					{
 						"id": "introduce_data_based_products",
 						"insgesamt": 14,
 						"industrie": 5,
 						"dienstleistungen": 17,
-						"finanz": 0
+						"finanz": 8
 					},
 					{
 						"id": "improve_quality",
 						"insgesamt": 37,
 						"industrie": 31,
 						"dienstleistungen": 39,
-						"finanz": 24
+						"finanz": 50
 					},
 					{
 						"id": "make_better_decisions",
 						"insgesamt": 31,
 						"industrie": 30,
 						"dienstleistungen": 31,
-						"finanz": 19
+						"finanz": 56
 					},
 					{
 						"id": "improve_efficiency",
@@ -4451,7 +4409,7 @@
 						"insgesamt": 32,
 						"industrie": 33,
 						"dienstleistungen": 32,
-						"finanz": 36
+						"finanz": 55
 					}
 				],
 				"de": [
@@ -4460,56 +4418,56 @@
 						"insgesamt": 32,
 						"industrie": 27,
 						"dienstleistungen": 38,
-						"finanz": 36
+						"finanz": 57
 					},
 					{
 						"id": "tailor_offer_to_customer",
 						"insgesamt": 37,
 						"industrie": 33,
 						"dienstleistungen": 43,
-						"finanz": 39
+						"finanz": 60
 					},
 					{
 						"id": "reach_new_customer_groups",
 						"insgesamt": 26,
 						"industrie": 26,
 						"dienstleistungen": 28,
-						"finanz": 34
+						"finanz": 32
 					},
 					{
 						"id": "introduce_data_based_products",
 						"insgesamt": 9,
 						"industrie": 5,
 						"dienstleistungen": 15,
-						"finanz": 5
+						"finanz": 9
 					},
 					{
 						"id": "improve_quality",
 						"insgesamt": 38,
 						"industrie": 36,
 						"dienstleistungen": 41,
-						"finanz": 41
+						"finanz": 40
 					},
 					{
 						"id": "make_better_decisions",
 						"insgesamt": 31,
 						"industrie": 28,
 						"dienstleistungen": 36,
-						"finanz": 35
+						"finanz": 42
 					},
 					{
 						"id": "improve_efficiency",
 						"insgesamt": 32,
 						"industrie": 31,
 						"dienstleistungen": 34,
-						"finanz": 41
+						"finanz": 48
 					},
 					{
 						"id": "comply_with_regulations",
 						"insgesamt": 32,
 						"industrie": 30,
 						"dienstleistungen": 35,
-						"finanz": 35
+						"finanz": 54
 					}
 				]
 			}
@@ -4763,38 +4721,38 @@
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": {
-					"nahrung": 15,
-					"pharma": 9,
-					"holz": 18,
-					"metall": 1,
-					"elektroindustrie": 12,
-					"fahrzeugbau": 24,
-					"sonstige_konsumgueter": 12,
-					"energie": 5,
-					"telekommunikation": 16,
-					"software": 33,
-					"finanz": 26,
-					"unternehmensberatung": 12,
-					"architektur": 11,
-					"forschung": 38,
-					"kreativ": 26
+					"nahrung": 8,
+					"pharma": 11,
+					"holz": 1,
+					"metall": 4,
+					"elektroindustrie": 9,
+					"fahrzeugbau": 6,
+					"sonstige_konsumgueter": 0,
+					"energie": 0,
+					"telekommunikation": 17,
+					"software": 41,
+					"finanz": 4,
+					"unternehmensberatung": 18,
+					"architektur": 7,
+					"forschung": 41,
+					"kreativ": 16
 				},
 				"de": {
 					"nahrung": 2,
-					"pharma": 7,
-					"holz": 9,
-					"metall": 7,
-					"elektroindustrie": 17,
-					"fahrzeugbau": 11,
-					"sonstige_konsumgueter": 5,
-					"energie": 6,
-					"telekommunikation": 8,
-					"software": 26,
-					"finanz": 24,
-					"unternehmensberatung": 13,
-					"architektur": 16,
-					"forschung": 29,
-					"kreativ": 7
+					"pharma": 6,
+					"holz": 4,
+					"metall": 5,
+					"elektroindustrie": 9,
+					"fahrzeugbau": 10,
+					"sonstige_konsumgueter": 1,
+					"energie": 7,
+					"telekommunikation": 17,
+					"software": 32,
+					"finanz": 10,
+					"unternehmensberatung": 25,
+					"architektur": 5,
+					"forschung": 24,
+					"kreativ": 15
 				}
 			}
 		},
