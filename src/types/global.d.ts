@@ -99,7 +99,6 @@ export type StickyItem = {
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
-	multiline_y_axis_label?: boolean;
 	max_value?: number;
 	text?: string;
 	facts?: { fact: string; unit: string }[];

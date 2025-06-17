@@ -17,6 +17,7 @@ interface DropdownProps {
 	sortsAfter?: dataKeys[];
 	sortBy?: string | null;
 	setSortBy?: (value: string | null) => void;
+	chart_type?: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -29,10 +30,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 	sortsAfter,
 	sortBy,
 	setSortBy,
+	chart_type,
 }) => {
 	const { theme, fontSize } = useGlobalContext();
 	const [isOpen, setIsOpen] = useState(false);
+	const [height, setHeight] = useState(0);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
+	const baseRef = useRef<HTMLDivElement | null>(null);
 	const allIndustrieBranchen: string[] = branchen
 		.filter((branche) => branche.sektor_id === "industrie")
 		.map((branche) => branche.id);
@@ -41,12 +45,21 @@ const Dropdown: React.FC<DropdownProps> = ({
 		.map((branche) => branche.id);
 
 	const setName = () => {
+		if (type === "filter" && activeFilter === "industrie") {
+			return "Industrie";
+		} else if (type === "filter" && activeFilter === "dienstleistungen") {
+			return "Dienstleistungen";
+		} else if (type === "filter" && activeFilter === "finanz") {
+			return "Finanzdienstleistungen";
+		}
+		if (wordings[activeFilter as keyof typeof wordings]) {
+			return wordings[activeFilter as keyof typeof wordings];
+		}
 		if (
 			type === "filter" &&
-			allFilters?.includes("insgesamt") &&
-			activeFilter
+			branchen.find((branche) => branche.id === activeFilter)
 		) {
-			return activeFilter;
+			return branchen.find((branche) => branche.id === activeFilter)?.name;
 		}
 		if (type === "filter") {
 			return "Branche wählen";
@@ -58,7 +71,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 	};
 
 	const toggleFilter = (filter: string) => {
-		if (allFilters?.includes("insgesamt")) {
+		if (typeof setActiveFilter === "function") {
 			return setActiveFilter?.(filter);
 		}
 		const updatedFilters = activeFilters?.includes(filter)
@@ -142,12 +155,37 @@ const Dropdown: React.FC<DropdownProps> = ({
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
 
+	useEffect(() => {
+		const el = baseRef.current;
+		if (!el) {
+			return;
+		}
+
+		const resizeObserver = new ResizeObserver((entries) => {
+			for (const entry of entries) {
+				const newHeight = entry.contentRect.height;
+				setHeight(newHeight - 3);
+			}
+		});
+
+		resizeObserver.observe(el);
+
+		// eslint-disable-next-line consistent-return
+		return () => {
+			resizeObserver.disconnect();
+		};
+	}, []);
+
 	return (
 		<div
 			ref={dropdownRef}
 			className={`relative inline-block drop-down ${theme}`}
 		>
-			<div className="flex items-center" style={{ gap: fontSize }}>
+			<div
+				className="flex items-center"
+				style={{ gap: fontSize }}
+				ref={baseRef}
+			>
 				<div className="flex-1">
 					<Icon id={type} size={fontSize * 1.5} />
 				</div>
@@ -155,7 +193,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 					onClick={() => setIsOpen(!isOpen)}
 					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer"
 				>
-					<p className="bold select-none text-left first-letter:capitalize">
+					<p className="bold select-none text-left first-letter:capitalize transform translate-y-[1.5px]">
 						{setName()}
 					</p>
 					<div
@@ -177,12 +215,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 					style={{
 						width: `calc(100% - ${fontSize * 2.5}px)`,
 						marginLeft: fontSize * 2.5,
+						transform: `translateY(calc(-100% - ${height}px))`,
 					}}
 				>
 					<ul className="overflow-y-auto px-2">
 						{type === "filter" && (
 							<>
-								{!allFilters?.includes("insgesamt") && (
+								{!allFilters?.includes("insgesamt") && !chart_type && (
 									<>
 										<li
 											className="flex items-center p-2 cursor-pointer"
@@ -219,11 +258,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 												<p className="bold select-none">{sektor.name}</p>
 											</li>
 										))}
-
 										<hr />
 									</>
 								)}
-
 								{allFilters?.map(
 									(filter) =>
 										filter && (
@@ -244,8 +281,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 													/>
 												</span>
 												<p className="line-clamp-1 break-words select-none first-letter:capitalize">
-													{branchen.find((branche) => branche.id === filter)
-														?.name || filter}
+													{wordings[filter as keyof typeof wordings] ||
+														branchen.find((branche) => branche.id === filter)
+															?.name ||
+														filter}
 												</p>
 											</li>
 										),

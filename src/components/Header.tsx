@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Icon from "./Icons";
 import chapters from "../data/chapters.json";
-import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 
 const Header: React.FC = () => {
@@ -16,7 +15,8 @@ const Header: React.FC = () => {
 		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
-	const toggleIconSize = isMobile ? fontSize * 1.5 : fontSize * 2;
+	// const toggleIconSize = isMobile ? fontSize * 1.5 : fontSize * 2;
+	const toggleIconSize = fontSize * 1.5;
 	return (
 		<>
 			<header
@@ -28,7 +28,16 @@ const Header: React.FC = () => {
 						size={fontSize * 2.5}
 					/>
 				</div>
-				<div className={`flex items-center ${isMobile ? "gap-4" : "gap-8"}`}>
+				<div
+					className={`flex items-center ${isMobile ? "gap-4" : "gap-8 pr-4"}`}
+				>
+					<div
+						className={`cursor-pointer ${theme} flex items-center gap-2`}
+						onClick={toggleTheme}
+					>
+						<Icon id="invert-text" size={toggleIconSize} />
+						{!isMobile && <p className="select-none">Text invertieren</p>}
+					</div>
 					<div className="flex items-center">
 						<div
 							className={`flex items-center cursor-pointer ${isMobile ? "gap-2" : "gap-4"}`}
@@ -46,13 +55,6 @@ const Header: React.FC = () => {
 								<Icon id="chevron" size={fontSize * 1.5} />
 							</div>
 						</div>
-					</div>
-					<div className={`cursor-pointer ${theme}`} onClick={toggleTheme}>
-						{theme === "dark" ? (
-							<Icon id="moon" size={toggleIconSize} setColor={colors.white} />
-						) : (
-							<Icon id="sun" size={toggleIconSize} setColor={colors.blue} />
-						)}
 					</div>
 				</div>
 			</header>

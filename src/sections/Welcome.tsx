@@ -1,47 +1,28 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
 import wordings from "../data/wordings.json";
 
 const Welcome: React.FC = () => {
-	const { headerHeight, theme, setWidthOfStickyContainer, isMobile } =
-		useGlobalContext();
-	const selfRef = useRef<HTMLDivElement>(null);
-	useEffect(() => {
-		const handleResize = () => {
-			if (selfRef.current) {
-				setWidthOfStickyContainer(selfRef.current.offsetWidth);
-			}
-		};
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, [setWidthOfStickyContainer]);
+	const { headerHeight } = useGlobalContext();
+	const paddingTop = Math.round(headerHeight + window.innerHeight * 0.1);
 
 	return (
 		<section
 			id="welcome"
-			className={`sticky-section relative w-full flex ${isMobile ? "flex-col-reverse gap-12" : "flex-row gap-6"}`}
-			style={{ paddingTop: headerHeight }}
+			className={`flex flex-col items-center w-full`}
+			style={{ paddingTop }}
 		>
-			<div
-				ref={selfRef}
-				className="flex items-center basis-1/2"
-				style={{
-					height: window.innerHeight - headerHeight,
-				}}
-			>
-				<div className="w-full">
-					<Overview />
-				</div>
-			</div>
-			<div className="flex items-center basis-1/2">
-				<div className={`card ${theme} ${isMobile ? "mt-10" : "p-6"}`}>
-					<h2 className="mb-4">{wordings.welcome_title}</h2>
-					<p dangerouslySetInnerHTML={{ __html: wordings.welcome_text }} />
-				</div>
+			<div className="max-w-[700px]">
+				<h1
+					className="mb-4"
+					dangerouslySetInnerHTML={{ __html: wordings.welcome_title }}
+				/>
+				<p
+					className="max-w-[80ch] serif mb-16"
+					dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
+				/>
+				<Overview />
 			</div>
 		</section>
 	);

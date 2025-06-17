@@ -158,7 +158,6 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
 					<TreeMapRecharts
-						// data={collectData}
 						data={collectData.sort((a, b) => b.value - a.value)}
 						aspectRatio={1}
 						dataKey="value"

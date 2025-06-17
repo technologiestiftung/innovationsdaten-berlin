@@ -6,7 +6,6 @@ import Menu from "./components/Menu";
 import data from "./data/data.json";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
-import Welcome from "./sections/Welcome";
 import Desktop from "./sections/Desktop";
 import Mobile from "./sections/Mobile";
 
@@ -18,7 +17,6 @@ function App() {
 			<Header />
 			<Menu />
 			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
-				<Welcome />
 				{Object.keys(data).map((dataKey) => (
 					<div key={dataKey}>
 						{isMobile ? (

@@ -100,18 +100,21 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card ${theme} ${isMobile ? "" : "p-6"}`}
+			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
 			style={{
 				marginTop: getMarginTop(),
 				marginBottom: getMarginBottom(),
 			}}
 		>
 			{typeof window !== "undefined" &&
-				!window.location.toString().includes("innovationsdaten.ts.berlin") &&
+				window.location.toString().includes("localhost") &&
 				displayNumber && <h4>{displayNumber}</h4>}
 			<h2 dangerouslySetInnerHTML={{ __html: title }} />
 			{text && (
-				<p className="mt-4" dangerouslySetInnerHTML={{ __html: text }} />
+				<p
+					className="mt-4 max-w-[80ch] serif"
+					dangerouslySetInnerHTML={{ __html: text }}
+				/>
 			)}
 		</div>
 	);

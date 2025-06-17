@@ -12,6 +12,7 @@ import {
 	CartesianGrid,
 	Tooltip,
 	Legend,
+	Cell,
 } from "recharts";
 import { useGlobalContext } from "../../GlobalContext";
 import branchen from "../../data/branchen.json";
@@ -32,7 +33,6 @@ type BarChartProps = {
 	chart_type: ChartTypes;
 	chart_unit?: string;
 	has_tooltip?: boolean;
-	multiline_y_axis_label?: boolean;
 	max_value?: number;
 	bar_chart_unit_breakpoint?: number;
 	hasRegionToggle?: boolean;
@@ -46,7 +46,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	chart_type,
 	chart_unit,
 	has_tooltip,
-	multiline_y_axis_label,
 	max_value,
 	bar_chart_unit_breakpoint,
 	hasRegionToggle,
@@ -88,16 +87,9 @@ const BarChart: React.FC<BarChartProps> = ({
 	}
 	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
 
-	let yAxisWidth = 0;
-	if (isMobile) {
-		yAxisWidth = widthOfStickyContainer * 0.3;
-	} else if (multiline_y_axis_label) {
-		yAxisWidth = widthOfStickyContainer * 0.4;
-	} else {
-		yAxisWidth = widthOfStickyContainer * 0.25;
-	}
-
 	const optionsRef = useRef<HTMLDivElement>(null);
+	const chartRef = useRef<HTMLDivElement>(null);
+	const [yAxisWidth, setYAxisWidth] = useState(widthOfStickyContainer * 0.4);
 
 	// State
 	const [sortBy, setSortBy] = useState<string | null>(null);
@@ -172,32 +164,6 @@ const BarChart: React.FC<BarChartProps> = ({
 						insgesamt: getIngesamt,
 					};
 				}
-				// full
-				if (chart_type.includes("full")) {
-					const getData = data
-						.map((item: any) => {
-							const total =
-								item.product_innovation_share + item.process_innovation_share;
-
-							const rawProduct = (item.product_innovation_share / total) * 100;
-							const roundedProduct = Math.round(rawProduct);
-							const roundedProcess = Math.round(100 - roundedProduct);
-
-							return {
-								id: item.id,
-								product_innovation_share: roundedProduct,
-								process_innovation_share: roundedProcess,
-								display_product_innovation_share: item.product_innovation_share,
-								display_process_innovation_share: item.process_innovation_share,
-							};
-						})
-						.find((item: any) => item.id === branche.id);
-
-					return {
-						...branche,
-						...getData,
-					};
-				}
 				// delta & normal
 				const getDelta =
 					chart_type === "bar_chart" ? 0 : data[branche.id].delta;
@@ -216,15 +182,20 @@ const BarChart: React.FC<BarChartProps> = ({
 					color: branche.color,
 				};
 			});
-		}
-
-		if (chart_type.includes("filter_keys")) {
+		} else {
 			result = data.map((item: any) => {
 				const getID = item.id;
 				const getBreakPoint = bar_chart_unit_breakpoint || 0;
 				const getValue = item[activeFilter || "insgesamt"];
+				let getName = wordings[getID as keyof typeof wordings];
+				const findBranche = branchen.find(
+					(singleBranche) => singleBranche.id === getID,
+				);
+				if (!getName && findBranche) {
+					getName = findBranche.name;
+				}
 				return {
-					name: wordings[getID as keyof typeof wordings],
+					name: getName,
 					isSmall: getValue < getBreakPoint,
 					...item,
 				};
@@ -438,8 +409,6 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 		return colors.blue;
 	};
-	const showLegend =
-		chart_type.includes("stacked") || chart_type.includes("full");
 
 	const getHeight = () => {
 		if (isMobile) {
@@ -463,6 +432,16 @@ const BarChart: React.FC<BarChartProps> = ({
 			return "25%";
 		}
 		return "10%";
+	};
+
+	const getFillForBranchenFilterKeysCharts = (entry: any) => {
+		const findBrancheFromFill = branchen.find(
+			(findBranche) => findBranche.id === entry.id,
+		);
+		if (findBrancheFromFill) {
+			return findBrancheFromFill.color;
+		}
+		return colors.blue;
 	};
 
 	const CustomTooltip = ({ active, payload }: any) => {
@@ -509,9 +488,7 @@ const BarChart: React.FC<BarChartProps> = ({
 										}}
 									>
 										{/* Value Display */}
-										{chart_type.includes("full")
-											? `${formatNumber(payloadData[key])} | ${formatNumber(payloadData[`display_${key}`])}%`
-											: formatNumber(payloadData[key])}
+										{formatNumber(payloadData[key])}
 										{chart_unit}
 									</p>
 								</div>
@@ -556,6 +533,48 @@ const BarChart: React.FC<BarChartProps> = ({
 		);
 	};
 
+	const wrapText = (text: string, maxCharsPerLine = 30) => {
+		const words = text.split(" ");
+		const lines = [];
+		let currentLine = "";
+
+		words.forEach((word) => {
+			if ((currentLine + word).length > maxCharsPerLine) {
+				lines.push(currentLine.trim());
+				currentLine = word + " ";
+			} else {
+				currentLine += word + " ";
+			}
+		});
+
+		lines.push(currentLine.trim());
+		return lines;
+	};
+
+	// const CustomLinHeightYAxisTick = ({ x, y, payload }: any) => {
+	const CustomLinHeightYAxisTick = ({ x, y, payload }: any) => {
+		const lines = wrapText(payload.value);
+		return (
+			<text
+				x={x}
+				y={y}
+				textAnchor="end"
+				style={{
+					fontFamily: "Clan Pro",
+					fontSize: 12,
+					fill: theme === "dark" ? colors.white : colors.blue,
+					fontWeight: "initial",
+				}}
+			>
+				{lines.map((line, index) => (
+					<tspan key={index} x={x} dy={index === 0 ? 0 : "1.2em"}>
+						{line}
+					</tspan>
+				))}
+			</text>
+		);
+	};
+
 	useEffect(() => {
 		if (Array.isArray(sortsAfter) && sortsAfter.length > 0) {
 			setSortBy(sortsAfter[0]);
@@ -571,19 +590,22 @@ const BarChart: React.FC<BarChartProps> = ({
 	}, [activeFilter]);
 
 	useEffect(() => {
-		if (chart_type.includes("full")) {
-			setSortBy("process_innovation_share");
-		}
-	}, [region]);
-
-	useEffect(() => {
 		if (chart_type.includes("filter_keys") && !!collectData.length) {
 			const getAllFilters = Object.keys(collectData[0]).filter(
 				(key) => !excludeKeyFromAllFilters.includes(key),
 			);
+			setAllFilters(getAllFilters);
 			if (getAllFilters.length) {
-				setAllFilters(getAllFilters);
-				setActiveFilter("insgesamt");
+				if (getAllFilters.includes("insgesamt")) {
+					setActiveFilter("insgesamt");
+				} else if (
+					sortsAfterOnStart &&
+					getAllFilters.includes(sortsAfterOnStart)
+				) {
+					setActiveFilter(sortsAfterOnStart);
+				} else {
+					setActiveFilter(getAllFilters[0]);
+				}
 			}
 		}
 	}, [id]);
@@ -595,13 +617,29 @@ const BarChart: React.FC<BarChartProps> = ({
 		}
 	}, [optionsRef.current]);
 
+	useEffect(() => {
+		setTimeout(() => {
+			if (!chartRef.current) {
+				return;
+			}
+			const axisTicksEl = chartRef.current.querySelector(".recharts-yAxis");
+			if (axisTicksEl) {
+				const rect = axisTicksEl.getBoundingClientRect();
+				setYAxisWidth(rect.width);
+			}
+		}, 100);
+	}, [id]);
+
 	if (!data) {
 		return <h4>BarChart Data missing</h4>;
 	}
 
 	return (
 		<>
-			<div className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label">
+			<div
+				ref={chartRef}
+				className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label"
+			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
 					<RechartsBarChart
 						layout="vertical"
@@ -618,12 +656,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								isMobile && dataIsBasedOnBranchen ? (
 									<CustomMobileTick />
 								) : (
-									{
-										fontFamily: "Clan Pro",
-										fontSize: 12,
-										fill: theme === "dark" ? colors.white : colors.blue,
-										fontWeight: "initial",
-									}
+									<CustomLinHeightYAxisTick />
 								)
 							}
 						/>
@@ -631,7 +664,9 @@ const BarChart: React.FC<BarChartProps> = ({
 						{has_tooltip && <Tooltip content={<CustomTooltip />} />}
 						{/* Grid */}
 						<CartesianGrid strokeDasharray="3 3" horizontal={false} />
-						{showLegend && <Legend content={RenderCustomLegend} />}
+						{chart_type.includes("stacked") && (
+							<Legend content={RenderCustomLegend} />
+						)}
 						{/* Bars */}
 						{(chart_type.includes("delta") || chart_type === "bar_chart") && (
 							<Bar
@@ -674,8 +709,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								/>
 							</Bar>
 						)}
-						{(chart_type.includes("stacked") ||
-							chart_type.includes("full")) && (
+						{chart_type.includes("stacked") && (
 							<>
 								{objectKeys
 									.filter(
@@ -701,9 +735,15 @@ const BarChart: React.FC<BarChartProps> = ({
 								key={activeFilter}
 								dataKey={activeFilter}
 								stackId="1"
-								fill={colors.blue}
+								// fill={getFillForBranchenFilterKeysCharts()}
 								cursor={has_tooltip ? "pointer" : "default"}
 							>
+								{data.map((entry: any, index: number) => (
+									<Cell
+										key={`cell-${index}`}
+										fill={getFillForBranchenFilterKeysCharts(entry)}
+									/>
+								))}
 								{isMobile && (
 									<LabelList
 										dataKey="name"
@@ -719,14 +759,7 @@ const BarChart: React.FC<BarChartProps> = ({
 							type="number"
 							mirror
 							stroke="none"
-							hide={chart_type.includes("full")}
-							domain={
-								max_value
-									? [0, max_value]
-									: chart_type.includes("full")
-										? [0, 100]
-										: ["auto", "auto"]
-							}
+							domain={max_value ? [0, max_value] : ["auto", "auto"]}
 							tick={{
 								...axisFontStylings,
 								fill: theme === "dark" ? colors.white : colors.blue,
@@ -754,7 +787,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						allDatas={["ber", "de"]}
 					/>
 				)}
-				{sortBy && !activeFilter && !chart_type.includes("full") && (
+				{sortBy && !activeFilter && (
 					<Dropdown
 						type="sort"
 						sortsAfter={sortsAfter}
@@ -768,6 +801,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						allFilters={allFilters}
 						activeFilter={activeFilter}
 						setActiveFilter={setActiveFilter}
+						chart_type={chart_type}
 					/>
 				)}
 			</div>

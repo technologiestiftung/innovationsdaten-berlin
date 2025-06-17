@@ -31,7 +31,6 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 		chart_type,
 		chart_unit,
 		has_tooltip,
-		multiline_y_axis_label,
 		facts,
 		bar_chart_unit_breakpoint,
 		togglesBetween,
@@ -55,7 +54,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 			{/* BIG FACT */}
 			{chart_type === "big_fact" && <BigFact facts={facts} />}
 			{/* BRANCHEN LISTE */}
-			{id === "branchen-list" && <BranchenList />}
+			{id === "branchen_list" && <BranchenList />}
 			{/* TREEMAP */}
 			{chart_type === "tree_map" && <TreeMap id={id} data={content} />}
 			{/* AREA CHART */}
@@ -84,7 +83,6 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 					chart_type={chart_type}
 					chart_unit={chart_unit}
 					has_tooltip={has_tooltip}
-					multiline_y_axis_label={multiline_y_axis_label}
 					max_value={max_value}
 					bar_chart_unit_breakpoint={
 						hasMultipleBreakpoints

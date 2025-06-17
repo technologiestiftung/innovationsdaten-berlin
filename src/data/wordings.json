@@ -1,5 +1,5 @@
 {
-	"welcome_title": "Innovationsdaten Berlin",
+	"welcome_title": "Innovations&shy;daten<br/>Berlin",
 	"welcome_text": "In modernen wissensbasierten Gesellschaften ist Innovation der Schlüsselfaktor für Wettbewerbsfähigkeit und damit für Zukunftssicherung und den Erhalt des Wohlstands. Eine Region muss ihre Position kennen.<br/><br/>Die Technologiestiftung stockt seit etwas über 10 Jahren die Anzahl der in der Deutschen Innovationserhebung des ZEW im Auftrag des BMBF befragten Unternehmen auf, damit für Berlin aussagefähige Daten vorliegen, die nach Branchen und Unternehmensgrößen aufgeschlüsselt werden können.<br/><br/>Innovation meint hier alle Anstrengungen, die auf neue Produkte, Verfahren oder Dienstleistungen zielen, die für einen Markt entwickelt werden. Befragt werden jährlich die Industrie und die wissensbasierten Dienstleistungen.<br/><br/>Die Fragen sind bundesweit einheitlich und alle zwei Jahre auch identisch mit dem Community Innovation Survey (Eurostat). Die Ergebnisse sind dadurch überregional vergleichbar.<br/><br/>Berlin ist ein überregional sehr bedeutender Standort der öffentlichen Forschung (in Universitäten, Hochschulen, außeruniversitären Forschungsinstituten und einer ganzen Reihe forschender Bundesoberbehörden). Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung, ist deshalb deutlich höher als in Deutschland.<br/><br/>Spin-offs aus der öffentlichen Forschung prägen bei oft noch geringer Unternehmensgröße einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen.<br/><br/>Basisdaten zur Berliner Wirtschaft (z.B. Innovationsausgaben oder Umsätze mit neuen Produkten) werden jährlich erhoben. In größeren Abständen werden spezifische Themen erfragt (z.B. Entwicklungskooperationen oder genutzte Quellen für neues Wissen), so dass sich über die Jahre ein Wissensreservoir zum Wissens- und Technologietransfer ergibt.<br/><br/>Alle Daten seit 2012 stehen auf unserer Website als Publikation und Datensatz zur Verfügung. Diese Daten-Zusammenstellung soll Interessierte dazu anregen, die Daten selbst zu explorieren.",
 	"umsatz_markt_neuheiten": "Umsatzanteil Marktneuheiten",
 	"umsatz_produkt_neuheiten": "Gesamt",
@@ -44,7 +44,7 @@
 	"consulting_firms": "Beratungsunternehmen",
 	"universities": "Hochschulen",
 	"public_research_institutes": "Staatliche Forschungseinricht.",
-	"associations": "Verbände, Vereine, Interessenvertreter",
+	"associations": "Verbände, Vereine,<br/>Interessenvertreter",
 	"others": "Sonstige",
 	"from_land": "vom Land",
 	"from_bund": "vom Bund",
@@ -75,14 +75,14 @@
 	"make_better_decisions": "Besser informierte Entscheidungen treffen",
 	"improve_efficiency": "Effizienz von Verfahren und Geschäftsprozessen verbessern",
 	"comply_with_regulations": "Gesetzliche oder regulatorische Anforderungen erfüllen",
-	"products_and_services": "Produkte, Dienstleistungen",
-	"process_automation": "Automatisierung von Prozessen",
-	"client_communication": "Vertrieb und Marketing",
-	"it_admin": "IT Systeme und Administration",
+	"products_and_services": "Produkte,<br/>Dienstleistungen",
+	"process_automation": "Automatisierung<br/>von Prozessen",
+	"client_communication": "Vertrieb und<br/>Marketing",
+	"it_admin": "IT Systeme und<br/>Administration",
 	"other_fields": "Andere Bereiche",
 	"speech_comprehension": "Sprachverstehen",
 	"image_recognition": "Bilderkennung",
-	"machine_learning": "Maschinelles Lernen, maschinelles Beweisen",
-	"automation": "Automatisierung und autonome Systeme",
-	"knowledge_based_systems": "Wissensbasierte Systeme"
+	"machine_learning": "Maschinelles Lernen,<br/>maschinelles Beweisen",
+	"automation": "Automatisierung und<br/>autonome Systeme",
+	"knowledge_based_systems": "Wissensbasierte<br/>Systeme"
 }

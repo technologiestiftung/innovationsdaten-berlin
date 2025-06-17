@@ -12,6 +12,7 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 		const textRef = useRef<HTMLDivElement>(null);
 		const containerRef = useRef<HTMLDivElement>(null);
 		const [fontSize, setFontSize] = useState(globalFontSize);
+		const [show, setShow] = useState<"visible" | "hidden">("hidden");
 
 		useEffect(() => {
 			const resizeText = () => {
@@ -27,6 +28,9 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 						textRef.current.style.fontSize = `${size}px`;
 					}
 					setFontSize(size);
+					setTimeout(() => {
+						setShow("visible");
+					}, 100);
 				}
 			};
 			resizeText();
@@ -35,15 +39,18 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 		}, []);
 
 		return (
-			<div className="flex-1">
+			<div
+				className={`flex-1 `}
+				style={{ opacity: show === "visible" ? 1 : 0 }}
+			>
 				<div ref={containerRef} className="w-full flex justify-center">
-					<h1
+					<h2
 						ref={textRef}
 						className="text-center leading-none ignore select-none"
 						style={{ fontSize }}
 					>
 						{fact}
-					</h1>
+					</h2>
 				</div>
 				<h3 className="text-center mb-8">{unit}</h3>
 			</div>
