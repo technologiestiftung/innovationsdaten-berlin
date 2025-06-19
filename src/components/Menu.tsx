@@ -29,9 +29,7 @@ const Menu: React.FC = () => {
 
 		const handleScroll = () => {
 			const element = document.getElementById(link);
-			if (window.pageYOffset < window.innerHeight) {
-				setChapter("Willkommen");
-			} else if (element) {
+			if (element) {
 				const rect = element.getBoundingClientRect();
 				const top = rect.top + window.pageYOffset;
 				const bottom = top + rect.height;

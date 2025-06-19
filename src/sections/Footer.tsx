@@ -15,12 +15,12 @@ const Footer: React.FC = () => {
 					className={`py-20 flex ${isMobile ? "flex-col px-3 gap-20" : "flex-row"}`}
 				>
 					<div className="basis-1/2">
-						<h3 className="mb-4">Gefördert von:</h3>
+						<p className="mb-4">Gefördert von</p>
 						<Icon
 							id="SenWEB_logo"
 							size={isMobile ? fontSize * 3 : fontSize * 5}
 						/>
-						<h3 className="mb-4 mt-10">Ein Projekt der:</h3>
+						<p className="mb-4 mt-10">Ein Projekt der</p>
 						<div className={isMobile ? "" : "mb-10"}>
 							<Icon
 								id="tsb_logo"

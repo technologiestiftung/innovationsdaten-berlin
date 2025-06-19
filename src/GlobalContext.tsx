@@ -29,7 +29,6 @@ interface GlobalStateType {
 	region: Region;
 	setRegion: (region: Region) => void;
 	widthOfStickyContainer: number;
-	setWidthOfStickyContainer: (num: number) => void;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -40,9 +39,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [theme, setTheme] = useState<Theme>("light");
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
-	const [chapter, setChapter] = useState<string>("Willkommen");
-	const [widthOfStickyContainer, setWidthOfStickyContainer] =
-		useState<number>(0);
+	const [chapter, setChapter] = useState<string>("Einleitung");
 
 	const fontSize = 16;
 
@@ -55,11 +52,13 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	};
 
 	const breakPoint = window.innerWidth * 0.8;
-	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
 	const checkIfViewPortIsMobile = () =>
 		setIsMobile(
-			window.innerWidth < 768 && window.innerWidth < window.innerHeight,
+			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
 		);
+
+	const widthOfStickyContainer = (window.innerWidth * 0.8 - 24) * (3 / 5);
 
 	// Toggle theme function
 	const toggleTheme = () => {
@@ -108,7 +107,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				region,
 				setRegion,
 				widthOfStickyContainer,
-				setWidthOfStickyContainer,
 			}}
 		>
 			{children}

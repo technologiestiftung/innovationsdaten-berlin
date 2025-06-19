@@ -9,42 +9,42 @@
 	{
 		"id": "fahrzeugbau",
 		"name": "Maschine / Fahrzeug",
-		"color": "#E66C37",
+		"color": "#4092FF",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
 	{
 		"id": "nahrung",
 		"name": "Nahrung / Getränke",
-		"color": "#D64550",
+		"color": "#1AAB40",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
 	{
 		"id": "holz",
 		"name": "Holz / Papier / Druck",
-		"color": "#E044A6",
+		"color": "#1A7277",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
 	{
 		"id": "pharma",
 		"name": "Pharma",
-		"color": "#4092FF",
+		"color": "#17C6F4",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
 	{
 		"id": "sonstige_konsumgueter",
 		"name": "Sonstige Konsumgüter",
-		"color": "#D9B400",
+		"color": "#12229E",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
 	{
 		"id": "elektroindustrie",
-		"name": "Elektro / Technik",
-		"color": "#12229E",
+		"name": "Elektro / Instrumente",
+		"color": "#0F8DFF",
 		"sektor": "Industrie",
 		"sektor_id": "industrie"
 	},
@@ -57,50 +57,50 @@
 	},
 	{
 		"id": "telekommunikation",
-		"name": "Verläge / Funk / Telekommunikation",
-		"color": "#F373D0",
+		"name": "Telekommunikation und Medien",
+		"color": "#E044A6",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "finanz",
-		"name": "Finanz-Dienstleistung",
-		"color": "#1AAB40",
+		"name": "Finanzdienstleistungen",
+		"color": "#F373D0",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "kreativ",
-		"name": "Kreativ-Dienstleistung",
-		"color": "#0F8DFF",
+		"name": "Kreativdienstleistungen",
+		"color": "#D64550",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "forschung",
-		"name": "Forschung / Entwicklung",
-		"color": "#17C6F4",
+		"name": "FuE-Dienstleistungen",
+		"color": "#BE5DC9",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "architektur",
 		"name": "Architektur / Ingenieur",
-		"color": "#1A7277",
+		"color": "#FFA057",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "unternehmensberatung",
 		"name": "Beratung",
-		"color": "#BE5DC9",
+		"color": "#D9B400",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	},
 	{
 		"id": "software",
-		"name": "Software",
-		"color": "#FFA057",
+		"name": "Software und Datenverarbeitung",
+		"color": "#E66C37",
 		"sektor": "Dienstleistung",
 		"sektor_id": "dienstleistungen"
 	}
