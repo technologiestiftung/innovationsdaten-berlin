@@ -61,6 +61,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
 	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
 	const numberOfColumns = xLabels.length;
+	const numberOfRows = yLabels.length;
 
 	const templateAreas = [
 		[".", ...xLabels.map((x) => `x_${sanitize(x)}`)],
@@ -90,6 +91,11 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 		const selfRef = useRef<HTMLDivElement>(null);
 		const getCorrectLabel = isMobile ? x : y;
 		const getCorrectBranchenID = isMobile ? y : x;
+		const getToolTipPosition = (yPosition: string) => {
+			const findYLabelsIndex = yLabels.indexOf(yPosition);
+			const halfway = yLabels.length / 2;
+			return findYLabelsIndex < halfway ? "below" : "above";
+		};
 		useEffect(() => {
 			const handleClickOutside = (event: MouseEvent) => {
 				if (
@@ -110,9 +116,15 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 			};
 		}, []);
 		useEffect(() => {
-			if (selfRef.current && !cellSize) {
+			if (
+				selfRef.current &&
+				!selfRef.current.classList.contains("label-y") &&
+				!selfRef.current.classList.contains("label-x")
+			) {
 				const matrixCellSize = selfRef.current.getBoundingClientRect().height;
-				setCellSize(matrixCellSize);
+				if (matrixCellSize !== cellSize) {
+					setCellSize(matrixCellSize);
+				}
 			}
 		}, []);
 		return (
@@ -142,7 +154,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 				</div>
 				{isOpen && (
 					<div
-						className={`tooltip p-4 select-none ${theme} ${y === "own_region" || y === "different_regions_in_germany" || y === "eu_foreign" ? "below" : "above"}`}
+						className={`tooltip p-4 select-none ${theme} ${getToolTipPosition(y)}`}
 						onClick={() => {
 							if (isMobile) {
 								setIsOpen(false);
@@ -217,26 +229,28 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 
 	return (
 		<>
-			<div className="flex w-full justify-end pb-4 mt-[-10vh]">
-				<div
-					className="rotate-90"
-					style={{ width: cellSize * numberOfColumns }}
-				>
-					{xLabels.reverse().map((x) => (
-						<div
-							key={x}
-							className="flex items-center justify-end"
-							style={{ height: cellSize }}
-						>
-							<p className="rotate-[-25deg] origin-right small">
-								{replaceAllCustom(wordings[x as keyof typeof wordings])}
-							</p>
-						</div>
-					))}
+			{isMobile && (
+				<div className="flex w-full justify-end pb-4 mt-[-10vh]">
+					<div
+						className="rotate-90"
+						style={{ width: cellSize * numberOfColumns }}
+					>
+						{xLabels.reverse().map((x) => (
+							<div
+								key={x}
+								className="flex items-center justify-end"
+								style={{ height: cellSize }}
+							>
+								<p className="rotate-[-25deg] origin-right small">
+									{replaceAllCustom(wordings[x as keyof typeof wordings])}
+								</p>
+							</div>
+						))}
+					</div>
 				</div>
-			</div>
+			)}
 			<div
-				className={`matrix-grid ${theme}`}
+				className={`matrix-grid ${theme} relative`}
 				style={{
 					display: "grid",
 					gridTemplateAreas: templateAreas,
@@ -295,6 +309,14 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 						index={index}
 					/>
 				))}
+
+				<div
+					className={`matrix-border absolute right-0 bottom-0 ${theme}`}
+					style={{
+						width: cellSize * numberOfColumns,
+						height: cellSize * numberOfRows,
+					}}
+				/>
 			</div>
 			<div className="mt-8 flex gap-8 items-center justify-end">
 				<DataToggle

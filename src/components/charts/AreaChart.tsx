@@ -28,6 +28,7 @@ type AreaChartProps = {
 	toggleData?: string;
 	setToggleData?: (toggleData: string) => void;
 	togglesBetween?: string[];
+	max_value?: number;
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({
@@ -36,6 +37,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	toggleData,
 	setToggleData,
 	togglesBetween,
+	max_value,
 }) => {
 	const {
 		theme,
@@ -308,6 +310,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						mirror
 						stroke="none"
 						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
+						domain={max_value ? [0, max_value] : ["auto", "auto"]}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,

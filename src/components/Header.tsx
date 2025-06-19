@@ -15,7 +15,6 @@ const Header: React.FC = () => {
 		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
-	// const toggleIconSize = isMobile ? fontSize * 1.5 : fontSize * 2;
 	const toggleIconSize = fontSize * 1.5;
 	return (
 		<>
@@ -44,7 +43,7 @@ const Header: React.FC = () => {
 							onClick={() => setOpen(!open)}
 							onMouseEnter={() => setOpen(true)}
 						>
-							<h4>{globalChapter}</h4>
+							<h5 className="text-right">{globalChapter}</h5>
 							<div
 								className={
 									open

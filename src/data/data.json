@@ -1542,6 +1542,7 @@
 			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
 			"displayNumber": "5.2",
 			"chart_type": "area_chart",
+			"max_value": 8,
 			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
 			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {

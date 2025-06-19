@@ -64,6 +64,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 						<AreaChart
 							id={id}
 							data={(content as Record<string, any>)[toggleData]}
+							max_value={max_value}
 							toggleData={toggleData}
 							setToggleData={setToggleData}
 							togglesBetween={togglesBetween}
@@ -72,6 +73,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 						<AreaChart
 							id={id}
 							data={(content as Record<string, any>)[region]}
+							max_value={max_value}
 						/>
 					)}
 				</div>

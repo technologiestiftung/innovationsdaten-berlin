@@ -131,6 +131,14 @@ h4 {
 		line-height: 25px !important;
 	}
 }
+h5 {
+	font-size: 20px !important;
+	line-height: 25px !important;
+	@media screen and (max-width: $mobile) {
+		font-size: 18px !important;
+		line-height: 20px !important;
+	}
+}
 
 p,
 li {
@@ -434,6 +442,15 @@ footer {
 		width: 100%;
 	}
 }
+.matrix-border {
+	z-index: -1;
+	&.dark {
+		border: 2px solid $dark-grey;
+	}
+	&.light {
+		border: 2px solid $light-grey;
+	}
+}
 .value-cell {
 	text-align: center;
 	.inner-value-cell {
@@ -441,9 +458,15 @@ footer {
 		aspect-ratio: 1;
 		&.dark {
 			border: 1px solid $dark-grey;
+			&:hover {
+				background: $dark-grey;
+			}
 		}
 		&.light {
 			border: 1px solid $light-grey;
+			&:hover {
+				background: $light-grey;
+			}
 		}
 		.inner-value-cell-child {
 			aspect-ratio: 1;
@@ -464,7 +487,7 @@ footer {
 			top: 35vh;
 			left: calc((100vw - 300px) / 2 + 15px);
 		}
-		@media screen and (min-width: $mobile) {
+		@media screen and (min-width: $mobile) /* and (min-height: 769px) */ {
 			position: absolute;
 			left: 50%;
 			&.above {
