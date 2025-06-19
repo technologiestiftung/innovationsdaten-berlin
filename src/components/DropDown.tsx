@@ -193,7 +193,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 					onClick={() => setIsOpen(!isOpen)}
 					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer"
 				>
-					<p className="bold select-none text-left first-letter:capitalize transform translate-y-[1.5px]">
+					<p className="bold select-none text-left first-letter:capitalize transform translate-y-[1px]">
 						{setName()}
 					</p>
 					<div

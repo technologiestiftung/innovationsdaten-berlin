@@ -927,9 +927,9 @@
 			"id": "process_product_innovators",
 			"title": "Prozess & Produkt&shy;innovatoren",
 			"displayNumber": "3.2",
-			"chart_type": "bar_chart_filter_keys",
+			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 74,
+			"max_value": 80,
 			"bar_chart_unit_breakpoint": 15,
 			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
 			"sortsAfterOnStart": "process_innovation_share",
@@ -1097,7 +1097,7 @@
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"has_tooltip": true,
-			"max_value": 36.5,
+			"max_value": 40,
 			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
 			"data": {
@@ -1278,7 +1278,7 @@
 			"displayNumber": "4.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 9,
+			"max_value": 10,
 			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 „bedeutende“ Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
 			"data": {
 				"ber": [
@@ -1401,7 +1401,7 @@
 			"displayNumber": "4.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 31,
+			"max_value": 40,
 			"text": "Bereits etwas älter, nämlich aus dem Jahr 2021 sind die Daten zur Motivation von Umweltinnovationen. Wegen der hohen Relevanz zeigen wir diese Daten trotzdem. Das Diagramm zeigt den Anteil der Unternehmen, die Umweltinnovationen eingeführt haben, die den jeweils genannten Grund als hoch relevant genannt haben (Alternativen waren „mittel“ oder „gering“). Es fällt auf, dass staatliche Maßnahmen (Regulierung, Erwartung künftiger Regulierung und Vorschriften im Beschaffungswesen) mit Abstand die wichtigsten Treiber sind, die Unternehmen zu Umweltinnovationen bewegen. Kundennachfrage oder Reputationsgründe gehören nicht zu den wesentlichen Treibern von Umweltinnovationen, auch nicht eine etwaige öffentliche Förderung.",
 			"data": {
 				"ber": [
@@ -1522,7 +1522,7 @@
 	"berlin": [
 		{
 			"id": "berlin_intro",
-			"title": "Was macht Berlin aus als Innovationsstandort?",
+			"title": "Was macht Berlin aus als Innovations&shy;standort?",
 			"displayNumber": "5.1",
 			"chart_type": "big_fact",
 			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
@@ -3891,9 +3891,9 @@
 			"id": "protective_measures_intellectual_property",
 			"title": "Schutzmaßnahmen für geistigen Eigentum",
 			"displayNumber": "5.5",
-			"chart_type": "bar_chart_filter_keys",
+			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 38,
+			"max_value": 40,
 			"bar_chart_unit_breakpoint": 10,
 			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"data": {
@@ -4162,7 +4162,7 @@
 			"id": "most_supported_branchen",
 			"title": "Welche Branchen werden am meisten gefördert?",
 			"displayNumber": "6.2",
-			"chart_type": "bar_chart_filter_keys",
+			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 60,
 			"bar_chart_unit_breakpoint": 10,
@@ -4391,7 +4391,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"max_value": 87,
+			"max_value": 100,
 			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"data": {
 				"ber": {
@@ -4437,7 +4437,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"max_value": 41,
+			"max_value": 50,
 			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": {
@@ -4502,7 +4502,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"max_value": 68,
+			"max_value": 80,
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"data": {
 				"ber": [
@@ -4630,7 +4630,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"max_value": 62,
+			"max_value": 80,
 			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"data": {
 				"ber": [
@@ -4757,7 +4757,7 @@
 			"displayNumber": "7.4",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 66,
+			"max_value": 80,
 			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"data": {
 				"ber": [
@@ -4869,7 +4869,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 10,
-			"max_value": 41,
+			"max_value": 50,
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": {

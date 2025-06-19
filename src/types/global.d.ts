@@ -18,6 +18,7 @@ export type ChartTypes =
 	| "bar_chart_stacked"
 	| "bar_chart_full"
 	| "bar_chart_filter_keys"
+	| "bar_chart_filter_keys_branchen"
 	| "area_chart"
 	| "tree_map"
 	| "matrix";

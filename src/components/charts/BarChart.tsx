@@ -85,7 +85,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	) {
 		excludeKeyFromToolTip.push("insgesamt");
 	}
-	const excludeKeyFromAllFilters = ["id", "name", "isSmall"];
+	const excludeKeyFromAllFilters = ["id", "name", "isSmall", "color"];
 
 	const optionsRef = useRef<HTMLDivElement>(null);
 	const chartRef = useRef<HTMLDivElement>(null);
@@ -197,6 +197,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				return {
 					name: getName,
 					isSmall: getValue < getBreakPoint,
+					color: findBranche?.color || colors.blue,
 					...item,
 				};
 			});
@@ -428,20 +429,14 @@ const BarChart: React.FC<BarChartProps> = ({
 	};
 
 	const getBarCategoryGap = () => {
-		if (isMobile && chart_type.includes("filter_keys")) {
+		if (
+			isMobile &&
+			chart_type.includes("filter_keys") &&
+			!chart_type.includes("branchen")
+		) {
 			return "25%";
 		}
 		return "10%";
-	};
-
-	const getFillForBranchenFilterKeysCharts = (entry: any) => {
-		const findBrancheFromFill = branchen.find(
-			(findBranche) => findBranche.id === entry.id,
-		);
-		if (findBrancheFromFill) {
-			return findBrancheFromFill.color;
-		}
-		return colors.blue;
 	};
 
 	const CustomTooltip = ({ active, payload }: any) => {
@@ -551,7 +546,6 @@ const BarChart: React.FC<BarChartProps> = ({
 		return lines;
 	};
 
-	// const CustomLinHeightYAxisTick = ({ x, y, payload }: any) => {
 	const CustomLinHeightYAxisTick = ({ x, y, payload }: any) => {
 		const lines = wrapText(payload.value);
 		return (
@@ -731,28 +725,38 @@ const BarChart: React.FC<BarChartProps> = ({
 							</>
 						)}
 						{chart_type.includes("filter_keys") && activeFilter && (
-							<Bar
-								key={activeFilter}
-								dataKey={activeFilter}
-								stackId="1"
-								// fill={getFillForBranchenFilterKeysCharts()}
-								cursor={has_tooltip ? "pointer" : "default"}
-							>
-								{data.map((entry: any, index: number) => (
-									<Cell
-										key={`cell-${index}`}
-										fill={getFillForBranchenFilterKeysCharts(entry)}
-									/>
-								))}
-								{isMobile && (
-									<LabelList
-										dataKey="name"
-										position="top"
-										content={<RenderMobileFilterKeysValueLabel />}
-									/>
+							<>
+								{chart_type.includes("branchen") ? (
+									<Bar
+										key={`${activeFilter}-${data.length}-${JSON.stringify(data.map((d: any) => d.id))}`}
+										dataKey={activeFilter}
+										stackId="1"
+										cursor={has_tooltip ? "pointer" : "default"}
+									>
+										{collectData.map((entry: any) => (
+											<Cell key={entry.id} fill={entry.color} />
+										))}
+										<LabelList content={<RenderValueLabel />} />
+									</Bar>
+								) : (
+									<Bar
+										key={activeFilter}
+										dataKey={activeFilter}
+										stackId="1"
+										fill={colors.blue}
+										cursor={has_tooltip ? "pointer" : "default"}
+									>
+										{isMobile && (
+											<LabelList
+												dataKey="name"
+												position="top"
+												content={<RenderMobileFilterKeysValueLabel />}
+											/>
+										)}
+										<LabelList content={<RenderValueLabel />} />
+									</Bar>
 								)}
-								<LabelList content={<RenderValueLabel />} />
-							</Bar>
+							</>
 						)}
 						{/* XAxis */}
 						<XAxis
@@ -777,7 +781,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				</ResponsiveContainer>
 			</div>
 			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-16 gap-2" : "items-center mt-12 gap-8 justify-end"}`}
+				className={`flex ${isMobile ? "flex-col items-end mt-12 gap-2" : "items-center mt-12 gap-8 justify-end"}`}
 				ref={optionsRef}
 			>
 				{hasRegionToggle && (

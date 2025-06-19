@@ -344,8 +344,8 @@ footer {
 	}
 	#indicator {
 		position: absolute;
-		height: calc($toggle-height + 4px);
-		top: -2px;
+		height: calc($toggle-height + 2px);
+		top: -1px;
 		z-index: 1;
 		transition: $all-transition;
 	}

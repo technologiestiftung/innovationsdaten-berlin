@@ -19,7 +19,7 @@ const Mobile: React.FC<MobileProps> = ({ dataKey }) => {
 		<section id={dataKey}>
 			{dataKey === "einleitung" && (
 				<>
-					<Welcome />
+					<Welcome mobile />
 					<div className="w-full h-[10vh]" />
 				</>
 			)}
