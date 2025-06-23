@@ -937,155 +937,155 @@
 				"ber": [
 					{
 						"id": "nahrung",
-						"product_innovation_share": 19,
-						"process_innovation_share": 55
+						"process_innovation_share": 55,
+						"product_innovation_share": 19
 					},
 					{
 						"id": "pharma",
-						"product_innovation_share": 74,
-						"process_innovation_share": 69
+						"process_innovation_share": 69,
+						"product_innovation_share": 74
 					},
 					{
 						"id": "holz",
-						"product_innovation_share": 18,
-						"process_innovation_share": 37
+						"process_innovation_share": 37,
+						"product_innovation_share": 18
 					},
 					{
 						"id": "metall",
-						"product_innovation_share": 13,
-						"process_innovation_share": 36
+						"process_innovation_share": 36,
+						"product_innovation_share": 13
 					},
 					{
 						"id": "elektroindustrie",
-						"product_innovation_share": 40,
-						"process_innovation_share": 62
+						"process_innovation_share": 62,
+						"product_innovation_share": 40
 					},
 					{
 						"id": "fahrzeugbau",
-						"product_innovation_share": 41,
-						"process_innovation_share": 54
+						"process_innovation_share": 54,
+						"product_innovation_share": 41
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"product_innovation_share": 21,
-						"process_innovation_share": 51
+						"process_innovation_share": 51,
+						"product_innovation_share": 21
 					},
 					{
 						"id": "energie",
-						"product_innovation_share": 3,
-						"process_innovation_share": 19
+						"process_innovation_share": 19,
+						"product_innovation_share": 3
 					},
 					{
 						"id": "telekommunikation",
-						"product_innovation_share": 33,
-						"process_innovation_share": 59
+						"process_innovation_share": 59,
+						"product_innovation_share": 33
 					},
 					{
 						"id": "software",
-						"product_innovation_share": 50,
-						"process_innovation_share": 65
+						"process_innovation_share": 65,
+						"product_innovation_share": 50
 					},
 					{
 						"id": "finanz",
-						"product_innovation_share": 20,
-						"process_innovation_share": 54
+						"process_innovation_share": 54,
+						"product_innovation_share": 20
 					},
 					{
 						"id": "unternehmensberatung",
-						"product_innovation_share": 33,
-						"process_innovation_share": 49
+						"process_innovation_share": 49,
+						"product_innovation_share": 33
 					},
 					{
 						"id": "architektur",
-						"product_innovation_share": 37,
-						"process_innovation_share": 51
+						"process_innovation_share": 51,
+						"product_innovation_share": 37
 					},
 					{
 						"id": "forschung",
-						"product_innovation_share": 52,
-						"process_innovation_share": 67
+						"process_innovation_share": 67,
+						"product_innovation_share": 52
 					},
 					{
 						"id": "kreativ",
-						"product_innovation_share": 22,
-						"process_innovation_share": 55
+						"process_innovation_share": 55,
+						"product_innovation_share": 22
 					}
 				],
 				"de": [
 					{
 						"id": "nahrung",
-						"product_innovation_share": 14,
-						"process_innovation_share": 33
+						"process_innovation_share": 33,
+						"product_innovation_share": 14
 					},
 					{
 						"id": "pharma",
-						"product_innovation_share": 32,
-						"process_innovation_share": 57
+						"process_innovation_share": 57,
+						"product_innovation_share": 32
 					},
 					{
 						"id": "holz",
-						"product_innovation_share": 14,
-						"process_innovation_share": 48
+						"process_innovation_share": 48,
+						"product_innovation_share": 14
 					},
 					{
 						"id": "metall",
-						"product_innovation_share": 18,
-						"process_innovation_share": 44
+						"process_innovation_share": 44,
+						"product_innovation_share": 18
 					},
 					{
 						"id": "elektroindustrie",
-						"product_innovation_share": 47,
-						"process_innovation_share": 56
+						"process_innovation_share": 56,
+						"product_innovation_share": 47
 					},
 					{
 						"id": "fahrzeugbau",
-						"product_innovation_share": 37,
-						"process_innovation_share": 54
+						"process_innovation_share": 54,
+						"product_innovation_share": 37
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"product_innovation_share": 37,
-						"process_innovation_share": 54
+						"process_innovation_share": 54,
+						"product_innovation_share": 37
 					},
 					{
 						"id": "energie",
-						"product_innovation_share": 13,
-						"process_innovation_share": 40
+						"process_innovation_share": 40,
+						"product_innovation_share": 13
 					},
 					{
 						"id": "telekommunikation",
-						"product_innovation_share": 32,
-						"process_innovation_share": 50
+						"process_innovation_share": 50,
+						"product_innovation_share": 32
 					},
 					{
 						"id": "software",
-						"product_innovation_share": 55,
-						"process_innovation_share": 70
+						"process_innovation_share": 70,
+						"product_innovation_share": 55
 					},
 					{
 						"id": "finanz",
-						"product_innovation_share": 31,
-						"process_innovation_share": 54
+						"process_innovation_share": 54,
+						"product_innovation_share": 31
 					},
 					{
 						"id": "unternehmensberatung",
-						"product_innovation_share": 31,
-						"process_innovation_share": 56
+						"process_innovation_share": 56,
+						"product_innovation_share": 31
 					},
 					{
 						"id": "architektur",
-						"product_innovation_share": 30,
-						"process_innovation_share": 50
+						"process_innovation_share": 50,
+						"product_innovation_share": 30
 					},
 					{
 						"id": "forschung",
-						"product_innovation_share": 36,
-						"process_innovation_share": 47
+						"process_innovation_share": 47,
+						"product_innovation_share": 36
 					},
 					{
 						"id": "kreativ",
-						"product_innovation_share": 35,
-						"process_innovation_share": 72
+						"process_innovation_share": 72,
+						"product_innovation_share": 35
 					}
 				]
 			}
