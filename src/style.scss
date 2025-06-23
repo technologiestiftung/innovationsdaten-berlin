@@ -313,10 +313,12 @@ footer {
 	li {
 		margin-bottom: calc($font-size * 1);
 		max-width: 80ch;
+		font-family: "Source Serif Pro", serif !important;
 	}
 	p {
 		margin-bottom: calc($font-size * 1.5) !important;
 		max-width: 80ch;
+		font-family: "Source Serif Pro", serif !important;
 	}
 	h3 {
 		margin-bottom: calc($font-size * 1.5) !important;
