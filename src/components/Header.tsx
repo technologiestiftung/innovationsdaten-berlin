@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
 					<Icon
 						id={isMobile ? "innodaten_logo" : "innodaten_logo_wording"}
-						size={fontSize * 2.5}
+						size={isMobile ? 30 : fontSize * 2.5}
 					/>
 				</div>
 				<div

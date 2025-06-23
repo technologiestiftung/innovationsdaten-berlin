@@ -17,6 +17,7 @@ interface GlobalStateType {
 	breakPoint: number;
 	isMobile: boolean;
 	headerHeight: number;
+	subtractFromMobileChartsHeight: number;
 	chapter: string;
 	setChapter: (chapter: string) => void;
 	axisFontStylings: {
@@ -40,6 +41,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
 	const [chapter, setChapter] = useState<string>("Einleitung");
+	const subtractFromMobileChartsHeight = 0.15;
 
 	const fontSize = 16;
 
@@ -53,10 +55,18 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 
 	const breakPoint = window.innerWidth * 0.8;
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
-	const checkIfViewPortIsMobile = () =>
-		setIsMobile(
-			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
-		);
+	const checkIfViewPortIsMobile = () => {
+		const ww = localStorage.getItem("ww");
+		if (ww) {
+			if (ww === window.innerWidth.toString()) {
+				console.warn("Viewport width has not changed.");
+				return;
+			}
+			setIsMobile(
+				window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
+			);
+		}
+	};
 
 	const widthOfStickyContainer = (window.innerWidth * 0.8 - 24) * (3 / 5);
 
@@ -88,6 +98,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	useEffect(() => {
 		detectAndSetTheme();
 		measureHeaderHeight();
+		localStorage.setItem("ww", window.innerWidth.toString());
 		window.addEventListener("resize", checkIfViewPortIsMobile);
 		return () => window.removeEventListener("resize", checkIfViewPortIsMobile);
 	}, []);
@@ -101,6 +112,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				breakPoint,
 				isMobile,
 				headerHeight,
+				subtractFromMobileChartsHeight,
 				chapter,
 				setChapter,
 				axisFontStylings,

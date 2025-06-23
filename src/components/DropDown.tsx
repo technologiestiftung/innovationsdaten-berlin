@@ -255,7 +255,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 														size={fontSize}
 													/>
 												</span>
-												<p className="bold select-none">{sektor.name}</p>
+												<p className="bold select-none first-letter:capitalize">
+													{sektor.name}
+												</p>
 											</li>
 										))}
 										<hr />
@@ -311,7 +313,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 											/>
 										</span>
 										{wordings[item as keyof typeof wordings] && (
-											<p className="bold select-none line-clamp-1 break-words">
+											<p className="bold select-none line-clamp-1 break-words first-letter:capitalize">
 												{wordings[item as keyof typeof wordings]}
 											</p>
 										)}

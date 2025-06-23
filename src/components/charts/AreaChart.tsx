@@ -48,6 +48,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
+		subtractFromMobileChartsHeight,
 	} = useGlobalContext();
 
 	const optionsRef = useRef<HTMLDivElement>(null);
@@ -233,7 +234,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						? window.innerHeight -
 							headerHeight -
 							heightOfOptions -
-							window.innerHeight * 0.075
+							window.innerHeight * subtractFromMobileChartsHeight
 						: window.innerHeight * 0.5
 				}
 			>

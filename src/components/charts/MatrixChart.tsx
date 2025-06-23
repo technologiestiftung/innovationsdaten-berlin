@@ -230,7 +230,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	return (
 		<>
 			{isMobile && (
-				<div className="flex w-full justify-end pb-4 mt-[-10vh]">
+				<div className="flex w-full justify-end pb-4 mt-[-20vh]">
 					<div
 						className="rotate-90"
 						style={{ width: cellSize * numberOfColumns }}

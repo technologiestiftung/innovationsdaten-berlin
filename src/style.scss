@@ -419,6 +419,13 @@ footer {
 .move-recharts-label .recharts-label-list {
 	transform: translateY(1px);
 }
+.move-recharts-label {
+	@media screen and (max-width: $mobile) {
+		.recharts-label-list:last-of-type > text {
+			transform: translateY(3px);
+		}
+	}
+}
 
 .recharts-wrapper {
 	user-select: none;

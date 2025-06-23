@@ -62,6 +62,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
+		subtractFromMobileChartsHeight,
 	} = useGlobalContext();
 
 	// Exclude keys from data
@@ -417,7 +418,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				window.innerHeight -
 				headerHeight -
 				heightOfOptions -
-				window.innerHeight * 0.075
+				window.innerHeight * subtractFromMobileChartsHeight
 			);
 		}
 
@@ -632,7 +633,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		<>
 			<div
 				ref={chartRef}
-				className="move-x-axis-tick-to-bottom hide-first-x-axis-tick move-recharts-label"
+				className="hide-first-x-axis-tick move-recharts-label"
 			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
 					<RechartsBarChart
