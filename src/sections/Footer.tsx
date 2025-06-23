@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Icon from "../components/Icons";
 import methodic from "../data/methodic.json";
-import colors from "../data/colors.json";
 
 const Footer: React.FC = () => {
 	const { theme, fontSize, isMobile } = useGlobalContext();
