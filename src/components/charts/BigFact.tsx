@@ -14,14 +14,14 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 		}
 		if (window.innerWidth <= smallerDesktop) {
 			if (facts?.length === 1) {
-				return "200px";
+				return "180px";
 			}
-			return "100px";
+			return "80px";
 		}
 		if (facts?.length === 1) {
-			return "300px";
+			return "280px";
 		}
-		return "180px";
+		return "160px";
 	};
 
 	return (
