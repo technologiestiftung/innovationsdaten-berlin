@@ -142,6 +142,11 @@ const Dropdown: React.FC<DropdownProps> = ({
 		return;
 	};
 
+	const capitalizeFirst = (str: string) => {
+		if (!str) return "";
+		return str.charAt(0).toUpperCase() + str.slice(1);
+	};
+
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
@@ -285,10 +290,12 @@ const Dropdown: React.FC<DropdownProps> = ({
 													/>
 												</span>
 												<p className="line-clamp-1 break-words select-none first-letter:capitalize">
-													{wordings[filter as keyof typeof wordings] ||
-														branchen.find((branche) => branche.id === filter)
-															?.name ||
-														filter}
+													{capitalizeFirst(
+														wordings[filter as keyof typeof wordings] ||
+															branchen.find((branche) => branche.id === filter)
+																?.name ||
+															filter,
+													)}
 												</p>
 											</li>
 										),
@@ -316,7 +323,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 										</span>
 										{wordings[item as keyof typeof wordings] && (
 											<p className="bold select-none line-clamp-1 break-words first-letter:capitalize">
-												{wordings[item as keyof typeof wordings]}
+												{capitalizeFirst(
+													wordings[item as keyof typeof wordings],
+												)}
 											</p>
 										)}
 									</li>
