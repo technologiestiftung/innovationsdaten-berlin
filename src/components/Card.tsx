@@ -126,7 +126,7 @@ const Card: React.FC<CardProps> = ({
 			<h2 dangerouslySetInnerHTML={{ __html: title }} />
 			{text && (
 				<p
-					className={`mt-4 max-w-[80ch] max-h-[30vh] overflow-y-scroll serif custom-scroll ${theme}`}
+					className={`mt-4 max-w-[80ch] ${isMobile ? "" : "max-h-[30vh] overflow-y-scroll custom-scroll"} serif ${theme}`}
 					ref={cardTextRef}
 					dangerouslySetInnerHTML={{ __html: text }}
 				/>
