@@ -143,7 +143,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 	};
 
 	const capitalizeFirst = (str: string) => {
-		if (!str) return "";
+		if (!str) {
+			return "";
+		}
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	};
 
