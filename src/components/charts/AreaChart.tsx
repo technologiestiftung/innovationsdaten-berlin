@@ -49,6 +49,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		isMobile,
 		headerHeight,
 		subtractFromMobileChartsHeight,
+		smallerDesktop,
 	} = useGlobalContext();
 
 	const optionsRef = useRef<HTMLDivElement>(null);
@@ -218,6 +219,16 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		);
 	};
 
+	const setOptionsClasses = () => {
+		if (isMobile) {
+			return "flex-col items-end mt-2 gap-2";
+		}
+		if (window.innerWidth <= smallerDesktop) {
+			return "flex-col items-end mt-6 gap-2";
+		}
+		return "items-center mt-8 gap-8 justify-end";
+	};
+
 	useEffect(() => {
 		if (optionsRef.current) {
 			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
@@ -325,10 +336,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
-			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-2 gap-2" : "items-center mt-8 gap-8 justify-end"}`}
-				ref={optionsRef}
-			>
+			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
 				{id !== "berlin_is_ahead" && (
 					<DataToggle
 						data={region}
