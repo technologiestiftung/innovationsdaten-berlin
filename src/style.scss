@@ -32,6 +32,7 @@ $light-grey: #d9d9d9;
 $stroke-width: 2px;
 $all-transition: all 0.3s ease-in-out;
 $mobile: 1024px;
+$smallerDesktop: 1440px;
 $breakpoint: 80vw;
 $toggle-height: 40px;
 
@@ -72,9 +73,6 @@ html {
 			color: $blue;
 		}
 	}
-	section {
-		max-width: 100vw;
-	}
 	main {
 		@media screen and (min-width: $mobile) {
 			max-width: $breakpoint !important;
@@ -106,6 +104,10 @@ h1:not(.ignore) {
 		font-size: 40px !important;
 		line-height: 51px !important;
 	}
+	@media screen and (min-width: $mobile) and (max-width: $smallerDesktop) {
+		font-size: 60px !important;
+		line-height: 77px !important;
+	}
 }
 h2:not(.ignore) {
 	font-size: 48px !important;
@@ -113,6 +115,10 @@ h2:not(.ignore) {
 	@media screen and (max-width: $mobile) {
 		font-size: 32px !important;
 		line-height: 41px !important;
+	}
+	@media screen and (min-width: $mobile) and (max-width: $smallerDesktop) {
+		font-size: 40px !important;
+		line-height: 51px !important;
 	}
 }
 h3 {
@@ -122,6 +128,10 @@ h3 {
 		font-size: 24px !important;
 		line-height: 30px !important;
 	}
+	@media screen and (min-width: $mobile) and (max-width: $smallerDesktop) {
+		font-size: 28px !important;
+		line-height: 36px !important;
+	}
 }
 h4 {
 	font-size: 24px !important;
@@ -130,6 +140,10 @@ h4 {
 		font-size: 20px !important;
 		line-height: 25px !important;
 	}
+	@media screen and (min-width: $mobile) and (max-width: $smallerDesktop) {
+		font-size: 22px !important;
+		line-height: 28px !important;
+	}
 }
 h5 {
 	font-size: 20px !important;
@@ -137,6 +151,10 @@ h5 {
 	@media screen and (max-width: $mobile) {
 		font-size: 18px !important;
 		line-height: 20px !important;
+	}
+	@media screen and (min-width: $mobile) and (max-width: $smallerDesktop) {
+		font-size: 19px !important;
+		line-height: 23px !important;
 	}
 }
 
@@ -576,5 +594,32 @@ footer {
 		transform: rotate(60deg);
 		transform-origin: center right;
 		bottom: 0;
+	}
+}
+
+.custom-scroll {
+	scrollbar-width: thin;
+	&.dark {
+		scrollbar-color: $white $light-grey;
+		&::-webkit-scrollbar-track {
+			background: $light-grey;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $white;
+			border-radius: 4px;
+		}
+	}
+	&.light {
+		scrollbar-color: $blue $dark-grey;
+		&::-webkit-scrollbar-track {
+			background: $dark-grey;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $blue;
+			border-radius: 4px;
+		}
+	}
+	&::-webkit-scrollbar {
+		width: 8px;
 	}
 }

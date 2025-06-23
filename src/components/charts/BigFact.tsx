@@ -6,11 +6,17 @@ interface BigFactProps {
 }
 
 const BigFact: React.FC<BigFactProps> = ({ facts }) => {
-	const { isMobile } = useGlobalContext();
+	const { isMobile, smallerDesktop } = useGlobalContext();
 
 	const setFontSize = () => {
 		if (isMobile) {
 			return "10rem";
+		}
+		if (window.innerWidth <= smallerDesktop) {
+			if (facts?.length === 1) {
+				return "200px";
+			}
+			return "100px";
 		}
 		if (facts?.length === 1) {
 			return "300px";
@@ -28,7 +34,7 @@ const BigFact: React.FC<BigFactProps> = ({ facts }) => {
 					>
 						{item.fact}
 					</h2>
-					<h3 className="text-center mb-8">{item.unit}</h3>
+					<h4 className="text-center mb-8">{item.unit}</h4>
 				</div>
 			))}
 		</div>

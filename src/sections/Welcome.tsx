@@ -35,10 +35,10 @@ const Welcome: React.FC<WelcomeProps> = ({ mobile }) => {
 	return (
 		<section
 			id="welcome"
-			className={`flex w-full gap-20 justify-center`}
+			className={`flex w-full gap-8 justify-center`}
 			style={{ paddingTop }}
 		>
-			<div className="flex flex-col justify-between max-h-[90vh]">
+			<div className="flex flex-col gap-6 max-h-[90vh]">
 				<h1 dangerouslySetInnerHTML={{ __html: wordings.welcome_title }} />
 				<Overview />
 			</div>

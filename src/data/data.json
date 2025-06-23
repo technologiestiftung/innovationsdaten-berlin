@@ -1398,7 +1398,7 @@
 		},
 		{
 			"id": "what_drives_environment_innovation",
-			"title": "Was treibt Umweltinnovationen?",
+			"title": "Was treibt Umwelt&shy;innovationen?",
 			"displayNumber": "4.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
@@ -1541,7 +1541,7 @@
 		},
 		{
 			"id": "berlin_is_ahead",
-			"title": "Berlin ist in Innovationsintensität vorne geblieben.",
+			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
 			"displayNumber": "5.2",
 			"chart_type": "area_chart",
 			"max_value": 8,
@@ -3892,7 +3892,7 @@
 		},
 		{
 			"id": "protective_measures_intellectual_property",
-			"title": "Schutzmaßnahmen für geistigen Eigentum",
+			"title": "Schutz&shy;maßnahmen für geistigen Eigentum",
 			"displayNumber": "5.5",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",

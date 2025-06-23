@@ -53,11 +53,13 @@ function getMinMax(data: MatrixData): { min: number; max: number } {
 	return { min, max };
 }
 
-const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
-	const { fontSize, theme, region, setRegion, isMobile } = useGlobalContext();
+const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
+	const { fontSize, theme, region, setRegion, isMobile, smallerDesktop } =
+		useGlobalContext();
 	const [maxValue, setMaxValue] = useState(0);
 	const [minValue, setMinValue] = useState(0);
 	const [cellSize, setCellSize] = useState(0);
+	const gridRef = useRef<HTMLDivElement>(null);
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
 	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
 	const numberOfColumns = xLabels.length;
@@ -114,18 +116,6 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 			return () => {
 				window.removeEventListener("scroll", () => setIsOpen(false));
 			};
-		}, []);
-		useEffect(() => {
-			if (
-				selfRef.current &&
-				!selfRef.current.classList.contains("label-y") &&
-				!selfRef.current.classList.contains("label-x")
-			) {
-				const matrixCellSize = selfRef.current.getBoundingClientRect().height;
-				if (matrixCellSize !== cellSize) {
-					setCellSize(matrixCellSize);
-				}
-			}
 		}, []);
 		return (
 			<div
@@ -216,6 +206,16 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	};
 
 	useEffect(() => {
+		const firstValueCell = gridRef.current?.querySelector(".value-cell");
+		if (firstValueCell) {
+			const heightOfFirstValueCell =
+				firstValueCell.getBoundingClientRect().height;
+			if (heightOfFirstValueCell) {
+				setCellSize(heightOfFirstValueCell);
+			}
+		}
+	}, [id, data]);
+	useEffect(() => {
 		if (data) {
 			const { min, max } = getMinMax(data);
 			setMinValue(min);
@@ -251,6 +251,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 			)}
 			<div
 				className={`matrix-grid ${theme} relative`}
+				ref={gridRef}
 				style={{
 					display: "grid",
 					gridTemplateAreas: templateAreas,
@@ -310,13 +311,16 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 					/>
 				))}
 
-				<div
-					className={`matrix-border absolute right-0 bottom-0 ${theme}`}
-					style={{
-						width: cellSize * numberOfColumns,
-						height: cellSize * numberOfRows,
-					}}
-				/>
+				{/* Matrix Border */}
+				{window.innerWidth > smallerDesktop && (
+					<div
+						className={`matrix-border absolute right-0 bottom-0 ${theme}`}
+						style={{
+							width: cellSize * numberOfColumns,
+							height: cellSize * numberOfRows,
+						}}
+					/>
+				)}
 			</div>
 			<div className="mt-8 flex gap-8 items-center justify-end">
 				<DataToggle

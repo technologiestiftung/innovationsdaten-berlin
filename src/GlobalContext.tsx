@@ -30,6 +30,8 @@ interface GlobalStateType {
 	region: Region;
 	setRegion: (region: Region) => void;
 	widthOfStickyContainer: number;
+	widthOfCardContainer: number;
+	smallerDesktop: number;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -42,6 +44,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
 	const [chapter, setChapter] = useState<string>("Einleitung");
 	const subtractFromMobileChartsHeight = 0.15;
+	const smallerDesktop = 1440;
 
 	const fontSize = 16;
 
@@ -59,7 +62,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		const ww = localStorage.getItem("ww");
 		if (ww) {
 			if (ww === window.innerWidth.toString()) {
-				console.warn("Viewport width has not changed.");
 				return;
 			}
 			setIsMobile(
@@ -68,7 +70,14 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		}
 	};
 
-	const widthOfStickyContainer = (window.innerWidth * 0.8 - 24) * (3 / 5);
+	const widthOfStickyContainer =
+		window.innerWidth > smallerDesktop
+			? (window.innerWidth * 0.8 - 24) * (3 / 5)
+			: (window.innerWidth * 0.8 - 24) * 0.5;
+	const widthOfCardContainer =
+		window.innerWidth > smallerDesktop
+			? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
+			: (window.innerWidth * 0.8 - 24) * 0.5;
 
 	// Toggle theme function
 	const toggleTheme = () => {
@@ -119,6 +128,8 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				region,
 				setRegion,
 				widthOfStickyContainer,
+				widthOfCardContainer,
+				smallerDesktop,
 			}}
 		>
 			{children}

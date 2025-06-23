@@ -63,6 +63,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		isMobile,
 		headerHeight,
 		subtractFromMobileChartsHeight,
+		smallerDesktop,
 	} = useGlobalContext();
 
 	// Exclude keys from data
@@ -440,6 +441,16 @@ const BarChart: React.FC<BarChartProps> = ({
 		return "10%";
 	};
 
+	const setOptionsClasses = () => {
+		if (isMobile) {
+			return "flex-col items-end mt-12 gap-2";
+		}
+		if (window.innerWidth <= smallerDesktop) {
+			return "flex-col items-end mt-6 gap-2";
+		}
+		return "items-center mt-12 gap-8 justify-end";
+	};
+
 	const CustomTooltip = ({ active, payload }: any) => {
 		if (!active || !payload || !payload.length) {
 			return null;
@@ -781,10 +792,7 @@ const BarChart: React.FC<BarChartProps> = ({
 					</RechartsBarChart>
 				</ResponsiveContainer>
 			</div>
-			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-12 gap-2" : "items-center mt-12 gap-8 justify-end"}`}
-				ref={optionsRef}
-			>
+			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
 				{hasRegionToggle && (
 					<DataToggle
 						data={region}

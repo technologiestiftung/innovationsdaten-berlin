@@ -11,7 +11,8 @@ type DesktopProps = {
 };
 
 const Desktop: React.FC<DesktopProps> = ({ dataKey }) => {
-	const { headerHeight } = useGlobalContext();
+	const { headerHeight, widthOfCardContainer, widthOfStickyContainer } =
+		useGlobalContext();
 	const typedData = data as Record<ChapterKeys, StickyItem[]>;
 	const dataArray = typedData[dataKey];
 	const [current, setCurrent] = useState<StickyItem | null>(null);
@@ -30,17 +31,23 @@ const Desktop: React.FC<DesktopProps> = ({ dataKey }) => {
 				style={{ paddingTop: headerHeight }}
 			>
 				<div
-					className="sticky flex items-center basis-3/5 flex-shrink-0"
+					className="sticky flex items-center"
 					style={{
 						height: window.innerHeight - headerHeight,
 						top: headerHeight,
+						width: widthOfStickyContainer,
 					}}
 				>
 					<div className="w-full">
 						<Graph data={current as StickyItem} />
 					</div>
 				</div>
-				<div className="basis-2/5">
+				<div
+					className="overflow-hidden"
+					style={{
+						width: widthOfCardContainer,
+					}}
+				>
 					{dataArray.map((item: StickyItem, index: number) => (
 						<Card
 							key={item.id}
