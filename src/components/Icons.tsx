@@ -18,6 +18,7 @@ import {
 	Pill,
 	RadioTowerIcon,
 	ShoppingBasket,
+	X,
 	Zap,
 } from "lucide-react";
 
@@ -76,6 +77,9 @@ const Icon: React.FC<IconProps> = ({ id, size = 24, setColor }) => {
 	}
 	if (id === "software") {
 		return <CodeXml size={size} color={setColor || color} />;
+	}
+	if (id === "close") {
+		return <X size={size} color={setColor || color} />;
 	}
 	if (id === "filter") {
 		return (

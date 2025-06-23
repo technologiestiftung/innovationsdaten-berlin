@@ -67,39 +67,25 @@ const Footer: React.FC = () => {
 					</div>
 				</div>
 			</footer>
-			{/* Modal */}
 			{isModalOpen && (
 				<div
-					onClick={() => setIsModalOpen(false)}
-					className={`fixed w-screen h-screen inset-0 bg-opacity-75 flex justify-center items-center bg-black z-50 ${theme}`}
+					className={`methodik p-6 overflow-scroll fixed w-screen h-screen z-50 top-0 left-0 ${theme} ${isMobile ? "" : "flex flex-col items-center"}`}
 				>
 					<div
-						style={{
-							background: theme === "dark" ? colors.dark : colors.white,
-							color: theme === "dark" ? colors.white : colors.dark,
-						}}
-						className="bg-white  overflow-auto p-12 flex flex-col items-center overflow-auto h-screen"
+						onClick={() => setIsModalOpen(false)}
+						className="fixed top-[5vh] right-[5vw] left-auto p-5 cursor-pointer"
 					>
-						<h2 className="text-xl font-bold mb-4 ">Methodik</h2>
-						{methodic.methodic_text &&
-							Object.entries(methodic.methodic_text).map(
-								([sectionKey, html]) => (
-									<div
-										key={sectionKey}
-										className=" prose-lg mb-8"
-										dangerouslySetInnerHTML={{ __html: html }}
-									/>
-								),
-							)}
-						<div className="flex justify-end mt-4">
-							<button
-								onClick={() => setIsModalOpen(false)}
-								className="px-4 py-2 cursor-pointer"
-							>
-								<h4>Schließen</h4>
-							</button>
-						</div>
+						<Icon id="close" size={fontSize * 2} />
 					</div>
+					<h2 className="mb-4 ">Methodik</h2>
+					{methodic.methodic_text &&
+						Object.entries(methodic.methodic_text).map(([sectionKey, html]) => (
+							<div
+								key={sectionKey}
+								className={`mb-8 ${theme}`}
+								dangerouslySetInnerHTML={{ __html: html }}
+							/>
+						))}
 				</div>
 			)}
 		</>

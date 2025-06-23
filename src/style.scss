@@ -297,6 +297,35 @@ footer {
 		text-decoration: underline;
 	}
 }
+.methodik {
+	&.dark {
+		background: $dark;
+		li {
+			color: $white !important;
+		}
+	}
+	&.light {
+		background: $white;
+		li {
+			color: $blue;
+		}
+	}
+	li {
+		margin-bottom: calc($font-size * 1);
+		max-width: 80ch;
+	}
+	p {
+		margin-bottom: calc($font-size * 1.5) !important;
+		max-width: 80ch;
+	}
+	h3 {
+		margin-bottom: calc($font-size * 1.5) !important;
+		margin-top: calc($font-size * 2.5) !important;
+	}
+	a {
+		color: $green !important;
+	}
+}
 
 .drop-down {
 	&.dark {
@@ -422,7 +451,7 @@ footer {
 .move-recharts-label {
 	@media screen and (max-width: $mobile) {
 		.recharts-label-list:last-of-type > text {
-			transform: translateY(3px);
+			transform: translateY(1px);
 		}
 	}
 }
