@@ -255,8 +255,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 														size={fontSize}
 													/>
 												</span>
-												<p className="bold select-none first-letter:capitalize">
-													{sektor.name}
+												<p className="bold select-none">
+													{sektor.id === "industrie"
+														? "Industrie"
+														: "Dienstleistungen"}
 												</p>
 											</li>
 										))}
