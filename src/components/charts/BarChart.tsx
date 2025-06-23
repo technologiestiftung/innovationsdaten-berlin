@@ -158,11 +158,11 @@ const BarChart: React.FC<BarChartProps> = ({
 							...getData,
 						};
 					}
-					const getIngesamt = sumNumericValues(getData);
+					const getInsgesamt = sumNumericValues(getData);
 					return {
 						...branche,
 						...getData,
-						insgesamt: getIngesamt,
+						insgesamt: getInsgesamt,
 					};
 				}
 				// delta & normal
