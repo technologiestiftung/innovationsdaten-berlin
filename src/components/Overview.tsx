@@ -6,7 +6,6 @@ const Overview: React.FC = () => {
 	const { theme, isMobile } = useGlobalContext();
 	return (
 		<>
-			{/* <h2 className="mb-4">Übersicht</h2> */}
 			<div
 				id="overview"
 				className={`grid gap-2 max-w-[900px] ${isMobile ? "" : "grid-cols-2"}`}

@@ -45,6 +45,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [chapter, setChapter] = useState<string>("Einleitung");
 	const subtractFromMobileChartsHeight = 0.15;
 	const smallerDesktop = 1440;
+	const maxWidthOfCardContainer = 640;
 
 	const fontSize = 16;
 
@@ -70,14 +71,21 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		}
 	};
 
-	const widthOfStickyContainer =
-		window.innerWidth > smallerDesktop
-			? (window.innerWidth * 0.8 - 24) * (3 / 5)
-			: (window.innerWidth * 0.8 - 24) * 0.5;
-	const widthOfCardContainer =
+	let widthOfCardContainer =
 		window.innerWidth > smallerDesktop
 			? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
 			: (window.innerWidth * 0.8 - 24) * 0.5;
+
+	let widthOfStickyContainer =
+		window.innerWidth > smallerDesktop
+			? (window.innerWidth * 0.8 - 24) * (3 / 5)
+			: (window.innerWidth * 0.8 - 24) * 0.5;
+
+	if (widthOfCardContainer > maxWidthOfCardContainer) {
+		widthOfCardContainer = maxWidthOfCardContainer;
+		widthOfStickyContainer =
+			window.innerWidth * 0.8 - 24 - widthOfCardContainer;
+	}
 
 	// Toggle theme function
 	const toggleTheme = () => {

@@ -5,7 +5,6 @@ import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
 import {
 	Apple,
-	ArrowDown,
 	BrickWall,
 	Brush,
 	CarFront,
@@ -81,9 +80,6 @@ const Icon: React.FC<IconProps> = ({ id, size = 24, setColor }) => {
 	}
 	if (id === "close") {
 		return <X size={size} color={setColor || color} />;
-	}
-	if (id === "scroll_text") {
-		return <ArrowDown size={size} color={setColor || color} />;
 	}
 	if (id === "filter") {
 		return (

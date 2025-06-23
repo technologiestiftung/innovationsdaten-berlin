@@ -45,6 +45,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 		.map((branche) => branche.id);
 
 	const setName = () => {
+		if (sortBy === "innovations_intensitaet") {
+			return wordings.innovations_intensitaet_overall;
+		}
 		if (type === "filter" && activeFilter === "industrie") {
 			return "Industrie";
 		} else if (type === "filter" && activeFilter === "dienstleistungen") {
@@ -326,7 +329,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 										{wordings[item as keyof typeof wordings] && (
 											<p className="bold select-none line-clamp-1 break-words first-letter:capitalize">
 												{capitalizeFirst(
-													wordings[item as keyof typeof wordings],
+													item === "innovations_intensitaet"
+														? wordings.innovations_intensitaet_overall
+														: wordings[item as keyof typeof wordings],
 												)}
 											</p>
 										)}

@@ -100,7 +100,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 	const RenderCustomLegend = (props: any) => {
 		const { payload } = props;
-
 		return (
 			<ul
 				style={{
@@ -442,13 +441,14 @@ const BarChart: React.FC<BarChartProps> = ({
 	};
 
 	const setOptionsClasses = () => {
+		const setMarginTop = chart_type.includes("stacked") ? "mt-4" : "mt-12";
 		if (isMobile) {
-			return "flex-col items-end mt-12 gap-2";
+			return `flex-col items-end ${setMarginTop} gap-2`;
 		}
 		if (window.innerWidth <= smallerDesktop) {
 			return "flex-col items-end mt-6 gap-2";
 		}
-		return "items-center mt-12 gap-8 justify-end";
+		return `items-center ${setMarginTop} gap-8 justify-end`;
 	};
 
 	const CustomTooltip = ({ active, payload }: any) => {
@@ -477,6 +477,15 @@ const BarChart: React.FC<BarChartProps> = ({
 					<>
 						{objectKeys
 							.filter((objectKey) => !excludeKeyFromToolTip.includes(objectKey))
+							.sort((a, b) => {
+								if (a === "fue_intensitaet") {
+									return -1;
+								}
+								if (b === "fue_intensitaet") {
+									return 1;
+								}
+								return 0;
+							})
 							.map((key: string) => (
 								<div className="flex justify-between gap-6" key={key}>
 									{wordings[key as keyof typeof wordings] && (
@@ -558,7 +567,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		return lines;
 	};
 
-	const CustomLinHeightYAxisTick = ({ x, y, payload }: any) => {
+	const CustomLineHeightYAxisTick = ({ x, y, payload }: any) => {
 		const lines = wrapText(payload.value);
 		return (
 			<text
@@ -662,7 +671,7 @@ const BarChart: React.FC<BarChartProps> = ({
 								isMobile && dataIsBasedOnBranchen ? (
 									<CustomMobileTick />
 								) : (
-									<CustomLinHeightYAxisTick />
+									<CustomLineHeightYAxisTick />
 								)
 							}
 						/>

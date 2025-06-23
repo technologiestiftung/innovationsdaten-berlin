@@ -596,30 +596,3 @@ footer {
 		bottom: 0;
 	}
 }
-
-.custom-scroll {
-	scrollbar-width: thin;
-	&.dark {
-		scrollbar-color: $white $light-grey;
-		&::-webkit-scrollbar-track {
-			background: $light-grey;
-		}
-		&::-webkit-scrollbar-thumb {
-			background-color: $white;
-			border-radius: 4px;
-		}
-	}
-	&.light {
-		scrollbar-color: $blue $dark-grey;
-		&::-webkit-scrollbar-track {
-			background: $dark-grey;
-		}
-		&::-webkit-scrollbar-thumb {
-			background-color: $blue;
-			border-radius: 4px;
-		}
-	}
-	&::-webkit-scrollbar {
-		width: 8px;
-	}
-}

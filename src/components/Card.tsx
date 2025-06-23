@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { isInRange } from "../utilities";
 import { useGlobalContext } from "../GlobalContext";
-import Icon from "./Icons";
 
 type CardProps = {
 	dataKey: string;
@@ -29,8 +28,7 @@ const Card: React.FC<CardProps> = ({
 	const cardTextRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
-	const [isOverflowing, setIsOverflowing] = useState(false);
-	const hide = true;
+	const hide = false;
 
 	const getMarginTop = () => {
 		if (isMobile) {
@@ -43,6 +41,13 @@ const Card: React.FC<CardProps> = ({
 			return specificMargin;
 		}
 		return window.innerHeight - headerHeight;
+	};
+	const checkMarginTop = () => {
+		const getMarginTopFromFuntion = getMarginTop();
+		if (getMarginTopFromFuntion < 0) {
+			return 0;
+		}
+		return getMarginTopFromFuntion;
 	};
 	const getMarginBottom = () => {
 		if (cardHeight) {
@@ -70,13 +75,6 @@ const Card: React.FC<CardProps> = ({
 		}
 	};
 
-	useEffect(() => {
-		const p = cardTextRef.current;
-		if (p) {
-			const hasOverflow = p.scrollHeight > p.clientHeight;
-			setIsOverflowing(hasOverflow);
-		}
-	}, []);
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => {
@@ -113,9 +111,9 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card w-full ${theme} ${isMobile ? "" : "p-6"}`}
+			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
 			style={{
-				marginTop: getMarginTop(),
+				marginTop: checkMarginTop(),
 				marginBottom: getMarginBottom(),
 			}}
 		>
@@ -126,18 +124,10 @@ const Card: React.FC<CardProps> = ({
 			<h2 dangerouslySetInnerHTML={{ __html: title }} />
 			{text && (
 				<p
-					className={`mt-4 max-w-[80ch] ${isMobile ? "" : "max-h-[30vh] overflow-y-scroll custom-scroll"} serif ${theme}`}
+					className={`mt-4 max-w-[80ch] serif ${theme}`}
 					ref={cardTextRef}
 					dangerouslySetInnerHTML={{ __html: text }}
 				/>
-			)}
-			{isOverflowing && (
-				<>
-					<div className="w-full h-4" />
-					<div className="w-full flex justify-end">
-						<Icon id="scroll_text" />
-					</div>
-				</>
 			)}
 		</div>
 	);
