@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme, headerHeight, isMobile } = useGlobalContext();
+	const { theme, headerHeight, isMobile, smallerDesktop } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
 	const cardTextRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
@@ -121,7 +121,11 @@ const Card: React.FC<CardProps> = ({
 				window.location.toString().includes("localhost") &&
 				displayNumber &&
 				!hide && <h4>{displayNumber}</h4>}
-			<h2 dangerouslySetInnerHTML={{ __html: title }} />
+			{window.innerWidth <= smallerDesktop ? (
+				<h3 dangerouslySetInnerHTML={{ __html: title }} />
+			) : (
+				<h2 dangerouslySetInnerHTML={{ __html: title }} />
+			)}
 			{text && (
 				<p
 					className={`mt-4 max-w-[80ch] serif ${theme}`}

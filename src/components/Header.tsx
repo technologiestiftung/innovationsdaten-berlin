@@ -15,6 +15,7 @@ const Header: React.FC = () => {
 		isMobile,
 	} = useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(false);
 	const toggleIconSize = fontSize * 1.5;
 	return (
 		<>
@@ -43,7 +44,7 @@ const Header: React.FC = () => {
 							onClick={() => setOpen(!open)}
 							onMouseEnter={() => setOpen(true)}
 						>
-							<h5 className="text-right">{globalChapter}</h5>
+							{!loading && <h5 className="text-right">{globalChapter}</h5>}
 							<div
 								className={
 									open
@@ -73,8 +74,12 @@ const Header: React.FC = () => {
 							<a
 								href={`#${chapter.link}`}
 								onClick={() => {
-									setChapter(chapter.title);
+									setLoading(true);
 									setOpen(false);
+									setTimeout(() => {
+										setChapter(chapter.title);
+										setLoading(false);
+									}, 1000);
 								}}
 							>
 								<h4

@@ -189,7 +189,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 	return (
 		<div
 			ref={dropdownRef}
-			className={`relative inline-block drop-down ${theme}`}
+			className={`relative inline-block drop-down w-full ${theme}`}
 		>
 			<div
 				className="flex items-center"
@@ -201,7 +201,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
-					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer"
+					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer w-full"
 				>
 					<p className="bold select-none text-left first-letter:capitalize transform translate-y-[1px]">
 						{setName()}

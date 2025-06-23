@@ -28,25 +28,7 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 					<div className="basis-1/2">
-						<a
-							href="https://www.technologiestiftung-berlin.de/datenschutz"
-							target="_blank"
-						>
-							<h4>Datenschutzerklärung</h4>
-						</a>
-						<a
-							href="https://www.technologiestiftung-berlin.de/impressum"
-							target="_blank"
-						>
-							<h4>Impressum</h4>
-						</a>
-						<button
-							className="cursor-pointer"
-							onClick={() => setIsModalOpen(true)}
-						>
-							<h4>Methodik</h4>
-						</button>
-						<p className="mt-10">
+						<p>
 							Die Technologiestiftung Berlin führt seit 2013 mit Unterstützung
 							des Zentrums für Europäische Wirtschaftsforschung (ZEW) die
 							Innovationserhebung Berlin durch.
@@ -63,6 +45,26 @@ const Footer: React.FC = () => {
 							ausgewertet und jährlich als Report und Datensatz publiziert. Hier
 							zeigen wir Ergebnisse im Zeitverlauf von bisher 10 Jahren.
 						</p>
+						<div className="mt-10 flex justify-between max-w-[500px]">
+							<a
+								href="https://www.technologiestiftung-berlin.de/datenschutz"
+								target="_blank"
+							>
+								<p className="underline bold">Datenschutzerklärung</p>
+							</a>
+							<a
+								href="https://www.technologiestiftung-berlin.de/impressum"
+								target="_blank"
+							>
+								<p className="underline bold">Impressum</p>
+							</a>
+							<button
+								className="cursor-pointer"
+								onClick={() => setIsModalOpen(true)}
+							>
+								<p className="underline bold">Methodik</p>
+							</button>
+						</div>
 					</div>
 				</div>
 			</footer>
