@@ -38,7 +38,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	children,
 }) => {
 	const [theme, setTheme] = useState<Theme>("light");
-	const [region, setRegion] = useState<Region>("ber");
+	const [region, setRegion] = useState<Region>("de");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
 	const subtractFromMobileChartsHeight = 0.15;
 	const smallerDesktop = 1440;
