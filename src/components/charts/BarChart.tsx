@@ -335,7 +335,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				fontFamily={fontFamily}
 				fontSize={fontSizeMobileValue}
 				textAnchor="start"
-				transform={`translate(0, ${getTransformY(value) * -14})`}
+				transform={`translate(-5, ${getTransformY(value) * -14})`}
 			>
 				{lines.map((line, i) => (
 					<tspan key={i} x={safeX} dy={i === 0 ? 0 : "1.2em"}>
@@ -548,7 +548,7 @@ const BarChart: React.FC<BarChartProps> = ({
 		const context = canvas.getContext("2d");
 		const fontSizeMobileValue = 14;
 		const fontFamily = "Clan Pro";
-		const maxWidth = window.innerWidth - 24;
+		const maxWidth = window.innerWidth - 48;
 		if (!context) {
 			return [text];
 		}
