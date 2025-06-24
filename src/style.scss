@@ -182,7 +182,7 @@ li {
 
 header {
 	border-bottom: $stroke-width solid $white;
-	padding: calc($font-size * 1) calc($font-size * 1.5);
+	padding: calc($font-size * 1) 12px;
 	@media screen and (min-width: $mobile) {
 		padding: calc($font-size * 1.5) calc((100vw - $breakpoint) / 2);
 	}

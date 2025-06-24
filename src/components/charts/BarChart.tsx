@@ -98,6 +98,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
+
 	const RenderCustomLegend = (props: any) => {
 		const { payload } = props;
 		return (
@@ -265,10 +266,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				return isSmall && theme === "light" ? colors.blue : colors.white;
 			}
 			if (!isSmall) {
-				if (theme === "dark") {
-					return colors.white;
-				}
-				return colors.blue;
+				return colors.white;
 			}
 			if (theme === "dark") {
 				return colors.white;
@@ -314,48 +312,30 @@ const BarChart: React.FC<BarChartProps> = ({
 			</text>
 		);
 	};
-	const RenderMobileFilterKeysValueLabel = ({ x, y, value }: any) => {
+
+	const RenderMobileFilterKeysValueLabelTesting = ({ x, y, value }: any) => {
 		const safeY = typeof y === "number" ? y - 7.5 : 0;
 		const safeX = typeof x === "number" ? x + 5 : 0;
-		const maxWidth = window.innerWidth * 0.8;
 		const fontSizeMobileValue = 14;
 		const fontFamily = "Clan Pro";
 
-		const getTruncatedText = (textString: string, maxWidthText: number) => {
-			let makeTextString = textString;
-			const canvas = document.createElement("canvas");
-			const context = canvas.getContext("2d");
-			if (!context) {
-				return makeTextString;
-			}
-			context.font = `${fontSizeMobileValue}px "${fontFamily}", sans-serif`;
-
-			const widthText = context.measureText(makeTextString).width;
-			if (widthText <= maxWidthText) {
-				return makeTextString;
-			}
-
-			while (
-				makeTextString.length > 0 &&
-				context.measureText(makeTextString + "...").width > maxWidth
-			) {
-				makeTextString = makeTextString.slice(0, -1);
-			}
-			return makeTextString + "...";
-		};
-		const truncated = getTruncatedText(value, maxWidth);
+		const lines = wrapText(value);
 
 		return (
 			<text
 				x={safeX}
 				y={safeY}
 				fill={theme === "dark" ? colors.white : colors.blue}
-				fontWeight="bold"
 				fontFamily={fontFamily}
 				fontSize={fontSizeMobileValue}
 				textAnchor="start"
+				transform={`translate(0, ${getTransformY(value) * -14})`}
 			>
-				{truncated}
+				{lines.map((line, i) => (
+					<tspan key={i} x={safeX} dy={i === 0 ? 0 : "1.2em"}>
+						{line}
+					</tspan>
+				))}
 			</text>
 		);
 	};
@@ -438,7 +418,7 @@ const BarChart: React.FC<BarChartProps> = ({
 			chart_type.includes("filter_keys") &&
 			!chart_type.includes("branchen")
 		) {
-			return "25%";
+			return "30%";
 		}
 		return "10%";
 	};
@@ -541,18 +521,60 @@ const BarChart: React.FC<BarChartProps> = ({
 		);
 	};
 
-	const CustomMobileTick = ({ y, payload }: any) => {
+	const CustomMobileTick = (props: any) => {
+		const { y, payload } = props;
+
 		const findBrancheInTick = branchen.find(
 			(findBranche) => findBranche.name === payload.value,
 		);
+
 		return (
-			<g transform={`translate(${0}, ${y - 12})`}>
+			<g transform={`translate(${0}, ${y - 13})`}>
 				<Icon id={findBrancheInTick?.id} />
 			</g>
 		);
 	};
 
-	const wrapText = (text: string, maxCharsPerLine = 30) => {
+	const wrapText = (text: string): string[] => {
+		const words = text.split(" ");
+		const canvas = document.createElement("canvas");
+		const context = canvas.getContext("2d");
+		const fontSizeMobileValue = 14;
+		const fontFamily = "Clan Pro";
+		const maxWidth = window.innerWidth - 24;
+		if (!context) {
+			return [text];
+		}
+
+		context.font = `${fontSizeMobileValue}px "${fontFamily}", sans-serif`;
+		const lines: string[] = [];
+		let currentLine = "";
+
+		for (const word of words) {
+			const testLine = currentLine ? currentLine + " " + word : word;
+			const { width } = context.measureText(testLine);
+			if (width > maxWidth && currentLine !== "") {
+				lines.push(currentLine);
+				currentLine = word;
+			} else {
+				currentLine = testLine;
+			}
+		}
+		if (currentLine) {
+			lines.push(currentLine);
+		}
+		return lines;
+	};
+
+	const getTransformY = (name: string) => {
+		const lines = wrapText(name);
+		return lines.length - 1;
+	};
+
+	const wrapTextForCustomLineHeightYAxisTick = (
+		text: string,
+		maxCharsPerLine = 30,
+	) => {
 		const words = text.split(" ");
 		const lines = [];
 		let currentLine = "";
@@ -570,12 +592,17 @@ const BarChart: React.FC<BarChartProps> = ({
 		return lines;
 	};
 
-	const CustomLineHeightYAxisTick = ({ x, y, payload }: any) => {
-		const lines = wrapText(payload.value);
+	const CustomLineHeightYAxisTick = (props: any) => {
+		const { x, y, payload } = props;
+		const lines = wrapTextForCustomLineHeightYAxisTick(payload.value);
+		const lineHeight = 14;
+		const offsetY =
+			y - ((lines.length - 1) * lineHeight) / 2 + lineHeight * 0.25;
+
 		return (
 			<text
 				x={x}
-				y={y}
+				y={offsetY}
 				textAnchor="end"
 				style={{
 					fontFamily: "Clan Pro",
@@ -585,7 +612,7 @@ const BarChart: React.FC<BarChartProps> = ({
 				}}
 			>
 				{lines.map((line, index) => (
-					<tspan key={index} x={x} dy={index === 0 ? 0 : "1.2em"}>
+					<tspan key={index} x={x} dy={index === 0 ? 0 : lineHeight}>
 						{line}
 					</tspan>
 				))}
@@ -773,8 +800,7 @@ const BarChart: React.FC<BarChartProps> = ({
 										{isMobile && (
 											<LabelList
 												dataKey="name"
-												position="top"
-												content={<RenderMobileFilterKeysValueLabel />}
+												content={<RenderMobileFilterKeysValueLabelTesting />}
 											/>
 										)}
 										<LabelList content={<RenderValueLabel />} />
