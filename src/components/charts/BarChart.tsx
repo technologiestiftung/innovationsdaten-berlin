@@ -403,6 +403,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	const getHeight = () => {
 		if (isMobile) {
+			return window.innerHeight;
 			return (
 				window.innerHeight -
 				headerHeight -

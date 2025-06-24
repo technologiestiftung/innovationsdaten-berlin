@@ -238,16 +238,17 @@ const AreaChart: React.FC<AreaChartProps> = ({
 
 	return (
 		<>
-			<ResponsiveContainer
-				width="100%"
-				height={
+			{/* height={
 					isMobile
 						? window.innerHeight -
 							headerHeight -
 							heightOfOptions -
 							window.innerHeight * subtractFromMobileChartsHeight
 						: window.innerHeight * 0.5
-				}
+				} */}
+			<ResponsiveContainer
+				width="100%"
+				height={isMobile ? window.innerHeight : window.innerHeight * 0.5}
 			>
 				<AreaChartRecharts data={setData}>
 					<XAxis
