@@ -18,8 +18,6 @@ interface GlobalStateType {
 	isMobile: boolean;
 	headerHeight: number;
 	subtractFromMobileChartsHeight: number;
-	chapter: string;
-	setChapter: (chapter: string) => void;
 	axisFontStylings: {
 		style: {
 			fontFamily: string;
@@ -42,7 +40,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [theme, setTheme] = useState<Theme>("light");
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
-	const [chapter, setChapter] = useState<string>("Einleitung");
 	const subtractFromMobileChartsHeight = 0.15;
 	const smallerDesktop = 1440;
 	const maxWidthOfCardContainer = 640;
@@ -130,8 +127,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				isMobile,
 				headerHeight,
 				subtractFromMobileChartsHeight,
-				chapter,
-				setChapter,
 				axisFontStylings,
 				region,
 				setRegion,

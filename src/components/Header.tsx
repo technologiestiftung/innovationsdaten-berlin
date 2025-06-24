@@ -2,20 +2,14 @@ import React, { useState } from "react";
 import Icon from "./Icons";
 import chapters from "../data/chapters.json";
 import { useGlobalContext } from "../GlobalContext";
+import Menu from "./Menu";
 
 const Header: React.FC = () => {
-	const {
-		fontSize,
-		theme,
-		toggleTheme,
-		chapter: globalChapter,
-		setChapter,
-		headerHeight,
-		breakPoint,
-		isMobile,
-	} = useGlobalContext();
+	const { fontSize, theme, toggleTheme, headerHeight, breakPoint, isMobile } =
+		useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(false);
+	const [chapter, setChapter] = useState<string>("Einleitung");
 	const toggleIconSize = fontSize * 1.5;
 	return (
 		<>
@@ -44,7 +38,7 @@ const Header: React.FC = () => {
 							onClick={() => setOpen(!open)}
 							onMouseEnter={() => setOpen(true)}
 						>
-							{!loading && <h5 className="text-right">{globalChapter}</h5>}
+							{!loading && <h5 className="text-right">{chapter}</h5>}
 							<div
 								className={
 									open
@@ -69,29 +63,30 @@ const Header: React.FC = () => {
 					}}
 					onMouseLeave={() => setOpen(false)}
 				>
-					{chapters.map((chapter) => (
-						<li key={chapter.link} className="my-4">
+					{chapters.map((singleChapter) => (
+						<li key={singleChapter.link} className="my-4">
 							<a
-								href={`#${chapter.link}`}
+								href={`#${singleChapter.link}`}
 								onClick={() => {
 									setLoading(true);
 									setOpen(false);
 									setTimeout(() => {
-										setChapter(chapter.title);
+										setChapter(singleChapter.title);
 										setLoading(false);
 									}, 1000);
 								}}
 							>
 								<h4
-									className={`select-none ${globalChapter === chapter.title ? "underline" : ""}`}
+									className={`select-none ${chapter === singleChapter.title ? "underline" : ""}`}
 								>
-									{chapter.title}
+									{singleChapter.title}
 								</h4>
 							</a>
 						</li>
 					))}
 				</ul>
 			)}
+			<Menu chapter={chapter} setChapter={setChapter} />
 		</>
 	);
 };

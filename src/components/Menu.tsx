@@ -6,9 +6,13 @@ interface NavProps {
 	link: string;
 	title: string;
 }
+interface MenuProps {
+	chapter: string;
+	setChapter: (chapter: string) => void;
+}
 
-const Menu: React.FC = () => {
-	const { theme, chapter, setChapter, isMobile } = useGlobalContext();
+const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
+	const { theme, isMobile } = useGlobalContext();
 
 	const NavStep: React.FC<NavProps> = ({ link, title }) => {
 		const [isOpen, setIsOpen] = useState(false);

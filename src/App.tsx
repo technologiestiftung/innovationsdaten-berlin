@@ -2,7 +2,6 @@ import "./style.scss";
 import "./index.css";
 import { useGlobalContext } from "./GlobalContext";
 import Header from "./components/Header";
-import Menu from "./components/Menu";
 import data from "./data/data.json";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
@@ -15,7 +14,6 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Menu />
 			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
 				{Object.keys(data).map((dataKey) => (
 					<div key={dataKey}>
