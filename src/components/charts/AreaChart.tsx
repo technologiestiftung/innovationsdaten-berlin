@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { /* useEffect,  */ useRef, useState } from "react";
 import {
 	XAxis,
 	Tooltip,
@@ -47,8 +47,8 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		setRegion,
 		widthOfStickyContainer,
 		isMobile,
-		headerHeight,
-		subtractFromMobileChartsHeight,
+		// headerHeight,
+		// subtractFromMobileChartsHeight,
 		smallerDesktop,
 	} = useGlobalContext();
 
@@ -57,7 +57,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	const [activeFilters, setActiveFilters] = useState<string[] | null>(
 		allFilters,
 	);
-	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
+	// const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
@@ -229,12 +229,12 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		return "items-center mt-8 gap-8 justify-end";
 	};
 
-	useEffect(() => {
+	/* useEffect(() => {
 		if (optionsRef.current) {
 			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
 			setHeightOfOptions(optionsHeight);
 		}
-	}, [optionsRef.current]);
+	}, [optionsRef.current]); */
 
 	return (
 		<>
