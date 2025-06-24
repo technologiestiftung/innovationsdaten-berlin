@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
 	return (
 		<>
-			<footer className={theme}>
+			<footer className={`${theme} max-w-screen overflow-hidden`}>
 				<div
 					className={`py-20 flex ${isMobile ? "flex-col px-3 gap-20" : "flex-row"}`}
 				>

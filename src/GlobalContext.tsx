@@ -56,6 +56,33 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 
 	const breakPoint = window.innerWidth * 0.8;
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
+	const [widthOfCardContainer, setWidthOfCardContainer] = useState<number>(0);
+	const [widthOfStickyContainer, setWidthOfStickyContainer] =
+		useState<number>(0);
+	const allResizeActions = () => {
+		checkIfViewPortIsMobile();
+		setContainerWidths();
+		measureHeaderHeight();
+	};
+	const setContainerWidths = () => {
+		let makeWidthOfCardContainer =
+			window.innerWidth > smallerDesktop
+				? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
+				: (window.innerWidth * 0.8 - 24) * 0.5;
+
+		let makeWidthOfStickyContainer =
+			window.innerWidth > smallerDesktop
+				? (window.innerWidth * 0.8 - 24) * (3 / 5)
+				: (window.innerWidth * 0.8 - 24) * 0.5;
+
+		if (makeWidthOfCardContainer > maxWidthOfCardContainer) {
+			makeWidthOfCardContainer = maxWidthOfCardContainer;
+			makeWidthOfStickyContainer =
+				window.innerWidth * 0.8 - 24 - makeWidthOfCardContainer;
+		}
+		setWidthOfCardContainer(makeWidthOfCardContainer);
+		setWidthOfStickyContainer(makeWidthOfStickyContainer);
+	};
 	const checkIfViewPortIsMobile = () => {
 		const ww = localStorage.getItem("ww");
 		if (ww) {
@@ -67,22 +94,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 			);
 		}
 	};
-
-	let widthOfCardContainer =
-		window.innerWidth > smallerDesktop
-			? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
-			: (window.innerWidth * 0.8 - 24) * 0.5;
-
-	let widthOfStickyContainer =
-		window.innerWidth > smallerDesktop
-			? (window.innerWidth * 0.8 - 24) * (3 / 5)
-			: (window.innerWidth * 0.8 - 24) * 0.5;
-
-	if (widthOfCardContainer > maxWidthOfCardContainer) {
-		widthOfCardContainer = maxWidthOfCardContainer;
-		widthOfStickyContainer =
-			window.innerWidth * 0.8 - 24 - widthOfCardContainer;
-	}
 
 	// Toggle theme function
 	const toggleTheme = () => {
@@ -111,10 +122,10 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 
 	useEffect(() => {
 		detectAndSetTheme();
-		measureHeaderHeight();
+		allResizeActions();
 		localStorage.setItem("ww", window.innerWidth.toString());
-		window.addEventListener("resize", checkIfViewPortIsMobile);
-		return () => window.removeEventListener("resize", checkIfViewPortIsMobile);
+		window.addEventListener("resize", () => allResizeActions());
+		return () => window.removeEventListener("resize", allResizeActions);
 	}, []);
 
 	return (
