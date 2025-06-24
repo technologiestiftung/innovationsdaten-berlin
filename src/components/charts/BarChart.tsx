@@ -266,12 +266,6 @@ const BarChart: React.FC<BarChartProps> = ({
 				return isSmall && theme === "light" ? colors.blue : colors.white;
 			}
 			if (!isSmall) {
-				if (chart_type.includes("delta")) {
-					if (theme === "dark") {
-						return colors.white;
-					}
-					return colors.blue;
-				}
 				return colors.white;
 			}
 			if (theme === "dark") {
