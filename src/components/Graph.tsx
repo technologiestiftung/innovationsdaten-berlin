@@ -59,7 +59,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 			{chart_type === "tree_map" && <TreeMap id={id} data={content} />}
 			{/* AREA CHART */}
 			{chart_type === "area_chart" && (
-				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-first-y-axis-tick">
+				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-entire-y-axis-ticks">
 					{toggleData ? (
 						<AreaChart
 							id={id}

@@ -14,9 +14,9 @@ const BranchenList: React.FC = () => {
 				style={{ backgroundColor: branche.color }}
 			>
 				<Icon id={branche.id} setColor={colors.white} size={fontSize * 1.5} />
-				<p className="line-clamp-1 break-words ignore white bold">
+				<span className="line-clamp-1 break-words ignore white bold">
 					{branche.name}
-				</p>
+				</span>
 			</div>
 		);
 	};

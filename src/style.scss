@@ -159,6 +159,7 @@ h5 {
 }
 
 p,
+span,
 li {
 	font-size: $font-size;
 	font-family: "Clan Pro", sans-serif;
@@ -458,12 +459,13 @@ footer {
 	transform: translateX(20px);
 }
 
-.move-first-y-axis-tick
+.move-entire-y-axis-ticks .recharts-yAxis {
+	transform: translateY(12px);
+}
+.move-entire-y-axis-ticks
 	.recharts-yAxis
-	.recharts-cartesian-axis-ticks
-	.recharts-cartesian-axis-tick:last-of-type
-	text {
-	transform: translateY(8px);
+	.recharts-cartesian-axis-tick:last-of-type {
+	transform: translateY(-6px);
 }
 
 .move-recharts-label .recharts-label-list {
