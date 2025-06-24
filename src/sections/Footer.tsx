@@ -17,13 +17,13 @@ const Footer: React.FC = () => {
 						<p className="mb-4">Gefördert von</p>
 						<Icon
 							id="SenWEB_logo"
-							size={isMobile ? fontSize * 3 : fontSize * 5}
+							size={isMobile ? fontSize * 3 : fontSize * 4}
 						/>
 						<p className="mb-4 mt-10">Ein Projekt der</p>
 						<div className={isMobile ? "" : "mb-10"}>
 							<Icon
 								id="tsb_logo"
-								size={isMobile ? fontSize * 3 : fontSize * 5}
+								size={isMobile ? fontSize * 3 : fontSize * 4}
 							/>
 						</div>
 					</div>
