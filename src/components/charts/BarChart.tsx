@@ -277,9 +277,19 @@ const BarChart: React.FC<BarChartProps> = ({
 			}
 			return colors.blue;
 		};
+		const getNegativeDeltaXShift = () => {
+			const max_value_delta = region === "ber" ? 1600 : 80000;
+			const widthOfBar = widthOfStickyContainer - yAxisWidth;
+			const widthOfBarDelta = (getValue / max_value_delta) * widthOfBar;
+			const widthOfDelta = (delta / getValue) * widthOfBarDelta;
+			return widthOfDelta;
+		};
 		const setX = () => {
 			if (chart_type.includes("delta") && !isSmall) {
 				return x - paddingLabel;
+			}
+			if (chart_type.includes("delta") && !positiveDelta && isSmall) {
+				return x + width + paddingLabel - getNegativeDeltaXShift();
 			}
 			if (isSmall) {
 				return x + width + paddingLabel;
@@ -295,16 +305,20 @@ const BarChart: React.FC<BarChartProps> = ({
 				fontWeight="bold"
 				fontFamily="Clan Pro"
 			>
-				{(chart_type.includes("delta") || chart_unit === "€") && (
+				{chart_type.includes("delta") && (
 					<>
 						{/* Value Display */}
 						<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
-						{chart_type.includes("delta") && (
-							<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
-								{positiveDelta ? "↑" : "↓"}
-								{formatNumber(delta)}
-							</tspan>
-						)}
+						<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
+							{positiveDelta ? "↑" : "↓"}
+							{formatNumber(delta)}
+						</tspan>
+					</>
+				)}
+				{chart_unit === "€" && !chart_type.includes("delta") && (
+					<>
+						{/* Value Display */}
+						<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
 					</>
 				)}
 				{chart_unit === "%" && (
@@ -364,18 +378,22 @@ const BarChart: React.FC<BarChartProps> = ({
 			<rect x={x} y={y} width={width} height={height} fill={payload?.color} />
 		);
 	};
-	const DeltaBar = (props: any) => {
+	const DeltaBarStroke = (props: any) => {
 		const { x, y, width, height, payload } = props;
-		const getColor = payload?.positiveDelta ? colors.green : colors.red;
+		const fill = payload?.positiveDelta
+			? "url(#green-stripes)"
+			: "url(#red-stripes)";
+
 		return (
 			<rect
 				x={x}
 				y={y}
 				width={width}
-				height={height}
-				fill={getColor}
-				stroke={getColor}
-				strokeWidth={2}
+				height={payload?.positiveDelta ? height : height - 2}
+				fill={fill}
+				transform={
+					payload?.positiveDelta ? undefined : `translate(-${width + 2}, 2)`
+				}
 			/>
 		);
 	};
@@ -683,6 +701,34 @@ const BarChart: React.FC<BarChartProps> = ({
 						data={collectData}
 						barCategoryGap={getBarCategoryGap()}
 					>
+						<defs>
+							<pattern
+								id="green-stripes"
+								patternUnits="userSpaceOnUse"
+								width="6"
+								height="6"
+							>
+								{/* <rect width="6" height="6" fill="none" /> */}
+								<path
+									d="M-2,2 L2,-2 M0,6 L6,0 M4,8 L8,4"
+									stroke={colors.green}
+									strokeWidth="1"
+								/>
+							</pattern>
+							<pattern
+								id="red-stripes"
+								patternUnits="userSpaceOnUse"
+								width="6"
+								height="6"
+							>
+								{/* <rect width="6" height="6" fill="none" /> */}
+								<path
+									d="M-2,2 L2,-2 M0,6 L6,0 M4,8 L8,4"
+									stroke={colors.red}
+									strokeWidth="1"
+								/>
+							</pattern>
+						</defs>
 						{/* YAxis */}
 						<YAxis
 							type="category"
@@ -730,7 +776,7 @@ const BarChart: React.FC<BarChartProps> = ({
 							</Bar>
 						)}
 						{chart_type.includes("delta") && (
-							<Bar dataKey="delta" stackId="a" shape={<DeltaBar />}>
+							<Bar dataKey="delta" stackId="a" shape={<DeltaBarStroke />}>
 								<LabelList
 									content={(props) => {
 										const { index } = props;
