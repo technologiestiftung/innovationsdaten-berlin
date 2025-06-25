@@ -150,7 +150,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 													}}
 												/>
 												<p
-													className="max-w-[100px] truncate"
+													className="max-w-[40vw] truncate"
 													style={{
 														color:
 															theme === "dark" ? colors.dark : colors.white,

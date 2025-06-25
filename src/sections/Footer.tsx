@@ -27,8 +27,10 @@ const Footer: React.FC = () => {
 							/>
 						</div>
 					</div>
-					<div className="basis-1/2">
-						<p className="serif">
+					<div
+						className={`basis-1/2 ${isMobile ? "" : "flex flex-col items-end"}`}
+					>
+						<p className="serif max-w-[80ch]">
 							Die Technologiestiftung Berlin führt seit 2013 mit Unterstützung
 							des Zentrums für Europäische Wirtschaftsforschung (ZEW) die
 							Innovationserhebung Berlin durch.
@@ -46,7 +48,7 @@ const Footer: React.FC = () => {
 							zeigen wir Ergebnisse im Zeitverlauf von bisher 10 Jahren.
 						</p>
 						<div
-							className={`mt-10 flex ${isMobile ? "flex-col" : "justify-between max-w-[500px]"}`}
+							className={`mt-10 flex ${isMobile ? "flex-col" : "gap-10 justify-between max-w-[500px]"}`}
 						>
 							<a
 								href="https://www.technologiestiftung-berlin.de/datenschutz"
