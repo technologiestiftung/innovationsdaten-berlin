@@ -40,7 +40,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [theme, setTheme] = useState<Theme>("light");
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
-	const subtractFromMobileChartsHeight = 0.1;
+	const subtractFromMobileChartsHeight = 0.15;
 	const smallerDesktop = 1440;
 	const maxWidthOfCardContainer = 640;
 
@@ -60,7 +60,13 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [widthOfStickyContainer, setWidthOfStickyContainer] =
 		useState<number>(0);
 	const allResizeActions = () => {
-		checkIfViewPortIsMobile();
+		const ww = localStorage.getItem("ww");
+		if (ww && ww === window.innerWidth.toString()) {
+			return;
+		}
+		setIsMobile(
+			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
+		);
 		setContainerWidths();
 		measureHeaderHeight();
 	};
@@ -82,17 +88,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		}
 		setWidthOfCardContainer(makeWidthOfCardContainer);
 		setWidthOfStickyContainer(makeWidthOfStickyContainer);
-	};
-	const checkIfViewPortIsMobile = () => {
-		const ww = localStorage.getItem("ww");
-		if (ww) {
-			if (ww === window.innerWidth.toString()) {
-				return;
-			}
-			setIsMobile(
-				window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
-			);
-		}
 	};
 
 	// Toggle theme function
