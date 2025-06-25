@@ -57,8 +57,8 @@ const BarChart: React.FC<BarChartProps> = ({
 		axisFontStylings,
 		theme,
 		fontSize,
-		region,
-		setRegion,
+		// region,
+		// setRegion,
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
@@ -92,6 +92,7 @@ const BarChart: React.FC<BarChartProps> = ({
 	const optionsRef = useRef<HTMLDivElement>(null);
 	const chartRef = useRef<HTMLDivElement>(null);
 	const [yAxisWidth, setYAxisWidth] = useState(widthOfStickyContainer * 0.4);
+	const [region, setRegion] = useState("ber");
 
 	// State
 	const [sortBy, setSortBy] = useState<string | null>(null);

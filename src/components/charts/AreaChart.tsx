@@ -43,8 +43,8 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		theme,
 		fontSize,
 		axisFontStylings,
-		region,
-		setRegion,
+		// region,
+		// setRegion,
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
@@ -58,6 +58,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		allFilters,
 	);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
+	const [region, setRegion] = useState("ber");
 
 	const setData = data as StickyItemData[];
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
