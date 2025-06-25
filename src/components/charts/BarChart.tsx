@@ -96,7 +96,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	const [sortBy, setSortBy] = useState<string | null>(null);
 	const [allFilters, setAllFilters] = useState<string[] | null>([]);
 	const [activeFilter, setActiveFilter] = useState<string | null>(null);
-	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const RenderCustomLegend = (props: any) => {
 		const { payload } = props;
@@ -654,13 +653,6 @@ const BarChart: React.FC<BarChartProps> = ({
 			}
 		}
 	}, [id]);
-
-	useEffect(() => {
-		if (optionsRef.current) {
-			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
-			setHeightOfOptions(optionsHeight);
-		}
-	}, [optionsRef.current]);
 
 	useEffect(() => {
 		setTimeout(() => {
