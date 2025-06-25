@@ -7,20 +7,9 @@ import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
 import Desktop from "./sections/Desktop";
 import Mobile from "./sections/Mobile";
-import { useEffect } from "react";
 
 function App() {
 	const { theme, isMobile } = useGlobalContext();
-
-	/* useEffect(() => {
-		setTimeout(() => setRegion("ber"), 300);
-	}, []); */
-
-	useEffect(() => {
-		setTimeout(() => {
-			window.dispatchEvent(new Event("resize"));
-		}, 500);
-	}, []);
 
 	return (
 		<>

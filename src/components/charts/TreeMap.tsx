@@ -165,8 +165,6 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 							? `1px ${colors.white} solid`
 							: `1px ${colors.blue} solid`,
 					position: "relative",
-					minHeight: getHeight(),
-					overflowAnchor: "none",
 				}}
 			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
