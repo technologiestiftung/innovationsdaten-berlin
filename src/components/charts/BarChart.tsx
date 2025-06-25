@@ -62,8 +62,6 @@ const BarChart: React.FC<BarChartProps> = ({
 		windowHeightAtStart,
 		widthOfStickyContainer,
 		isMobile,
-		headerHeight,
-		subtractFromMobileChartsHeight,
 		smallerDesktop,
 	} = useGlobalContext();
 
@@ -404,14 +402,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	const getHeight = () => {
 		if (isMobile) {
-			return 15 * 40;
-			return windowHeightAtStart;
-			return (
-				windowHeightAtStart -
-				headerHeight -
-				heightOfOptions -
-				windowHeightAtStart * subtractFromMobileChartsHeight
-			);
+			return 15 * 50;
 		}
 
 		if (Object.keys(collectData).length <= 4) {
