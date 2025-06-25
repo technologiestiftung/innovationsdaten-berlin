@@ -43,8 +43,9 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		theme,
 		fontSize,
 		axisFontStylings,
-		// region,
-		// setRegion,
+		region,
+		setRegion,
+		windowHeightAtStart,
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
@@ -58,7 +59,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		allFilters,
 	);
 	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
-	const [region, setRegion] = useState("ber");
 
 	const setData = data as StickyItemData[];
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
@@ -233,13 +233,13 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	const getHeight = () => {
 		if (isMobile) {
 			return (
-				window.innerHeight -
+				windowHeightAtStart -
 				headerHeight -
 				heightOfOptions -
-				window.innerHeight * subtractFromMobileChartsHeight
+				windowHeightAtStart * subtractFromMobileChartsHeight
 			);
 		}
-		return window.innerHeight * 0.5;
+		return windowHeightAtStart * 0.5;
 	};
 
 	useEffect(() => {

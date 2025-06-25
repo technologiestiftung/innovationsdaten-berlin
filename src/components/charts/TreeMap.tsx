@@ -21,6 +21,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 		theme,
 		fontSize,
 		isMobile,
+		windowHeightAtStart,
 		headerHeight,
 		subtractFromMobileChartsHeight,
 	} = useGlobalContext();
@@ -56,14 +57,13 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 
 	const getHeight = () => {
 		if (isMobile) {
-			// return window.innerHeight;
 			return (
-				window.innerHeight -
+				windowHeightAtStart -
 				headerHeight -
-				window.innerHeight * subtractFromMobileChartsHeight
+				windowHeightAtStart * subtractFromMobileChartsHeight
 			);
 		}
-		return window.innerHeight * 0.5;
+		return windowHeightAtStart * 0.5;
 	};
 
 	const CustomTreemapNode = (props: any) => {

@@ -30,6 +30,7 @@ interface GlobalStateType {
 	widthOfStickyContainer: number;
 	widthOfCardContainer: number;
 	smallerDesktop: number;
+	windowHeightAtStart: number;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -40,6 +41,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [theme, setTheme] = useState<Theme>("light");
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
+	const [windowHeightAtStart, setWindowHeightAtStart] = useState<number>(0);
 	const subtractFromMobileChartsHeight = 0.15;
 	const smallerDesktop = 1440;
 	const maxWidthOfCardContainer = 640;
@@ -63,6 +65,9 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		const ww = localStorage.getItem("ww");
 		if (ww && ww === window.innerWidth.toString()) {
 			return;
+		}
+		if (!windowHeightAtStart) {
+			setWindowHeightAtStart(window.innerHeight);
 		}
 		setIsMobile(
 			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
@@ -136,6 +141,7 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				axisFontStylings,
 				region,
 				setRegion,
+				windowHeightAtStart,
 				widthOfStickyContainer,
 				widthOfCardContainer,
 				smallerDesktop,

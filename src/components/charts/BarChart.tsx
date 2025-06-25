@@ -57,8 +57,9 @@ const BarChart: React.FC<BarChartProps> = ({
 		axisFontStylings,
 		theme,
 		fontSize,
-		// region,
-		// setRegion,
+		region,
+		setRegion,
+		windowHeightAtStart,
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
@@ -92,7 +93,6 @@ const BarChart: React.FC<BarChartProps> = ({
 	const optionsRef = useRef<HTMLDivElement>(null);
 	const chartRef = useRef<HTMLDivElement>(null);
 	const [yAxisWidth, setYAxisWidth] = useState(widthOfStickyContainer * 0.4);
-	const [region, setRegion] = useState("ber");
 
 	// State
 	const [sortBy, setSortBy] = useState<string | null>(null);
@@ -404,20 +404,20 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	const getHeight = () => {
 		if (isMobile) {
-			return window.innerHeight;
+			return windowHeightAtStart;
 			return (
-				window.innerHeight -
+				windowHeightAtStart -
 				headerHeight -
 				heightOfOptions -
-				window.innerHeight * subtractFromMobileChartsHeight
+				windowHeightAtStart * subtractFromMobileChartsHeight
 			);
 		}
 
 		if (Object.keys(collectData).length <= 4) {
-			return window.innerHeight * 0.4;
+			return windowHeightAtStart * 0.4;
 		}
 
-		return window.innerHeight * 0.6;
+		return windowHeightAtStart * 0.6;
 	};
 
 	const getBarCategoryGap = () => {
@@ -689,6 +689,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	return (
 		<>
+			<p>getBarCategoryGap: {getBarCategoryGap()}</p>
 			<div
 				ref={chartRef}
 				className="hide-first-x-axis-tick move-recharts-label"

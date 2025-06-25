@@ -54,12 +54,11 @@ function getMinMax(data: MatrixData): { min: number; max: number } {
 }
 
 const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
-	const { fontSize, theme, /* region, setRegion, */ isMobile, smallerDesktop } =
+	const { fontSize, theme, region, setRegion, isMobile, smallerDesktop } =
 		useGlobalContext();
 	const [maxValue, setMaxValue] = useState(0);
 	const [minValue, setMinValue] = useState(0);
 	const [cellSize, setCellSize] = useState(0);
-	const [region, setRegion] = useState("ber");
 	const gridRef = useRef<HTMLDivElement>(null);
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
 	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
