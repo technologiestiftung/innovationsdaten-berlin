@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
 	return (
 		<>
-			<footer className={`${theme} max-w-screen overflow-hidden`}>
+			<footer className={`${theme} w-full`}>
 				<div
 					className={`py-20 flex ${isMobile ? "flex-col px-3 gap-20" : "flex-row"}`}
 				>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
 			</footer>
 			{isModalOpen && (
 				<div
-					className={`methodik p-6 overflow-scroll fixed w-screen h-screen z-50 top-0 left-0 ${theme} ${isMobile ? "" : "flex flex-col items-center"}`}
+					className={`methodik p-6 overflow-scroll fixed w-full h-screen z-50 top-0 left-0 ${theme} ${isMobile ? "" : "flex flex-col items-center"}`}
 				>
 					<div
 						onClick={() => setIsModalOpen(false)}

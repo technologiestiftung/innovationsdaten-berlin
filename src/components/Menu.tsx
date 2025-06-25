@@ -72,7 +72,7 @@ const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
 					<div
 						className={`absolute right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap ${theme}`}
 					>
-						<span className="ignore bold">{title}</span>
+						<p className={`ignore bold ${theme}`}>{title}</p>
 					</div>
 				)}
 			</a>
