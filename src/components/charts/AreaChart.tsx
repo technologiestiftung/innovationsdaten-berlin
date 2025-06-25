@@ -246,97 +246,106 @@ const AreaChart: React.FC<AreaChartProps> = ({
 							window.innerHeight * subtractFromMobileChartsHeight
 						: window.innerHeight * 0.5
 				} */}
-			<ResponsiveContainer
-				width="100%"
-				height={isMobile ? window.innerHeight : window.innerHeight * 0.5}
+			<div
+				style={{
+					minHeight: isMobile ? window.innerHeight : window.innerHeight * 0.5,
+					overflowAnchor: "none",
+				}}
 			>
-				<AreaChartRecharts data={setData}>
-					<XAxis
-						dataKey="year"
-						stroke={theme === "dark" ? colors.white : colors.blue}
-						strokeWidth={2}
-						tick={axisFontStylings}
-						interval={0}
-					/>
-					<Tooltip content={<CustomTooltip />} />
-					{id === "sektoren" ? (
-						<>
-							{sektoren.map((sektor) => (
-								<Area
-									key={sektor.id}
-									type="linear"
-									dataKey={sektor.id}
-									stroke={theme === "dark" ? colors.white : colors.blue}
-									strokeWidth={3}
-									fill={sektor.color}
-									stackId="1"
-									fillOpacity={1}
-								/>
-							))}
-						</>
-					) : (
-						<>
-							{branchen
-								.filter((branche) =>
-									activeFilters
-										? activeFilters?.indexOf(branche.id) > -1
-										: false,
-								)
-								.map((branche) => (
+				<ResponsiveContainer
+					width="100%"
+					height={isMobile ? window.innerHeight : window.innerHeight * 0.5}
+				>
+					<AreaChartRecharts data={setData}>
+						<XAxis
+							dataKey="year"
+							stroke={theme === "dark" ? colors.white : colors.blue}
+							strokeWidth={2}
+							tick={axisFontStylings}
+							interval={0}
+						/>
+						<Tooltip content={<CustomTooltip />} />
+						{id === "sektoren" ? (
+							<>
+								{sektoren.map((sektor) => (
 									<Area
-										key={branche.id}
+										key={sektor.id}
 										type="linear"
-										dataKey={branche.id}
-										stroke={getStrokeOrFill(branche.id, null)}
+										dataKey={sektor.id}
+										stroke={theme === "dark" ? colors.white : colors.blue}
 										strokeWidth={3}
-										fill={getStrokeOrFill(branche.id, branche.color)}
+										fill={sektor.color}
 										stackId="1"
 										fillOpacity={1}
 									/>
 								))}
-						</>
-					)}
-					{id === "berlin_is_ahead" && (
-						<>
-							<Area
-								type="linear"
-								dataKey="ber"
-								fill="none"
-								stroke={colors.cyan_light}
-								strokeWidth={3}
-							/>
-							<Area
-								type="linear"
-								dataKey="de"
-								fill="none"
-								stroke={colors.green_light}
-								strokeWidth={3}
-							/>
-						</>
-					)}
-					<CartesianGrid
-						strokeDasharray="3 3"
-						vertical={false}
-						stroke={theme === "dark" ? colors.white : colors.blue}
-					/>
-					<YAxis
-						mirror
-						stroke="none"
-						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
-						domain={max_value ? [0, max_value] : ["auto", "auto"]}
-						tick={{
-							...axisFontStylings,
-							fill: theme === "dark" ? colors.white : colors.blue,
-						}}
-						// Value Display
-						tickFormatter={(label: string) => {
-							return id === "berlin_is_ahead"
-								? `${formatNumber(+label)}%`
-								: formatEuroNumber(+label);
-						}}
-					/>
-				</AreaChartRecharts>
-			</ResponsiveContainer>
+							</>
+						) : (
+							<>
+								{branchen
+									.filter((branche) =>
+										activeFilters
+											? activeFilters?.indexOf(branche.id) > -1
+											: false,
+									)
+									.map((branche) => (
+										<Area
+											key={branche.id}
+											type="linear"
+											dataKey={branche.id}
+											stroke={getStrokeOrFill(branche.id, null)}
+											strokeWidth={3}
+											fill={getStrokeOrFill(branche.id, branche.color)}
+											stackId="1"
+											fillOpacity={1}
+										/>
+									))}
+							</>
+						)}
+						{id === "berlin_is_ahead" && (
+							<>
+								<Area
+									type="linear"
+									dataKey="ber"
+									fill="none"
+									stroke={colors.cyan_light}
+									strokeWidth={3}
+								/>
+								<Area
+									type="linear"
+									dataKey="de"
+									fill="none"
+									stroke={colors.green_light}
+									strokeWidth={3}
+								/>
+							</>
+						)}
+						<CartesianGrid
+							strokeDasharray="3 3"
+							vertical={false}
+							stroke={theme === "dark" ? colors.white : colors.blue}
+						/>
+						<YAxis
+							mirror
+							stroke="none"
+							width={
+								isMobile ? window.innerWidth : widthOfStickyContainer * 0.3
+							}
+							domain={max_value ? [0, max_value] : ["auto", "auto"]}
+							tick={{
+								...axisFontStylings,
+								fill: theme === "dark" ? colors.white : colors.blue,
+							}}
+							// Value Display
+							tickFormatter={(label: string) => {
+								return id === "berlin_is_ahead"
+									? `${formatNumber(+label)}%`
+									: formatEuroNumber(+label);
+							}}
+						/>
+					</AreaChartRecharts>
+				</ResponsiveContainer>
+			</div>
 			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
 				{id !== "berlin_is_ahead" && (
 					<DataToggle

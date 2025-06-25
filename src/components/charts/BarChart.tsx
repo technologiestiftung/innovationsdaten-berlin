@@ -691,6 +691,10 @@ const BarChart: React.FC<BarChartProps> = ({
 			<div
 				ref={chartRef}
 				className="hide-first-x-axis-tick move-recharts-label"
+				style={{
+					minHeight: isMobile ? window.innerHeight : window.innerHeight * 0.5,
+					overflowAnchor: "none",
+				}}
 			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
 					<RechartsBarChart
