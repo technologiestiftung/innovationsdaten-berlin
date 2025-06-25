@@ -404,6 +404,7 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	const getHeight = () => {
 		if (isMobile) {
+			return 15 * 40;
 			return windowHeightAtStart;
 			return (
 				windowHeightAtStart -
@@ -426,7 +427,7 @@ const BarChart: React.FC<BarChartProps> = ({
 			chart_type.includes("filter_keys") &&
 			!chart_type.includes("branchen")
 		) {
-			return "30%";
+			return "25%";
 		}
 		return "10%";
 	};
@@ -689,7 +690,6 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	return (
 		<>
-			<p>getBarCategoryGap: {getBarCategoryGap()}</p>
 			<div
 				ref={chartRef}
 				className="hide-first-x-axis-tick move-recharts-label"
