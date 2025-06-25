@@ -56,7 +56,7 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 
 	const getHeight = () => {
 		if (isMobile) {
-			return window.innerHeight;
+			// return window.innerHeight;
 			return (
 				window.innerHeight -
 				headerHeight -
