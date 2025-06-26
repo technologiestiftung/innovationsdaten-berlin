@@ -177,7 +177,7 @@
 			"title": "Wo ist Innovation gewachsen?",
 			"displayNumber": "2.2",
 			"chart_type": "area_chart",
-			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerding höher als in Deutschland und wächst auch etwas schneller.",
+			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"data": {
 				"ber": [
 					{
@@ -714,9 +714,9 @@
 			"displayNumber": "2.7",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
+			"max_value": 40,
 			"has_tooltip": true,
 			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte „Barroso-Ziel“. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
-			"sortsAfter": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
 				"ber": [
 					{
@@ -3892,7 +3892,7 @@
 		},
 		{
 			"id": "protective_measures_intellectual_property",
-			"title": "Schutz&shy;maßnahmen für geistigen Eigentum",
+			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
 			"displayNumber": "5.5",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
@@ -4435,7 +4435,7 @@
 		},
 		{
 			"id": "applications_fue_funding",
-			"title": "Wer beantragt steuerlichen FuE-Förderung?",
+			"title": "Wer beantragt steuerliche FuE-Förderung?",
 			"displayNumber": "6.4",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
@@ -4490,7 +4490,7 @@
 			"facts": [
 				{
 					"fact": "40%",
-					"unit": "der Berliner Unternehmen benutzen frei zugänglichen Daten, aber nur "
+					"unit": "der Berliner Unternehmen benutzen frei zugängliche Daten, aber nur "
 				},
 				{
 					"fact": "11%",

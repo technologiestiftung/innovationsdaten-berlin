@@ -735,6 +735,7 @@ const BarChart: React.FC<BarChartProps> = ({
 							dataKey="name"
 							hide={isMobile && !dataIsBasedOnBranchen}
 							width={isMobile && dataIsBasedOnBranchen ? 30 : yAxisWidth}
+							interval={0}
 							tick={
 								isMobile && dataIsBasedOnBranchen ? (
 									<CustomMobileTick />
