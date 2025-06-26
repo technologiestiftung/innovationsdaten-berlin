@@ -1,54 +1,99 @@
-import React from "react";
-import Icon from "../components/Icons";
+import React, { useState } from "react";
 import { useGlobalContext } from "../GlobalContext";
+import Icon from "../components/Icons";
+import methodic from "../data/methodic.json";
 
 const Footer: React.FC = () => {
-	const { theme, fontSize } = useGlobalContext();
+	const { theme, fontSize, isMobile } = useGlobalContext();
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
 	return (
-		<footer className={theme}>
-			<div className="py-20 flex">
-				<div className="basis-1/2">
-					<h3 className="mb-4">Gefördert von:</h3>
-					<Icon id="SenWEB_logo" size={fontSize * 5} />
-					<h3 className="mb-4 mt-10">Ein Projekt der:</h3>
-					<div className="mb-10">
-						<Icon id="tsb_logo" size={fontSize * 5} />
+		<>
+			<footer className={`${theme} w-full`}>
+				<div
+					className={`py-20 flex ${isMobile ? "flex-col px-3 gap-20" : "flex-row"}`}
+				>
+					<div className="basis-1/2">
+						<p className="mb-4">Gefördert von</p>
+						<Icon
+							id="SenWEB_logo"
+							size={isMobile ? fontSize * 3 : fontSize * 4}
+						/>
+						<p className="mb-4 mt-10">Ein Projekt der</p>
+						<div className={isMobile ? "" : "mb-10"}>
+							<Icon
+								id="tsb_logo"
+								size={isMobile ? fontSize * 3 : fontSize * 4}
+							/>
+						</div>
+					</div>
+					<div
+						className={`basis-1/2 ${isMobile ? "" : "flex flex-col items-end"}`}
+					>
+						<p className="serif max-w-[80ch]">
+							Die Technologiestiftung Berlin führt seit 2013 mit Unterstützung
+							des Zentrums für Europäische Wirtschaftsforschung (ZEW) die
+							Innovationserhebung Berlin durch.
+							<br />
+							<br />
+							Die Innovationserhebung Berlin zeigt ein repräsentatives Bild der
+							Forschungs- und Innovationsaktivitäten der Berliner Wirtschaft
+							(„Industrieforschung“). Die Daten sind im bundesweiten Vergleich
+							nach Branchen und Größenklassen auswertbar, für Berlin auch nach
+							Technologieklassen.
+							<br />
+							<br />
+							Die vom ZEW ermittelten Daten werden von der Technologiestiftung
+							ausgewertet und jährlich als Report und Datensatz publiziert. Hier
+							zeigen wir Ergebnisse im Zeitverlauf von bisher 10 Jahren.
+						</p>
+						<div
+							className={`mt-10 flex ${isMobile ? "flex-col" : "gap-10 justify-between max-w-[500px]"}`}
+						>
+							<a
+								href="https://www.technologiestiftung-berlin.de/datenschutz"
+								target="_blank"
+							>
+								<p className="underline bold">Datenschutzerklärung</p>
+							</a>
+							<a
+								href="https://www.technologiestiftung-berlin.de/impressum"
+								target="_blank"
+							>
+								<p className="underline bold">Impressum</p>
+							</a>
+							<button
+								className="cursor-pointer"
+								onClick={() => setIsModalOpen(true)}
+							>
+								<p className="underline bold text-left">Methodik</p>
+							</button>
+						</div>
 					</div>
 				</div>
-				<div className="basis-1/2">
-					<a
-						href="https://www.technologiestiftung-berlin.de/datenschutz"
-						target="_blank"
+			</footer>
+			{isModalOpen && (
+				<div
+					className={`methodik p-6 overflow-scroll fixed w-full h-screen z-50 top-0 left-0 ${theme} ${isMobile ? "" : "flex flex-col items-center"}`}
+				>
+					<div
+						onClick={() => setIsModalOpen(false)}
+						className="fixed top-[5vh] right-[5vw] left-auto p-5 cursor-pointer"
 					>
-						<h4>Datenschutzerklärung</h4>
-					</a>
-					<a
-						href="https://www.technologiestiftung-berlin.de/impressum"
-						target="_blank"
-					>
-						<h4>Impressum</h4>
-					</a>
-					<p className="mt-10 bold">2025 Technologiestiftung Berlin</p>
-					<p className="mt-10">
-						Die Technologiestiftung Berlin führt seit 2013 mit Unterstützung des
-						Zentrums für Europäische Wirtschaftsforschung (ZEW) die
-						Innovationserhebung Berlin durch.
-						<br />
-						<br />
-						Die Innovationserhebung Berlin zeigt ein repräsentatives Bild der
-						Forschungs- und Innovationsaktivitäten der Berliner Wirtschaft
-						(„Industrieforschung“). Die Daten sind im bundesweiten Vergleich
-						nach Branchen und Größenklassen auswertbar, für Berlin auch nach
-						Technologieklassen.
-						<br />
-						<br />
-						Die vom ZEW ermittelten Daten werden von der Technologiestiftung
-						ausgewertet und jährlich als Report und Datensatz publiziert. Hier
-						zeigen wir Ergebnisse im Zeitverlauf von bisher 10 Jahren.
-					</p>
+						<Icon id="close" size={fontSize * 2} />
+					</div>
+					<h2 className="mb-4 ">Methodik</h2>
+					{methodic.methodic_text &&
+						Object.entries(methodic.methodic_text).map(([sectionKey, html]) => (
+							<div
+								key={sectionKey}
+								className={`mb-8 ${theme}`}
+								dangerouslySetInnerHTML={{ __html: html }}
+							/>
+						))}
 				</div>
-			</div>
-		</footer>
+			)}
+		</>
 	);
 };
 

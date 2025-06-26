@@ -2,36 +2,44 @@ import "./style.scss";
 import "./index.css";
 import { useGlobalContext } from "./GlobalContext";
 import Header from "./components/Header";
-import Menu from "./components/Menu";
 import data from "./data/data.json";
-import Sticky from "./sections/Sticky";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
-import Welcome from "./sections/Welcome";
+import Desktop from "./sections/Desktop";
+import Mobile from "./sections/Mobile";
+import { useEffect } from "react";
 
 function App() {
 	const { theme, isMobile } = useGlobalContext();
 
+	useEffect(() => {
+		const handleBeforeUnload = () => {
+			localStorage.clear();
+		};
+
+		window.addEventListener("beforeunload", handleBeforeUnload);
+
+		return () => {
+			window.removeEventListener("beforeunload", handleBeforeUnload);
+		};
+	}, []);
+
 	return (
 		<>
-			{isMobile ? (
-				<div className="w-full p-14">
-					<h2>No Mobile Version yet...</h2>
-				</div>
-			) : (
-				<>
-					<Header />
-					<Menu />
-					<main className={theme}>
-						<Welcome />
-						{Object.keys(data).map((dataKey) => (
-							<Sticky key={dataKey} dataKey={dataKey as ChapterKeys} />
-						))}
-						<div className="w-full min-h-[20vh]" />
-					</main>
-					<Footer />
-				</>
-			)}
+			<Header />
+			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
+				{Object.keys(data).map((dataKey) => (
+					<div key={dataKey}>
+						{isMobile ? (
+							<Mobile dataKey={dataKey as ChapterKeys} />
+						) : (
+							<Desktop dataKey={dataKey as ChapterKeys} />
+						)}
+					</div>
+				))}
+				<div className="w-full min-h-[20vh]" />
+			</main>
+			<Footer />
 		</>
 	);
 }

@@ -7,10 +7,10 @@ type CardProps = {
 	title: string;
 	displayNumber?: string;
 	text?: string;
-	onSetCurrent: () => void;
-	isNotCurrent: boolean;
-	last: boolean;
-	first: boolean;
+	onSetCurrent?: () => void;
+	isNotCurrent?: boolean;
+	last?: boolean;
+	first?: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -23,11 +23,17 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme, headerHeight } = useGlobalContext();
+	const { theme, headerHeight, isMobile, smallerDesktop } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
+	const cardTextRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
+	const hide = false;
+
 	const getMarginTop = () => {
+		if (isMobile) {
+			return 0;
+		}
 		if (cardHeight) {
 			return (window.innerHeight - cardHeight - headerHeight) / 2;
 		}
@@ -35,6 +41,13 @@ const Card: React.FC<CardProps> = ({
 			return specificMargin;
 		}
 		return window.innerHeight - headerHeight;
+	};
+	const checkMarginTop = () => {
+		const getMarginTopFromFuntion = getMarginTop();
+		if (getMarginTopFromFuntion < 0) {
+			return 0;
+		}
+		return getMarginTopFromFuntion;
 	};
 	const getMarginBottom = () => {
 		if (cardHeight) {
@@ -46,17 +59,22 @@ const Card: React.FC<CardProps> = ({
 		return 0;
 	};
 	const handleScroll = () => {
+		if (isMobile) {
+			return;
+		}
 		if (cardRef.current) {
 			const rect = cardRef.current.getBoundingClientRect();
 			if (
 				(isInRange(rect.top - window.innerHeight / 2) ||
 					isInRange(rect.bottom - window.innerHeight / 2)) &&
-				isNotCurrent
+				isNotCurrent &&
+				onSetCurrent
 			) {
 				onSetCurrent();
 			}
 		}
 	};
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => {
@@ -93,19 +111,28 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card p-6 ${theme}`}
+			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
 			style={{
-				marginTop: getMarginTop(),
+				marginTop: checkMarginTop(),
 				marginBottom: getMarginBottom(),
 			}}
 		>
 			{typeof window !== "undefined" &&
-				(window.location.href.includes("localhost") ||
-					window.location.href.includes("staging")) &&
-				displayNumber && <h4>{displayNumber}</h4>}
-			{/* @refactor: hypens & break-words for title */}
-			<h2 className="">{title}</h2>
-			<p className="mt-4">{text}</p>
+				window.location.toString().includes("localhost") &&
+				displayNumber &&
+				!hide && <h4>{displayNumber}</h4>}
+			{window.innerWidth <= smallerDesktop ? (
+				<h3 dangerouslySetInnerHTML={{ __html: title }} />
+			) : (
+				<h2 dangerouslySetInnerHTML={{ __html: title }} />
+			)}
+			{text && (
+				<p
+					className={`mt-4 max-w-[80ch] serif ${theme}`}
+					ref={cardTextRef}
+					dangerouslySetInnerHTML={{ __html: text }}
+				/>
+			)}
 		</div>
 	);
 };

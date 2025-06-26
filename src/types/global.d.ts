@@ -18,6 +18,7 @@ export type ChartTypes =
 	| "bar_chart_stacked"
 	| "bar_chart_full"
 	| "bar_chart_filter_keys"
+	| "bar_chart_filter_keys_branchen"
 	| "area_chart"
 	| "tree_map"
 	| "matrix";
@@ -55,7 +56,13 @@ type dataKeys =
 	| "rising_costs_for_energy_or_raw_materials"
 	| "requirements_in_public_procurement"
 	| "innovations_intensitaet"
-	| "fue_intensitaet";
+	| "fue_intensitaet"
+	| "product_innovation_share"
+	| "process_innovation_share"
+	| "umsatz_markt_neuheiten"
+	| "umsatz_nachahmer_innovationen"
+	| "umsatz_produkt_neuheiten"
+	| "insgesamt";
 
 export type StickyItemData =
 	| {
@@ -93,7 +100,7 @@ export type StickyItem = {
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
-	multiline_y_axis_label?: boolean;
+	max_value?: number;
 	text?: string;
 	facts?: { fact: string; unit: string }[];
 	bar_chart_unit_breakpoint?:
@@ -102,6 +109,7 @@ export type StickyItem = {
 				[key: Region]: number;
 		  };
 	sortsAfter?: dataKeys[];
+	sortsAfterOnStart?: string;
 	togglesBetween?: dataKeys[];
 	data?: StickyItemData;
 };

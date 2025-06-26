@@ -6,9 +6,13 @@ interface NavProps {
 	link: string;
 	title: string;
 }
+interface MenuProps {
+	chapter: string;
+	setChapter: (chapter: string) => void;
+}
 
-const Menu: React.FC = () => {
-	const { theme, chapter, setChapter } = useGlobalContext();
+const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
+	const { theme, isMobile } = useGlobalContext();
 
 	const NavStep: React.FC<NavProps> = ({ link, title }) => {
 		const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +33,7 @@ const Menu: React.FC = () => {
 
 		const handleScroll = () => {
 			const element = document.getElementById(link);
-			if (window.pageYOffset < window.innerHeight) {
-				setChapter("Willkommen");
-			} else if (element) {
+			if (element) {
 				const rect = element.getBoundingClientRect();
 				const top = rect.top + window.pageYOffset;
 				const bottom = top + rect.height;
@@ -70,7 +72,7 @@ const Menu: React.FC = () => {
 					<div
 						className={`absolute right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap ${theme}`}
 					>
-						<p className="ignore bold">{title}</p>
+						<p className={`ignore bold ${theme}`}>{title}</p>
 					</div>
 				)}
 			</a>
@@ -78,7 +80,16 @@ const Menu: React.FC = () => {
 	};
 
 	return (
-		<nav className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
+		<nav
+			className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10"
+			style={
+				isMobile
+					? {
+							transform: "translateX(100vw)",
+						}
+					: {}
+			}
+		>
 			{chapters.map((mapChapter) => (
 				<NavStep
 					key={mapChapter.link}

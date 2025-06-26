@@ -14,6 +14,7 @@ type MatrixData = {
 }[];
 
 type MatrixChartProps = {
+	id: string;
 	data: MatrixData;
 };
 
@@ -22,6 +23,15 @@ const sanitize = (str: string) =>
 		.toLowerCase()
 		.replace(/\s+/g, "_")
 		.replace(/[^a-z0-9_]/g, "");
+
+function replaceAllCustom(input: string) {
+	if (!input) {
+		return input;
+	}
+	return input
+		.replace(/<br\s*\/?>/gi, " ") // replace all <br>, <br/>, <br /> with space
+		.replace(/&shy;/gi, ""); // remove all &shy;
+}
 
 function getMinMax(data: MatrixData): { min: number; max: number } {
 	if (data.length === 0) {
@@ -43,12 +53,17 @@ function getMinMax(data: MatrixData): { min: number; max: number } {
 	return { min, max };
 }
 
-const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
-	const { fontSize, theme, region, setRegion } = useGlobalContext();
-	const [maxValue, setMaxValue] = React.useState(0);
-	const [minValue, setMinValue] = React.useState(0);
+const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
+	const { fontSize, theme, region, setRegion, isMobile, smallerDesktop } =
+		useGlobalContext();
+	const [maxValue, setMaxValue] = useState(0);
+	const [minValue, setMinValue] = useState(0);
+	const [cellSize, setCellSize] = useState(0);
+	const gridRef = useRef<HTMLDivElement>(null);
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
 	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
+	const numberOfColumns = xLabels.length;
+	const numberOfRows = yLabels.length;
 
 	const templateAreas = [
 		[".", ...xLabels.map((x) => `x_${sanitize(x)}`)],
@@ -76,6 +91,13 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 	}) => {
 		const [isOpen, setIsOpen] = useState(false);
 		const selfRef = useRef<HTMLDivElement>(null);
+		const getCorrectLabel = isMobile ? x : y;
+		const getCorrectBranchenID = isMobile ? y : x;
+		const getToolTipPosition = (yPosition: string) => {
+			const findYLabelsIndex = yLabels.indexOf(yPosition);
+			const halfway = yLabels.length / 2;
+			return findYLabelsIndex < halfway ? "below" : "above";
+		};
 		useEffect(() => {
 			const handleClickOutside = (event: MouseEvent) => {
 				if (
@@ -89,6 +111,12 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 			return () =>
 				document.removeEventListener("mousedown", handleClickOutside);
 		}, []);
+		useEffect(() => {
+			window.addEventListener("scroll", () => setIsOpen(false));
+			return () => {
+				window.removeEventListener("scroll", () => setIsOpen(false));
+			};
+		}, []);
 		return (
 			<div
 				ref={selfRef}
@@ -97,8 +125,16 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 			>
 				<div
 					className={`inner-value-cell cursor-pointer flex items-center justify-center ${theme}`}
-					onMouseEnter={() => setIsOpen(true)}
-					onMouseLeave={() => setIsOpen(false)}
+					onMouseEnter={() => {
+						if (!isMobile) {
+							setIsOpen(true);
+						}
+					}}
+					onMouseLeave={() => {
+						if (!isMobile) {
+							setIsOpen(false);
+						}
+					}}
 					onClick={() => setIsOpen(true)}
 				>
 					<div
@@ -108,7 +144,12 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 				</div>
 				{isOpen && (
 					<div
-						className={`tooltip p-4 select-none ${theme} ${y === "own_region" || y === "different_regions_in_germany" || y === "eu_foreign" ? "below" : "above"}`}
+						className={`tooltip p-4 select-none ${theme} ${getToolTipPosition(y)}`}
+						onClick={() => {
+							if (isMobile) {
+								setIsOpen(false);
+							}
+						}}
 					>
 						<div className="flex flex-col items-center">
 							<p
@@ -117,8 +158,9 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
 							>
-								{branchen.find((findBranche: any) => findBranche.id === x)
-									?.name || y.toUpperCase()}{" "}
+								{branchen.find(
+									(findBranche: any) => findBranche.id === getCorrectBranchenID,
+								)?.name || y.toUpperCase()}{" "}
 							</p>
 							<Icon
 								id="sort"
@@ -130,23 +172,21 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
-								// @refactor
 								dangerouslySetInnerHTML={{
-									__html: wordings[y as keyof typeof wordings],
+									__html: wordings[getCorrectLabel as keyof typeof wordings],
 								}}
 							/>
 						</div>
 						<div className="placeholder w-full" />
 						<div className="flex justify-between items-end gap-6 mt-4">
-							{wordings[y as keyof typeof wordings] && (
+							{wordings[getCorrectLabel as keyof typeof wordings] && (
 								<p
 									className="text-left"
 									style={{
 										color: theme === "dark" ? colors.dark : colors.white,
 									}}
-									// @refactor
 									dangerouslySetInnerHTML={{
-										__html: `${wordings[y as keyof typeof wordings]}:`,
+										__html: `${wordings[getCorrectLabel as keyof typeof wordings]}:`,
 									}}
 								/>
 							)}
@@ -165,6 +205,22 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 		);
 	};
 
+	const getAndSetCellSize = () => {
+		const firstValueCell = gridRef.current?.querySelector(".value-cell");
+		if (firstValueCell) {
+			const heightOfFirstValueCell =
+				firstValueCell.getBoundingClientRect().height;
+			if (heightOfFirstValueCell) {
+				setCellSize(heightOfFirstValueCell);
+			}
+		}
+	};
+
+	useEffect(() => getAndSetCellSize(), [id, data]);
+	useEffect(() => {
+		window.addEventListener("resize", () => getAndSetCellSize());
+		return () => window.removeEventListener("resize", getAndSetCellSize);
+	}, []);
 	useEffect(() => {
 		if (data) {
 			const { min, max } = getMinMax(data);
@@ -179,42 +235,74 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 
 	return (
 		<>
+			{isMobile && (
+				<div className="flex w-full justify-end pb-4 mt-[-10vh]">
+					<div
+						className="rotate-90"
+						style={{ width: cellSize * numberOfColumns }}
+					>
+						{xLabels.reverse().map((x) => (
+							<div
+								key={x}
+								className="flex items-center justify-end"
+								style={{ height: cellSize }}
+							>
+								<p className="rotate-[-25deg] origin-right small">
+									{replaceAllCustom(wordings[x as keyof typeof wordings])}
+								</p>
+							</div>
+						))}
+					</div>
+				</div>
+			)}
 			<div
-				className={`matrix-grid ${theme}`}
+				className={`matrix-grid ${theme} relative`}
+				ref={gridRef}
 				style={{
 					display: "grid",
 					gridTemplateAreas: templateAreas,
 				}}
 			>
 				{/* X Labels */}
-				{xLabels.map((x) => (
-					<div
-						key={x}
-						className="matrix-cell label-x flex items-center justify-center"
-						style={{ gridArea: `x_${sanitize(x)}` }}
-					>
-						<Icon
-							id={x}
-							setColor={theme === "dark" ? colors.white : colors.blue}
-							size={fontSize * 1.25}
-						/>
-					</div>
-				))}
+				{!isMobile && (
+					<>
+						{xLabels.map((x) => (
+							<div
+								key={x}
+								className={`matrix-cell label-x ${isMobile ? "" : "flex items-center justify-center"}`}
+								style={{ gridArea: `x_${sanitize(x)}` }}
+							>
+								<Icon
+									id={x}
+									setColor={theme === "dark" ? colors.white : colors.blue}
+									size={fontSize * 1.25}
+								/>
+							</div>
+						))}
+					</>
+				)}
 
 				{/* Y Labels */}
 				{yLabels.map((y) => (
 					<div
 						key={y}
-						className="matrix-cell label-y flex items-center"
+						className={`matrix-cell label-y flex items-center ${isMobile ? "" : ""}`}
 						style={{ gridArea: `y_${sanitize(y)}` }}
 					>
-						<p
-							className="small"
-							// @refactor
-							dangerouslySetInnerHTML={{
-								__html: wordings[y as keyof typeof wordings],
-							}}
-						/>
+						{isMobile ? (
+							<Icon
+								id={y}
+								setColor={theme === "dark" ? colors.white : colors.blue}
+								size={fontSize * 1.25}
+							/>
+						) : (
+							<p
+								className="small"
+								dangerouslySetInnerHTML={{
+									__html: wordings[y as keyof typeof wordings],
+								}}
+							/>
+						)}
 					</div>
 				))}
 
@@ -228,6 +316,17 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data }) => {
 						index={index}
 					/>
 				))}
+
+				{/* Matrix Border */}
+				{window.innerWidth > smallerDesktop && (
+					<div
+						className={`matrix-border absolute right-0 bottom-0 ${theme}`}
+						style={{
+							width: cellSize * numberOfColumns,
+							height: cellSize * numberOfRows,
+						}}
+					/>
+				)}
 			</div>
 			<div className="mt-8 flex gap-8 items-center justify-end">
 				<DataToggle

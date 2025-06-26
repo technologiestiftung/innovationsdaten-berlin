@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
 	XAxis,
 	Tooltip,
@@ -28,6 +28,7 @@ type AreaChartProps = {
 	toggleData?: string;
 	setToggleData?: (toggleData: string) => void;
 	togglesBetween?: string[];
+	max_value?: number;
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({
@@ -36,6 +37,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	toggleData,
 	setToggleData,
 	togglesBetween,
+	max_value,
 }) => {
 	const {
 		theme,
@@ -43,16 +45,22 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		axisFontStylings,
 		region,
 		setRegion,
+		windowHeightAtStart,
 		widthOfStickyContainer,
+		isMobile,
+		headerHeight,
+		subtractFromMobileChartsHeight,
+		smallerDesktop,
 	} = useGlobalContext();
 
+	const optionsRef = useRef<HTMLDivElement>(null);
 	const allFilters = branchen.map((branche) => branche.id);
 	const [activeFilters, setActiveFilters] = useState<string[] | null>(
 		allFilters,
 	);
+	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
-
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
 		if (activeFilters) {
 			if (theme === "dark") {
@@ -90,6 +98,22 @@ const AreaChart: React.FC<AreaChartProps> = ({
 			);
 			return branche?.name || dataKey.toUpperCase();
 		};
+		const getBGColor = (dataKey: any) => {
+			if (sektoren.some((someSektor) => someSektor.id === dataKey)) {
+				const getSektor = sektoren.find(
+					(findSektor) => findSektor.id === dataKey,
+				);
+				return getSektor?.color;
+			}
+			if (branchen.some((branche) => branche.id === dataKey)) {
+				const findBranche = branchen.find((branche) => branche.id === dataKey);
+				return findBranche?.color;
+			}
+			if (dataKey === "ber" || dataKey === "de") {
+				return dataKey === "ber" ? colors.cyan_light : colors.green_light;
+			}
+			return colors.blue;
+		};
 		return (
 			<div
 				className="p-4 select-none"
@@ -115,14 +139,26 @@ const AreaChart: React.FC<AreaChartProps> = ({
 										dataKey === "dienstleistungen" ||
 										dataKey === "industrie") && (
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{findTitle(dataKey)}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													className="max-w-[40vw] truncate"
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{findTitle(dataKey)}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
@@ -145,14 +181,25 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								{dataKey !== "year" && (
 									<>
 										<div className="flex justify-between gap-6">
-											<p
-												className="max-w-[100px] truncate"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{dataKey === "ber" ? "Berlin" : "Deutschland"}:
-											</p>
+											<div className="flex items-center">
+												<span
+													style={{
+														display: "inline-block",
+														width: 12,
+														height: 12,
+														backgroundColor: getBGColor(dataKey),
+														marginRight: 8,
+													}}
+												/>
+												<p
+													style={{
+														color:
+															theme === "dark" ? colors.dark : colors.white,
+													}}
+												>
+													{dataKey === "ber" ? "Berlin" : "Deutschland"}:
+												</p>
+											</div>
 											<p
 												className="bold ml-2"
 												style={{
@@ -172,9 +219,38 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		);
 	};
 
+	const setOptionsClasses = () => {
+		if (isMobile) {
+			return "flex-col items-end mt-2 gap-2";
+		}
+		if (window.innerWidth <= smallerDesktop) {
+			return "flex-col items-end mt-6 gap-2";
+		}
+		return "items-center mt-8 gap-8 justify-end";
+	};
+
+	const getHeight = () => {
+		if (isMobile) {
+			return (
+				windowHeightAtStart -
+				headerHeight -
+				heightOfOptions -
+				windowHeightAtStart * subtractFromMobileChartsHeight
+			);
+		}
+		return windowHeightAtStart * 0.5;
+	};
+
+	useEffect(() => {
+		if (optionsRef.current) {
+			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
+			setHeightOfOptions(optionsHeight);
+		}
+	}, [optionsRef.current]);
+
 	return (
 		<>
-			<ResponsiveContainer width="100%" height={window.innerHeight * 0.5}>
+			<ResponsiveContainer width="100%" height={getHeight()}>
 				<AreaChartRecharts data={setData}>
 					<XAxis
 						dataKey="year"
@@ -247,7 +323,8 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					<YAxis
 						mirror
 						stroke="none"
-						width={widthOfStickyContainer * 0.2}
+						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
+						domain={max_value ? [0, max_value] : ["auto", "auto"]}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
@@ -261,7 +338,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
-			<div className="mt-8 flex gap-8 items-center justify-end">
+			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
 				{id !== "berlin_is_ahead" && (
 					<DataToggle
 						data={region}

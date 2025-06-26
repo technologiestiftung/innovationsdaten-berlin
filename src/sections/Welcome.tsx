@@ -1,78 +1,51 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
+import wordings from "../data/wordings.json";
 
-const Welcome: React.FC = () => {
-	const { headerHeight, theme, setWidthOfStickyContainer } = useGlobalContext();
-	const selfRef = useRef<HTMLDivElement>(null);
-	useEffect(() => {
-		const handleResize = () => {
-			if (selfRef.current) {
-				setWidthOfStickyContainer(selfRef.current.offsetWidth);
-			}
-		};
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, [setWidthOfStickyContainer]);
+interface WelcomeProps {
+	mobile?: boolean;
+}
 
+const Welcome: React.FC<WelcomeProps> = ({ mobile }) => {
+	const { headerHeight } = useGlobalContext();
+	const paddingTop = Math.round(headerHeight + window.innerHeight * 0.1);
+
+	if (mobile) {
+		return (
+			<section
+				id="welcome"
+				className={`flex flex-col items-center w-full`}
+				style={{ paddingTop }}
+			>
+				<div className="max-w-[700px]">
+					<h1
+						className="mb-4"
+						dangerouslySetInnerHTML={{ __html: wordings.welcome_title }}
+					/>
+					<p
+						className="max-w-[80ch] serif mb-16"
+						dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
+					/>
+					<Overview />
+				</div>
+			</section>
+		);
+	}
 	return (
 		<section
 			id="welcome"
-			className="sticky-section relative w-full flex gap-6"
-			style={{ paddingTop: headerHeight }}
+			className={`flex w-full gap-8 justify-center`}
+			style={{ paddingTop }}
 		>
-			<div
-				ref={selfRef}
-				className="flex items-center basis-1/2"
-				style={{
-					height: window.innerHeight - headerHeight,
-				}}
-			>
-				<div className="w-full">
-					<Overview />
-				</div>
+			<div className="flex flex-col gap-6 max-h-[90vh]">
+				<h1 dangerouslySetInnerHTML={{ __html: wordings.welcome_title }} />
+				<Overview />
 			</div>
-			<div className="flex items-center basis-1/2">
-				<div className={`card p-6 ${theme}`}>
-					<h2 className="mb-4">Innovationsdaten Berlin</h2>
-					<p>
-						In modernen wissensbasierten Gesellschaften ist Innovation der
-						Schlüsselfaktor für Wettbewerbsfähigkeit und damit für
-						Zukunftssicherung und den Erhalt des Wohlstands. Eine Region muss
-						ihre Position kennen. Die Technologiestiftung stockt seit etwas über
-						10 Jahren die Anzahl der in der Deutschen Innovationserhebung des
-						ZEW im Auftrag des BMBF befragten Unternehmen auf, damit für Berlin
-						aussagefähige Daten vorliegen, die nach Branchen und
-						Unternehmensgrößen aufgeschlüsselt werden können. Innovation meint
-						hier alle Anstrengungen, die auf neue Produkte, Verfahren oder
-						Dienstleistungen zielen, die für einen Markt entwickelt werden.
-						Befragt werden jährlich die Industrie und die wissensbasierten
-						Dienstleistungen. Die Fragen sind bundesweit einheitlich und alle
-						zwei Jahre auch identisch mit dem Community Innovation Survey
-						(Eurostat). Die Ergebnisse sind dadurch überregional vergleichbar.
-						Berlin ist ein überregional sehr bedeutender Strandort der
-						öffentlichen Forschung (in Universitäten, Hochschulen,
-						außeruniversitären Forschungsinstituten und einer ganzen Reihe
-						forschender Bundesoberbehörden). Der Kooperationsgrad der Berliner
-						Wirtschaft, insbesondere mit der öffentlichen Forschung ist deshalb
-						deutlich höher als in Deutschland. Spin-offs aus der öffentlichen
-						Forschung prägen bei oft noch geringer Unternehmensgröße einige
-						Branchen im Bereich der Spitzentechnologien und einiger
-						wissensintensiver Dienstleistungen. Basisdaten zur Berliner
-						Wirtschaft (z.B. Innovationsausgaben oder Umsätze mit neuen
-						Produkten) werden jährlich erhoben. In größeren Abständen werden
-						spezifische Themen erfragt (z.B. Entwicklungskooperationen oder
-						genutzte Quellen für neues Wissen), so dass sich über die Jahre ein
-						Wissensreservoir zum Wissens- und Technologietransfer ergibt. Alle
-						Daten seit 2012 stehen auf unserer Website als Publikation und
-						Datensatz zur Verfügung. Diese Daten-Zusammenstellung soll
-						Interessierte dazu anregen, die Daten selbst zu explorieren.
-					</p>
-				</div>
-			</div>
+			<p
+				className="max-w-[80ch] serif"
+				dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
+			/>
 		</section>
 	);
 };

@@ -10,7 +10,8 @@ type DataToggleProps = {
 };
 
 const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
-	const { theme, fontSize, widthOfStickyContainer } = useGlobalContext();
+	const { theme, fontSize, widthOfStickyContainer, isMobile } =
+		useGlobalContext();
 	const horizontalPadding = fontSize * 4;
 	const [widest, setWidest] = useState<number>(0);
 
@@ -26,12 +27,30 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 		}
 		return colors.blue;
 	};
+	const getWidthForDataToggle = () => {
+		if (isMobile || !widest) {
+			return "100%";
+		}
+		return widest * 2;
+	};
+	const getLeft = () => {
+		if (data === allDatas[0]) {
+			return 0;
+		}
+		if (isMobile) {
+			return "50%";
+		}
+		return widest - 2;
+	};
 
 	const SingleToggleButton = ({ item }: { item: string }) => {
 		const titleRef = useRef<HTMLParagraphElement>(null);
 		const maxWidest = 275;
 		useEffect(() => {
 			if (titleRef.current) {
+				if (isMobile) {
+					return;
+				}
 				const width = titleRef.current.offsetWidth;
 				if ((width + horizontalPadding) * 2 > widthOfStickyContainer) {
 					const getWidth = widthOfStickyContainer / 2;
@@ -54,16 +73,18 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 			<div
 				onClick={() => setData(item)}
 				className="toggle-button flex items-center justify-center cursor-pointer"
-				style={{ width: widest }}
+				style={{ width: isMobile ? "50%" : widest }}
 			>
 				<p
 					ref={titleRef}
-					className="ignore bold line-clamp-1 text-center"
+					className="ignore bold line-clamp-1 text-center transform translate-y-[1px]"
 					style={{
 						color: getColor(item),
 					}}
 				>
-					{wordings[item as keyof typeof wordings]}
+					{item === "fue_intensitaet"
+						? "FuE Intensität"
+						: wordings[item as keyof typeof wordings]}
 				</p>
 			</div>
 		);
@@ -72,7 +93,7 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 	return (
 		<div
 			className={`data-toggle flex ${theme}`}
-			style={{ width: !widest ? "100%" : widest * 2 }}
+			style={{ width: getWidthForDataToggle() }}
 		>
 			{allDatas.map((item, index) => (
 				<SingleToggleButton key={index} item={item} />
@@ -80,8 +101,8 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 			<div
 				id="indicator"
 				style={{
-					width: widest,
-					left: data === allDatas[0] ? 0 : widest - 2,
+					width: isMobile ? "50%" : widest,
+					left: getLeft(),
 				}}
 			/>
 		</div>
