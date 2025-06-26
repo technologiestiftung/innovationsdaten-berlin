@@ -310,7 +310,7 @@ const BarChart: React.FC<BarChartProps> = ({
 						{/* Value Display */}
 						<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
 						<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
-							{positiveDelta ? "↑" : "↓"}
+							{positiveDelta ? "+" : "-"}
 							{formatNumber(delta)}
 						</tspan>
 					</>
