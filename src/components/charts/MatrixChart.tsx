@@ -205,7 +205,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 		);
 	};
 
-	useEffect(() => {
+	const getAndSetCellSize = () => {
 		const firstValueCell = gridRef.current?.querySelector(".value-cell");
 		if (firstValueCell) {
 			const heightOfFirstValueCell =
@@ -214,7 +214,13 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 				setCellSize(heightOfFirstValueCell);
 			}
 		}
-	}, [id, data]);
+	};
+
+	useEffect(() => getAndSetCellSize(), [id, data]);
+	useEffect(() => {
+		window.addEventListener("resize", () => getAndSetCellSize());
+		return () => window.removeEventListener("resize", getAndSetCellSize);
+	}, []);
 	useEffect(() => {
 		if (data) {
 			const { min, max } = getMinMax(data);
