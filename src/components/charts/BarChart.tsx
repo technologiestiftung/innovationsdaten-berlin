@@ -392,7 +392,9 @@ const BarChart: React.FC<BarChartProps> = ({
 				height={payload?.positiveDelta ? height : height - 2}
 				fill={fill}
 				transform={
-					payload?.positiveDelta ? undefined : `translate(-${width + 2}, 2)`
+					payload?.positiveDelta
+						? `translate(1, 0)`
+						: `translate(-${width + 1}, 1)`
 				}
 			/>
 		);
@@ -708,11 +710,10 @@ const BarChart: React.FC<BarChartProps> = ({
 								width="6"
 								height="6"
 							>
-								{/* <rect width="6" height="6" fill="none" /> */}
 								<path
 									d="M-2,2 L2,-2 M0,6 L6,0 M4,8 L8,4"
 									stroke={colors.green}
-									strokeWidth="1"
+									strokeWidth="2"
 								/>
 							</pattern>
 							<pattern
@@ -721,11 +722,10 @@ const BarChart: React.FC<BarChartProps> = ({
 								width="6"
 								height="6"
 							>
-								{/* <rect width="6" height="6" fill="none" /> */}
 								<path
 									d="M-2,2 L2,-2 M0,6 L6,0 M4,8 L8,4"
 									stroke={colors.red}
-									strokeWidth="1"
+									strokeWidth="2"
 								/>
 							</pattern>
 						</defs>

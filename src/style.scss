@@ -302,7 +302,6 @@ section {
 }
 
 footer {
-	width: 100vw;
 	& > div {
 		@media screen and (min-width: $mobile) {
 			max-width: $breakpoint !important;

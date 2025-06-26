@@ -179,7 +179,7 @@ const Icon: React.FC<IconProps> = ({ id, size = 24, setColor }) => {
 					d="M62.9062 16.2132H78.5078V31.7868H62.9062V16.2132Z"
 					fill="#1AAB40"
 				/>
-				<path d="M0.5 31.7868H16.1016V47.3605H0.5V31.7868Z" fill="#0F8DFF" />
+				<path d="M0.5 31.7868H16.1016V47.3605H0.5V31.7868Z" fill="#2D8B57" />
 				<path
 					d="M16.1016 31.7868H31.7031V47.3605H16.1016V31.7868Z"
 					fill="#17C6F4"
@@ -305,7 +305,7 @@ const Icon: React.FC<IconProps> = ({ id, size = 24, setColor }) => {
 				<path d="M112 56H168V112H112V56Z" fill="#754EC3" />
 				<path d="M168 56H224V112H168V56Z" fill="#F373D0" />
 				<path d="M224 56H280V112H224V56Z" fill="#1AAB40" />
-				<path d="M0 112H56V168H0V112Z" fill="#0F8DFF" />
+				<path d="M0 112H56V168H0V112Z" fill="#2D8B57" />
 				<path d="M56 112H112V168H56V112Z" fill="#17C6F4" />
 				<path d="M112 112H168V168H112V112Z" fill="#1A7277" />
 				<path d="M168 112H224V168H168V112Z" fill="#BE5DC9" />
