@@ -6,14 +6,6 @@ import Icon from "../Icons";
 import { useGlobalContext } from "../../GlobalContext";
 import DataToggle from "../DataToggle";
 import { Region } from "../../types/global";
-import MatrixLabel1Dark from "../../assets/MatrixLabel1_dark.png";
-import MatrixLabel1Light from "../../assets/MatrixLabel1_light.png";
-import MatrixLabel2Dark from "../../assets/MatrixLabel2_dark.png";
-import MatrixLabel2Light from "../../assets/MatrixLabel2_light.png";
-import MatrixLabel3Dark from "../../assets/MatrixLabel3_dark.png";
-import MatrixLabel3Light from "../../assets/MatrixLabel3_light.png";
-import MatrixLabel4Dark from "../../assets/MatrixLabel4_dark.png";
-import MatrixLabel4Light from "../../assets/MatrixLabel4_light.png";
 
 type MatrixData = {
 	x: string;
@@ -31,6 +23,15 @@ const sanitize = (str: string) =>
 		.toLowerCase()
 		.replace(/\s+/g, "_")
 		.replace(/[^a-z0-9_]/g, "");
+
+function replaceAllCustom(input: string) {
+	if (!input) {
+		return input;
+	}
+	return input
+		.replace(/<br\s*\/?>/gi, " ") // replace all <br>, <br/>, <br /> with space
+		.replace(/&shy;/gi, ""); // remove all &shy;
+}
 
 function getMinMax(data: MatrixData): { min: number; max: number } {
 	if (data.length === 0) {
@@ -53,11 +54,16 @@ function getMinMax(data: MatrixData): { min: number; max: number } {
 }
 
 const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
-	const { fontSize, theme, region, setRegion, isMobile } = useGlobalContext();
-	const [maxValue, setMaxValue] = React.useState(0);
-	const [minValue, setMinValue] = React.useState(0);
+	const { fontSize, theme, region, setRegion, isMobile, smallerDesktop } =
+		useGlobalContext();
+	const [maxValue, setMaxValue] = useState(0);
+	const [minValue, setMinValue] = useState(0);
+	const [cellSize, setCellSize] = useState(0);
+	const gridRef = useRef<HTMLDivElement>(null);
 	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
 	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
+	const numberOfColumns = xLabels.length;
+	const numberOfRows = yLabels.length;
 
 	const templateAreas = [
 		[".", ...xLabels.map((x) => `x_${sanitize(x)}`)],
@@ -87,6 +93,11 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 		const selfRef = useRef<HTMLDivElement>(null);
 		const getCorrectLabel = isMobile ? x : y;
 		const getCorrectBranchenID = isMobile ? y : x;
+		const getToolTipPosition = (yPosition: string) => {
+			const findYLabelsIndex = yLabels.indexOf(yPosition);
+			const halfway = yLabels.length / 2;
+			return findYLabelsIndex < halfway ? "below" : "above";
+		};
 		useEffect(() => {
 			const handleClickOutside = (event: MouseEvent) => {
 				if (
@@ -133,7 +144,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 				</div>
 				{isOpen && (
 					<div
-						className={`tooltip p-4 select-none ${theme} ${y === "own_region" || y === "different_regions_in_germany" || y === "eu_foreign" ? "below" : "above"}`}
+						className={`tooltip p-4 select-none ${theme} ${getToolTipPosition(y)}`}
 						onClick={() => {
 							if (isMobile) {
 								setIsOpen(false);
@@ -194,18 +205,22 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 		);
 	};
 
-	const setSRC = () => {
-		if (id === "collaboration_regions") {
-			return theme === "dark" ? MatrixLabel2Dark : MatrixLabel2Light;
-		} else if (id === "collaboration_partners") {
-			return theme === "dark" ? MatrixLabel1Dark : MatrixLabel1Light;
-		} else if (id === "use_ai_processes") {
-			return theme === "dark" ? MatrixLabel3Dark : MatrixLabel3Light;
+	const getAndSetCellSize = () => {
+		const firstValueCell = gridRef.current?.querySelector(".value-cell");
+		if (firstValueCell) {
+			const heightOfFirstValueCell =
+				firstValueCell.getBoundingClientRect().height;
+			if (heightOfFirstValueCell) {
+				setCellSize(heightOfFirstValueCell);
+			}
 		}
-		// ai_applications
-		return theme === "dark" ? MatrixLabel4Dark : MatrixLabel4Light;
 	};
 
+	useEffect(() => getAndSetCellSize(), [id, data]);
+	useEffect(() => {
+		window.addEventListener("resize", () => getAndSetCellSize());
+		return () => window.removeEventListener("resize", getAndSetCellSize);
+	}, []);
 	useEffect(() => {
 		if (data) {
 			const { min, max } = getMinMax(data);
@@ -220,9 +235,29 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 
 	return (
 		<>
-			{isMobile && <img className="mb-2" src={setSRC()} />}
+			{isMobile && (
+				<div className="flex w-full justify-end pb-4 mt-[-10vh]">
+					<div
+						className="rotate-90"
+						style={{ width: cellSize * numberOfColumns }}
+					>
+						{xLabels.reverse().map((x) => (
+							<div
+								key={x}
+								className="flex items-center justify-end"
+								style={{ height: cellSize }}
+							>
+								<p className="rotate-[-25deg] origin-right small">
+									{replaceAllCustom(wordings[x as keyof typeof wordings])}
+								</p>
+							</div>
+						))}
+					</div>
+				</div>
+			)}
 			<div
-				className={`matrix-grid ${theme}`}
+				className={`matrix-grid ${theme} relative`}
+				ref={gridRef}
 				style={{
 					display: "grid",
 					gridTemplateAreas: templateAreas,
@@ -281,6 +316,17 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 						index={index}
 					/>
 				))}
+
+				{/* Matrix Border */}
+				{window.innerWidth > smallerDesktop && (
+					<div
+						className={`matrix-border absolute right-0 bottom-0 ${theme}`}
+						style={{
+							width: cellSize * numberOfColumns,
+							height: cellSize * numberOfRows,
+						}}
+					/>
+				)}
 			</div>
 			<div className="mt-8 flex gap-8 items-center justify-end">
 				<DataToggle

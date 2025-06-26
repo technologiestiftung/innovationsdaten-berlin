@@ -18,6 +18,7 @@ export type ChartTypes =
 	| "bar_chart_stacked"
 	| "bar_chart_full"
 	| "bar_chart_filter_keys"
+	| "bar_chart_filter_keys_branchen"
 	| "area_chart"
 	| "tree_map"
 	| "matrix";
@@ -99,7 +100,7 @@ export type StickyItem = {
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
-	multiline_y_axis_label?: boolean;
+	max_value?: number;
 	text?: string;
 	facts?: { fact: string; unit: string }[];
 	bar_chart_unit_breakpoint?:

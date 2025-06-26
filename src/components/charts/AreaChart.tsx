@@ -28,6 +28,7 @@ type AreaChartProps = {
 	toggleData?: string;
 	setToggleData?: (toggleData: string) => void;
 	togglesBetween?: string[];
+	max_value?: number;
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({
@@ -36,6 +37,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	toggleData,
 	setToggleData,
 	togglesBetween,
+	max_value,
 }) => {
 	const {
 		theme,
@@ -43,9 +45,12 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		axisFontStylings,
 		region,
 		setRegion,
+		windowHeightAtStart,
 		widthOfStickyContainer,
 		isMobile,
 		headerHeight,
+		subtractFromMobileChartsHeight,
+		smallerDesktop,
 	} = useGlobalContext();
 
 	const optionsRef = useRef<HTMLDivElement>(null);
@@ -145,7 +150,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 													}}
 												/>
 												<p
-													className="max-w-[100px] truncate"
+													className="max-w-[40vw] truncate"
 													style={{
 														color:
 															theme === "dark" ? colors.dark : colors.white,
@@ -187,7 +192,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 													}}
 												/>
 												<p
-													className="max-w-[100px] truncate"
 													style={{
 														color:
 															theme === "dark" ? colors.dark : colors.white,
@@ -215,6 +219,28 @@ const AreaChart: React.FC<AreaChartProps> = ({
 		);
 	};
 
+	const setOptionsClasses = () => {
+		if (isMobile) {
+			return "flex-col items-end mt-2 gap-2";
+		}
+		if (window.innerWidth <= smallerDesktop) {
+			return "flex-col items-end mt-6 gap-2";
+		}
+		return "items-center mt-8 gap-8 justify-end";
+	};
+
+	const getHeight = () => {
+		if (isMobile) {
+			return (
+				windowHeightAtStart -
+				headerHeight -
+				heightOfOptions -
+				windowHeightAtStart * subtractFromMobileChartsHeight
+			);
+		}
+		return windowHeightAtStart * 0.5;
+	};
+
 	useEffect(() => {
 		if (optionsRef.current) {
 			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
@@ -224,17 +250,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 
 	return (
 		<>
-			<ResponsiveContainer
-				width="100%"
-				height={
-					isMobile
-						? window.innerHeight -
-							headerHeight -
-							heightOfOptions -
-							window.innerHeight * 0.075
-						: window.innerHeight * 0.5
-				}
-			>
+			<ResponsiveContainer width="100%" height={getHeight()}>
 				<AreaChartRecharts data={setData}>
 					<XAxis
 						dataKey="year"
@@ -308,6 +324,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						mirror
 						stroke="none"
 						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
+						domain={max_value ? [0, max_value] : ["auto", "auto"]}
 						tick={{
 							...axisFontStylings,
 							fill: theme === "dark" ? colors.white : colors.blue,
@@ -321,10 +338,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
-			<div
-				className={`flex ${isMobile ? "flex-col items-end mt-2 gap-2" : "items-center mt-8 gap-8 justify-end"}`}
-				ref={optionsRef}
-			>
+			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
 				{id !== "berlin_is_ahead" && (
 					<DataToggle
 						data={region}

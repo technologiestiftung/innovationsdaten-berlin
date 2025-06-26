@@ -1,41 +1,44 @@
 import React, { useState } from "react";
 import Icon from "./Icons";
 import chapters from "../data/chapters.json";
-import colors from "../data/colors.json";
 import { useGlobalContext } from "../GlobalContext";
+import Menu from "./Menu";
 
 const Header: React.FC = () => {
-	const {
-		fontSize,
-		theme,
-		toggleTheme,
-		chapter: globalChapter,
-		setChapter,
-		headerHeight,
-		breakPoint,
-		isMobile,
-	} = useGlobalContext();
+	const { fontSize, theme, toggleTheme, headerHeight, breakPoint, isMobile } =
+		useGlobalContext();
 	const [open, setOpen] = useState<boolean>(false);
-	const toggleIconSize = isMobile ? fontSize * 1.5 : fontSize * 2;
+	const [loading, setLoading] = useState<boolean>(false);
+	const [chapter, setChapter] = useState<string>("Einleitung");
+	const toggleIconSize = fontSize * 1.5;
 	return (
 		<>
 			<header
-				className={`fixed top-0 left-0 w-screen z-11 flex justify-between items-center ${theme}`}
+				className={`fixed top-0 left-0 w-full z-11 flex justify-between items-center ${theme}`}
 			>
 				<div onClick={() => window.scrollTo(0, 0)} className="cursor-pointer">
 					<Icon
 						id={isMobile ? "innodaten_logo" : "innodaten_logo_wording"}
-						size={fontSize * 2.5}
+						size={isMobile ? 30 : fontSize * 2.5}
 					/>
 				</div>
-				<div className={`flex items-center ${isMobile ? "gap-4" : "gap-8"}`}>
+				<div
+					className={`flex items-center ${isMobile ? "gap-4" : "gap-8 pr-4"}`}
+				>
+					<div
+						className={`cursor-pointer ${theme} flex items-center gap-2`}
+						onClick={toggleTheme}
+					>
+						<Icon id="invert-text" size={toggleIconSize} />
+						{!isMobile && <p className="select-none">Text invertieren</p>}
+					</div>
 					<div className="flex items-center">
 						<div
 							className={`flex items-center cursor-pointer ${isMobile ? "gap-2" : "gap-4"}`}
 							onClick={() => setOpen(!open)}
 							onMouseEnter={() => setOpen(true)}
 						>
-							<h4>{globalChapter}</h4>
+							{!loading && <h5 className="text-right">{chapter}</h5>}
 							<div
 								className={
 									open
@@ -46,13 +49,6 @@ const Header: React.FC = () => {
 								<Icon id="chevron" size={fontSize * 1.5} />
 							</div>
 						</div>
-					</div>
-					<div className={`cursor-pointer ${theme}`} onClick={toggleTheme}>
-						{theme === "dark" ? (
-							<Icon id="moon" size={toggleIconSize} setColor={colors.white} />
-						) : (
-							<Icon id="sun" size={toggleIconSize} setColor={colors.blue} />
-						)}
 					</div>
 				</div>
 			</header>
@@ -67,25 +63,30 @@ const Header: React.FC = () => {
 					}}
 					onMouseLeave={() => setOpen(false)}
 				>
-					{chapters.map((chapter) => (
-						<li key={chapter.link} className="my-4">
+					{chapters.map((singleChapter) => (
+						<li key={singleChapter.link} className="my-4">
 							<a
-								href={`#${chapter.link}`}
+								href={`#${singleChapter.link}`}
 								onClick={() => {
-									setChapter(chapter.title);
+									setLoading(true);
 									setOpen(false);
+									setTimeout(() => {
+										setChapter(singleChapter.title);
+										setLoading(false);
+									}, 1000);
 								}}
 							>
 								<h4
-									className={`select-none ${globalChapter === chapter.title ? "underline" : ""}`}
+									className={`select-none ${chapter === singleChapter.title ? "underline" : ""}`}
 								>
-									{chapter.title}
+									{singleChapter.title}
 								</h4>
 							</a>
 						</li>
 					))}
 				</ul>
 			)}
+			<Menu chapter={chapter} setChapter={setChapter} />
 		</>
 	);
 };

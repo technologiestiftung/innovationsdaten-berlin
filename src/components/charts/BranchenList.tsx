@@ -6,7 +6,7 @@ import { useGlobalContext } from "../../GlobalContext";
 import { BranchenItem } from "../../types/global";
 
 const BranchenList: React.FC = () => {
-	const { fontSize } = useGlobalContext();
+	const { fontSize, isMobile } = useGlobalContext();
 	const DisplayBranche = ({ branche }: { branche: BranchenItem }) => {
 		return (
 			<div
@@ -14,16 +14,16 @@ const BranchenList: React.FC = () => {
 				style={{ backgroundColor: branche.color }}
 			>
 				<Icon id={branche.id} setColor={colors.white} size={fontSize * 1.5} />
-				<p className="line-clamp-1 break-words ignore white bold">
+				<span className="line-clamp-1 break-words ignore white bold">
 					{branche.name}
-				</p>
+				</span>
 			</div>
 		);
 	};
 	return (
 		<>
 			<h3 className="mb-2">Industrie</h3>
-			<div className="flex flex-wrap gap-2">
+			<div className={`flex ${isMobile ? "flex-col" : "flex-wrap"} gap-2`}>
 				{branchen
 					.filter((branche) => branche.sektor_id === "industrie")
 					.map((branche) => (
@@ -31,7 +31,7 @@ const BranchenList: React.FC = () => {
 					))}
 			</div>
 			<h3 className="mt-8 mb-2">Dienstleistung</h3>
-			<div className="flex flex-wrap gap-2">
+			<div className={`flex ${isMobile ? "flex-col" : "flex-wrap"} gap-2`}>
 				{branchen
 					.filter((branche) => branche.sektor_id === "dienstleistungen")
 					.map((branche) => (

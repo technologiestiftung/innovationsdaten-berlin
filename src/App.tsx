@@ -2,23 +2,32 @@ import "./style.scss";
 import "./index.css";
 import { useGlobalContext } from "./GlobalContext";
 import Header from "./components/Header";
-import Menu from "./components/Menu";
 import data from "./data/data.json";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
-import Welcome from "./sections/Welcome";
 import Desktop from "./sections/Desktop";
 import Mobile from "./sections/Mobile";
+import { useEffect } from "react";
 
 function App() {
 	const { theme, isMobile } = useGlobalContext();
 
+	useEffect(() => {
+		const handleBeforeUnload = () => {
+			localStorage.clear();
+		};
+
+		window.addEventListener("beforeunload", handleBeforeUnload);
+
+		return () => {
+			window.removeEventListener("beforeunload", handleBeforeUnload);
+		};
+	}, []);
+
 	return (
 		<>
 			<Header />
-			<Menu />
 			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
-				<Welcome />
 				{Object.keys(data).map((dataKey) => (
 					<div key={dataKey}>
 						{isMobile ? (

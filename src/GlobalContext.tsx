@@ -17,8 +17,7 @@ interface GlobalStateType {
 	breakPoint: number;
 	isMobile: boolean;
 	headerHeight: number;
-	chapter: string;
-	setChapter: (chapter: string) => void;
+	subtractFromMobileChartsHeight: number;
 	axisFontStylings: {
 		style: {
 			fontFamily: string;
@@ -29,7 +28,9 @@ interface GlobalStateType {
 	region: Region;
 	setRegion: (region: Region) => void;
 	widthOfStickyContainer: number;
-	setWidthOfStickyContainer: (num: number) => void;
+	widthOfCardContainer: number;
+	smallerDesktop: number;
+	windowHeightAtStart: number;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -40,9 +41,10 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	const [theme, setTheme] = useState<Theme>("light");
 	const [region, setRegion] = useState<Region>("ber");
 	const [headerHeight, setHeaderHeight] = useState<number>(0);
-	const [chapter, setChapter] = useState<string>("Willkommen");
-	const [widthOfStickyContainer, setWidthOfStickyContainer] =
-		useState<number>(0);
+	const [windowHeightAtStart, setWindowHeightAtStart] = useState<number>(0);
+	const subtractFromMobileChartsHeight = 0.1;
+	const smallerDesktop = 1440;
+	const maxWidthOfCardContainer = 640;
 
 	const fontSize = 16;
 
@@ -55,11 +57,43 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	};
 
 	const breakPoint = window.innerWidth * 0.8;
-	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
-	const checkIfViewPortIsMobile = () =>
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
+	const [widthOfCardContainer, setWidthOfCardContainer] = useState<number>(0);
+	const [widthOfStickyContainer, setWidthOfStickyContainer] =
+		useState<number>(0);
+	const allResizeActions = () => {
+		const ww = localStorage.getItem("ww");
+		if (ww && ww === window.innerWidth.toString()) {
+			return;
+		}
+		if (!windowHeightAtStart) {
+			setWindowHeightAtStart(window.innerHeight);
+		}
 		setIsMobile(
-			window.innerWidth < 768 && window.innerWidth < window.innerHeight,
+			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
 		);
+		setContainerWidths();
+		measureHeaderHeight();
+	};
+	const setContainerWidths = () => {
+		let makeWidthOfCardContainer =
+			window.innerWidth > smallerDesktop
+				? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
+				: (window.innerWidth * 0.8 - 24) * 0.5;
+
+		let makeWidthOfStickyContainer =
+			window.innerWidth > smallerDesktop
+				? (window.innerWidth * 0.8 - 24) * (3 / 5)
+				: (window.innerWidth * 0.8 - 24) * 0.5;
+
+		if (makeWidthOfCardContainer > maxWidthOfCardContainer) {
+			makeWidthOfCardContainer = maxWidthOfCardContainer;
+			makeWidthOfStickyContainer =
+				window.innerWidth * 0.8 - 24 - makeWidthOfCardContainer;
+		}
+		setWidthOfCardContainer(makeWidthOfCardContainer);
+		setWidthOfStickyContainer(makeWidthOfStickyContainer);
+	};
 
 	// Toggle theme function
 	const toggleTheme = () => {
@@ -88,9 +122,10 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 
 	useEffect(() => {
 		detectAndSetTheme();
-		measureHeaderHeight();
-		window.addEventListener("resize", checkIfViewPortIsMobile);
-		return () => window.removeEventListener("resize", checkIfViewPortIsMobile);
+		allResizeActions();
+		localStorage.setItem("ww", window.innerWidth.toString());
+		window.addEventListener("resize", () => allResizeActions());
+		return () => window.removeEventListener("resize", allResizeActions);
 	}, []);
 
 	return (
@@ -102,13 +137,14 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 				breakPoint,
 				isMobile,
 				headerHeight,
-				chapter,
-				setChapter,
+				subtractFromMobileChartsHeight,
 				axisFontStylings,
 				region,
 				setRegion,
+				windowHeightAtStart,
 				widthOfStickyContainer,
-				setWidthOfStickyContainer,
+				widthOfCardContainer,
+				smallerDesktop,
 			}}
 		>
 			{children}

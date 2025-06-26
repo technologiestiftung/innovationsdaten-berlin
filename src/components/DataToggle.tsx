@@ -77,7 +77,7 @@ const DataToggle: React.FC<DataToggleProps> = ({ data, setData, allDatas }) => {
 			>
 				<p
 					ref={titleRef}
-					className="ignore bold line-clamp-1 text-center"
+					className="ignore bold line-clamp-1 text-center transform translate-y-[1px]"
 					style={{
 						color: getColor(item),
 					}}

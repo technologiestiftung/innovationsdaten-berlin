@@ -23,10 +23,13 @@ const Card: React.FC<CardProps> = ({
 	last,
 	first,
 }) => {
-	const { theme, headerHeight, isMobile } = useGlobalContext();
+	const { theme, headerHeight, isMobile, smallerDesktop } = useGlobalContext();
 	const cardRef = useRef<HTMLDivElement>(null);
+	const cardTextRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
+	const hide = false;
+
 	const getMarginTop = () => {
 		if (isMobile) {
 			return 0;
@@ -38,6 +41,13 @@ const Card: React.FC<CardProps> = ({
 			return specificMargin;
 		}
 		return window.innerHeight - headerHeight;
+	};
+	const checkMarginTop = () => {
+		const getMarginTopFromFuntion = getMarginTop();
+		if (getMarginTopFromFuntion < 0) {
+			return 0;
+		}
+		return getMarginTopFromFuntion;
 	};
 	const getMarginBottom = () => {
 		if (cardHeight) {
@@ -64,6 +74,7 @@ const Card: React.FC<CardProps> = ({
 			}
 		}
 	};
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => {
@@ -100,18 +111,27 @@ const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			ref={cardRef}
-			className={`card ${theme} ${isMobile ? "" : "p-6"}`}
+			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
 			style={{
-				marginTop: getMarginTop(),
+				marginTop: checkMarginTop(),
 				marginBottom: getMarginBottom(),
 			}}
 		>
 			{typeof window !== "undefined" &&
-				!window.location.toString().includes("innovationsdaten.ts.berlin") &&
-				displayNumber && <h4>{displayNumber}</h4>}
-			<h2 dangerouslySetInnerHTML={{ __html: title }} />
+				window.location.toString().includes("localhost") &&
+				displayNumber &&
+				!hide && <h4>{displayNumber}</h4>}
+			{window.innerWidth <= smallerDesktop ? (
+				<h3 dangerouslySetInnerHTML={{ __html: title }} />
+			) : (
+				<h2 dangerouslySetInnerHTML={{ __html: title }} />
+			)}
 			{text && (
-				<p className="mt-4" dangerouslySetInnerHTML={{ __html: text }} />
+				<p
+					className={`mt-4 max-w-[80ch] serif ${theme}`}
+					ref={cardTextRef}
+					dangerouslySetInnerHTML={{ __html: text }}
+				/>
 			)}
 		</div>
 	);
