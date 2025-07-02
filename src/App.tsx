@@ -13,7 +13,6 @@ function App() {
 	const { theme, isMobile } = useGlobalContext();
 
 	useEffect(() => {
-		console.log("App gets rendered");
 		localStorage.clear();
 	}, []);
 
