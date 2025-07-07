@@ -13,15 +13,7 @@ function App() {
 	const { theme, isMobile } = useGlobalContext();
 
 	useEffect(() => {
-		const handleBeforeUnload = () => {
-			localStorage.clear();
-		};
-
-		window.addEventListener("beforeunload", handleBeforeUnload);
-
-		return () => {
-			window.removeEventListener("beforeunload", handleBeforeUnload);
-		};
+		localStorage.clear();
 	}, []);
 
 	return (
