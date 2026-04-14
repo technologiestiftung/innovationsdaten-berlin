@@ -8,7 +8,7 @@
 			"chart_type": "big_fact",
 			"facts": [
 				{
-					"fact": "153",
+					"fact": "158",
 					"unit": "Mrd. €"
 				}
 			]
@@ -28,63 +28,63 @@
 			"data": [
 				{
 					"branche": "nahrung",
-					"value": 5590
+					"value": 5420
 				},
 				{
 					"branche": "pharma",
-					"value": 8639
+					"value": 12725
 				},
 				{
 					"branche": "holz",
-					"value": 1323
+					"value": 1367
 				},
 				{
 					"branche": "metall",
-					"value": 2567
+					"value": 2294
 				},
 				{
 					"branche": "elektroindustrie",
-					"value": 8846
+					"value": 8632
 				},
 				{
 					"branche": "fahrzeugbau",
-					"value": 15501
+					"value": 14594
 				},
 				{
 					"branche": "sonstige_konsumgueter",
-					"value": 738
+					"value": 1229
 				},
 				{
 					"branche": "energie",
-					"value": 28919
+					"value": 25014
 				},
 				{
 					"branche": "telekommunikation",
-					"value": 15170
+					"value": 14591
 				},
 				{
 					"branche": "software",
-					"value": 16787
+					"value": 19975
 				},
 				{
 					"branche": "finanz",
-					"value": 32814
+					"value": 35321
 				},
 				{
 					"branche": "unternehmensberatung",
-					"value": 4159
+					"value": 5023
 				},
 				{
 					"branche": "architektur",
-					"value": 5302
+					"value": 5281
 				},
 				{
 					"branche": "forschung",
-					"value": 1887
+					"value": 1454
 				},
 				{
 					"branche": "kreativ",
-					"value": 5260
+					"value": 5674
 				}
 			]
 		},
@@ -97,63 +97,63 @@
 			"data": [
 				{
 					"branche": "nahrung",
-					"value": 15843
+					"value": 16761
 				},
 				{
 					"branche": "pharma",
-					"value": 20207
+					"value": 20913
 				},
 				{
 					"branche": "holz",
-					"value": 7754
+					"value": 7788
 				},
 				{
 					"branche": "metall",
-					"value": 10248
+					"value": 10019
 				},
 				{
 					"branche": "elektroindustrie",
-					"value": 25926
+					"value": 27310
 				},
 				{
 					"branche": "fahrzeugbau",
-					"value": 26601
+					"value": 28090
 				},
 				{
 					"branche": "sonstige_konsumgueter",
-					"value": 5629
+					"value": 8158
 				},
 				{
 					"branche": "energie",
-					"value": 24033
+					"value": 24245
 				},
 				{
 					"branche": "telekommunikation",
-					"value": 32903
+					"value": 33372
 				},
 				{
 					"branche": "software",
-					"value": 92676
+					"value": 103319
 				},
 				{
 					"branche": "finanz",
-					"value": 32921
+					"value": 32813
 				},
 				{
 					"branche": "unternehmensberatung",
-					"value": 22325
+					"value": 27996
 				},
 				{
 					"branche": "architektur",
-					"value": 41084
+					"value": 44631
 				},
 				{
 					"branche": "forschung",
-					"value": 8532
+					"value": 11210
 				},
 				{
 					"branche": "kreativ",
-					"value": 22024
+					"value": 24570
 				}
 			]
 		}
@@ -167,7 +167,7 @@
 			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"facts": [
 				{
-					"fact": "61%",
+					"fact": "68%",
 					"unit": "der Berliner Unternehmen sind Innovatoren."
 				}
 			]
@@ -625,38 +625,38 @@
 			},
 			"data": {
 				"ber": {
-					"nahrung": 29,
-					"pharma": 1588,
-					"holz": 57,
-					"metall": 71,
-					"elektroindustrie": 966,
-					"fahrzeugbau": 949,
-					"sonstige_konsumgueter": 47,
-					"energie": 201,
-					"telekommunikation": 273,
-					"software": 1088,
-					"finanz": 266,
-					"unternehmensberatung": 102,
-					"architektur": 122,
-					"forschung": 239,
-					"kreativ": 188
+					"nahrung": 28,
+					"pharma": 1648,
+					"holz": 38,
+					"metall": 56,
+					"elektroindustrie": 906,
+					"fahrzeugbau": 1035,
+					"sonstige_konsumgueter": 73,
+					"energie": 182,
+					"telekommunikation": 268,
+					"software": 1175,
+					"finanz": 221,
+					"unternehmensberatung": 70,
+					"architektur": 109,
+					"forschung": 234,
+					"kreativ": 90
 				},
 				"de": {
-					"nahrung": 2439,
-					"pharma": 24481,
-					"holz": 1176,
-					"metall": 6582,
-					"elektroindustrie": 23553,
-					"fahrzeugbau": 79788,
-					"sonstige_konsumgueter": 2578,
-					"energie": 4263,
-					"telekommunikation": 6669,
-					"software": 18170,
-					"finanz": 7438,
-					"unternehmensberatung": 656,
-					"architektur": 2281,
-					"forschung": 8047,
-					"kreativ": 891
+					"nahrung": 2401,
+					"pharma": 24664,
+					"holz": 1246,
+					"metall": 6749,
+					"elektroindustrie": 24166,
+					"fahrzeugbau": 82644,
+					"sonstige_konsumgueter": 2799,
+					"energie": 5231,
+					"telekommunikation": 6098,
+					"software": 20317,
+					"finanz": 7912,
+					"unternehmensberatung": 657,
+					"architektur": 2086,
+					"forschung": 10909,
+					"kreativ": 930
 				}
 			}
 		},
@@ -673,38 +673,38 @@
 			},
 			"data": {
 				"ber": {
-					"nahrung": 15,
-					"pharma": 916,
-					"holz": 33,
-					"metall": 51,
-					"elektroindustrie": 718,
-					"fahrzeugbau": 501,
-					"sonstige_konsumgueter": 33,
-					"energie": 28,
-					"telekommunikation": 170,
-					"software": 814,
-					"finanz": 79,
-					"unternehmensberatung": 65,
-					"architektur": 48,
-					"forschung": 124,
-					"kreativ": 32
+					"nahrung": 4,
+					"pharma": 943,
+					"holz": 22,
+					"metall": 17,
+					"elektroindustrie": 682,
+					"fahrzeugbau": 521,
+					"sonstige_konsumgueter": 50,
+					"energie": 46,
+					"telekommunikation": 155,
+					"software": 937,
+					"finanz": 40,
+					"unternehmensberatung": 60,
+					"architektur": 44,
+					"forschung": 156,
+					"kreativ": 47
 				},
 				"de": {
-					"nahrung": 747,
-					"pharma": 16642,
-					"holz": 446,
-					"metall": 3119,
-					"elektroindustrie": 17828,
-					"fahrzeugbau": 52334,
-					"sonstige_konsumgueter": 1442,
-					"energie": 588,
-					"telekommunikation": 1893,
-					"software": 13600,
-					"finanz": 3334,
-					"unternehmensberatung": 353,
-					"architektur": 1419,
-					"forschung": 6950,
-					"kreativ": 479
+					"nahrung": 775,
+					"pharma": 17535,
+					"holz": 554,
+					"metall": 3200,
+					"elektroindustrie": 18091,
+					"fahrzeugbau": 54372,
+					"sonstige_konsumgueter": 1605,
+					"energie": 616,
+					"telekommunikation": 1552,
+					"software": 14867,
+					"finanz": 3388,
+					"unternehmensberatung": 447,
+					"architektur": 1044,
+					"forschung": 9634,
+					"kreativ": 520
 				}
 			}
 		},
@@ -722,184 +722,184 @@
 					{
 						"id": "nahrung",
 						"innovations_intensitaet": 0.52,
-						"fue_intensitaet": 0.27,
-						"differenz_intensitaet": 0.25
+						"fue_intensitaet": 0.07,
+						"differenz_intensitaet": 0.45
 					},
 					{
 						"id": "pharma",
-						"innovations_intensitaet": 18.38,
-						"fue_intensitaet": 10.6,
-						"differenz_intensitaet": 7.78
+						"innovations_intensitaet": 12.95,
+						"fue_intensitaet": 7.41,
+						"differenz_intensitaet": 5.54
 					},
 					{
 						"id": "holz",
-						"innovations_intensitaet": 4.31,
-						"fue_intensitaet": 2.49,
-						"differenz_intensitaet": 1.82
+						"innovations_intensitaet": 2.78,
+						"fue_intensitaet": 1.61,
+						"differenz_intensitaet": 1.17
 					},
 					{
 						"id": "metall",
-						"innovations_intensitaet": 2.77,
-						"fue_intensitaet": 1.99,
-						"differenz_intensitaet": 0.78
+						"innovations_intensitaet": 2.44,
+						"fue_intensitaet": 0.74,
+						"differenz_intensitaet": 1.7
 					},
 					{
 						"id": "elektroindustrie",
-						"innovations_intensitaet": 10.92,
-						"fue_intensitaet": 8.12,
-						"differenz_intensitaet": 2.8
+						"innovations_intensitaet": 10.5,
+						"fue_intensitaet": 7.9,
+						"differenz_intensitaet": 2.6
 					},
 					{
 						"id": "fahrzeugbau",
-						"innovations_intensitaet": 6.12,
-						"fue_intensitaet": 3.23,
-						"differenz_intensitaet": 2.89
+						"innovations_intensitaet": 7.09,
+						"fue_intensitaet": 3.57,
+						"differenz_intensitaet": 3.52
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 6.37,
-						"fue_intensitaet": 4.47,
-						"differenz_intensitaet": 1.9
+						"innovations_intensitaet": 5.94,
+						"fue_intensitaet": 4.07,
+						"differenz_intensitaet": 1.87
 					},
 					{
 						"id": "energie",
-						"innovations_intensitaet": 0.7,
-						"fue_intensitaet": 0.05,
-						"differenz_intensitaet": 0.65
+						"innovations_intensitaet": 0.73,
+						"fue_intensitaet": 0.18,
+						"differenz_intensitaet": 0.55
 					},
 					{
 						"id": "telekommunikation",
-						"innovations_intensitaet": 1.8,
-						"fue_intensitaet": 1.12,
-						"differenz_intensitaet": 0.68
+						"innovations_intensitaet": 1.84,
+						"fue_intensitaet": 1.06,
+						"differenz_intensitaet": 0.78
 					},
 					{
 						"id": "software",
-						"innovations_intensitaet": 6.48,
-						"fue_intensitaet": 4.85,
-						"differenz_intensitaet": 1.63
+						"innovations_intensitaet": 5.88,
+						"fue_intensitaet": 4.69,
+						"differenz_intensitaet": 1.19
 					},
 					{
 						"id": "finanz",
-						"innovations_intensitaet": 0.81,
-						"fue_intensitaet": 0.24,
-						"differenz_intensitaet": 0.57
+						"innovations_intensitaet": 0.63,
+						"fue_intensitaet": 0.11,
+						"differenz_intensitaet": 0.52
 					},
 					{
 						"id": "unternehmensberatung",
-						"innovations_intensitaet": 2.45,
-						"fue_intensitaet": 1.56,
-						"differenz_intensitaet": 0.89
+						"innovations_intensitaet": 1.39,
+						"fue_intensitaet": 1.19,
+						"differenz_intensitaet": 0.2
 					},
 					{
 						"id": "architektur",
-						"innovations_intensitaet": 2.3,
-						"fue_intensitaet": 0.91,
-						"differenz_intensitaet": 1.39
+						"innovations_intensitaet": 2.06,
+						"fue_intensitaet": 0.83,
+						"differenz_intensitaet": 1.23
 					},
 					{
 						"id": "forschung",
-						"innovations_intensitaet": 12.67,
-						"fue_intensitaet": 6.57,
-						"differenz_intensitaet": 6.1
+						"innovations_intensitaet": 16.09,
+						"fue_intensitaet": 10.73,
+						"differenz_intensitaet": 5.36
 					},
 					{
 						"id": "kreativ",
-						"innovations_intensitaet": 3.57,
-						"fue_intensitaet": 0.61,
-						"differenz_intensitaet": 2.96
+						"innovations_intensitaet": 1.59,
+						"fue_intensitaet": 0.83,
+						"differenz_intensitaet": 0.76
 					}
 				],
 				"de": [
 					{
 						"id": "nahrung",
-						"innovations_intensitaet": 0.94,
-						"fue_intensitaet": 0.29,
-						"differenz_intensitaet": 0.65
+						"innovations_intensitaet": 0.93,
+						"fue_intensitaet": 0.3,
+						"differenz_intensitaet": 0.63
 					},
 					{
 						"id": "pharma",
-						"innovations_intensitaet": 5.19,
-						"fue_intensitaet": 3.53,
-						"differenz_intensitaet": 1.66
+						"innovations_intensitaet": 5.25,
+						"fue_intensitaet": 3.73,
+						"differenz_intensitaet": 1.52
 					},
 					{
 						"id": "holz",
-						"innovations_intensitaet": 1.25,
-						"fue_intensitaet": 0.47,
-						"differenz_intensitaet": 0.78
+						"innovations_intensitaet": 1.42,
+						"fue_intensitaet": 0.63,
+						"differenz_intensitaet": 0.8
 					},
 					{
 						"id": "metall",
-						"innovations_intensitaet": 1.83,
-						"fue_intensitaet": 0.87,
-						"differenz_intensitaet": 0.96
+						"innovations_intensitaet": 2,
+						"fue_intensitaet": 0.95,
+						"differenz_intensitaet": 1.05
 					},
 					{
 						"id": "elektroindustrie",
-						"innovations_intensitaet": 9.62,
-						"fue_intensitaet": 7.28,
-						"differenz_intensitaet": 2.34
+						"innovations_intensitaet": 10.3,
+						"fue_intensitaet": 7.71,
+						"differenz_intensitaet": 2.59
 					},
 					{
 						"id": "fahrzeugbau",
-						"innovations_intensitaet": 7.3,
-						"fue_intensitaet": 4.79,
-						"differenz_intensitaet": 2.51
+						"innovations_intensitaet": 7.69,
+						"fue_intensitaet": 5.06,
+						"differenz_intensitaet": 2.63
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 3.78,
-						"fue_intensitaet": 2.11,
-						"differenz_intensitaet": 1.67
+						"innovations_intensitaet": 4.11,
+						"fue_intensitaet": 2.36,
+						"differenz_intensitaet": 1.75
 					},
 					{
 						"id": "energie",
-						"innovations_intensitaet": 0.35,
-						"fue_intensitaet": 0.05,
-						"differenz_intensitaet": 0.3
+						"innovations_intensitaet": 0.55,
+						"fue_intensitaet": 0.06,
+						"differenz_intensitaet": 0.49
 					},
 					{
 						"id": "telekommunikation",
-						"innovations_intensitaet": 4.37,
-						"fue_intensitaet": 1.24,
+						"innovations_intensitaet": 4.2,
+						"fue_intensitaet": 1.07,
 						"differenz_intensitaet": 3.13
 					},
 					{
 						"id": "software",
-						"innovations_intensitaet": 8.01,
-						"fue_intensitaet": 6.0,
-						"differenz_intensitaet": 2.01
+						"innovations_intensitaet": 7.92,
+						"fue_intensitaet": 5.79,
+						"differenz_intensitaet": 2.13
 					},
 					{
 						"id": "finanz",
-						"innovations_intensitaet": 0.76,
-						"fue_intensitaet": 0.34,
-						"differenz_intensitaet": 0.42
+						"innovations_intensitaet": 0.75,
+						"fue_intensitaet": 0.32,
+						"differenz_intensitaet": 0.43
 					},
 					{
 						"id": "unternehmensberatung",
-						"innovations_intensitaet": 1.64,
-						"fue_intensitaet": 0.88,
-						"differenz_intensitaet": 0.76
+						"innovations_intensitaet": 1.54,
+						"fue_intensitaet": 1.05,
+						"differenz_intensitaet": 0.49
 					},
 					{
 						"id": "architektur",
-						"innovations_intensitaet": 2.3,
-						"fue_intensitaet": 1.43,
-						"differenz_intensitaet": 0.87
+						"innovations_intensitaet": 1.96,
+						"fue_intensitaet": 0.98,
+						"differenz_intensitaet": 0.98
 					},
 					{
 						"id": "forschung",
-						"innovations_intensitaet": 35.51,
-						"fue_intensitaet": 30.67,
-						"differenz_intensitaet": 4.84
+						"innovations_intensitaet": 42.55,
+						"fue_intensitaet": 37.57,
+						"differenz_intensitaet": 4.98
 					},
 					{
 						"id": "kreativ",
-						"innovations_intensitaet": 1.56,
+						"innovations_intensitaet": 1.5,
 						"fue_intensitaet": 0.84,
-						"differenz_intensitaet": 0.72
+						"differenz_intensitaet": 0.66
 					}
 				]
 			}
@@ -914,11 +914,11 @@
 			"text": "Produktinnovationen sind Produkte, die in den letzten drei Jahren von den Unternehmen neu ins Sortiment aufgenommen wurden. Prozessinnovationen sind Innovationen, die einen Geschäftsprozess nach Kosten, Geschwindigkeit oder Qualität verbessern, dazu gehören nicht nur die industriellen Herstellungsprozesse, sondern auch Prozesse zur Erbringung von Dienstleistungen, Logistikmethoden, IT-Prozesse, Betriebsorganisation oder Managementprozesse.",
 			"facts": [
 				{
-					"fact": "36%",
+					"fact": "40%",
 					"unit": "der Berliner Unternehmen betreiben Produktinnovation"
 				},
 				{
-					"fact": "55%",
+					"fact": "62%",
 					"unit": "setzen Prozessinnovationen um."
 				}
 			]
@@ -937,125 +937,48 @@
 				"ber": [
 					{
 						"id": "nahrung",
-						"process_innovation_share": 55,
-						"product_innovation_share": 19
+						"process_innovation_share": 32,
+						"product_innovation_share": 16
 					},
 					{
 						"id": "pharma",
-						"process_innovation_share": 69,
-						"product_innovation_share": 74
-					},
-					{
-						"id": "holz",
-						"process_innovation_share": 37,
-						"product_innovation_share": 18
-					},
-					{
-						"id": "metall",
-						"process_innovation_share": 36,
-						"product_innovation_share": 13
-					},
-					{
-						"id": "elektroindustrie",
-						"process_innovation_share": 62,
-						"product_innovation_share": 40
-					},
-					{
-						"id": "fahrzeugbau",
-						"process_innovation_share": 54,
-						"product_innovation_share": 41
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"process_innovation_share": 51,
-						"product_innovation_share": 21
-					},
-					{
-						"id": "energie",
-						"process_innovation_share": 19,
-						"product_innovation_share": 3
-					},
-					{
-						"id": "telekommunikation",
-						"process_innovation_share": 59,
-						"product_innovation_share": 33
-					},
-					{
-						"id": "software",
-						"process_innovation_share": 65,
+						"process_innovation_share": 64,
 						"product_innovation_share": 50
 					},
 					{
-						"id": "finanz",
-						"process_innovation_share": 54,
-						"product_innovation_share": 20
-					},
-					{
-						"id": "unternehmensberatung",
-						"process_innovation_share": 49,
-						"product_innovation_share": 33
-					},
-					{
-						"id": "architektur",
-						"process_innovation_share": 51,
-						"product_innovation_share": 37
-					},
-					{
-						"id": "forschung",
-						"process_innovation_share": 67,
-						"product_innovation_share": 52
-					},
-					{
-						"id": "kreativ",
-						"process_innovation_share": 55,
-						"product_innovation_share": 22
-					}
-				],
-				"de": [
-					{
-						"id": "nahrung",
-						"process_innovation_share": 33,
-						"product_innovation_share": 14
-					},
-					{
-						"id": "pharma",
-						"process_innovation_share": 57,
-						"product_innovation_share": 32
-					},
-					{
 						"id": "holz",
-						"process_innovation_share": 48,
-						"product_innovation_share": 14
+						"process_innovation_share": 29,
+						"product_innovation_share": 12
 					},
 					{
 						"id": "metall",
-						"process_innovation_share": 44,
+						"process_innovation_share": 43,
 						"product_innovation_share": 18
 					},
 					{
 						"id": "elektroindustrie",
-						"process_innovation_share": 56,
-						"product_innovation_share": 47
+						"process_innovation_share": 64,
+						"product_innovation_share": 65
 					},
 					{
 						"id": "fahrzeugbau",
-						"process_innovation_share": 54,
-						"product_innovation_share": 37
+						"process_innovation_share": 62,
+						"product_innovation_share": 55
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"process_innovation_share": 54,
-						"product_innovation_share": 37
+						"process_innovation_share": 39,
+						"product_innovation_share": 24
 					},
 					{
 						"id": "energie",
-						"process_innovation_share": 40,
-						"product_innovation_share": 13
+						"process_innovation_share": 44,
+						"product_innovation_share": 22
 					},
 					{
 						"id": "telekommunikation",
-						"process_innovation_share": 50,
-						"product_innovation_share": 32
+						"process_innovation_share": 65,
+						"product_innovation_share": 42
 					},
 					{
 						"id": "software",
@@ -1064,28 +987,105 @@
 					},
 					{
 						"id": "finanz",
-						"process_innovation_share": 54,
-						"product_innovation_share": 31
+						"process_innovation_share": 50,
+						"product_innovation_share": 33
 					},
 					{
 						"id": "unternehmensberatung",
-						"process_innovation_share": 56,
-						"product_innovation_share": 31
+						"process_innovation_share": 84,
+						"product_innovation_share": 45
 					},
 					{
 						"id": "architektur",
-						"process_innovation_share": 50,
-						"product_innovation_share": 30
+						"process_innovation_share": 56,
+						"product_innovation_share": 28
 					},
 					{
 						"id": "forschung",
-						"process_innovation_share": 47,
-						"product_innovation_share": 36
+						"process_innovation_share": 56,
+						"product_innovation_share": 21
 					},
 					{
 						"id": "kreativ",
-						"process_innovation_share": 72,
+						"process_innovation_share": 71,
 						"product_innovation_share": 35
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"process_innovation_share": 45,
+						"product_innovation_share": 12
+					},
+					{
+						"id": "pharma",
+						"process_innovation_share": 56,
+						"product_innovation_share": 40
+					},
+					{
+						"id": "holz",
+						"process_innovation_share": 48,
+						"product_innovation_share": 21
+					},
+					{
+						"id": "metall",
+						"process_innovation_share": 45,
+						"product_innovation_share": 16
+					},
+					{
+						"id": "elektroindustrie",
+						"process_innovation_share": 60,
+						"product_innovation_share": 48
+					},
+					{
+						"id": "fahrzeugbau",
+						"process_innovation_share": 54,
+						"product_innovation_share": 37
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"process_innovation_share": 48,
+						"product_innovation_share": 21
+					},
+					{
+						"id": "energie",
+						"process_innovation_share": 49,
+						"product_innovation_share": 17
+					},
+					{
+						"id": "telekommunikation",
+						"process_innovation_share": 59,
+						"product_innovation_share": 34
+					},
+					{
+						"id": "software",
+						"process_innovation_share": 65,
+						"product_innovation_share": 53
+					},
+					{
+						"id": "finanz",
+						"process_innovation_share": 43,
+						"product_innovation_share": 35
+					},
+					{
+						"id": "unternehmensberatung",
+						"process_innovation_share": 73,
+						"product_innovation_share": 27
+					},
+					{
+						"id": "architektur",
+						"process_innovation_share": 56,
+						"product_innovation_share": 34
+					},
+					{
+						"id": "forschung",
+						"process_innovation_share": 56,
+						"product_innovation_share": 41
+					},
+					{
+						"id": "kreativ",
+						"process_innovation_share": 57,
+						"product_innovation_share": 33
 					}
 				]
 			}
@@ -1104,155 +1104,155 @@
 				"ber": [
 					{
 						"id": "nahrung",
-						"umsatz_markt_neuheiten": 0.3,
-						"umsatz_nachahmer_innovationen": 3.1
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 5.7
 					},
 					{
 						"id": "pharma",
-						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 9.0
+						"umsatz_markt_neuheiten": 3.1,
+						"umsatz_nachahmer_innovationen": 4.4
 					},
 					{
 						"id": "holz",
 						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 6.4
+						"umsatz_nachahmer_innovationen": 2.8
 					},
 					{
 						"id": "metall",
 						"umsatz_markt_neuheiten": 1.9,
-						"umsatz_nachahmer_innovationen": 6.6
+						"umsatz_nachahmer_innovationen": 5.8
 					},
 					{
 						"id": "elektroindustrie",
-						"umsatz_markt_neuheiten": 4.2,
-						"umsatz_nachahmer_innovationen": 10.0
+						"umsatz_markt_neuheiten": 5.2,
+						"umsatz_nachahmer_innovationen": 16.6
 					},
 					{
 						"id": "fahrzeugbau",
-						"umsatz_markt_neuheiten": 10.7,
-						"umsatz_nachahmer_innovationen": 25.8
+						"umsatz_markt_neuheiten": 9.8,
+						"umsatz_nachahmer_innovationen": 26.5
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"umsatz_markt_neuheiten": 1.6,
-						"umsatz_nachahmer_innovationen": 7.9
+						"umsatz_markt_neuheiten": 0.7,
+						"umsatz_nachahmer_innovationen": 3.9
 					},
 					{
 						"id": "energie",
-						"umsatz_markt_neuheiten": 0.2,
-						"umsatz_nachahmer_innovationen": 1.8
+						"umsatz_markt_neuheiten": 0.4,
+						"umsatz_nachahmer_innovationen": 2.2
 					},
 					{
 						"id": "telekommunikation",
-						"umsatz_markt_neuheiten": 1.8,
-						"umsatz_nachahmer_innovationen": 10.3
+						"umsatz_markt_neuheiten": 2.9,
+						"umsatz_nachahmer_innovationen": 17.4
 					},
 					{
 						"id": "software",
-						"umsatz_markt_neuheiten": 2.8,
-						"umsatz_nachahmer_innovationen": 15.4
+						"umsatz_markt_neuheiten": 3.7,
+						"umsatz_nachahmer_innovationen": 8
 					},
 					{
 						"id": "finanz",
-						"umsatz_markt_neuheiten": 2.1,
-						"umsatz_nachahmer_innovationen": 10.5
+						"umsatz_markt_neuheiten": 1.8,
+						"umsatz_nachahmer_innovationen": 5.6
 					},
 					{
 						"id": "unternehmensberatung",
-						"umsatz_markt_neuheiten": 6.0,
-						"umsatz_nachahmer_innovationen": 5.1
+						"umsatz_markt_neuheiten": 0.9,
+						"umsatz_nachahmer_innovationen": 2.5
 					},
 					{
 						"id": "architektur",
-						"umsatz_markt_neuheiten": 1.2,
-						"umsatz_nachahmer_innovationen": 6.2
+						"umsatz_markt_neuheiten": 1.9,
+						"umsatz_nachahmer_innovationen": 10
 					},
 					{
 						"id": "forschung",
 						"umsatz_markt_neuheiten": 4.7,
-						"umsatz_nachahmer_innovationen": 5.5
+						"umsatz_nachahmer_innovationen": 4.1
 					},
 					{
 						"id": "kreativ",
-						"umsatz_markt_neuheiten": 1.0,
-						"umsatz_nachahmer_innovationen": 3.6
+						"umsatz_markt_neuheiten": 0.7,
+						"umsatz_nachahmer_innovationen": 4.3
 					}
 				],
 				"de": [
 					{
 						"id": "nahrung",
-						"umsatz_markt_neuheiten": 0.8,
-						"umsatz_nachahmer_innovationen": 3.2
-					},
-					{
-						"id": "pharma",
-						"umsatz_markt_neuheiten": 1.7,
-						"umsatz_nachahmer_innovationen": 9.0
-					},
-					{
-						"id": "holz",
-						"umsatz_markt_neuheiten": 1.2,
-						"umsatz_nachahmer_innovationen": 5.2
-					},
-					{
-						"id": "metall",
-						"umsatz_markt_neuheiten": 1.3,
-						"umsatz_nachahmer_innovationen": 4.8
-					},
-					{
-						"id": "elektroindustrie",
-						"umsatz_markt_neuheiten": 3.2,
-						"umsatz_nachahmer_innovationen": 11.7
-					},
-					{
-						"id": "fahrzeugbau",
-						"umsatz_markt_neuheiten": 11.4,
-						"umsatz_nachahmer_innovationen": 22.7
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"umsatz_markt_neuheiten": 1.8,
-						"umsatz_nachahmer_innovationen": 8.1
-					},
-					{
-						"id": "energie",
-						"umsatz_markt_neuheiten": 1.7,
-						"umsatz_nachahmer_innovationen": 3.3
-					},
-					{
-						"id": "telekommunikation",
-						"umsatz_markt_neuheiten": 2.7,
-						"umsatz_nachahmer_innovationen": 8.4
-					},
-					{
-						"id": "software",
-						"umsatz_markt_neuheiten": 6.4,
-						"umsatz_nachahmer_innovationen": 22.8
-					},
-					{
-						"id": "finanz",
-						"umsatz_markt_neuheiten": 2.2,
-						"umsatz_nachahmer_innovationen": 12.4
-					},
-					{
-						"id": "unternehmensberatung",
-						"umsatz_markt_neuheiten": 4.0,
-						"umsatz_nachahmer_innovationen": 8.8
-					},
-					{
-						"id": "architektur",
-						"umsatz_markt_neuheiten": 0.5,
+						"umsatz_markt_neuheiten": 1,
 						"umsatz_nachahmer_innovationen": 6.2
 					},
 					{
+						"id": "pharma",
+						"umsatz_markt_neuheiten": 2.3,
+						"umsatz_nachahmer_innovationen": 9.2
+					},
+					{
+						"id": "holz",
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 4.6
+					},
+					{
+						"id": "metall",
+						"umsatz_markt_neuheiten": 1.5,
+						"umsatz_nachahmer_innovationen": 6.2
+					},
+					{
+						"id": "elektroindustrie",
+						"umsatz_markt_neuheiten": 5.5,
+						"umsatz_nachahmer_innovationen": 13.9
+					},
+					{
+						"id": "fahrzeugbau",
+						"umsatz_markt_neuheiten": 11,
+						"umsatz_nachahmer_innovationen": 25
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"umsatz_markt_neuheiten": 4.7,
+						"umsatz_nachahmer_innovationen": 6.6
+					},
+					{
+						"id": "energie",
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 2.4
+					},
+					{
+						"id": "telekommunikation",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 11.5
+					},
+					{
+						"id": "software",
+						"umsatz_markt_neuheiten": 6.5,
+						"umsatz_nachahmer_innovationen": 24.9
+					},
+					{
+						"id": "finanz",
+						"umsatz_markt_neuheiten": 1.6,
+						"umsatz_nachahmer_innovationen": 6.6
+					},
+					{
+						"id": "unternehmensberatung",
+						"umsatz_markt_neuheiten": 3.9,
+						"umsatz_nachahmer_innovationen": 10.4
+					},
+					{
+						"id": "architektur",
+						"umsatz_markt_neuheiten": 3,
+						"umsatz_nachahmer_innovationen": 5.5
+					},
+					{
 						"id": "forschung",
-						"umsatz_markt_neuheiten": 21.3,
-						"umsatz_nachahmer_innovationen": 9.7
+						"umsatz_markt_neuheiten": 29,
+						"umsatz_nachahmer_innovationen": 10.3
 					},
 					{
 						"id": "kreativ",
-						"umsatz_markt_neuheiten": 2.5,
-						"umsatz_nachahmer_innovationen": 12.6
+						"umsatz_markt_neuheiten": 0.9,
+						"umsatz_nachahmer_innovationen": 8.1
 					}
 				]
 			}
@@ -1267,7 +1267,7 @@
 			"text": "Umweltinnovationen sind eine Vielzahl von Maßnahmen, die sich sowohl auf die Herstellungsprozesse (z.B. den damit verbundenen Energieverbrauch) als auch auf die Produkte (z.B. deren Recyclingfähigkeit) beziehen können. Details gehen aus den Folgediagrammen hervor.",
 			"facts": [
 				{
-					"fact": "52%",
+					"fact": "49%",
 					"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
 				}
 			]
@@ -1285,113 +1285,101 @@
 				"ber": [
 					{
 						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 4,
-						"industrie": 4,
-						"dienstleistungen": 4
+						"insgesamt": 6,
+						"industrie": 5,
+						"dienstleistungen": 6
 					},
 					{
 						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 2,
-						"industrie": 3,
-						"dienstleistungen": 2
+						"insgesamt": 6,
+						"industrie": 6,
+						"dienstleistungen": 6
 					},
 					{
 						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 3,
-						"industrie": 3,
-						"dienstleistungen": 3
+						"insgesamt": 6,
+						"industrie": 5,
+						"dienstleistungen": 6
 					},
 					{
-						"id": "lower_other_air_emissions",
+						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
 						"insgesamt": 2,
-						"industrie": 2,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "lower_water_or_soil_pollution",
-						"insgesamt": 3,
-						"industrie": 3,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "lower_noise_emissions",
-						"insgesamt": 2,
-						"industrie": 2,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 1,
-						"industrie": 2,
+						"industrie": 8,
 						"dienstleistungen": 1
 					},
 					{
+						"id": "replace_fossil_with_renewable_energy",
+						"insgesamt": 5,
+						"industrie": 7,
+						"dienstleistungen": 5
+					},
+					{
 						"id": "replace_hazardous_materials",
-						"insgesamt": 1,
-						"industrie": 3,
-						"dienstleistungen": 0
+						"insgesamt": 2,
+						"industrie": 4,
+						"dienstleistungen": 1
 					},
 					{
 						"id": "recycling_for_internal_or_sales_use",
-						"insgesamt": 3,
-						"industrie": 4,
+						"insgesamt": 4,
+						"industrie": 9,
 						"dienstleistungen": 3
+					},
+					{
+						"id": "protection_of_biodiversity",
+						"insgesamt": 2,
+						"industrie": 1,
+						"dienstleistungen": 2
 					}
 				],
 				"de": [
 					{
 						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 7,
-						"industrie": 9,
+						"insgesamt": 9,
+						"industrie": 14,
 						"dienstleistungen": 5
 					},
 					{
 						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 5,
-						"industrie": 6,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 5,
-						"industrie": 6,
-						"dienstleistungen": 4
-					},
-					{
-						"id": "lower_other_air_emissions",
-						"insgesamt": 2,
-						"industrie": 3,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "lower_water_or_soil_pollution",
-						"insgesamt": 3,
-						"industrie": 3,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "lower_noise_emissions",
-						"insgesamt": 3,
-						"industrie": 4,
-						"dienstleistungen": 1
-					},
-					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 7,
+						"insgesamt": 6,
 						"industrie": 8,
 						"dienstleistungen": 5
 					},
 					{
+						"id": "lower_co2_emissions_per_unit",
+						"insgesamt": 7,
+						"industrie": 11,
+						"dienstleistungen": 4
+					},
+					{
+						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
+						"insgesamt": 4,
+						"industrie": 6,
+						"dienstleistungen": 3
+					},
+					{
+						"id": "replace_fossil_with_renewable_energy",
+						"insgesamt": 7,
+						"industrie": 13,
+						"dienstleistungen": 4
+					},
+					{
 						"id": "replace_hazardous_materials",
 						"insgesamt": 3,
-						"industrie": 3,
-						"dienstleistungen": 1
+						"industrie": 6,
+						"dienstleistungen": 2
 					},
 					{
 						"id": "recycling_for_internal_or_sales_use",
 						"insgesamt": 6,
-						"industrie": 8,
+						"industrie": 10,
 						"dienstleistungen": 3
+					},
+					{
+						"id": "protection_of_biodiversity",
+						"insgesamt": 2,
+						"industrie": 5,
+						"dienstleistungen": 1
 					}
 				]
 			}
@@ -1408,72 +1396,84 @@
 			"data": {
 				"ber": [
 					{
+						"id": "compliance_with_existing_regulations",
+						"insgesamt": 20,
+						"industrie": 24,
+						"dienstleistungen": 18
+					},
+					{
 						"id": "existing_environmental_taxes_or_charges",
 						"insgesamt": 6,
-						"industrie": 11,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "compliance_with_existing_regulations",
-						"insgesamt": 19,
-						"industrie": 30,
-						"dienstleistungen": 14
-					},
-					{
-						"id": "public_funding_for_environmental_innovations",
-						"insgesamt": 4,
 						"industrie": 8,
-						"dienstleistungen": 3
+						"dienstleistungen": 6
 					},
 					{
 						"id": "expected_future_regulations_or_environmental_taxes",
-						"insgesamt": 11,
-						"industrie": 20,
-						"dienstleistungen": 7
+						"insgesamt": 12,
+						"industrie": 13,
+						"dienstleistungen": 12
 					},
 					{
-						"id": "current_or_expected_demand_for_environmental_innovations",
-						"insgesamt": 4,
-						"industrie": 7,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "improving_company_reputation",
-						"insgesamt": 8,
-						"industrie": 9,
-						"dienstleistungen": 8
-					},
-					{
-						"id": "industry_self_commitments_or_standards",
-						"insgesamt": 10,
-						"industrie": 10,
-						"dienstleistungen": 11
-					},
-					{
-						"id": "rising_costs_for_energy_or_raw_materials",
-						"insgesamt": 14,
-						"industrie": 27,
-						"dienstleistungen": 8
-					},
-					{
-						"id": "requirements_in_public_procurement",
-						"insgesamt": 5,
-						"industrie": 8,
-						"dienstleistungen": 4
-					}
-				],
-				"de": [
-					{
-						"id": "existing_environmental_taxes_or_charges",
-						"insgesamt": 9,
+						"id": "public_funding_for_environmental_innovations",
+						"insgesamt": 7,
 						"industrie": 10,
 						"dienstleistungen": 6
 					},
 					{
+						"id": "current_or_expected_demand_for_environmental_innovations",
+						"insgesamt": 10,
+						"industrie": 10,
+						"dienstleistungen": 9
+					},
+					{
+						"id": "improving_company_reputation",
+						"insgesamt": 10,
+						"industrie": 10,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "pressure_from_the_public_or_interest_groups",
+						"insgesamt": 2,
+						"industrie": 4,
+						"dienstleistungen": 2
+					},
+					{
+						"id": "industry_self_commitments_or_standards",
+						"insgesamt": 15,
+						"industrie": 14,
+						"dienstleistungen": 15
+					},
+					{
+						"id": "rising_costs_for_energy_or_raw_materials",
+						"insgesamt": 23,
+						"industrie": 33,
+						"dienstleistungen": 19
+					},
+					{
+						"id": "requirements_in_public_procurement",
+						"insgesamt": 7,
+						"industrie": 6,
+						"dienstleistungen": 7
+					}
+				],
+				"de": [
+					{
 						"id": "compliance_with_existing_regulations",
-						"insgesamt": 22,
-						"industrie": 24,
-						"dienstleistungen": 18
+						"insgesamt": 23,
+						"industrie": 25,
+						"dienstleistungen": 20
+					},
+					{
+						"id": "existing_environmental_taxes_or_charges",
+						"insgesamt": 10,
+						"industrie": 13,
+						"dienstleistungen": 5
+					},
+					{
+						"id": "expected_future_regulations_or_environmental_taxes",
+						"insgesamt": 15,
+						"industrie": 18,
+						"dienstleistungen": 10
 					},
 					{
 						"id": "public_funding_for_environmental_innovations",
@@ -1482,40 +1482,40 @@
 						"dienstleistungen": 5
 					},
 					{
-						"id": "expected_future_regulations_or_environmental_taxes",
-						"insgesamt": 12,
-						"industrie": 14,
-						"dienstleistungen": 9
-					},
-					{
 						"id": "current_or_expected_demand_for_environmental_innovations",
-						"insgesamt": 9,
-						"industrie": 9,
-						"dienstleistungen": 8
+						"insgesamt": 6,
+						"industrie": 7,
+						"dienstleistungen": 5
 					},
 					{
 						"id": "improving_company_reputation",
-						"insgesamt": 12,
-						"industrie": 13,
-						"dienstleistungen": 11
+						"insgesamt": 13,
+						"industrie": 14,
+						"dienstleistungen": 13
+					},
+					{
+						"id": "pressure_from_the_public_or_interest_groups",
+						"insgesamt": 4,
+						"industrie": 5,
+						"dienstleistungen": 3
 					},
 					{
 						"id": "industry_self_commitments_or_standards",
-						"insgesamt": 10,
-						"industrie": 11,
+						"insgesamt": 11,
+						"industrie": 13,
 						"dienstleistungen": 9
 					},
 					{
 						"id": "rising_costs_for_energy_or_raw_materials",
 						"insgesamt": 24,
-						"industrie": 31,
-						"dienstleistungen": 9
+						"industrie": 32,
+						"dienstleistungen": 12
 					},
 					{
 						"id": "requirements_in_public_procurement",
 						"insgesamt": 5,
 						"industrie": 5,
-						"dienstleistungen": 5
+						"dienstleistungen": 4
 					}
 				]
 			}
@@ -1530,11 +1530,11 @@
 			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
 			"facts": [
 				{
-					"fact": "19%",
+					"fact": "21%",
 					"unit": "der Berliner Innovationsausgaben kommen von KMU, im Vergleich mit"
 				},
 				{
-					"fact": "14%",
+					"fact": "15%",
 					"unit": "deutschlandweit"
 				}
 			]
@@ -1624,905 +1624,455 @@
 				"ber": [
 					{
 						"x": "nahrung",
-						"y": "own_region",
+						"y": "germany",
 						"value": 7
 					},
 					{
 						"x": "nahrung",
-						"y": "different_regions_in_germany",
-						"value": 9
-					},
-					{
-						"x": "nahrung",
-						"y": "eu_foreign",
-						"value": 5
-					},
-					{
-						"x": "nahrung",
-						"y": "usa",
-						"value": 3
-					},
-					{
-						"x": "nahrung",
-						"y": "asia",
-						"value": 1
+						"y": "eu_and_efta",
+						"value": 0
 					},
 					{
 						"x": "nahrung",
 						"y": "other_countries",
-						"value": 2
+						"value": 0
 					},
 					{
 						"x": "pharma",
-						"y": "own_region",
-						"value": 29
-					},
-					{
-						"x": "pharma",
-						"y": "different_regions_in_germany",
-						"value": 36
-					},
-					{
-						"x": "pharma",
-						"y": "eu_foreign",
-						"value": 20
-					},
-					{
-						"x": "pharma",
-						"y": "usa",
-						"value": 15
-					},
-					{
-						"x": "pharma",
-						"y": "asia",
-						"value": 14
-					},
-					{
-						"x": "pharma",
-						"y": "other_countries",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "own_region",
-						"value": 16
-					},
-					{
-						"x": "holz",
-						"y": "different_regions_in_germany",
-						"value": 20
-					},
-					{
-						"x": "holz",
-						"y": "eu_foreign",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "own_region",
-						"value": 33
-					},
-					{
-						"x": "metall",
-						"y": "different_regions_in_germany",
-						"value": 28
-					},
-					{
-						"x": "metall",
-						"y": "eu_foreign",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "own_region",
-						"value": 24
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "different_regions_in_germany",
-						"value": 51
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "eu_foreign",
-						"value": 11
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "own_region",
-						"value": 45
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "different_regions_in_germany",
-						"value": 39
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "eu_foreign",
-						"value": 9
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "usa",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "asia",
-						"value": 5
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_countries",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "own_region",
-						"value": 6
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "different_regions_in_germany",
-						"value": 5
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "eu_foreign",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "own_region",
-						"value": 14
-					},
-					{
-						"x": "energie",
-						"y": "different_regions_in_germany",
-						"value": 16
-					},
-					{
-						"x": "energie",
-						"y": "eu_foreign",
-						"value": 6
-					},
-					{
-						"x": "energie",
-						"y": "usa",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "asia",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "other_countries",
-						"value": 2
-					},
-					{
-						"x": "telekommunikation",
-						"y": "own_region",
-						"value": 35
-					},
-					{
-						"x": "telekommunikation",
-						"y": "different_regions_in_germany",
-						"value": 32
-					},
-					{
-						"x": "telekommunikation",
-						"y": "eu_foreign",
+						"y": "germany",
 						"value": 17
 					},
 					{
+						"x": "pharma",
+						"y": "eu_and_efta",
+						"value": 13
+					},
+					{
+						"x": "pharma",
+						"y": "other_countries",
+						"value": 13
+					},
+					{
+						"x": "holz",
+						"y": "germany",
+						"value": 42
+					},
+					{
+						"x": "holz",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "metall",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "germany",
+						"value": 41
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "eu_and_efta",
+						"value": 16
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_countries",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "germany",
+						"value": 38
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "eu_and_efta",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "germany",
+						"value": 13
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "eu_and_efta",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "germany",
+						"value": 42
+					},
+					{
+						"x": "energie",
+						"y": "eu_and_efta",
+						"value": 18
+					},
+					{
+						"x": "energie",
+						"y": "other_countries",
+						"value": 18
+					},
+					{
 						"x": "telekommunikation",
-						"y": "usa",
+						"y": "germany",
 						"value": 8
 					},
 					{
 						"x": "telekommunikation",
-						"y": "asia",
-						"value": 2
+						"y": "eu_and_efta",
+						"value": 8
 					},
 					{
 						"x": "telekommunikation",
 						"y": "other_countries",
-						"value": 2
+						"value": 4
 					},
 					{
 						"x": "software",
-						"y": "own_region",
-						"value": 19
+						"y": "germany",
+						"value": 28
 					},
 					{
 						"x": "software",
-						"y": "different_regions_in_germany",
-						"value": 30
-					},
-					{
-						"x": "software",
-						"y": "eu_foreign",
-						"value": 12
-					},
-					{
-						"x": "software",
-						"y": "usa",
-						"value": 3
-					},
-					{
-						"x": "software",
-						"y": "asia",
-						"value": 3
+						"y": "eu_and_efta",
+						"value": 7
 					},
 					{
 						"x": "software",
 						"y": "other_countries",
-						"value": 3
-					},
-					{
-						"x": "finanz",
-						"y": "own_region",
-						"value": 19
-					},
-					{
-						"x": "finanz",
-						"y": "different_regions_in_germany",
-						"value": 20
-					},
-					{
-						"x": "finanz",
-						"y": "eu_foreign",
 						"value": 5
 					},
 					{
 						"x": "finanz",
-						"y": "usa",
-						"value": 1
+						"y": "germany",
+						"value": 3
 					},
 					{
 						"x": "finanz",
-						"y": "asia",
-						"value": 1
+						"y": "eu_and_efta",
+						"value": 0
 					},
 					{
 						"x": "finanz",
 						"y": "other_countries",
-						"value": 1
+						"value": 0
 					},
 					{
 						"x": "unternehmensberatung",
-						"y": "own_region",
-						"value": 38
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "different_regions_in_germany",
-						"value": 50
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "eu_foreign",
+						"y": "germany",
 						"value": 16
 					},
 					{
 						"x": "unternehmensberatung",
-						"y": "usa",
-						"value": 7
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "asia",
-						"value": 7
+						"y": "eu_and_efta",
+						"value": 0
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "other_countries",
-						"value": 9
-					},
-					{
-						"x": "architektur",
-						"y": "own_region",
-						"value": 25
-					},
-					{
-						"x": "architektur",
-						"y": "different_regions_in_germany",
-						"value": 26
-					},
-					{
-						"x": "architektur",
-						"y": "eu_foreign",
-						"value": 5
-					},
-					{
-						"x": "architektur",
-						"y": "usa",
 						"value": 0
 					},
 					{
 						"x": "architektur",
-						"y": "asia",
-						"value": 4
+						"y": "germany",
+						"value": 11
+					},
+					{
+						"x": "architektur",
+						"y": "eu_and_efta",
+						"value": 0
 					},
 					{
 						"x": "architektur",
 						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "forschung",
+						"y": "germany",
+						"value": 66
+					},
+					{
+						"x": "forschung",
+						"y": "eu_and_efta",
+						"value": 26
+					},
+					{
+						"x": "forschung",
+						"y": "other_countries",
+						"value": 27
+					},
+					{
+						"x": "kreativ",
+						"y": "germany",
+						"value": 5
+					},
+					{
+						"x": "kreativ",
+						"y": "eu_and_efta",
 						"value": 4
 					},
 					{
-						"x": "forschung",
-						"y": "own_region",
-						"value": 59
-					},
-					{
-						"x": "forschung",
-						"y": "different_regions_in_germany",
-						"value": 63
-					},
-					{
-						"x": "forschung",
-						"y": "eu_foreign",
-						"value": 41
-					},
-					{
-						"x": "forschung",
-						"y": "usa",
-						"value": 7
-					},
-					{
-						"x": "forschung",
-						"y": "asia",
-						"value": 21
-					},
-					{
-						"x": "forschung",
-						"y": "other_countries",
-						"value": 14
-					},
-					{
-						"x": "kreativ",
-						"y": "own_region",
-						"value": 29
-					},
-					{
-						"x": "kreativ",
-						"y": "different_regions_in_germany",
-						"value": 33
-					},
-					{
-						"x": "kreativ",
-						"y": "eu_foreign",
-						"value": 3
-					},
-					{
-						"x": "kreativ",
-						"y": "usa",
-						"value": 3
-					},
-					{
-						"x": "kreativ",
-						"y": "asia",
-						"value": 3
-					},
-					{
 						"x": "kreativ",
 						"y": "other_countries",
-						"value": 3
+						"value": 0
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
-						"y": "own_region",
-						"value": 9
-					},
-					{
-						"x": "nahrung",
-						"y": "different_regions_in_germany",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "eu_foreign",
-						"value": 3
-					},
-					{
-						"x": "nahrung",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "nahrung",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "nahrung",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "pharma",
-						"y": "own_region",
-						"value": 21
-					},
-					{
-						"x": "pharma",
-						"y": "different_regions_in_germany",
-						"value": 27
-					},
-					{
-						"x": "pharma",
-						"y": "eu_foreign",
-						"value": 14
-					},
-					{
-						"x": "pharma",
-						"y": "usa",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "asia",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "other_countries",
-						"value": 3
-					},
-					{
-						"x": "holz",
-						"y": "own_region",
-						"value": 19
-					},
-					{
-						"x": "holz",
-						"y": "different_regions_in_germany",
-						"value": 9
-					},
-					{
-						"x": "holz",
-						"y": "eu_foreign",
+						"y": "germany",
 						"value": 5
 					},
 					{
-						"x": "holz",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "own_region",
-						"value": 13
-					},
-					{
-						"x": "metall",
-						"y": "different_regions_in_germany",
-						"value": 14
-					},
-					{
-						"x": "metall",
-						"y": "eu_foreign",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "usa",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "asia",
+						"x": "nahrung",
+						"y": "eu_and_efta",
 						"value": 1
 					},
 					{
-						"x": "metall",
+						"x": "nahrung",
 						"y": "other_countries",
 						"value": 0
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "own_region",
-						"value": 28
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "different_regions_in_germany",
-						"value": 32
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "eu_foreign",
-						"value": 16
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "usa",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "asia",
-						"value": 5
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "other_countries",
-						"value": 1
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "own_region",
-						"value": 23
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "different_regions_in_germany",
-						"value": 29
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "eu_foreign",
-						"value": 12
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "usa",
-						"value": 6
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "asia",
-						"value": 6
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_countries",
-						"value": 2
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "own_region",
-						"value": 17
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "different_regions_in_germany",
-						"value": 23
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "eu_foreign",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "asia",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_countries",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "own_region",
-						"value": 31
-					},
-					{
-						"x": "energie",
-						"y": "different_regions_in_germany",
-						"value": 14
-					},
-					{
-						"x": "energie",
-						"y": "eu_foreign",
-						"value": 5
-					},
-					{
-						"x": "energie",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "other_countries",
-						"value": 1
-					},
-					{
-						"x": "telekommunikation",
-						"y": "own_region",
-						"value": 24
-					},
-					{
-						"x": "telekommunikation",
-						"y": "different_regions_in_germany",
-						"value": 24
-					},
-					{
-						"x": "telekommunikation",
-						"y": "eu_foreign",
-						"value": 12
-					},
-					{
-						"x": "telekommunikation",
-						"y": "usa",
-						"value": 2
-					},
-					{
-						"x": "telekommunikation",
-						"y": "asia",
-						"value": 2
-					},
-					{
-						"x": "telekommunikation",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "software",
-						"y": "own_region",
-						"value": 27
-					},
-					{
-						"x": "software",
-						"y": "different_regions_in_germany",
-						"value": 24
-					},
-					{
-						"x": "software",
-						"y": "eu_foreign",
-						"value": 14
-					},
-					{
-						"x": "software",
-						"y": "usa",
-						"value": 3
-					},
-					{
-						"x": "software",
-						"y": "asia",
-						"value": 2
-					},
-					{
-						"x": "software",
-						"y": "other_countries",
-						"value": 6
-					},
-					{
-						"x": "finanz",
-						"y": "own_region",
-						"value": 15
-					},
-					{
-						"x": "finanz",
-						"y": "different_regions_in_germany",
-						"value": 18
-					},
-					{
-						"x": "finanz",
-						"y": "eu_foreign",
-						"value": 1
-					},
-					{
-						"x": "finanz",
-						"y": "usa",
-						"value": 0
-					},
-					{
-						"x": "finanz",
-						"y": "asia",
-						"value": 0
-					},
-					{
-						"x": "finanz",
-						"y": "other_countries",
-						"value": 0
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "own_region",
-						"value": 28
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "different_regions_in_germany",
-						"value": 37
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "eu_foreign",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "usa",
-						"value": 1
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "asia",
-						"value": 3
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "other_countries",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "own_region",
+						"x": "pharma",
+						"y": "germany",
 						"value": 22
 					},
 					{
-						"x": "architektur",
-						"y": "different_regions_in_germany",
-						"value": 16
+						"x": "pharma",
+						"y": "eu_and_efta",
+						"value": 6
 					},
 					{
-						"x": "architektur",
-						"y": "eu_foreign",
+						"x": "pharma",
+						"y": "other_countries",
+						"value": 3
+					},
+					{
+						"x": "holz",
+						"y": "germany",
 						"value": 9
 					},
 					{
-						"x": "architektur",
-						"y": "usa",
-						"value": 2
-					},
-					{
-						"x": "architektur",
-						"y": "asia",
+						"x": "holz",
+						"y": "eu_and_efta",
 						"value": 1
 					},
 					{
-						"x": "architektur",
+						"x": "holz",
 						"y": "other_countries",
-						"value": 5
+						"value": 0
 					},
 					{
-						"x": "forschung",
-						"y": "own_region",
-						"value": 65
+						"x": "metall",
+						"y": "germany",
+						"value": 11
 					},
 					{
-						"x": "forschung",
-						"y": "different_regions_in_germany",
-						"value": 52
+						"x": "metall",
+						"y": "eu_and_efta",
+						"value": 3
 					},
 					{
-						"x": "forschung",
-						"y": "eu_foreign",
-						"value": 40
-					},
-					{
-						"x": "forschung",
-						"y": "usa",
-						"value": 25
-					},
-					{
-						"x": "forschung",
-						"y": "asia",
-						"value": 12
-					},
-					{
-						"x": "forschung",
+						"x": "metall",
 						"y": "other_countries",
-						"value": 4
-					},
-					{
-						"x": "kreativ",
-						"y": "own_region",
-						"value": 18
-					},
-					{
-						"x": "kreativ",
-						"y": "different_regions_in_germany",
-						"value": 14
-					},
-					{
-						"x": "kreativ",
-						"y": "eu_foreign",
-						"value": 4
-					},
-					{
-						"x": "kreativ",
-						"y": "usa",
 						"value": 2
 					},
 					{
-						"x": "kreativ",
-						"y": "asia",
+						"x": "elektroindustrie",
+						"y": "germany",
+						"value": 22
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "eu_and_efta",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_countries",
 						"value": 5
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "germany",
+						"value": 16
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "eu_and_efta",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_countries",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "eu_and_efta",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "germany",
+						"value": 12
+					},
+					{
+						"x": "energie",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "energie",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "software",
+						"y": "germany",
+						"value": 22
+					},
+					{
+						"x": "software",
+						"y": "eu_and_efta",
+						"value": 9
+					},
+					{
+						"x": "software",
+						"y": "other_countries",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "germany",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "germany",
+						"value": 8
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "germany",
+						"value": 12
+					},
+					{
+						"x": "architektur",
+						"y": "eu_and_efta",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "other_countries",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "germany",
+						"value": 54
+					},
+					{
+						"x": "forschung",
+						"y": "eu_and_efta",
+						"value": 27
+					},
+					{
+						"x": "forschung",
+						"y": "other_countries",
+						"value": 11
+					},
+					{
+						"x": "kreativ",
+						"y": "germany",
+						"value": 9
+					},
+					{
+						"x": "kreativ",
+						"y": "eu_and_efta",
+						"value": 0
 					},
 					{
 						"x": "kreativ",
 						"y": "other_countries",
-						"value": 5
+						"value": 0
 					}
 				]
 			}
@@ -2538,27 +2088,22 @@
 					{
 						"x": "nahrung",
 						"y": "own_group",
-						"value": 4
+						"value": 3
 					},
 					{
 						"x": "nahrung",
-						"y": "customers_private",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "customers_public",
-						"value": 2
+						"y": "customers",
+						"value": 7
 					},
 					{
 						"x": "nahrung",
 						"y": "suppliers",
-						"value": 4
+						"value": 5
 					},
 					{
 						"x": "nahrung",
 						"y": "competitors",
-						"value": 4
+						"value": 9
 					},
 					{
 						"x": "nahrung",
@@ -2567,368 +2112,453 @@
 					},
 					{
 						"x": "nahrung",
-						"y": "universities",
-						"value": 7
+						"y": "other_firms",
+						"value": 12
 					},
 					{
 						"x": "nahrung",
-						"y": "public_research_institutes",
-						"value": 0
-					},
-					{
-						"x": "nahrung",
-						"y": "associations",
-						"value": 5
-					},
-					{
-						"x": "pharma",
-						"y": "own_group",
-						"value": 9
-					},
-					{
-						"x": "pharma",
-						"y": "customers_private",
-						"value": 15
-					},
-					{
-						"x": "pharma",
-						"y": "customers_public",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "suppliers",
-						"value": 15
-					},
-					{
-						"x": "pharma",
-						"y": "competitors",
-						"value": 23
-					},
-					{
-						"x": "pharma",
-						"y": "consulting_firms",
-						"value": 15
-					},
-					{
-						"x": "pharma",
 						"y": "universities",
-						"value": 22
-					},
-					{
-						"x": "pharma",
-						"y": "public_research_institutes",
-						"value": 16
-					},
-					{
-						"x": "pharma",
-						"y": "associations",
-						"value": 5
-					},
-					{
-						"x": "holz",
-						"y": "own_group",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "customers_private",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "customers_public",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "suppliers",
-						"value": 18
-					},
-					{
-						"x": "holz",
-						"y": "competitors",
-						"value": 14
-					},
-					{
-						"x": "holz",
-						"y": "consulting_firms",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "universities",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "public_research_institutes",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "associations",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "own_group",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "customers_private",
-						"value": 14
-					},
-					{
-						"x": "metall",
-						"y": "customers_public",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "suppliers",
-						"value": 25
-					},
-					{
-						"x": "metall",
-						"y": "competitors",
-						"value": 13
-					},
-					{
-						"x": "metall",
-						"y": "consulting_firms",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "universities",
-						"value": 23
-					},
-					{
-						"x": "metall",
-						"y": "public_research_institutes",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "associations",
-						"value": 2
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "own_group",
-						"value": 16
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "customers_private",
 						"value": 19
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "customers_public",
-						"value": 0
+						"x": "nahrung",
+						"y": "public_research_institutes",
+						"value": 8
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "suppliers",
-						"value": 27
+						"x": "nahrung",
+						"y": "government_agencies",
+						"value": 2
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "competitors",
-						"value": 15
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "consulting_firms",
+						"x": "nahrung",
+						"y": "associations",
 						"value": 6
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "universities",
-						"value": 32
+						"x": "nahrung",
+						"y": "others",
+						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
-						"y": "public_research_institutes",
-						"value": 31
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "associations",
+						"x": "pharma",
+						"y": "own_group",
 						"value": 11
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "own_group",
+						"x": "pharma",
+						"y": "customers",
 						"value": 23
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "customers_private",
-						"value": 28
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "customers_public",
-						"value": 15
-					},
-					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
 						"y": "suppliers",
-						"value": 25
+						"value": 21
 					},
 					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
 						"y": "competitors",
-						"value": 16
+						"value": 11
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "consulting_firms",
-						"value": 13
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "universities",
-						"value": 29
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "public_research_institutes",
-						"value": 34
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "associations",
-						"value": 14
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "own_group",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "customers_private",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "customers_public",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "suppliers",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "competitors",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "consulting_firms",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "universities",
-						"value": 6
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "public_research_institutes",
-						"value": 5
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "associations",
-						"value": 1
-					},
-					{
-						"x": "energie",
-						"y": "own_group",
-						"value": 7
-					},
-					{
-						"x": "energie",
-						"y": "customers_private",
-						"value": 8
-					},
-					{
-						"x": "energie",
-						"y": "customers_public",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "suppliers",
-						"value": 8
-					},
-					{
-						"x": "energie",
-						"y": "competitors",
-						"value": 9
-					},
-					{
-						"x": "energie",
-						"y": "consulting_firms",
-						"value": 6
-					},
-					{
-						"x": "energie",
-						"y": "universities",
-						"value": 9
-					},
-					{
-						"x": "energie",
-						"y": "public_research_institutes",
-						"value": 6
-					},
-					{
-						"x": "energie",
-						"y": "associations",
-						"value": 4
-					},
-					{
-						"x": "telekommunikation",
-						"y": "own_group",
-						"value": 15
-					},
-					{
-						"x": "telekommunikation",
-						"y": "customers_private",
-						"value": 20
-					},
-					{
-						"x": "telekommunikation",
-						"y": "customers_public",
-						"value": 4
-					},
-					{
-						"x": "telekommunikation",
-						"y": "suppliers",
-						"value": 30
-					},
-					{
-						"x": "telekommunikation",
-						"y": "competitors",
-						"value": 16
-					},
-					{
-						"x": "telekommunikation",
+						"x": "pharma",
 						"y": "consulting_firms",
 						"value": 12
 					},
 					{
+						"x": "pharma",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "pharma",
+						"y": "universities",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "public_research_institutes",
+						"value": 12
+					},
+					{
+						"x": "pharma",
+						"y": "government_agencies",
+						"value": 3
+					},
+					{
+						"x": "pharma",
+						"y": "associations",
+						"value": 5
+					},
+					{
+						"x": "pharma",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "suppliers",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "consulting_firms",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "other_firms",
+						"value": 43
+					},
+					{
+						"x": "holz",
+						"y": "universities",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "associations",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "own_group",
+						"value": 13
+					},
+					{
+						"x": "metall",
+						"y": "customers",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "suppliers",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "metall",
+						"y": "other_firms",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "universities",
+						"value": 15
+					},
+					{
+						"x": "metall",
+						"y": "public_research_institutes",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "associations",
+						"value": 12
+					},
+					{
+						"x": "metall",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "own_group",
+						"value": 35
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "customers",
+						"value": 29
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "suppliers",
+						"value": 29
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "competitors",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "consulting_firms",
+						"value": 23
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_firms",
+						"value": 9
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "universities",
+						"value": 44
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "public_research_institutes",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "associations",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "own_group",
+						"value": 13
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "customers",
+						"value": 18
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "suppliers",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "competitors",
+						"value": 12
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "consulting_firms",
+						"value": 13
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "universities",
+						"value": 47
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "public_research_institutes",
+						"value": 18
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "government_agencies",
+						"value": 8
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "associations",
+						"value": 19
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "others",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "universities",
+						"value": 17
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "public_research_institutes",
+						"value": 12
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "associations",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "own_group",
+						"value": 44
+					},
+					{
+						"x": "energie",
+						"y": "customers",
+						"value": 36
+					},
+					{
+						"x": "energie",
+						"y": "suppliers",
+						"value": 34
+					},
+					{
+						"x": "energie",
+						"y": "competitors",
+						"value": 42
+					},
+					{
+						"x": "energie",
+						"y": "consulting_firms",
+						"value": 45
+					},
+					{
+						"x": "energie",
+						"y": "other_firms",
+						"value": 20
+					},
+					{
+						"x": "energie",
+						"y": "universities",
+						"value": 30
+					},
+					{
+						"x": "energie",
+						"y": "public_research_institutes",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "government_agencies",
+						"value": 19
+					},
+					{
+						"x": "energie",
+						"y": "associations",
+						"value": 32
+					},
+					{
+						"x": "energie",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "telekommunikation",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "customers",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "telekommunikation",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "telekommunikation",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
 						"x": "telekommunikation",
 						"y": "universities",
-						"value": 6
+						"value": 7
 					},
 					{
 						"x": "telekommunikation",
@@ -2937,68 +2567,83 @@
 					},
 					{
 						"x": "telekommunikation",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
 						"y": "associations",
-						"value": 9
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "others",
+						"value": 3
 					},
 					{
 						"x": "software",
 						"y": "own_group",
-						"value": 16
+						"value": 5
 					},
 					{
 						"x": "software",
-						"y": "customers_private",
-						"value": 13
-					},
-					{
-						"x": "software",
-						"y": "customers_public",
-						"value": 11
+						"y": "customers",
+						"value": 15
 					},
 					{
 						"x": "software",
 						"y": "suppliers",
-						"value": 19
+						"value": 10
 					},
 					{
 						"x": "software",
 						"y": "competitors",
-						"value": 19
-					},
-					{
-						"x": "software",
-						"y": "consulting_firms",
-						"value": 7
-					},
-					{
-						"x": "software",
-						"y": "universities",
 						"value": 24
 					},
 					{
 						"x": "software",
+						"y": "consulting_firms",
+						"value": 12
+					},
+					{
+						"x": "software",
+						"y": "other_firms",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "universities",
+						"value": 22
+					},
+					{
+						"x": "software",
 						"y": "public_research_institutes",
-						"value": 5
+						"value": 16
+					},
+					{
+						"x": "software",
+						"y": "government_agencies",
+						"value": 3
 					},
 					{
 						"x": "software",
 						"y": "associations",
-						"value": 12
+						"value": 15
+					},
+					{
+						"x": "software",
+						"y": "others",
+						"value": 1
 					},
 					{
 						"x": "finanz",
 						"y": "own_group",
-						"value": 17
+						"value": 3
 					},
 					{
 						"x": "finanz",
-						"y": "customers_private",
-						"value": 17
-					},
-					{
-						"x": "finanz",
-						"y": "customers_public",
-						"value": 12
+						"y": "customers",
+						"value": 4
 					},
 					{
 						"x": "finanz",
@@ -3008,17 +2653,22 @@
 					{
 						"x": "finanz",
 						"y": "competitors",
-						"value": 14
+						"value": 3
 					},
 					{
 						"x": "finanz",
 						"y": "consulting_firms",
-						"value": 5
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "other_firms",
+						"value": 2
 					},
 					{
 						"x": "finanz",
 						"y": "universities",
-						"value": 4
+						"value": 7
 					},
 					{
 						"x": "finanz",
@@ -3027,93 +2677,118 @@
 					},
 					{
 						"x": "finanz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "finanz",
 						"y": "associations",
 						"value": 5
 					},
 					{
+						"x": "finanz",
+						"y": "others",
+						"value": 3
+					},
+					{
 						"x": "unternehmensberatung",
 						"y": "own_group",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "customers",
+						"value": 17
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "suppliers",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "competitors",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "consulting_firms",
+						"value": 8
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "universities",
+						"value": 17
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "public_research_institutes",
+						"value": 16
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "government_agencies",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "associations",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "universities",
 						"value": 9
 					},
 					{
-						"x": "unternehmensberatung",
-						"y": "customers_private",
-						"value": 20
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "customers_public",
-						"value": 30
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "suppliers",
-						"value": 18
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "competitors",
-						"value": 25
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "consulting_firms",
-						"value": 26
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "universities",
-						"value": 35
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "public_research_institutes",
-						"value": 14
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "associations",
-						"value": 29
-					},
-					{
-						"x": "architektur",
-						"y": "own_group",
-						"value": 12
-					},
-					{
-						"x": "architektur",
-						"y": "customers_private",
-						"value": 11
-					},
-					{
-						"x": "architektur",
-						"y": "customers_public",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "suppliers",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "competitors",
-						"value": 13
-					},
-					{
-						"x": "architektur",
-						"y": "consulting_firms",
-						"value": 15
-					},
-					{
-						"x": "architektur",
-						"y": "universities",
-						"value": 15
-					},
-					{
 						"x": "architektur",
 						"y": "public_research_institutes",
-						"value": 4
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "government_agencies",
+						"value": 1
 					},
 					{
 						"x": "architektur",
@@ -3121,131 +2796,156 @@
 						"value": 2
 					},
 					{
+						"x": "architektur",
+						"y": "others",
+						"value": 2
+					},
+					{
 						"x": "forschung",
 						"y": "own_group",
-						"value": 14
+						"value": 5
 					},
 					{
 						"x": "forschung",
-						"y": "customers_private",
-						"value": 35
-					},
-					{
-						"x": "forschung",
-						"y": "customers_public",
-						"value": 21
-					},
-					{
-						"x": "forschung",
-						"y": "suppliers",
-						"value": 36
-					},
-					{
-						"x": "forschung",
-						"y": "competitors",
-						"value": 36
-					},
-					{
-						"x": "forschung",
-						"y": "consulting_firms",
-						"value": 49
-					},
-					{
-						"x": "forschung",
-						"y": "universities",
-						"value": 70
-					},
-					{
-						"x": "forschung",
-						"y": "public_research_institutes",
+						"y": "customers",
 						"value": 48
 					},
 					{
 						"x": "forschung",
+						"y": "suppliers",
+						"value": 23
+					},
+					{
+						"x": "forschung",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "consulting_firms",
+						"value": 53
+					},
+					{
+						"x": "forschung",
+						"y": "other_firms",
+						"value": 36
+					},
+					{
+						"x": "forschung",
+						"y": "universities",
+						"value": 62
+					},
+					{
+						"x": "forschung",
+						"y": "public_research_institutes",
+						"value": 51
+					},
+					{
+						"x": "forschung",
+						"y": "government_agencies",
+						"value": 12
+					},
+					{
+						"x": "forschung",
 						"y": "associations",
-						"value": 27
+						"value": 12
+					},
+					{
+						"x": "forschung",
+						"y": "others",
+						"value": 13
 					},
 					{
 						"x": "kreativ",
 						"y": "own_group",
-						"value": 25
+						"value": 3
 					},
 					{
 						"x": "kreativ",
-						"y": "customers_private",
-						"value": 18
-					},
-					{
-						"x": "kreativ",
-						"y": "customers_public",
-						"value": 13
+						"y": "customers",
+						"value": 2
 					},
 					{
 						"x": "kreativ",
 						"y": "suppliers",
-						"value": 22
+						"value": 3
 					},
 					{
 						"x": "kreativ",
 						"y": "competitors",
-						"value": 17
+						"value": 4
 					},
 					{
 						"x": "kreativ",
 						"y": "consulting_firms",
-						"value": 3
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "other_firms",
+						"value": 0
 					},
 					{
 						"x": "kreativ",
 						"y": "universities",
-						"value": 13
-					},
-					{
-						"x": "kreativ",
-						"y": "public_research_institutes",
 						"value": 3
 					},
 					{
 						"x": "kreativ",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
 						"y": "associations",
-						"value": 10
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "others",
+						"value": 0
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
 						"y": "own_group",
-						"value": 3
-					},
-					{
-						"x": "nahrung",
-						"y": "customers_private",
 						"value": 4
 					},
 					{
 						"x": "nahrung",
-						"y": "customers_public",
-						"value": 2
+						"y": "customers",
+						"value": 0
 					},
 					{
 						"x": "nahrung",
 						"y": "suppliers",
-						"value": 5
+						"value": 1
 					},
 					{
 						"x": "nahrung",
 						"y": "competitors",
-						"value": 3
+						"value": 1
 					},
 					{
 						"x": "nahrung",
 						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "nahrung",
+						"y": "other_firms",
 						"value": 2
 					},
 					{
 						"x": "nahrung",
 						"y": "universities",
-						"value": 3
+						"value": 2
 					},
 					{
 						"x": "nahrung",
@@ -3254,628 +2954,768 @@
 					},
 					{
 						"x": "nahrung",
-						"y": "associations",
-						"value": 3
-					},
-					{
-						"x": "pharma",
-						"y": "own_group",
-						"value": 15
-					},
-					{
-						"x": "pharma",
-						"y": "customers_private",
-						"value": 12
-					},
-					{
-						"x": "pharma",
-						"y": "customers_public",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "suppliers",
-						"value": 14
-					},
-					{
-						"x": "pharma",
-						"y": "competitors",
-						"value": 9
-					},
-					{
-						"x": "pharma",
-						"y": "consulting_firms",
-						"value": 15
-					},
-					{
-						"x": "pharma",
-						"y": "universities",
-						"value": 22
-					},
-					{
-						"x": "pharma",
-						"y": "public_research_institutes",
-						"value": 10
-					},
-					{
-						"x": "pharma",
-						"y": "associations",
-						"value": 9
-					},
-					{
-						"x": "holz",
-						"y": "own_group",
-						"value": 10
-					},
-					{
-						"x": "holz",
-						"y": "customers_private",
-						"value": 8
-					},
-					{
-						"x": "holz",
-						"y": "customers_public",
-						"value": 7
-					},
-					{
-						"x": "holz",
-						"y": "suppliers",
-						"value": 11
-					},
-					{
-						"x": "holz",
-						"y": "competitors",
-						"value": 16
-					},
-					{
-						"x": "holz",
-						"y": "consulting_firms",
-						"value": 10
-					},
-					{
-						"x": "holz",
-						"y": "universities",
-						"value": 11
-					},
-					{
-						"x": "holz",
-						"y": "public_research_institutes",
-						"value": 5
-					},
-					{
-						"x": "holz",
-						"y": "associations",
-						"value": 7
-					},
-					{
-						"x": "metall",
-						"y": "own_group",
-						"value": 8
-					},
-					{
-						"x": "metall",
-						"y": "customers_private",
-						"value": 6
-					},
-					{
-						"x": "metall",
-						"y": "customers_public",
+						"y": "government_agencies",
 						"value": 1
 					},
 					{
-						"x": "metall",
-						"y": "suppliers",
-						"value": 7
-					},
-					{
-						"x": "metall",
-						"y": "competitors",
-						"value": 5
-					},
-					{
-						"x": "metall",
-						"y": "consulting_firms",
-						"value": 7
-					},
-					{
-						"x": "metall",
-						"y": "universities",
-						"value": 10
-					},
-					{
-						"x": "metall",
-						"y": "public_research_institutes",
-						"value": 2
-					},
-					{
-						"x": "metall",
+						"x": "nahrung",
 						"y": "associations",
-						"value": 4
+						"value": 1
 					},
 					{
-						"x": "elektroindustrie",
+						"x": "nahrung",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "pharma",
 						"y": "own_group",
-						"value": 15
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "customers_private",
-						"value": 10
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "customers_public",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "suppliers",
-						"value": 14
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "competitors",
-						"value": 12
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "consulting_firms",
-						"value": 15
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "universities",
-						"value": 31
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "public_research_institutes",
-						"value": 16
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "associations",
 						"value": 9
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "own_group",
-						"value": 13
+						"x": "pharma",
+						"y": "customers",
+						"value": 10
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "customers_private",
-						"value": 14
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "customers_public",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
 						"y": "suppliers",
-						"value": 19
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "competitors",
 						"value": 11
 					},
 					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
+						"y": "competitors",
+						"value": 6
+					},
+					{
+						"x": "pharma",
 						"y": "consulting_firms",
 						"value": 12
 					},
 					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "pharma",
 						"y": "universities",
 						"value": 23
 					},
 					{
-						"x": "fahrzeugbau",
+						"x": "pharma",
 						"y": "public_research_institutes",
-						"value": 9
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "associations",
-						"value": 8
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "own_group",
-						"value": 8
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "customers_private",
-						"value": 10
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "customers_public",
-						"value": 6
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "suppliers",
-						"value": 16
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "competitors",
-						"value": 9
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "consulting_firms",
-						"value": 13
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "universities",
 						"value": 12
 					},
 					{
-						"x": "sonstige_konsumgueter",
-						"y": "public_research_institutes",
-						"value": 8
+						"x": "pharma",
+						"y": "government_agencies",
+						"value": 1
 					},
 					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "associations",
-						"value": 11
-					},
-					{
-						"x": "energie",
-						"y": "own_group",
-						"value": 17
-					},
-					{
-						"x": "energie",
-						"y": "customers_private",
 						"value": 8
 					},
 					{
-						"x": "energie",
-						"y": "customers_public",
+						"x": "pharma",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "own_group",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "suppliers",
+						"value": 5
+					},
+					{
+						"x": "holz",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "holz",
+						"y": "other_firms",
+						"value": 3
+					},
+					{
+						"x": "holz",
+						"y": "universities",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "public_research_institutes",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "associations",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "customers",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "universities",
 						"value": 11
 					},
 					{
-						"x": "energie",
-						"y": "suppliers",
-						"value": 16
-					},
-					{
-						"x": "energie",
-						"y": "competitors",
-						"value": 13
-					},
-					{
-						"x": "energie",
-						"y": "consulting_firms",
-						"value": 19
-					},
-					{
-						"x": "energie",
-						"y": "universities",
-						"value": 14
-					},
-					{
-						"x": "energie",
+						"x": "metall",
 						"y": "public_research_institutes",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "own_group",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "customers",
+						"value": 9
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "suppliers",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "competitors",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "consulting_firms",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_firms",
 						"value": 7
 					},
 					{
-						"x": "energie",
-						"y": "associations",
+						"x": "elektroindustrie",
+						"y": "universities",
+						"value": 26
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "public_research_institutes",
 						"value": 14
 					},
 					{
-						"x": "telekommunikation",
+						"x": "elektroindustrie",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "associations",
+						"value": 5
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
 						"y": "own_group",
-						"value": 13
+						"value": 7
 					},
 					{
-						"x": "telekommunikation",
-						"y": "customers_private",
-						"value": 6
+						"x": "fahrzeugbau",
+						"y": "customers",
+						"value": 10
 					},
 					{
-						"x": "telekommunikation",
-						"y": "customers_public",
-						"value": 6
-					},
-					{
-						"x": "telekommunikation",
+						"x": "fahrzeugbau",
 						"y": "suppliers",
-						"value": 16
+						"value": 9
 					},
 					{
-						"x": "telekommunikation",
+						"x": "fahrzeugbau",
 						"y": "competitors",
-						"value": 18
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
+						"x": "fahrzeugbau",
+						"y": "consulting_firms",
+						"value": 11
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "universities",
+						"value": 19
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "public_research_institutes",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "associations",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
 						"y": "consulting_firms",
 						"value": 6
 					},
 					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "universities",
+						"value": 7
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "associations",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "energie",
+						"y": "own_group",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "suppliers",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "other_firms",
+						"value": 9
+					},
+					{
+						"x": "energie",
+						"y": "universities",
+						"value": 13
+					},
+					{
+						"x": "energie",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "others",
+						"value": 1
+					},
+					{
 						"x": "telekommunikation",
+						"y": "own_group",
+						"value": 9
+					},
+					{
+						"x": "telekommunikation",
+						"y": "customers",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "suppliers",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "competitors",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "consulting_firms",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "universities",
+						"value": 6
+					},
+					{
+						"x": "telekommunikation",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "government_agencies",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "associations",
+						"value": 6
+					},
+					{
+						"x": "telekommunikation",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "software",
+						"y": "own_group",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "customers",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "suppliers",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "competitors",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "software",
 						"y": "universities",
 						"value": 17
 					},
 					{
-						"x": "telekommunikation",
+						"x": "software",
 						"y": "public_research_institutes",
 						"value": 6
 					},
 					{
-						"x": "telekommunikation",
-						"y": "associations",
-						"value": 9
-					},
-					{
 						"x": "software",
-						"y": "own_group",
-						"value": 13
-					},
-					{
-						"x": "software",
-						"y": "customers_private",
-						"value": 12
-					},
-					{
-						"x": "software",
-						"y": "customers_public",
-						"value": 10
-					},
-					{
-						"x": "software",
-						"y": "suppliers",
-						"value": 19
-					},
-					{
-						"x": "software",
-						"y": "competitors",
-						"value": 18
-					},
-					{
-						"x": "software",
-						"y": "consulting_firms",
-						"value": 11
-					},
-					{
-						"x": "software",
-						"y": "universities",
-						"value": 20
-					},
-					{
-						"x": "software",
-						"y": "public_research_institutes",
-						"value": 11
+						"y": "government_agencies",
+						"value": 2
 					},
 					{
 						"x": "software",
 						"y": "associations",
-						"value": 9
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "others",
+						"value": 2
 					},
 					{
 						"x": "finanz",
 						"y": "own_group",
-						"value": 16
+						"value": 8
 					},
 					{
 						"x": "finanz",
-						"y": "customers_private",
-						"value": 10
-					},
-					{
-						"x": "finanz",
-						"y": "customers_public",
-						"value": 4
+						"y": "customers",
+						"value": 3
 					},
 					{
 						"x": "finanz",
 						"y": "suppliers",
-						"value": 4
+						"value": 3
 					},
 					{
 						"x": "finanz",
 						"y": "competitors",
-						"value": 15
-					},
-					{
-						"x": "finanz",
-						"y": "consulting_firms",
-						"value": 11
-					},
-					{
-						"x": "finanz",
-						"y": "universities",
 						"value": 4
 					},
 					{
 						"x": "finanz",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "other_firms",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "universities",
+						"value": 5
+					},
+					{
+						"x": "finanz",
 						"y": "public_research_institutes",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "government_agencies",
 						"value": 1
 					},
 					{
 						"x": "finanz",
 						"y": "associations",
-						"value": 11
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "others",
+						"value": 2
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "own_group",
-						"value": 5
+						"value": 1
 					},
 					{
 						"x": "unternehmensberatung",
-						"y": "customers_private",
-						"value": 15
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "customers_public",
+						"y": "customers",
 						"value": 7
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "suppliers",
-						"value": 8
+						"value": 2
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "competitors",
-						"value": 10
+						"value": 5
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "consulting_firms",
-						"value": 18
+						"value": 6
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_firms",
+						"value": 1
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "universities",
-						"value": 19
+						"value": 7
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "public_research_institutes",
-						"value": 15
+						"value": 2
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "government_agencies",
+						"value": 1
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "associations",
-						"value": 18
+						"value": 3
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "others",
+						"value": 0
 					},
 					{
 						"x": "architektur",
 						"y": "own_group",
-						"value": 5
+						"value": 7
 					},
 					{
 						"x": "architektur",
-						"y": "customers_private",
+						"y": "customers",
 						"value": 8
-					},
-					{
-						"x": "architektur",
-						"y": "customers_public",
-						"value": 6
 					},
 					{
 						"x": "architektur",
 						"y": "suppliers",
-						"value": 2
+						"value": 3
 					},
 					{
 						"x": "architektur",
 						"y": "competitors",
-						"value": 11
+						"value": 4
 					},
 					{
 						"x": "architektur",
 						"y": "consulting_firms",
-						"value": 15
+						"value": 13
+					},
+					{
+						"x": "architektur",
+						"y": "other_firms",
+						"value": 3
 					},
 					{
 						"x": "architektur",
 						"y": "universities",
-						"value": 20
+						"value": 14
 					},
 					{
 						"x": "architektur",
 						"y": "public_research_institutes",
-						"value": 5
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "government_agencies",
+						"value": 1
 					},
 					{
 						"x": "architektur",
 						"y": "associations",
-						"value": 8
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "others",
+						"value": 1
 					},
 					{
 						"x": "forschung",
 						"y": "own_group",
+						"value": 10
+					},
+					{
+						"x": "forschung",
+						"y": "customers",
+						"value": 41
+					},
+					{
+						"x": "forschung",
+						"y": "suppliers",
+						"value": 19
+					},
+					{
+						"x": "forschung",
+						"y": "competitors",
+						"value": 20
+					},
+					{
+						"x": "forschung",
+						"y": "consulting_firms",
+						"value": 24
+					},
+					{
+						"x": "forschung",
+						"y": "other_firms",
+						"value": 16
+					},
+					{
+						"x": "forschung",
+						"y": "universities",
+						"value": 58
+					},
+					{
+						"x": "forschung",
+						"y": "public_research_institutes",
+						"value": 43
+					},
+					{
+						"x": "forschung",
+						"y": "government_agencies",
 						"value": 18
 					},
 					{
 						"x": "forschung",
-						"y": "customers_private",
-						"value": 33
-					},
-					{
-						"x": "forschung",
-						"y": "customers_public",
+						"y": "associations",
 						"value": 21
 					},
 					{
 						"x": "forschung",
-						"y": "suppliers",
-						"value": 25
-					},
-					{
-						"x": "forschung",
-						"y": "competitors",
-						"value": 18
-					},
-					{
-						"x": "forschung",
-						"y": "consulting_firms",
-						"value": 33
-					},
-					{
-						"x": "forschung",
-						"y": "universities",
-						"value": 54
-					},
-					{
-						"x": "forschung",
-						"y": "public_research_institutes",
-						"value": 40
-					},
-					{
-						"x": "forschung",
-						"y": "associations",
-						"value": 19
+						"y": "others",
+						"value": 15
 					},
 					{
 						"x": "kreativ",
 						"y": "own_group",
-						"value": 12
+						"value": 3
 					},
 					{
 						"x": "kreativ",
-						"y": "customers_private",
-						"value": 5
-					},
-					{
-						"x": "kreativ",
-						"y": "customers_public",
-						"value": 5
+						"y": "customers",
+						"value": 6
 					},
 					{
 						"x": "kreativ",
 						"y": "suppliers",
-						"value": 22
+						"value": 7
 					},
 					{
 						"x": "kreativ",
 						"y": "competitors",
-						"value": 11
+						"value": 7
 					},
 					{
 						"x": "kreativ",
 						"y": "consulting_firms",
-						"value": 9
+						"value": 4
+					},
+					{
+						"x": "kreativ",
+						"y": "other_firms",
+						"value": 1
 					},
 					{
 						"x": "kreativ",
 						"y": "universities",
-						"value": 10
+						"value": 8
 					},
 					{
 						"x": "kreativ",
@@ -3884,8 +3724,18 @@
 					},
 					{
 						"x": "kreativ",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
 						"y": "associations",
-						"value": 6
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "others",
+						"value": 4
 					}
 				]
 			}
@@ -3903,245 +3753,275 @@
 				"ber": [
 					{
 						"id": "nahrung",
-						"registration_patents": 14,
-						"registration_trademarks": 5,
+						"registration_patents": 1,
+						"registration_trademarks": 0,
 						"registration_tastemarks": 5,
-						"registration_brands": 37,
-						"claim_intellectual_property": 1
+						"registration_brands": 25,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 3
 					},
 					{
 						"id": "pharma",
-						"registration_patents": 16,
-						"registration_trademarks": 10,
+						"registration_patents": 15,
+						"registration_trademarks": 2,
 						"registration_tastemarks": 10,
-						"registration_brands": 27,
-						"claim_intellectual_property": 4
+						"registration_brands": 24,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 26
 					},
 					{
 						"id": "holz",
-						"registration_patents": 0,
+						"registration_patents": 1,
 						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 4,
-						"claim_intellectual_property": 0
+						"registration_tastemarks": 1,
+						"registration_brands": 11,
+						"claim_intellectual_property": 0,
+						"protection_trade_secrets": 11
 					},
 					{
 						"id": "metall",
-						"registration_patents": 0,
-						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 0,
-						"claim_intellectual_property": 0
+						"registration_patents": 13,
+						"registration_trademarks": 11,
+						"registration_tastemarks": 5,
+						"registration_brands": 10,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 13
 					},
 					{
 						"id": "elektroindustrie",
-						"registration_patents": 6,
-						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 8,
-						"claim_intellectual_property": 6
+						"registration_patents": 28,
+						"registration_trademarks": 9,
+						"registration_tastemarks": 1,
+						"registration_brands": 20,
+						"claim_intellectual_property": 4,
+						"protection_trade_secrets": 19
 					},
 					{
 						"id": "fahrzeugbau",
-						"registration_patents": 23,
+						"registration_patents": 22,
 						"registration_trademarks": 14,
 						"registration_tastemarks": 0,
-						"registration_brands": 18,
-						"claim_intellectual_property": 10
+						"registration_brands": 13,
+						"claim_intellectual_property": 9,
+						"protection_trade_secrets": 11
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"registration_patents": 10,
-						"registration_trademarks": 20,
-						"registration_tastemarks": 5,
-						"registration_brands": 21,
-						"claim_intellectual_property": 10
+						"registration_patents": 18,
+						"registration_trademarks": 13,
+						"registration_tastemarks": 9,
+						"registration_brands": 18,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 2
 					},
 					{
 						"id": "energie",
-						"registration_patents": 3,
+						"registration_patents": 1,
 						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 0,
-						"claim_intellectual_property": 0
+						"registration_tastemarks": 1,
+						"registration_brands": 13,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 2
 					},
 					{
 						"id": "telekommunikation",
-						"registration_patents": 3,
-						"registration_trademarks": 1,
-						"registration_tastemarks": 1,
-						"registration_brands": 7,
-						"claim_intellectual_property": 31
+						"registration_patents": 1,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 6,
+						"registration_brands": 26,
+						"claim_intellectual_property": 33,
+						"protection_trade_secrets": 7
 					},
 					{
 						"id": "software",
-						"registration_patents": 6,
-						"registration_trademarks": 3,
-						"registration_tastemarks": 0,
-						"registration_brands": 24,
-						"claim_intellectual_property": 12
+						"registration_patents": 3,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 2,
+						"registration_brands": 22,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 22
 					},
 					{
 						"id": "finanz",
 						"registration_patents": 1,
 						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 20,
-						"claim_intellectual_property": 1
+						"registration_tastemarks": 6,
+						"registration_brands": 10,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 1
 					},
 					{
 						"id": "unternehmensberatung",
-						"registration_patents": 5,
+						"registration_patents": 0,
 						"registration_trademarks": 0,
-						"registration_tastemarks": 6,
-						"registration_brands": 32,
-						"claim_intellectual_property": 5
+						"registration_tastemarks": 0,
+						"registration_brands": 7,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 3
 					},
 					{
 						"id": "architektur",
-						"registration_patents": 4,
-						"registration_trademarks": 7,
-						"registration_tastemarks": 0,
-						"registration_brands": 8,
-						"claim_intellectual_property": 6
+						"registration_patents": 0,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 1,
+						"registration_brands": 4,
+						"claim_intellectual_property": 11,
+						"protection_trade_secrets": 6
 					},
 					{
 						"id": "forschung",
-						"registration_patents": 36,
-						"registration_trademarks": 17,
+						"registration_patents": 23,
+						"registration_trademarks": 0,
 						"registration_tastemarks": 0,
-						"registration_brands": 22,
-						"claim_intellectual_property": 9
+						"registration_brands": 10,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 29
 					},
 					{
 						"id": "kreativ",
-						"registration_patents": 0,
-						"registration_trademarks": 0,
-						"registration_tastemarks": 1,
-						"registration_brands": 20,
-						"claim_intellectual_property": 30
+						"registration_patents": 3,
+						"registration_trademarks": 3,
+						"registration_tastemarks": 6,
+						"registration_brands": 14,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 8
 					}
 				],
 				"de": [
 					{
 						"id": "nahrung",
-						"registration_patents": 3,
-						"registration_trademarks": 3,
-						"registration_tastemarks": 2,
-						"registration_brands": 9,
-						"claim_intellectual_property": 2
+						"registration_patents": 1,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 3,
+						"registration_brands": 10,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 2
 					},
 					{
 						"id": "pharma",
-						"registration_patents": 18,
-						"registration_trademarks": 14,
-						"registration_tastemarks": 5,
+						"registration_patents": 22,
+						"registration_trademarks": 12,
+						"registration_tastemarks": 9,
 						"registration_brands": 23,
-						"claim_intellectual_property": 3
+						"claim_intellectual_property": 4,
+						"protection_trade_secrets": 15
 					},
 					{
 						"id": "holz",
 						"registration_patents": 5,
-						"registration_trademarks": 6,
-						"registration_tastemarks": 1,
-						"registration_brands": 11,
-						"claim_intellectual_property": 4
+						"registration_trademarks": 4,
+						"registration_tastemarks": 3,
+						"registration_brands": 5,
+						"claim_intellectual_property": 3,
+						"protection_trade_secrets": 6
 					},
 					{
 						"id": "metall",
-						"registration_patents": 12,
-						"registration_trademarks": 10,
-						"registration_tastemarks": 6,
-						"registration_brands": 13,
-						"claim_intellectual_property": 3
+						"registration_patents": 5,
+						"registration_trademarks": 6,
+						"registration_tastemarks": 4,
+						"registration_brands": 8,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 7
 					},
 					{
 						"id": "elektroindustrie",
-						"registration_patents": 28,
-						"registration_trademarks": 12,
+						"registration_patents": 20,
+						"registration_trademarks": 11,
 						"registration_tastemarks": 8,
-						"registration_brands": 19,
-						"claim_intellectual_property": 5
+						"registration_brands": 18,
+						"claim_intellectual_property": 5,
+						"protection_trade_secrets": 13
 					},
 					{
 						"id": "fahrzeugbau",
-						"registration_patents": 35,
-						"registration_trademarks": 16,
-						"registration_tastemarks": 4,
-						"registration_brands": 19,
-						"claim_intellectual_property": 3
+						"registration_patents": 20,
+						"registration_trademarks": 11,
+						"registration_tastemarks": 5,
+						"registration_brands": 17,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 13
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"registration_patents": 11,
-						"registration_trademarks": 18,
-						"registration_tastemarks": 10,
-						"registration_brands": 25,
-						"claim_intellectual_property": 9
+						"registration_patents": 7,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 5,
+						"registration_brands": 14,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 4
 					},
 					{
 						"id": "energie",
-						"registration_patents": 2,
-						"registration_trademarks": 1,
-						"registration_tastemarks": 0,
-						"registration_brands": 7,
-						"claim_intellectual_property": 1
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 1,
+						"registration_brands": 4,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 3
 					},
 					{
 						"id": "telekommunikation",
-						"registration_patents": 6,
-						"registration_trademarks": 6,
-						"registration_tastemarks": 3,
-						"registration_brands": 23,
-						"claim_intellectual_property": 31
+						"registration_patents": 1,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 4,
+						"registration_brands": 18,
+						"claim_intellectual_property": 24,
+						"protection_trade_secrets": 4
 					},
 					{
 						"id": "software",
 						"registration_patents": 6,
-						"registration_trademarks": 2,
-						"registration_tastemarks": 0,
-						"registration_brands": 16,
-						"claim_intellectual_property": 8
+						"registration_trademarks": 4,
+						"registration_tastemarks": 1,
+						"registration_brands": 27,
+						"claim_intellectual_property": 9,
+						"protection_trade_secrets": 11
 					},
 					{
 						"id": "finanz",
-						"registration_patents": 2,
+						"registration_patents": 0,
 						"registration_trademarks": 0,
-						"registration_tastemarks": 0,
-						"registration_brands": 13,
-						"claim_intellectual_property": 3
+						"registration_tastemarks": 1,
+						"registration_brands": 5,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 4
 					},
 					{
 						"id": "unternehmensberatung",
-						"registration_patents": 1,
-						"registration_trademarks": 5,
+						"registration_patents": 0,
+						"registration_trademarks": 1,
 						"registration_tastemarks": 1,
-						"registration_brands": 33,
-						"claim_intellectual_property": 16
+						"registration_brands": 50,
+						"claim_intellectual_property": 43,
+						"protection_trade_secrets": 6
 					},
 					{
 						"id": "architektur",
-						"registration_patents": 4,
+						"registration_patents": 2,
 						"registration_trademarks": 1,
-						"registration_tastemarks": 0,
-						"registration_brands": 4,
-						"claim_intellectual_property": 2
+						"registration_tastemarks": 2,
+						"registration_brands": 3,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 7
 					},
 					{
 						"id": "forschung",
-						"registration_patents": 38,
-						"registration_trademarks": 5,
-						"registration_tastemarks": 3,
-						"registration_brands": 22,
-						"claim_intellectual_property": 9
+						"registration_patents": 39,
+						"registration_trademarks": 9,
+						"registration_tastemarks": 2,
+						"registration_brands": 23,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 36
 					},
 					{
 						"id": "kreativ",
-						"registration_patents": 1,
-						"registration_trademarks": 2,
-						"registration_tastemarks": 1,
-						"registration_brands": 11,
-						"claim_intellectual_property": 6
+						"registration_patents": 2,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 2,
+						"registration_brands": 12,
+						"claim_intellectual_property": 8,
+						"protection_trade_secrets": 11
 					}
 				]
 			}
@@ -4173,216 +4053,216 @@
 			"data": {
 				"ber": [
 					{
+						"id": "nahrung",
+						"from_land": 0,
+						"from_bund": 8,
+						"from_eu": 0,
+						"insgesamt": 8
+					},
+					{
+						"id": "pharma",
+						"from_land": 10,
+						"from_bund": 38,
+						"from_eu": 6,
+						"insgesamt": 40
+					},
+					{
+						"id": "holz",
+						"from_land": 1,
+						"from_bund": 3,
+						"from_eu": 3,
+						"insgesamt": 4
+					},
+					{
+						"id": "metall",
+						"from_land": 3,
+						"from_bund": 27,
+						"from_eu": 4,
+						"insgesamt": 27
+					},
+					{
+						"id": "elektroindustrie",
+						"from_land": 16,
+						"from_bund": 49,
+						"from_eu": 18,
+						"insgesamt": 49
+					},
+					{
+						"id": "fahrzeugbau",
+						"from_land": 45,
+						"from_bund": 39,
+						"from_eu": 29,
+						"insgesamt": 62
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"from_land": 15,
+						"from_bund": 15,
+						"from_eu": 15,
+						"insgesamt": 15
+					},
+					{
+						"id": "energie",
+						"from_land": 2,
+						"from_bund": 24,
+						"from_eu": 2,
+						"insgesamt": 24
+					},
+					{
+						"id": "telekommunikation",
+						"from_land": 0,
+						"from_bund": 4,
+						"from_eu": 6,
+						"insgesamt": 6
+					},
+					{
+						"id": "software",
+						"from_land": 3,
+						"from_bund": 30,
+						"from_eu": 1,
+						"insgesamt": 33
+					},
+					{
+						"id": "finanz",
+						"from_land": 0,
+						"from_bund": 0,
+						"from_eu": 0,
+						"insgesamt": 0
+					},
+					{
+						"id": "unternehmensberatung",
+						"from_land": 8,
+						"from_bund": 21,
+						"from_eu": 0,
+						"insgesamt": 21
+					},
+					{
 						"id": "architektur",
 						"from_land": 3,
-						"from_bund": 9,
+						"from_bund": 7,
+						"from_eu": 2,
+						"insgesamt": 9
+					},
+					{
+						"id": "forschung",
+						"from_land": 30,
+						"from_bund": 52,
+						"from_eu": 2,
+						"insgesamt": 57
+					},
+					{
+						"id": "kreativ",
+						"from_land": 0,
+						"from_bund": 6,
+						"from_eu": 4,
+						"insgesamt": 8
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"from_land": 1,
+						"from_bund": 3,
+						"from_eu": 1,
+						"insgesamt": 4
+					},
+					{
+						"id": "pharma",
+						"from_land": 6,
+						"from_bund": 18,
+						"from_eu": 5,
+						"insgesamt": 24
+					},
+					{
+						"id": "holz",
+						"from_land": 6,
+						"from_bund": 8,
+						"from_eu": 0,
+						"insgesamt": 11
+					},
+					{
+						"id": "metall",
+						"from_land": 7,
+						"from_bund": 7,
 						"from_eu": 1,
 						"insgesamt": 13
 					},
 					{
 						"id": "elektroindustrie",
 						"from_land": 12,
-						"from_bund": 44,
-						"from_eu": 7,
-						"insgesamt": 44
-					},
-					{
-						"id": "energie",
-						"from_land": 3,
-						"from_bund": 22,
-						"from_eu": 3,
-						"insgesamt": 22
+						"from_bund": 25,
+						"from_eu": 4,
+						"insgesamt": 30
 					},
 					{
 						"id": "fahrzeugbau",
-						"from_land": 15,
-						"from_bund": 28,
-						"from_eu": 20,
-						"insgesamt": 42
-					},
-					{
-						"id": "finanz",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "forschung",
-						"from_land": 30,
-						"from_bund": 55,
-						"from_eu": 27,
-						"insgesamt": 70
-					},
-					{
-						"id": "holz",
-						"from_land": 8,
-						"from_bund": 1,
-						"from_eu": 1,
-						"insgesamt": 9
-					},
-					{
-						"id": "kreativ",
 						"from_land": 13,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 12
-					},
-					{
-						"id": "metall",
-						"from_land": 5,
-						"from_bund": 0,
-						"from_eu": 7,
-						"insgesamt": 13
-					},
-					{
-						"id": "nahrung",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "pharma",
-						"from_land": 5,
-						"from_bund": 21,
+						"from_bund": 18,
 						"from_eu": 3,
-						"insgesamt": 26
-					},
-					{
-						"id": "software",
-						"from_land": 6,
-						"from_bund": 20,
-						"from_eu": 12,
-						"insgesamt": 26
+						"insgesamt": 23
 					},
 					{
 						"id": "sonstige_konsumgueter",
-						"from_land": 21,
-						"from_bund": 9,
-						"from_eu": 11,
-						"insgesamt": 29
-					},
-					{
-						"id": "telekommunikation",
-						"from_land": 19,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 19
-					},
-					{
-						"id": "unternehmensberatung",
-						"from_land": 9,
-						"from_bund": 14,
-						"from_eu": 4,
-						"insgesamt": 18
-					}
-				],
-				"de": [
-					{
-						"id": "architektur",
-						"from_land": 3,
-						"from_bund": 19,
-						"from_eu": 0,
-						"insgesamt": 21
-					},
-					{
-						"id": "elektroindustrie",
-						"from_land": 14,
-						"from_bund": 41,
-						"from_eu": 14,
-						"insgesamt": 52
-					},
-					{
-						"id": "energie",
 						"from_land": 4,
-						"from_bund": 10,
-						"from_eu": 4,
-						"insgesamt": 11
-					},
-					{
-						"id": "fahrzeugbau",
-						"from_land": 5,
-						"from_bund": 36,
-						"from_eu": 6,
-						"insgesamt": 40
-					},
-					{
-						"id": "finanz",
-						"from_land": 0,
-						"from_bund": 0,
+						"from_bund": 7,
 						"from_eu": 2,
 						"insgesamt": 8
 					},
 					{
-						"id": "forschung",
-						"from_land": 25,
-						"from_bund": 43,
-						"from_eu": 14,
-						"insgesamt": 43
-					},
-					{
-						"id": "holz",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 1
-					},
-					{
-						"id": "kreativ",
-						"from_land": 3,
-						"from_bund": 5,
-						"from_eu": 0,
-						"insgesamt": 5
-					},
-					{
-						"id": "metall",
-						"from_land": 1,
-						"from_bund": 17,
-						"from_eu": 5,
-						"insgesamt": 20
-					},
-					{
-						"id": "nahrung",
-						"from_land": 0,
-						"from_bund": 0,
-						"from_eu": 0,
-						"insgesamt": 0
-					},
-					{
-						"id": "pharma",
-						"from_land": 7,
-						"from_bund": 34,
-						"from_eu": 10,
-						"insgesamt": 37
-					},
-					{
-						"id": "software",
-						"from_land": 9,
-						"from_bund": 33,
-						"from_eu": 8,
-						"insgesamt": 36
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"from_land": 13,
-						"from_bund": 15,
+						"id": "energie",
+						"from_land": 4,
+						"from_bund": 6,
 						"from_eu": 1,
-						"insgesamt": 15
+						"insgesamt": 8
 					},
 					{
 						"id": "telekommunikation",
-						"from_land": 8,
-						"from_bund": 11,
+						"from_land": 3,
+						"from_bund": 7,
+						"from_eu": 2,
+						"insgesamt": 10
+					},
+					{
+						"id": "software",
+						"from_land": 4,
+						"from_bund": 14,
 						"from_eu": 3,
-						"insgesamt": 16
+						"insgesamt": 15
+					},
+					{
+						"id": "finanz",
+						"from_land": 4,
+						"from_bund": 3,
+						"from_eu": 0,
+						"insgesamt": 7
 					},
 					{
 						"id": "unternehmensberatung",
-						"from_land": 16,
+						"from_land": 1,
 						"from_bund": 6,
 						"from_eu": 0,
-						"insgesamt": 17
+						"insgesamt": 6
+					},
+					{
+						"id": "architektur",
+						"from_land": 1,
+						"from_bund": 6,
+						"from_eu": 2,
+						"insgesamt": 7
+					},
+					{
+						"id": "forschung",
+						"from_land": 37,
+						"from_bund": 43,
+						"from_eu": 26,
+						"insgesamt": 55
+					},
+					{
+						"id": "kreativ",
+						"from_land": 0,
+						"from_bund": 1,
+						"from_eu": 1,
+						"insgesamt": 2
 					}
 				]
 			}
@@ -4398,38 +4278,38 @@
 			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"data": {
 				"ber": {
-					"nahrung": 5,
-					"pharma": 81,
-					"holz": 20,
-					"metall": 34,
-					"elektroindustrie": 49,
-					"fahrzeugbau": 50,
-					"sonstige_konsumgueter": 8,
-					"energie": 87,
-					"telekommunikation": 18,
-					"software": 25,
-					"finanz": 17,
-					"unternehmensberatung": 35,
-					"architektur": 41,
-					"forschung": 81,
-					"kreativ": 40
+					"nahrung": 1,
+					"pharma": 59,
+					"holz": 4,
+					"metall": 58,
+					"elektroindustrie": 70,
+					"fahrzeugbau": 62,
+					"sonstige_konsumgueter": 22,
+					"energie": 23,
+					"telekommunikation": 22,
+					"software": 29,
+					"finanz": 9,
+					"unternehmensberatung": 28,
+					"architektur": 34,
+					"forschung": 54,
+					"kreativ": 15
 				},
 				"de": {
-					"nahrung": 4,
-					"pharma": 29,
-					"holz": 20,
-					"metall": 31,
-					"elektroindustrie": 39,
-					"fahrzeugbau": 36,
-					"sonstige_konsumgueter": 35,
-					"energie": 46,
-					"telekommunikation": 11,
-					"software": 23,
-					"finanz": 20,
-					"unternehmensberatung": 18,
-					"architektur": 36,
-					"forschung": 47,
-					"kreativ": 9
+					"nahrung": 22,
+					"pharma": 31,
+					"holz": 18,
+					"metall": 23,
+					"elektroindustrie": 42,
+					"fahrzeugbau": 30,
+					"sonstige_konsumgueter": 19,
+					"energie": 32,
+					"telekommunikation": 17,
+					"software": 29,
+					"finanz": 16,
+					"unternehmensberatung": 9,
+					"architektur": 26,
+					"forschung": 73,
+					"kreativ": 6
 				}
 			}
 		},
@@ -4444,21 +4324,21 @@
 			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": {
-					"nahrung": 41,
-					"pharma": 20,
-					"holz": 10,
-					"metall": 16,
-					"elektroindustrie": 27,
-					"fahrzeugbau": 9,
-					"sonstige_konsumgueter": 6,
-					"energie": 6,
+					"nahrung": 22,
+					"pharma": 19,
+					"holz": 2,
+					"metall": 11,
+					"elektroindustrie": 38,
+					"fahrzeugbau": 32,
+					"sonstige_konsumgueter": 2,
+					"energie": 8,
 					"telekommunikation": 0,
-					"software": 28,
-					"finanz": 10,
-					"unternehmensberatung": 4,
+					"software": 21,
+					"finanz": 1,
+					"unternehmensberatung": 0,
 					"architektur": 22,
-					"forschung": 9,
-					"kreativ": 15
+					"forschung": 30,
+					"kreativ": 5
 				},
 				"de": {
 					"nahrung": 3,
@@ -4877,38 +4757,38 @@
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": {
-					"nahrung": 8,
-					"pharma": 11,
-					"holz": 1,
-					"metall": 4,
-					"elektroindustrie": 9,
-					"fahrzeugbau": 6,
-					"sonstige_konsumgueter": 0,
-					"energie": 0,
-					"telekommunikation": 17,
-					"software": 41,
-					"finanz": 4,
-					"unternehmensberatung": 18,
-					"architektur": 7,
-					"forschung": 41,
-					"kreativ": 16
+					"nahrung": 26,
+					"pharma": 29,
+					"holz": 7,
+					"metall": 14,
+					"elektroindustrie": 49,
+					"fahrzeugbau": 16,
+					"sonstige_konsumgueter": 26,
+					"energie": 11,
+					"telekommunikation": 55,
+					"software": 54,
+					"finanz": 48,
+					"unternehmensberatung": 49,
+					"architektur": 30,
+					"forschung": 54,
+					"kreativ": 75
 				},
 				"de": {
-					"nahrung": 2,
-					"pharma": 6,
-					"holz": 4,
-					"metall": 5,
-					"elektroindustrie": 9,
-					"fahrzeugbau": 10,
-					"sonstige_konsumgueter": 1,
-					"energie": 7,
-					"telekommunikation": 17,
-					"software": 32,
-					"finanz": 10,
-					"unternehmensberatung": 25,
-					"architektur": 5,
-					"forschung": 24,
-					"kreativ": 15
+					"nahrung": 12,
+					"pharma": 23,
+					"holz": 31,
+					"metall": 14,
+					"elektroindustrie": 35,
+					"fahrzeugbau": 24,
+					"sonstige_konsumgueter": 16,
+					"energie": 12,
+					"telekommunikation": 49,
+					"software": 61,
+					"finanz": 37,
+					"unternehmensberatung": 75,
+					"architektur": 18,
+					"forschung": 55,
+					"kreativ": 48
 				}
 			}
 		},
@@ -4923,754 +4803,754 @@
 					{
 						"x": "nahrung",
 						"y": "speech_comprehension",
-						"value": 6
-					},
-					{
-						"x": "nahrung",
-						"y": "image_recognition",
-						"value": 5
-					},
-					{
-						"x": "nahrung",
-						"y": "machine_learning",
-						"value": 7
-					},
-					{
-						"x": "nahrung",
-						"y": "automation",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "pharma",
-						"y": "speech_comprehension",
-						"value": 7
-					},
-					{
-						"x": "pharma",
-						"y": "image_recognition",
-						"value": 5
-					},
-					{
-						"x": "pharma",
-						"y": "machine_learning",
-						"value": 5
-					},
-					{
-						"x": "pharma",
-						"y": "automation",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "knowledge_based_systems",
-						"value": 10
-					},
-					{
-						"x": "holz",
-						"y": "speech_comprehension",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "image_recognition",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "machine_learning",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "automation",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "knowledge_based_systems",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "image_recognition",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "machine_learning",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "automation",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "speech_comprehension",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "machine_learning",
-						"value": 1
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "automation",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "image_recognition",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "automation",
-						"value": 2
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "speech_comprehension",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "image_recognition",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "machine_learning",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "automation",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "knowledge_based_systems",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "speech_comprehension",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "image_recognition",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "machine_learning",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "automation",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "knowledge_based_systems",
-						"value": 0
-					},
-					{
-						"x": "telekommunikation",
-						"y": "speech_comprehension",
-						"value": 14
-					},
-					{
-						"x": "telekommunikation",
-						"y": "image_recognition",
-						"value": 12
-					},
-					{
-						"x": "telekommunikation",
-						"y": "machine_learning",
-						"value": 10
-					},
-					{
-						"x": "telekommunikation",
-						"y": "automation",
-						"value": 12
-					},
-					{
-						"x": "telekommunikation",
-						"y": "knowledge_based_systems",
-						"value": 9
-					},
-					{
-						"x": "software",
-						"y": "speech_comprehension",
-						"value": 24
-					},
-					{
-						"x": "software",
-						"y": "image_recognition",
-						"value": 19
-					},
-					{
-						"x": "software",
-						"y": "machine_learning",
 						"value": 25
 					},
 					{
-						"x": "software",
-						"y": "automation",
-						"value": 15
-					},
-					{
-						"x": "software",
-						"y": "knowledge_based_systems",
-						"value": 24
-					},
-					{
-						"x": "finanz",
-						"y": "speech_comprehension",
-						"value": 2
-					},
-					{
-						"x": "finanz",
+						"x": "nahrung",
 						"y": "image_recognition",
-						"value": 2
+						"value": 16
 					},
 					{
-						"x": "finanz",
+						"x": "nahrung",
 						"y": "machine_learning",
-						"value": 3
+						"value": 19
 					},
 					{
-						"x": "finanz",
+						"x": "nahrung",
+						"y": "automation",
+						"value": 16
+					},
+					{
+						"x": "nahrung",
+						"y": "knowledge_based_systems",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "speech_comprehension",
+						"value": 29
+					},
+					{
+						"x": "pharma",
+						"y": "image_recognition",
+						"value": 20
+					},
+					{
+						"x": "pharma",
+						"y": "machine_learning",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "automation",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "knowledge_based_systems",
+						"value": 17
+					},
+					{
+						"x": "holz",
+						"y": "speech_comprehension",
+						"value": 7
+					},
+					{
+						"x": "holz",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "holz",
+						"y": "machine_learning",
+						"value": 1
+					},
+					{
+						"x": "holz",
 						"y": "automation",
 						"value": 1
 					},
 					{
-						"x": "finanz",
+						"x": "holz",
 						"y": "knowledge_based_systems",
-						"value": 3
+						"value": 1
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "metall",
+						"y": "speech_comprehension",
+						"value": 13
+					},
+					{
+						"x": "metall",
+						"y": "image_recognition",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "machine_learning",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "automation",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "knowledge_based_systems",
+						"value": 2
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "speech_comprehension",
+						"value": 44
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "image_recognition",
+						"value": 23
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "machine_learning",
+						"value": 24
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 22
+					},
+					{
+						"x": "fahrzeugbau",
 						"y": "speech_comprehension",
 						"value": 16
 					},
 					{
-						"x": "unternehmensberatung",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "machine_learning",
-						"value": 15
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "automation",
-						"value": 6
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "knowledge_based_systems",
-						"value": 18
-					},
-					{
-						"x": "architektur",
-						"y": "speech_comprehension",
-						"value": 3
-					},
-					{
-						"x": "architektur",
-						"y": "image_recognition",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "machine_learning",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "automation",
-						"value": 2
-					},
-					{
-						"x": "architektur",
-						"y": "knowledge_based_systems",
-						"value": 1
-					},
-					{
-						"x": "forschung",
-						"y": "speech_comprehension",
-						"value": 7
-					},
-					{
-						"x": "forschung",
-						"y": "image_recognition",
-						"value": 33
-					},
-					{
-						"x": "forschung",
-						"y": "machine_learning",
-						"value": 33
-					},
-					{
-						"x": "forschung",
-						"y": "automation",
-						"value": 20
-					},
-					{
-						"x": "forschung",
-						"y": "knowledge_based_systems",
-						"value": 21
-					},
-					{
-						"x": "kreativ",
-						"y": "speech_comprehension",
-						"value": 12
-					},
-					{
-						"x": "kreativ",
+						"x": "fahrzeugbau",
 						"y": "image_recognition",
 						"value": 10
 					},
 					{
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 9
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
+						"value": 26
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 8
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 10
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 55
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
+						"value": 28
+					},
+					{
+						"x": "telekommunikation",
+						"y": "machine_learning",
+						"value": 22
+					},
+					{
+						"x": "telekommunikation",
+						"y": "automation",
+						"value": 15
+					},
+					{
+						"x": "telekommunikation",
+						"y": "knowledge_based_systems",
+						"value": 29
+					},
+					{
+						"x": "software",
+						"y": "speech_comprehension",
+						"value": 52
+					},
+					{
+						"x": "software",
+						"y": "image_recognition",
+						"value": 26
+					},
+					{
+						"x": "software",
+						"y": "machine_learning",
+						"value": 30
+					},
+					{
+						"x": "software",
+						"y": "automation",
+						"value": 20
+					},
+					{
+						"x": "software",
+						"y": "knowledge_based_systems",
+						"value": 33
+					},
+					{
+						"x": "finanz",
+						"y": "speech_comprehension",
+						"value": 45
+					},
+					{
+						"x": "finanz",
+						"y": "image_recognition",
+						"value": 34
+					},
+					{
+						"x": "finanz",
+						"y": "machine_learning",
+						"value": 26
+					},
+					{
+						"x": "finanz",
+						"y": "automation",
+						"value": 29
+					},
+					{
+						"x": "finanz",
+						"y": "knowledge_based_systems",
+						"value": 29
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "machine_learning",
+						"value": 22
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 23
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
+						"value": 28
+					},
+					{
+						"x": "architektur",
+						"y": "speech_comprehension",
+						"value": 28
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 15
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "architektur",
+						"y": "automation",
+						"value": 11
+					},
+					{
+						"x": "architektur",
+						"y": "knowledge_based_systems",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "speech_comprehension",
+						"value": 53
+					},
+					{
+						"x": "forschung",
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "forschung",
+						"y": "machine_learning",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "forschung",
+						"y": "knowledge_based_systems",
+						"value": 37
+					},
+					{
+						"x": "kreativ",
+						"y": "speech_comprehension",
+						"value": 75
+					},
+					{
+						"x": "kreativ",
+						"y": "image_recognition",
+						"value": 62
+					},
+					{
 						"x": "kreativ",
 						"y": "machine_learning",
-						"value": 7
+						"value": 26
 					},
 					{
 						"x": "kreativ",
 						"y": "automation",
-						"value": 3
+						"value": 26
 					},
 					{
 						"x": "kreativ",
 						"y": "knowledge_based_systems",
-						"value": 3
+						"value": 37
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
 						"y": "speech_comprehension",
-						"value": 1
+						"value": 11
 					},
 					{
 						"x": "nahrung",
 						"y": "image_recognition",
-						"value": 0
+						"value": 7
 					},
 					{
 						"x": "nahrung",
 						"y": "machine_learning",
-						"value": 1
+						"value": 6
 					},
 					{
 						"x": "nahrung",
-						"y": "automation",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "pharma",
-						"y": "speech_comprehension",
-						"value": 3
-					},
-					{
-						"x": "pharma",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "pharma",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "pharma",
 						"y": "automation",
 						"value": 4
 					},
 					{
-						"x": "pharma",
+						"x": "nahrung",
 						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "speech_comprehension",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "image_recognition",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "machine_learning",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "automation",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "knowledge_based_systems",
-						"value": 1
-					},
-					{
-						"x": "metall",
-						"y": "speech_comprehension",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "image_recognition",
-						"value": 3
-					},
-					{
-						"x": "metall",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "metall",
-						"y": "automation",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "knowledge_based_systems",
-						"value": 2
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "speech_comprehension",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "image_recognition",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "automation",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "knowledge_based_systems",
-						"value": 4
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "speech_comprehension",
-						"value": 6
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "image_recognition",
 						"value": 5
 					},
 					{
-						"x": "fahrzeugbau",
-						"y": "machine_learning",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "automation",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "knowledge_based_systems",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "speech_comprehension",
-						"value": 1
+						"value": 21
 					},
 					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "image_recognition",
-						"value": 1
+						"value": 13
 					},
 					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "machine_learning",
-						"value": 1
+						"value": 8
 					},
 					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "automation",
-						"value": 1
+						"value": 5
 					},
 					{
-						"x": "sonstige_konsumgueter",
+						"x": "pharma",
 						"y": "knowledge_based_systems",
-						"value": 1
+						"value": 10
 					},
 					{
-						"x": "energie",
+						"x": "holz",
 						"y": "speech_comprehension",
-						"value": 4
+						"value": 22
 					},
 					{
-						"x": "energie",
+						"x": "holz",
 						"y": "image_recognition",
-						"value": 4
+						"value": 14
 					},
 					{
-						"x": "energie",
+						"x": "holz",
 						"y": "machine_learning",
-						"value": 3
+						"value": 5
 					},
 					{
-						"x": "energie",
+						"x": "holz",
 						"y": "automation",
-						"value": 4
+						"value": 6
 					},
 					{
-						"x": "energie",
+						"x": "holz",
 						"y": "knowledge_based_systems",
-						"value": 3
+						"value": 17
 					},
 					{
-						"x": "telekommunikation",
+						"x": "metall",
 						"y": "speech_comprehension",
 						"value": 12
 					},
 					{
-						"x": "telekommunikation",
+						"x": "metall",
 						"y": "image_recognition",
-						"value": 8
+						"value": 6
 					},
 					{
-						"x": "telekommunikation",
+						"x": "metall",
 						"y": "machine_learning",
-						"value": 7
+						"value": 4
 					},
 					{
-						"x": "telekommunikation",
+						"x": "metall",
 						"y": "automation",
 						"value": 4
 					},
 					{
-						"x": "telekommunikation",
+						"x": "metall",
 						"y": "knowledge_based_systems",
 						"value": 8
 					},
 					{
-						"x": "software",
+						"x": "elektroindustrie",
 						"y": "speech_comprehension",
-						"value": 19
+						"value": 29
 					},
 					{
-						"x": "software",
+						"x": "elektroindustrie",
 						"y": "image_recognition",
-						"value": 14
+						"value": 20
 					},
 					{
-						"x": "software",
+						"x": "elektroindustrie",
 						"y": "machine_learning",
+						"value": 15
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
+						"value": 10
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 16
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "speech_comprehension",
+						"value": 20
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "image_recognition",
+						"value": 11
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 12
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
+						"value": 15
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
+						"value": 32
+					},
+					{
+						"x": "telekommunikation",
+						"y": "machine_learning",
+						"value": 15
+					},
+					{
+						"x": "telekommunikation",
+						"y": "automation",
+						"value": 17
+					},
+					{
+						"x": "telekommunikation",
+						"y": "knowledge_based_systems",
 						"value": 22
 					},
 					{
 						"x": "software",
+						"y": "speech_comprehension",
+						"value": 56
+					},
+					{
+						"x": "software",
+						"y": "image_recognition",
+						"value": 31
+					},
+					{
+						"x": "software",
+						"y": "machine_learning",
+						"value": 33
+					},
+					{
+						"x": "software",
 						"y": "automation",
-						"value": 17
+						"value": 26
 					},
 					{
 						"x": "software",
 						"y": "knowledge_based_systems",
-						"value": 17
+						"value": 42
 					},
 					{
 						"x": "finanz",
 						"y": "speech_comprehension",
-						"value": 6
+						"value": 34
 					},
 					{
 						"x": "finanz",
 						"y": "image_recognition",
-						"value": 6
+						"value": 20
 					},
 					{
 						"x": "finanz",
 						"y": "machine_learning",
-						"value": 5
+						"value": 14
 					},
 					{
 						"x": "finanz",
 						"y": "automation",
-						"value": 5
+						"value": 12
 					},
 					{
 						"x": "finanz",
 						"y": "knowledge_based_systems",
-						"value": 4
+						"value": 24
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "speech_comprehension",
-						"value": 18
+						"value": 73
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "image_recognition",
-						"value": 8
+						"value": 58
 					},
 					{
 						"x": "unternehmensberatung",
 						"y": "machine_learning",
-						"value": 16
+						"value": 19
 					},
 					{
 						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 13
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
+						"value": 58
+					},
+					{
+						"x": "architektur",
+						"y": "speech_comprehension",
+						"value": 17
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 9
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 8
+					},
+					{
+						"x": "architektur",
 						"y": "automation",
 						"value": 7
 					},
 					{
-						"x": "unternehmensberatung",
-						"y": "knowledge_based_systems",
-						"value": 15
-					},
-					{
-						"x": "architektur",
-						"y": "speech_comprehension",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "image_recognition",
-						"value": 1
-					},
-					{
-						"x": "architektur",
-						"y": "machine_learning",
-						"value": 2
-					},
-					{
-						"x": "architektur",
-						"y": "automation",
-						"value": 4
-					},
-					{
 						"x": "architektur",
 						"y": "knowledge_based_systems",
-						"value": 1
+						"value": 11
 					},
 					{
 						"x": "forschung",
 						"y": "speech_comprehension",
-						"value": 9
+						"value": 48
 					},
 					{
 						"x": "forschung",
 						"y": "image_recognition",
-						"value": 19
+						"value": 26
 					},
 					{
 						"x": "forschung",
 						"y": "machine_learning",
-						"value": 21
+						"value": 32
 					},
 					{
 						"x": "forschung",
 						"y": "automation",
-						"value": 14
+						"value": 18
 					},
 					{
 						"x": "forschung",
 						"y": "knowledge_based_systems",
+						"value": 28
+					},
+					{
+						"x": "kreativ",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "kreativ",
+						"y": "image_recognition",
+						"value": 38
+					},
+					{
+						"x": "kreativ",
+						"y": "machine_learning",
+						"value": 17
+					},
+					{
+						"x": "kreativ",
+						"y": "automation",
 						"value": 13
 					},
 					{
 						"x": "kreativ",
-						"y": "speech_comprehension",
-						"value": 15
-					},
-					{
-						"x": "kreativ",
-						"y": "image_recognition",
-						"value": 8
-					},
-					{
-						"x": "kreativ",
-						"y": "machine_learning",
-						"value": 5
-					},
-					{
-						"x": "kreativ",
-						"y": "automation",
-						"value": 1
-					},
-					{
-						"x": "kreativ",
 						"y": "knowledge_based_systems",
-						"value": 3
+						"value": 19
 					}
 				]
 			}
@@ -5686,504 +5566,504 @@
 					{
 						"x": "nahrung",
 						"y": "products_and_services",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "nahrung",
-						"y": "it_admin",
-						"value": 4
-					},
-					{
-						"x": "nahrung",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "pharma",
-						"y": "products_and_services",
-						"value": 10
-					},
-					{
-						"x": "pharma",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "pharma",
-						"y": "client_communication",
-						"value": 6
-					},
-					{
-						"x": "pharma",
-						"y": "it_admin",
-						"value": 1
-					},
-					{
-						"x": "pharma",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "products_and_services",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "client_communication",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "it_admin",
-						"value": 4
-					},
-					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 6
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
-						"value": 5
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "it_admin",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "products_and_services",
-						"value": 5
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 2
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "it_admin",
-						"value": 1
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 10
-					},
-					{
-						"x": "telekommunikation",
-						"y": "process_automation",
-						"value": 3
-					},
-					{
-						"x": "telekommunikation",
-						"y": "client_communication",
 						"value": 8
 					},
 					{
-						"x": "telekommunikation",
-						"y": "it_admin",
-						"value": 4
+						"x": "nahrung",
+						"y": "process_automation",
+						"value": 17
 					},
 					{
-						"x": "telekommunikation",
-						"y": "other_fields",
+						"x": "nahrung",
+						"y": "client_communication",
+						"value": 18
+					},
+					{
+						"x": "nahrung",
+						"y": "it_admin",
 						"value": 8
 					},
 					{
-						"x": "software",
-						"y": "products_and_services",
-						"value": 36
-					},
-					{
-						"x": "software",
-						"y": "process_automation",
-						"value": 6
-					},
-					{
-						"x": "software",
-						"y": "client_communication",
-						"value": 14
-					},
-					{
-						"x": "software",
-						"y": "it_admin",
-						"value": 4
-					},
-					{
-						"x": "software",
-						"y": "other_fields",
-						"value": 6
-					},
-					{
-						"x": "finanz",
-						"y": "products_and_services",
-						"value": 4
-					},
-					{
-						"x": "finanz",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "finanz",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "finanz",
-						"y": "it_admin",
-						"value": 1
-					},
-					{
-						"x": "finanz",
+						"x": "nahrung",
 						"y": "other_fields",
 						"value": 1
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "pharma",
 						"y": "products_and_services",
 						"value": 18
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "pharma",
 						"y": "process_automation",
-						"value": 3
+						"value": 16
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "pharma",
 						"y": "client_communication",
-						"value": 4
+						"value": 25
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "pharma",
 						"y": "it_admin",
-						"value": 6
+						"value": 17
 					},
 					{
-						"x": "unternehmensberatung",
+						"x": "pharma",
 						"y": "other_fields",
-						"value": 3
+						"value": 2
 					},
 					{
-						"x": "architektur",
+						"x": "holz",
 						"y": "products_and_services",
+						"value": 7
+					},
+					{
+						"x": "holz",
+						"y": "process_automation",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "client_communication",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "it_admin",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "products_and_services",
+						"value": 13
+					},
+					{
+						"x": "metall",
+						"y": "process_automation",
 						"value": 5
 					},
 					{
-						"x": "architektur",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "architektur",
+						"x": "metall",
 						"y": "client_communication",
-						"value": 1
+						"value": 9
 					},
 					{
-						"x": "architektur",
+						"x": "metall",
 						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "architektur",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "forschung",
-						"y": "products_and_services",
-						"value": 34
-					},
-					{
-						"x": "forschung",
-						"y": "process_automation",
-						"value": 6
-					},
-					{
-						"x": "forschung",
-						"y": "client_communication",
-						"value": 7
-					},
-					{
-						"x": "forschung",
-						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "forschung",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "kreativ",
-						"y": "products_and_services",
 						"value": 11
 					},
 					{
+						"x": "metall",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "products_and_services",
+						"value": 41
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "process_automation",
+						"value": 10
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "client_communication",
+						"value": 32
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "it_admin",
+						"value": 14
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_fields",
+						"value": 0
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "products_and_services",
+						"value": 15
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "process_automation",
+						"value": 3
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "client_communication",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "it_admin",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_fields",
+						"value": 4
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "products_and_services",
+						"value": 13
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "process_automation",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "client_communication",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "it_admin",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_fields",
+						"value": 8
+					},
+					{
+						"x": "energie",
+						"y": "products_and_services",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "process_automation",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "client_communication",
+						"value": 9
+					},
+					{
+						"x": "energie",
+						"y": "it_admin",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "other_fields",
+						"value": 9
+					},
+					{
+						"x": "telekommunikation",
+						"y": "products_and_services",
+						"value": 51
+					},
+					{
+						"x": "telekommunikation",
+						"y": "process_automation",
+						"value": 22
+					},
+					{
+						"x": "telekommunikation",
+						"y": "client_communication",
+						"value": 17
+					},
+					{
+						"x": "telekommunikation",
+						"y": "it_admin",
+						"value": 20
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_fields",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "products_and_services",
+						"value": 49
+					},
+					{
+						"x": "software",
+						"y": "process_automation",
+						"value": 28
+					},
+					{
+						"x": "software",
+						"y": "client_communication",
+						"value": 38
+					},
+					{
+						"x": "software",
+						"y": "it_admin",
+						"value": 34
+					},
+					{
+						"x": "software",
+						"y": "other_fields",
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "products_and_services",
+						"value": 31
+					},
+					{
+						"x": "finanz",
+						"y": "process_automation",
+						"value": 36
+					},
+					{
+						"x": "finanz",
+						"y": "client_communication",
+						"value": 31
+					},
+					{
+						"x": "finanz",
+						"y": "it_admin",
+						"value": 21
+					},
+					{
+						"x": "finanz",
+						"y": "other_fields",
+						"value": 11
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "products_and_services",
+						"value": 43
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "process_automation",
+						"value": 25
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "client_communication",
+						"value": 11
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "it_admin",
+						"value": 25
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_fields",
+						"value": 16
+					},
+					{
+						"x": "architektur",
+						"y": "products_and_services",
+						"value": 28
+					},
+					{
+						"x": "architektur",
+						"y": "process_automation",
+						"value": 12
+					},
+					{
+						"x": "architektur",
+						"y": "client_communication",
+						"value": 8
+					},
+					{
+						"x": "architektur",
+						"y": "it_admin",
+						"value": 6
+					},
+					{
+						"x": "architektur",
+						"y": "other_fields",
+						"value": 7
+					},
+					{
+						"x": "forschung",
+						"y": "products_and_services",
+						"value": 50
+					},
+					{
+						"x": "forschung",
+						"y": "process_automation",
+						"value": 14
+					},
+					{
+						"x": "forschung",
+						"y": "client_communication",
+						"value": 22
+					},
+					{
+						"x": "forschung",
+						"y": "it_admin",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "other_fields",
+						"value": 13
+					},
+					{
+						"x": "kreativ",
+						"y": "products_and_services",
+						"value": 62
+					},
+					{
 						"x": "kreativ",
 						"y": "process_automation",
-						"value": 4
+						"value": 37
 					},
 					{
 						"x": "kreativ",
 						"y": "client_communication",
-						"value": 7
+						"value": 55
 					},
 					{
 						"x": "kreativ",
 						"y": "it_admin",
-						"value": 3
+						"value": 27
 					},
 					{
 						"x": "kreativ",
 						"y": "other_fields",
-						"value": 1
+						"value": 11
 					}
 				],
 				"de": [
 					{
 						"x": "nahrung",
 						"y": "products_and_services",
-						"value": 12
+						"value": 4
 					},
 					{
 						"x": "nahrung",
 						"y": "process_automation",
-						"value": 2
+						"value": 7
 					},
 					{
 						"x": "nahrung",
 						"y": "client_communication",
-						"value": 11
+						"value": 9
 					},
 					{
 						"x": "nahrung",
 						"y": "it_admin",
-						"value": 5
+						"value": 4
 					},
 					{
 						"x": "nahrung",
 						"y": "other_fields",
-						"value": 2
+						"value": 7
 					},
 					{
 						"x": "pharma",
+						"y": "products_and_services",
+						"value": 9
+					},
+					{
+						"x": "pharma",
+						"y": "process_automation",
+						"value": 8
+					},
+					{
+						"x": "pharma",
+						"y": "client_communication",
+						"value": 16
+					},
+					{
+						"x": "pharma",
+						"y": "it_admin",
+						"value": 10
+					},
+					{
+						"x": "pharma",
+						"y": "other_fields",
+						"value": 6
+					},
+					{
+						"x": "holz",
+						"y": "products_and_services",
+						"value": 13
+					},
+					{
+						"x": "holz",
+						"y": "process_automation",
+						"value": 10
+					},
+					{
+						"x": "holz",
+						"y": "client_communication",
+						"value": 16
+					},
+					{
+						"x": "holz",
+						"y": "it_admin",
+						"value": 10
+					},
+					{
+						"x": "holz",
+						"y": "other_fields",
+						"value": 13
+					},
+					{
+						"x": "metall",
 						"y": "products_and_services",
 						"value": 6
 					},
 					{
-						"x": "pharma",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "pharma",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "pharma",
-						"y": "it_admin",
-						"value": 3
-					},
-					{
-						"x": "pharma",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "holz",
-						"y": "it_admin",
-						"value": 4
-					},
-					{
-						"x": "holz",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "products_and_services",
-						"value": 3
-					},
-					{
 						"x": "metall",
 						"y": "process_automation",
-						"value": 2
+						"value": 8
 					},
 					{
 						"x": "metall",
 						"y": "client_communication",
-						"value": 1
+						"value": 11
 					},
 					{
 						"x": "metall",
-						"y": "it_admin",
-						"value": 2
-					},
-					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 16
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
-						"value": 4
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
-						"value": 3
-					},
-					{
-						"x": "elektroindustrie",
 						"y": "it_admin",
 						"value": 7
 					},
 					{
-						"x": "elektroindustrie",
+						"x": "metall",
 						"y": "other_fields",
 						"value": 2
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "products_and_services",
+						"value": 21
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "process_automation",
+						"value": 19
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "client_communication",
+						"value": 21
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "it_admin",
+						"value": 14
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_fields",
+						"value": 8
 					},
 					{
 						"x": "fahrzeugbau",
@@ -6193,247 +6073,247 @@
 					{
 						"x": "fahrzeugbau",
 						"y": "process_automation",
-						"value": 5
+						"value": 12
 					},
 					{
 						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "it_admin",
-						"value": 5
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "it_admin",
-						"value": 0
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 5
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 2
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "it_admin",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 2
-					},
-					{
-						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 19
-					},
-					{
-						"x": "telekommunikation",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "telekommunikation",
-						"y": "client_communication",
-						"value": 7
-					},
-					{
-						"x": "telekommunikation",
-						"y": "it_admin",
-						"value": 1
-					},
-					{
-						"x": "telekommunikation",
-						"y": "other_fields",
-						"value": 2
-					},
-					{
-						"x": "software",
-						"y": "products_and_services",
-						"value": 38
-					},
-					{
-						"x": "software",
-						"y": "process_automation",
-						"value": 10
-					},
-					{
-						"x": "software",
 						"y": "client_communication",
 						"value": 16
 					},
 					{
-						"x": "software",
+						"x": "fahrzeugbau",
 						"y": "it_admin",
 						"value": 9
 					},
 					{
-						"x": "software",
+						"x": "fahrzeugbau",
 						"y": "other_fields",
+						"value": 7
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "products_and_services",
+						"value": 8
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "process_automation",
+						"value": 8
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "client_communication",
 						"value": 11
 					},
 					{
-						"x": "finanz",
-						"y": "products_and_services",
-						"value": 7
-					},
-					{
-						"x": "finanz",
-						"y": "process_automation",
-						"value": 7
-					},
-					{
-						"x": "finanz",
-						"y": "client_communication",
-						"value": 5
-					},
-					{
-						"x": "finanz",
+						"x": "sonstige_konsumgueter",
 						"y": "it_admin",
-						"value": 5
+						"value": 6
 					},
 					{
-						"x": "finanz",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "products_and_services",
-						"value": 39
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "process_automation",
-						"value": 0
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "client_communication",
-						"value": 9
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "it_admin",
-						"value": 2
-					},
-					{
-						"x": "unternehmensberatung",
+						"x": "sonstige_konsumgueter",
 						"y": "other_fields",
 						"value": 3
 					},
 					{
-						"x": "architektur",
+						"x": "energie",
 						"y": "products_and_services",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "process_automation",
 						"value": 5
 					},
 					{
-						"x": "architektur",
-						"y": "process_automation",
-						"value": 2
-					},
-					{
-						"x": "architektur",
+						"x": "energie",
 						"y": "client_communication",
-						"value": 1
+						"value": 8
 					},
 					{
-						"x": "architektur",
+						"x": "energie",
 						"y": "it_admin",
-						"value": 2
+						"value": 4
 					},
 					{
-						"x": "architektur",
+						"x": "energie",
 						"y": "other_fields",
-						"value": 0
+						"value": 6
 					},
 					{
-						"x": "forschung",
+						"x": "telekommunikation",
 						"y": "products_and_services",
+						"value": 37
+					},
+					{
+						"x": "telekommunikation",
+						"y": "process_automation",
 						"value": 22
 					},
 					{
-						"x": "forschung",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "forschung",
+						"x": "telekommunikation",
 						"y": "client_communication",
-						"value": 0
+						"value": 22
 					},
 					{
-						"x": "forschung",
+						"x": "telekommunikation",
 						"y": "it_admin",
-						"value": 1
+						"value": 20
 					},
 					{
-						"x": "forschung",
+						"x": "telekommunikation",
 						"y": "other_fields",
-						"value": 0
+						"value": 12
 					},
 					{
-						"x": "kreativ",
+						"x": "software",
+						"y": "products_and_services",
+						"value": 49
+					},
+					{
+						"x": "software",
+						"y": "process_automation",
+						"value": 31
+					},
+					{
+						"x": "software",
+						"y": "client_communication",
+						"value": 27
+					},
+					{
+						"x": "software",
+						"y": "it_admin",
+						"value": 39
+					},
+					{
+						"x": "software",
+						"y": "other_fields",
+						"value": 8
+					},
+					{
+						"x": "finanz",
 						"y": "products_and_services",
 						"value": 24
 					},
 					{
+						"x": "finanz",
+						"y": "process_automation",
+						"value": 20
+					},
+					{
+						"x": "finanz",
+						"y": "client_communication",
+						"value": 18
+					},
+					{
+						"x": "finanz",
+						"y": "it_admin",
+						"value": 13
+					},
+					{
+						"x": "finanz",
+						"y": "other_fields",
+						"value": 8
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "products_and_services",
+						"value": 70
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "process_automation",
+						"value": 19
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "client_communication",
+						"value": 20
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "it_admin",
+						"value": 54
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_fields",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "products_and_services",
+						"value": 15
+					},
+					{
+						"x": "architektur",
+						"y": "process_automation",
+						"value": 8
+					},
+					{
+						"x": "architektur",
+						"y": "client_communication",
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "it_admin",
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "other_fields",
+						"value": 6
+					},
+					{
+						"x": "forschung",
+						"y": "products_and_services",
+						"value": 42
+					},
+					{
+						"x": "forschung",
+						"y": "process_automation",
+						"value": 28
+					},
+					{
+						"x": "forschung",
+						"y": "client_communication",
+						"value": 17
+					},
+					{
+						"x": "forschung",
+						"y": "it_admin",
+						"value": 13
+					},
+					{
+						"x": "forschung",
+						"y": "other_fields",
+						"value": 19
+					},
+					{
+						"x": "kreativ",
+						"y": "products_and_services",
+						"value": 42
+					},
+					{
 						"x": "kreativ",
 						"y": "process_automation",
-						"value": 0
+						"value": 17
 					},
 					{
 						"x": "kreativ",
 						"y": "client_communication",
-						"value": 16
+						"value": 35
 					},
 					{
 						"x": "kreativ",
 						"y": "it_admin",
-						"value": 0
+						"value": 14
 					},
 					{
 						"x": "kreativ",
 						"y": "other_fields",
-						"value": 11
+						"value": 6
 					}
 				]
 			}
