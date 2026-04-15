@@ -23,21 +23,23 @@ import { Region, StickyItemData } from "../../types/global";
 import DataToggle from "../DataToggle";
 
 type AreaChartProps = {
-	id: string;
+	chart_type: string;
 	data: StickyItemData;
 	toggleData?: string;
 	setToggleData?: (toggleData: string) => void;
 	togglesBetween?: string[];
 	max_value?: number;
+	hide_toggle?: boolean;
 };
 
 const AreaChart: React.FC<AreaChartProps> = ({
-	id,
+	chart_type,
 	data,
 	toggleData,
 	setToggleData,
 	togglesBetween,
 	max_value,
+	hide_toggle,
 }) => {
 	const {
 		theme,
@@ -130,7 +132,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 				>
 					{payloadData?.year}
 				</p>
-				{id !== "berlin_is_ahead" && (
+				{!chart_type?.includes("toggle") && (
 					<>
 						{Object.keys(payloadData).map((dataKey) => (
 							<div key={dataKey}>
@@ -174,7 +176,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						))}
 					</>
 				)}
-				{id === "berlin_is_ahead" && (
+				{chart_type?.includes("toggle") && (
 					<>
 						{Object.keys(payloadData).map((dataKey) => (
 							<div key={dataKey}>
@@ -260,7 +262,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						interval={0}
 					/>
 					<Tooltip content={<CustomTooltip />} />
-					{id === "sektoren" ? (
+					{chart_type?.includes("sektoren") && (
 						<>
 							{sektoren.map((sektor) => (
 								<Area
@@ -275,7 +277,8 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								/>
 							))}
 						</>
-					) : (
+					)}
+					{chart_type?.includes("branchen") && (
 						<>
 							{branchen
 								.filter((branche) =>
@@ -297,7 +300,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								))}
 						</>
 					)}
-					{id === "berlin_is_ahead" && (
+					{chart_type?.includes("toggle") && (
 						<>
 							<Area
 								type="linear"
@@ -331,40 +334,42 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						}}
 						// Value Display
 						tickFormatter={(label: string) => {
-							return id === "berlin_is_ahead"
+							return chart_type?.includes("toggle")
 								? `${formatNumber(+label)}%`
 								: formatEuroNumber(+label);
 						}}
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
-			<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
-				{id !== "berlin_is_ahead" && (
-					<DataToggle
-						data={region}
-						setData={(value: string) => setRegion(value as Region)}
-						allDatas={["ber", "de"]}
-					/>
-				)}
-				{(id === "growth" || id === "revenue_from_new_products") && (
-					<Dropdown
-						type="filter"
-						allFilters={allFilters}
-						activeFilters={activeFilters}
-						setFilters={setActiveFilters}
-					/>
-				)}
-				{id === "berlin_is_ahead" &&
-					toggleData &&
-					setToggleData &&
-					togglesBetween && (
+			{!hide_toggle && (
+				<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
+					{!chart_type?.includes("toggle") && (
 						<DataToggle
-							data={toggleData}
-							setData={(value: string) => setToggleData(value)}
-							allDatas={togglesBetween}
+							data={region}
+							setData={(value: string) => setRegion(value as Region)}
+							allDatas={["ber", "de"]}
 						/>
 					)}
-			</div>
+					{chart_type?.includes("branchen") && (
+						<Dropdown
+							type="filter"
+							allFilters={allFilters}
+							activeFilters={activeFilters}
+							setFilters={setActiveFilters}
+						/>
+					)}
+					{chart_type?.includes("toggle") &&
+						toggleData &&
+						setToggleData &&
+						togglesBetween && (
+							<DataToggle
+								data={toggleData}
+								setData={(value: string) => setToggleData(value)}
+								allDatas={togglesBetween}
+							/>
+						)}
+				</div>
+			)}
 		</>
 	);
 };

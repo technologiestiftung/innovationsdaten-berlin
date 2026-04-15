@@ -57,6 +57,7 @@ type dataKeys =
 	| "requirements_in_public_procurement"
 	| "innovations_intensitaet"
 	| "fue_intensitaet"
+	| "innovator_rate"
 	| "product_innovation_share"
 	| "process_innovation_share"
 	| "umsatz_markt_neuheiten"
@@ -100,6 +101,7 @@ export type StickyItem = {
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
+	hide_toggle?: boolean;
 	max_value?: number;
 	text?: string;
 	facts?: { fact: string; unit: string }[];

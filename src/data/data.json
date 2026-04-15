@@ -176,7 +176,7 @@
 			"id": "sektoren",
 			"title": "Wo ist Innovation gewachsen?",
 			"displayNumber": "2.2",
-			"chart_type": "area_chart",
+			"chart_type": "area_chart_sektoren",
 			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"data": {
 				"ber": [
@@ -259,7 +259,7 @@
 			"id": "growth",
 			"title": "Welche Branchen wachsen?",
 			"displayNumber": "2.3",
-			"chart_type": "area_chart",
+			"chart_type": "area_chart_branchen",
 			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"data": {
 				"ber": [
@@ -1305,9 +1305,9 @@
 		},
 		{
 			"id": "revenue_from_new_products",
-			"title": "Umsatz mit Produktneuheiten",
+			"title": "Umsatz mit Produkt&shy;neuheiten",
 			"displayNumber": "3.4",
-			"chart_type": "area_chart",
+			"chart_type": "area_chart_branchen",
 			"text": "TBD...",
 			"data": {
 				"ber": [
@@ -2082,7 +2082,7 @@
 			"id": "berlin_is_ahead",
 			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
 			"displayNumber": "5.2",
-			"chart_type": "area_chart",
+			"chart_type": "area_chart_toggle",
 			"max_value": 8,
 			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
 			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
@@ -2164,9 +2164,58 @@
 			}
 		},
 		{
+			"id": "innovator_rate",
+			"title": "Innovatoren&shy;quote",
+			"displayNumber": "5.3",
+			"chart_type": "area_chart_toggle",
+			"text": "TBD...",
+			"max_value": 100,
+			"hide_toggle": true,
+			"togglesBetween": ["innovator_rate"],
+			"data": {
+				"innovator_rate": [
+					{
+						"year": 2018,
+						"ber": 71,
+						"de": 66
+					},
+					{
+						"year": 2019,
+						"ber": 71,
+						"de": 62
+					},
+					{
+						"year": 2020,
+						"ber": 73,
+						"de": 64
+					},
+					{
+						"year": 2021,
+						"ber": 69,
+						"de": 62
+					},
+					{
+						"year": 2022,
+						"ber": 66,
+						"de": 59
+					},
+					{
+						"year": 2023,
+						"ber": 61,
+						"de": 57
+					},
+					{
+						"year": 2024,
+						"ber": 68,
+						"de": 60
+					}
+				]
+			}
+		},
+		{
 			"id": "collaboration_regions",
 			"title": "Mit welchen Regionen wird kollaboriert?",
-			"displayNumber": "5.3",
+			"displayNumber": "5.4",
 			"chart_type": "matrix",
 			"text": "Kollaboration ist ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die Innovationskooperationen in der jeweiligen Region pflegen.",
 			"data": {
@@ -2629,7 +2678,7 @@
 		{
 			"id": "collaboration_partners",
 			"title": "Mit welchen Partnern wird kollaboriert?",
-			"displayNumber": "5.4",
+			"displayNumber": "5.5",
 			"chart_type": "matrix",
 			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die mit den jeweiligen Kategorien von Partnern kooperieren.",
 			"data": {
@@ -4292,7 +4341,7 @@
 		{
 			"id": "protective_measures_intellectual_property",
 			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
-			"displayNumber": "5.5",
+			"displayNumber": "5.6",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 40,

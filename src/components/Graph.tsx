@@ -31,6 +31,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 		chart_type,
 		chart_unit,
 		has_tooltip,
+		hide_toggle,
 		facts,
 		bar_chart_unit_breakpoint,
 		togglesBetween,
@@ -58,22 +59,24 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 			{/* TREEMAP */}
 			{chart_type === "tree_map" && <TreeMap id={id} data={content} />}
 			{/* AREA CHART */}
-			{chart_type === "area_chart" && (
+			{chart_type?.includes("area_chart") && (
 				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-entire-y-axis-ticks">
 					{toggleData ? (
 						<AreaChart
-							id={id}
+							chart_type={chart_type}
 							data={(content as Record<string, any>)[toggleData]}
 							max_value={max_value}
 							toggleData={toggleData}
 							setToggleData={setToggleData}
 							togglesBetween={togglesBetween}
+							hide_toggle={hide_toggle}
 						/>
 					) : (
 						<AreaChart
-							id={id}
+							chart_type={chart_type}
 							data={(content as Record<string, any>)[region]}
 							max_value={max_value}
+							hide_toggle={hide_toggle}
 						/>
 					)}
 				</div>
