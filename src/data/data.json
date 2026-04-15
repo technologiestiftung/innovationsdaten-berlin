@@ -806,6 +806,143 @@
 			}
 		},
 		{
+			"id": "fue_spendings_delta",
+			"title": "FuE-Ausgaben",
+			"chart_type": "bar_chart_delta",
+			"chart_unit": "€",
+			"text": "TBD...",
+			"bar_chart_unit_breakpoint": {
+				"ber": 500,
+				"de": 25000
+			},
+			"data": {
+				"ber": {
+					"nahrung": {
+						"value": 15,
+						"delta": -11
+					},
+					"pharma": {
+						"value": 916,
+						"delta": 27
+					},
+					"holz": {
+						"value": 33,
+						"delta": -11
+					},
+					"metall": {
+						"value": 51,
+						"delta": -34
+					},
+					"elektroindustrie": {
+						"value": 718,
+						"delta": -36
+					},
+					"fahrzeugbau": {
+						"value": 501,
+						"delta": 20
+					},
+					"sonstige_konsumgueter": {
+						"value": 33,
+						"delta": 17
+					},
+					"energie": {
+						"value": 28,
+						"delta": 18
+					},
+					"telekommunikation": {
+						"value": 170,
+						"delta": -15
+					},
+					"software": {
+						"value": 814,
+						"delta": 123
+					},
+					"finanz": {
+						"value": 79,
+						"delta": -39
+					},
+					"unternehmensberatung": {
+						"value": 65,
+						"delta": -5
+					},
+					"architektur": {
+						"value": 48,
+						"delta": -4
+					},
+					"forschung": {
+						"value": 124,
+						"delta": 32
+					},
+					"kreativ": {
+						"value": 32,
+						"delta": 15
+					}
+				},
+				"de": {
+					"nahrung": {
+						"value": 747,
+						"delta": 28
+					},
+					"pharma": {
+						"value": 16642,
+						"delta": 893
+					},
+					"holz": {
+						"value": 446,
+						"delta": 108
+					},
+					"metall": {
+						"value": 3119,
+						"delta": 81
+					},
+					"elektroindustrie": {
+						"value": 17828,
+						"delta": 263
+					},
+					"fahrzeugbau": {
+						"value": 52334,
+						"delta": 2038
+					},
+					"sonstige_konsumgueter": {
+						"value": 1442,
+						"delta": 163
+					},
+					"energie": {
+						"value": 588,
+						"delta": 28
+					},
+					"telekommunikation": {
+						"value": 1893,
+						"delta": -341
+					},
+					"software": {
+						"value": 13600,
+						"delta": 1267
+					},
+					"finanz": {
+						"value": 3334,
+						"delta": 54
+					},
+					"unternehmensberatung": {
+						"value": 353,
+						"delta": 94
+					},
+					"architektur": {
+						"value": 1419,
+						"delta": -375
+					},
+					"forschung": {
+						"value": 6950,
+						"delta": 2684
+					},
+					"kreativ": {
+						"value": 479,
+						"delta": 41
+					}
+				}
+			}
+		},
+		{
 			"id": "inno_ausgaben_2022",
 			"title": "Aktivität seit 2022",
 			"chart_type": "bar_chart_delta",
