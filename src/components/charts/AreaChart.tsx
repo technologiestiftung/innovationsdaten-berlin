@@ -346,7 +346,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						allDatas={["ber", "de"]}
 					/>
 				)}
-				{id === "growth" && (
+				{(id === "growth" || id === "revenue_from_new_products") && (
 					<Dropdown
 						type="filter"
 						allFilters={allFilters}

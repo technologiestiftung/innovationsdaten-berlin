@@ -285,6 +285,9 @@ const BarChart: React.FC<BarChartProps> = ({
 			return widthOfDelta;
 		};
 		const setX = () => {
+			if (chart_type.includes("delta") && !isSmall && !positiveDelta) {
+				return x - paddingLabel - getNegativeDeltaXShift();
+			}
 			if (chart_type.includes("delta") && !isSmall) {
 				return x - paddingLabel;
 			}

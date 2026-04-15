@@ -209,6 +209,11 @@
 						"year": 2023,
 						"dienstleistungen": 2277,
 						"industrie": 3910
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 2168,
+						"industrie": 3966
 					}
 				],
 				"de": [
@@ -241,6 +246,11 @@
 						"year": 2023,
 						"dienstleistungen": 44152,
 						"industrie": 144860
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 48909,
+						"industrie": 149900
 					}
 				]
 			}
@@ -360,6 +370,24 @@
 						"architektur": 122,
 						"forschung": 239,
 						"kreativ": 188
+					},
+					{
+						"year": 2024,
+						"nahrung": 28,
+						"pharma": 1648,
+						"holz": 38,
+						"metall": 56,
+						"elektroindustrie": 906,
+						"fahrzeugbau": 1035,
+						"sonstige_konsumgueter": 73,
+						"energie": 182,
+						"telekommunikation": 268,
+						"software": 1175,
+						"finanz": 221,
+						"unternehmensberatung": 70,
+						"architektur": 109,
+						"forschung": 234,
+						"kreativ": 90
 					}
 				],
 				"de": [
@@ -470,6 +498,24 @@
 						"architektur": 2281,
 						"forschung": 8047,
 						"kreativ": 891
+					},
+					{
+						"year": 2024,
+						"nahrung": 2401,
+						"pharma": 24664,
+						"holz": 1246,
+						"metall": 6749,
+						"elektroindustrie": 24166,
+						"fahrzeugbau": 82644,
+						"sonstige_konsumgueter": 2799,
+						"energie": 5231,
+						"telekommunikation": 6098,
+						"software": 20317,
+						"finanz": 7912,
+						"unternehmensberatung": 657,
+						"architektur": 2086,
+						"forschung": 10909,
+						"kreativ": 930
 					}
 				]
 			}
@@ -488,126 +534,126 @@
 			"data": {
 				"ber": {
 					"nahrung": {
-						"value": 48,
-						"delta": -19
+						"value": 29,
+						"delta": -1
 					},
 					"pharma": {
-						"value": 1524,
-						"delta": 64
+						"value": 1588,
+						"delta": 60
 					},
 					"holz": {
-						"value": 113,
-						"delta": -56
+						"value": 57,
+						"delta": -19
 					},
 					"metall": {
-						"value": 88,
-						"delta": -17
+						"value": 71,
+						"delta": -15
 					},
 					"elektroindustrie": {
-						"value": 864,
-						"delta": 102
+						"value": 966,
+						"delta": -60
 					},
 					"fahrzeugbau": {
-						"value": 595,
-						"delta": 354
+						"value": 949,
+						"delta": 86
 					},
 					"sonstige_konsumgueter": {
-						"value": 77,
-						"delta": -30
+						"value": 47,
+						"delta": 26
 					},
 					"energie": {
-						"value": 220,
+						"value": 201,
 						"delta": -19
 					},
 					"telekommunikation": {
-						"value": 316,
-						"delta": -43
+						"value": 273,
+						"delta": -5
 					},
 					"software": {
-						"value": 977,
-						"delta": 111
+						"value": 1088,
+						"delta": 87
 					},
 					"finanz": {
-						"value": 245,
-						"delta": 21
+						"value": 266,
+						"delta": -45
 					},
 					"unternehmensberatung": {
-						"value": 124,
-						"delta": -22
+						"value": 102,
+						"delta": -32
 					},
 					"architektur": {
-						"value": 93,
-						"delta": 29
+						"value": 122,
+						"delta": -13
 					},
 					"forschung": {
-						"value": 269,
-						"delta": -30
+						"value": 239,
+						"delta": -5
 					},
 					"kreativ": {
-						"value": 56,
-						"delta": 132
+						"value": 188,
+						"delta": -98
 					}
 				},
 				"de": {
 					"nahrung": {
-						"value": 2211,
-						"delta": 228
+						"value": 2439,
+						"delta": -38
 					},
 					"pharma": {
-						"value": 22627,
-						"delta": 1854
+						"value": 24481,
+						"delta": 183
 					},
 					"holz": {
-						"value": 1283,
-						"delta": -107
+						"value": 1176,
+						"delta": 70
 					},
 					"metall": {
-						"value": 5490,
-						"delta": 1092
+						"value": 6582,
+						"delta": 167
 					},
 					"elektroindustrie": {
-						"value": 20782,
-						"delta": 2771
+						"value": 23553,
+						"delta": 613
 					},
 					"fahrzeugbau": {
-						"value": 71413,
-						"delta": 8375
+						"value": 79788,
+						"delta": 2856
 					},
 					"sonstige_konsumgueter": {
-						"value": 2709,
-						"delta": -131
+						"value": 2578,
+						"delta": 221
 					},
 					"energie": {
-						"value": 3844,
-						"delta": 419
+						"value": 4263,
+						"delta": 968
 					},
 					"telekommunikation": {
-						"value": 7139,
-						"delta": -470
+						"value": 6669,
+						"delta": -571
 					},
 					"software": {
-						"value": 14195,
-						"delta": 3975
+						"value": 18170,
+						"delta": 2147
 					},
 					"finanz": {
-						"value": 5351,
-						"delta": 2087
+						"value": 7438,
+						"delta": 474
 					},
 					"unternehmensberatung": {
-						"value": 616,
-						"delta": 40
+						"value": 656,
+						"delta": 1
 					},
 					"architektur": {
-						"value": 1818,
-						"delta": 463
+						"value": 2281,
+						"delta": -195
 					},
 					"forschung": {
-						"value": 6634,
-						"delta": 1413
+						"value": 8047,
+						"delta": 2862
 					},
 					"kreativ": {
-						"value": 673,
-						"delta": 218
+						"value": 891,
+						"delta": 39
 					}
 				}
 			}
@@ -929,7 +975,7 @@
 			"displayNumber": "3.2",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 80,
+			"max_value": 90,
 			"bar_chart_unit_breakpoint": 21,
 			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
 			"sortsAfterOnStart": "process_innovation_share",
@@ -1256,6 +1302,499 @@
 					}
 				]
 			}
+		},
+		{
+			"id": "revenue_from_new_products",
+			"title": "Umsatz mit Produktneuheiten",
+			"displayNumber": "3.4",
+			"chart_type": "area_chart",
+			"text": "TBD...",
+			"data": {
+				"ber": [
+					{
+						"year": 2013,
+						"dienstleistungen": 3296,
+						"industrie": 7673,
+						"nahrung": 69,
+						"pharma": 543,
+						"holz": 106,
+						"metall": 143,
+						"elektroindustrie": 3127,
+						"fahrzeugbau": 3166,
+						"sonstige_konsumgueter": 83,
+						"energie": 436,
+						"telekommunikation": 759,
+						"software": 784,
+						"finanz": 1114,
+						"unternehmensberatung": 140,
+						"architektur": 84,
+						"forschung": 160,
+						"kreativ": 255
+					},
+					{
+						"year": 2014,
+						"dienstleistungen": 3734,
+						"industrie": 8510,
+						"nahrung": 159,
+						"pharma": 959,
+						"holz": 72,
+						"metall": 228,
+						"elektroindustrie": 3541,
+						"fahrzeugbau": 2961,
+						"sonstige_konsumgueter": 154,
+						"energie": 436,
+						"telekommunikation": 662,
+						"software": 664,
+						"finanz": 1394,
+						"unternehmensberatung": 327,
+						"architektur": 319,
+						"forschung": 163,
+						"kreativ": 205
+					},
+					{
+						"year": 2015,
+						"dienstleistungen": 3066,
+						"industrie": 8444,
+						"nahrung": 255,
+						"pharma": 935,
+						"holz": 124,
+						"metall": 224,
+						"elektroindustrie": 2914,
+						"fahrzeugbau": 3332,
+						"sonstige_konsumgueter": 84,
+						"energie": 576,
+						"telekommunikation": 622,
+						"software": 644,
+						"finanz": 969,
+						"unternehmensberatung": 227,
+						"architektur": 275,
+						"forschung": 117,
+						"kreativ": 212
+					},
+					{
+						"year": 2016,
+						"dienstleistungen": 3633,
+						"industrie": 7210,
+						"nahrung": 70,
+						"pharma": 1002,
+						"holz": 102,
+						"metall": 145,
+						"elektroindustrie": 2632,
+						"fahrzeugbau": 2890,
+						"sonstige_konsumgueter": 115,
+						"energie": 254,
+						"telekommunikation": 917,
+						"software": 818,
+						"finanz": 1202,
+						"unternehmensberatung": 335,
+						"architektur": 118,
+						"forschung": 145,
+						"kreativ": 98
+					},
+					{
+						"year": 2017,
+						"dienstleistungen": 5629,
+						"industrie": 8536,
+						"nahrung": 153,
+						"pharma": 1194,
+						"holz": 114,
+						"metall": 246,
+						"elektroindustrie": 2586,
+						"fahrzeugbau": 3681,
+						"sonstige_konsumgueter": 184,
+						"energie": 378,
+						"telekommunikation": 1003,
+						"software": 964,
+						"finanz": 2619,
+						"unternehmensberatung": 431,
+						"architektur": 242,
+						"forschung": 217,
+						"kreativ": 153
+					},
+					{
+						"year": 2018,
+						"dienstleistungen": 4730,
+						"industrie": 9222,
+						"nahrung": 465,
+						"pharma": 1170,
+						"holz": 86,
+						"metall": 129,
+						"elektroindustrie": 1407,
+						"fahrzeugbau": 5094,
+						"sonstige_konsumgueter": 167,
+						"energie": 704,
+						"telekommunikation": 1239,
+						"software": 1247,
+						"finanz": 1073,
+						"unternehmensberatung": 439,
+						"architektur": 174,
+						"forschung": 292,
+						"kreativ": 266
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 6691,
+						"industrie": 7683,
+						"nahrung": 63,
+						"pharma": 741,
+						"holz": 126,
+						"metall": 93,
+						"elektroindustrie": 758,
+						"fahrzeugbau": 5170,
+						"sonstige_konsumgueter": 89,
+						"energie": 643,
+						"telekommunikation": 1701,
+						"software": 1211,
+						"finanz": 2423,
+						"unternehmensberatung": 258,
+						"architektur": 367,
+						"forschung": 460,
+						"kreativ": 271
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 8421,
+						"industrie": 7454,
+						"nahrung": 363,
+						"pharma": 809,
+						"holz": 70,
+						"metall": 61,
+						"elektroindustrie": 678,
+						"fahrzeugbau": 5003,
+						"sonstige_konsumgueter": 68,
+						"energie": 403,
+						"telekommunikation": 2423,
+						"software": 2454,
+						"finanz": 1899,
+						"unternehmensberatung": 538,
+						"architektur": 284,
+						"forschung": 395,
+						"kreativ": 427
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 8645,
+						"industrie": 10865,
+						"nahrung": 598,
+						"pharma": 1346,
+						"holz": 293,
+						"metall": 108,
+						"elektroindustrie": 1968,
+						"fahrzeugbau": 5976,
+						"sonstige_konsumgueter": 105,
+						"energie": 471,
+						"telekommunikation": 1960,
+						"software": 2289,
+						"finanz": 2721,
+						"unternehmensberatung": 625,
+						"architektur": 296,
+						"forschung": 303,
+						"kreativ": 452
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 9192,
+						"industrie": 8694,
+						"nahrung": 283,
+						"pharma": 1332,
+						"holz": 145,
+						"metall": 199,
+						"elektroindustrie": 1407,
+						"fahrzeugbau": 3888,
+						"sonstige_konsumgueter": 145,
+						"energie": 1293,
+						"telekommunikation": 2083,
+						"software": 4111,
+						"finanz": 1668,
+						"unternehmensberatung": 570,
+						"architektur": 201,
+						"forschung": 268,
+						"kreativ": 292
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 10348,
+						"industrie": 9093,
+						"nahrung": 190,
+						"pharma": 997,
+						"holz": 118,
+						"metall": 216,
+						"elektroindustrie": 1263,
+						"fahrzeugbau": 5662,
+						"sonstige_konsumgueter": 70,
+						"energie": 577,
+						"telekommunikation": 1846,
+						"software": 3065,
+						"finanz": 4145,
+						"unternehmensberatung": 462,
+						"architektur": 392,
+						"forschung": 193,
+						"kreativ": 244
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 9106,
+						"industrie": 9480,
+						"nahrung": 385,
+						"pharma": 964,
+						"holz": 72,
+						"metall": 176,
+						"elektroindustrie": 1881,
+						"fahrzeugbau": 5292,
+						"sonstige_konsumgueter": 56,
+						"energie": 654,
+						"telekommunikation": 2967,
+						"software": 2339,
+						"finanz": 2583,
+						"unternehmensberatung": 172,
+						"architektur": 631,
+						"forschung": 127,
+						"kreativ": 287
+					}
+				],
+				"de": [
+					{
+						"year": 2013,
+						"dienstleistungen": 125270,
+						"industrie": 482358,
+						"nahrung": 12800,
+						"pharma": 66280,
+						"holz": 8642,
+						"metall": 30437,
+						"elektroindustrie": 56930,
+						"fahrzeugbau": 287086,
+						"sonstige_konsumgueter": 5444,
+						"energie": 14739,
+						"telekommunikation": 14011,
+						"software": 27386,
+						"finanz": 76335,
+						"unternehmensberatung": 1826,
+						"architektur": 2575,
+						"forschung": 1001,
+						"kreativ": 2135
+					},
+					{
+						"year": 2014,
+						"dienstleistungen": 113405,
+						"industrie": 468759,
+						"nahrung": 10701,
+						"pharma": 63282,
+						"holz": 6940,
+						"metall": 30162,
+						"elektroindustrie": 57007,
+						"fahrzeugbau": 278547,
+						"sonstige_konsumgueter": 7667,
+						"energie": 14453,
+						"telekommunikation": 13594,
+						"software": 18562,
+						"finanz": 72662,
+						"unternehmensberatung": 1233,
+						"architektur": 3808,
+						"forschung": 1281,
+						"kreativ": 2266
+					},
+					{
+						"year": 2015,
+						"dienstleistungen": 125074,
+						"industrie": 502220,
+						"nahrung": 11753,
+						"pharma": 67273,
+						"holz": 8368,
+						"metall": 25810,
+						"elektroindustrie": 62399,
+						"fahrzeugbau": 303513,
+						"sonstige_konsumgueter": 6850,
+						"energie": 16255,
+						"telekommunikation": 18190,
+						"software": 18862,
+						"finanz": 76963,
+						"unternehmensberatung": 2379,
+						"architektur": 4707,
+						"forschung": 1235,
+						"kreativ": 2737
+					},
+					{
+						"year": 2016,
+						"dienstleistungen": 126883,
+						"industrie": 496891,
+						"nahrung": 8815,
+						"pharma": 63115,
+						"holz": 4601,
+						"metall": 24610,
+						"elektroindustrie": 59062,
+						"fahrzeugbau": 311400,
+						"sonstige_konsumgueter": 6294,
+						"energie": 18994,
+						"telekommunikation": 17599,
+						"software": 17476,
+						"finanz": 80543,
+						"unternehmensberatung": 2455,
+						"architektur": 5015,
+						"forschung": 1577,
+						"kreativ": 2218
+					},
+					{
+						"year": 2017,
+						"dienstleistungen": 183097,
+						"industrie": 549303,
+						"nahrung": 19388,
+						"pharma": 72164,
+						"holz": 7675,
+						"metall": 29680,
+						"elektroindustrie": 68726,
+						"fahrzeugbau": 328297,
+						"sonstige_konsumgueter": 6270,
+						"energie": 17104,
+						"telekommunikation": 21962,
+						"software": 22419,
+						"finanz": 124693,
+						"unternehmensberatung": 3114,
+						"architektur": 5910,
+						"forschung": 1764,
+						"kreativ": 3235
+					},
+					{
+						"year": 2018,
+						"dienstleistungen": 120330,
+						"industrie": 518610,
+						"nahrung": 16847,
+						"pharma": 68511,
+						"holz": 6182,
+						"metall": 25837,
+						"elektroindustrie": 65720,
+						"fahrzeugbau": 309475,
+						"sonstige_konsumgueter": 7762,
+						"energie": 18275,
+						"telekommunikation": 15269,
+						"software": 28721,
+						"finanz": 57231,
+						"unternehmensberatung": 4243,
+						"architektur": 8336,
+						"forschung": 2990,
+						"kreativ": 3540
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 138625,
+						"industrie": 496332,
+						"nahrung": 10707,
+						"pharma": 57142,
+						"holz": 6834,
+						"metall": 24204,
+						"elektroindustrie": 54783,
+						"fahrzeugbau": 309475,
+						"sonstige_konsumgueter": 7613,
+						"energie": 25575,
+						"telekommunikation": 21958,
+						"software": 30074,
+						"finanz": 69901,
+						"unternehmensberatung": 2132,
+						"architektur": 8637,
+						"forschung": 2986,
+						"kreativ": 2937
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 149918,
+						"industrie": 454223,
+						"nahrung": 18885,
+						"pharma": 53158,
+						"holz": 5999,
+						"metall": 19128,
+						"elektroindustrie": 44154,
+						"fahrzeugbau": 279481,
+						"sonstige_konsumgueter": 7608,
+						"energie": 25811,
+						"telekommunikation": 24093,
+						"software": 25731,
+						"finanz": 80050,
+						"unternehmensberatung": 5327,
+						"architektur": 5940,
+						"forschung": 3261,
+						"kreativ": 5515
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 203715,
+						"industrie": 511154,
+						"nahrung": 22220,
+						"pharma": 57973,
+						"holz": 7939,
+						"metall": 23752,
+						"elektroindustrie": 44383,
+						"fahrzeugbau": 305278,
+						"sonstige_konsumgueter": 7199,
+						"energie": 42410,
+						"telekommunikation": 24573,
+						"software": 43765,
+						"finanz": 105470,
+						"unternehmensberatung": 2413,
+						"architektur": 5399,
+						"forschung": 18693,
+						"kreativ": 3401
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 212932,
+						"industrie": 541038,
+						"nahrung": 14695,
+						"pharma": 60762,
+						"holz": 5806,
+						"metall": 24810,
+						"elektroindustrie": 44334,
+						"fahrzeugbau": 313995,
+						"sonstige_konsumgueter": 6915,
+						"energie": 69721,
+						"telekommunikation": 24003,
+						"software": 59328,
+						"finanz": 98263,
+						"unternehmensberatung": 3932,
+						"architektur": 5787,
+						"forschung": 16873,
+						"kreativ": 4745
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 253658,
+						"industrie": 565463,
+						"nahrung": 10350,
+						"pharma": 50766,
+						"holz": 6035,
+						"metall": 21981,
+						"elektroindustrie": 36466,
+						"fahrzeugbau": 372542,
+						"sonstige_konsumgueter": 6734,
+						"energie": 60590,
+						"telekommunikation": 16885,
+						"software": 66132,
+						"finanz": 143172,
+						"unternehmensberatung": 5131,
+						"architektur": 6689,
+						"forschung": 7029,
+						"kreativ": 8620
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 218475,
+						"industrie": 585000,
+						"nahrung": 18520,
+						"pharma": 54163,
+						"holz": 5253,
+						"metall": 26112,
+						"elektroindustrie": 45479,
+						"fahrzeugbau": 391171,
+						"sonstige_konsumgueter": 7716,
+						"energie": 36587,
+						"telekommunikation": 20326,
+						"software": 80527,
+						"finanz": 86857,
+						"unternehmensberatung": 6126,
+						"architektur": 9026,
+						"forschung": 10085,
+						"kreativ": 5529
+					}
+				]
+			}
 		}
 	],
 	"environment": [
@@ -1578,6 +2117,11 @@
 						"year": 2023,
 						"ber": 4.030566376985316,
 						"de": 3.5090233726962586
+					},
+					{
+						"year": 2024,
+						"ber": 3.9,
+						"de": 3.8
 					}
 				],
 				"fue_intensitaet": [
@@ -1610,6 +2154,11 @@
 						"year": 2023,
 						"ber": 2.362835663378979,
 						"de": 2.2495867412636435
+					},
+					{
+						"year": 2024,
+						"ber": 2.3,
+						"de": 2.5
 					}
 				]
 			}
