@@ -194,6 +194,9 @@ const BarChart: React.FC<BarChartProps> = ({
 				if (!getName && findBranche) {
 					getName = findBranche.name;
 				}
+				if (getName.includes("<br/>")) {
+					getName = getName.replace(/<br\/>/g, " ");
+				}
 				return {
 					name: getName,
 					isSmall: getValue < getBreakPoint,

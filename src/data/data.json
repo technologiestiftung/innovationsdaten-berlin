@@ -4977,9 +4977,85 @@
 			]
 		},
 		{
+			"id": "use_of_generative_ai",
+			"title": "Generative AI Nutzung",
+			"displayNumber": "7.2",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"bar_chart_unit_breakpoint": 25,
+			"max_value": 50,
+			"text": "TBD...",
+			"data": {
+				"ber": [
+					{
+						"id": "products_and_services",
+						"insgesamt": 38,
+						"industrie": 16,
+						"dienstleistungen": 45
+					},
+					{
+						"id": "process_automation",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 25
+					},
+					{
+						"id": "client_communication",
+						"insgesamt": 25,
+						"industrie": 15,
+						"dienstleistungen": 27
+					},
+					{
+						"id": "it_admin",
+						"insgesamt": 20,
+						"industrie": 9,
+						"dienstleistungen": 24
+					},
+					{
+						"id": "other_fields",
+						"insgesamt": 7,
+						"industrie": 3,
+						"dienstleistungen": 8
+					}
+				],
+				"de": [
+					{
+						"id": "products_and_services",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 37
+					},
+					{
+						"id": "process_automation",
+						"insgesamt": 14,
+						"industrie": 9,
+						"dienstleistungen": 20
+					},
+					{
+						"id": "client_communication",
+						"insgesamt": 16,
+						"industrie": 13,
+						"dienstleistungen": 19
+					},
+					{
+						"id": "it_admin",
+						"insgesamt": 14,
+						"industrie": 8,
+						"dienstleistungen": 23
+					},
+					{
+						"id": "other_fields",
+						"insgesamt": 6,
+						"industrie": 6,
+						"dienstleistungen": 7
+					}
+				]
+			}
+		},
+		{
 			"id": "data_application",
 			"title": "Anwendungen von Daten",
-			"displayNumber": "7.2",
+			"displayNumber": "7.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 26,
@@ -5107,7 +5183,7 @@
 		{
 			"id": "strategies_data_use",
 			"title": "Strategien der Datennutzung",
-			"displayNumber": "7.3",
+			"displayNumber": "7.4",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 16,
@@ -5235,7 +5311,7 @@
 		{
 			"id": "most_common_data_skills",
 			"title": "Die häufigsten Data&shy;kompetenzen",
-			"displayNumber": "7.4",
+			"displayNumber": "7.5",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 80,
@@ -5347,7 +5423,7 @@
 		{
 			"id": "ai_use",
 			"title": "Einsatz von KI",
-			"displayNumber": "7.5",
+			"displayNumber": "7.6",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 11,
@@ -5393,7 +5469,7 @@
 		{
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI Verfahren",
-			"displayNumber": "7.6",
+			"displayNumber": "7.7",
 			"chart_type": "matrix",
 			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"data": {
@@ -6156,7 +6232,7 @@
 		{
 			"id": "ai_applications",
 			"title": "Anwendungen von KI",
-			"displayNumber": "7.7",
+			"displayNumber": "7.8",
 			"chart_type": "matrix",
 			"text": "Während der Einsatz in den unterschiedlichen Unternehmensbereichen in Berlin in 2023 nur noch moderat über dem deutschen Durchschnitt liegt, ist der Anteil von Unternehmen, bei denen KI das Produkt oder die Dienstleistung ist, erheblich höher.",
 			"data": {
