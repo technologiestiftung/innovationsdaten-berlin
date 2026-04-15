@@ -27,9 +27,9 @@ const Mobile: React.FC<MobileProps> = ({ dataKey }) => {
 				<div key={index} style={{ paddingTop: headerHeight + 50 }}>
 					<Card
 						key={item.id}
+						id={item.id}
 						dataKey={dataKey}
 						title={item.title}
-						displayNumber={item.displayNumber}
 						text={item.text}
 					/>
 					<div className="w-full h-[10vh]" />

@@ -3,7 +3,6 @@
 		{
 			"id": "big_fact_berlin",
 			"title": "Der Gesamt&shy;umsatz der befragten Berliner Unter&shy;nehmen beträgt...",
-			"displayNumber": "1.1",
 			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
 			"chart_type": "big_fact",
 			"facts": [
@@ -16,13 +15,11 @@
 		{
 			"id": "branchen_list",
 			"title": "Die Branchen",
-			"displayNumber": "1.2",
 			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben. Aussagen zur Berliner Wirtschaft oder zur deutschen Wirtschaft in Folgenden beziehen sich selbstverständlich nur auf die Branchen, in denen die Befragung auch durchgeführt wurde, auch wenn dies nicht immer explizit genannt ist."
 		},
 		{
 			"id": "umsatz",
 			"title": "Die umsatz&shy;stärksten Branchen",
-			"displayNumber": "1.3",
 			"chart_type": "tree_map",
 			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"data": [
@@ -91,7 +88,6 @@
 		{
 			"id": "beschaeftigte",
 			"title": "Die größten Arbeitgeber",
-			"displayNumber": "1.4",
 			"chart_type": "tree_map",
 			"text": "Gemessen an der Zahl der Beschäftigten ist die Branche Software und Datenverarbeitung, gefolgt von Architektur- und Ingenieurbüros, Medien (einschließlich Telekommunikation) und Finanzdienstleistungen der größte Arbeitgeber unter den befragten Branchen.",
 			"data": [
@@ -162,7 +158,6 @@
 		{
 			"id": "berliner_unternehmen",
 			"title": "Wer innoviert?",
-			"displayNumber": "2.1",
 			"chart_type": "big_fact",
 			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"facts": [
@@ -175,7 +170,6 @@
 		{
 			"id": "sektoren",
 			"title": "Wo ist Innovation gewachsen?",
-			"displayNumber": "2.2",
 			"chart_type": "area_chart_sektoren",
 			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"data": {
@@ -258,7 +252,6 @@
 		{
 			"id": "growth",
 			"title": "Welche Branchen wachsen?",
-			"displayNumber": "2.3",
 			"chart_type": "area_chart_branchen",
 			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"data": {
@@ -523,7 +516,6 @@
 		{
 			"id": "inno_ausgaben_2022",
 			"title": "Aktivität seit 2022",
-			"displayNumber": "2.4",
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
 			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
@@ -661,7 +653,6 @@
 		{
 			"id": "inno_ausgaben_2023",
 			"title": "Innovations&shy;ausgaben 2023",
-			"displayNumber": "2.5",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
 			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
@@ -709,7 +700,6 @@
 		{
 			"id": "fue_ausgaben_2023",
 			"title": "Forschungs- und Ent&shy;wicklungs&shy;ausgaben 2023",
-			"displayNumber": "2.6",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
 			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
@@ -757,7 +747,6 @@
 		{
 			"id": "inno_intensitaet",
 			"title": "Innovations&shy;intensität",
-			"displayNumber": "2.7",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"max_value": 40,
@@ -955,7 +944,6 @@
 		{
 			"id": "how_innovates_intro",
 			"title": "Wie wird innoviert?",
-			"displayNumber": "3.1",
 			"chart_type": "big_fact",
 			"text": "Produktinnovationen sind Produkte, die in den letzten drei Jahren von den Unternehmen neu ins Sortiment aufgenommen wurden. Prozessinnovationen sind Innovationen, die einen Geschäftsprozess nach Kosten, Geschwindigkeit oder Qualität verbessern, dazu gehören nicht nur die industriellen Herstellungsprozesse, sondern auch Prozesse zur Erbringung von Dienstleistungen, Logistikmethoden, IT-Prozesse, Betriebsorganisation oder Managementprozesse.",
 			"facts": [
@@ -972,7 +960,6 @@
 		{
 			"id": "process_product_innovators",
 			"title": "Prozess & Produkt&shy;innovatoren",
-			"displayNumber": "3.2",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 90,
@@ -1139,7 +1126,6 @@
 		{
 			"id": "added_value_through_product_innovation",
 			"title": "Mehrwert durch Produkt&shy;innovation",
-			"displayNumber": "3.3",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"has_tooltip": true,
@@ -1306,7 +1292,6 @@
 		{
 			"id": "revenue_from_new_products",
 			"title": "Umsatz mit Produkt&shy;neuheiten",
-			"displayNumber": "3.4",
 			"chart_type": "area_chart_branchen",
 			"text": "TBD...",
 			"data": {
@@ -1801,7 +1786,6 @@
 		{
 			"id": "environment_innovation",
 			"title": "Umwelt",
-			"displayNumber": "4.1",
 			"chart_type": "big_fact",
 			"text": "Umweltinnovationen sind eine Vielzahl von Maßnahmen, die sich sowohl auf die Herstellungsprozesse (z.B. den damit verbundenen Energieverbrauch) als auch auf die Produkte (z.B. deren Recyclingfähigkeit) beziehen können. Details gehen aus den Folgediagrammen hervor.",
 			"facts": [
@@ -1814,7 +1798,6 @@
 		{
 			"id": "positive_effects_within_the_company",
 			"title": "Positive Effekte im Unternehmen",
-			"displayNumber": "4.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 10,
@@ -1926,7 +1909,6 @@
 		{
 			"id": "what_drives_environment_innovation",
 			"title": "Was treibt Umwelt&shy;innovationen?",
-			"displayNumber": "4.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
@@ -2064,7 +2046,6 @@
 		{
 			"id": "berlin_intro",
 			"title": "Was macht Berlin aus als Innovations&shy;standort?",
-			"displayNumber": "5.1",
 			"chart_type": "big_fact",
 			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
 			"facts": [
@@ -2081,7 +2062,6 @@
 		{
 			"id": "berlin_is_ahead",
 			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
-			"displayNumber": "5.2",
 			"chart_type": "area_chart_toggle",
 			"max_value": 8,
 			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
@@ -2166,7 +2146,6 @@
 		{
 			"id": "innovator_rate",
 			"title": "Innovatoren&shy;quote",
-			"displayNumber": "5.3",
 			"chart_type": "area_chart_toggle",
 			"text": "TBD...",
 			"max_value": 100,
@@ -2215,7 +2194,6 @@
 		{
 			"id": "collaboration_regions",
 			"title": "Mit welchen Regionen wird kollaboriert?",
-			"displayNumber": "5.4",
 			"chart_type": "matrix",
 			"text": "Kollaboration ist ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die Innovationskooperationen in der jeweiligen Region pflegen.",
 			"data": {
@@ -2678,7 +2656,6 @@
 		{
 			"id": "collaboration_partners",
 			"title": "Mit welchen Partnern wird kollaboriert?",
-			"displayNumber": "5.5",
 			"chart_type": "matrix",
 			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die mit den jeweiligen Kategorien von Partnern kooperieren.",
 			"data": {
@@ -4341,7 +4318,6 @@
 		{
 			"id": "protective_measures_intellectual_property",
 			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
-			"displayNumber": "5.6",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 40,
@@ -4629,7 +4605,6 @@
 		{
 			"id": "support_intro",
 			"title": "Öffentliche Förderung",
-			"displayNumber": "6.1",
 			"chart_type": "big_fact",
 			"text": "In Berlin – wie überall in der Welt – wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen, können als im Rahmen einer quantitativen Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das die das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal machten. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
 			"facts": [
@@ -4642,7 +4617,6 @@
 		{
 			"id": "most_supported_branchen",
 			"title": "Welche Branchen werden am meisten gefördert?",
-			"displayNumber": "6.2",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 60,
@@ -4868,7 +4842,6 @@
 		{
 			"id": "public_funding_fue_projects",
 			"title": "Wer erhält öffentliche Zuschüsse für FuE-Vorhaben?",
-			"displayNumber": "6.3",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 21,
@@ -4914,7 +4887,6 @@
 		{
 			"id": "applications_fue_funding",
 			"title": "Wer beantragt steuerliche FuE-Förderung?",
-			"displayNumber": "6.4",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 11,
@@ -4962,7 +4934,6 @@
 		{
 			"id": "data_ai_intro",
 			"title": "Daten und KI",
-			"displayNumber": "7.1",
 			"chart_type": "big_fact",
 			"text": "In hier nicht dargestellten früheren Jahrgängen der Innovationserhebung finden Interessierte Daten zum tatsächlichen Stand der Digitalisierung in Unternehmen und den damit verfolgten Zielen, zu Digitalisierungshemmnissen und zu digitalen und datengetriebenen Geschäftsmodellen, die wir hier aus Aktualitätsgründen nicht zeigen. Die aktuelle Zusammenstellung bezieht sich auf die Datennutzung durch Unternehmen und auf die Nutzung von KI.",
 			"facts": [
@@ -4979,7 +4950,6 @@
 		{
 			"id": "use_of_generative_ai",
 			"title": "Generative AI Nutzung",
-			"displayNumber": "7.2",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 25,
@@ -5055,7 +5025,6 @@
 		{
 			"id": "data_application",
 			"title": "Anwendungen von Daten",
-			"displayNumber": "7.3",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 26,
@@ -5183,7 +5152,6 @@
 		{
 			"id": "strategies_data_use",
 			"title": "Strategien der Datennutzung",
-			"displayNumber": "7.4",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 16,
@@ -5311,7 +5279,6 @@
 		{
 			"id": "most_common_data_skills",
 			"title": "Die häufigsten Data&shy;kompetenzen",
-			"displayNumber": "7.5",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 80,
@@ -5423,7 +5390,6 @@
 		{
 			"id": "ai_use",
 			"title": "Einsatz von KI",
-			"displayNumber": "7.6",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 11,
@@ -5469,7 +5435,6 @@
 		{
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI Verfahren",
-			"displayNumber": "7.7",
 			"chart_type": "matrix",
 			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"data": {
@@ -6232,7 +6197,6 @@
 		{
 			"id": "ai_applications",
 			"title": "Anwendungen von KI",
-			"displayNumber": "7.8",
 			"chart_type": "matrix",
 			"text": "Während der Einsatz in den unterschiedlichen Unternehmensbereichen in Berlin in 2023 nur noch moderat über dem deutschen Durchschnitt liegt, ist der Anteil von Unternehmen, bei denen KI das Produkt oder die Dienstleistung ist, erheblich höher.",
 			"data": {

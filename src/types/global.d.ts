@@ -97,7 +97,6 @@ export type StickyItemData =
 export type StickyItem = {
 	id: string;
 	title: string;
-	displayNumber?: string;
 	chart_type?: ChartTypes;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;

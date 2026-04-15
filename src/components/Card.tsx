@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { isInRange } from "../utilities";
 import { useGlobalContext } from "../GlobalContext";
+import data from "../data/data.json";
 
 type CardProps = {
+	id: string;
 	dataKey: string;
 	title: string;
-	displayNumber?: string;
 	text?: string;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
@@ -14,9 +15,9 @@ type CardProps = {
 };
 
 const Card: React.FC<CardProps> = ({
+	id,
 	dataKey,
 	title,
-	displayNumber,
 	text,
 	onSetCurrent,
 	isNotCurrent,
@@ -28,7 +29,7 @@ const Card: React.FC<CardProps> = ({
 	const cardTextRef = useRef<HTMLDivElement>(null);
 	const [specificMargin, setSpecificMargin] = useState(0);
 	const [cardHeight, setCardHeight] = useState<number | null>(null);
-	const hide = false;
+	const displayNumber = `${Object.keys(data).indexOf(dataKey) + 1}.${data[dataKey as keyof typeof data].findIndex((item) => item.id === id) + 1}`;
 
 	const getMarginTop = () => {
 		if (isMobile) {
@@ -108,6 +109,7 @@ const Card: React.FC<CardProps> = ({
 			setCardHeight(getCard?.getBoundingClientRect().height);
 		}
 	}, [headerHeight]);
+
 	return (
 		<div
 			ref={cardRef}
@@ -119,8 +121,7 @@ const Card: React.FC<CardProps> = ({
 		>
 			{typeof window !== "undefined" &&
 				window.location.toString().includes("localhost") &&
-				displayNumber &&
-				!hide && <h4>{displayNumber}</h4>}
+				displayNumber && <h4>{displayNumber}</h4>}
 			{window.innerWidth <= smallerDesktop ? (
 				<h3 dangerouslySetInnerHTML={{ __html: title }} />
 			) : (
