@@ -9,7 +9,8 @@
 		"lint": "ESLINT_USE_FLAT_CONFIG=true eslint \"src/**/*\"",
 		"prettier": "prettier --write src",
 		"prettier:ci": "prettier --check src",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"reset": "rm -rf node_modules package-lock.json && npm i && npm run dev"
 	},
 	"dependencies": {
 		"lucide-react": "^0.577.0",
