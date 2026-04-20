@@ -7,11 +7,8 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "ESLINT_USE_FLAT_CONFIG=true eslint \"src/**/*\"",
-		"prettier": "prettier --write src tests",
-		"prettier:ci": "prettier --check src tests",
-		"test:unit": "vitest run --config ./tests/unit/vitest.config.ts",
-		"test:e2e": "playwright test --config=tests/e2e/playwright.config.ts",
-		"test:a11y": "playwright test --config=tests/a11y/playwright.config.ts",
+		"prettier": "prettier --write src",
+		"prettier:ci": "prettier --check src",
 		"preview": "vite preview"
 	},
 	"dependencies": {
