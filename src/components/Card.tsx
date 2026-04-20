@@ -44,9 +44,10 @@ const Card: React.FC<CardProps> = ({
 		return window.innerHeight - headerHeight;
 	};
 	const checkMarginTop = () => {
+		const marginTopCard = 50;
 		const getMarginTopFromFuntion = getMarginTop();
-		if (getMarginTopFromFuntion < 0) {
-			return 0;
+		if (getMarginTopFromFuntion < marginTopCard) {
+			return marginTopCard;
 		}
 		return getMarginTopFromFuntion;
 	};
