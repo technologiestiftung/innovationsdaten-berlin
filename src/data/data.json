@@ -1178,7 +1178,7 @@
 			"title": "Innovations&shy;intensität",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
-			"max_value": 40,
+			"max_value": 50,
 			"has_tooltip": true,
 			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte „Barroso-Ziel“. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
 			"data": {
@@ -1391,7 +1391,7 @@
 			"title": "Prozess & Produkt&shy;innovatoren",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 90,
+			"max_value": 100,
 			"bar_chart_unit_breakpoint": 21,
 			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
 			"sortsAfterOnStart": "process_innovation_share",
@@ -1558,7 +1558,7 @@
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"has_tooltip": true,
-			"max_value": 40,
+			"max_value": 30,
 			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
 			"data": {
@@ -2029,7 +2029,7 @@
 			"title": "Positive Effekte im Unternehmen",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 10,
+			"max_value": 20,
 			"bar_chart_unit_breakpoint": 3,
 			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 „bedeutende“ Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
 			"data": {
@@ -2292,7 +2292,7 @@
 			"id": "berlin_is_ahead",
 			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
 			"chart_type": "area_chart_toggle",
-			"max_value": 8,
+			"max_value": 6,
 			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
 			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
@@ -2377,7 +2377,7 @@
 			"title": "Innovatoren&shy;quote",
 			"chart_type": "area_chart_toggle",
 			"text": "TBD...",
-			"max_value": 100,
+			"max_value": 80,
 			"hide_toggle": true,
 			"togglesBetween": ["innovator_rate"],
 			"data": {
@@ -4549,7 +4549,7 @@
 			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 40,
+			"max_value": 50,
 			"bar_chart_unit_breakpoint": 11,
 			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"data": {
@@ -4848,7 +4848,7 @@
 			"title": "Welche Branchen werden am meisten gefördert?",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 60,
+			"max_value": 70,
 			"bar_chart_unit_breakpoint": 11,
 			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
 			"data": {
@@ -5074,7 +5074,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 21,
-			"max_value": 100,
+			"max_value": 80,
 			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"data": {
 				"ber": {
@@ -5119,7 +5119,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 11,
-			"max_value": 50,
+			"max_value": 40,
 			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"data": {
 				"ber": {
@@ -5257,7 +5257,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 26,
-			"max_value": 80,
+			"max_value": 70,
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"data": {
 				"ber": [
@@ -5384,7 +5384,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 16,
-			"max_value": 80,
+			"max_value": 70,
 			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"data": {
 				"ber": [
@@ -5510,7 +5510,7 @@
 			"title": "Die häufigsten Data&shy;kompetenzen",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 80,
+			"max_value": 70,
 			"bar_chart_unit_breakpoint": 16,
 			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"data": {
@@ -5622,7 +5622,7 @@
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 11,
-			"max_value": 50,
+			"max_value": 80,
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"data": {
 				"ber": {
