@@ -582,21 +582,3 @@ footer {
 		}
 	}
 }
-
-.mobile-grid-labels {
-	// padding-left: 30px;
-	width: 100%;
-	margin: 5vh 0;
-	position: relative;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-	p {
-		height: fit-content;
-		width: fit-content;
-		position: absolute;
-		// flex-grow: 1;
-		transform: rotate(60deg);
-		transform-origin: center right;
-		bottom: 0;
-	}
-}
