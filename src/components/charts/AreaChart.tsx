@@ -320,11 +320,6 @@ const AreaChart: React.FC<AreaChartProps> = ({
 							/>
 						</>
 					)}
-					<CartesianGrid
-						strokeDasharray="3 3"
-						vertical={false}
-						stroke={theme === "dark" ? colors.white : colors.blue}
-					/>
 					<YAxis
 						mirror
 						stroke="none"
@@ -340,6 +335,12 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								? `${formatNumber(+label)}%`
 								: formatEuroNumber(+label);
 						}}
+					/>
+					<CartesianGrid
+						strokeDasharray="3 3"
+						vertical={false}
+						stroke={theme === "dark" ? colors.white : colors.blue}
+						zIndex={10000}
 					/>
 				</AreaChartRecharts>
 			</ResponsiveContainer>
