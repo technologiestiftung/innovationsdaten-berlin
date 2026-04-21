@@ -252,6 +252,9 @@ const BarChart: React.FC<BarChartProps> = ({
 
 	const RenderValueLabel = ({ x, y, width, height, value, index }: any) => {
 		const paddingLabel = 10;
+		if (!collectData[index]) {
+			return null;
+		}
 		const isSmall =
 			"isSmall" in collectData[index] ? collectData[index].isSmall : false;
 		const delta = "delta" in collectData[index] ? collectData[index].delta : 0;
@@ -685,7 +688,9 @@ const BarChart: React.FC<BarChartProps> = ({
 			if (!chartRef.current) {
 				return;
 			}
-			const axisTicksEl = chartRef.current.querySelector(".recharts-yAxis");
+			const axisTicksEl = chartRef.current.querySelector(
+				".recharts-yAxis-tick-labels",
+			);
 			if (axisTicksEl) {
 				const rect = axisTicksEl.getBoundingClientRect();
 				setYAxisWidth(rect.width);
