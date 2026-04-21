@@ -475,8 +475,11 @@ footer {
 }
 .recharts-surface {
 	overflow: visible !important;
+	outline: none !important;
 }
-
+.recharts-surface *:focus {
+	outline: none !important;
+}
 
 .matrix-cell {
 	color: white !important;

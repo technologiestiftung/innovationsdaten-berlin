@@ -1178,7 +1178,7 @@
 			"title": "Innovations&shy;intensität",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
-			"max_value": 50,
+			"max_value": 45,
 			"has_tooltip": true,
 			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte „Barroso-Ziel“. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
 			"data": {
