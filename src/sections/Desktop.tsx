@@ -23,6 +23,8 @@ const Desktop: React.FC<DesktopProps> = ({ dataKey }) => {
 		}
 	}, [dataArray]);
 
+	// refactor?
+
 	return (
 		<div id={dataKey}>
 			{dataKey === "einleitung" && <Welcome />}
