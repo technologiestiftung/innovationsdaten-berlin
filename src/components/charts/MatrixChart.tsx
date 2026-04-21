@@ -60,8 +60,12 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 	const [minValue, setMinValue] = useState(0);
 	const [cellSize, setCellSize] = useState(0);
 	const gridRef = useRef<HTMLDivElement>(null);
-	const xLabels = data ? Array.from(new Set(data.map((d) => d.x))) : [];
-	const yLabels = data ? Array.from(new Set(data.map((d) => d.y))) : [];
+	const xLabels = data
+		? Array.from(new Set(data.map((d) => (isMobile ? d.y : d.x))))
+		: [];
+	const yLabels = data
+		? Array.from(new Set(data.map((d) => (isMobile ? d.x : d.y))))
+		: [];
 	const numberOfColumns = xLabels.length;
 	const numberOfRows = yLabels.length;
 
@@ -310,8 +314,8 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 				{data.map(({ x, y, value }, index) => (
 					<ValueCell
 						key={`${x}-${y}`}
-						x={x}
-						y={y}
+						x={isMobile ? y : x}
+						y={isMobile ? x : y}
 						value={value}
 						index={index}
 					/>
