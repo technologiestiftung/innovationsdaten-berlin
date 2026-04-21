@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+
 import React, { useEffect, useState } from "react";
 import { StickyItem } from "../types/global";
 import BranchenList from "./charts/BranchenList";
@@ -50,6 +52,8 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 		!!bar_chart_unit_breakpoint &&
 		typeof bar_chart_unit_breakpoint !== "number";
 
+	const hasMultipleMaxValues = !!max_value && typeof max_value !== "number";
+
 	return (
 		<>
 			{/* BIG FACT */}
@@ -65,7 +69,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 						<AreaChart
 							chart_type={chart_type}
 							data={(content as Record<string, any>)[toggleData]}
-							max_value={max_value}
+							max_value={typeof max_value === "number" ? max_value : undefined}
 							toggleData={toggleData}
 							setToggleData={setToggleData}
 							togglesBetween={togglesBetween}
@@ -75,7 +79,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 						<AreaChart
 							chart_type={chart_type}
 							data={(content as Record<string, any>)[region]}
-							max_value={max_value}
+							max_value={typeof max_value === "number" ? max_value : undefined}
 							hide_toggle={hide_toggle}
 						/>
 					)}
@@ -88,7 +92,11 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 					chart_type={chart_type}
 					chart_unit={chart_unit}
 					has_tooltip={has_tooltip}
-					max_value={max_value}
+					max_value={
+						hasMultipleMaxValues
+							? (max_value as Record<string, any>)[region]
+							: max_value
+					}
 					bar_chart_unit_breakpoint={
 						hasMultipleBreakpoints
 							? (bar_chart_unit_breakpoint as Record<string, any>)[region]

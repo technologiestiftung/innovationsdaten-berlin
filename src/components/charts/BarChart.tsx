@@ -283,27 +283,25 @@ const BarChart: React.FC<BarChartProps> = ({
 			}
 			return colors.blue;
 		};
-		const getNegativeDeltaXShift = () => {
-			const max_value_delta = region === "ber" ? 1600 : 80000;
-			const widthOfBar = widthOfStickyContainer - yAxisWidth;
-			const widthOfBarDelta = (getValue / max_value_delta) * widthOfBar;
-			const widthOfDelta = (delta / getValue) * widthOfBarDelta;
-			return widthOfDelta;
+		const getNegativeDeltaWidth = () => {
+			const bars = document.querySelectorAll(
+				`#${id} .recharts-bar:last-of-type .recharts-bar-rectangle rect`,
+			);
+			const el = bars[index] as SVGRectElement | undefined;
+			if (!el) {
+				return 0;
+			}
+			return el ? Number(el.getAttribute("width")) : 0;
 		};
 		const setX = () => {
-			if (chart_type.includes("delta") && !isSmall && !positiveDelta) {
-				return x - paddingLabel - getNegativeDeltaXShift();
+			if (!chart_type.includes("delta")) {
+				return isSmall ? x + width + paddingLabel : x + width - paddingLabel;
 			}
-			if (chart_type.includes("delta") && !isSmall) {
-				return x - paddingLabel;
+			const deltaWidth = getNegativeDeltaWidth();
+			if (positiveDelta) {
+				return isSmall ? x + paddingLabel + deltaWidth : x - paddingLabel;
 			}
-			if (chart_type.includes("delta") && !positiveDelta && isSmall) {
-				return x + width + paddingLabel - getNegativeDeltaXShift();
-			}
-			if (isSmall) {
-				return x + width + paddingLabel;
-			}
-			return x + width - paddingLabel;
+			return isSmall ? x + paddingLabel : x - paddingLabel - deltaWidth;
 		};
 		return (
 			<text
@@ -433,8 +431,11 @@ const BarChart: React.FC<BarChartProps> = ({
 			return 15 * 50;
 		}
 
-		if (Object.keys(collectData).length <= 4) {
-			return windowHeightAtStart * 0.4;
+		if (chart_type === "bar_chart_filter_keys") {
+			if (Object.keys(collectData).length <= 5) {
+				return windowHeightAtStart * 0.3;
+			}
+			return windowHeightAtStart * 0.45;
 		}
 
 		return windowHeightAtStart * 0.6;
@@ -707,6 +708,7 @@ const BarChart: React.FC<BarChartProps> = ({
 			<div
 				ref={chartRef}
 				className="hide-first-x-axis-tick move-recharts-label"
+				id={id}
 			>
 				<ResponsiveContainer width="100%" height={getHeight()}>
 					<RechartsBarChart

@@ -101,7 +101,11 @@ export type StickyItem = {
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
 	hide_toggle?: boolean;
-	max_value?: number;
+	max_value?:
+		| number
+		| {
+				[key: Region]: number;
+		  };
 	text?: string;
 	facts?: { fact: string; unit: string }[];
 	bar_chart_unit_breakpoint?:

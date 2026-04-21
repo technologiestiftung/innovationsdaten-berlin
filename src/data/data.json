@@ -815,6 +815,10 @@
 				"ber": 500,
 				"de": 25000
 			},
+			"max_value": {
+				"ber": 1700,
+				"de": 85000
+			},
 			"data": {
 				"ber": {
 					"nahrung": {
@@ -951,6 +955,10 @@
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
+			},
+			"max_value": {
+				"ber": 1000,
+				"de": 55000
 			},
 			"data": {
 				"ber": {
@@ -1089,6 +1097,10 @@
 				"ber": 500,
 				"de": 25000
 			},
+			"max_value": {
+				"ber": 1700,
+				"de": 85000
+			},
 			"data": {
 				"ber": {
 					"nahrung": 28,
@@ -1135,6 +1147,10 @@
 			"bar_chart_unit_breakpoint": {
 				"ber": 500,
 				"de": 25000
+			},
+			"max_value": {
+				"ber": 1000,
+				"de": 55000
 			},
 			"data": {
 				"ber": {
@@ -1558,7 +1574,7 @@
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"has_tooltip": true,
-			"max_value": 30,
+			"max_value": 40,
 			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
 			"data": {
@@ -2029,7 +2045,7 @@
 			"title": "Positive Effekte im Unternehmen",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 20,
+			"max_value": 15,
 			"bar_chart_unit_breakpoint": 3,
 			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 „bedeutende“ Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
 			"data": {
@@ -4549,7 +4565,7 @@
 			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
-			"max_value": 50,
+			"max_value": 55,
 			"bar_chart_unit_breakpoint": 11,
 			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"data": {
@@ -5182,7 +5198,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 25,
-			"max_value": 50,
+			"max_value": 40,
 			"text": "TBD...",
 			"data": {
 				"ber": [
@@ -5257,7 +5273,7 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"bar_chart_unit_breakpoint": 26,
-			"max_value": 70,
+			"max_value": 60,
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"data": {
 				"ber": [
