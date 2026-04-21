@@ -247,7 +247,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 								className="flex items-center justify-end"
 								style={{ height: cellSize }}
 							>
-								<p className="rotate-[-25deg] origin-right small">
+								<p className="rotate-[-15deg] origin-right small">
 									{replaceAllCustom(wordings[x as keyof typeof wordings])}
 								</p>
 							</div>
