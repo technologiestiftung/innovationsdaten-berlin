@@ -13,10 +13,12 @@
 		"reset": "rm -rf node_modules package-lock.json && npm i && npm run dev"
 	},
 	"dependencies": {
+		"clsx": "^2.1.1",
 		"lucide-react": "^0.577.0",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
-		"recharts": "3.7.0"
+		"recharts": "3.7.0",
+		"tailwind-merge": "^3.5.0"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.4",
