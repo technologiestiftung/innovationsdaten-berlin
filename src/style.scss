@@ -494,6 +494,10 @@ footer {
 	}
 }
 
+.recharts-tooltip-wrapper {
+	z-index: 10 !important;
+}
+
 .matrix-cell {
 	color: white !important;
 }

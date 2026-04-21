@@ -6,6 +6,7 @@ import sektoren from "../data/sektoren.json";
 import wordings from "../data/wordings.json";
 import { useGlobalContext } from "../GlobalContext";
 import { dataKeys } from "../types/global";
+import { cn } from "../utilities";
 
 interface DropdownProps {
 	type: "filter" | "sort";
@@ -189,7 +190,11 @@ const Dropdown: React.FC<DropdownProps> = ({
 	return (
 		<div
 			ref={dropdownRef}
-			className={`relative inline-block drop-down w-full ${theme}`}
+			className={cn(
+				"relative inline-block drop-down w-full",
+				theme,
+				isOpen && "z-15",
+			)}
 		>
 			<div
 				className="flex items-center"
@@ -221,7 +226,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 			</div>
 			{isOpen && (
 				<div
-					className="flyout absolute z-10"
+					className="flyout absolute"
 					style={{
 						width: `calc(100% - ${fontSize * 2.5}px)`,
 						marginLeft: fontSize * 2.5,
