@@ -1,3 +1,6 @@
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
 const hexToRgba = (hex: string, opacity: number) => {
 	// Remove # if present
 	const getHex = hex.replace(/^#/, "");
@@ -46,6 +49,10 @@ function sumNumericValues(obj: any) {
 	return total;
 }
 
+function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs));
+}
+
 export {
 	hexToRgba,
 	isInRange,
@@ -53,4 +60,5 @@ export {
 	formatEuroNumber,
 	formatNumber,
 	sumNumericValues,
+	cn,
 };
