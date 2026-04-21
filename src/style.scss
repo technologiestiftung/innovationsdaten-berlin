@@ -481,6 +481,19 @@ footer {
 	outline: none !important;
 }
 
+@media screen and (max-width: $mobile) {
+	.area-chart
+		.recharts-xAxis-tick-labels
+		.recharts-cartesian-axis-tick-label:first-of-type {
+		transform: translateX(-12px);
+	}
+	.area-chart
+		.recharts-xAxis-tick-labels
+		.recharts-cartesian-axis-tick-label:last-of-type {
+		transform: translateX(12px);
+	}
+}
+
 .matrix-cell {
 	color: white !important;
 }

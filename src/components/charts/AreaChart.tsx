@@ -253,7 +253,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	}, [optionsRef.current]);
 
 	return (
-		<>
+		<div className="area-chart">
 			<ResponsiveContainer width="100%" height={getHeight()}>
 				<AreaChartRecharts data={setData}>
 					<XAxis
@@ -373,7 +373,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 						)}
 				</div>
 			)}
-		</>
+		</div>
 	);
 };
 
