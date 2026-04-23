@@ -1,66 +1,53 @@
 import data from "../data/data.json";
-import { useGlobalContext } from "../GlobalContext";
 import React, { useEffect, useState } from "react";
-import { ChapterKeys, StickyItem } from "../types/global";
+import { ChapterKeys, DataObj, StickyItem } from "../types/global";
 import Card from "../components/Card";
 import Graph from "../components/Graph";
 import Welcome from "./Welcome";
+import { cn } from "../utilities";
 
 type DesktopProps = {
 	dataKey: ChapterKeys;
 };
 
 const Desktop: React.FC<DesktopProps> = ({ dataKey }) => {
-	const { headerHeight, widthOfCardContainer, widthOfStickyContainer } =
-		useGlobalContext();
-	const typedData = data as Record<ChapterKeys, StickyItem[]>;
-	const dataArray = typedData[dataKey];
-	const [current, setCurrent] = useState<StickyItem | null>(null);
+	const [activeItem, setActiveItem] = useState<StickyItem | null>(null);
+
+	const chapters = data as DataObj;
+	const items = chapters[dataKey];
 
 	useEffect(() => {
-		if (dataArray) {
-			setCurrent(dataArray[0] as StickyItem);
+		if (items) {
+			setActiveItem(items[0] as StickyItem);
 		}
-	}, [dataArray]);
-
-	// refactor?
+	}, [items]);
 
 	return (
 		<div id={dataKey}>
 			{dataKey === "einleitung" && <Welcome />}
-			<section
-				className="sticky-section relative w-full flex gap-6"
-				style={{ paddingTop: headerHeight }}
-			>
+			<section className="relative w-[80vw] mx-auto flex gap-6">
 				<div
-					className="sticky flex items-center"
-					style={{
-						height: window.innerHeight - headerHeight,
-						top: headerHeight,
-						width: widthOfStickyContainer,
-					}}
+					className={cn(
+						// measures
+						"flex-[3] h-screen",
+						// position
+						"sticky top-0",
+						// layout
+						"flex items-center",
+					)}
 				>
 					<div className="w-full">
-						<Graph data={current as StickyItem} />
+						<Graph data={activeItem as StickyItem} />
 					</div>
 				</div>
-				<div
-					className="overflow-hidden"
-					style={{
-						width: widthOfCardContainer,
-					}}
-				>
-					{dataArray.map((item: StickyItem, index: number) => (
+				<div className="flex-[2]">
+					{items.map((item: StickyItem) => (
 						<Card
 							key={item.id}
-							id={item.id}
 							dataKey={dataKey}
-							title={item.title}
-							text={item.text}
-							onSetCurrent={() => setCurrent(item as StickyItem)}
-							isNotCurrent={item.id !== current?.id}
-							last={index === dataArray.length - 1}
-							first={!index}
+							item={item}
+							onSetCurrent={() => setActiveItem(item as StickyItem)}
+							isNotCurrent={item.id !== activeItem?.id}
 						/>
 					))}
 				</div>

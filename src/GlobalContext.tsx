@@ -7,17 +7,13 @@ import React, {
 } from "react";
 import { Region } from "./types/global";
 
-// Define types for the global state
-type Theme = "light" | "dark";
+type WindowMeasures = {
+	w: number;
+	h: number;
+};
 
 interface GlobalStateType {
-	theme: Theme;
-	toggleTheme: () => void;
-	fontSize: number;
-	breakPoint: number;
 	isMobile: boolean;
-	headerHeight: number;
-	subtractFromMobileChartsHeight: number;
 	axisFontStylings: {
 		style: {
 			fontFamily: string;
@@ -27,10 +23,8 @@ interface GlobalStateType {
 	};
 	region: Region;
 	setRegion: (region: Region) => void;
-	widthOfStickyContainer: number;
-	widthOfCardContainer: number;
-	smallerDesktop: number;
-	windowHeightAtStart: number;
+	animationDuration: number;
+	windowMeasuresOnStart: WindowMeasures | null;
 }
 
 const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
@@ -38,113 +32,67 @@ const GlobalContext = createContext<GlobalStateType | undefined>(undefined);
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	children,
 }) => {
-	const [theme, setTheme] = useState<Theme>("light");
+	//
+	// States
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
 	const [region, setRegion] = useState<Region>("ber");
-	const [headerHeight, setHeaderHeight] = useState<number>(0);
-	const [windowHeightAtStart, setWindowHeightAtStart] = useState<number>(0);
-	const subtractFromMobileChartsHeight = 0.1;
-	const smallerDesktop = 1440;
-	const maxWidthOfCardContainer = 640;
-
-	const fontSize = 16;
-
+	const [windowMeasuresOnStart, setWindowMeasuresOnStart] =
+		useState<WindowMeasures | null>(null);
+	const animationDuration = 1000;
 	const axisFontStylings = {
 		style: {
 			fontFamily: "Clan Pro, sans-serif",
-			fontSize: fontSize,
+			fontSize: 16,
 			fontWeight: "bold",
 		},
 	};
 
-	const breakPoint = window.innerWidth * 0.8;
-	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
-	const [widthOfCardContainer, setWidthOfCardContainer] = useState<number>(0);
-	const [widthOfStickyContainer, setWidthOfStickyContainer] =
-		useState<number>(0);
-	const allResizeActions = () => {
-		const ww = localStorage.getItem("ww");
-		if (ww && ww === window.innerWidth.toString()) {
-			return;
-		}
-		if (!windowHeightAtStart) {
-			setWindowHeightAtStart(window.innerHeight);
-		}
-		setIsMobile(
-			window.innerWidth < 1024 && window.innerWidth < window.innerHeight,
-		);
-		setContainerWidths();
-		measureHeaderHeight();
-	};
-	const setContainerWidths = () => {
-		let makeWidthOfCardContainer =
-			window.innerWidth > smallerDesktop
-				? (window.innerWidth * 0.8 - 24) * (2 / 5) - 4
-				: (window.innerWidth * 0.8 - 24) * 0.5;
-
-		let makeWidthOfStickyContainer =
-			window.innerWidth > smallerDesktop
-				? (window.innerWidth * 0.8 - 24) * (3 / 5)
-				: (window.innerWidth * 0.8 - 24) * 0.5;
-
-		if (makeWidthOfCardContainer > maxWidthOfCardContainer) {
-			makeWidthOfCardContainer = maxWidthOfCardContainer;
-			makeWidthOfStickyContainer =
-				window.innerWidth * 0.8 - 24 - makeWidthOfCardContainer;
-		}
-		setWidthOfCardContainer(makeWidthOfCardContainer);
-		setWidthOfStickyContainer(makeWidthOfStickyContainer);
-	};
-
-	// Toggle theme function
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === "light" ? "dark" : "light"));
-	};
-
-	const measureHeaderHeight = () => {
-		const header = document.querySelector("header");
-		if (header) {
-			const getHeaderHeight = header.getBoundingClientRect().height;
-			setHeaderHeight(getHeaderHeight);
-		}
-	};
-
+	//
+	// utils
 	const detectAndSetTheme = () => {
 		if (typeof window !== "undefined" && window.matchMedia) {
 			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-			setTheme(prefersDark.matches ? "dark" : "light");
+			if (prefersDark.matches) {
+				const root = document.documentElement;
+				root.setAttribute("data-theme", "dark");
+			}
 		}
+	};
+	const getWindowMeasuresOnStart = () => {
+		setWindowMeasuresOnStart((prev) => {
+			if (prev?.w === window.innerWidth) {
+				return prev;
+			}
+			return {
+				w: window.innerWidth,
+				h: window.innerHeight,
+			};
+		});
+	};
+	useEffect(() => {
+		detectAndSetTheme();
+		getWindowMeasuresOnStart();
+	}, []);
+
+	const handleResize = () => {
+		getWindowMeasuresOnStart();
+		setIsMobile(window.innerWidth < 1024);
 	};
 
 	useEffect(() => {
-		document.documentElement.classList.remove("light", "dark");
-		document.documentElement.classList.add(theme);
-	}, [theme]);
-
-	useEffect(() => {
-		detectAndSetTheme();
-		allResizeActions();
-		localStorage.setItem("ww", window.innerWidth.toString());
-		window.addEventListener("resize", () => allResizeActions());
-		return () => window.removeEventListener("resize", allResizeActions);
+		window.addEventListener("resize", () => handleResize());
+		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
 	return (
 		<GlobalContext.Provider
 			value={{
-				theme,
-				toggleTheme,
-				fontSize,
-				breakPoint,
 				isMobile,
-				headerHeight,
-				subtractFromMobileChartsHeight,
 				axisFontStylings,
 				region,
 				setRegion,
-				windowHeightAtStart,
-				widthOfStickyContainer,
-				widthOfCardContainer,
-				smallerDesktop,
+				animationDuration,
+				windowMeasuresOnStart,
 			}}
 		>
 			{children}

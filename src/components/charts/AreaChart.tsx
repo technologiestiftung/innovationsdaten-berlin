@@ -1,6 +1,7 @@
 /* eslint-disable complexity */
+/* eslint-disable no-nested-ternary */
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
 	XAxis,
 	Tooltip,
@@ -11,12 +12,13 @@ import {
 	YAxis,
 } from "recharts";
 import branchen from "../../data/branchen.json";
+import wordings from "../../data/wordings.json";
 import sektoren from "../../data/sektoren.json";
 import colors from "../../data/colors.json";
 import {
+	cn,
 	formatEuroNumber,
 	formatNumber,
-	hexToRgba,
 	roundToTwoDecimals,
 } from "../../utilities";
 import Dropdown from "../DropDown";
@@ -44,17 +46,11 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	hide_toggle,
 }) => {
 	const {
-		theme,
-		fontSize,
 		axisFontStylings,
 		region,
 		setRegion,
-		windowHeightAtStart,
-		widthOfStickyContainer,
-		isMobile,
-		headerHeight,
-		subtractFromMobileChartsHeight,
-		smallerDesktop,
+		animationDuration,
+		windowMeasuresOnStart,
 	} = useGlobalContext();
 
 	const optionsRef = useRef<HTMLDivElement>(null);
@@ -62,28 +58,16 @@ const AreaChart: React.FC<AreaChartProps> = ({
 	const [activeFilters, setActiveFilters] = useState<string[] | null>(
 		allFilters,
 	);
-	const [heightOfOptions, setHeightOfOptions] = useState<number>(0);
 
 	const setData = data as StickyItemData[];
 	const getStrokeOrFill = (brancheID: string, color: string | null) => {
-		if (activeFilters) {
-			if (theme === "dark") {
-				if (activeFilters.indexOf(brancheID) > -1) {
-					if (color) {
-						return color;
-					}
-					return colors.white;
-				}
-				return hexToRgba(colors.white, 0.2);
+		if (activeFilters && activeFilters.indexOf(brancheID) > -1) {
+			if (color) {
+				return color;
 			}
-			if (activeFilters.indexOf(brancheID) > -1) {
-				if (color) {
-					return color;
-				}
-				return colors.blue;
-			}
+			return "var(--foreground)";
 		}
-		return hexToRgba(colors.blue, 0.2);
+		return "color-mix(in srgb, var(--foreground) 20%, transparent)";
 	};
 	const CustomTooltip = ({ active, payload }: any) => {
 		if (!active || !payload || !payload.length) {
@@ -119,27 +103,15 @@ const AreaChart: React.FC<AreaChartProps> = ({
 			return colors.blue;
 		};
 		return (
-			<div
-				className="p-4 select-none"
-				style={{
-					backgroundColor: theme === "dark" ? colors.white : colors.blue,
-				}}
-			>
-				<p
-					className="bold"
-					style={{
-						color: theme === "dark" ? colors.dark : colors.white,
-						marginBottom: fontSize,
-					}}
-				>
-					{payloadData?.year}
-				</p>
-				{!chart_type?.includes("toggle") && (
+			<div className="p-4 select-none bg-foreground">
+				<p className="font-bold mb-4 text-background">{payloadData?.year}</p>
+				{!chart_type?.includes("toggle") ? (
 					<>
-						{Object.keys(payloadData).map((dataKey) => (
-							<div key={dataKey}>
-								{dataKey !== "year" &&
-									(activeFilters?.includes(dataKey) ||
+						{Object.keys(payloadData)
+							.filter((dataKey) => dataKey !== "year")
+							.map((dataKey) => (
+								<div key={dataKey}>
+									{(activeFilters?.includes(dataKey) ||
 										dataKey === "dienstleistungen" ||
 										dataKey === "industrie") && (
 										<div className="flex justify-between gap-6">
@@ -153,199 +125,182 @@ const AreaChart: React.FC<AreaChartProps> = ({
 														marginRight: 8,
 													}}
 												/>
-												<p
-													className="max-w-[40vw] truncate"
-													style={{
-														color:
-															theme === "dark" ? colors.dark : colors.white,
-													}}
-												>
+												<p className="max-w-[40vw] truncate text-background">
 													{findTitle(dataKey)}:
 												</p>
 											</div>
-											<p
-												className="bold ml-2"
-												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
-												}}
-											>
-												{/* Value Display */}
+											<p className="font-bold ml-2 text-background">
 												{formatEuroNumber(payloadData[dataKey])}
 											</p>
 										</div>
 									)}
-							</div>
-						))}
+								</div>
+							))}
 					</>
-				)}
-				{chart_type?.includes("toggle") && (
+				) : (
 					<>
-						{Object.keys(payloadData).map((dataKey) => (
-							<div key={dataKey}>
-								{dataKey !== "year" && (
-									<>
-										<div className="flex justify-between gap-6">
-											<div className="flex items-center">
-												<span
-													style={{
-														display: "inline-block",
-														width: 12,
-														height: 12,
-														backgroundColor: getBGColor(dataKey),
-														marginRight: 8,
-													}}
-												/>
-												<p
-													style={{
-														color:
-															theme === "dark" ? colors.dark : colors.white,
-													}}
-												>
-													{dataKey === "ber" ? "Berlin" : "Deutschland"}:
-												</p>
-											</div>
-											<p
-												className="bold ml-2"
+						{Object.keys(payloadData)
+							.filter((dataKey) => dataKey !== "year")
+							.map((dataKey) => (
+								<div key={dataKey}>
+									<div className="flex justify-between gap-6">
+										<div className="flex items-center">
+											<span
 												style={{
-													color: theme === "dark" ? colors.dark : colors.white,
+													display: "inline-block",
+													width: 12,
+													height: 12,
+													backgroundColor: getBGColor(dataKey),
+													marginRight: 8,
 												}}
-											>
-												{roundToTwoDecimals(payloadData[dataKey])}%
+											/>
+											<p className="text-background">
+												{dataKey === "ber" ? "Berlin" : "Deutschland"}:
 											</p>
 										</div>
-									</>
-								)}
-							</div>
-						))}
+										<p className="font-bold ml-2 text-background">
+											{roundToTwoDecimals(payloadData[dataKey])}
+											{wordings.percentage_sign}
+										</p>
+									</div>
+								</div>
+							))}
 					</>
 				)}
 			</div>
 		);
 	};
 
-	const setOptionsClasses = () => {
-		if (isMobile) {
-			return "flex-col items-end mt-2 gap-2";
-		}
-		if (window.innerWidth <= smallerDesktop) {
-			return "flex-col items-end mt-6 gap-2";
-		}
-		return "items-center mt-8 gap-8 justify-end";
-	};
+	const getNumberOfOptions = () => {
+		const isBranchen = chart_type?.includes("branchen");
+		const hasToggle = chart_type?.includes("toggle");
 
-	const getHeight = () => {
-		if (isMobile) {
-			return (
-				windowHeightAtStart -
-				headerHeight -
-				heightOfOptions -
-				windowHeightAtStart * subtractFromMobileChartsHeight
-			);
+		if (!hasToggle && isBranchen) {
+			return 2;
 		}
-		return windowHeightAtStart * 0.5;
+		if (!hide_toggle) {
+			return 1;
+		}
+		return 0;
 	};
-
-	useEffect(() => {
-		if (optionsRef.current) {
-			const optionsHeight = optionsRef.current.getBoundingClientRect().height;
-			setHeightOfOptions(optionsHeight);
-		}
-	}, [optionsRef.current]);
+	const numberOfOptionsShown = getNumberOfOptions();
 
 	return (
 		<div className="area-chart">
-			<ResponsiveContainer width="100%" height={getHeight()}>
-				<AreaChartRecharts data={setData}>
-					<XAxis
-						dataKey="year"
-						stroke={theme === "dark" ? colors.white : colors.blue}
-						strokeWidth={2}
-						tick={axisFontStylings}
-						interval={0}
-					/>
-					<Tooltip content={<CustomTooltip />} />
-					{chart_type?.includes("sektoren") && (
-						<>
-							{sektoren.map((sektor) => (
-								<Area
-									key={sektor.id}
-									type="linear"
-									dataKey={sektor.id}
-									stroke={theme === "dark" ? colors.white : colors.blue}
-									strokeWidth={3}
-									fill={sektor.color}
-									stackId="1"
-									fillOpacity={1}
-								/>
-							))}
-						</>
-					)}
-					{chart_type?.includes("branchen") && (
-						<>
-							{branchen
-								.filter((branche) =>
-									activeFilters
-										? activeFilters?.indexOf(branche.id) > -1
-										: false,
-								)
-								.map((branche) => (
+			<div
+				className={cn(
+					!numberOfOptionsShown
+						? "h-[calc(var(--window-height-on-start)-var(--header-height))]"
+						: numberOfOptionsShown === 1
+							? "h-[calc(var(--window-height-on-start)-var(--header-height)-44px-0.5rem)]"
+							: "h-[calc(var(--window-height-on-start)-var(--header-height)-88px-1rem)]",
+					"lg:h-[50vh]",
+				)}
+				style={
+					{
+						"--window-height-on-start": `${(windowMeasuresOnStart?.h ?? 0) * 0.95}px`,
+					} as React.CSSProperties
+				}
+			>
+				<ResponsiveContainer width="100%" height="100%">
+					<AreaChartRecharts data={setData}>
+						<XAxis
+							dataKey="year"
+							strokeWidth={2}
+							tick={axisFontStylings}
+							interval={0}
+							stroke="var(--foreground)"
+						/>
+						<Tooltip content={<CustomTooltip />} />
+						{chart_type?.includes("sektoren") && (
+							<>
+								{sektoren.map((sektor) => (
 									<Area
-										key={branche.id}
+										key={sektor.id}
 										type="linear"
-										dataKey={branche.id}
-										stroke={getStrokeOrFill(branche.id, null)}
+										dataKey={sektor.id}
+										stroke="var(--foreground)"
 										strokeWidth={3}
-										fill={getStrokeOrFill(branche.id, branche.color)}
+										fill={sektor.color}
 										stackId="1"
 										fillOpacity={1}
+										animationDuration={animationDuration}
 									/>
 								))}
-						</>
-					)}
-					{chart_type?.includes("toggle") && (
-						<>
-							<Area
-								type="linear"
-								dataKey="ber"
-								fill="none"
-								stroke={colors.cyan_light}
-								strokeWidth={3}
-							/>
-							<Area
-								type="linear"
-								dataKey="de"
-								fill="none"
-								stroke={colors.green_light}
-								strokeWidth={3}
-							/>
-						</>
-					)}
-					<YAxis
-						mirror
-						stroke="none"
-						width={isMobile ? window.innerWidth : widthOfStickyContainer * 0.3}
-						domain={max_value ? [0, max_value] : ["auto", "auto"]}
-						tick={{
-							...axisFontStylings,
-							fill: theme === "dark" ? colors.white : colors.blue,
-						}}
-						// Value Display
-						tickFormatter={(label: string) => {
-							return chart_type?.includes("toggle")
-								? `${formatNumber(+label)}%`
-								: formatEuroNumber(+label);
-						}}
-					/>
-					<CartesianGrid
-						strokeDasharray="3 3"
-						vertical={false}
-						stroke={theme === "dark" ? colors.white : colors.blue}
-						zIndex={10000}
-					/>
-				</AreaChartRecharts>
-			</ResponsiveContainer>
+							</>
+						)}
+						{chart_type?.includes("branchen") && (
+							<>
+								{branchen
+									.filter((branche) =>
+										activeFilters
+											? activeFilters?.indexOf(branche.id) > -1
+											: false,
+									)
+									.map((branche) => (
+										<Area
+											key={branche.id}
+											type="linear"
+											dataKey={branche.id}
+											stroke={getStrokeOrFill(branche.id, null)}
+											strokeWidth={3}
+											fill={getStrokeOrFill(branche.id, branche.color)}
+											stackId="1"
+											fillOpacity={1}
+											animationDuration={animationDuration}
+										/>
+									))}
+							</>
+						)}
+						{chart_type?.includes("toggle") && (
+							<>
+								<Area
+									type="linear"
+									dataKey="ber"
+									fill="none"
+									stroke={colors.cyan_light}
+									strokeWidth={3}
+									animationDuration={animationDuration}
+								/>
+								<Area
+									type="linear"
+									dataKey="de"
+									fill="none"
+									stroke={colors.green_light}
+									strokeWidth={3}
+									animationDuration={animationDuration}
+								/>
+							</>
+						)}
+						<YAxis
+							mirror
+							stroke="none"
+							width="auto"
+							domain={max_value ? [0, max_value] : ["auto", "auto"]}
+							tick={{
+								...axisFontStylings,
+								fill: "var(--foreground)",
+							}}
+							tickFormatter={(label: string) => {
+								return chart_type?.includes("toggle")
+									? `${formatNumber(+label)}${wordings.percentage_sign}`
+									: formatEuroNumber(+label);
+							}}
+						/>
+						<CartesianGrid
+							strokeDasharray="3 3"
+							vertical={false}
+							stroke="var(--foreground)"
+							zIndex={10000}
+						/>
+					</AreaChartRecharts>
+				</ResponsiveContainer>
+			</div>
 			{!hide_toggle && (
-				<div className={`flex ${setOptionsClasses()}`} ref={optionsRef}>
+				<div
+					className="flex max-xl:flex-col max-xl:items-end max-xl:gap-2 mt-2 md:mt-6 xl:mt-8 xl:items-center xl:gap-8 xl:justify-end"
+					ref={optionsRef}
+				>
 					{!chart_type?.includes("toggle") && (
 						<DataToggle
 							data={region}
@@ -369,6 +324,7 @@ const AreaChart: React.FC<AreaChartProps> = ({
 								data={toggleData}
 								setData={(value: string) => setToggleData(value)}
 								allDatas={togglesBetween}
+								togglesBetween
 							/>
 						)}
 				</div>

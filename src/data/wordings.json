@@ -17,6 +17,7 @@
 	"innovations_intensitaet": "Innovationsintensität",
 	"innovations_intensitaet_overall": "Gesamtlänge: Innovationsintensität",
 	"fue_intensitaet": "Forschung- & Entwicklungsintensität",
+	"fue_intensitaet_short": "FuE Intensität",
 	"differenz_intensitaet": "Gesamtlänge: Innovationsintensität",
 	"germany": "Deutschland",
 	"eu_and_efta": "EU und EFTA (ohne Dtl.)",
@@ -84,5 +85,13 @@
 	"image_recognition": "Bild-/Mustererkennung,<br/>Bildverarbeitung",
 	"machine_learning": "Maschinelles Lernen<br/>zur Datenanalyse",
 	"automation": "Automatisierung,<br/>autonome Systeme",
-	"knowledge_based_systems": "Wissensbasierte Systeme,<br/>Entscheidungshilfen"
+	"knowledge_based_systems": "Wissensbasierte Systeme,<br/>Entscheidungshilfen",
+	"invert_text": "Text invertieren",
+	"industrie": "Industrie",
+	"dienstleistungen": "Dienstleistungen",
+	"number_on_employees": "Anzahl der<br/>Beschäftigten:",
+	"total": "Gesamt:",
+	"percentage": "Anteil:",
+	"percentage_sign": "%",
+	"thousand": "Tsd."
 }

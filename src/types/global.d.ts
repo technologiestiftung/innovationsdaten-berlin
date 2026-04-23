@@ -8,6 +8,11 @@ export type ChapterKeys =
 	| "support"
 	| "data_ai";
 
+export type Chapter = {
+	link: ChapterKeys;
+	title: string;
+};
+
 export type Region = "ber" | "de";
 
 export type ChartTypes =
@@ -125,3 +130,5 @@ export type BranchenItem = {
 	sektor: string;
 	sektor_id: string;
 };
+
+export type DataObj = Record<ChapterKeys, StickyItem[]>;

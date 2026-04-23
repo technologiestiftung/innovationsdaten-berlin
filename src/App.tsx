@@ -1,25 +1,21 @@
-import "./style.scss";
-import "./index.css";
-import { useGlobalContext } from "./GlobalContext";
+import "./tailwind-style.css";
+import "./recharts.scss";
+import "./matrix.scss";
 import Header from "./components/Header";
 import data from "./data/data.json";
 import { ChapterKeys } from "./types/global";
 import Footer from "./sections/Footer";
 import Desktop from "./sections/Desktop";
 import Mobile from "./sections/Mobile";
-import { useEffect } from "react";
+import { useGlobalContext } from "./GlobalContext";
 
 function App() {
-	const { theme, isMobile } = useGlobalContext();
-
-	useEffect(() => {
-		localStorage.clear();
-	}, []);
+	const { isMobile } = useGlobalContext();
 
 	return (
 		<>
 			<Header />
-			<main className={`${theme} ${isMobile ? "px-3" : ""}`}>
+			<main className="max-lg:px-3 pb-[20vh]">
 				{Object.keys(data).map((dataKey) => (
 					<div key={dataKey}>
 						{isMobile ? (
@@ -29,8 +25,25 @@ function App() {
 						)}
 					</div>
 				))}
-				<div className="w-full min-h-[20vh]" />
 			</main>
+			{/* <main className="max-lg:px-3 bg-background mb-[20vh]">
+				{Object.keys(data).map((dataKey) => (
+					<div key={dataKey}>
+						{isMobile ? (
+							<Mobile dataKey={dataKey as ChapterKeys} />
+						) : (
+							<Desktop dataKey={dataKey as ChapterKeys} />
+						)}
+					</div>
+				))}
+			</main> */}
+			{/* <main className="py-[20vh] px-3 h-[300vh]">
+				<div className="relative bg-[#ff0000] w-full h-full">
+					<p className="sticky left-0 top-[200px]">
+						w: {windowMeasuresOnStart?.w} | h: {windowMeasuresOnStart?.h}
+					</p>
+				</div>
+			</main> */}
 			<Footer />
 		</>
 	);

@@ -61,24 +61,15 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
 			{/* AREA CHART */}
 			{chart_type?.includes("area_chart") && (
 				<div className="hide-first-y-axis-tick move-last-x-axis-tick move-first-x-axis-tick move-entire-y-axis-ticks">
-					{toggleData ? (
-						<AreaChart
-							chart_type={chart_type}
-							data={(content as Record<string, any>)[toggleData]}
-							max_value={typeof max_value === "number" ? max_value : undefined}
-							toggleData={toggleData}
-							setToggleData={setToggleData}
-							togglesBetween={togglesBetween}
-							hide_toggle={hide_toggle}
-						/>
-					) : (
-						<AreaChart
-							chart_type={chart_type}
-							data={(content as Record<string, any>)[region]}
-							max_value={typeof max_value === "number" ? max_value : undefined}
-							hide_toggle={hide_toggle}
-						/>
-					)}
+					<AreaChart
+						chart_type={chart_type}
+						data={(content as Record<string, any>)[toggleData || region]}
+						max_value={typeof max_value === "number" ? max_value : undefined}
+						hide_toggle={hide_toggle}
+						toggleData={toggleData || undefined}
+						setToggleData={setToggleData || undefined}
+						togglesBetween={togglesBetween || undefined}
+					/>
 				</div>
 			)}
 			{/* BAR CHART */}

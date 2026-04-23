@@ -1,7 +1,6 @@
 import data from "../data/data.json";
-import { useGlobalContext } from "../GlobalContext";
 import React from "react";
-import { ChapterKeys, StickyItem } from "../types/global";
+import { ChapterKeys, DataObj, StickyItem } from "../types/global";
 import Card from "../components/Card";
 import Graph from "../components/Graph";
 import Welcome from "./Welcome";
@@ -11,29 +10,19 @@ type MobileProps = {
 };
 
 const Mobile: React.FC<MobileProps> = ({ dataKey }) => {
-	const { headerHeight } = useGlobalContext();
-	const typedData = data as Record<ChapterKeys, StickyItem[]>;
-	const dataArray = typedData[dataKey];
+	const chapters = data as DataObj;
+	const items = chapters[dataKey];
 
 	return (
 		<section id={dataKey}>
-			{dataKey === "einleitung" && (
-				<>
-					<Welcome mobile />
-					<div className="w-full h-[10vh]" />
-				</>
-			)}
-			{dataArray.map((item: StickyItem, index: number) => (
-				<div key={index} style={{ paddingTop: headerHeight + 50 }}>
-					<Card
-						key={item.id}
-						id={item.id}
-						dataKey={dataKey}
-						title={item.title}
-						text={item.text}
-					/>
-					<div className="w-full h-[10vh]" />
-					<Graph data={dataArray[index] as StickyItem} />
+			{dataKey === "einleitung" && <Welcome />}
+			{items.map((item: StickyItem, index: number) => (
+				<div
+					key={index}
+					className="pt-[calc(var(--header-height)+50px)] flex flex-col gap-[10vh]"
+				>
+					<Card key={item.id} dataKey={dataKey} item={item} />
+					<Graph data={items[index] as StickyItem} />
 				</div>
 			))}
 		</section>

@@ -1,65 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { isInRange } from "../utilities";
 import { useGlobalContext } from "../GlobalContext";
 import data from "../data/data.json";
+import { StickyItem } from "../types/global";
 
 type CardProps = {
-	id: string;
 	dataKey: string;
-	title: string;
-	text?: string;
+	item: StickyItem;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
-	last?: boolean;
-	first?: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
-	id,
 	dataKey,
-	title,
-	text,
+	item,
 	onSetCurrent,
 	isNotCurrent,
-	last,
-	first,
 }) => {
-	const { theme, headerHeight, isMobile, smallerDesktop } = useGlobalContext();
+	const { isMobile } = useGlobalContext();
+	const { id, title, text } = item;
 	const cardRef = useRef<HTMLDivElement>(null);
-	const cardTextRef = useRef<HTMLDivElement>(null);
-	const [specificMargin, setSpecificMargin] = useState(0);
-	const [cardHeight, setCardHeight] = useState<number | null>(null);
-	const displayNumber = `${Object.keys(data).indexOf(dataKey) + 1}.${data[dataKey as keyof typeof data].findIndex((item) => item.id === id) + 1}`;
 
-	const getMarginTop = () => {
-		if (isMobile) {
-			return 0;
-		}
-		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
-		}
-		if (first) {
-			return specificMargin;
-		}
-		return window.innerHeight - headerHeight;
-	};
-	const checkMarginTop = () => {
-		const marginTopCard = 50;
-		const getMarginTopFromFuntion = getMarginTop();
-		if (getMarginTopFromFuntion < marginTopCard) {
-			return marginTopCard;
-		}
-		return getMarginTopFromFuntion;
-	};
-	const getMarginBottom = () => {
-		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
-		}
-		if (last) {
-			return window.innerHeight - headerHeight;
-		}
-		return 0;
-	};
+	// displayNumber
+	const displayNumber = `${Object.keys(data).indexOf(dataKey) + 1}.${data[dataKey as keyof typeof data].findIndex((indexItem) => indexItem.id === id) + 1}`;
+	const showDisplayNumber =
+		typeof window !== "undefined" &&
+		window.location.toString().includes("localhost") &&
+		displayNumber;
+
 	const handleScroll = () => {
 		if (isMobile) {
 			return;
@@ -83,58 +51,22 @@ const Card: React.FC<CardProps> = ({
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
-	useEffect(() => {
-		if (last || first) {
-			const getCard = document.querySelector(
-				last
-					? `#${dataKey} .card:last-of-type`
-					: `#${dataKey} .card:first-of-type`,
-			);
-			if (!getCard) {
-				return;
-			}
-			const getCardHeight = getCard?.getBoundingClientRect().height;
-			const subtraction = window.innerHeight - getCardHeight - headerHeight;
-			const getMargin = subtraction / 2;
-			setSpecificMargin(getMargin);
-		}
-		if (dataKey === "welcome") {
-			const getCard = document.querySelector(
-				last
-					? `#${dataKey} .card:last-of-type`
-					: `#${dataKey} .card:first-of-type`,
-			);
-			if (!getCard) {
-				return;
-			}
-			setCardHeight(getCard?.getBoundingClientRect().height);
-		}
-	}, [headerHeight]);
 
 	return (
-		<div
-			ref={cardRef}
-			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
-			style={{
-				marginTop: checkMarginTop(),
-				marginBottom: getMarginBottom(),
-			}}
-		>
-			{typeof window !== "undefined" &&
-				window.location.toString().includes("localhost") &&
-				displayNumber && <h4>{displayNumber}</h4>}
-			{window.innerWidth <= smallerDesktop ? (
-				<h3 dangerouslySetInnerHTML={{ __html: title }} />
-			) : (
+		<div className="flex items-center lg:h-screen">
+			<div
+				ref={cardRef}
+				className="w-fit lg:p-6 lg:border-[2px] border-foreground"
+			>
+				{showDisplayNumber && <h4>{displayNumber}</h4>}
 				<h2 dangerouslySetInnerHTML={{ __html: title }} />
-			)}
-			{text && (
-				<p
-					className={`mt-4 max-w-[80ch] serif ${theme}`}
-					ref={cardTextRef}
-					dangerouslySetInnerHTML={{ __html: text }}
-				/>
-			)}
+				{text && (
+					<p
+						className="mt-4 max-w-[80ch] serif"
+						dangerouslySetInnerHTML={{ __html: text }}
+					/>
+				)}
+			</div>
 		</div>
 	);
 };

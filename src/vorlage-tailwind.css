@@ -1,0 +1,356 @@
+@import "tailwindcss";
+@plugin 'tailwindcss-animate';
+@import "./map.css";
+@custom-variant dark (&:is(.dark *));
+@custom-variant contrast (&:is([data-theme="contrast"] *));
+
+:root {
+	/* Base color definitions from Figma */
+	--white: #ffffff;
+	--black: #161616;
+
+	/* Interaction colors */
+	--interaction-default: #c288ff;
+	--interaction-dark: #6201e0;
+	--interaction-light: #d9c1ff;
+
+	/* Highlight colors */
+	--highlight-alert: #ff9aab;
+
+	/* Neutral colors */
+	--neutral-5: #f8f6f2;
+	--neutral-10: #edebe8;
+	--neutral-20: #e2dfdb;
+	--neutral-40: #b9b8b5;
+	--neutral-60: #a09f9d;
+	--neutral-80: #555b54;
+	--neutral-100: #2b3229;
+
+	--brand-dark: #4ab780;
+	--brand-default: #55d494;
+	--brand-light: #aae9c9;
+
+	/* Fachfarben */
+	--fachfarben-yellow: #f5df56;
+	--fachfarben-dark-yellow: #ddc94c;
+	--fachfarben-orange: #ffa054;
+	--fachfarben-dark-orange: #dd8b4a;
+	--fachfarben-pink: #ff8095;
+	--fachfarben-dark-pink: #e17284;
+	--fachfarben-blue: #6394f7;
+	--fachfarben-dark-blue: #527dd5;
+	--fachfarben-green: #55d494;
+	--fachfarben-dark-green: #4ab780;
+
+	--cluster-pins: #5617ba;
+
+	--shadow-200: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--shadow-300: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--shadow-400: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+	--sidebar-width: 30rem;
+	--sidebar-width-mobile: 18rem;
+	--sidebar-width-icon: 5rem;
+
+	--footer: #f9f8f590;
+
+	--contrast-brand-default: #55d494;
+	--contrast-neutral-80: #555b54;
+	--contrast-interaction-default: #c288ff;
+}
+
+:root[data-theme="contrast"] {
+	--black: #ffffff;
+	--white: #161616;
+
+	--interaction-default: #8b3dff;
+	--interaction-dark: #c288ff;
+	--interaction-light: #34077b;
+
+	/* Neutral colors */
+	--neutral-100: #f8f6f2;
+	--neutral-80: #f8f6f2;
+	--neutral-60: #e2dfdb;
+	--neutral-40: #a09f9d;
+	--neutral-20: #555b54;
+	--neutral-10: #555b54;
+	--neutral-5: #2b3229;
+
+	/* Highlight colors */
+	--highlight-alert: #e17284;
+
+	--brand-dark: #aae9c9;
+	--brand-default: #249f61;
+	--brand-light: #096336;
+
+	--cluster-pins: #5617ba;
+
+	--footer: #2b322990;
+}
+
+:root[data-reduced-motion="true"] *,
+:root[data-reduced-motion="true"] *::before,
+:root[data-reduced-motion="true"] *::after {
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0s !important;
+	scroll-behavior: auto !important;
+}
+
+@theme {
+	--animate-accordion-down: accordion-down 0.28s ease-out;
+	--animate-accordion-up: accordion-up 0.24s ease-in;
+
+	--color-background: var(--white);
+	--color-foreground: var(--black);
+
+	--color-card: var(--white);
+	--color-card-foreground: var(--black);
+
+	--color-popover: var(--white);
+	--color-popover-foreground: var(--black);
+
+	--color-primary: var(--interaction-default);
+	--color-primary-dark: var(--interaction-dark);
+	--color-primary-light: var(--interaction-light);
+	--color-primary-foreground: var(--black);
+
+	--color-secondary: var(--neutral-5);
+	--color-secondary-foreground: var(--black);
+
+	--color-muted: var(--neutral-10);
+	--color-muted-foreground: var(--neutral-40);
+
+	--color-accent: var(--neutral-5);
+	--color-accent-foreground: var(--black);
+
+	--color-destructive: var(--highlight-alert);
+	--color-destructive-secondary: var(--fachfarben-dark-pink);
+	--color-destructive-foreground: var(--white);
+
+	--color-border: var(--neutral-20);
+	--color-input: var(--neutral-40);
+	--color-ring: var(--interaction-dark);
+
+	--color-chart-1: var(--fachfarben-yellow);
+	--color-chart-2: var(--fachfarben-orange);
+	--color-chart-3: var(--fachfarben-pink);
+	--color-chart-4: var(--fachfarben-blue);
+	--color-chart-5: var(--fachfarben-green);
+
+	--color-sidebar: var(--neutral-5);
+	--color-sidebar-foreground: var(--black);
+	--color-sidebar-primary: var(--white);
+	--color-sidebar-primary-foreground: var(--primary-foreground);
+	--color-sidebar-accent: var(--white);
+	--color-sidebar-accent-foreground: var(--interaction-default);
+	--color-sidebar-border: var(--black);
+	--color-sidebar-ring: var(--interaction-dark);
+
+	--color-neutral-5: var(--neutral-5);
+	--color-neutral-10: var(--neutral-10);
+	--color-neutral-20: var(--neutral-20);
+	--color-neutral-40: var(--neutral-40);
+	--color-neutral-60: var(--neutral-60);
+	--color-neutral-80: var(--neutral-80);
+	--color-neutral-100: var(--neutral-100);
+
+	--color-brand-dark: var(--brand-dark);
+	--color-brand-default: var(--brand-default);
+	--color-brand-light: var(--brand-light);
+
+	--color-cluster-pins: var(--cluster-pins);
+
+	--color-alert: var(--highlight-alert);
+	--color-footer: var(--footer);
+
+	--color-interaction-default: var(--interaction-default);
+	--color-interaction-dark: var(--interaction-dark);
+	--color-interaction-light: var(--interaction-light);
+
+	--shadow-sm: var(--shadow-200);
+	--shadow-md: var(--shadow-300);
+	--shadow-lg: var(--shadow-400);
+}
+
+@keyframes accordion-down {
+	from {
+		height: 0;
+		opacity: 0;
+	}
+	to {
+		height: var(--radix-accordion-content-height);
+		opacity: 1;
+	}
+}
+
+@keyframes accordion-up {
+	from {
+		height: var(--radix-accordion-content-height);
+		opacity: 1;
+	}
+	to {
+		height: 0;
+		opacity: 0;
+	}
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	body {
+		font-family: "Barlow", Arial, Helvetica, sans-serif;
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+	}
+
+	p {
+		@apply wrap-anywhere;
+	}
+
+	button {
+		@apply cursor-pointer;
+	}
+}
+
+@layer utilities {
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.break-anywhere {
+		overflow-wrap: anywhere;
+	}
+	a,
+	button:not([role="checkbox"]):not([role="switch"]),
+	.tab-ring:not([role="checkbox"]):not([role="switch"]) {
+		@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-interaction-dark;
+	}
+	a {
+		@apply w-fit;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@layer components {
+	h1 {
+		@apply font-extrabold;
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+	}
+
+	h2 {
+		@apply font-bold;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.title {
+		@apply font-bold;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.body1 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	.body2 {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	.body3 {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.button {
+		@apply font-bold;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	@media (min-width: 768px) {
+		h1 {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+
+		.title {
+			@apply font-bold;
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+
+		.body1 {
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+		}
+		.body2 {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+		.body3 {
+			font-size: 0.875rem;
+			line-height: 1.25rem;
+		}
+		.button {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/100;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+
+	/* Hide Matomo analytics UI from screen readers */
+	iframe[src*="matomo"] {
+		visibility: hidden;
+		position: absolute;
+		left: -9999px;
+	}
+
+	/* Hide elements with invalid ARIA tablist structure */
+	[role="tablist"] button:not([role="tab"]) {
+		display: none;
+	}
+
+	input[type="search"]::-webkit-search-cancel-button {
+		@apply hidden;
+	}
+	input[type="search"]::-webkit-search-decoration {
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}

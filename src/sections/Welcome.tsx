@@ -1,53 +1,27 @@
-import React from "react";
-import { useGlobalContext } from "../GlobalContext";
 import Overview from "../components/Overview";
 import wordings from "../data/wordings.json";
 
-interface WelcomeProps {
-	mobile?: boolean;
-}
-
-const Welcome: React.FC<WelcomeProps> = ({ mobile }) => {
-	const { headerHeight } = useGlobalContext();
-	const paddingTop = Math.round(headerHeight + window.innerHeight * 0.1);
-
-	if (mobile) {
-		return (
-			<section
-				id="welcome"
-				className={`flex flex-col items-center w-full`}
-				style={{ paddingTop }}
-			>
-				<div className="max-w-[700px]">
-					<h1
-						className="mb-4"
-						dangerouslySetInnerHTML={{ __html: wordings.welcome_title }}
-					/>
-					<p
-						className="max-w-[80ch] serif mb-16"
-						dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
-					/>
-					<Overview />
-				</div>
-			</section>
-		);
-	}
-	return (
-		<section
-			id="welcome"
-			className={`flex w-full gap-8 justify-center`}
-			style={{ paddingTop }}
-		>
-			<div className="flex flex-col gap-6 max-h-[90vh]">
-				<h1 dangerouslySetInnerHTML={{ __html: wordings.welcome_title }} />
-				<Overview />
-			</div>
+const Welcome = () => (
+	<section
+		id="welcome"
+		className="flex w-full pt-[calc(var(--header-height)+10vh)] max-lg:flex-col max-lg:items-center lg:gap-8 lg:justify-center max-lg:mb-[10vh]"
+	>
+		<div className="max-lg:max-w-[700px] lg:flex lg:flex-col lg:gap-6 lg:max-h-[90vh]">
+			<h1
+				className="max-lg:mb-4"
+				dangerouslySetInnerHTML={{ __html: wordings.welcome_title }}
+			/>
 			<p
-				className="max-w-[80ch] serif"
+				className="max-w-[80ch] serif mb-16 lg:hidden"
 				dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
 			/>
-		</section>
-	);
-};
+			<Overview />
+		</div>
+		<p
+			className="max-w-[80ch] serif max-lg:hidden"
+			dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
+		/>
+	</section>
+);
 
 export default Welcome;

@@ -157,7 +157,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 					>
 						<div className="flex flex-col items-center">
 							<p
-								className="mb-4 bold"
+								className="mb-4 font-bold"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
@@ -172,7 +172,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 								setColor={theme === "dark" ? colors.dark : colors.white}
 							/>
 							<p
-								className="my-4 bold"
+								className="my-4 font-bold"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
@@ -195,7 +195,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 								/>
 							)}
 							<p
-								className="bold min-w-[50px]"
+								className="font-bold min-w-[50px]"
 								style={{
 									color: theme === "dark" ? colors.dark : colors.white,
 								}}
@@ -251,7 +251,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 								className="flex items-center justify-end"
 								style={{ height: cellSize }}
 							>
-								<p className="rotate-[-15deg] origin-right small">
+								<p className="rotate-[-15deg] origin-right text-[12px] leading-[14.4px]">
 									{replaceAllCustom(wordings[x as keyof typeof wordings])}
 								</p>
 							</div>
@@ -301,7 +301,7 @@ const MatrixChart: React.FC<MatrixChartProps> = ({ data, id }) => {
 							/>
 						) : (
 							<p
-								className="small"
+								className="text-[12px] leading-[14.4px]"
 								dangerouslySetInnerHTML={{
 									__html: wordings[y as keyof typeof wordings],
 								}}

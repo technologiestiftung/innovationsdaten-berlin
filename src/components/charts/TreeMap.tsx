@@ -4,12 +4,12 @@ import {
 	Treemap as TreeMapRecharts,
 } from "recharts";
 import branchen from "../../data/branchen.json";
-import colors from "../../data/colors.json";
+import wordings from "../../data/wordings.json";
 import Icon from "../Icons";
-import { useGlobalContext } from "../../GlobalContext";
 import { formatEuroNumber } from "../../utilities";
 import React from "react";
 import { StickyItemData } from "../../types/global";
+import { useGlobalContext } from "../../GlobalContext";
 
 type TreeMapProps = {
 	id?: string;
@@ -17,35 +17,25 @@ type TreeMapProps = {
 };
 
 const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
-	const {
-		theme,
-		fontSize,
-		isMobile,
-		windowHeightAtStart,
-		headerHeight,
-		subtractFromMobileChartsHeight,
-	} = useGlobalContext();
-
-	if (!data || !Array.isArray(data)) {
+	const { windowMeasuresOnStart } = useGlobalContext();
+	if (!Array.isArray(data) || data.length === 0) {
 		return null;
 	}
-
-	let totalValue = 0;
-	data.forEach((entry: any) => (totalValue += entry.value));
-	const collectData = data.map((entry: any) => {
-		const branche = branchen.find(
-			(findBranche) => findBranche.id === entry.branche,
-		);
-		if (branche) {
-			const returnData = {
+	const totalValue = data.reduce((sum, entry) => sum + entry.value, 0);
+	const brancheById = new Map(branchen.map((branche) => [branche.id, branche]));
+	const collectedData = data
+		.map((entry) => {
+			const branche = brancheById.get(entry.branche);
+			if (!branche) {
+				return null;
+			}
+			return {
 				...branche,
 				...entry,
 				totalValue,
 			};
-			return returnData;
-		}
-		return null;
-	});
+		})
+		.filter(Boolean);
 
 	const formatNumber = (num: number): number => {
 		if (num < 1000) {
@@ -55,20 +45,9 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 		return Math.round(billions * 10) / 10;
 	};
 
-	const getHeight = () => {
-		if (isMobile) {
-			return (
-				windowHeightAtStart -
-				headerHeight -
-				windowHeightAtStart * subtractFromMobileChartsHeight
-			);
-		}
-		return windowHeightAtStart * 0.5;
-	};
-
 	const CustomTreemapNode = (props: any) => {
 		const { x, y, width, height, id: nodeID, color } = props;
-		const iconSize = fontSize * 1.5;
+		const iconSize = 24;
 		const iconX = x + (width - iconSize) / 2;
 		const iconY = y + (height - iconSize) / 2;
 		return (
@@ -79,12 +58,12 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 					width={width}
 					height={height}
 					fill={color}
-					stroke={theme === "dark" ? colors.white : colors.blue}
 					strokeWidth={2}
+					className="stroke-[var(--foreground)]"
 				/>
 				{width > iconSize + 10 && height > iconSize + 10 && (
 					<foreignObject x={iconX} y={iconY} width={iconSize} height={iconSize}>
-						<Icon id={nodeID} setColor={colors.white} size={iconSize} />
+						<Icon id={nodeID} className="text-white size-6" />
 					</foreignObject>
 				)}
 			</g>
@@ -96,60 +75,34 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 			return null;
 		}
 		const payloadData = payload[0].payload;
+		const isBeschaeftigtenGraph = dataID === "beschaeftigte";
 		return (
-			<div
-				className="p-4 select-none"
-				style={{
-					backgroundColor: theme === "dark" ? colors.white : colors.blue,
-				}}
-			>
-				<p
-					className="bold"
-					style={{
-						color: theme === "dark" ? colors.dark : colors.white,
-						marginBottom: fontSize,
-					}}
-				>
-					{payloadData.name}
-				</p>
+			<div className="p-4 select-none bg-foreground">
+				<p className="font-bold text-background mb-4">{payloadData.name}</p>
 				<div className="flex justify-between items-end">
 					<p
-						style={{ color: theme === "dark" ? colors.dark : colors.white }}
-						// @refactor
+						className="text-background"
 						dangerouslySetInnerHTML={{
-							__html:
-								dataID === "beschaeftigte"
-									? "Anzahl der<br/>Beschäftigten:"
-									: "Gesamt:",
+							__html: isBeschaeftigtenGraph
+								? wordings.number_on_employees
+								: wordings.total,
 						}}
 					/>
-					{dataID === "beschaeftigte" ? (
-						<p
-							className="bold ml-2"
-							style={{ color: theme === "dark" ? colors.dark : colors.white }}
-						>
-							{/* Value Display */}
-							{formatNumber(payloadData.value)} Tsd.
-						</p>
-					) : (
-						<p
-							className="bold ml-2"
-							style={{ color: theme === "dark" ? colors.dark : colors.white }}
-						>
-							{/* Value Display */}
-							{formatEuroNumber(payloadData.value)}
-						</p>
-					)}
+					<p className="font-bold ml-2 text-background">
+						{isBeschaeftigtenGraph ? (
+							<>
+								{formatNumber(payloadData.value)} {wordings.thousand}
+							</>
+						) : (
+							<>{formatEuroNumber(payloadData.value)}</>
+						)}
+					</p>
 				</div>
 				<div className="flex justify-between">
-					<p style={{ color: theme === "dark" ? colors.dark : colors.white }}>
-						Anteil:
-					</p>
-					<p
-						className="bold"
-						style={{ color: theme === "dark" ? colors.dark : colors.white }}
-					>
-						{Math.ceil((100 / payloadData.totalValue) * payloadData.value)}%
+					<p className="text-background">{wordings.percentage}</p>
+					<p className="font-bold text-background">
+						{Math.ceil((100 / payloadData.totalValue) * payloadData.value)}
+						{wordings.percentage_sign}
 					</p>
 				</div>
 			</div>
@@ -157,32 +110,29 @@ const TreeMap: React.FC<TreeMapProps> = ({ id, data }) => {
 	};
 
 	return (
-		<>
-			<div
-				style={{
-					border:
-						theme === "dark"
-							? `1px ${colors.white} solid`
-							: `1px ${colors.blue} solid`,
-					position: "relative",
-				}}
-			>
-				<ResponsiveContainer width="100%" height={getHeight()}>
-					<TreeMapRecharts
-						data={collectData.sort((a, b) => b.value - a.value)}
-						aspectRatio={1}
-						dataKey="value"
-						fill="none"
-						content={<CustomTreemapNode />}
-						animationDuration={300}
-					>
-						<Tooltip
-							content={(props) => <CustomTooltip {...props} dataID={id} />}
-						/>
-					</TreeMapRecharts>
-				</ResponsiveContainer>
-			</div>
-		</>
+		<div
+			className="h-[calc(var(--window-height-on-start)-var(--header-height))] lg:h-[50dvh]"
+			style={
+				{
+					"--window-height-on-start": `${(windowMeasuresOnStart?.h ?? 0) * 0.95}px`,
+				} as React.CSSProperties
+			}
+		>
+			<ResponsiveContainer width="100%" height="100%">
+				<TreeMapRecharts
+					data={collectedData.sort((a, b) => b.value - a.value)}
+					aspectRatio={1}
+					dataKey="value"
+					fill="none"
+					content={<CustomTreemapNode />}
+					isAnimationActive={false}
+				>
+					<Tooltip
+						content={(props) => <CustomTooltip {...props} dataID={id} />}
+					/>
+				</TreeMapRecharts>
+			</ResponsiveContainer>
+		</div>
 	);
 };
 

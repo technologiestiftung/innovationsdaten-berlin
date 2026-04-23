@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
-import colors from "../data/colors.json";
 import branchen from "../data/branchen.json";
 import sektoren from "../data/sektoren.json";
 import wordings from "../data/wordings.json";
-import { useGlobalContext } from "../GlobalContext";
 import { dataKeys } from "../types/global";
 import { cn } from "../utilities";
 
@@ -33,14 +31,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 	setSortBy,
 	chart_type,
 }) => {
-	const { theme, fontSize } = useGlobalContext();
-	const [isOpen, setIsOpen] = useState(false);
-	const [height, setHeight] = useState(0);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
-	const baseRef = useRef<HTMLDivElement | null>(null);
+	const [isOpen, setIsOpen] = useState(false);
+
 	const allIndustrieBranchen: string[] = branchen
 		.filter((branche) => branche.sektor_id === "industrie")
 		.map((branche) => branche.id);
+
 	const allDienstleistungenBranchen: string[] = branchen
 		.filter((branche) => branche.sektor_id === "dienstleistungen")
 		.map((branche) => branche.id);
@@ -166,74 +163,31 @@ const Dropdown: React.FC<DropdownProps> = ({
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
 
-	useEffect(() => {
-		const el = baseRef.current;
-		if (!el) {
-			return;
-		}
-
-		const resizeObserver = new ResizeObserver((entries) => {
-			for (const entry of entries) {
-				const newHeight = entry.contentRect.height;
-				setHeight(newHeight - 3);
-			}
-		});
-
-		resizeObserver.observe(el);
-
-		// eslint-disable-next-line consistent-return
-		return () => {
-			resizeObserver.disconnect();
-		};
-	}, []);
-
 	return (
 		<div
 			ref={dropdownRef}
 			className={cn(
-				"relative inline-block drop-down w-full",
-				theme,
-				isOpen && "z-15",
+				"relative inline-block w-full h-[var(--toggle-heigh)]",
+				isOpen && "z-[15]",
 			)}
 		>
-			<div
-				className="flex items-center"
-				style={{ gap: fontSize }}
-				ref={baseRef}
-			>
+			<div className="flex items-center gap-4">
 				<div className="flex-1">
-					<Icon id={type} size={fontSize * 1.5} />
+					<Icon id={type} className="size-6" />
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
-					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer w-full bg-[#14161d]"
+					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer w-full border-2 border-foreground"
 				>
-					<p className="bold select-none text-left first-letter:capitalize transform translate-y-[1px]">
-						{setName()}
-					</p>
-					<div
-						style={{
-							transform: isOpen ? "none" : "rotate(180deg)",
-						}}
-					>
-						<Icon
-							id="chevron"
-							size={fontSize}
-							setColor={theme === "dark" ? colors.white : colors.blue}
-						/>
+					<p className="font-bold select-none text-left">{setName()}</p>
+					<div className={cn(!isOpen && "rotate-180")}>
+						<Icon id="chevron" className="size-4 text-foreground" />
 					</div>
 				</button>
 			</div>
 			{isOpen && (
-				<div
-					className="flyout absolute"
-					style={{
-						width: `calc(100% - ${fontSize * 2.5}px)`,
-						marginLeft: fontSize * 2.5,
-						transform: `translateY(calc(-100% - ${height}px))`,
-					}}
-				>
-					<ul className="overflow-y-auto px-2">
+				<div className="w-[calc(100%-40px)] -translate-y-[calc(100%+var(--options-height)+1px)] ml-[40px] border-t-2 border-r-2 border-l-2 border-foreground absolute py-6 bg-background">
+					<ul className="overflow-y-auto px-2 max-h-[50vh]">
 						{type === "filter" && (
 							<>
 								{!allFilters?.includes("insgesamt") && !chart_type && (
@@ -249,10 +203,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 															? "checked"
 															: "unchecked"
 													}
-													size={fontSize}
+													className="size-4 text-foreground"
 												/>
 											</span>
-											<p className="bold select-none">Alle</p>
+											<p className="font-bold select-none">Alle</p>
 										</li>
 										{sektoren.map((sektor) => (
 											<li
@@ -267,17 +221,17 @@ const Dropdown: React.FC<DropdownProps> = ({
 																? "checked"
 																: "unchecked"
 														}
-														size={fontSize}
+														className="size-4 text-foreground"
 													/>
 												</span>
-												<p className="bold select-none">
+												<p className="font-bold select-none">
 													{sektor.id === "industrie"
 														? "Industrie"
 														: "Dienstleistungen"}
 												</p>
 											</li>
 										))}
-										<hr />
+										<hr className="border-t-2 my-3 text-foreground" />
 									</>
 								)}
 								{allFilters?.map(
@@ -296,10 +250,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 																? "checked"
 																: "unchecked"
 														}
-														size={fontSize}
+														className="size-4 text-foreground"
 													/>
 												</span>
-												<p className="line-clamp-1 break-words select-none first-letter:capitalize">
+												<p className="truncate select-none">
 													{capitalizeFirst(
 														wordings[filter as keyof typeof wordings] ||
 															branchen.find((branche) => branche.id === filter)
@@ -328,11 +282,11 @@ const Dropdown: React.FC<DropdownProps> = ({
 										<span className="mr-2">
 											<Icon
 												id={sortBy === item ? "checked" : "unchecked"}
-												size={fontSize}
+												className="size-4 text-foreground"
 											/>
 										</span>
 										{wordings[item as keyof typeof wordings] && (
-											<p className="bold select-none line-clamp-1 break-words first-letter:capitalize">
+											<p className="font-bold select-none line-clamp-1 break-words first-letter:capitalize">
 												{capitalizeFirst(
 													item === "innovations_intensitaet"
 														? wordings.innovations_intensitaet_overall
