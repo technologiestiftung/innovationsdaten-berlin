@@ -1,18 +1,19 @@
-$mobile: 1024px;
-
 .recharts-wrapper,
 .recharts-xAxis,
 .recharts-yAxis {
 	user-select: none !important;
 }
+
 .move-entire-y-axis-ticks .recharts-yAxis-tick-labels {
 	transform: translateY(12px);
 }
+
 .move-entire-y-axis-ticks
 	.recharts-yAxis-tick-labels
 	.recharts-cartesian-axis-tick-label:last-of-type {
 	transform: translateY(-6px);
 }
+
 .hide-first-y-axis-tick
 	.recharts-yAxis-tick-labels
 	.recharts-cartesian-axis-tick-label:first-of-type,
@@ -21,6 +22,7 @@ $mobile: 1024px;
 	.recharts-cartesian-axis-tick-label:first-of-type {
 	display: none;
 }
+
 .move-last-x-axis-tick
 	.recharts-xAxis-tick-labels
 	.recharts-cartesian-axis-tick-label:last-of-type
@@ -34,30 +36,35 @@ $mobile: 1024px;
 	text {
 	transform: translateX(20px);
 }
+
 .move-recharts-label .recharts-label-list {
 	transform: translateY(1px);
 }
-.move-recharts-label {
-	@media screen and (max-width: $mobile) {
-		.recharts-label-list:last-of-type > text {
-			transform: translateY(1px);
-		}
+
+/* MOBILE: 1024px */
+@media screen and (max-width: 1024px) {
+	.move-recharts-label .recharts-label-list:last-of-type > text {
+		transform: translateY(1px);
 	}
 }
+
 .recharts-surface {
 	overflow: visible !important;
 	outline: none !important;
 }
+
 .recharts-surface *:focus {
 	outline: none !important;
 }
 
-@media screen and (max-width: $mobile) {
+/* MOBILE: 1024px */
+@media screen and (max-width: 1024px) {
 	.area-chart
 		.recharts-xAxis-tick-labels
 		.recharts-cartesian-axis-tick-label:first-of-type {
 		transform: translateX(-12px);
 	}
+
 	.area-chart
 		.recharts-xAxis-tick-labels
 		.recharts-cartesian-axis-tick-label:last-of-type {

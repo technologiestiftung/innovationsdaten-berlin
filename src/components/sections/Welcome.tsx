@@ -1,5 +1,5 @@
-import Overview from "../components/Overview";
-import wordings from "../data/wordings.json";
+import Overview from "@/components/Overview";
+import wordings from "@/data/wordings.json";
 
 const Welcome = () => (
 	<section

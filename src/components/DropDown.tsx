@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icons";
-import branchen from "../data/branchen.json";
-import sektoren from "../data/sektoren.json";
-import wordings from "../data/wordings.json";
-import { dataKeys } from "../types/global";
-import { cn } from "../utilities";
+import branchen from "@/data/branchen.json";
+import sektoren from "@/data/sektoren.json";
+import wordings from "@/data/wordings.json";
+import { DataKeys } from "@/types/global";
+import { cn } from "@/utilities";
 
 interface DropdownProps {
 	type: "filter" | "sort";
@@ -13,7 +13,7 @@ interface DropdownProps {
 	setFilters?: React.Dispatch<React.SetStateAction<string[] | null>>;
 	activeFilter?: string;
 	setActiveFilter?: React.Dispatch<React.SetStateAction<string | null>>;
-	sortsAfter?: dataKeys[];
+	sortsAfter?: DataKeys[];
 	sortBy?: string | null;
 	setSortBy?: (value: string | null) => void;
 	chart_type?: string;
@@ -173,7 +173,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 		>
 			<div className="flex items-center gap-4">
 				<div className="flex-1">
-					<Icon id={type} className="size-6" />
+					<Icon id={type} className="size-6 fill-foreground" />
 				</div>
 				<button
 					onClick={() => setIsOpen(!isOpen)}
@@ -181,7 +181,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 				>
 					<p className="font-bold select-none text-left">{setName()}</p>
 					<div className={cn(!isOpen && "rotate-180")}>
-						<Icon id="chevron" className="size-4 text-foreground" />
+						<Icon id="chevron" className="size-4 fill-foreground" />
 					</div>
 				</button>
 			</div>
@@ -203,10 +203,10 @@ const Dropdown: React.FC<DropdownProps> = ({
 															? "checked"
 															: "unchecked"
 													}
-													className="size-4 text-foreground"
+													className="size-4 fill-foreground"
 												/>
 											</span>
-											<p className="font-bold select-none">Alle</p>
+											<p className="font-bold select-none">{wordings.all}</p>
 										</li>
 										{sektoren.map((sektor) => (
 											<li
@@ -221,7 +221,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 																? "checked"
 																: "unchecked"
 														}
-														className="size-4 text-foreground"
+														className="size-4 fill-foreground"
 													/>
 												</span>
 												<p className="font-bold select-none">
@@ -250,7 +250,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 																? "checked"
 																: "unchecked"
 														}
-														className="size-4 text-foreground"
+														className="size-4 fill-foreground"
 													/>
 												</span>
 												<p className="truncate select-none">
@@ -282,7 +282,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 										<span className="mr-2">
 											<Icon
 												id={sortBy === item ? "checked" : "unchecked"}
-												className="size-4 text-foreground"
+												className="size-4 fill-foreground"
 											/>
 										</span>
 										{wordings[item as keyof typeof wordings] && (

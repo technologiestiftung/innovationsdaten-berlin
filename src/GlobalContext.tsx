@@ -14,13 +14,6 @@ type WindowMeasures = {
 
 interface GlobalStateType {
 	isMobile: boolean;
-	axisFontStylings: {
-		style: {
-			fontFamily: string;
-			fontSize: number;
-			fontWeight: string;
-		};
-	};
 	region: Region;
 	setRegion: (region: Region) => void;
 	animationDuration: number;
@@ -36,16 +29,9 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 	// States
 	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
 	const [region, setRegion] = useState<Region>("ber");
+	const animationDuration = 500;
 	const [windowMeasuresOnStart, setWindowMeasuresOnStart] =
 		useState<WindowMeasures | null>(null);
-	const animationDuration = 1000;
-	const axisFontStylings = {
-		style: {
-			fontFamily: "Clan Pro, sans-serif",
-			fontSize: 16,
-			fontWeight: "bold",
-		},
-	};
 
 	//
 	// utils
@@ -88,7 +74,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({
 		<GlobalContext.Provider
 			value={{
 				isMobile,
-				axisFontStylings,
 				region,
 				setRegion,
 				animationDuration,

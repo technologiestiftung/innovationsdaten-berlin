@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import chapters from "../data/chapters.json";
-import { cn } from "../utilities";
-import { Chapter } from "../types/global";
+import chapters from "@/data/chapter-links.json";
+import { cn } from "@/utilities";
+import { Chapter } from "@/types/global";
 
 interface MenuProps {
 	chapter: string;

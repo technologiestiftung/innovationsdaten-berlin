@@ -27,6 +27,7 @@
 	--foreground: #1e3791;
 	--white: #ffffff;
 	--dark: #14161d;
+	--grey: #d9d9d9;
 	--header-height: 80px;
 	--options-height: 40px;
 	--toggle-width: 160px;
@@ -35,6 +36,7 @@
 :root[data-theme="dark"] {
 	--background: #14161d;
 	--foreground: #ffffff;
+	--grey: #616161;
 }
 
 @media (max-width: 1023px) {
@@ -48,6 +50,7 @@
 	--color-foreground: var(--foreground);
 	--color-white: var(--white);
 	--color-dark: var(--dark);
+	--color-grey: var(--grey);
 	--color-bar-chart-fill: var(--dark);
 }
 

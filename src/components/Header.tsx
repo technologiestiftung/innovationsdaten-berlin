@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Icon from "./Icons";
-import chapters from "../data/chapters.json";
+import chapters from "@/data/chapter-links.json";
 import Menu from "./Menu";
-import wordings from "../data/wordings.json";
-import { cn } from "../utilities";
-import { Chapter } from "../types/global";
+import wordings from "@/data/wordings.json";
+import { cn } from "@/utilities";
+import { Chapter } from "@/types/global";
 
 const Header = () => {
 	const [open, setOpen] = useState<boolean>(false);
@@ -34,7 +34,7 @@ const Header = () => {
 			<header
 				className={cn(
 					// measures
-					`h-[var(--header-height)] w-full`,
+					"h-[var(--header-height)] w-full",
 					// position
 					"fixed top-0 left-0",
 					// layout
@@ -54,7 +54,7 @@ const Header = () => {
 						className="cursor-pointer flex items-center gap-2"
 						onClick={toggleTheme}
 					>
-						<Icon id="invert-text" className="size-6" />
+						<Icon id="invert-text" className="size-6 fill-foreground" />
 						<p className="select-none hidden lg:block">
 							{wordings.invert_text}
 						</p>
@@ -73,7 +73,7 @@ const Header = () => {
 										: "transition-transform"
 								}
 							>
-								<Icon id="chevron" className="size-6" />
+								<Icon id="chevron" className="size-6 fill-foreground" />
 							</div>
 						</div>
 					</div>

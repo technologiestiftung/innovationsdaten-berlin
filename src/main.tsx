@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import { GlobalProvider } from "./GlobalContext.tsx";
+import App from "@/App";
+import { GlobalProvider } from "@/GlobalContext";
 
 function render() {
 	const root = document.getElementById("root");

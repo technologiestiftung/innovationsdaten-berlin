@@ -1,665 +1,215 @@
 {
 	"who_innovates": [
 		{
-			"id": "inno_ausgaben_2022",
-			"title": "Aktivität seit 2022",
-			"chart_type": "bar_chart_delta",
-			"chart_unit": "€",
-			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
-			"max_value": {
-				"ber": 1700,
-				"de": 85000
-			},
+			"id": "berlin_is_ahead",
+			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
+			"chart_type": "area_chart_toggle",
+			"max_value": 6,
+			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
+			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
 			"data": {
-				"ber": {
-					"nahrung": {
-						"value": 29,
-						"delta": -1
-					},
-					"pharma": {
-						"value": 1588,
-						"delta": 60
-					},
-					"holz": {
-						"value": 57,
-						"delta": -19
-					},
-					"metall": {
-						"value": 71,
-						"delta": -15
-					},
-					"elektroindustrie": {
-						"value": 966,
-						"delta": -60
-					},
-					"fahrzeugbau": {
-						"value": 949,
-						"delta": 86
-					},
-					"sonstige_konsumgueter": {
-						"value": 47,
-						"delta": 26
-					},
-					"energie": {
-						"value": 201,
-						"delta": -19
-					},
-					"telekommunikation": {
-						"value": 273,
-						"delta": -5
-					},
-					"software": {
-						"value": 1088,
-						"delta": 87
-					},
-					"finanz": {
-						"value": 266,
-						"delta": -45
-					},
-					"unternehmensberatung": {
-						"value": 102,
-						"delta": -32
-					},
-					"architektur": {
-						"value": 122,
-						"delta": -13
-					},
-					"forschung": {
-						"value": 239,
-						"delta": -5
-					},
-					"kreativ": {
-						"value": 188,
-						"delta": -98
-					}
-				},
-				"de": {
-					"nahrung": {
-						"value": 2439,
-						"delta": -38
-					},
-					"pharma": {
-						"value": 24481,
-						"delta": 183
-					},
-					"holz": {
-						"value": 1176,
-						"delta": 70
-					},
-					"metall": {
-						"value": 6582,
-						"delta": 167
-					},
-					"elektroindustrie": {
-						"value": 23553,
-						"delta": 613
-					},
-					"fahrzeugbau": {
-						"value": 79788,
-						"delta": 2856
-					},
-					"sonstige_konsumgueter": {
-						"value": 2578,
-						"delta": 221
-					},
-					"energie": {
-						"value": 4263,
-						"delta": 968
-					},
-					"telekommunikation": {
-						"value": 6669,
-						"delta": -571
-					},
-					"software": {
-						"value": 18170,
-						"delta": 2147
-					},
-					"finanz": {
-						"value": 7438,
-						"delta": 474
-					},
-					"unternehmensberatung": {
-						"value": 656,
-						"delta": 1
-					},
-					"architektur": {
-						"value": 2281,
-						"delta": -195
-					},
-					"forschung": {
-						"value": 8047,
-						"delta": 2862
-					},
-					"kreativ": {
-						"value": 891,
-						"delta": 39
-					}
-				}
-			}
-		},
-		{
-			"id": "inno_ausgaben_2023",
-			"title": "Innovations&shy;ausgaben 2023",
-			"chart_type": "bar_chart",
-			"chart_unit": "€",
-			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
-			"max_value": {
-				"ber": 1700,
-				"de": 85000
-			},
-			"data": {
-				"ber": {
-					"nahrung": 28,
-					"pharma": 1648,
-					"holz": 38,
-					"metall": 56,
-					"elektroindustrie": 906,
-					"fahrzeugbau": 1035,
-					"sonstige_konsumgueter": 73,
-					"energie": 182,
-					"telekommunikation": 268,
-					"software": 1175,
-					"finanz": 221,
-					"unternehmensberatung": 70,
-					"architektur": 109,
-					"forschung": 234,
-					"kreativ": 90
-				},
-				"de": {
-					"nahrung": 2401,
-					"pharma": 24664,
-					"holz": 1246,
-					"metall": 6749,
-					"elektroindustrie": 24166,
-					"fahrzeugbau": 82644,
-					"sonstige_konsumgueter": 2799,
-					"energie": 5231,
-					"telekommunikation": 6098,
-					"software": 20317,
-					"finanz": 7912,
-					"unternehmensberatung": 657,
-					"architektur": 2086,
-					"forschung": 10909,
-					"kreativ": 930
-				}
-			}
-		},
-		{
-			"id": "inno_intensitaet",
-			"title": "Innovations&shy;intensität",
-			"chart_type": "bar_chart_stacked",
-			"chart_unit": "%",
-			"max_value": 45,
-			"has_tooltip": true,
-			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte „Barroso-Ziel“. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
-			"data": {
-				"ber": [
+				"innovations_intensitaet": [
 					{
-						"id": "nahrung",
-						"innovations_intensitaet": 0.52,
-						"fue_intensitaet": 0.07,
-						"differenz_intensitaet": 0.45
+						"year": 2018,
+						"ber": 5.430635129931505,
+						"de": 4.43060657401294
 					},
 					{
-						"id": "pharma",
-						"innovations_intensitaet": 12.95,
-						"fue_intensitaet": 7.41,
-						"differenz_intensitaet": 5.54
+						"year": 2019,
+						"ber": 4.642867968757894,
+						"de": 4.432251169004676
 					},
 					{
-						"id": "holz",
-						"innovations_intensitaet": 2.78,
-						"fue_intensitaet": 1.61,
-						"differenz_intensitaet": 1.17
+						"year": 2020,
+						"ber": 5.625020839585209,
+						"de": 4.538074067047084
 					},
 					{
-						"id": "metall",
-						"innovations_intensitaet": 2.44,
-						"fue_intensitaet": 0.74,
-						"differenz_intensitaet": 1.7
+						"year": 2021,
+						"ber": 4.742775918846619,
+						"de": 4.021695962823456
 					},
 					{
-						"id": "elektroindustrie",
-						"innovations_intensitaet": 10.5,
-						"fue_intensitaet": 7.9,
-						"differenz_intensitaet": 2.6
+						"year": 2022,
+						"ber": 4.216627449801159,
+						"de": 3.449526999121898
 					},
 					{
-						"id": "fahrzeugbau",
-						"innovations_intensitaet": 7.09,
-						"fue_intensitaet": 3.57,
-						"differenz_intensitaet": 3.52
+						"year": 2023,
+						"ber": 4.030566376985316,
+						"de": 3.5090233726962586
 					},
 					{
-						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 5.94,
-						"fue_intensitaet": 4.07,
-						"differenz_intensitaet": 1.87
-					},
-					{
-						"id": "energie",
-						"innovations_intensitaet": 0.73,
-						"fue_intensitaet": 0.18,
-						"differenz_intensitaet": 0.55
-					},
-					{
-						"id": "telekommunikation",
-						"innovations_intensitaet": 1.84,
-						"fue_intensitaet": 1.06,
-						"differenz_intensitaet": 0.78
-					},
-					{
-						"id": "software",
-						"innovations_intensitaet": 5.88,
-						"fue_intensitaet": 4.69,
-						"differenz_intensitaet": 1.19
-					},
-					{
-						"id": "finanz",
-						"innovations_intensitaet": 0.63,
-						"fue_intensitaet": 0.11,
-						"differenz_intensitaet": 0.52
-					},
-					{
-						"id": "unternehmensberatung",
-						"innovations_intensitaet": 1.39,
-						"fue_intensitaet": 1.19,
-						"differenz_intensitaet": 0.2
-					},
-					{
-						"id": "architektur",
-						"innovations_intensitaet": 2.06,
-						"fue_intensitaet": 0.83,
-						"differenz_intensitaet": 1.23
-					},
-					{
-						"id": "forschung",
-						"innovations_intensitaet": 16.09,
-						"fue_intensitaet": 10.73,
-						"differenz_intensitaet": 5.36
-					},
-					{
-						"id": "kreativ",
-						"innovations_intensitaet": 1.59,
-						"fue_intensitaet": 0.83,
-						"differenz_intensitaet": 0.76
+						"year": 2024,
+						"ber": 3.9,
+						"de": 3.8
 					}
 				],
-				"de": [
+				"fue_intensitaet": [
 					{
-						"id": "nahrung",
-						"innovations_intensitaet": 0.93,
-						"fue_intensitaet": 0.3,
-						"differenz_intensitaet": 0.63
+						"year": 2018,
+						"ber": 2.811001295230983,
+						"de": 2.6238259809127397
 					},
 					{
-						"id": "pharma",
-						"innovations_intensitaet": 5.25,
-						"fue_intensitaet": 3.73,
-						"differenz_intensitaet": 1.52
+						"year": 2019,
+						"ber": 2.581616465762006,
+						"de": 2.7210955243820976
 					},
 					{
-						"id": "holz",
-						"innovations_intensitaet": 1.42,
-						"fue_intensitaet": 0.63,
-						"differenz_intensitaet": 0.8
+						"year": 2020,
+						"ber": 2.921987707423338,
+						"de": 2.863576855240649
 					},
 					{
-						"id": "metall",
-						"innovations_intensitaet": 2,
-						"fue_intensitaet": 0.95,
-						"differenz_intensitaet": 1.05
+						"year": 2021,
+						"ber": 2.6856895653632567,
+						"de": 2.5806033134714097
 					},
 					{
-						"id": "elektroindustrie",
-						"innovations_intensitaet": 10.3,
-						"fue_intensitaet": 7.71,
-						"differenz_intensitaet": 2.59
+						"year": 2022,
+						"ber": 2.5665120544876373,
+						"de": 2.188839465920837
 					},
 					{
-						"id": "fahrzeugbau",
-						"innovations_intensitaet": 7.69,
-						"fue_intensitaet": 5.06,
-						"differenz_intensitaet": 2.63
+						"year": 2023,
+						"ber": 2.362835663378979,
+						"de": 2.2495867412636435
 					},
 					{
-						"id": "sonstige_konsumgueter",
-						"innovations_intensitaet": 4.11,
-						"fue_intensitaet": 2.36,
-						"differenz_intensitaet": 1.75
-					},
-					{
-						"id": "energie",
-						"innovations_intensitaet": 0.55,
-						"fue_intensitaet": 0.06,
-						"differenz_intensitaet": 0.49
-					},
-					{
-						"id": "telekommunikation",
-						"innovations_intensitaet": 4.2,
-						"fue_intensitaet": 1.07,
-						"differenz_intensitaet": 3.13
-					},
-					{
-						"id": "software",
-						"innovations_intensitaet": 7.92,
-						"fue_intensitaet": 5.79,
-						"differenz_intensitaet": 2.13
-					},
-					{
-						"id": "finanz",
-						"innovations_intensitaet": 0.75,
-						"fue_intensitaet": 0.32,
-						"differenz_intensitaet": 0.43
-					},
-					{
-						"id": "unternehmensberatung",
-						"innovations_intensitaet": 1.54,
-						"fue_intensitaet": 1.05,
-						"differenz_intensitaet": 0.49
-					},
-					{
-						"id": "architektur",
-						"innovations_intensitaet": 1.96,
-						"fue_intensitaet": 0.98,
-						"differenz_intensitaet": 0.98
-					},
-					{
-						"id": "forschung",
-						"innovations_intensitaet": 42.55,
-						"fue_intensitaet": 37.57,
-						"differenz_intensitaet": 4.98
-					},
-					{
-						"id": "kreativ",
-						"innovations_intensitaet": 1.5,
-						"fue_intensitaet": 0.84,
-						"differenz_intensitaet": 0.66
+						"year": 2024,
+						"ber": 2.3,
+						"de": 2.5
 					}
 				]
 			}
 		},
 		{
-			"id": "process_product_innovators",
-			"title": "Prozess & Produkt&shy;innovatoren",
-			"chart_type": "bar_chart_filter_keys_branchen",
-			"chart_unit": "%",
-			"max_value": 100,
-			"bar_chart_unit_breakpoint": 21,
-			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
-			"sortsAfterOnStart": "process_innovation_share",
+			"id": "innovator_rate",
+			"title": "Innovatoren&shy;quote",
+			"chart_type": "area_chart_toggle",
+			"text": "TBD...",
+			"max_value": 80,
+			"togglesBetween": ["innovator_rate"],
+			"hide_toggle": true,
 			"data": {
-				"ber": [
+				"innovator_rate": [
 					{
-						"id": "nahrung",
-						"process_innovation_share": 32,
-						"product_innovation_share": 16
+						"year": 2018,
+						"ber": 71,
+						"de": 66
 					},
 					{
-						"id": "pharma",
-						"process_innovation_share": 64,
-						"product_innovation_share": 50
+						"year": 2019,
+						"ber": 71,
+						"de": 62
 					},
 					{
-						"id": "holz",
-						"process_innovation_share": 29,
-						"product_innovation_share": 12
+						"year": 2020,
+						"ber": 73,
+						"de": 64
 					},
 					{
-						"id": "metall",
-						"process_innovation_share": 43,
-						"product_innovation_share": 18
+						"year": 2021,
+						"ber": 69,
+						"de": 62
 					},
 					{
-						"id": "elektroindustrie",
-						"process_innovation_share": 64,
-						"product_innovation_share": 65
+						"year": 2022,
+						"ber": 66,
+						"de": 59
 					},
 					{
-						"id": "fahrzeugbau",
-						"process_innovation_share": 62,
-						"product_innovation_share": 55
+						"year": 2023,
+						"ber": 61,
+						"de": 57
 					},
 					{
-						"id": "sonstige_konsumgueter",
-						"process_innovation_share": 39,
-						"product_innovation_share": 24
-					},
-					{
-						"id": "energie",
-						"process_innovation_share": 44,
-						"product_innovation_share": 22
-					},
-					{
-						"id": "telekommunikation",
-						"process_innovation_share": 65,
-						"product_innovation_share": 42
-					},
-					{
-						"id": "software",
-						"process_innovation_share": 70,
-						"product_innovation_share": 55
-					},
-					{
-						"id": "finanz",
-						"process_innovation_share": 50,
-						"product_innovation_share": 33
-					},
-					{
-						"id": "unternehmensberatung",
-						"process_innovation_share": 84,
-						"product_innovation_share": 45
-					},
-					{
-						"id": "architektur",
-						"process_innovation_share": 56,
-						"product_innovation_share": 28
-					},
-					{
-						"id": "forschung",
-						"process_innovation_share": 56,
-						"product_innovation_share": 21
-					},
-					{
-						"id": "kreativ",
-						"process_innovation_share": 71,
-						"product_innovation_share": 35
-					}
-				],
-				"de": [
-					{
-						"id": "nahrung",
-						"process_innovation_share": 45,
-						"product_innovation_share": 12
-					},
-					{
-						"id": "pharma",
-						"process_innovation_share": 56,
-						"product_innovation_share": 40
-					},
-					{
-						"id": "holz",
-						"process_innovation_share": 48,
-						"product_innovation_share": 21
-					},
-					{
-						"id": "metall",
-						"process_innovation_share": 45,
-						"product_innovation_share": 16
-					},
-					{
-						"id": "elektroindustrie",
-						"process_innovation_share": 60,
-						"product_innovation_share": 48
-					},
-					{
-						"id": "fahrzeugbau",
-						"process_innovation_share": 54,
-						"product_innovation_share": 37
-					},
-					{
-						"id": "sonstige_konsumgueter",
-						"process_innovation_share": 48,
-						"product_innovation_share": 21
-					},
-					{
-						"id": "energie",
-						"process_innovation_share": 49,
-						"product_innovation_share": 17
-					},
-					{
-						"id": "telekommunikation",
-						"process_innovation_share": 59,
-						"product_innovation_share": 34
-					},
-					{
-						"id": "software",
-						"process_innovation_share": 65,
-						"product_innovation_share": 53
-					},
-					{
-						"id": "finanz",
-						"process_innovation_share": 43,
-						"product_innovation_share": 35
-					},
-					{
-						"id": "unternehmensberatung",
-						"process_innovation_share": 73,
-						"product_innovation_share": 27
-					},
-					{
-						"id": "architektur",
-						"process_innovation_share": 56,
-						"product_innovation_share": 34
-					},
-					{
-						"id": "forschung",
-						"process_innovation_share": 56,
-						"product_innovation_share": 41
-					},
-					{
-						"id": "kreativ",
-						"process_innovation_share": 57,
-						"product_innovation_share": 33
+						"year": 2024,
+						"ber": 68,
+						"de": 60
 					}
 				]
 			}
 		},
 		{
-			"id": "positive_effects_within_the_company",
-			"title": "Positive Effekte im Unternehmen",
-			"chart_type": "bar_chart_filter_keys",
-			"chart_unit": "%",
-			"max_value": 15,
-			"bar_chart_unit_breakpoint": 3,
-			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 „bedeutende“ Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
+			"id": "sektoren",
+			"title": "Wo ist Innovation gewachsen?",
+			"chart_type": "area_chart_sektoren",
+			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"data": {
 				"ber": [
 					{
-						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 5,
-						"dienstleistungen": 6
+						"year": 2018,
+						"dienstleistungen": 1447,
+						"industrie": 3206
 					},
 					{
-						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 6,
-						"dienstleistungen": 6
+						"year": 2019,
+						"dienstleistungen": 1408,
+						"industrie": 3187
 					},
 					{
-						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 6,
-						"industrie": 5,
-						"dienstleistungen": 6
+						"year": 2020,
+						"dienstleistungen": 1763,
+						"industrie": 3298
 					},
 					{
-						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
-						"insgesamt": 2,
-						"industrie": 8,
-						"dienstleistungen": 1
+						"year": 2021,
+						"dienstleistungen": 1916,
+						"industrie": 3457
 					},
 					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 5,
-						"industrie": 7,
-						"dienstleistungen": 5
+						"year": 2022,
+						"dienstleistungen": 2080,
+						"industrie": 3529
 					},
 					{
-						"id": "replace_hazardous_materials",
-						"insgesamt": 2,
-						"industrie": 4,
-						"dienstleistungen": 1
+						"year": 2023,
+						"dienstleistungen": 2277,
+						"industrie": 3910
 					},
 					{
-						"id": "recycling_for_internal_or_sales_use",
-						"insgesamt": 4,
-						"industrie": 9,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "protection_of_biodiversity",
-						"insgesamt": 2,
-						"industrie": 1,
-						"dienstleistungen": 2
+						"year": 2024,
+						"dienstleistungen": 2168,
+						"industrie": 3966
 					}
 				],
 				"de": [
 					{
-						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 9,
-						"industrie": 14,
-						"dienstleistungen": 5
+						"year": 2018,
+						"dienstleistungen": 29764,
+						"industrie": 131693
 					},
 					{
-						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 8,
-						"dienstleistungen": 5
+						"year": 2019,
+						"dienstleistungen": 32891,
+						"industrie": 132986
 					},
 					{
-						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 7,
-						"industrie": 11,
-						"dienstleistungen": 4
+						"year": 2020,
+						"dienstleistungen": 34099,
+						"industrie": 126636
 					},
 					{
-						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
-						"insgesamt": 4,
-						"industrie": 6,
-						"dienstleistungen": 3
+						"year": 2021,
+						"dienstleistungen": 36426,
+						"industrie": 130359
 					},
 					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 7,
-						"industrie": 13,
-						"dienstleistungen": 4
+						"year": 2022,
+						"dienstleistungen": 40001,
+						"industrie": 137405
 					},
 					{
-						"id": "replace_hazardous_materials",
-						"insgesamt": 3,
-						"industrie": 6,
-						"dienstleistungen": 2
+						"year": 2023,
+						"dienstleistungen": 44152,
+						"industrie": 144860
 					},
 					{
-						"id": "recycling_for_internal_or_sales_use",
-						"insgesamt": 6,
-						"industrie": 10,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "protection_of_biodiversity",
-						"insgesamt": 2,
-						"industrie": 5,
-						"dienstleistungen": 1
+						"year": 2024,
+						"dienstleistungen": 48909,
+						"industrie": 149900
 					}
 				]
 			}

@@ -1,28 +1,28 @@
 import React, { useEffect, useRef } from "react";
-import { isInRange } from "../utilities";
-import { useGlobalContext } from "../GlobalContext";
-import data from "../data/data.json";
-import { StickyItem } from "../types/global";
+import { useGlobalContext } from "@/GlobalContext";
+import data from "@/data/chapters.json";
+import { ChapterItem, ChapterKeys } from "@/types/global";
+import { isInRange } from "@/utilities";
 
 type CardProps = {
-	dataKey: string;
-	item: StickyItem;
+	chapterKey: ChapterKeys;
+	chapterItem: ChapterItem;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
-	dataKey,
-	item,
+	chapterKey,
+	chapterItem,
 	onSetCurrent,
 	isNotCurrent,
 }) => {
 	const { isMobile } = useGlobalContext();
-	const { id, title, text } = item;
+	const { id, title, text } = chapterItem;
 	const cardRef = useRef<HTMLDivElement>(null);
 
 	// displayNumber
-	const displayNumber = `${Object.keys(data).indexOf(dataKey) + 1}.${data[dataKey as keyof typeof data].findIndex((indexItem) => indexItem.id === id) + 1}`;
+	const displayNumber = `${Object.keys(data).indexOf(chapterKey) + 1}.${data[chapterKey as keyof typeof data].findIndex((indexItem) => indexItem.id === id) + 1}`;
 	const showDisplayNumber =
 		typeof window !== "undefined" &&
 		window.location.toString().includes("localhost") &&

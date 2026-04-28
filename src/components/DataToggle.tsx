@@ -1,12 +1,13 @@
-import React from "react";
-import wordings from "../data/wordings.json";
-import { cn } from "../utilities";
-import { useGlobalContext } from "../GlobalContext";
+import React, { CSSProperties } from "react";
+import wordings from "@/data/wordings.json";
+import { cn } from "@/utilities";
+import { useGlobalContext } from "@/GlobalContext";
+import { DataKeys } from "@/types/global";
 
 type DataToggleProps = {
-	data: string;
-	setData: (value: string) => void;
-	allDatas: string[];
+	data: DataKeys;
+	setData: (value: DataKeys) => void;
+	allDatas: DataKeys[];
 	togglesBetween?: boolean;
 };
 
@@ -17,7 +18,7 @@ const DataToggle: React.FC<DataToggleProps> = ({
 	togglesBetween,
 }) => {
 	const { animationDuration } = useGlobalContext();
-	const SingleToggleButton = ({ item }: { item: string }) => {
+	const SingleToggleButton = ({ item }: { item: DataKeys }) => {
 		return (
 			<div
 				onClick={() => setData(item)}
@@ -76,9 +77,7 @@ const DataToggle: React.FC<DataToggleProps> = ({
 					// rest
 					"bg-foreground",
 				)}
-				style={
-					{ "--duration": `${animationDuration}ms` } as React.CSSProperties
-				}
+				style={{ "--duration": `${animationDuration}ms` } as CSSProperties}
 			/>
 		</div>
 	);

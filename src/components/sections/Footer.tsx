@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Icon from "../components/Icons";
-import methodic from "../data/methodic.json";
+import Icon from "@/components/Icons";
+import methodic from "@/data/methodic.json";
 
 const Footer: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
 						<Icon id="SenWEB_logo" className="w-66 lg:w-88" />
 						<p className="mb-4 mt-10">Ein Projekt der</p>
 						<div className="lg:mb-10">
-							<Icon id="tsb_logo" className="text-foreground w-40 lg:w-52" />
+							<Icon id="tsb_logo" className="fill-foreground w-40 lg:w-52" />
 						</div>
 					</div>
 					<div className="basis-1/2 lg:flex lg:flex-col lg:items-end">
