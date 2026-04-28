@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 
-import React, { useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 import { ChapterItem, Region } from "@/types/global";
 import {
 	BarChart as RechartsBarChart,
@@ -40,7 +40,8 @@ const BarChart: React.FC<ChapterItem> = ({
 	//
 	//
 	// global context
-	const { region, setRegion, isMobile } = useGlobalContext();
+	const { region, setRegion, isMobile, windowMeasuresOnStart } =
+		useGlobalContext();
 
 	//
 	//
@@ -138,8 +139,13 @@ const BarChart: React.FC<ChapterItem> = ({
 						? Object.keys(collectData).length <= 5
 							? "h-[30vh]"
 							: "h-[45vh]"
-						: "h-[60vh]",
+						: "h-[calc(var(--window-height-on-start)-var(--header-height))] lg:h-[60vh]",
 				)}
+				style={
+					{
+						"--window-height-on-start": `${(windowMeasuresOnStart?.h ?? 0) * 0.95}px`,
+					} as CSSProperties
+				}
 			>
 				<ResponsiveContainer width="100%" height="100%">
 					<RechartsBarChart
