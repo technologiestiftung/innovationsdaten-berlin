@@ -179,7 +179,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 					onClick={() => setIsOpen(!isOpen)}
 					className="px-4 py-2 flex items-center gap-4 min-w-[210px] justify-between cursor-pointer w-full border-2 border-foreground"
 				>
-					<p className="font-bold select-none text-left">{setName()}</p>
+					<p className="font-bold select-none text-left line-clamp-1">
+						{setName()}
+					</p>
 					<div className={cn(!isOpen && "rotate-180")}>
 						<Icon id="chevron" className="size-4 fill-foreground" />
 					</div>

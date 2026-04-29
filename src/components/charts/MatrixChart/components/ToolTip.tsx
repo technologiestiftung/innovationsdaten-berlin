@@ -4,6 +4,7 @@ import branchen from "@/data/branchen.json";
 import wordings from "@/data/wordings.json";
 import Icon from "@/components/Icons";
 import { cn } from "@/utilities";
+import { BranchenItem } from "@/types/global";
 
 type TooltipProps = {
 	x: string;
@@ -35,7 +36,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 			className={cn(
 				"fixed top-[35vh] left-[calc((100vw-300px)/2+15px)] bg-foreground",
 				"lg:absolute lg:left-[50%]",
-				"p-4 z-[50] w-[300px] height-auto select-none",
+				"p-4 w-[300px] height-auto select-none z-50",
 				getToolTipPosition(y),
 			)}
 			onClick={() => {
@@ -47,7 +48,8 @@ const Tooltip: React.FC<TooltipProps> = ({
 			<div className="flex flex-col items-center">
 				<p className="mb-4 font-bold text-background">
 					{branchen.find(
-						(findBranche: any) => findBranche.id === getCorrectBranchenID,
+						(findBranche: BranchenItem) =>
+							findBranche.id === getCorrectBranchenID,
 					)?.name || y.toUpperCase()}{" "}
 				</p>
 				<Icon id="sort" className="size-6 fill-background" />

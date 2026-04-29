@@ -3,10 +3,11 @@ import { Bar, LabelList } from "recharts";
 import DeltaBarStroke from "./DeltaBarStroke";
 import { useGlobalContext } from "@/GlobalContext";
 import ValueLabel from "./ValueLabel";
+import { ChartData } from "@/types/global";
 
 type DeltaBarProps = {
 	chart_type: string;
-	collectData: any[];
+	collectData: ChartData[];
 	chart_unit?: string;
 	id: string;
 };

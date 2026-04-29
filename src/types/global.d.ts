@@ -26,6 +26,7 @@ export type ChapterItem = {
 	title: string;
 	text: string;
 	chart_type: ChartTypes;
+	bigTitleCard?: boolean;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
 	hide_toggle?: boolean;
@@ -86,6 +87,16 @@ export type BarChartStackedDataType = {
 		id: Branchen;
 		[key: DataKeys]: number;
 	}[];
+};
+
+export type BarChartItem = {
+	id: string;
+	name: string;
+	value: number;
+	delta?: number;
+	positiveDelta?: boolean;
+	isSmall?: boolean;
+	color?: string;
 };
 
 export type MatrixChartDataType = {

@@ -40,7 +40,7 @@ const AreaChartWrapper: React.FC<AreaChartWrapperProps> = ({
 					: numberOfOptionsShown === 1
 						? "h-[calc(var(--window-height-on-start)-var(--header-height)-44px-0.5rem)]"
 						: "h-[calc(var(--window-height-on-start)-var(--header-height)-88px-1rem)]",
-				"lg:h-[50vh]",
+				"lg:h-[60vh]",
 			)}
 			style={
 				{

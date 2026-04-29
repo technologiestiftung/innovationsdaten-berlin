@@ -3,7 +3,6 @@ import React from "react";
 import { ChapterKeys, DataObj, ChapterItem } from "@/types/global";
 import Card from "@/components/Card";
 import Welcome from "./Welcome";
-import { cn } from "@/utilities";
 import Chart from "@/components/Chart";
 
 type MobileProps = {
@@ -20,10 +19,7 @@ const Mobile: React.FC<MobileProps> = ({ chapterKey }) => {
 			{items.map((item: ChapterItem, index: number) => (
 				<div
 					key={index}
-					className={cn(
-						"pt-[calc(var(--header-height)+50px)] flex flex-col",
-						item.chart_type !== "matrix" && "gap-[10vh]",
-					)}
+					className="pt-[calc(var(--header-height)+50px)] flex flex-col"
 				>
 					<Card key={item.id} chapterKey={chapterKey} chapterItem={item} />
 					<Chart chapter={items[index] as ChapterItem} />

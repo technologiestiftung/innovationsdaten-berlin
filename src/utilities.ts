@@ -25,7 +25,7 @@ function formatNumber(value: number): string {
 	return new Intl.NumberFormat("de-DE").format(value);
 }
 
-function sumNumericValues(obj: any) {
+function sumNumericValues(obj: any): number {
 	let total = 0;
 
 	for (const key in obj) {

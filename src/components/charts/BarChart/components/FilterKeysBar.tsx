@@ -5,15 +5,16 @@ import ValueLabel from "./ValueLabel";
 import colors from "@/data/colors.json";
 import MobileFilterKeysValueLabel from "./MobileFilterKeysValueLabel";
 import FilledBar from "./FilledBar";
+import { ChartData } from "@/types/global";
 
 type FilterKeysBarProps = {
 	chart_type: string;
 	activeFilter?: string | null;
 	has_tooltip?: boolean;
-	collectData?: any[];
+	collectData?: ChartData[];
 	chart_unit?: string;
 	id?: string;
-	data?: any[];
+	data?: ChartData[];
 };
 
 const FilterKeysBar: React.FC<FilterKeysBarProps> = ({

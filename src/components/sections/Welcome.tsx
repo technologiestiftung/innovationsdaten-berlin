@@ -18,7 +18,7 @@ const Welcome = () => (
 			<Overview />
 		</div>
 		<p
-			className="max-w-[80ch] serif max-lg:hidden"
+			className="max-w-[80ch] serif max-lg:hidden mr-8"
 			dangerouslySetInnerHTML={{ __html: wordings.welcome_text }}
 		/>
 	</section>

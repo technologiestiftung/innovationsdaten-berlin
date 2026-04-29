@@ -64,7 +64,7 @@ export function useBarChartData({
 			};
 		}
 
-		let result: any[] = [];
+		let result = [];
 
 		if (!chart_type.includes("filter_keys")) {
 			result = branchen.map((branche: BranchenItem) => {

@@ -1,6 +1,4 @@
-/* eslint-disable no-nested-ternary */
-
-import React, { CSSProperties, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChapterItem, Region } from "@/types/global";
 import {
 	BarChart as RechartsBarChart,
@@ -25,6 +23,7 @@ import FilterKeysBar from "./components/FilterKeysBar";
 import CustomLineHeightYAxisTick from "./components/CustomLineHeightYAxisTick";
 import CustomMobileTick from "./components/CustomMobileTick";
 import { useBarChartData } from "./useBarChartData";
+import BarChartWrapper from "./components/BarChartWrapper";
 
 const BarChart: React.FC<ChapterItem> = ({
 	id,
@@ -40,8 +39,7 @@ const BarChart: React.FC<ChapterItem> = ({
 	//
 	//
 	// global context
-	const { region, setRegion, isMobile, windowMeasuresOnStart } =
-		useGlobalContext();
+	const { region, setRegion, isMobile } = useGlobalContext();
 
 	//
 	//
@@ -74,7 +72,7 @@ const BarChart: React.FC<ChapterItem> = ({
 	//
 	// consts
 	const dataIsBasedOnBranchen = collectData.some(
-		(findData: any) => findData.id === "holz",
+		(findData) => findData.id === "holz",
 	);
 
 	//
@@ -131,21 +129,10 @@ const BarChart: React.FC<ChapterItem> = ({
 
 	return (
 		<>
-			<div
+			<BarChartWrapper
 				id={id}
-				className={cn(
-					"hide-first-x-axis-tick move-recharts-label",
-					chart_type === "bar_chart_filter_keys"
-						? Object.keys(collectData).length <= 5
-							? "h-[30vh]"
-							: "h-[45vh]"
-						: "h-[calc(var(--window-height-on-start)-var(--header-height))] lg:h-[60vh]",
-				)}
-				style={
-					{
-						"--window-height-on-start": `${(windowMeasuresOnStart?.h ?? 0) * 0.95}px`,
-					} as CSSProperties
-				}
+				chart_type={chart_type}
+				collectData={collectData}
 			>
 				<ResponsiveContainer width="100%" height="100%">
 					<RechartsBarChart
@@ -267,8 +254,14 @@ const BarChart: React.FC<ChapterItem> = ({
 						/>
 					</RechartsBarChart>
 				</ResponsiveContainer>
-			</div>
-			<div className="flex max-xl:flex-col max-xl:items-end max-xl:gap-2 xl:items-center xl:gap-8 xl:justify-end mt-2 md:mt-6 xl:mt-8">
+			</BarChartWrapper>
+			<div
+				className={cn(
+					"flex max-xl:flex-col max-xl:items-end max-xl:gap-2 xl:items-center xl:gap-8 xl:justify-end mt-2 md:mt-6",
+					!chart_type.includes("stacked") && "max-md:mt-8 xl:mt-8",
+					/* mt-2 md:mt-6 xl:mt-8" */
+				)}
+			>
 				{hasRegionToggle && (
 					<DataToggle
 						data={region}

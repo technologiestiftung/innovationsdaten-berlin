@@ -25,8 +25,8 @@ const Desktop: React.FC<DesktopProps> = ({ chapterKey }) => {
 	return (
 		<div id={chapterKey}>
 			{chapterKey === "einleitung" && <Welcome />}
-			<section className="relative w-[80vw] mx-auto flex gap-6">
-				<div className="flex-[3] h-screen sticky top-0 flex items-center">
+			<section className="relative w-[90vw] mx-auto flex gap-6">
+				<div className="flex-[3] h-[calc(100vh-var(--header-height))] sticky top-[var(--header-height)] flex items-center">
 					<div className="w-full">
 						{activeChapterItem && (
 							<Chart chapter={activeChapterItem as ChapterItem} />
@@ -39,6 +39,7 @@ const Desktop: React.FC<DesktopProps> = ({ chapterKey }) => {
 							key={chapterItem.id}
 							chapterKey={chapterKey}
 							chapterItem={chapterItem}
+							bigTitleCard={chapterItem.bigTitleCard}
 							onSetCurrent={() =>
 								setActiveChapterItem(chapterItem as ChapterItem)
 							}

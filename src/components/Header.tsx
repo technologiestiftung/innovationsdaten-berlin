@@ -38,7 +38,7 @@ const Header = () => {
 					// position
 					"fixed top-0 left-0",
 					// layout
-					"flex justify-between items-center px-3 lg:px-[10vw]",
+					"flex justify-between items-center px-3 lg:px-[5vw]",
 					// borders
 					"border-b-[2px] border-foreground",
 					// rest
@@ -85,9 +85,9 @@ const Header = () => {
 						// measures
 						"max-lg:h-[calc(100vh-var(--header-height))] max-lg:w-full",
 						// position
-						"fixed left-auto top-[calc(var(--header-height)-2px)] lg:right-[10vw]",
+						"fixed left-auto top-[calc(var(--header-height)-2px)] lg:right-[5vw]",
 						// layout
-						"py-6 px-12",
+						"py-4 px-8",
 						// borders
 						"lg:border-r-[2px] lg:border-l-[2px] lg:border-b-[2px] border-foreground",
 						// rest
@@ -101,14 +101,14 @@ const Header = () => {
 								href={`#${singleChapter.link}`}
 								onClick={() => handleChapterClick(singleChapter as Chapter)}
 							>
-								<h4
+								<h5
 									className={cn(
 										"select-none",
 										chapter === singleChapter.title && "underline",
 									)}
 								>
 									{singleChapter.title}
-								</h4>
+								</h5>
 							</a>
 						</li>
 					))}

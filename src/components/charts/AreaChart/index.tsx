@@ -114,7 +114,7 @@ const AreaChart: React.FC<ChapterItem> = ({
 				</ResponsiveContainer>
 			</AreaChartWrapper>
 			{!hide_toggle && (
-				<div className="flex max-xl:flex-col max-xl:items-end max-xl:gap-2 mt-2 md:mt-6 xl:mt-8 xl:items-center xl:gap-8 xl:justify-end">
+				<div className="flex max-xl:flex-col max-xl:items-end max-xl:gap-2 mt-2 md:mt-4 xl:items-center xl:gap-8 xl:justify-end">
 					{!chart_type?.includes("toggle") && (
 						<DataToggle
 							data={region}

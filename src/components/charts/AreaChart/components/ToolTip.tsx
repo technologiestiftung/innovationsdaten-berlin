@@ -13,7 +13,7 @@ type ToolTipProps = {
 };
 
 const ToolTip: React.FC<ToolTipProps> = ({ chart_type, activeFilters }) => {
-	const findTitle = (dataKey: any) => {
+	const findTitle = (dataKey: string) => {
 		if (dataKey === "dienstleistungen") {
 			return "Dienstleistungen";
 		}
@@ -23,7 +23,7 @@ const ToolTip: React.FC<ToolTipProps> = ({ chart_type, activeFilters }) => {
 		const branche = branchen.find((findBranche) => findBranche.id === dataKey);
 		return branche?.name || dataKey.toUpperCase();
 	};
-	const getBGColor = (dataKey: any) => {
+	const getBGColor = (dataKey: string) => {
 		if (sektoren.some((someSektor) => someSektor.id === dataKey)) {
 			const getSektor = sektoren.find(
 				(findSektor) => findSektor.id === dataKey,

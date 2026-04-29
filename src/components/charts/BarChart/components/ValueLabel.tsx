@@ -4,9 +4,10 @@ import React from "react";
 import { LabelProps } from "recharts";
 import colors from "@/data/colors.json";
 import { formatNumber } from "@/utilities";
+import { BarChartItem, ChartData } from "@/types/global";
 
 type ValueLabelProps = Partial<LabelProps> & {
-	collectData: any[];
+	collectData: ChartData[];
 	chart_type: string;
 	chart_unit: string | undefined;
 	id: string;
@@ -36,18 +37,16 @@ const ValueLabel: React.FC<ValueLabelProps> = ({
 	) {
 		return null;
 	}
-	const isSmall =
-		"isSmall" in collectData[index] ? collectData[index].isSmall : false;
-	const delta = "delta" in collectData[index] ? collectData[index].delta : 0;
+	const isSmall = (collectData[index] as BarChartItem).isSmall ?? false;
+	const delta = (collectData[index] as BarChartItem).delta ?? 0;
 	const positiveDelta =
-		"positiveDelta" in collectData[index]
-			? collectData[index].positiveDelta
-			: false;
+		(collectData[index] as BarChartItem).positiveDelta ?? false;
 	const getValue = chart_type.includes("delta")
-		? collectData[index].value
+		? (collectData[index] as BarChartItem).value
 		: value;
 
-	const numericValue = typeof value === "number" ? value : Number(value ?? 0);
+	const numericValue =
+		typeof getValue === "number" ? getValue : Number(getValue ?? 0);
 
 	const toNumber = (v: string | number | undefined) =>
 		typeof v === "number" ? v : Number(v ?? 0);
@@ -85,6 +84,7 @@ const ValueLabel: React.FC<ValueLabelProps> = ({
 		}
 		return isSmall ? numX + paddingLabel : numX - paddingLabel - deltaWidth;
 	};
+
 	return (
 		<text
 			x={setX()}
@@ -96,7 +96,7 @@ const ValueLabel: React.FC<ValueLabelProps> = ({
 		>
 			{chart_type.includes("delta") && (
 				<>
-					<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
+					<tspan fill={getFill()}>{formatNumber(numericValue)}</tspan>
 					<tspan fill={positiveDelta ? colors.green : colors.red} dx={6}>
 						{positiveDelta ? "+" : "-"}
 						{formatNumber(delta)}
@@ -105,7 +105,7 @@ const ValueLabel: React.FC<ValueLabelProps> = ({
 			)}
 			{chart_unit === "€" && !chart_type.includes("delta") && (
 				<>
-					<tspan fill={getFill()}>{formatNumber(getValue)}</tspan>
+					<tspan fill={getFill()}>{formatNumber(numericValue)}</tspan>
 				</>
 			)}
 			{chart_unit === "%" && (

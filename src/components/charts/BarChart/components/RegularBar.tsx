@@ -4,11 +4,12 @@ import FilledBar from "./FilledBar";
 import BorderedBar from "./BorderedBar";
 import { useGlobalContext } from "@/GlobalContext";
 import ValueLabel from "./ValueLabel";
+import { ChartData } from "@/types/global";
 
 type RegularBarProps = {
 	chart_type: string;
 	has_tooltip?: boolean;
-	collectData: any[];
+	collectData: ChartData[];
 	chart_unit?: string;
 	id: string;
 };

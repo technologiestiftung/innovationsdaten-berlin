@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "@/GlobalContext";
 import data from "@/data/chapters.json";
 import { ChapterItem, ChapterKeys } from "@/types/global";
-import { isInRange } from "@/utilities";
+import { cn, isInRange } from "@/utilities";
 
 type CardProps = {
 	chapterKey: ChapterKeys;
 	chapterItem: ChapterItem;
+	bigTitleCard?: boolean;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
 };
@@ -14,6 +15,7 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({
 	chapterKey,
 	chapterItem,
+	bigTitleCard,
 	onSetCurrent,
 	isNotCurrent,
 }) => {
@@ -53,10 +55,15 @@ const Card: React.FC<CardProps> = ({
 	}, []);
 
 	return (
-		<div className="flex items-center lg:h-screen">
+		<div
+			className={cn(
+				"flex items-center lg:min-h-screen",
+				bigTitleCard && "lg:py-[calc(var(--header-height)+2rem)]",
+			)}
+		>
 			<div
 				ref={cardRef}
-				className="w-fit lg:p-6 lg:border-[2px] border-foreground"
+				className="w-fit max-lg:mb-[10vh] lg:p-6 lg:border-[2px] border-foreground"
 			>
 				{showDisplayNumber && <h4>{displayNumber}</h4>}
 				<h2 dangerouslySetInnerHTML={{ __html: title }} />
