@@ -14,7 +14,6 @@ type UseBarChartDataArgs = {
 	id?: string;
 	sortBy: string | null;
 	activeFilter: string | null;
-	bar_chart_unit_breakpoint?: number | Partial<Record<Region, number>>;
 	max_value?: number | Partial<Record<Region, number>>;
 	sortsAfter?: string[];
 	sortsAfterOnStart?: string;
@@ -27,7 +26,6 @@ export function useBarChartData({
 	id,
 	sortBy,
 	activeFilter,
-	bar_chart_unit_breakpoint,
 	max_value,
 	sortsAfter,
 	sortsAfterOnStart,
@@ -44,15 +42,12 @@ export function useBarChartData({
 			? (chartData as Partial<Record<Region, ChapterItem["chartData"]>>)[region]
 			: chartData;
 
-		const selectedBreakpoint =
-			bar_chart_unit_breakpoint && typeof bar_chart_unit_breakpoint !== "number"
-				? bar_chart_unit_breakpoint[region]
-				: bar_chart_unit_breakpoint;
-
 		const selectedMaxValue =
 			max_value && typeof max_value !== "number"
 				? max_value[region]
 				: max_value;
+
+		const getBreakPoint = Math.floor((selectedMaxValue ?? 0) / 2);
 
 		if (!selectedChartData || !chart_type) {
 			return {
@@ -60,7 +55,6 @@ export function useBarChartData({
 				objectKeys: [],
 				hasRegionToggle,
 				selectedMaxValue,
-				selectedBreakpoint,
 			};
 		}
 
@@ -119,8 +113,6 @@ export function useBarChartData({
 							? rawValue.value
 							: 0;
 
-				const getBreakPoint = selectedBreakpoint || 0;
-
 				return {
 					id: branche.id,
 					name: branche.name,
@@ -134,7 +126,6 @@ export function useBarChartData({
 		} else if (Array.isArray(selectedChartData)) {
 			result = selectedChartData.map((item) => {
 				const getID = item.id;
-				const getBreakPoint = selectedBreakpoint || 0;
 				const getValue = item[activeFilter || "insgesamt"];
 
 				let getName = wordings[getID as keyof typeof wordings];
@@ -212,7 +203,6 @@ export function useBarChartData({
 			objectKeys,
 			hasRegionToggle,
 			selectedMaxValue,
-			selectedBreakpoint,
 		};
 	}, [
 		chartData,
@@ -220,7 +210,6 @@ export function useBarChartData({
 		id,
 		sortBy,
 		activeFilter,
-		bar_chart_unit_breakpoint,
 		max_value,
 		sortsAfter,
 		sortsAfterOnStart,

@@ -812,10 +812,6 @@
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
 			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
 			"max_value": {
 				"ber": 1700,
 				"de": 85000
@@ -953,10 +949,6 @@
 			"text": "TBD...",
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
 			"max_value": {
 				"ber": 1000,
 				"de": 55000
@@ -1094,10 +1086,6 @@
 			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
 			"max_value": {
 				"ber": 1700,
 				"de": 85000
@@ -1145,10 +1133,6 @@
 			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
-			"bar_chart_unit_breakpoint": {
-				"ber": 500,
-				"de": 25000
-			},
 			"max_value": {
 				"ber": 1000,
 				"de": 55000
@@ -1410,7 +1394,6 @@
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 100,
-			"bar_chart_unit_breakpoint": 21,
 			"sortsAfterOnStart": "process_innovation_share",
 			"chartData": {
 				"ber": [
@@ -2048,7 +2031,6 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 15,
-			"bar_chart_unit_breakpoint": 3,
 			"chartData": {
 				"ber": [
 					{
@@ -2159,7 +2141,6 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
-			"bar_chart_unit_breakpoint": 11,
 			"chartData": {
 				"ber": [
 					{
@@ -4569,7 +4550,6 @@
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 55,
-			"bar_chart_unit_breakpoint": 11,
 			"chartData": {
 				"ber": [
 					{
@@ -4868,7 +4848,6 @@
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 70,
-			"bar_chart_unit_breakpoint": 11,
 			"chartData": {
 				"ber": [
 					{
@@ -5092,7 +5071,6 @@
 			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 21,
 			"max_value": 80,
 			"chartData": {
 				"ber": {
@@ -5137,7 +5115,6 @@
 			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 11,
 			"max_value": 40,
 			"chartData": {
 				"ber": {
@@ -5200,7 +5177,6 @@
 			"text": "TBD...",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 25,
 			"max_value": 40,
 			"chartData": {
 				"ber": [
@@ -5275,7 +5251,6 @@
 			"text": "TBD...",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 16,
 			"max_value": 45,
 			"chartData": {
 				"ber": [
@@ -5326,7 +5301,6 @@
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 26,
 			"max_value": 60,
 			"chartData": {
 				"ber": [
@@ -5453,7 +5427,6 @@
 			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 16,
 			"max_value": 70,
 			"chartData": {
 				"ber": [
@@ -5581,7 +5554,6 @@
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 70,
-			"bar_chart_unit_breakpoint": 16,
 			"chartData": {
 				"ber": [
 					{
@@ -5691,7 +5663,6 @@
 			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
-			"bar_chart_unit_breakpoint": 11,
 			"max_value": 80,
 			"chartData": {
 				"ber": {

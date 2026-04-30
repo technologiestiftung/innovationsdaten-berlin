@@ -19,8 +19,6 @@ export type RegionKey = {
 	[key: Region]: number;
 };
 
-export type NumberOrRegion = number | RegionKey;
-
 export type ChapterItem = {
 	id: string;
 	title: string;
@@ -30,9 +28,8 @@ export type ChapterItem = {
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
 	hide_toggle?: boolean;
-	max_value?: NumberOrRegion;
+	max_value?: number | RegionKey;
 	bigFacts?: BigFactType[];
-	bar_chart_unit_breakpoint?: NumberOrRegion;
 	sortsAfter?: DataKeys[];
 	sortsAfterOnStart?: DataKeys;
 	togglesBetween?: DataKeys[];

@@ -32,7 +32,6 @@ const BarChart: React.FC<ChapterItem> = ({
 	chart_unit,
 	has_tooltip,
 	max_value,
-	bar_chart_unit_breakpoint,
 	sortsAfter,
 	sortsAfterOnStart,
 }) => {
@@ -61,7 +60,6 @@ const BarChart: React.FC<ChapterItem> = ({
 			id,
 			sortBy,
 			activeFilter,
-			bar_chart_unit_breakpoint,
 			max_value,
 			sortsAfter,
 			sortsAfterOnStart,
