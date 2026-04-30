@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 /* eslint-disable no-nested-ternary */
 
 import { useMemo } from "react";

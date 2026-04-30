@@ -127,7 +127,11 @@ const BarChart: React.FC<ChapterItem> = ({
 
 	return (
 		<>
-			<BarChartWrapper id={id} collectData={collectData}>
+			<BarChartWrapper
+				id={id}
+				chart_type={chart_type}
+				collectData={collectData}
+			>
 				<ResponsiveContainer width="100%" height="100%">
 					<RechartsBarChart
 						layout="vertical"

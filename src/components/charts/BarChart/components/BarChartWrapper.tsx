@@ -1,34 +1,31 @@
-/* eslint-disable no-nested-ternary */
-
-import { useGlobalContext } from "@/GlobalContext";
 import { ChartData } from "@/types/global";
 import { cn } from "@/utilities";
 import React, { CSSProperties } from "react";
 
 type BarChartWrapperProps = {
 	id: string;
+	chart_type: string;
 	collectData: ChartData;
 	children: React.ReactNode;
 };
 
 const BarChartWrapper: React.FC<BarChartWrapperProps> = ({
 	id,
+	chart_type,
 	collectData,
 	children,
 }: BarChartWrapperProps) => {
-	const { windowMeasuresOnStart } = useGlobalContext();
+	const heightOfSingleBar = chart_type.includes("filter_keys") ? 120 : 60;
 	return (
 		<div
 			id={id}
 			className={cn(
-				"hide-first-x-axis-tick move-recharts-label",
-				Object.keys(collectData).length <= 5
-					? "h-[calc(var(--bar-chart-wrapper-height) * 0.5)] lg:h-[40vh]"
-					: "h-[var(--bar-chart-wrapper-height)] lg:h-[70vh]",
+				"hide-first-x-axis-tick move-recharts-label h-[var(--bar-chart-wrapper-height)]",
+				Object.keys(collectData).length <= 5 ? "lg:h-[40vh]" : "lg:h-[70vh]",
 			)}
 			style={
 				{
-					"--bar-chart-wrapper-height": `${(windowMeasuresOnStart?.h ?? 0) * 1.3}px`,
+					"--bar-chart-wrapper-height": `${heightOfSingleBar * Object.keys(collectData).length}px`,
 				} as CSSProperties
 			}
 		>
