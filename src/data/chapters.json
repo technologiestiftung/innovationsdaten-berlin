@@ -5251,7 +5251,7 @@
 			"text": "TBD...",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 45,
+			"max_value": 40,
 			"chartData": {
 				"ber": [
 					{

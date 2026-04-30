@@ -127,11 +127,7 @@ const BarChart: React.FC<ChapterItem> = ({
 
 	return (
 		<>
-			<BarChartWrapper
-				id={id}
-				chart_type={chart_type}
-				collectData={collectData}
-			>
+			<BarChartWrapper id={id} collectData={collectData}>
 				<ResponsiveContainer width="100%" height="100%">
 					<RechartsBarChart
 						layout="vertical"
@@ -257,7 +253,6 @@ const BarChart: React.FC<ChapterItem> = ({
 				className={cn(
 					"flex max-xl:flex-col max-xl:items-end max-xl:gap-2 xl:items-center xl:gap-8 xl:justify-end mt-2 md:mt-6",
 					!chart_type.includes("stacked") && "max-md:mt-8 xl:mt-8",
-					/* mt-2 md:mt-6 xl:mt-8" */
 				)}
 			>
 				{hasRegionToggle && (

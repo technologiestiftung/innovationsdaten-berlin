@@ -47,7 +47,7 @@ export function useBarChartData({
 				? max_value[region]
 				: max_value;
 
-		const getBreakPoint = Math.floor((selectedMaxValue ?? 0) / 2);
+		const getBreakPoint = Math.floor((selectedMaxValue ?? 0) * 0.6666666);
 
 		if (!selectedChartData || !chart_type) {
 			return {

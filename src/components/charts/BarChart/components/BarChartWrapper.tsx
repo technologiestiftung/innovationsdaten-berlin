@@ -7,14 +7,12 @@ import React, { CSSProperties } from "react";
 
 type BarChartWrapperProps = {
 	id: string;
-	chart_type: string;
 	collectData: ChartData;
 	children: React.ReactNode;
 };
 
 const BarChartWrapper: React.FC<BarChartWrapperProps> = ({
 	id,
-	chart_type,
 	collectData,
 	children,
 }: BarChartWrapperProps) => {
@@ -24,15 +22,13 @@ const BarChartWrapper: React.FC<BarChartWrapperProps> = ({
 			id={id}
 			className={cn(
 				"hide-first-x-axis-tick move-recharts-label",
-				chart_type === "bar_chart_filter_keys"
-					? Object.keys(collectData).length <= 5
-						? "h-[40vh]"
-						: "h-[calc(var(--window-height-on-start)-var(--header-height))] md:h-[70vh]"
-					: "h-[calc(var(--window-height-on-start)-var(--header-height))] lg:h-[70vh]",
+				Object.keys(collectData).length <= 5
+					? "h-[calc(var(--bar-chart-wrapper-height) * 0.5)] lg:h-[40vh]"
+					: "h-[var(--bar-chart-wrapper-height)] lg:h-[70vh]",
 			)}
 			style={
 				{
-					"--window-height-on-start": `${(windowMeasuresOnStart?.h ?? 0) * 0.95}px`,
+					"--bar-chart-wrapper-height": `${(windowMeasuresOnStart?.h ?? 0) * 1.3}px`,
 				} as CSSProperties
 			}
 		>
