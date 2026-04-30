@@ -5270,6 +5270,57 @@
 			}
 		},
 		{
+			"id": "generative_ai_deployment",
+			"title": "Generative KI Bereitstellung",
+			"text": "TBD...",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"bar_chart_unit_breakpoint": 16,
+			"max_value": 45,
+			"chartData": {
+				"ber": [
+					{
+						"id": "deployment_internal_generative_AI_solutions",
+						"insgesamt": 12,
+						"industrie": 7,
+						"dienstleistungen": 13
+					},
+					{
+						"id": "deployment_external_generative_AI_solutions",
+						"insgesamt": 36,
+						"industrie": 15,
+						"dienstleistungen": 42
+					},
+					{
+						"id": "deployment_responsible_use_by_employees",
+						"insgesamt": 30,
+						"industrie": 23,
+						"dienstleistungen": 31
+					}
+				],
+				"de": [
+					{
+						"id": "deployment_internal_generative_AI_solutions",
+						"insgesamt": 7,
+						"industrie": 5,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "deployment_external_generative_AI_solutions",
+						"insgesamt": 21,
+						"industrie": 12,
+						"dienstleistungen": 33
+					},
+					{
+						"id": "deployment_responsible_use_by_employees",
+						"insgesamt": 21,
+						"industrie": 15,
+						"dienstleistungen": 28
+					}
+				]
+			}
+		},
+		{
 			"id": "data_application",
 			"title": "Anwendungen von Daten",
 			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
