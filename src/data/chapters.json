@@ -5251,9 +5251,15 @@
 			"text": "TBD...",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
-			"max_value": 40,
+			"max_value": 60,
 			"chartData": {
 				"ber": [
+					{
+						"id": "insgesamt",
+						"insgesamt": 55,
+						"industrie": 38,
+						"dienstleistungen": 60
+					},
 					{
 						"id": "deployment_internal_generative_AI_solutions",
 						"insgesamt": 12,
@@ -5274,6 +5280,12 @@
 					}
 				],
 				"de": [
+					{
+						"id": "insgesamt",
+						"insgesamt": 40,
+						"industrie": 27,
+						"dienstleistungen": 56
+					},
 					{
 						"id": "deployment_internal_generative_AI_solutions",
 						"insgesamt": 7,
