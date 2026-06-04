@@ -1,0 +1,218 @@
+{
+	"who_innovates": [
+		{
+			"id": "berlin_is_ahead",
+			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
+			"chart_type": "area_chart_toggle",
+			"max_value": 6,
+			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
+			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
+			"data": {
+				"innovations_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 5.430635129931505,
+						"de": 4.43060657401294
+					},
+					{
+						"year": 2019,
+						"ber": 4.642867968757894,
+						"de": 4.432251169004676
+					},
+					{
+						"year": 2020,
+						"ber": 5.625020839585209,
+						"de": 4.538074067047084
+					},
+					{
+						"year": 2021,
+						"ber": 4.742775918846619,
+						"de": 4.021695962823456
+					},
+					{
+						"year": 2022,
+						"ber": 4.216627449801159,
+						"de": 3.449526999121898
+					},
+					{
+						"year": 2023,
+						"ber": 4.030566376985316,
+						"de": 3.5090233726962586
+					},
+					{
+						"year": 2024,
+						"ber": 3.9,
+						"de": 3.8
+					}
+				],
+				"fue_intensitaet": [
+					{
+						"year": 2018,
+						"ber": 2.811001295230983,
+						"de": 2.6238259809127397
+					},
+					{
+						"year": 2019,
+						"ber": 2.581616465762006,
+						"de": 2.7210955243820976
+					},
+					{
+						"year": 2020,
+						"ber": 2.921987707423338,
+						"de": 2.863576855240649
+					},
+					{
+						"year": 2021,
+						"ber": 2.6856895653632567,
+						"de": 2.5806033134714097
+					},
+					{
+						"year": 2022,
+						"ber": 2.5665120544876373,
+						"de": 2.188839465920837
+					},
+					{
+						"year": 2023,
+						"ber": 2.362835663378979,
+						"de": 2.2495867412636435
+					},
+					{
+						"year": 2024,
+						"ber": 2.3,
+						"de": 2.5
+					}
+				]
+			}
+		},
+		{
+			"id": "innovator_rate",
+			"title": "Innovatoren&shy;quote",
+			"chart_type": "area_chart_toggle",
+			"text": "TBD...",
+			"max_value": 80,
+			"togglesBetween": ["innovator_rate"],
+			"hide_toggle": true,
+			"data": {
+				"innovator_rate": [
+					{
+						"year": 2018,
+						"ber": 71,
+						"de": 66
+					},
+					{
+						"year": 2019,
+						"ber": 71,
+						"de": 62
+					},
+					{
+						"year": 2020,
+						"ber": 73,
+						"de": 64
+					},
+					{
+						"year": 2021,
+						"ber": 69,
+						"de": 62
+					},
+					{
+						"year": 2022,
+						"ber": 66,
+						"de": 59
+					},
+					{
+						"year": 2023,
+						"ber": 61,
+						"de": 57
+					},
+					{
+						"year": 2024,
+						"ber": 68,
+						"de": 60
+					}
+				]
+			}
+		},
+		{
+			"id": "sektoren",
+			"title": "Wo ist Innovation gewachsen?",
+			"chart_type": "area_chart_sektoren",
+			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
+			"data": {
+				"ber": [
+					{
+						"year": 2018,
+						"dienstleistungen": 1447,
+						"industrie": 3206
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 1408,
+						"industrie": 3187
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 1763,
+						"industrie": 3298
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 1916,
+						"industrie": 3457
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 2080,
+						"industrie": 3529
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 2277,
+						"industrie": 3910
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 2168,
+						"industrie": 3966
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"dienstleistungen": 29764,
+						"industrie": 131693
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 32891,
+						"industrie": 132986
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 34099,
+						"industrie": 126636
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 36426,
+						"industrie": 130359
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 40001,
+						"industrie": 137405
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 44152,
+						"industrie": 144860
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 48909,
+						"industrie": 149900
+					}
+				]
+			}
+		}
+	]
+}

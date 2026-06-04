@@ -1,18 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const hexToRgba = (hex: string, opacity: number) => {
-	// Remove # if present
-	const getHex = hex.replace(/^#/, "");
-
-	// Parse RGB values
-	const r = parseInt(getHex.substring(0, 2), 16);
-	const g = parseInt(getHex.substring(2, 4), 16);
-	const b = parseInt(getHex.substring(4, 6), 16);
-
-	return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-};
-
 const isInRange = (num: number) => {
 	const from = -50;
 	const to = 50;
@@ -37,7 +25,7 @@ function formatNumber(value: number): string {
 	return new Intl.NumberFormat("de-DE").format(value);
 }
 
-function sumNumericValues(obj: any) {
+function sumNumericValues(obj: any): number {
 	let total = 0;
 
 	for (const key in obj) {
@@ -54,7 +42,6 @@ function cn(...inputs: ClassValue[]) {
 }
 
 export {
-	hexToRgba,
 	isInRange,
 	roundToTwoDecimals,
 	formatEuroNumber,

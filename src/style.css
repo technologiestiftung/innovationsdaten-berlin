@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@font-face {
+	font-family: "Clan Pro";
+	src:
+		local("Clan"),
+		url(../fonts/ClanWebPro-News.woff) format("woff");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Clan Pro";
+	src:
+		local("Clan"),
+		url(../fonts/ClanWebPro-Bold.woff) format("woff");
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Source Serif Pro";
+	src: url(../fonts/SourceSerifPro-Regular.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	--background: #ffffff;
+	--foreground: #1e3791;
+	--white: #ffffff;
+	--dark: #14161d;
+	--grey: #d9d9d9;
+	--header-height: 80px;
+	--options-height: 40px;
+	--toggle-width: 160px;
+}
+
+:root[data-theme="dark"] {
+	--background: #14161d;
+	--foreground: #ffffff;
+	--grey: #616161;
+}
+
+@media (max-width: 1023px) {
+	:root {
+		--header-height: 68px;
+	}
+}
+
+@theme {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-white: var(--white);
+	--color-dark: var(--dark);
+	--color-grey: var(--grey);
+	--color-bar-chart-fill: var(--dark);
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	html,
+	body {
+		@apply bg-background;
+	}
+	body {
+		overflow-x: hidden;
+	}
+	p,
+	span,
+	li {
+		color: var(--foreground);
+		font-family: "Clan Pro", sans-serif;
+		font-weight: normal;
+		line-height: 150% !important;
+		transform: translateY(1px);
+	}
+	p.serif {
+		font-family: "Source Serif Pro";
+		font-weight: 400;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Clan Pro", sans-serif;
+		font-weight: bold !important;
+		line-height: normal !important;
+		color: var(--foreground);
+	}
+	h1 {
+		font-size: 80px !important;
+		line-height: 102px !important;
+	}
+	h2:not(.ignore) {
+		font-size: 48px !important;
+		line-height: 61px !important;
+	}
+	h3 {
+		font-size: 32px !important;
+		line-height: 41px !important;
+	}
+	h4 {
+		font-size: 24px !important;
+		line-height: 30px !important;
+	}
+	h5 {
+		font-size: 20px !important;
+		line-height: 25px !important;
+	}
+	@media screen and (max-width: 1024px) {
+		h1 {
+			font-size: 40px !important;
+			line-height: 51px !important;
+		}
+		h2:not(.ignore) {
+			font-size: 32px !important;
+			line-height: 41px !important;
+		}
+		h3 {
+			font-size: 24px !important;
+			line-height: 30px !important;
+		}
+		h4 {
+			font-size: 20px !important;
+			line-height: 25px !important;
+		}
+		h5 {
+			font-size: 18px !important;
+			line-height: 20px !important;
+		}
+		main {
+			max-width: 100vw;
+			overflow-x: hidden;
+		}
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1440px) {
+		h1 {
+			font-size: 60px !important;
+			line-height: 77px !important;
+		}
+		h2:not(.ignore) {
+			font-size: 34px !important;
+			line-height: 43px !important;
+		}
+		h3 {
+			font-size: 28px !important;
+			line-height: 36px !important;
+		}
+		h4 {
+			font-size: 22px !important;
+			line-height: 28px !important;
+		}
+		h5 {
+			font-size: 19px !important;
+			line-height: 23px !important;
+		}
+	}
+	.methodik {
+		a {
+			color: #41b496 !important;
+		}
+	}
+}

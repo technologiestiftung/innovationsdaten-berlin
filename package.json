@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
+		"dev:host": "vite --host",
 		"build": "tsc -b && vite build",
 		"lint": "ESLINT_USE_FLAT_CONFIG=true eslint \"src/**/*\"",
 		"prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -22,7 +23,6 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.4",
-		"@tailwindcss/typography": "^0.5.16",
 		"@technologiestiftung/eslint-config": "0.3.1",
 		"@types/node": "24.12.2",
 		"@types/react": "19.2.14",
@@ -38,7 +38,6 @@
 		"postcss": "8.4.47",
 		"prettier": "3.3.3",
 		"sass-embedded": "^1.85.1",
-		"scss": "^0.2.4",
 		"tailwindcss": "^4.1.4",
 		"typescript": "5.5.4",
 		"vite": "6.4.2",
