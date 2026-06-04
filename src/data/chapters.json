@@ -3,7 +3,7 @@
 		{
 			"id": "big_fact_berlin",
 			"title": "Der Gesamt&shy;umsatz der befragten Berliner Unter&shy;nehmen beträgt...",
-			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
+			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, hier 2024, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
 			"chart_type": "big_fact",
 			"bigFacts": [
 				{
@@ -21,8 +21,8 @@
 		{
 			"id": "umsatz",
 			"title": "Die umsatz&shy;stärksten Branchen",
-			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"chart_type": "tree_map",
+			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
 			"chartData": [
 				{
 					"branche": "nahrung",
@@ -159,20 +159,20 @@
 		{
 			"id": "berliner_unternehmen",
 			"title": "Wer innoviert?",
-			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"chart_type": "big_fact",
+			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
 			"bigFacts": [
 				{
 					"fact": "68%",
-					"unit": "der Berliner Unternehmen sind Innovatoren."
+					"unit": "der befragten Berliner Unternehmen sind Innovatoren."
 				}
 			]
 		},
 		{
 			"id": "sektoren",
 			"title": "Wo ist Innovation gewachsen?",
-			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"chart_type": "area_chart_sektoren",
+			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
 			"chartData": {
 				"ber": [
 					{
@@ -253,8 +253,8 @@
 		{
 			"id": "growth",
 			"title": "Welche Branchen wachsen?",
-			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"chart_type": "area_chart_branchen",
+			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
 			"chartData": {
 				"ber": [
 					{
@@ -516,9 +516,9 @@
 		},
 		{
 			"id": "fue_spendings",
-			"title": "FuE-Ausgaben",
-			"text": "TBD...",
+			"title": "Ausgaben für Forschung und Entwicklung (FuE)",
 			"chart_type": "area_chart_branchen",
+			"text": "In 2024 sind die FuE-Ausgaben der Berliner Wirtschaft auf 3,72 Mrd. € gestiegen. Der größte Teil der FuE-Ausgaben wurde dabei von den Banchen Pharma und Chemie, Software und Datenverarbeitung, Elektro- und Instrumententechnik und Maschinen- und Fahrzeugbau getragen. Die Industrie trug nicht ganz 2/3 der FuE-Ausgaben. In Deutschland ist das Bild ähnlich, aber deutlich industrielastiger und mit deutlicher Dominanz von Maschinen- und Fahrzeugbau.",
 			"chartData": {
 				"ber": [
 					{
@@ -808,7 +808,7 @@
 		},
 		{
 			"id": "inno_ausgaben_2022",
-			"title": "Aktivität seit 2022",
+			"title": "Innovations&shy;ausgaben und Veränderung zum Vorjahr",
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
 			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
@@ -945,10 +945,10 @@
 		},
 		{
 			"id": "fue_spendings_delta",
-			"title": "FuE-Ausgaben",
-			"text": "TBD...",
+			"title": "FuE-Ausgaben und Veränderung zum Vorjahr",
 			"chart_type": "bar_chart_delta",
 			"chart_unit": "€",
+			"text": "Die Abbildung zeigt, wie sich die FuE-Ausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
 			"max_value": {
 				"ber": 1000,
 				"de": 55000
@@ -1083,9 +1083,9 @@
 		{
 			"id": "inno_ausgaben_2023",
 			"title": "Innovations&shy;ausgaben 2023",
-			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
+			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
 			"max_value": {
 				"ber": 1700,
 				"de": 85000
@@ -1130,9 +1130,9 @@
 		{
 			"id": "fue_ausgaben_2023",
 			"title": "Forschungs- und Ent&shy;wicklungs&shy;ausgaben 2023",
-			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
+			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
 			"max_value": {
 				"ber": 1000,
 				"de": 55000
@@ -1177,11 +1177,11 @@
 		{
 			"id": "inno_intensitaet",
 			"title": "Innovations&shy;intensität",
-			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. In der EU strebt man eine FuE-Intensität von 4% an, das sogenannte „Barroso-Ziel“. Berlin hat dies bereits vor seiner Formulierung deutlich übertroffen.",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"max_value": 45,
 			"has_tooltip": true,
+			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. Zu den Spitzentechnologien werden Branchen gezählt, deren FuE-Intensität über 7% liegt, einige Quellen setzen dies bereits bei 5% an.",
 			"chartData": {
 				"ber": [
 					{
@@ -1374,8 +1374,8 @@
 		{
 			"id": "how_innovates_intro",
 			"title": "Wie wird innoviert?",
-			"text": "Produktinnovationen sind Produkte, die in den letzten drei Jahren von den Unternehmen neu ins Sortiment aufgenommen wurden. Prozessinnovationen sind Innovationen, die einen Geschäftsprozess nach Kosten, Geschwindigkeit oder Qualität verbessern, dazu gehören nicht nur die industriellen Herstellungsprozesse, sondern auch Prozesse zur Erbringung von Dienstleistungen, Logistikmethoden, IT-Prozesse, Betriebsorganisation oder Managementprozesse.",
 			"chart_type": "big_fact",
+			"text": "Produktinnovationen sind Produkte, die in den letzten drei Jahren von den Unternehmen neu ins Sortiment aufgenommen wurden. Prozessinnovationen sind Innovationen, die einen Geschäftsprozess nach Kosten, Geschwindigkeit oder Qualität verbessern, dazu gehören nicht nur die industriellen Herstellungsprozesse, sondern auch Prozesse zur Erbringung von Dienstleistungen, Logistikmethoden, IT-Prozesse, Betriebsorganisation oder Managementprozesse.",
 			"bigFacts": [
 				{
 					"fact": "40%",
@@ -1389,11 +1389,11 @@
 		},
 		{
 			"id": "process_product_innovators",
-			"title": "Prozess & Produkt&shy;innovatoren",
-			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln.",
+			"title": "Innovatoren&shy;quote",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 100,
+			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln. Die hier gezeigte Innovatorenquote gibt an, welcher Anteil an Unternehmen einer Branche innerhalb der letzten drei Jahre eine Produktinnovation oder eine Prozessinnovation oder beides umgesetzt hat.",
 			"sortsAfterOnStart": "process_innovation_share",
 			"chartData": {
 				"ber": [
@@ -1555,11 +1555,11 @@
 		{
 			"id": "added_value_through_product_innovation",
 			"title": "Mehrwert durch Produkt&shy;innovation",
-			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"chart_type": "bar_chart_stacked",
 			"chart_unit": "%",
 			"has_tooltip": true,
 			"max_value": 40,
+			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
 			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
 			"chartData": {
 				"ber": [
@@ -1722,7 +1722,7 @@
 			"id": "revenue_from_new_products",
 			"title": "Umsatz mit Produkt&shy;neuheiten",
 			"chart_type": "area_chart_branchen",
-			"text": "TBD...",
+			"text": "Die befragten Berliner Unternehmen haben 2024 rund 18.58 Mrd. Umsatz mit neuen Produkten gemacht, moderat weniger als im Vorjahr. Sie liegen damit im Bundestrend. Der Anteil des Dienstleistungssektors an diesen Umsätzen liegt in Berlin bei rund der Hälfte, während er bundesweit nur rund 1/3 ausmachte.",
 			"chartData": {
 				"ber": [
 					{
@@ -2025,122 +2025,12 @@
 			]
 		},
 		{
-			"id": "positive_effects_within_the_company",
-			"title": "Positive Effekte im Unternehmen",
-			"text": "Die Abbildung stellt den Anteil der Unternehmen an, die angeben, mit Umweltinnovationen zwischen 2000 und 2022 „bedeutende“ Ergebnisse erzielt zu haben. Der Anteil an Unternehmen, die überhaupt Effekte erzielt haben, ist in allen Kategorien deutlich höher. Die von den Unternehmen angegebenen Zahlen sind in Deutschland insgesamt höher als in Berlin. Ob dies am höheren Dienstleistungsanteil, an einer bereits vorher höheren Ausgangsbasis oder an geringeren Anstrengungen der Berliner Wirtschaft liegt, kann aus den vorliegenden Daten leider nicht abgeleitet werden.",
-			"chart_type": "bar_chart_filter_keys",
-			"chart_unit": "%",
-			"max_value": 15,
-			"chartData": {
-				"ber": [
-					{
-						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 5,
-						"dienstleistungen": 6
-					},
-					{
-						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 6,
-						"dienstleistungen": 6
-					},
-					{
-						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 6,
-						"industrie": 5,
-						"dienstleistungen": 6
-					},
-					{
-						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
-						"insgesamt": 2,
-						"industrie": 8,
-						"dienstleistungen": 1
-					},
-					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 5,
-						"industrie": 7,
-						"dienstleistungen": 5
-					},
-					{
-						"id": "replace_hazardous_materials",
-						"insgesamt": 2,
-						"industrie": 4,
-						"dienstleistungen": 1
-					},
-					{
-						"id": "recycling_for_internal_or_sales_use",
-						"insgesamt": 4,
-						"industrie": 9,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "protection_of_biodiversity",
-						"insgesamt": 2,
-						"industrie": 1,
-						"dienstleistungen": 2
-					}
-				],
-				"de": [
-					{
-						"id": "lower_energy_consumption_per_unit",
-						"insgesamt": 9,
-						"industrie": 14,
-						"dienstleistungen": 5
-					},
-					{
-						"id": "lower_material_water_consumption_per_unit",
-						"insgesamt": 6,
-						"industrie": 8,
-						"dienstleistungen": 5
-					},
-					{
-						"id": "lower_co2_emissions_per_unit",
-						"insgesamt": 7,
-						"industrie": 11,
-						"dienstleistungen": 4
-					},
-					{
-						"id": "reduction_of_other_emissions_water_and_soil_pollution_and_noise_pollution",
-						"insgesamt": 4,
-						"industrie": 6,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "replace_fossil_with_renewable_energy",
-						"insgesamt": 7,
-						"industrie": 13,
-						"dienstleistungen": 4
-					},
-					{
-						"id": "replace_hazardous_materials",
-						"insgesamt": 3,
-						"industrie": 6,
-						"dienstleistungen": 2
-					},
-					{
-						"id": "recycling_for_internal_or_sales_use",
-						"insgesamt": 6,
-						"industrie": 10,
-						"dienstleistungen": 3
-					},
-					{
-						"id": "protection_of_biodiversity",
-						"insgesamt": 2,
-						"industrie": 5,
-						"dienstleistungen": 1
-					}
-				]
-			}
-		},
-		{
 			"id": "what_drives_environment_innovation",
 			"title": "Was treibt Umwelt&shy;innovationen?",
-			"text": "Bereits etwas älter, nämlich aus dem Jahr 2021 sind die Daten zur Motivation von Umweltinnovationen. Wegen der hohen Relevanz zeigen wir diese Daten trotzdem. Das Diagramm zeigt den Anteil der Unternehmen, die Umweltinnovationen eingeführt haben, die den jeweils genannten Grund als hoch relevant genannt haben (Alternativen waren „mittel“ oder „gering“). Es fällt auf, dass staatliche Maßnahmen (Regulierung, Erwartung künftiger Regulierung und Vorschriften im Beschaffungswesen) mit Abstand die wichtigsten Treiber sind, die Unternehmen zu Umweltinnovationen bewegen. Kundennachfrage oder Reputationsgründe gehören nicht zu den wesentlichen Treibern von Umweltinnovationen, auch nicht eine etwaige öffentliche Förderung.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
+			"text": "Die Treiber für Umweltinnovationen von Unternehmen sind, soweit Umweltinnovationen nicht das Produkt selbst sind, andere und deutlich weniger wirtschaftliche Gründe als bei anderen Innovationstätigkeiten. Das Diagramm zeigt den Anteil der Unternehmen, die Umweltinnovationen eingeführt haben, und 2025 den jeweils genannten Grund als hoch relevant genannt haben (Alternativen waren „mittel“ oder „gering“). Es fällt auf, dass staatliche Maßnahmen (Regulierung, Erwartung künftiger Regulierung und Vorschriften im Beschaffungswesen) mit Abstand die wichtigsten Treiber sind, die Unternehmen zu Umweltinnovationen bewegen. Kundennachfrage oder Reputationsgründe gehören nicht zu den wesentlichen Treibern von Umweltinnovationen, auch nicht eine etwaige öffentliche Förderung.",
 			"chartData": {
 				"ber": [
 					{
@@ -2275,10 +2165,10 @@
 			"title": "Was macht Berlin aus als Innovations&shy;standort?",
 			"chart_type": "big_fact",
 			"bigTitleCard": true,
-			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland. Eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Innovationsfinanzierung oder zur Nutzung externen Wissens und zum Schutz des eigenen Wissens, berichten frühere Innovationserhebungen, die auf unserer Website als Publikation und Datensatz zur Verfügung stehen. An dieser Stelle verzichten wir aus Aktualitätsgründung auf eine höhere Detailtiefe, da wir mit der Erhebung 2025 neue Daten erwarten.",
+			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland.<br/><br/>Die Innovationserhebungen berichten, allerdings in unterschiedlichen Jahrgängen, eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Nutzung externen Wissens und zum Schutz des eigenen Wissens. Da nicht in allen Jahrgängen alle Daten erfragt werden, sind die Bezugsjahre hier jeweils angegeben.",
 			"bigFacts": [
 				{
-					"fact": "21%",
+					"fact": "24%",
 					"unit": "der Berliner Innovationsausgaben kommen von KMU, im Vergleich mit"
 				},
 				{
@@ -2288,142 +2178,10 @@
 			]
 		},
 		{
-			"id": "berlin_is_ahead",
-			"title": "Berlin ist in Innovations&shy;intensität vorne geblieben.",
-			"text": "Sowohl in der Innovationsintensität als auch in der Forschungs- und Entwicklungsintensität also dem Anteil der entsprechenden Ausgaben am Umsatz der Unternehmen ist die Berliner Wirtschaft leicht überdurchschnittlich.  Beide Intensitäten sind in Berlin allerdings das dritte Jahr in Folge gesunken, während sie sich im deutschen Durchschnitt stabilisiert haben.",
-			"chart_type": "area_chart_toggle",
-			"max_value": 6,
-			"togglesBetween": ["innovations_intensitaet", "fue_intensitaet"],
-			"chartData": {
-				"innovations_intensitaet": [
-					{
-						"year": 2018,
-						"ber": 5.430635129931505,
-						"de": 4.43060657401294
-					},
-					{
-						"year": 2019,
-						"ber": 4.642867968757894,
-						"de": 4.432251169004676
-					},
-					{
-						"year": 2020,
-						"ber": 5.625020839585209,
-						"de": 4.538074067047084
-					},
-					{
-						"year": 2021,
-						"ber": 4.742775918846619,
-						"de": 4.021695962823456
-					},
-					{
-						"year": 2022,
-						"ber": 4.216627449801159,
-						"de": 3.449526999121898
-					},
-					{
-						"year": 2023,
-						"ber": 4.030566376985316,
-						"de": 3.5090233726962586
-					},
-					{
-						"year": 2024,
-						"ber": 3.9,
-						"de": 3.8
-					}
-				],
-				"fue_intensitaet": [
-					{
-						"year": 2018,
-						"ber": 2.811001295230983,
-						"de": 2.6238259809127397
-					},
-					{
-						"year": 2019,
-						"ber": 2.581616465762006,
-						"de": 2.7210955243820976
-					},
-					{
-						"year": 2020,
-						"ber": 2.921987707423338,
-						"de": 2.863576855240649
-					},
-					{
-						"year": 2021,
-						"ber": 2.6856895653632567,
-						"de": 2.5806033134714097
-					},
-					{
-						"year": 2022,
-						"ber": 2.5665120544876373,
-						"de": 2.188839465920837
-					},
-					{
-						"year": 2023,
-						"ber": 2.362835663378979,
-						"de": 2.2495867412636435
-					},
-					{
-						"year": 2024,
-						"ber": 2.3,
-						"de": 2.5
-					}
-				]
-			}
-		},
-		{
-			"id": "innovator_rate",
-			"title": "Innovatoren&shy;quote",
-			"text": "TBD...",
-			"chart_type": "area_chart_toggle",
-			"max_value": 80,
-			"togglesBetween": ["innovator_rate"],
-			"hide_toggle": true,
-			"chartData": {
-				"innovator_rate": [
-					{
-						"year": 2018,
-						"ber": 71,
-						"de": 66
-					},
-					{
-						"year": 2019,
-						"ber": 71,
-						"de": 62
-					},
-					{
-						"year": 2020,
-						"ber": 73,
-						"de": 64
-					},
-					{
-						"year": 2021,
-						"ber": 69,
-						"de": 62
-					},
-					{
-						"year": 2022,
-						"ber": 66,
-						"de": 59
-					},
-					{
-						"year": 2023,
-						"ber": 61,
-						"de": 57
-					},
-					{
-						"year": 2024,
-						"ber": 68,
-						"de": 60
-					}
-				]
-			}
-		},
-		{
 			"id": "collaboration_regions",
-			"title": "Mit welchen Regionen wird kollaboriert?",
-			"text": "Kollaboration ist ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die Innovationskooperationen in der jeweiligen Region pflegen.",
+			"title": "Mit welchen Regionen wird kooperiert?",
 			"chart_type": "matrix",
+			"text": "Innovationskooperationen sind ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die 2024 Innovationskooperationen in der jeweiligen Region pflegen.",
 			"chartData": {
 				"ber": [
 					{
@@ -2883,9 +2641,9 @@
 		},
 		{
 			"id": "collaboration_partners",
-			"title": "Mit welchen Partnern wird kollaboriert?",
-			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die mit den jeweiligen Kategorien von Partnern kooperieren.",
+			"title": "Mit welchen Partnern wird kooperiert?",
 			"chart_type": "matrix",
+			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die 2024 mit den jeweiligen Kategorien von Partnern kooperierten.",
 			"chartData": {
 				"ber": [
 					{
@@ -4546,10 +4304,10 @@
 		{
 			"id": "protective_measures_intellectual_property",
 			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
-			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz.",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 55,
+			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz. Gezeigt sind Daten für 2024. Markeneintragungen und Geheimhaltung sind für ein breiteres Spektrum an Branchen relevant, Urheberrechte vor allem bei den Medien, der Softwarebranche und den FuE- und Kreativdienstleistungen.",
 			"chartData": {
 				"ber": [
 					{
@@ -4832,22 +4590,26 @@
 		{
 			"id": "support_intro",
 			"title": "Öffentliche Förderung",
-			"text": "In Berlin – wie überall in der Welt – wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen, können als im Rahmen einer quantitativen Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das die das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal machten. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
 			"chart_type": "big_fact",
+			"text": "In Berlin – wie überall in der Welt – wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen, können als im Rahmen einer quantitativen Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das die das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal machten. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
 			"bigFacts": [
 				{
-					"fact": "35%",
-					"unit": "der forschenden Berliner Unternehmen erhalten staatliche Zuschüsse."
+					"fact": "32%",
+					"unit": "aller FuE-aktiven Berliner Unternehmen erhalten öffentliche Zuschüsse für FuE-Vorhaben"
+				},
+				{
+					"fact": "17%",
+					"unit": "der FuE-aktiven Berliner Unternehmen nutzen die steuerliche Forschungszulage"
 				}
 			]
 		},
 		{
 			"id": "most_supported_branchen",
-			"title": "Welche Branchen werden am meisten gefördert?",
-			"text": "Der Bund war in 2002 in Berlin wie in Deutschland der wichtigste Geber von Zuschüssen. Eine ausgesprochen überdurchschnittliche Rolle spielt die Förderung durch das Land in Berlin bei den Medien.",
+			"title": "Wer erhält am häufigsten Innovationsförderung?",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 70,
+			"text": "22% der innovationsaktiven Berliner Unternehmen erhielten staatliche Innovationsförderung. Der Bund ist dabei der wichtigste Zuschussgeber, gefolgt von den Ländern und der EU (nicht gezeigt). Dargestellt ist der Anteil der innovationsaktiven Unternehmen, die zwischen 2022 und 2024 Innovationsförderung erhielte, aufgeschlüsselt nach Branchen, unabhängig von Fördergeber. Lesehinweis: Der Anteil der geförderten Unternehmen besagt nichts über die Höhe der Förderung.",
 			"chartData": {
 				"ber": [
 					{
@@ -5068,10 +4830,10 @@
 		{
 			"id": "public_funding_fue_projects",
 			"title": "Wer erhält öffentliche Zuschüsse für FuE-Vorhaben?",
-			"text": "Während in Berlin wie Deutschland der überwiegende Teil der Großunternehmen Förderung in Anspruch nimmt, ist das bei KMU weniger ausgeprägt.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"max_value": 80,
+			"text": "32% der forschungsaktiven Berliner Unternehmen (das sind 14% aller Unternehmen) erhielten öffentliche Zuschüsse für FuE-Vorhaben. Der Bund ist auch dabei der wichtigste Zuschussgeber, gefolgt von den Ländern und der EU (nicht gezeigt). Dargestellt ist der Anteil der innovationsaktiven Unternehmen, die zwischen 2022 und 2024 Innovationsförderung erhielte, aufgeschlüsselt nach Branchen, unabhängig von Fördergeber.<br/><br/>Die von der Innovationsförderung (vorheriges Diagramm) abgegrenzte Darstellung der Forschungsförderung ist erforderlich, wenn man die (antragsgebundene) Projektförderung mit der (nachträglich gewährten) steuerlichen FuE-Förderung (Folgediagramm) vergleichen will, die ausschließlich für FuE-Aktivitäten im engeren Sinne gewährt wird.",
 			"chartData": {
 				"ber": {
 					"nahrung": 1,
@@ -5112,10 +4874,10 @@
 		{
 			"id": "applications_fue_funding",
 			"title": "Wer beantragt steuerliche FuE-Förderung?",
-			"text": "Anträge für steuerlichen Förderung für Forschung und Entwicklung kommen von den meisten großen Branchen, aber von keiner so viel wie in der Branche Nährung, Getränke und Tabak in Berlin.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"max_value": 40,
+			"text": "17 % der forschungsaktiven Berliner Unternehmen (das sind 8% aller Unternehmen) haben in 2024 einen Antrag auf steuerliche Forschungszulage gestellt. Dargestellt sind die Daten nach Branchen. Hinweis: Die Förderung mit Zuschüssen und die steuerliche Förderung für das selbe Projekt schließen sich gegenseitig aus. Zuschussförderung und steuerliche Förderung für jeweils unterschiedliche Projekte eines Unternehmens sind möglich. Auch hier gilt, dass die Art der Förderung nichts über deren Höhe besagt.",
 			"chartData": {
 				"ber": {
 					"nahrung": 22,
@@ -5157,9 +4919,9 @@
 	"data_ai": [
 		{
 			"id": "data_ai_intro",
-			"title": "Daten und KI",
+			"title": "Datennutzung und Künstliche Intelligenz (KI)",
 			"chart_type": "big_fact",
-			"text": "In hier nicht dargestellten früheren Jahrgängen der Innovationserhebung finden Interessierte Daten zum tatsächlichen Stand der Digitalisierung in Unternehmen und den damit verfolgten Zielen, zu Digitalisierungshemmnissen und zu digitalen und datengetriebenen Geschäftsmodellen, die wir hier aus Aktualitätsgründen nicht zeigen. Die aktuelle Zusammenstellung bezieht sich auf die Datennutzung durch Unternehmen und auf die Nutzung von KI.",
+			"text": "Zwei aktuelle Innovationsgebiete der Digitalisierung sind die Datenwirtschaft und die Künstliche Intelligenz (KI). Eine funktionelle Datenwirtschaft innerhalb der Unternehmen wird als eine der Voraussetzungen für die erfolgreiche Digitalisierung angesehen. Das gilt für die Organisation und Nutzung der eigenen Daten ebenso wie für die Nutzung von Daten Dritter zur datengetriebenen Entwicklung oder Verbesserung von Geschäftsmodellen. Die KI gilt als eines der next big things, von denen erhebliche Wirkungen nicht nur auf das Innovationssystem, sondern auf die gesamte Arbeitsweise von Unternehmen und auf die Gesellschaft insgesamt erwartet werden. Für die Innovationsfähigkeit von Unternehmen ist wichtig, sich mit beiden Themen auseinanderzusetzen und sich diesbezüglich zu moderniesieren. Die Daten zur Datennutzung haben das Bezugsjahr 2024. Die Daten zur Nutzung von KI und zu generativer KI haben das Bezugsjahr 2025.",
 			"bigFacts": [
 				{
 					"fact": "40%",
@@ -5172,148 +4934,12 @@
 			]
 		},
 		{
-			"id": "use_of_generative_ai",
-			"title": "Generative AI Nutzung",
-			"text": "TBD...",
-			"chart_type": "bar_chart_filter_keys",
-			"chart_unit": "%",
-			"max_value": 40,
-			"chartData": {
-				"ber": [
-					{
-						"id": "products_and_services",
-						"insgesamt": 38,
-						"industrie": 16,
-						"dienstleistungen": 45
-					},
-					{
-						"id": "process_automation",
-						"insgesamt": 21,
-						"industrie": 9,
-						"dienstleistungen": 25
-					},
-					{
-						"id": "client_communication",
-						"insgesamt": 25,
-						"industrie": 15,
-						"dienstleistungen": 27
-					},
-					{
-						"id": "it_admin",
-						"insgesamt": 20,
-						"industrie": 9,
-						"dienstleistungen": 24
-					},
-					{
-						"id": "other_fields",
-						"insgesamt": 7,
-						"industrie": 3,
-						"dienstleistungen": 8
-					}
-				],
-				"de": [
-					{
-						"id": "products_and_services",
-						"insgesamt": 21,
-						"industrie": 9,
-						"dienstleistungen": 37
-					},
-					{
-						"id": "process_automation",
-						"insgesamt": 14,
-						"industrie": 9,
-						"dienstleistungen": 20
-					},
-					{
-						"id": "client_communication",
-						"insgesamt": 16,
-						"industrie": 13,
-						"dienstleistungen": 19
-					},
-					{
-						"id": "it_admin",
-						"insgesamt": 14,
-						"industrie": 8,
-						"dienstleistungen": 23
-					},
-					{
-						"id": "other_fields",
-						"insgesamt": 6,
-						"industrie": 6,
-						"dienstleistungen": 7
-					}
-				]
-			}
-		},
-		{
-			"id": "generative_ai_deployment",
-			"title": "Generative KI Bereitstellung",
-			"text": "TBD...",
-			"chart_type": "bar_chart_filter_keys",
-			"chart_unit": "%",
-			"max_value": 60,
-			"chartData": {
-				"ber": [
-					{
-						"id": "insgesamt",
-						"insgesamt": 55,
-						"industrie": 38,
-						"dienstleistungen": 60
-					},
-					{
-						"id": "deployment_internal_generative_AI_solutions",
-						"insgesamt": 12,
-						"industrie": 7,
-						"dienstleistungen": 13
-					},
-					{
-						"id": "deployment_external_generative_AI_solutions",
-						"insgesamt": 36,
-						"industrie": 15,
-						"dienstleistungen": 42
-					},
-					{
-						"id": "deployment_responsible_use_by_employees",
-						"insgesamt": 30,
-						"industrie": 23,
-						"dienstleistungen": 31
-					}
-				],
-				"de": [
-					{
-						"id": "insgesamt",
-						"insgesamt": 40,
-						"industrie": 27,
-						"dienstleistungen": 56
-					},
-					{
-						"id": "deployment_internal_generative_AI_solutions",
-						"insgesamt": 7,
-						"industrie": 5,
-						"dienstleistungen": 10
-					},
-					{
-						"id": "deployment_external_generative_AI_solutions",
-						"insgesamt": 21,
-						"industrie": 12,
-						"dienstleistungen": 33
-					},
-					{
-						"id": "deployment_responsible_use_by_employees",
-						"insgesamt": 21,
-						"industrie": 15,
-						"dienstleistungen": 28
-					}
-				]
-			}
-		},
-		{
 			"id": "data_application",
 			"title": "Anwendungen von Daten",
-			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 60,
+			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
 			"chartData": {
 				"ber": [
 					{
@@ -5436,10 +5062,10 @@
 		{
 			"id": "strategies_data_use",
 			"title": "Strategien der Datennutzung",
-			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 70,
+			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
 			"chartData": {
 				"ber": [
 					{
@@ -5562,10 +5188,10 @@
 		{
 			"id": "most_common_data_skills",
 			"title": "Die häufigsten Data&shy;kompetenzen",
-			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 70,
+			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
 			"chartData": {
 				"ber": [
 					{
@@ -5672,10 +5298,10 @@
 		{
 			"id": "ai_use",
 			"title": "Einsatz von KI",
-			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"max_value": 80,
+			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
 			"chartData": {
 				"ber": {
 					"nahrung": 26,
@@ -5716,8 +5342,8 @@
 		{
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI Verfahren",
-			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"chart_type": "matrix",
+			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"chartData": {
 				"ber": [
 					{
@@ -6476,763 +6102,75 @@
 			}
 		},
 		{
-			"id": "ai_applications",
-			"title": "Anwendungen von KI",
-			"text": "Während der Einsatz in den unterschiedlichen Unternehmensbereichen in Berlin in 2023 nur noch moderat über dem deutschen Durchschnitt liegt, ist der Anteil von Unternehmen, bei denen KI das Produkt oder die Dienstleistung ist, erheblich höher.",
-			"chart_type": "matrix",
+			"id": "use_of_generative_ai",
+			"title": "Generative AI Nutzung",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 40,
+			"text": "TBD...",
 			"chartData": {
 				"ber": [
 					{
-						"x": "nahrung",
-						"y": "products_and_services",
-						"value": 8
+						"id": "products_and_services",
+						"insgesamt": 38,
+						"industrie": 16,
+						"dienstleistungen": 45
 					},
 					{
-						"x": "nahrung",
-						"y": "process_automation",
-						"value": 17
+						"id": "process_automation",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 25
 					},
 					{
-						"x": "nahrung",
-						"y": "client_communication",
-						"value": 18
+						"id": "client_communication",
+						"insgesamt": 25,
+						"industrie": 15,
+						"dienstleistungen": 27
 					},
 					{
-						"x": "nahrung",
-						"y": "it_admin",
-						"value": 8
+						"id": "it_admin",
+						"insgesamt": 20,
+						"industrie": 9,
+						"dienstleistungen": 24
 					},
 					{
-						"x": "nahrung",
-						"y": "other_fields",
-						"value": 1
-					},
-					{
-						"x": "pharma",
-						"y": "products_and_services",
-						"value": 18
-					},
-					{
-						"x": "pharma",
-						"y": "process_automation",
-						"value": 16
-					},
-					{
-						"x": "pharma",
-						"y": "client_communication",
-						"value": 25
-					},
-					{
-						"x": "pharma",
-						"y": "it_admin",
-						"value": 17
-					},
-					{
-						"x": "pharma",
-						"y": "other_fields",
-						"value": 2
-					},
-					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 7
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "it_admin",
-						"value": 1
-					},
-					{
-						"x": "holz",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "metall",
-						"y": "products_and_services",
-						"value": 13
-					},
-					{
-						"x": "metall",
-						"y": "process_automation",
-						"value": 5
-					},
-					{
-						"x": "metall",
-						"y": "client_communication",
-						"value": 9
-					},
-					{
-						"x": "metall",
-						"y": "it_admin",
-						"value": 11
-					},
-					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 41
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
-						"value": 10
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
-						"value": 32
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "it_admin",
-						"value": 14
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "other_fields",
-						"value": 0
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "products_and_services",
-						"value": 15
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "process_automation",
-						"value": 3
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 10
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "it_admin",
-						"value": 6
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
-						"value": 4
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 13
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 10
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 10
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "it_admin",
-						"value": 9
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
-						"value": 8
-					},
-					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 10
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 11
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 9
-					},
-					{
-						"x": "energie",
-						"y": "it_admin",
-						"value": 10
-					},
-					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 9
-					},
-					{
-						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 51
-					},
-					{
-						"x": "telekommunikation",
-						"y": "process_automation",
-						"value": 22
-					},
-					{
-						"x": "telekommunikation",
-						"y": "client_communication",
-						"value": 17
-					},
-					{
-						"x": "telekommunikation",
-						"y": "it_admin",
-						"value": 20
-					},
-					{
-						"x": "telekommunikation",
-						"y": "other_fields",
-						"value": 7
-					},
-					{
-						"x": "software",
-						"y": "products_and_services",
-						"value": 49
-					},
-					{
-						"x": "software",
-						"y": "process_automation",
-						"value": 28
-					},
-					{
-						"x": "software",
-						"y": "client_communication",
-						"value": 38
-					},
-					{
-						"x": "software",
-						"y": "it_admin",
-						"value": 34
-					},
-					{
-						"x": "software",
-						"y": "other_fields",
-						"value": 4
-					},
-					{
-						"x": "finanz",
-						"y": "products_and_services",
-						"value": 31
-					},
-					{
-						"x": "finanz",
-						"y": "process_automation",
-						"value": 36
-					},
-					{
-						"x": "finanz",
-						"y": "client_communication",
-						"value": 31
-					},
-					{
-						"x": "finanz",
-						"y": "it_admin",
-						"value": 21
-					},
-					{
-						"x": "finanz",
-						"y": "other_fields",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "products_and_services",
-						"value": 43
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "process_automation",
-						"value": 25
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "client_communication",
-						"value": 11
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "it_admin",
-						"value": 25
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "other_fields",
-						"value": 16
-					},
-					{
-						"x": "architektur",
-						"y": "products_and_services",
-						"value": 28
-					},
-					{
-						"x": "architektur",
-						"y": "process_automation",
-						"value": 12
-					},
-					{
-						"x": "architektur",
-						"y": "client_communication",
-						"value": 8
-					},
-					{
-						"x": "architektur",
-						"y": "it_admin",
-						"value": 6
-					},
-					{
-						"x": "architektur",
-						"y": "other_fields",
-						"value": 7
-					},
-					{
-						"x": "forschung",
-						"y": "products_and_services",
-						"value": 50
-					},
-					{
-						"x": "forschung",
-						"y": "process_automation",
-						"value": 14
-					},
-					{
-						"x": "forschung",
-						"y": "client_communication",
-						"value": 22
-					},
-					{
-						"x": "forschung",
-						"y": "it_admin",
-						"value": 18
-					},
-					{
-						"x": "forschung",
-						"y": "other_fields",
-						"value": 13
-					},
-					{
-						"x": "kreativ",
-						"y": "products_and_services",
-						"value": 62
-					},
-					{
-						"x": "kreativ",
-						"y": "process_automation",
-						"value": 37
-					},
-					{
-						"x": "kreativ",
-						"y": "client_communication",
-						"value": 55
-					},
-					{
-						"x": "kreativ",
-						"y": "it_admin",
-						"value": 27
-					},
-					{
-						"x": "kreativ",
-						"y": "other_fields",
-						"value": 11
+						"id": "other_fields",
+						"insgesamt": 7,
+						"industrie": 3,
+						"dienstleistungen": 8
 					}
 				],
 				"de": [
 					{
-						"x": "nahrung",
-						"y": "products_and_services",
-						"value": 4
+						"id": "products_and_services",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 37
 					},
 					{
-						"x": "nahrung",
-						"y": "process_automation",
-						"value": 7
+						"id": "process_automation",
+						"insgesamt": 14,
+						"industrie": 9,
+						"dienstleistungen": 20
 					},
 					{
-						"x": "nahrung",
-						"y": "client_communication",
-						"value": 9
+						"id": "client_communication",
+						"insgesamt": 16,
+						"industrie": 13,
+						"dienstleistungen": 19
 					},
 					{
-						"x": "nahrung",
-						"y": "it_admin",
-						"value": 4
+						"id": "it_admin",
+						"insgesamt": 14,
+						"industrie": 8,
+						"dienstleistungen": 23
 					},
 					{
-						"x": "nahrung",
-						"y": "other_fields",
-						"value": 7
-					},
-					{
-						"x": "pharma",
-						"y": "products_and_services",
-						"value": 9
-					},
-					{
-						"x": "pharma",
-						"y": "process_automation",
-						"value": 8
-					},
-					{
-						"x": "pharma",
-						"y": "client_communication",
-						"value": 16
-					},
-					{
-						"x": "pharma",
-						"y": "it_admin",
-						"value": 10
-					},
-					{
-						"x": "pharma",
-						"y": "other_fields",
-						"value": 6
-					},
-					{
-						"x": "holz",
-						"y": "products_and_services",
-						"value": 13
-					},
-					{
-						"x": "holz",
-						"y": "process_automation",
-						"value": 10
-					},
-					{
-						"x": "holz",
-						"y": "client_communication",
-						"value": 16
-					},
-					{
-						"x": "holz",
-						"y": "it_admin",
-						"value": 10
-					},
-					{
-						"x": "holz",
-						"y": "other_fields",
-						"value": 13
-					},
-					{
-						"x": "metall",
-						"y": "products_and_services",
-						"value": 6
-					},
-					{
-						"x": "metall",
-						"y": "process_automation",
-						"value": 8
-					},
-					{
-						"x": "metall",
-						"y": "client_communication",
-						"value": 11
-					},
-					{
-						"x": "metall",
-						"y": "it_admin",
-						"value": 7
-					},
-					{
-						"x": "metall",
-						"y": "other_fields",
-						"value": 2
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "products_and_services",
-						"value": 21
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "process_automation",
-						"value": 19
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "client_communication",
-						"value": 21
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "it_admin",
-						"value": 14
-					},
-					{
-						"x": "elektroindustrie",
-						"y": "other_fields",
-						"value": 8
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "products_and_services",
-						"value": 13
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "process_automation",
-						"value": 12
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "client_communication",
-						"value": 16
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "it_admin",
-						"value": 9
-					},
-					{
-						"x": "fahrzeugbau",
-						"y": "other_fields",
-						"value": 7
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "products_and_services",
-						"value": 8
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "process_automation",
-						"value": 8
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "client_communication",
-						"value": 11
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "it_admin",
-						"value": 6
-					},
-					{
-						"x": "sonstige_konsumgueter",
-						"y": "other_fields",
-						"value": 3
-					},
-					{
-						"x": "energie",
-						"y": "products_and_services",
-						"value": 6
-					},
-					{
-						"x": "energie",
-						"y": "process_automation",
-						"value": 5
-					},
-					{
-						"x": "energie",
-						"y": "client_communication",
-						"value": 8
-					},
-					{
-						"x": "energie",
-						"y": "it_admin",
-						"value": 4
-					},
-					{
-						"x": "energie",
-						"y": "other_fields",
-						"value": 6
-					},
-					{
-						"x": "telekommunikation",
-						"y": "products_and_services",
-						"value": 37
-					},
-					{
-						"x": "telekommunikation",
-						"y": "process_automation",
-						"value": 22
-					},
-					{
-						"x": "telekommunikation",
-						"y": "client_communication",
-						"value": 22
-					},
-					{
-						"x": "telekommunikation",
-						"y": "it_admin",
-						"value": 20
-					},
-					{
-						"x": "telekommunikation",
-						"y": "other_fields",
-						"value": 12
-					},
-					{
-						"x": "software",
-						"y": "products_and_services",
-						"value": 49
-					},
-					{
-						"x": "software",
-						"y": "process_automation",
-						"value": 31
-					},
-					{
-						"x": "software",
-						"y": "client_communication",
-						"value": 27
-					},
-					{
-						"x": "software",
-						"y": "it_admin",
-						"value": 39
-					},
-					{
-						"x": "software",
-						"y": "other_fields",
-						"value": 8
-					},
-					{
-						"x": "finanz",
-						"y": "products_and_services",
-						"value": 24
-					},
-					{
-						"x": "finanz",
-						"y": "process_automation",
-						"value": 20
-					},
-					{
-						"x": "finanz",
-						"y": "client_communication",
-						"value": 18
-					},
-					{
-						"x": "finanz",
-						"y": "it_admin",
-						"value": 13
-					},
-					{
-						"x": "finanz",
-						"y": "other_fields",
-						"value": 8
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "products_and_services",
-						"value": 70
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "process_automation",
-						"value": 19
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "client_communication",
-						"value": 20
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "it_admin",
-						"value": 54
-					},
-					{
-						"x": "unternehmensberatung",
-						"y": "other_fields",
-						"value": 4
-					},
-					{
-						"x": "architektur",
-						"y": "products_and_services",
-						"value": 15
-					},
-					{
-						"x": "architektur",
-						"y": "process_automation",
-						"value": 8
-					},
-					{
-						"x": "architektur",
-						"y": "client_communication",
-						"value": 5
-					},
-					{
-						"x": "architektur",
-						"y": "it_admin",
-						"value": 5
-					},
-					{
-						"x": "architektur",
-						"y": "other_fields",
-						"value": 6
-					},
-					{
-						"x": "forschung",
-						"y": "products_and_services",
-						"value": 42
-					},
-					{
-						"x": "forschung",
-						"y": "process_automation",
-						"value": 28
-					},
-					{
-						"x": "forschung",
-						"y": "client_communication",
-						"value": 17
-					},
-					{
-						"x": "forschung",
-						"y": "it_admin",
-						"value": 13
-					},
-					{
-						"x": "forschung",
-						"y": "other_fields",
-						"value": 19
-					},
-					{
-						"x": "kreativ",
-						"y": "products_and_services",
-						"value": 42
-					},
-					{
-						"x": "kreativ",
-						"y": "process_automation",
-						"value": 17
-					},
-					{
-						"x": "kreativ",
-						"y": "client_communication",
-						"value": 35
-					},
-					{
-						"x": "kreativ",
-						"y": "it_admin",
-						"value": 14
-					},
-					{
-						"x": "kreativ",
-						"y": "other_fields",
-						"value": 6
+						"id": "other_fields",
+						"insgesamt": 6,
+						"industrie": 6,
+						"dienstleistungen": 7
 					}
 				]
 			}
