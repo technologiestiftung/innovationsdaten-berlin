@@ -4,7 +4,7 @@ import wordings from "@/data/wordings.json";
 const Welcome = () => (
 	<section
 		id="welcome"
-		className="flex w-full pt-[calc(var(--header-height)+10vh)] max-lg:flex-col max-lg:items-center lg:gap-8 lg:justify-center max-lg:mb-0"
+		className="flex w-full pt-[calc(var(--header-height)+10vh)] max-lg:flex-col max-lg:items-start lg:gap-8 lg:justify-center max-lg:mb-0"
 	>
 		<div className="max-lg:max-w-[700px] lg:flex lg:flex-col lg:gap-6 lg:max-h-[90vh]">
 			<h1
