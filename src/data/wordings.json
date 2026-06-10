@@ -97,5 +97,8 @@
 	"all": "Alle",
 	"deployment_internal_generative_AI_solutions": "Über die Bereitstellung interner generativer KI-Lösungen",
 	"deployment_external_generative_AI_solutions": "Über die Bereitstellung externer generativer KI-Lösungen",
-	"deployment_responsible_use_by_employees": "Über eine eigenverantwortliche Nutzung durch die Beschäftigten"
+	"deployment_responsible_use_by_employees": "Über eine eigenverantwortliche Nutzung durch die Beschäftigten",
+	"provision_of_external_generative_ai_solutions": "Über die Bereitstellung externer generativer KI-Lösungen",
+	"provision_of_internal_generative_ai_solutions": "Über die Bereitstellung interner generativer KI-Lösungen",
+	"provision_of_responsible_use_by_employees": "Über eine eigenverantwortliche Nutzung durch die Beschäftigten"
 }

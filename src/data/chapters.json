@@ -5342,7 +5342,7 @@
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI nach Verfahren",
 			"chart_type": "matrix",
-			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
+			"text": "In 2024 ist der Einsatz von KI in Produkten oder Prozessen in Berliner Unternehmen immer noch stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Sprach- und Texterkennung und -verarbeitung sind das wichtigste Anwendungsgebiet, aber auch alle anderen KI-Verfahren haben nicht an Bedeutung verloren. Die Zahlen in den Legenden gibt den Prozentsatz der Unternehmen an, die das jeweilige KI-Verfahren nutzen. Die Fläche* der Quadrate wächst mit dem jeweiligen Prozentsatz.",
 			"chartData": {
 				"ber": [
 					{
@@ -6101,12 +6101,12 @@
 			}
 		},
 		{
-			"id": "use_of_generative_ai",
-			"title": "Nutzung generativer KI",
+			"id": "use_ai_areas",
+			"title": "Einsatz von KI nach Anwendungsbereichen",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
-			"text": "Generative KI wurde in 2025 in 55% aller Berliner Unternehmen eingesetzt. Die rasante Verbreitung der in der Regel auf Large Language Models beruhenden generativen KI, über die beinahe täglich in den Medien berichtet wird schlägt sich auch in den Zahlen zur tatsächlichen Nutzung nieder. Um auch die eigenverantwortliche Nutzung generativer KI durch Beschäftigte außerhalb etablierter Prozesse in Unternehmen abbilden zu können, wurde bei der Frage nach generativer KI abweichend von den vorstehenden Fragen bewusst nicht nach dem Einsatz in Produkten oder Prozessen gefragt. Die Zahlen zur Nutzung liegen deshalb nochmals höher als bei den vorstehenden Fragen und umfassen neben der eigenverantwortlichen Nutzung durch Beschäftigte auch experimentelle Nutzungen, die noch nicht in Produkte oder Prozesse eigegangen sind. Die Unterschiede sind hier zwischen den Branchen größer als zwischen Berlin und Deutschland. Selbst entwickelte generative KI spielt nur in relativ wenigen Branchen eine relevante Rolle. Bei der Nutzung generativer KI halten sich vom Unternehmen intern bereitgestellte externe Lösungen und die eigenverantwortliche Nutzung durch Beschäftigte aktuell bei großen Unterschieden zwischen den Branchen etwa die Waage. Die Prozentangaben in den Legenden meinen hier wieder % aller Unternehmen der jeweiligen Branche.",
+			"text": "KI-Nutzung in Produkten und Prozessen hat in 2025 auch Einzug in praktisch alle Unternehmensbereiche von Unternehmen gefunden. In den Legenden ist wieder angegeben, wieviele Prozent aller Unternehmen 2025 KI im jeweiligen Unternehmensbereich genutzt haben.",
 			"chartData": {
 				"ber": [
 					{
@@ -6170,6 +6170,56 @@
 						"insgesamt": 6,
 						"industrie": 6,
 						"dienstleistungen": 7
+					}
+				]
+			}
+		},
+		{
+			"id": "use_of_generative_ai",
+			"title": "Nutzung generativer KI",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 55,
+			"text": "Generative KI wurde in 2025 in 55% aller Berliner Unternehmen eingesetzt. Die rasante Verbreitung der in der Regel auf Large Language Models beruhenden generativen KI, über die beinahe täglich in den Medien berichtet wird schlägt sich auch in den Zahlen zur tatsächlichen Nutzung nieder. Um auch die eigenverantwortliche Nutzung generativer KI durch Beschäftigte außerhalb etablierter Prozesse in Unternehmen abbilden zu können, wurde bei der Frage nach generativer KI abweichend von den vorstehenden Fragen bewusst nicht nach dem Einsatz in Produkten oder Prozessen gefragt. Die Zahlen zur Nutzung liegen deshalb nochmals höher als bei den vorstehenden Fragen und umfassen neben der eigenverantwortlichen Nutzung durch Beschäftigte auch experimentelle Nutzungen, die noch nicht in Produkte oder Prozesse eigegangen sind. Die Unterschiede sind hier zwischen den Branchen größer als zwischen Berlin und Deutschland. Selbst entwickelte generative KI spielt nur in relativ wenigen Branchen eine relevante Rolle. Bei der Nutzung generativer KI halten sich vom Unternehmen intern bereitgestellte externe Lösungen und die eigenverantwortliche Nutzung durch Beschäftigte aktuell bei großen Unterschieden zwischen den Branchen etwa die Waage. Die Prozentangaben in den Legenden meinen hier wieder % aller Unternehmen der jeweiligen Branche.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
+					},
+					{
+						"id": "provision_of_internal_generative_ai_solutions",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
+					},
+					{
+						"id": "provision_of_responsible_use_by_employees",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
+					}
+				],
+				"de": [
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
+					},
+					{
+						"id": "provision_of_internal_generative_ai_solutions",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
+					},
+					{
+						"id": "provision_of_responsible_use_by_employees",
+						"insgesamt": 55,
+						"industrie": 0,
+						"dienstleistungen": 0
 					}
 				]
 			}

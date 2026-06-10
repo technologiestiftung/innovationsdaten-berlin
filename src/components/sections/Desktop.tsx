@@ -26,14 +26,14 @@ const Desktop: React.FC<DesktopProps> = ({ chapterKey }) => {
 		<div id={chapterKey}>
 			{chapterKey === "einleitung" && <Welcome />}
 			<section className="relative w-[90vw] mx-auto flex gap-6">
-				<div className="flex-[3] h-[calc(100vh-var(--header-height))] sticky top-[var(--header-height)] flex items-center">
+				<div className="flex-[3] h-screen sticky top-0 pt-[var(--header-height)] flex items-center">
 					<div className="w-full">
 						{activeChapterItem && (
 							<Chart chapter={activeChapterItem as ChapterItem} />
 						)}
 					</div>
 				</div>
-				<div className="flex-[2]">
+				<div className="flex-[2] pt-[var(--header-height)]">
 					{chapterItems.map((chapterItem: ChapterItem) => (
 						<Card
 							key={chapterItem.id}

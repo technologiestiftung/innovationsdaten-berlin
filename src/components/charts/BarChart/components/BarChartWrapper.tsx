@@ -1,5 +1,5 @@
+import { useGlobalContext } from "@/GlobalContext";
 import { ChartData } from "@/types/global";
-import { cn } from "@/utilities";
 import React, { CSSProperties } from "react";
 
 type BarChartWrapperProps = {
@@ -15,17 +15,19 @@ const BarChartWrapper: React.FC<BarChartWrapperProps> = ({
 	collectData,
 	children,
 }: BarChartWrapperProps) => {
-	const heightOfSingleBar =
-		chart_type.includes("filter_keys") && !chart_type.includes("branchen")
-			? 95
-			: 60;
+	const { isMobile } = useGlobalContext();
+	let heightOfSingleBar = 40;
+
+	if (chart_type.includes("filter_keys") && !chart_type.includes("branchen")) {
+		heightOfSingleBar = isMobile ? 95 : 55;
+	} else {
+		heightOfSingleBar = isMobile ? 60 : 40;
+	}
+
 	return (
 		<div
 			id={id}
-			className={cn(
-				"hide-first-x-axis-tick move-recharts-label h-[var(--bar-chart-wrapper-height)]",
-				Object.keys(collectData).length <= 5 ? "lg:h-[40vh]" : "lg:h-[70vh]",
-			)}
+			className="hide-first-x-axis-tick move-recharts-label h-[var(--bar-chart-wrapper-height)]"
 			style={
 				{
 					"--bar-chart-wrapper-height": `${heightOfSingleBar * Object.keys(collectData).length}px`,

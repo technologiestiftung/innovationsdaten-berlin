@@ -53,7 +53,7 @@ const Card: React.FC<CardProps> = ({
 	}, []);
 
 	return (
-		<div className="flex items-center lg:min-h-[calc(100vh-var(--header-height))] lg:mt-[var(--header-height)]">
+		<div className="flex items-center lg:min-h-[calc(100vh-var(--header-height))]">
 			<div
 				ref={cardRef}
 				className="w-fit max-lg:mb-[10vh] lg:p-6 lg:border-[2px] border-foreground"
