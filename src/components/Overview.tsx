@@ -1,7 +1,7 @@
 import chapters from "@/data/chapter-links.json";
 
 const Overview = () => (
-	<div className="grid gap-2 max-w-[900px] lg:grid-cols-2">
+	<div className="hidden lg:grid gap-2 max-w-[900px] lg:grid-cols-2">
 		{chapters
 			.filter((chapter) => chapter.link !== "einleitung")
 			.map((chapter) => (
