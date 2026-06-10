@@ -15,7 +15,10 @@ const BarChartWrapper: React.FC<BarChartWrapperProps> = ({
 	collectData,
 	children,
 }: BarChartWrapperProps) => {
-	const heightOfSingleBar = chart_type.includes("filter_keys") ? 120 : 60;
+	const heightOfSingleBar =
+		chart_type.includes("filter_keys") && !chart_type.includes("branchen")
+			? 95
+			: 60;
 	return (
 		<div
 			id={id}

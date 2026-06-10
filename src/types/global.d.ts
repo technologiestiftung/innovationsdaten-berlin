@@ -24,7 +24,6 @@ export type ChapterItem = {
 	title: string;
 	text: string;
 	chart_type: ChartTypes;
-	bigTitleCard?: boolean;
 	chart_unit?: ChartUnits;
 	has_tooltip?: boolean;
 	hide_toggle?: boolean;

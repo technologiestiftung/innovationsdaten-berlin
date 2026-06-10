@@ -6,6 +6,7 @@ import DataToggle from "@/components/DataToggle";
 import { ChapterItem, MatrixData, Region } from "@/types/global";
 import { replaceAllCustom, sanitize } from "./utils";
 import CellWrapper from "./components/CellWrapper";
+import { cn } from "@/utilities";
 
 const MatrixChart: React.FC<ChapterItem> = ({ chartData, id }) => {
 	const { region, setRegion, isMobile } = useGlobalContext();
@@ -55,21 +56,48 @@ const MatrixChart: React.FC<ChapterItem> = ({ chartData, id }) => {
 		}
 	};
 
+	const getMobileCellSize = () => {
+		const maxCellSize = 47;
+		let cellSize = (window.innerWidth - 24) / (numberOfColumns + 1);
+		if (cellSize > maxCellSize)
+			return {
+				maxCellSizeReached: true,
+				cellSize: maxCellSize,
+			};
+		return {
+			maxCellSizeReached: false,
+			cellSize,
+		};
+	};
+
 	useEffect(() => getAndSetCellSize(), [id, chartData]);
 	useEffect(() => {
-		window.addEventListener("resize", () => getAndSetCellSize());
-		return () => window.removeEventListener("resize", getAndSetCellSize);
+		const handleResize = () => getAndSetCellSize();
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
 	}, []);
 
 	return (
 		<>
 			{isMobile && (
-				<div className="flex w-full justify-end pb-4">
+				<div
+					className={cn(
+						"flex w-full pb-4",
+						!getMobileCellSize().maxCellSizeReached && "justify-end",
+					)}
+				>
 					<div
-						className="rotate-90 w-[var(--labels-width)]"
+						className={cn(
+							"rotate-90 w-[var(--labels-width)]",
+							getMobileCellSize().maxCellSizeReached &&
+								`translate-x-[var(--translate-x)]`,
+						)}
 						style={
 							{
 								"--labels-width": `${cellSize * numberOfColumns}px`,
+								"--translate-x": `${getMobileCellSize().cellSize}px`,
 							} as CSSProperties
 						}
 					>
@@ -83,7 +111,7 @@ const MatrixChart: React.FC<ChapterItem> = ({ chartData, id }) => {
 									} as CSSProperties
 								}
 							>
-								<p className="rotate-[-15deg] origin-right text-[12px] leading-[14.4px]">
+								<p className="rotate-[-15deg] origin-right text-[12px] leading-[14.4px] whitespace-nowrap">
 									{replaceAllCustom(wordings[x as keyof typeof wordings])}
 								</p>
 							</div>
@@ -93,10 +121,14 @@ const MatrixChart: React.FC<ChapterItem> = ({ chartData, id }) => {
 			)}
 			<div
 				ref={gridRef}
-				className="grid max-lg:grid-cols-[30px_repeat(auto-fit,minmax(0,1fr))] max-lg:w-full relative [grid-template-areas:var(--areas)]"
+				className={cn(
+					"grid max-lg:w-full relative [grid-template-areas:var(--areas)]",
+					"max-lg:grid-cols-[repeat(auto-fit,var(--cell-size))]",
+				)}
 				style={
 					{
 						"--areas": templateAreas,
+						"--cell-size": `${getMobileCellSize().cellSize}px`,
 					} as CSSProperties
 				}
 			>

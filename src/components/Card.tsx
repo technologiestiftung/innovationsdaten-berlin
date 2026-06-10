@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "@/GlobalContext";
 import data from "@/data/chapters.json";
 import { ChapterItem, ChapterKeys } from "@/types/global";
-import { cn, isInRange } from "@/utilities";
+import { isInRange } from "@/utilities";
 
 type CardProps = {
 	chapterKey: ChapterKeys;
 	chapterItem: ChapterItem;
-	bigTitleCard?: boolean;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
 };
@@ -15,7 +14,6 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({
 	chapterKey,
 	chapterItem,
-	bigTitleCard,
 	onSetCurrent,
 	isNotCurrent,
 }) => {
@@ -55,12 +53,7 @@ const Card: React.FC<CardProps> = ({
 	}, []);
 
 	return (
-		<div
-			className={cn(
-				"flex items-center lg:min-h-screen",
-				bigTitleCard && "lg:py-[calc(var(--header-height)+2rem)]",
-			)}
-		>
+		<div className="flex items-center lg:min-h-[calc(100vh-var(--header-height))] lg:mt-[var(--header-height)]">
 			<div
 				ref={cardRef}
 				className="w-fit max-lg:mb-[10vh] lg:p-6 lg:border-[2px] border-foreground"

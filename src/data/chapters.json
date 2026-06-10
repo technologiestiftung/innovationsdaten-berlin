@@ -2164,7 +2164,6 @@
 			"id": "berlin_intro",
 			"title": "Was macht Berlin aus als Innovations&shy;standort?",
 			"chart_type": "big_fact",
-			"bigTitleCard": true,
 			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland.<br/><br/>Die Innovationserhebungen berichten, allerdings in unterschiedlichen Jahrgängen, eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Nutzung externen Wissens und zum Schutz des eigenen Wissens. Da nicht in allen Jahrgängen alle Daten erfragt werden, sind die Bezugsjahre hier jeweils angegeben.",
 			"bigFacts": [
 				{
@@ -4605,7 +4604,7 @@
 		},
 		{
 			"id": "most_supported_branchen",
-			"title": "Wer erhält am häufigsten Innovationsförderung?",
+			"title": "Wer erhält am häufigsten Innovations&shy;förderung?",
 			"chart_type": "bar_chart_filter_keys_branchen",
 			"chart_unit": "%",
 			"max_value": 70,
@@ -5297,11 +5296,11 @@
 		},
 		{
 			"id": "ai_use",
-			"title": "Einsatz von KI",
+			"title": "Einsatz von KI (alle Verfahren und Bereiche)",
 			"chart_type": "bar_chart",
 			"chart_unit": "%",
 			"max_value": 80,
-			"text": "KI wurde von 2016 bis 2022 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren.",
+			"text": "KI wurde seit 2016 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren. Die Nutzung durch Unternehmen in Produkten oder Verfahren ist in erheblichem Umfang gestiegen und liegt in 2025 im Durchschnitt bei 45% aller Unternehmen. Der Einsatz von KI in praktisch allen Branchen, deutet darauf hin, dass sich KI gerade zu einer neuen Basistechnologie entwickelt, die längst nicht mehr auf die Software-, Kreativ- und Beraterbranche beschränkt ist. Datenstand: 2025",
 			"chartData": {
 				"ber": {
 					"nahrung": 26,
@@ -5341,7 +5340,7 @@
 		},
 		{
 			"id": "use_ai_processes",
-			"title": "Einsatz von KI Verfahren",
+			"title": "Einsatz von KI nach Verfahren",
 			"chart_type": "matrix",
 			"text": "In 2023 ist der Einsatz von KI in Berlin immer noch moderat stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Der Anteil der von den Unternehmen selbst entwickelten KI-Verfahren ist in Berlin aber immer noch deutlich höher und Berliner Unternehmen haben auch früher begonnen, KI zu nutzen.",
 			"chartData": {
@@ -6103,11 +6102,11 @@
 		},
 		{
 			"id": "use_of_generative_ai",
-			"title": "Generative AI Nutzung",
+			"title": "Nutzung generativer KI",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
-			"text": "TBD...",
+			"text": "Generative KI wurde in 2025 in 55% aller Berliner Unternehmen eingesetzt. Die rasante Verbreitung der in der Regel auf Large Language Models beruhenden generativen KI, über die beinahe täglich in den Medien berichtet wird schlägt sich auch in den Zahlen zur tatsächlichen Nutzung nieder. Um auch die eigenverantwortliche Nutzung generativer KI durch Beschäftigte außerhalb etablierter Prozesse in Unternehmen abbilden zu können, wurde bei der Frage nach generativer KI abweichend von den vorstehenden Fragen bewusst nicht nach dem Einsatz in Produkten oder Prozessen gefragt. Die Zahlen zur Nutzung liegen deshalb nochmals höher als bei den vorstehenden Fragen und umfassen neben der eigenverantwortlichen Nutzung durch Beschäftigte auch experimentelle Nutzungen, die noch nicht in Produkte oder Prozesse eigegangen sind. Die Unterschiede sind hier zwischen den Branchen größer als zwischen Berlin und Deutschland. Selbst entwickelte generative KI spielt nur in relativ wenigen Branchen eine relevante Rolle. Bei der Nutzung generativer KI halten sich vom Unternehmen intern bereitgestellte externe Lösungen und die eigenverantwortliche Nutzung durch Beschäftigte aktuell bei großen Unterschieden zwischen den Branchen etwa die Waage. Die Prozentangaben in den Legenden meinen hier wieder % aller Unternehmen der jeweiligen Branche.",
 			"chartData": {
 				"ber": [
 					{

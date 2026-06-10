@@ -39,7 +39,6 @@ const Desktop: React.FC<DesktopProps> = ({ chapterKey }) => {
 							key={chapterItem.id}
 							chapterKey={chapterKey}
 							chapterItem={chapterItem}
-							bigTitleCard={chapterItem.bigTitleCard}
 							onSetCurrent={() =>
 								setActiveChapterItem(chapterItem as ChapterItem)
 							}
