@@ -58,15 +58,16 @@ const MatrixChart: React.FC<ChapterItem> = ({ chartData, id }) => {
 
 	const getMobileCellSize = () => {
 		const maxCellSize = 47;
-		let cellSize = (window.innerWidth - 24) / (numberOfColumns + 1);
-		if (cellSize > maxCellSize)
+		const mobileCellSize = (window.innerWidth - 24) / (numberOfColumns + 1);
+		if (mobileCellSize > maxCellSize) {
 			return {
 				maxCellSizeReached: true,
 				cellSize: maxCellSize,
 			};
+		}
 		return {
 			maxCellSizeReached: false,
-			cellSize,
+			cellSize: mobileCellSize,
 		};
 	};
 
