@@ -184,10 +184,8 @@ const BarChart: React.FC<ChapterItem> = ({
 							<RechartsToolTip
 								content={
 									<ToolTip
-										chart_type={chart_type}
 										chart_unit={chart_unit}
 										objectKeys={objectKeys}
-										activeFilter={activeFilter}
 										id={id}
 									/>
 								}
