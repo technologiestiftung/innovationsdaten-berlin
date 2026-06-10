@@ -6184,42 +6184,54 @@
 			"chartData": {
 				"ber": [
 					{
-						"id": "provision_of_external_generative_ai_solutions",
+						"id": "insgesamt",
 						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"industrie": 38,
+						"dienstleistungen": 60
 					},
 					{
 						"id": "provision_of_internal_generative_ai_solutions",
-						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"insgesamt": 12,
+						"industrie": 7,
+						"dienstleistungen": 13
+					},
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 36,
+						"industrie": 15,
+						"dienstleistungen": 42
 					},
 					{
 						"id": "provision_of_responsible_use_by_employees",
-						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"insgesamt": 30,
+						"industrie": 23,
+						"dienstleistungen": 31
 					}
 				],
 				"de": [
 					{
-						"id": "provision_of_external_generative_ai_solutions",
-						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"id": "insgesamt",
+						"insgesamt": 40,
+						"industrie": 27,
+						"dienstleistungen": 56
 					},
 					{
 						"id": "provision_of_internal_generative_ai_solutions",
-						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"insgesamt": 7,
+						"industrie": 5,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 21,
+						"industrie": 12,
+						"dienstleistungen": 33
 					},
 					{
 						"id": "provision_of_responsible_use_by_employees",
-						"insgesamt": 55,
-						"industrie": 0,
-						"dienstleistungen": 0
+						"insgesamt": 21,
+						"industrie": 15,
+						"dienstleistungen": 28
 					}
 				]
 			}
