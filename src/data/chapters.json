@@ -1,30 +1,6240 @@
-[
-	{
-		"link": "einleitung",
-		"title": "Einleitung"
-	},
-	{
-		"link": "who_innovates",
-		"title": "Wer innoviert?"
-	},
-	{
-		"link": "how_innovates",
-		"title": "Wie wird innoviert?"
-	},
-	{
-		"link": "environment",
-		"title": "Umwelt"
-	},
-	{
-		"link": "berlin",
-		"title": "Standort Berlin"
-	},
-	{
-		"link": "support",
-		"title": "Unterstützung"
-	},
-	{
-		"link": "data_ai",
-		"title": "Daten und KI"
-	}
-]
+{
+	"einleitung": [
+		{
+			"id": "big_fact_berlin",
+			"title": "Der Gesamt&shy;umsatz der befragten Berliner Unter&shy;nehmen beträgt...",
+			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, hier 2024, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
+			"chart_type": "big_fact",
+			"bigFacts": [
+				{
+					"fact": "158",
+					"unit": "Mrd. €"
+				}
+			]
+		},
+		{
+			"id": "branchen_list",
+			"title": "Die Branchen",
+			"text": "Die Abbildung zeigt die befragten Branchen. Im Wesentlichen handelt es sich dabei um das verarbeitende Gewerbe (Industrie), die Ver- und Entsorgung und die wissensintensiven Dienstleistungen. Zu letzteren gehören alle Dienstleistungsbranchen, in denen 50% oder mehr der Beschäftigten einen Hochschulabschluss haben. Aussagen zur Berliner Wirtschaft oder zur deutschen Wirtschaft in Folgenden beziehen sich selbstverständlich nur auf die Branchen, in denen die Befragung auch durchgeführt wurde, auch wenn dies nicht immer explizit genannt ist.",
+			"chart_type": "branchen_list"
+		},
+		{
+			"id": "umsatz",
+			"title": "Die umsatz&shy;stärksten Branchen",
+			"chart_type": "tree_map",
+			"text": "Gemessen am Umsatz sind die Ver- und Entsorgung einschließlich Energie und die Finanzdienstleistungen die größten unter den befragten Branchen.",
+			"chartData": [
+				{
+					"branche": "nahrung",
+					"value": 5420
+				},
+				{
+					"branche": "pharma",
+					"value": 12725
+				},
+				{
+					"branche": "holz",
+					"value": 1367
+				},
+				{
+					"branche": "metall",
+					"value": 2294
+				},
+				{
+					"branche": "elektroindustrie",
+					"value": 8632
+				},
+				{
+					"branche": "fahrzeugbau",
+					"value": 14594
+				},
+				{
+					"branche": "sonstige_konsumgueter",
+					"value": 1229
+				},
+				{
+					"branche": "energie",
+					"value": 25014
+				},
+				{
+					"branche": "telekommunikation",
+					"value": 14591
+				},
+				{
+					"branche": "software",
+					"value": 19975
+				},
+				{
+					"branche": "finanz",
+					"value": 35321
+				},
+				{
+					"branche": "unternehmensberatung",
+					"value": 5023
+				},
+				{
+					"branche": "architektur",
+					"value": 5281
+				},
+				{
+					"branche": "forschung",
+					"value": 1454
+				},
+				{
+					"branche": "kreativ",
+					"value": 5674
+				}
+			]
+		},
+		{
+			"id": "beschaeftigte",
+			"title": "Die größten Arbeitgeber",
+			"chart_type": "tree_map",
+			"text": "Gemessen an der Zahl der Beschäftigten ist die Branche Software und Datenverarbeitung, gefolgt von Architektur- und Ingenieurbüros, Medien (einschließlich Telekommunikation) und Finanzdienstleistungen der größte Arbeitgeber unter den befragten Branchen.",
+			"chartData": [
+				{
+					"branche": "nahrung",
+					"value": 16761
+				},
+				{
+					"branche": "pharma",
+					"value": 20913
+				},
+				{
+					"branche": "holz",
+					"value": 7788
+				},
+				{
+					"branche": "metall",
+					"value": 10019
+				},
+				{
+					"branche": "elektroindustrie",
+					"value": 27310
+				},
+				{
+					"branche": "fahrzeugbau",
+					"value": 28090
+				},
+				{
+					"branche": "sonstige_konsumgueter",
+					"value": 8158
+				},
+				{
+					"branche": "energie",
+					"value": 24245
+				},
+				{
+					"branche": "telekommunikation",
+					"value": 33372
+				},
+				{
+					"branche": "software",
+					"value": 103319
+				},
+				{
+					"branche": "finanz",
+					"value": 32813
+				},
+				{
+					"branche": "unternehmensberatung",
+					"value": 27996
+				},
+				{
+					"branche": "architektur",
+					"value": 44631
+				},
+				{
+					"branche": "forschung",
+					"value": 11210
+				},
+				{
+					"branche": "kreativ",
+					"value": 24570
+				}
+			]
+		}
+	],
+	"who_innovates": [
+		{
+			"id": "berliner_unternehmen",
+			"title": "Wer innoviert?",
+			"chart_type": "big_fact",
+			"text": "Innovierende oder innovative Unternehmen sind solche, die neue Produkte auf den Markt oder neue Verfahren eingeführt haben.",
+			"bigFacts": [
+				{
+					"fact": "68%",
+					"unit": "der befragten Berliner Unternehmen sind Innovatoren."
+				}
+			]
+		},
+		{
+			"id": "sektoren",
+			"title": "Wo ist Innovation gewachsen?",
+			"chart_type": "area_chart_sektoren",
+			"text": "Der Anstieg der Innovationsausgaben folgt in Berlin wie in Deutschland weitgehend dem selben Muster. Die Industrie trägt dabei den größeren Teil der Innovationsausgaben, in Berlin ist der Anteil der Dienstleistungsbranchen allerdings höher als in Deutschland und wächst auch etwas schneller.",
+			"chartData": {
+				"ber": [
+					{
+						"year": 2018,
+						"dienstleistungen": 1447,
+						"industrie": 3206
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 1408,
+						"industrie": 3187
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 1763,
+						"industrie": 3298
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 1916,
+						"industrie": 3457
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 2080,
+						"industrie": 3529
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 2277,
+						"industrie": 3910
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 2168,
+						"industrie": 3966
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"dienstleistungen": 29764,
+						"industrie": 131693
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 32891,
+						"industrie": 132986
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 34099,
+						"industrie": 126636
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 36426,
+						"industrie": 130359
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 40001,
+						"industrie": 137405
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 44152,
+						"industrie": 144860
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 48909,
+						"industrie": 149900
+					}
+				]
+			}
+		},
+		{
+			"id": "growth",
+			"title": "Welche Branchen wachsen?",
+			"chart_type": "area_chart_branchen",
+			"text": "Die Top 4 Branchen bei den Innovationsausgaben sind in Berlin wie in Deutschland seit Jahren der Maschinen- und Fahrzeugbau, die Pharma- und Chemieindustrie, die Elektroindustrie einschließlich Instrumentenbau und Messtechnik und die Branche Software und Datenverarbeitung. In Berlin wie in Deutschland hat sich der Anteil der Software und Datenverarbeitung vergrößert, wobei dieser in Berlin deutlich höher ist als in Deutschland, während in Berlin die Dominanz des Maschinen- und Fahrzeugbaues deutlich weniger ausgeprägt ist.",
+			"chartData": {
+				"ber": [
+					{
+						"year": 2018,
+						"nahrung": 30,
+						"pharma": 1436,
+						"holz": 51,
+						"metall": 64,
+						"elektroindustrie": 386,
+						"fahrzeugbau": 1096,
+						"sonstige_konsumgueter": 40,
+						"energie": 104,
+						"telekommunikation": 341,
+						"software": 379,
+						"finanz": 342,
+						"unternehmensberatung": 89,
+						"architektur": 68,
+						"forschung": 179,
+						"kreativ": 51
+					},
+					{
+						"year": 2019,
+						"nahrung": 47,
+						"pharma": 1187,
+						"holz": 96,
+						"metall": 52,
+						"elektroindustrie": 517,
+						"fahrzeugbau": 1149,
+						"sonstige_konsumgueter": 69,
+						"energie": 70,
+						"telekommunikation": 287,
+						"software": 462,
+						"finanz": 205,
+						"unternehmensberatung": 60,
+						"architektur": 103,
+						"forschung": 246,
+						"kreativ": 46
+					},
+					{
+						"year": 2020,
+						"nahrung": 42,
+						"pharma": 1286,
+						"holz": 105,
+						"metall": 26,
+						"elektroindustrie": 454,
+						"fahrzeugbau": 1256,
+						"sonstige_konsumgueter": 53,
+						"energie": 75,
+						"telekommunikation": 269,
+						"software": 754,
+						"finanz": 170,
+						"unternehmensberatung": 82,
+						"architektur": 90,
+						"forschung": 292,
+						"kreativ": 105
+					},
+					{
+						"year": 2021,
+						"nahrung": 22,
+						"pharma": 1275,
+						"holz": 131,
+						"metall": 56,
+						"elektroindustrie": 737,
+						"fahrzeugbau": 1136,
+						"sonstige_konsumgueter": 42,
+						"energie": 59,
+						"telekommunikation": 267,
+						"software": 862,
+						"finanz": 175,
+						"unternehmensberatung": 120,
+						"architektur": 127,
+						"forschung": 229,
+						"kreativ": 136
+					},
+					{
+						"year": 2022,
+						"nahrung": 48,
+						"pharma": 1524,
+						"holz": 113,
+						"metall": 88,
+						"elektroindustrie": 864,
+						"fahrzeugbau": 595,
+						"sonstige_konsumgueter": 77,
+						"energie": 220,
+						"telekommunikation": 316,
+						"software": 977,
+						"finanz": 245,
+						"unternehmensberatung": 124,
+						"architektur": 93,
+						"forschung": 269,
+						"kreativ": 56
+					},
+					{
+						"year": 2023,
+						"nahrung": 29,
+						"pharma": 1588,
+						"holz": 57,
+						"metall": 71,
+						"elektroindustrie": 966,
+						"fahrzeugbau": 949,
+						"sonstige_konsumgueter": 47,
+						"energie": 201,
+						"telekommunikation": 273,
+						"software": 1088,
+						"finanz": 266,
+						"unternehmensberatung": 102,
+						"architektur": 122,
+						"forschung": 239,
+						"kreativ": 188
+					},
+					{
+						"year": 2024,
+						"nahrung": 28,
+						"pharma": 1648,
+						"holz": 38,
+						"metall": 56,
+						"elektroindustrie": 906,
+						"fahrzeugbau": 1035,
+						"sonstige_konsumgueter": 73,
+						"energie": 182,
+						"telekommunikation": 268,
+						"software": 1175,
+						"finanz": 221,
+						"unternehmensberatung": 70,
+						"architektur": 109,
+						"forschung": 234,
+						"kreativ": 90
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"nahrung": 2087,
+						"pharma": 21405,
+						"holz": 1518,
+						"metall": 5598,
+						"elektroindustrie": 22116,
+						"fahrzeugbau": 71791,
+						"sonstige_konsumgueter": 2096,
+						"energie": 5082,
+						"telekommunikation": 5027,
+						"software": 11400,
+						"finanz": 5546,
+						"unternehmensberatung": 534,
+						"architektur": 1334,
+						"forschung": 4959,
+						"kreativ": 964
+					},
+					{
+						"year": 2019,
+						"nahrung": 2156,
+						"pharma": 22127,
+						"holz": 1544,
+						"metall": 5980,
+						"elektroindustrie": 20639,
+						"fahrzeugbau": 73974,
+						"sonstige_konsumgueter": 2435,
+						"energie": 4130,
+						"telekommunikation": 7430,
+						"software": 11698,
+						"finanz": 5380,
+						"unternehmensberatung": 419,
+						"architektur": 1573,
+						"forschung": 5383,
+						"kreativ": 1008
+					},
+					{
+						"year": 2020,
+						"nahrung": 2312,
+						"pharma": 22175,
+						"holz": 1362,
+						"metall": 5568,
+						"elektroindustrie": 20183,
+						"fahrzeugbau": 69378,
+						"sonstige_konsumgueter": 2410,
+						"energie": 3249,
+						"telekommunikation": 7501,
+						"software": 12091,
+						"finanz": 5332,
+						"unternehmensberatung": 482,
+						"architektur": 1580,
+						"forschung": 6472,
+						"kreativ": 640
+					},
+					{
+						"year": 2021,
+						"nahrung": 2211,
+						"pharma": 22627,
+						"holz": 1283,
+						"metall": 5490,
+						"elektroindustrie": 20782,
+						"fahrzeugbau": 71413,
+						"sonstige_konsumgueter": 2709,
+						"energie": 3844,
+						"telekommunikation": 7139,
+						"software": 14195,
+						"finanz": 5351,
+						"unternehmensberatung": 616,
+						"architektur": 1818,
+						"forschung": 6634,
+						"kreativ": 673
+					},
+					{
+						"year": 2022,
+						"nahrung": 2305,
+						"pharma": 23473,
+						"holz": 1381,
+						"metall": 5822,
+						"elektroindustrie": 21744,
+						"fahrzeugbau": 75828,
+						"sonstige_konsumgueter": 2829,
+						"energie": 4022,
+						"telekommunikation": 6336,
+						"software": 16594,
+						"finanz": 6631,
+						"unternehmensberatung": 581,
+						"architektur": 1847,
+						"forschung": 7198,
+						"kreativ": 815
+					},
+					{
+						"year": 2023,
+						"nahrung": 2439,
+						"pharma": 24481,
+						"holz": 1176,
+						"metall": 6582,
+						"elektroindustrie": 23553,
+						"fahrzeugbau": 79788,
+						"sonstige_konsumgueter": 2578,
+						"energie": 4263,
+						"telekommunikation": 6669,
+						"software": 18170,
+						"finanz": 7438,
+						"unternehmensberatung": 656,
+						"architektur": 2281,
+						"forschung": 8047,
+						"kreativ": 891
+					},
+					{
+						"year": 2024,
+						"nahrung": 2401,
+						"pharma": 24664,
+						"holz": 1246,
+						"metall": 6749,
+						"elektroindustrie": 24166,
+						"fahrzeugbau": 82644,
+						"sonstige_konsumgueter": 2799,
+						"energie": 5231,
+						"telekommunikation": 6098,
+						"software": 20317,
+						"finanz": 7912,
+						"unternehmensberatung": 657,
+						"architektur": 2086,
+						"forschung": 10909,
+						"kreativ": 930
+					}
+				]
+			}
+		},
+		{
+			"id": "fue_spendings",
+			"title": "Ausgaben für Forschung und Entwicklung (FuE)",
+			"chart_type": "area_chart_branchen",
+			"text": "In 2024 sind die FuE-Ausgaben der Berliner Wirtschaft auf 3,72 Mrd. € gestiegen. Der größte Teil der FuE-Ausgaben wurde dabei von den Banchen Pharma und Chemie, Software und Datenverarbeitung, Elektro- und Instrumententechnik und Maschinen- und Fahrzeugbau getragen. Die Industrie trug nicht ganz 2/3 der FuE-Ausgaben. In Deutschland ist das Bild ähnlich, aber deutlich industrielastiger und mit deutlicher Dominanz von Maschinen- und Fahrzeugbau.",
+			"chartData": {
+				"ber": [
+					{
+						"year": 2018,
+						"dienstleistungen": 708,
+						"industrie": 1700,
+						"nahrung": 4,
+						"pharma": 866,
+						"holz": 29,
+						"metall": 33,
+						"elektroindustrie": 243,
+						"fahrzeugbau": 458,
+						"sonstige_konsumgueter": 24,
+						"energie": 43,
+						"telekommunikation": 117,
+						"software": 218,
+						"finanz": 116,
+						"unternehmensberatung": 33,
+						"architektur": 26,
+						"forschung": 165,
+						"kreativ": 33
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 796,
+						"industrie": 1759,
+						"nahrung": 5,
+						"pharma": 726,
+						"holz": 52,
+						"metall": 32,
+						"elektroindustrie": 359,
+						"fahrzeugbau": 492,
+						"sonstige_konsumgueter": 50,
+						"energie": 42,
+						"telekommunikation": 92,
+						"software": 279,
+						"finanz": 93,
+						"unternehmensberatung": 38,
+						"architektur": 48,
+						"forschung": 226,
+						"kreativ": 21
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 941,
+						"industrie": 1688,
+						"nahrung": 7,
+						"pharma": 747,
+						"holz": 55,
+						"metall": 22,
+						"elektroindustrie": 316,
+						"fahrzeugbau": 476,
+						"sonstige_konsumgueter": 32,
+						"energie": 33,
+						"telekommunikation": 127,
+						"software": 408,
+						"finanz": 48,
+						"unternehmensberatung": 55,
+						"architektur": 39,
+						"forschung": 219,
+						"kreativ": 45
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 1176,
+						"industrie": 1866,
+						"nahrung": 4,
+						"pharma": 759,
+						"holz": 71,
+						"metall": 41,
+						"elektroindustrie": 561,
+						"fahrzeugbau": 373,
+						"sonstige_konsumgueter": 25,
+						"energie": 32,
+						"telekommunikation": 130,
+						"software": 633,
+						"finanz": 23,
+						"unternehmensberatung": 80,
+						"architektur": 67,
+						"forschung": 176,
+						"kreativ": 67
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 1291,
+						"industrie": 2124,
+						"nahrung": 3,
+						"pharma": 866,
+						"holz": 68,
+						"metall": 62,
+						"elektroindustrie": 653,
+						"fahrzeugbau": 391,
+						"sonstige_konsumgueter": 56,
+						"energie": 25,
+						"telekommunikation": 157,
+						"software": 675,
+						"finanz": 64,
+						"unternehmensberatung": 95,
+						"architektur": 45,
+						"forschung": 224,
+						"kreativ": 32
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 1332,
+						"industrie": 2295,
+						"nahrung": 15,
+						"pharma": 916,
+						"holz": 33,
+						"metall": 51,
+						"elektroindustrie": 718,
+						"fahrzeugbau": 501,
+						"sonstige_konsumgueter": 33,
+						"energie": 28,
+						"telekommunikation": 170,
+						"software": 814,
+						"finanz": 79,
+						"unternehmensberatung": 65,
+						"architektur": 48,
+						"forschung": 124,
+						"kreativ": 32
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 1439,
+						"industrie": 2286,
+						"nahrung": 4,
+						"pharma": 943,
+						"holz": 22,
+						"metall": 17,
+						"elektroindustrie": 682,
+						"fahrzeugbau": 521,
+						"sonstige_konsumgueter": 50,
+						"energie": 46,
+						"telekommunikation": 155,
+						"software": 937,
+						"finanz": 40,
+						"unternehmensberatung": 60,
+						"architektur": 44,
+						"forschung": 156,
+						"kreativ": 47
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"dienstleistungen": 14310,
+						"industrie": 81305,
+						"nahrung": 449,
+						"pharma": 13732,
+						"holz": 547,
+						"metall": 2069,
+						"elektroindustrie": 16259,
+						"fahrzeugbau": 46479,
+						"sonstige_konsumgueter": 1324,
+						"energie": 448,
+						"telekommunikation": 930,
+						"software": 6838,
+						"finanz": 1588,
+						"unternehmensberatung": 190,
+						"architektur": 587,
+						"forschung": 3924,
+						"kreativ": 252
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 17004,
+						"industrie": 84833,
+						"nahrung": 621,
+						"pharma": 14767,
+						"holz": 577,
+						"metall": 2556,
+						"elektroindustrie": 15615,
+						"fahrzeugbau": 48702,
+						"sonstige_konsumgueter": 1454,
+						"energie": 542,
+						"telekommunikation": 1186,
+						"software": 7722,
+						"finanz": 2118,
+						"unternehmensberatung": 197,
+						"architektur": 709,
+						"forschung": 4593,
+						"kreativ": 479
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 20085,
+						"industrie": 81340,
+						"nahrung": 638,
+						"pharma": 14779,
+						"holz": 474,
+						"metall": 2460,
+						"elektroindustrie": 15545,
+						"fahrzeugbau": 45509,
+						"sonstige_konsumgueter": 1458,
+						"energie": 477,
+						"telekommunikation": 2005,
+						"software": 8869,
+						"finanz": 2213,
+						"unternehmensberatung": 222,
+						"architektur": 660,
+						"forschung": 5826,
+						"kreativ": 289
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 21927,
+						"industrie": 85094,
+						"nahrung": 632,
+						"pharma": 15118,
+						"holz": 434,
+						"metall": 2579,
+						"elektroindustrie": 16069,
+						"fahrzeugbau": 48011,
+						"sonstige_konsumgueter": 1726,
+						"energie": 525,
+						"telekommunikation": 2156,
+						"software": 9691,
+						"finanz": 2613,
+						"unternehmensberatung": 321,
+						"architektur": 1032,
+						"forschung": 5766,
+						"kreativ": 348
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 24381,
+						"industrie": 88189,
+						"nahrung": 558,
+						"pharma": 15805,
+						"holz": 546,
+						"metall": 2551,
+						"elektroindustrie": 16284,
+						"fahrzeugbau": 50069,
+						"sonstige_konsumgueter": 1699,
+						"energie": 676,
+						"telekommunikation": 1798,
+						"software": 11579,
+						"finanz": 2906,
+						"unternehmensberatung": 400,
+						"architektur": 1055,
+						"forschung": 6376,
+						"kreativ": 267
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 28027,
+						"industrie": 93146,
+						"nahrung": 747,
+						"pharma": 16642,
+						"holz": 446,
+						"metall": 3119,
+						"elektroindustrie": 17828,
+						"fahrzeugbau": 52334,
+						"sonstige_konsumgueter": 1442,
+						"energie": 588,
+						"telekommunikation": 1893,
+						"software": 13600,
+						"finanz": 3334,
+						"unternehmensberatung": 353,
+						"architektur": 1419,
+						"forschung": 6950,
+						"kreativ": 479
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 31451,
+						"industrie": 96747,
+						"nahrung": 775,
+						"pharma": 17535,
+						"holz": 554,
+						"metall": 3200,
+						"elektroindustrie": 18091,
+						"fahrzeugbau": 54372,
+						"sonstige_konsumgueter": 1605,
+						"energie": 616,
+						"telekommunikation": 1552,
+						"software": 14867,
+						"finanz": 3388,
+						"unternehmensberatung": 447,
+						"architektur": 1044,
+						"forschung": 9634,
+						"kreativ": 520
+					}
+				]
+			}
+		},
+		{
+			"id": "inno_ausgaben_2022",
+			"title": "Innovations&shy;ausgaben und Veränderung zum Vorjahr",
+			"chart_type": "bar_chart_delta",
+			"chart_unit": "€",
+			"text": "Die Abbildung zeigt, wie sich die Innovationsausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
+			"max_value": {
+				"ber": 1700,
+				"de": 85000
+			},
+			"chartData": {
+				"ber": {
+					"nahrung": {
+						"value": 29,
+						"delta": -1
+					},
+					"pharma": {
+						"value": 1588,
+						"delta": 60
+					},
+					"holz": {
+						"value": 57,
+						"delta": -19
+					},
+					"metall": {
+						"value": 71,
+						"delta": -15
+					},
+					"elektroindustrie": {
+						"value": 966,
+						"delta": -60
+					},
+					"fahrzeugbau": {
+						"value": 949,
+						"delta": 86
+					},
+					"sonstige_konsumgueter": {
+						"value": 47,
+						"delta": 26
+					},
+					"energie": {
+						"value": 201,
+						"delta": -19
+					},
+					"telekommunikation": {
+						"value": 273,
+						"delta": -5
+					},
+					"software": {
+						"value": 1088,
+						"delta": 87
+					},
+					"finanz": {
+						"value": 266,
+						"delta": -45
+					},
+					"unternehmensberatung": {
+						"value": 102,
+						"delta": -32
+					},
+					"architektur": {
+						"value": 122,
+						"delta": -13
+					},
+					"forschung": {
+						"value": 239,
+						"delta": -5
+					},
+					"kreativ": {
+						"value": 188,
+						"delta": -98
+					}
+				},
+				"de": {
+					"nahrung": {
+						"value": 2439,
+						"delta": -38
+					},
+					"pharma": {
+						"value": 24481,
+						"delta": 183
+					},
+					"holz": {
+						"value": 1176,
+						"delta": 70
+					},
+					"metall": {
+						"value": 6582,
+						"delta": 167
+					},
+					"elektroindustrie": {
+						"value": 23553,
+						"delta": 613
+					},
+					"fahrzeugbau": {
+						"value": 79788,
+						"delta": 2856
+					},
+					"sonstige_konsumgueter": {
+						"value": 2578,
+						"delta": 221
+					},
+					"energie": {
+						"value": 4263,
+						"delta": 968
+					},
+					"telekommunikation": {
+						"value": 6669,
+						"delta": -571
+					},
+					"software": {
+						"value": 18170,
+						"delta": 2147
+					},
+					"finanz": {
+						"value": 7438,
+						"delta": 474
+					},
+					"unternehmensberatung": {
+						"value": 656,
+						"delta": 1
+					},
+					"architektur": {
+						"value": 2281,
+						"delta": -195
+					},
+					"forschung": {
+						"value": 8047,
+						"delta": 2862
+					},
+					"kreativ": {
+						"value": 891,
+						"delta": 39
+					}
+				}
+			}
+		},
+		{
+			"id": "fue_spendings_delta",
+			"title": "FuE-Ausgaben und Veränderung zum Vorjahr",
+			"chart_type": "bar_chart_delta",
+			"chart_unit": "€",
+			"text": "Die Abbildung zeigt, wie sich die FuE-Ausgaben im Vergleich zum Vorjahr in den einzelnen Branchen entwickelt haben.",
+			"max_value": {
+				"ber": 1000,
+				"de": 55000
+			},
+			"chartData": {
+				"ber": {
+					"nahrung": {
+						"value": 15,
+						"delta": -11
+					},
+					"pharma": {
+						"value": 916,
+						"delta": 27
+					},
+					"holz": {
+						"value": 33,
+						"delta": -11
+					},
+					"metall": {
+						"value": 51,
+						"delta": -34
+					},
+					"elektroindustrie": {
+						"value": 718,
+						"delta": -36
+					},
+					"fahrzeugbau": {
+						"value": 501,
+						"delta": 20
+					},
+					"sonstige_konsumgueter": {
+						"value": 33,
+						"delta": 17
+					},
+					"energie": {
+						"value": 28,
+						"delta": 18
+					},
+					"telekommunikation": {
+						"value": 170,
+						"delta": -15
+					},
+					"software": {
+						"value": 814,
+						"delta": 123
+					},
+					"finanz": {
+						"value": 79,
+						"delta": -39
+					},
+					"unternehmensberatung": {
+						"value": 65,
+						"delta": -5
+					},
+					"architektur": {
+						"value": 48,
+						"delta": -4
+					},
+					"forschung": {
+						"value": 124,
+						"delta": 32
+					},
+					"kreativ": {
+						"value": 32,
+						"delta": 15
+					}
+				},
+				"de": {
+					"nahrung": {
+						"value": 747,
+						"delta": 28
+					},
+					"pharma": {
+						"value": 16642,
+						"delta": 893
+					},
+					"holz": {
+						"value": 446,
+						"delta": 108
+					},
+					"metall": {
+						"value": 3119,
+						"delta": 81
+					},
+					"elektroindustrie": {
+						"value": 17828,
+						"delta": 263
+					},
+					"fahrzeugbau": {
+						"value": 52334,
+						"delta": 2038
+					},
+					"sonstige_konsumgueter": {
+						"value": 1442,
+						"delta": 163
+					},
+					"energie": {
+						"value": 588,
+						"delta": 28
+					},
+					"telekommunikation": {
+						"value": 1893,
+						"delta": -341
+					},
+					"software": {
+						"value": 13600,
+						"delta": 1267
+					},
+					"finanz": {
+						"value": 3334,
+						"delta": 54
+					},
+					"unternehmensberatung": {
+						"value": 353,
+						"delta": 94
+					},
+					"architektur": {
+						"value": 1419,
+						"delta": -375
+					},
+					"forschung": {
+						"value": 6950,
+						"delta": 2684
+					},
+					"kreativ": {
+						"value": 479,
+						"delta": 41
+					}
+				}
+			}
+		},
+		{
+			"id": "inno_ausgaben_2023",
+			"title": "Innovations&shy;ausgaben 2023",
+			"chart_type": "bar_chart",
+			"chart_unit": "€",
+			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
+			"max_value": {
+				"ber": 1700,
+				"de": 85000
+			},
+			"chartData": {
+				"ber": {
+					"nahrung": 28,
+					"pharma": 1648,
+					"holz": 38,
+					"metall": 56,
+					"elektroindustrie": 906,
+					"fahrzeugbau": 1035,
+					"sonstige_konsumgueter": 73,
+					"energie": 182,
+					"telekommunikation": 268,
+					"software": 1175,
+					"finanz": 221,
+					"unternehmensberatung": 70,
+					"architektur": 109,
+					"forschung": 234,
+					"kreativ": 90
+				},
+				"de": {
+					"nahrung": 2401,
+					"pharma": 24664,
+					"holz": 1246,
+					"metall": 6749,
+					"elektroindustrie": 24166,
+					"fahrzeugbau": 82644,
+					"sonstige_konsumgueter": 2799,
+					"energie": 5231,
+					"telekommunikation": 6098,
+					"software": 20317,
+					"finanz": 7912,
+					"unternehmensberatung": 657,
+					"architektur": 2086,
+					"forschung": 10909,
+					"kreativ": 930
+				}
+			}
+		},
+		{
+			"id": "fue_ausgaben_2023",
+			"title": "Forschungs- und Ent&shy;wicklungs&shy;ausgaben 2023",
+			"chart_type": "bar_chart",
+			"chart_unit": "€",
+			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
+			"max_value": {
+				"ber": 1000,
+				"de": 55000
+			},
+			"chartData": {
+				"ber": {
+					"nahrung": 4,
+					"pharma": 943,
+					"holz": 22,
+					"metall": 17,
+					"elektroindustrie": 682,
+					"fahrzeugbau": 521,
+					"sonstige_konsumgueter": 50,
+					"energie": 46,
+					"telekommunikation": 155,
+					"software": 937,
+					"finanz": 40,
+					"unternehmensberatung": 60,
+					"architektur": 44,
+					"forschung": 156,
+					"kreativ": 47
+				},
+				"de": {
+					"nahrung": 775,
+					"pharma": 17535,
+					"holz": 554,
+					"metall": 3200,
+					"elektroindustrie": 18091,
+					"fahrzeugbau": 54372,
+					"sonstige_konsumgueter": 1605,
+					"energie": 616,
+					"telekommunikation": 1552,
+					"software": 14867,
+					"finanz": 3388,
+					"unternehmensberatung": 447,
+					"architektur": 1044,
+					"forschung": 9634,
+					"kreativ": 520
+				}
+			}
+		},
+		{
+			"id": "inno_intensitaet",
+			"title": "Innovations&shy;intensität",
+			"chart_type": "bar_chart_stacked",
+			"chart_unit": "%",
+			"max_value": 45,
+			"has_tooltip": true,
+			"text": "Die Innovationsintensität bzw. die FuE-Intensität geben an, welchen Anteil am Umsatz der jeweiligen Branche die Innovationsausgaben bzw. die Forschungs- und Entwicklungsausgaben ausmachen. Zu den Spitzentechnologien werden Branchen gezählt, deren FuE-Intensität über 7% liegt, einige Quellen setzen dies bereits bei 5% an.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"innovations_intensitaet": 0.52,
+						"fue_intensitaet": 0.07,
+						"differenz_intensitaet": 0.45
+					},
+					{
+						"id": "pharma",
+						"innovations_intensitaet": 12.95,
+						"fue_intensitaet": 7.41,
+						"differenz_intensitaet": 5.54
+					},
+					{
+						"id": "holz",
+						"innovations_intensitaet": 2.78,
+						"fue_intensitaet": 1.61,
+						"differenz_intensitaet": 1.17
+					},
+					{
+						"id": "metall",
+						"innovations_intensitaet": 2.44,
+						"fue_intensitaet": 0.74,
+						"differenz_intensitaet": 1.7
+					},
+					{
+						"id": "elektroindustrie",
+						"innovations_intensitaet": 10.5,
+						"fue_intensitaet": 7.9,
+						"differenz_intensitaet": 2.6
+					},
+					{
+						"id": "fahrzeugbau",
+						"innovations_intensitaet": 7.09,
+						"fue_intensitaet": 3.57,
+						"differenz_intensitaet": 3.52
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"innovations_intensitaet": 5.94,
+						"fue_intensitaet": 4.07,
+						"differenz_intensitaet": 1.87
+					},
+					{
+						"id": "energie",
+						"innovations_intensitaet": 0.73,
+						"fue_intensitaet": 0.18,
+						"differenz_intensitaet": 0.55
+					},
+					{
+						"id": "telekommunikation",
+						"innovations_intensitaet": 1.84,
+						"fue_intensitaet": 1.06,
+						"differenz_intensitaet": 0.78
+					},
+					{
+						"id": "software",
+						"innovations_intensitaet": 5.88,
+						"fue_intensitaet": 4.69,
+						"differenz_intensitaet": 1.19
+					},
+					{
+						"id": "finanz",
+						"innovations_intensitaet": 0.63,
+						"fue_intensitaet": 0.11,
+						"differenz_intensitaet": 0.52
+					},
+					{
+						"id": "unternehmensberatung",
+						"innovations_intensitaet": 1.39,
+						"fue_intensitaet": 1.19,
+						"differenz_intensitaet": 0.2
+					},
+					{
+						"id": "architektur",
+						"innovations_intensitaet": 2.06,
+						"fue_intensitaet": 0.83,
+						"differenz_intensitaet": 1.23
+					},
+					{
+						"id": "forschung",
+						"innovations_intensitaet": 16.09,
+						"fue_intensitaet": 10.73,
+						"differenz_intensitaet": 5.36
+					},
+					{
+						"id": "kreativ",
+						"innovations_intensitaet": 1.59,
+						"fue_intensitaet": 0.83,
+						"differenz_intensitaet": 0.76
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"innovations_intensitaet": 0.93,
+						"fue_intensitaet": 0.3,
+						"differenz_intensitaet": 0.63
+					},
+					{
+						"id": "pharma",
+						"innovations_intensitaet": 5.25,
+						"fue_intensitaet": 3.73,
+						"differenz_intensitaet": 1.52
+					},
+					{
+						"id": "holz",
+						"innovations_intensitaet": 1.42,
+						"fue_intensitaet": 0.63,
+						"differenz_intensitaet": 0.8
+					},
+					{
+						"id": "metall",
+						"innovations_intensitaet": 2,
+						"fue_intensitaet": 0.95,
+						"differenz_intensitaet": 1.05
+					},
+					{
+						"id": "elektroindustrie",
+						"innovations_intensitaet": 10.3,
+						"fue_intensitaet": 7.71,
+						"differenz_intensitaet": 2.59
+					},
+					{
+						"id": "fahrzeugbau",
+						"innovations_intensitaet": 7.69,
+						"fue_intensitaet": 5.06,
+						"differenz_intensitaet": 2.63
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"innovations_intensitaet": 4.11,
+						"fue_intensitaet": 2.36,
+						"differenz_intensitaet": 1.75
+					},
+					{
+						"id": "energie",
+						"innovations_intensitaet": 0.55,
+						"fue_intensitaet": 0.06,
+						"differenz_intensitaet": 0.49
+					},
+					{
+						"id": "telekommunikation",
+						"innovations_intensitaet": 4.2,
+						"fue_intensitaet": 1.07,
+						"differenz_intensitaet": 3.13
+					},
+					{
+						"id": "software",
+						"innovations_intensitaet": 7.92,
+						"fue_intensitaet": 5.79,
+						"differenz_intensitaet": 2.13
+					},
+					{
+						"id": "finanz",
+						"innovations_intensitaet": 0.75,
+						"fue_intensitaet": 0.32,
+						"differenz_intensitaet": 0.43
+					},
+					{
+						"id": "unternehmensberatung",
+						"innovations_intensitaet": 1.54,
+						"fue_intensitaet": 1.05,
+						"differenz_intensitaet": 0.49
+					},
+					{
+						"id": "architektur",
+						"innovations_intensitaet": 1.96,
+						"fue_intensitaet": 0.98,
+						"differenz_intensitaet": 0.98
+					},
+					{
+						"id": "forschung",
+						"innovations_intensitaet": 42.55,
+						"fue_intensitaet": 37.57,
+						"differenz_intensitaet": 4.98
+					},
+					{
+						"id": "kreativ",
+						"innovations_intensitaet": 1.5,
+						"fue_intensitaet": 0.84,
+						"differenz_intensitaet": 0.66
+					}
+				]
+			}
+		}
+	],
+	"how_innovates": [
+		{
+			"id": "how_innovates_intro",
+			"title": "Wie wird innoviert?",
+			"chart_type": "big_fact",
+			"text": "Produktinnovationen sind Produkte, die in den letzten drei Jahren von den Unternehmen neu ins Sortiment aufgenommen wurden. Prozessinnovationen sind Innovationen, die einen Geschäftsprozess nach Kosten, Geschwindigkeit oder Qualität verbessern, dazu gehören nicht nur die industriellen Herstellungsprozesse, sondern auch Prozesse zur Erbringung von Dienstleistungen, Logistikmethoden, IT-Prozesse, Betriebsorganisation oder Managementprozesse.",
+			"bigFacts": [
+				{
+					"fact": "40%",
+					"unit": "der Berliner Unternehmen betreiben Produktinnovation"
+				},
+				{
+					"fact": "62%",
+					"unit": "setzen Prozessinnovationen um."
+				}
+			]
+		},
+		{
+			"id": "process_product_innovators",
+			"title": "Innovatoren&shy;quote",
+			"chart_type": "bar_chart_filter_keys_branchen",
+			"chart_unit": "%",
+			"max_value": 100,
+			"text": "Produktinnovationen zielen darauf ab, Umsätze mit neuen oder verbesserten Produkten zu erzielen. Prozessinnovationen zielen darauf ab, Prozesse im eigenen Unternehmen oder zwischen Unternehmen zu verändern. Dabei kann es sich um Kostensenkung, Beschleunigung der Prozesse oder um die Veränderung der Prozessqualität handeln. Die hier gezeigte Innovatorenquote gibt an, welcher Anteil an Unternehmen einer Branche innerhalb der letzten drei Jahre eine Produktinnovation oder eine Prozessinnovation oder beides umgesetzt hat.",
+			"sortsAfterOnStart": "process_innovation_share",
+			"chartData": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"process_innovation_share": 32,
+						"product_innovation_share": 16
+					},
+					{
+						"id": "pharma",
+						"process_innovation_share": 64,
+						"product_innovation_share": 50
+					},
+					{
+						"id": "holz",
+						"process_innovation_share": 29,
+						"product_innovation_share": 12
+					},
+					{
+						"id": "metall",
+						"process_innovation_share": 43,
+						"product_innovation_share": 18
+					},
+					{
+						"id": "elektroindustrie",
+						"process_innovation_share": 64,
+						"product_innovation_share": 65
+					},
+					{
+						"id": "fahrzeugbau",
+						"process_innovation_share": 62,
+						"product_innovation_share": 55
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"process_innovation_share": 39,
+						"product_innovation_share": 24
+					},
+					{
+						"id": "energie",
+						"process_innovation_share": 44,
+						"product_innovation_share": 22
+					},
+					{
+						"id": "telekommunikation",
+						"process_innovation_share": 65,
+						"product_innovation_share": 42
+					},
+					{
+						"id": "software",
+						"process_innovation_share": 70,
+						"product_innovation_share": 55
+					},
+					{
+						"id": "finanz",
+						"process_innovation_share": 50,
+						"product_innovation_share": 33
+					},
+					{
+						"id": "unternehmensberatung",
+						"process_innovation_share": 84,
+						"product_innovation_share": 45
+					},
+					{
+						"id": "architektur",
+						"process_innovation_share": 56,
+						"product_innovation_share": 28
+					},
+					{
+						"id": "forschung",
+						"process_innovation_share": 56,
+						"product_innovation_share": 21
+					},
+					{
+						"id": "kreativ",
+						"process_innovation_share": 71,
+						"product_innovation_share": 35
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"process_innovation_share": 45,
+						"product_innovation_share": 12
+					},
+					{
+						"id": "pharma",
+						"process_innovation_share": 56,
+						"product_innovation_share": 40
+					},
+					{
+						"id": "holz",
+						"process_innovation_share": 48,
+						"product_innovation_share": 21
+					},
+					{
+						"id": "metall",
+						"process_innovation_share": 45,
+						"product_innovation_share": 16
+					},
+					{
+						"id": "elektroindustrie",
+						"process_innovation_share": 60,
+						"product_innovation_share": 48
+					},
+					{
+						"id": "fahrzeugbau",
+						"process_innovation_share": 54,
+						"product_innovation_share": 37
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"process_innovation_share": 48,
+						"product_innovation_share": 21
+					},
+					{
+						"id": "energie",
+						"process_innovation_share": 49,
+						"product_innovation_share": 17
+					},
+					{
+						"id": "telekommunikation",
+						"process_innovation_share": 59,
+						"product_innovation_share": 34
+					},
+					{
+						"id": "software",
+						"process_innovation_share": 65,
+						"product_innovation_share": 53
+					},
+					{
+						"id": "finanz",
+						"process_innovation_share": 43,
+						"product_innovation_share": 35
+					},
+					{
+						"id": "unternehmensberatung",
+						"process_innovation_share": 73,
+						"product_innovation_share": 27
+					},
+					{
+						"id": "architektur",
+						"process_innovation_share": 56,
+						"product_innovation_share": 34
+					},
+					{
+						"id": "forschung",
+						"process_innovation_share": 56,
+						"product_innovation_share": 41
+					},
+					{
+						"id": "kreativ",
+						"process_innovation_share": 57,
+						"product_innovation_share": 33
+					}
+				]
+			}
+		},
+		{
+			"id": "added_value_through_product_innovation",
+			"title": "Mehrwert durch Produkt&shy;innovation",
+			"chart_type": "bar_chart_stacked",
+			"chart_unit": "%",
+			"has_tooltip": true,
+			"max_value": 40,
+			"text": "Der Anteil der Produktneuheiten am Umsatz ist zwischen den Branchen stark unterschiedlich und relativ branchentypisch. Das hängt damit zusammen, dass die Produktzyklen (die Lebensdauer neuer Produkte) branchen- und produktspezifisch sind.",
+			"sortsAfter": ["insgesamt", "umsatz_markt_neuheiten"],
+			"chartData": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 5.7
+					},
+					{
+						"id": "pharma",
+						"umsatz_markt_neuheiten": 3.1,
+						"umsatz_nachahmer_innovationen": 4.4
+					},
+					{
+						"id": "holz",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 2.8
+					},
+					{
+						"id": "metall",
+						"umsatz_markt_neuheiten": 1.9,
+						"umsatz_nachahmer_innovationen": 5.8
+					},
+					{
+						"id": "elektroindustrie",
+						"umsatz_markt_neuheiten": 5.2,
+						"umsatz_nachahmer_innovationen": 16.6
+					},
+					{
+						"id": "fahrzeugbau",
+						"umsatz_markt_neuheiten": 9.8,
+						"umsatz_nachahmer_innovationen": 26.5
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"umsatz_markt_neuheiten": 0.7,
+						"umsatz_nachahmer_innovationen": 3.9
+					},
+					{
+						"id": "energie",
+						"umsatz_markt_neuheiten": 0.4,
+						"umsatz_nachahmer_innovationen": 2.2
+					},
+					{
+						"id": "telekommunikation",
+						"umsatz_markt_neuheiten": 2.9,
+						"umsatz_nachahmer_innovationen": 17.4
+					},
+					{
+						"id": "software",
+						"umsatz_markt_neuheiten": 3.7,
+						"umsatz_nachahmer_innovationen": 8
+					},
+					{
+						"id": "finanz",
+						"umsatz_markt_neuheiten": 1.8,
+						"umsatz_nachahmer_innovationen": 5.6
+					},
+					{
+						"id": "unternehmensberatung",
+						"umsatz_markt_neuheiten": 0.9,
+						"umsatz_nachahmer_innovationen": 2.5
+					},
+					{
+						"id": "architektur",
+						"umsatz_markt_neuheiten": 1.9,
+						"umsatz_nachahmer_innovationen": 10
+					},
+					{
+						"id": "forschung",
+						"umsatz_markt_neuheiten": 4.7,
+						"umsatz_nachahmer_innovationen": 4.1
+					},
+					{
+						"id": "kreativ",
+						"umsatz_markt_neuheiten": 0.7,
+						"umsatz_nachahmer_innovationen": 4.3
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"umsatz_markt_neuheiten": 1,
+						"umsatz_nachahmer_innovationen": 6.2
+					},
+					{
+						"id": "pharma",
+						"umsatz_markt_neuheiten": 2.3,
+						"umsatz_nachahmer_innovationen": 9.2
+					},
+					{
+						"id": "holz",
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 4.6
+					},
+					{
+						"id": "metall",
+						"umsatz_markt_neuheiten": 1.5,
+						"umsatz_nachahmer_innovationen": 6.2
+					},
+					{
+						"id": "elektroindustrie",
+						"umsatz_markt_neuheiten": 5.5,
+						"umsatz_nachahmer_innovationen": 13.9
+					},
+					{
+						"id": "fahrzeugbau",
+						"umsatz_markt_neuheiten": 11,
+						"umsatz_nachahmer_innovationen": 25
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"umsatz_markt_neuheiten": 4.7,
+						"umsatz_nachahmer_innovationen": 6.6
+					},
+					{
+						"id": "energie",
+						"umsatz_markt_neuheiten": 1.4,
+						"umsatz_nachahmer_innovationen": 2.4
+					},
+					{
+						"id": "telekommunikation",
+						"umsatz_markt_neuheiten": 2.5,
+						"umsatz_nachahmer_innovationen": 11.5
+					},
+					{
+						"id": "software",
+						"umsatz_markt_neuheiten": 6.5,
+						"umsatz_nachahmer_innovationen": 24.9
+					},
+					{
+						"id": "finanz",
+						"umsatz_markt_neuheiten": 1.6,
+						"umsatz_nachahmer_innovationen": 6.6
+					},
+					{
+						"id": "unternehmensberatung",
+						"umsatz_markt_neuheiten": 3.9,
+						"umsatz_nachahmer_innovationen": 10.4
+					},
+					{
+						"id": "architektur",
+						"umsatz_markt_neuheiten": 3,
+						"umsatz_nachahmer_innovationen": 5.5
+					},
+					{
+						"id": "forschung",
+						"umsatz_markt_neuheiten": 29,
+						"umsatz_nachahmer_innovationen": 10.3
+					},
+					{
+						"id": "kreativ",
+						"umsatz_markt_neuheiten": 0.9,
+						"umsatz_nachahmer_innovationen": 8.1
+					}
+				]
+			}
+		},
+		{
+			"id": "revenue_from_new_products",
+			"title": "Umsatz mit Produkt&shy;neuheiten",
+			"chart_type": "area_chart_branchen",
+			"text": "Die befragten Berliner Unternehmen haben 2024 rund 18.58 Mrd. Umsatz mit neuen Produkten gemacht, moderat weniger als im Vorjahr. Sie liegen damit im Bundestrend. Der Anteil des Dienstleistungssektors an diesen Umsätzen liegt in Berlin bei rund der Hälfte, während er bundesweit nur rund 1/3 ausmachte.",
+			"chartData": {
+				"ber": [
+					{
+						"year": 2018,
+						"dienstleistungen": 4730,
+						"industrie": 9222,
+						"nahrung": 465,
+						"pharma": 1170,
+						"holz": 86,
+						"metall": 129,
+						"elektroindustrie": 1407,
+						"fahrzeugbau": 5094,
+						"sonstige_konsumgueter": 167,
+						"energie": 704,
+						"telekommunikation": 1239,
+						"software": 1247,
+						"finanz": 1073,
+						"unternehmensberatung": 439,
+						"architektur": 174,
+						"forschung": 292,
+						"kreativ": 266
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 6691,
+						"industrie": 7683,
+						"nahrung": 63,
+						"pharma": 741,
+						"holz": 126,
+						"metall": 93,
+						"elektroindustrie": 758,
+						"fahrzeugbau": 5170,
+						"sonstige_konsumgueter": 89,
+						"energie": 643,
+						"telekommunikation": 1701,
+						"software": 1211,
+						"finanz": 2423,
+						"unternehmensberatung": 258,
+						"architektur": 367,
+						"forschung": 460,
+						"kreativ": 271
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 8421,
+						"industrie": 7454,
+						"nahrung": 363,
+						"pharma": 809,
+						"holz": 70,
+						"metall": 61,
+						"elektroindustrie": 678,
+						"fahrzeugbau": 5003,
+						"sonstige_konsumgueter": 68,
+						"energie": 403,
+						"telekommunikation": 2423,
+						"software": 2454,
+						"finanz": 1899,
+						"unternehmensberatung": 538,
+						"architektur": 284,
+						"forschung": 395,
+						"kreativ": 427
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 8645,
+						"industrie": 10865,
+						"nahrung": 598,
+						"pharma": 1346,
+						"holz": 293,
+						"metall": 108,
+						"elektroindustrie": 1968,
+						"fahrzeugbau": 5976,
+						"sonstige_konsumgueter": 105,
+						"energie": 471,
+						"telekommunikation": 1960,
+						"software": 2289,
+						"finanz": 2721,
+						"unternehmensberatung": 625,
+						"architektur": 296,
+						"forschung": 303,
+						"kreativ": 452
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 9192,
+						"industrie": 8694,
+						"nahrung": 283,
+						"pharma": 1332,
+						"holz": 145,
+						"metall": 199,
+						"elektroindustrie": 1407,
+						"fahrzeugbau": 3888,
+						"sonstige_konsumgueter": 145,
+						"energie": 1293,
+						"telekommunikation": 2083,
+						"software": 4111,
+						"finanz": 1668,
+						"unternehmensberatung": 570,
+						"architektur": 201,
+						"forschung": 268,
+						"kreativ": 292
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 10348,
+						"industrie": 9093,
+						"nahrung": 190,
+						"pharma": 997,
+						"holz": 118,
+						"metall": 216,
+						"elektroindustrie": 1263,
+						"fahrzeugbau": 5662,
+						"sonstige_konsumgueter": 70,
+						"energie": 577,
+						"telekommunikation": 1846,
+						"software": 3065,
+						"finanz": 4145,
+						"unternehmensberatung": 462,
+						"architektur": 392,
+						"forschung": 193,
+						"kreativ": 244
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 9106,
+						"industrie": 9480,
+						"nahrung": 385,
+						"pharma": 964,
+						"holz": 72,
+						"metall": 176,
+						"elektroindustrie": 1881,
+						"fahrzeugbau": 5292,
+						"sonstige_konsumgueter": 56,
+						"energie": 654,
+						"telekommunikation": 2967,
+						"software": 2339,
+						"finanz": 2583,
+						"unternehmensberatung": 172,
+						"architektur": 631,
+						"forschung": 127,
+						"kreativ": 287
+					}
+				],
+				"de": [
+					{
+						"year": 2018,
+						"dienstleistungen": 120330,
+						"industrie": 518610,
+						"nahrung": 16847,
+						"pharma": 68511,
+						"holz": 6182,
+						"metall": 25837,
+						"elektroindustrie": 65720,
+						"fahrzeugbau": 309475,
+						"sonstige_konsumgueter": 7762,
+						"energie": 18275,
+						"telekommunikation": 15269,
+						"software": 28721,
+						"finanz": 57231,
+						"unternehmensberatung": 4243,
+						"architektur": 8336,
+						"forschung": 2990,
+						"kreativ": 3540
+					},
+					{
+						"year": 2019,
+						"dienstleistungen": 138625,
+						"industrie": 496332,
+						"nahrung": 10707,
+						"pharma": 57142,
+						"holz": 6834,
+						"metall": 24204,
+						"elektroindustrie": 54783,
+						"fahrzeugbau": 309475,
+						"sonstige_konsumgueter": 7613,
+						"energie": 25575,
+						"telekommunikation": 21958,
+						"software": 30074,
+						"finanz": 69901,
+						"unternehmensberatung": 2132,
+						"architektur": 8637,
+						"forschung": 2986,
+						"kreativ": 2937
+					},
+					{
+						"year": 2020,
+						"dienstleistungen": 149918,
+						"industrie": 454223,
+						"nahrung": 18885,
+						"pharma": 53158,
+						"holz": 5999,
+						"metall": 19128,
+						"elektroindustrie": 44154,
+						"fahrzeugbau": 279481,
+						"sonstige_konsumgueter": 7608,
+						"energie": 25811,
+						"telekommunikation": 24093,
+						"software": 25731,
+						"finanz": 80050,
+						"unternehmensberatung": 5327,
+						"architektur": 5940,
+						"forschung": 3261,
+						"kreativ": 5515
+					},
+					{
+						"year": 2021,
+						"dienstleistungen": 203715,
+						"industrie": 511154,
+						"nahrung": 22220,
+						"pharma": 57973,
+						"holz": 7939,
+						"metall": 23752,
+						"elektroindustrie": 44383,
+						"fahrzeugbau": 305278,
+						"sonstige_konsumgueter": 7199,
+						"energie": 42410,
+						"telekommunikation": 24573,
+						"software": 43765,
+						"finanz": 105470,
+						"unternehmensberatung": 2413,
+						"architektur": 5399,
+						"forschung": 18693,
+						"kreativ": 3401
+					},
+					{
+						"year": 2022,
+						"dienstleistungen": 212932,
+						"industrie": 541038,
+						"nahrung": 14695,
+						"pharma": 60762,
+						"holz": 5806,
+						"metall": 24810,
+						"elektroindustrie": 44334,
+						"fahrzeugbau": 313995,
+						"sonstige_konsumgueter": 6915,
+						"energie": 69721,
+						"telekommunikation": 24003,
+						"software": 59328,
+						"finanz": 98263,
+						"unternehmensberatung": 3932,
+						"architektur": 5787,
+						"forschung": 16873,
+						"kreativ": 4745
+					},
+					{
+						"year": 2023,
+						"dienstleistungen": 253658,
+						"industrie": 565463,
+						"nahrung": 10350,
+						"pharma": 50766,
+						"holz": 6035,
+						"metall": 21981,
+						"elektroindustrie": 36466,
+						"fahrzeugbau": 372542,
+						"sonstige_konsumgueter": 6734,
+						"energie": 60590,
+						"telekommunikation": 16885,
+						"software": 66132,
+						"finanz": 143172,
+						"unternehmensberatung": 5131,
+						"architektur": 6689,
+						"forschung": 7029,
+						"kreativ": 8620
+					},
+					{
+						"year": 2024,
+						"dienstleistungen": 218475,
+						"industrie": 585000,
+						"nahrung": 18520,
+						"pharma": 54163,
+						"holz": 5253,
+						"metall": 26112,
+						"elektroindustrie": 45479,
+						"fahrzeugbau": 391171,
+						"sonstige_konsumgueter": 7716,
+						"energie": 36587,
+						"telekommunikation": 20326,
+						"software": 80527,
+						"finanz": 86857,
+						"unternehmensberatung": 6126,
+						"architektur": 9026,
+						"forschung": 10085,
+						"kreativ": 5529
+					}
+				]
+			}
+		}
+	],
+	"environment": [
+		{
+			"id": "environment_innovation",
+			"title": "Umwelt",
+			"chart_type": "big_fact",
+			"text": "Umweltinnovationen sind eine Vielzahl von Maßnahmen, die sich sowohl auf die Herstellungsprozesse (z.B. den damit verbundenen Energieverbrauch) als auch auf die Produkte (z.B. deren Recyclingfähigkeit) beziehen können. Details gehen aus den Folgediagrammen hervor.",
+			"bigFacts": [
+				{
+					"fact": "49%",
+					"unit": "der Berliner Unternehmen haben Umweltinnovationen eingeführt."
+				}
+			]
+		},
+		{
+			"id": "what_drives_environment_innovation",
+			"title": "Was treibt Umwelt&shy;innovationen?",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 40,
+			"text": "Die Treiber für Umweltinnovationen von Unternehmen sind, soweit Umweltinnovationen nicht das Produkt selbst sind, andere und deutlich weniger wirtschaftliche Gründe als bei anderen Innovationstätigkeiten. Das Diagramm zeigt den Anteil der Unternehmen, die Umweltinnovationen eingeführt haben, und 2025 den jeweils genannten Grund als hoch relevant genannt haben (Alternativen waren „mittel“ oder „gering“). Es fällt auf, dass staatliche Maßnahmen (Regulierung, Erwartung künftiger Regulierung und Vorschriften im Beschaffungswesen) mit Abstand die wichtigsten Treiber sind, die Unternehmen zu Umweltinnovationen bewegen. Kundennachfrage oder Reputationsgründe gehören nicht zu den wesentlichen Treibern von Umweltinnovationen, auch nicht eine etwaige öffentliche Förderung.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "compliance_with_existing_regulations",
+						"insgesamt": 20,
+						"industrie": 24,
+						"dienstleistungen": 18
+					},
+					{
+						"id": "existing_environmental_taxes_or_charges",
+						"insgesamt": 6,
+						"industrie": 8,
+						"dienstleistungen": 6
+					},
+					{
+						"id": "expected_future_regulations_or_environmental_taxes",
+						"insgesamt": 12,
+						"industrie": 13,
+						"dienstleistungen": 12
+					},
+					{
+						"id": "public_funding_for_environmental_innovations",
+						"insgesamt": 7,
+						"industrie": 10,
+						"dienstleistungen": 6
+					},
+					{
+						"id": "current_or_expected_demand_for_environmental_innovations",
+						"insgesamt": 10,
+						"industrie": 10,
+						"dienstleistungen": 9
+					},
+					{
+						"id": "improving_company_reputation",
+						"insgesamt": 10,
+						"industrie": 10,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "pressure_from_the_public_or_interest_groups",
+						"insgesamt": 2,
+						"industrie": 4,
+						"dienstleistungen": 2
+					},
+					{
+						"id": "industry_self_commitments_or_standards",
+						"insgesamt": 15,
+						"industrie": 14,
+						"dienstleistungen": 15
+					},
+					{
+						"id": "rising_costs_for_energy_or_raw_materials",
+						"insgesamt": 23,
+						"industrie": 33,
+						"dienstleistungen": 19
+					},
+					{
+						"id": "requirements_in_public_procurement",
+						"insgesamt": 7,
+						"industrie": 6,
+						"dienstleistungen": 7
+					}
+				],
+				"de": [
+					{
+						"id": "compliance_with_existing_regulations",
+						"insgesamt": 23,
+						"industrie": 25,
+						"dienstleistungen": 20
+					},
+					{
+						"id": "existing_environmental_taxes_or_charges",
+						"insgesamt": 10,
+						"industrie": 13,
+						"dienstleistungen": 5
+					},
+					{
+						"id": "expected_future_regulations_or_environmental_taxes",
+						"insgesamt": 15,
+						"industrie": 18,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "public_funding_for_environmental_innovations",
+						"insgesamt": 8,
+						"industrie": 9,
+						"dienstleistungen": 5
+					},
+					{
+						"id": "current_or_expected_demand_for_environmental_innovations",
+						"insgesamt": 6,
+						"industrie": 7,
+						"dienstleistungen": 5
+					},
+					{
+						"id": "improving_company_reputation",
+						"insgesamt": 13,
+						"industrie": 14,
+						"dienstleistungen": 13
+					},
+					{
+						"id": "pressure_from_the_public_or_interest_groups",
+						"insgesamt": 4,
+						"industrie": 5,
+						"dienstleistungen": 3
+					},
+					{
+						"id": "industry_self_commitments_or_standards",
+						"insgesamt": 11,
+						"industrie": 13,
+						"dienstleistungen": 9
+					},
+					{
+						"id": "rising_costs_for_energy_or_raw_materials",
+						"insgesamt": 24,
+						"industrie": 32,
+						"dienstleistungen": 12
+					},
+					{
+						"id": "requirements_in_public_procurement",
+						"insgesamt": 5,
+						"industrie": 5,
+						"dienstleistungen": 4
+					}
+				]
+			}
+		}
+	],
+	"berlin": [
+		{
+			"id": "berlin_intro",
+			"title": "Was macht Berlin aus als Innovations&shy;standort?",
+			"chart_type": "big_fact",
+			"text": "Die starke Präsenz öffentlicher Forschungseinrichtungen in Berlin spiegelt sich auch in der überdurchschnittlich hohen Kooperationsrate der Berliner Wirtschaft mit diesen Einrichtungen wider. Die öffentliche Forschung ist in Berlin nach Ausgaben in etwa doppelt so groß wie die FuE der Wirtschaft, während dies im deutschen Durchschnitt genau andersherum ist. Gleichzeitig spielen, mit bekannten Ausnahmen, Berliner Standorte von Großunternehmen oft keine prägende Rolle in der Konzernforschung. Dies hat einige Konsequenzen: Der Kooperationsgrad der Berliner Wirtschaft, insbesondere mit der öffentlichen Forschung ist deutlich höher als in Deutschland. Spin-offs aus der öffentlichen Forschung prägen – trotz oft noch geringer Unternehmensgröße – einige Branchen im Bereich der Spitzentechnologien und einiger wissensintensiver Dienstleistungen und der Anteil der Innovations- und FuE-Ausgaben, der in Berlin von KMU getragen wird, ist erkennbar höher als in Deutschland.<br/><br/>Die Innovationserhebungen berichten, allerdings in unterschiedlichen Jahrgängen, eine ganze Reihe weiterer Daten mit Relevanz für den Wissens- und Technologietransfer, darunter zu Art und Inhalt von Wissenschaftskooperationen, zur Nutzung externen Wissens und zum Schutz des eigenen Wissens. Da nicht in allen Jahrgängen alle Daten erfragt werden, sind die Bezugsjahre hier jeweils angegeben.",
+			"bigFacts": [
+				{
+					"fact": "24%",
+					"unit": "der Berliner Innovationsausgaben kommen von KMU, im Vergleich mit"
+				},
+				{
+					"fact": "15%",
+					"unit": "deutschlandweit"
+				}
+			]
+		},
+		{
+			"id": "collaboration_regions",
+			"title": "Mit welchen Regionen wird kooperiert?",
+			"chart_type": "matrix",
+			"text": "Innovationskooperationen sind ein wichtiges Element des Wissenstransfers. Die Kollaborationsintensität ist stark von den jeweiligen Branchengepflogenheiten geprägt und in Berlin grundsätzlich ähnlich wie in Deutschland. Sie ist in Berlin allerdings generell etwas höher. In manchen Branchen ist auch die regionale Präferenz etwas unterschiedlich. Die Abbildung zeigt jeweils den Anteil der Unternehmen an allen innovationsaktiven Unternehmen, die 2024 Innovationskooperationen in der jeweiligen Region pflegen.",
+			"chartData": {
+				"ber": [
+					{
+						"x": "nahrung",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "nahrung",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "nahrung",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "pharma",
+						"y": "germany",
+						"value": 17
+					},
+					{
+						"x": "pharma",
+						"y": "eu_and_efta",
+						"value": 13
+					},
+					{
+						"x": "pharma",
+						"y": "other_countries",
+						"value": 13
+					},
+					{
+						"x": "holz",
+						"y": "germany",
+						"value": 42
+					},
+					{
+						"x": "holz",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "holz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "metall",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "germany",
+						"value": 41
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "eu_and_efta",
+						"value": 16
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_countries",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "germany",
+						"value": 38
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "eu_and_efta",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "germany",
+						"value": 13
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "eu_and_efta",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "germany",
+						"value": 42
+					},
+					{
+						"x": "energie",
+						"y": "eu_and_efta",
+						"value": 18
+					},
+					{
+						"x": "energie",
+						"y": "other_countries",
+						"value": 18
+					},
+					{
+						"x": "telekommunikation",
+						"y": "germany",
+						"value": 8
+					},
+					{
+						"x": "telekommunikation",
+						"y": "eu_and_efta",
+						"value": 8
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_countries",
+						"value": 4
+					},
+					{
+						"x": "software",
+						"y": "germany",
+						"value": 28
+					},
+					{
+						"x": "software",
+						"y": "eu_and_efta",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "other_countries",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "germany",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "germany",
+						"value": 16
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "germany",
+						"value": 11
+					},
+					{
+						"x": "architektur",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "forschung",
+						"y": "germany",
+						"value": 66
+					},
+					{
+						"x": "forschung",
+						"y": "eu_and_efta",
+						"value": 26
+					},
+					{
+						"x": "forschung",
+						"y": "other_countries",
+						"value": 27
+					},
+					{
+						"x": "kreativ",
+						"y": "germany",
+						"value": 5
+					},
+					{
+						"x": "kreativ",
+						"y": "eu_and_efta",
+						"value": 4
+					},
+					{
+						"x": "kreativ",
+						"y": "other_countries",
+						"value": 0
+					}
+				],
+				"de": [
+					{
+						"x": "nahrung",
+						"y": "germany",
+						"value": 5
+					},
+					{
+						"x": "nahrung",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "pharma",
+						"y": "germany",
+						"value": 22
+					},
+					{
+						"x": "pharma",
+						"y": "eu_and_efta",
+						"value": 6
+					},
+					{
+						"x": "pharma",
+						"y": "other_countries",
+						"value": 3
+					},
+					{
+						"x": "holz",
+						"y": "germany",
+						"value": 9
+					},
+					{
+						"x": "holz",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "germany",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "eu_and_efta",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "other_countries",
+						"value": 2
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "germany",
+						"value": 22
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "eu_and_efta",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_countries",
+						"value": 5
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "germany",
+						"value": 16
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "eu_and_efta",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_countries",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "eu_and_efta",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "germany",
+						"value": 12
+					},
+					{
+						"x": "energie",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "energie",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "germany",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "software",
+						"y": "germany",
+						"value": 22
+					},
+					{
+						"x": "software",
+						"y": "eu_and_efta",
+						"value": 9
+					},
+					{
+						"x": "software",
+						"y": "other_countries",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "germany",
+						"value": 6
+					},
+					{
+						"x": "finanz",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "germany",
+						"value": 8
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "eu_and_efta",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_countries",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "germany",
+						"value": 12
+					},
+					{
+						"x": "architektur",
+						"y": "eu_and_efta",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "other_countries",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "germany",
+						"value": 54
+					},
+					{
+						"x": "forschung",
+						"y": "eu_and_efta",
+						"value": 27
+					},
+					{
+						"x": "forschung",
+						"y": "other_countries",
+						"value": 11
+					},
+					{
+						"x": "kreativ",
+						"y": "germany",
+						"value": 9
+					},
+					{
+						"x": "kreativ",
+						"y": "eu_and_efta",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "other_countries",
+						"value": 0
+					}
+				]
+			}
+		},
+		{
+			"id": "collaboration_partners",
+			"title": "Mit welchen Partnern wird kooperiert?",
+			"chart_type": "matrix",
+			"text": "Die öffentliche Forschung ist für die Berliner Wirtschaft ein wichtiger Kooperationspartner. Mit der öffentlichen Forschung wird deutlich stärker kooperiert als im Bundesdurchschnitt, in manchen Branchen gilt das auch für Entwicklungskooperationen mit Kunden und Lieferanten, wobei die Gepflogenheiten sich zwischen den Branchen stärker unterscheiden als im Vergleich mit dem Durchschnitt. Die Abbildung zeigt jeweils den Anteil der innovationsaktiven Unternehmen, die 2024 mit den jeweiligen Kategorien von Partnern kooperierten.",
+			"chartData": {
+				"ber": [
+					{
+						"x": "nahrung",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "nahrung",
+						"y": "customers",
+						"value": 7
+					},
+					{
+						"x": "nahrung",
+						"y": "suppliers",
+						"value": 5
+					},
+					{
+						"x": "nahrung",
+						"y": "competitors",
+						"value": 9
+					},
+					{
+						"x": "nahrung",
+						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "nahrung",
+						"y": "other_firms",
+						"value": 12
+					},
+					{
+						"x": "nahrung",
+						"y": "universities",
+						"value": 19
+					},
+					{
+						"x": "nahrung",
+						"y": "public_research_institutes",
+						"value": 8
+					},
+					{
+						"x": "nahrung",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "nahrung",
+						"y": "associations",
+						"value": 6
+					},
+					{
+						"x": "nahrung",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "pharma",
+						"y": "own_group",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "customers",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "suppliers",
+						"value": 21
+					},
+					{
+						"x": "pharma",
+						"y": "competitors",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "consulting_firms",
+						"value": 12
+					},
+					{
+						"x": "pharma",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "pharma",
+						"y": "universities",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "public_research_institutes",
+						"value": 12
+					},
+					{
+						"x": "pharma",
+						"y": "government_agencies",
+						"value": 3
+					},
+					{
+						"x": "pharma",
+						"y": "associations",
+						"value": 5
+					},
+					{
+						"x": "pharma",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "suppliers",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "consulting_firms",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "other_firms",
+						"value": 43
+					},
+					{
+						"x": "holz",
+						"y": "universities",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "associations",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "own_group",
+						"value": 13
+					},
+					{
+						"x": "metall",
+						"y": "customers",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "suppliers",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "metall",
+						"y": "other_firms",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "universities",
+						"value": 15
+					},
+					{
+						"x": "metall",
+						"y": "public_research_institutes",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "associations",
+						"value": 12
+					},
+					{
+						"x": "metall",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "own_group",
+						"value": 35
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "customers",
+						"value": 29
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "suppliers",
+						"value": 29
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "competitors",
+						"value": 6
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "consulting_firms",
+						"value": 23
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_firms",
+						"value": 9
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "universities",
+						"value": 44
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "public_research_institutes",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "associations",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "own_group",
+						"value": 13
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "customers",
+						"value": 18
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "suppliers",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "competitors",
+						"value": 12
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "consulting_firms",
+						"value": 13
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "universities",
+						"value": 47
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "public_research_institutes",
+						"value": 18
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "government_agencies",
+						"value": 8
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "associations",
+						"value": 19
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "others",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "universities",
+						"value": 17
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "public_research_institutes",
+						"value": 12
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "associations",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "energie",
+						"y": "own_group",
+						"value": 44
+					},
+					{
+						"x": "energie",
+						"y": "customers",
+						"value": 36
+					},
+					{
+						"x": "energie",
+						"y": "suppliers",
+						"value": 34
+					},
+					{
+						"x": "energie",
+						"y": "competitors",
+						"value": 42
+					},
+					{
+						"x": "energie",
+						"y": "consulting_firms",
+						"value": 45
+					},
+					{
+						"x": "energie",
+						"y": "other_firms",
+						"value": 20
+					},
+					{
+						"x": "energie",
+						"y": "universities",
+						"value": 30
+					},
+					{
+						"x": "energie",
+						"y": "public_research_institutes",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "government_agencies",
+						"value": 19
+					},
+					{
+						"x": "energie",
+						"y": "associations",
+						"value": 32
+					},
+					{
+						"x": "energie",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "telekommunikation",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "customers",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "telekommunikation",
+						"y": "competitors",
+						"value": 2
+					},
+					{
+						"x": "telekommunikation",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "universities",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "associations",
+						"value": 0
+					},
+					{
+						"x": "telekommunikation",
+						"y": "others",
+						"value": 3
+					},
+					{
+						"x": "software",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "software",
+						"y": "customers",
+						"value": 15
+					},
+					{
+						"x": "software",
+						"y": "suppliers",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "competitors",
+						"value": 24
+					},
+					{
+						"x": "software",
+						"y": "consulting_firms",
+						"value": 12
+					},
+					{
+						"x": "software",
+						"y": "other_firms",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "universities",
+						"value": 22
+					},
+					{
+						"x": "software",
+						"y": "public_research_institutes",
+						"value": 16
+					},
+					{
+						"x": "software",
+						"y": "government_agencies",
+						"value": 3
+					},
+					{
+						"x": "software",
+						"y": "associations",
+						"value": 15
+					},
+					{
+						"x": "software",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "customers",
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "competitors",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "finanz",
+						"y": "universities",
+						"value": 7
+					},
+					{
+						"x": "finanz",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "associations",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "others",
+						"value": 3
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "own_group",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "customers",
+						"value": 17
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "suppliers",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "competitors",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "consulting_firms",
+						"value": 8
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "universities",
+						"value": 17
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "public_research_institutes",
+						"value": 16
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "government_agencies",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "associations",
+						"value": 0
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "universities",
+						"value": 9
+					},
+					{
+						"x": "architektur",
+						"y": "public_research_institutes",
+						"value": 5
+					},
+					{
+						"x": "architektur",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "architektur",
+						"y": "associations",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "forschung",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "forschung",
+						"y": "customers",
+						"value": 48
+					},
+					{
+						"x": "forschung",
+						"y": "suppliers",
+						"value": 23
+					},
+					{
+						"x": "forschung",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "consulting_firms",
+						"value": 53
+					},
+					{
+						"x": "forschung",
+						"y": "other_firms",
+						"value": 36
+					},
+					{
+						"x": "forschung",
+						"y": "universities",
+						"value": 62
+					},
+					{
+						"x": "forschung",
+						"y": "public_research_institutes",
+						"value": 51
+					},
+					{
+						"x": "forschung",
+						"y": "government_agencies",
+						"value": 12
+					},
+					{
+						"x": "forschung",
+						"y": "associations",
+						"value": 12
+					},
+					{
+						"x": "forschung",
+						"y": "others",
+						"value": 13
+					},
+					{
+						"x": "kreativ",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "kreativ",
+						"y": "consulting_firms",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "other_firms",
+						"value": 0
+					},
+					{
+						"x": "kreativ",
+						"y": "universities",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "others",
+						"value": 0
+					}
+				],
+				"de": [
+					{
+						"x": "nahrung",
+						"y": "own_group",
+						"value": 4
+					},
+					{
+						"x": "nahrung",
+						"y": "customers",
+						"value": 0
+					},
+					{
+						"x": "nahrung",
+						"y": "suppliers",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "consulting_firms",
+						"value": 3
+					},
+					{
+						"x": "nahrung",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "nahrung",
+						"y": "universities",
+						"value": 2
+					},
+					{
+						"x": "nahrung",
+						"y": "public_research_institutes",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "associations",
+						"value": 1
+					},
+					{
+						"x": "nahrung",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "pharma",
+						"y": "own_group",
+						"value": 9
+					},
+					{
+						"x": "pharma",
+						"y": "customers",
+						"value": 10
+					},
+					{
+						"x": "pharma",
+						"y": "suppliers",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "competitors",
+						"value": 6
+					},
+					{
+						"x": "pharma",
+						"y": "consulting_firms",
+						"value": 12
+					},
+					{
+						"x": "pharma",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "pharma",
+						"y": "universities",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "public_research_institutes",
+						"value": 12
+					},
+					{
+						"x": "pharma",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "pharma",
+						"y": "associations",
+						"value": 8
+					},
+					{
+						"x": "pharma",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "own_group",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "holz",
+						"y": "suppliers",
+						"value": 5
+					},
+					{
+						"x": "holz",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "holz",
+						"y": "other_firms",
+						"value": 3
+					},
+					{
+						"x": "holz",
+						"y": "universities",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "public_research_institutes",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "associations",
+						"value": 4
+					},
+					{
+						"x": "holz",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "own_group",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "customers",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "metall",
+						"y": "other_firms",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "universities",
+						"value": 11
+					},
+					{
+						"x": "metall",
+						"y": "public_research_institutes",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "metall",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "metall",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "own_group",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "customers",
+						"value": 9
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "suppliers",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "competitors",
+						"value": 3
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "consulting_firms",
+						"value": 11
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "universities",
+						"value": 26
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "public_research_institutes",
+						"value": 14
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "associations",
+						"value": 5
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "own_group",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "customers",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "suppliers",
+						"value": 9
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "consulting_firms",
+						"value": 11
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "universities",
+						"value": 19
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "public_research_institutes",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "associations",
+						"value": 6
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "own_group",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "customers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "competitors",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "universities",
+						"value": 7
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "government_agencies",
+						"value": 0
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "associations",
+						"value": 2
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "energie",
+						"y": "own_group",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "suppliers",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "energie",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "other_firms",
+						"value": 9
+					},
+					{
+						"x": "energie",
+						"y": "universities",
+						"value": 13
+					},
+					{
+						"x": "energie",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "telekommunikation",
+						"y": "own_group",
+						"value": 9
+					},
+					{
+						"x": "telekommunikation",
+						"y": "customers",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "suppliers",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "competitors",
+						"value": 5
+					},
+					{
+						"x": "telekommunikation",
+						"y": "consulting_firms",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "other_firms",
+						"value": 4
+					},
+					{
+						"x": "telekommunikation",
+						"y": "universities",
+						"value": 6
+					},
+					{
+						"x": "telekommunikation",
+						"y": "public_research_institutes",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "government_agencies",
+						"value": 3
+					},
+					{
+						"x": "telekommunikation",
+						"y": "associations",
+						"value": 6
+					},
+					{
+						"x": "telekommunikation",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "software",
+						"y": "own_group",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "customers",
+						"value": 10
+					},
+					{
+						"x": "software",
+						"y": "suppliers",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "competitors",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "other_firms",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "universities",
+						"value": 17
+					},
+					{
+						"x": "software",
+						"y": "public_research_institutes",
+						"value": 6
+					},
+					{
+						"x": "software",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "software",
+						"y": "associations",
+						"value": 7
+					},
+					{
+						"x": "software",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "finanz",
+						"y": "own_group",
+						"value": 8
+					},
+					{
+						"x": "finanz",
+						"y": "customers",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "finanz",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "consulting_firms",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "other_firms",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "universities",
+						"value": 5
+					},
+					{
+						"x": "finanz",
+						"y": "public_research_institutes",
+						"value": 0
+					},
+					{
+						"x": "finanz",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "finanz",
+						"y": "associations",
+						"value": 4
+					},
+					{
+						"x": "finanz",
+						"y": "others",
+						"value": 2
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "own_group",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "customers",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "suppliers",
+						"value": 2
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "competitors",
+						"value": 5
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "consulting_firms",
+						"value": 6
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "universities",
+						"value": 7
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "others",
+						"value": 0
+					},
+					{
+						"x": "architektur",
+						"y": "own_group",
+						"value": 7
+					},
+					{
+						"x": "architektur",
+						"y": "customers",
+						"value": 8
+					},
+					{
+						"x": "architektur",
+						"y": "suppliers",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "competitors",
+						"value": 4
+					},
+					{
+						"x": "architektur",
+						"y": "consulting_firms",
+						"value": 13
+					},
+					{
+						"x": "architektur",
+						"y": "other_firms",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "universities",
+						"value": 14
+					},
+					{
+						"x": "architektur",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "architektur",
+						"y": "government_agencies",
+						"value": 1
+					},
+					{
+						"x": "architektur",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "architektur",
+						"y": "others",
+						"value": 1
+					},
+					{
+						"x": "forschung",
+						"y": "own_group",
+						"value": 10
+					},
+					{
+						"x": "forschung",
+						"y": "customers",
+						"value": 41
+					},
+					{
+						"x": "forschung",
+						"y": "suppliers",
+						"value": 19
+					},
+					{
+						"x": "forschung",
+						"y": "competitors",
+						"value": 20
+					},
+					{
+						"x": "forschung",
+						"y": "consulting_firms",
+						"value": 24
+					},
+					{
+						"x": "forschung",
+						"y": "other_firms",
+						"value": 16
+					},
+					{
+						"x": "forschung",
+						"y": "universities",
+						"value": 58
+					},
+					{
+						"x": "forschung",
+						"y": "public_research_institutes",
+						"value": 43
+					},
+					{
+						"x": "forschung",
+						"y": "government_agencies",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "associations",
+						"value": 21
+					},
+					{
+						"x": "forschung",
+						"y": "others",
+						"value": 15
+					},
+					{
+						"x": "kreativ",
+						"y": "own_group",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "customers",
+						"value": 6
+					},
+					{
+						"x": "kreativ",
+						"y": "suppliers",
+						"value": 7
+					},
+					{
+						"x": "kreativ",
+						"y": "competitors",
+						"value": 7
+					},
+					{
+						"x": "kreativ",
+						"y": "consulting_firms",
+						"value": 4
+					},
+					{
+						"x": "kreativ",
+						"y": "other_firms",
+						"value": 1
+					},
+					{
+						"x": "kreativ",
+						"y": "universities",
+						"value": 8
+					},
+					{
+						"x": "kreativ",
+						"y": "public_research_institutes",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "government_agencies",
+						"value": 2
+					},
+					{
+						"x": "kreativ",
+						"y": "associations",
+						"value": 3
+					},
+					{
+						"x": "kreativ",
+						"y": "others",
+						"value": 4
+					}
+				]
+			}
+		},
+		{
+			"id": "protective_measures_intellectual_property",
+			"title": "Schutz&shy;maßnahmen für geistiges Eigentum",
+			"chart_type": "bar_chart_filter_keys_branchen",
+			"chart_unit": "%",
+			"max_value": 55,
+			"text": "Patente sind in Berlin wie in Deutschland nur in ausgewählten Branchen von hoher Relevanz. Gezeigt sind Daten für 2024. Markeneintragungen und Geheimhaltung sind für ein breiteres Spektrum an Branchen relevant, Urheberrechte vor allem bei den Medien, der Softwarebranche und den FuE- und Kreativdienstleistungen.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 5,
+						"registration_brands": 25,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 3
+					},
+					{
+						"id": "pharma",
+						"registration_patents": 15,
+						"registration_trademarks": 2,
+						"registration_tastemarks": 10,
+						"registration_brands": 24,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 26
+					},
+					{
+						"id": "holz",
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 1,
+						"registration_brands": 11,
+						"claim_intellectual_property": 0,
+						"protection_trade_secrets": 11
+					},
+					{
+						"id": "metall",
+						"registration_patents": 13,
+						"registration_trademarks": 11,
+						"registration_tastemarks": 5,
+						"registration_brands": 10,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 13
+					},
+					{
+						"id": "elektroindustrie",
+						"registration_patents": 28,
+						"registration_trademarks": 9,
+						"registration_tastemarks": 1,
+						"registration_brands": 20,
+						"claim_intellectual_property": 4,
+						"protection_trade_secrets": 19
+					},
+					{
+						"id": "fahrzeugbau",
+						"registration_patents": 22,
+						"registration_trademarks": 14,
+						"registration_tastemarks": 0,
+						"registration_brands": 13,
+						"claim_intellectual_property": 9,
+						"protection_trade_secrets": 11
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"registration_patents": 18,
+						"registration_trademarks": 13,
+						"registration_tastemarks": 9,
+						"registration_brands": 18,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 2
+					},
+					{
+						"id": "energie",
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 1,
+						"registration_brands": 13,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 2
+					},
+					{
+						"id": "telekommunikation",
+						"registration_patents": 1,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 6,
+						"registration_brands": 26,
+						"claim_intellectual_property": 33,
+						"protection_trade_secrets": 7
+					},
+					{
+						"id": "software",
+						"registration_patents": 3,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 2,
+						"registration_brands": 22,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 22
+					},
+					{
+						"id": "finanz",
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 6,
+						"registration_brands": 10,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 1
+					},
+					{
+						"id": "unternehmensberatung",
+						"registration_patents": 0,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 0,
+						"registration_brands": 7,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 3
+					},
+					{
+						"id": "architektur",
+						"registration_patents": 0,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 1,
+						"registration_brands": 4,
+						"claim_intellectual_property": 11,
+						"protection_trade_secrets": 6
+					},
+					{
+						"id": "forschung",
+						"registration_patents": 23,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 0,
+						"registration_brands": 10,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 29
+					},
+					{
+						"id": "kreativ",
+						"registration_patents": 3,
+						"registration_trademarks": 3,
+						"registration_tastemarks": 6,
+						"registration_brands": 14,
+						"claim_intellectual_property": 16,
+						"protection_trade_secrets": 8
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"registration_patents": 1,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 3,
+						"registration_brands": 10,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 2
+					},
+					{
+						"id": "pharma",
+						"registration_patents": 22,
+						"registration_trademarks": 12,
+						"registration_tastemarks": 9,
+						"registration_brands": 23,
+						"claim_intellectual_property": 4,
+						"protection_trade_secrets": 15
+					},
+					{
+						"id": "holz",
+						"registration_patents": 5,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 3,
+						"registration_brands": 5,
+						"claim_intellectual_property": 3,
+						"protection_trade_secrets": 6
+					},
+					{
+						"id": "metall",
+						"registration_patents": 5,
+						"registration_trademarks": 6,
+						"registration_tastemarks": 4,
+						"registration_brands": 8,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 7
+					},
+					{
+						"id": "elektroindustrie",
+						"registration_patents": 20,
+						"registration_trademarks": 11,
+						"registration_tastemarks": 8,
+						"registration_brands": 18,
+						"claim_intellectual_property": 5,
+						"protection_trade_secrets": 13
+					},
+					{
+						"id": "fahrzeugbau",
+						"registration_patents": 20,
+						"registration_trademarks": 11,
+						"registration_tastemarks": 5,
+						"registration_brands": 17,
+						"claim_intellectual_property": 7,
+						"protection_trade_secrets": 13
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"registration_patents": 7,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 5,
+						"registration_brands": 14,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 4
+					},
+					{
+						"id": "energie",
+						"registration_patents": 1,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 1,
+						"registration_brands": 4,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 3
+					},
+					{
+						"id": "telekommunikation",
+						"registration_patents": 1,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 4,
+						"registration_brands": 18,
+						"claim_intellectual_property": 24,
+						"protection_trade_secrets": 4
+					},
+					{
+						"id": "software",
+						"registration_patents": 6,
+						"registration_trademarks": 4,
+						"registration_tastemarks": 1,
+						"registration_brands": 27,
+						"claim_intellectual_property": 9,
+						"protection_trade_secrets": 11
+					},
+					{
+						"id": "finanz",
+						"registration_patents": 0,
+						"registration_trademarks": 0,
+						"registration_tastemarks": 1,
+						"registration_brands": 5,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 4
+					},
+					{
+						"id": "unternehmensberatung",
+						"registration_patents": 0,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 1,
+						"registration_brands": 50,
+						"claim_intellectual_property": 43,
+						"protection_trade_secrets": 6
+					},
+					{
+						"id": "architektur",
+						"registration_patents": 2,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 2,
+						"registration_brands": 3,
+						"claim_intellectual_property": 2,
+						"protection_trade_secrets": 7
+					},
+					{
+						"id": "forschung",
+						"registration_patents": 39,
+						"registration_trademarks": 9,
+						"registration_tastemarks": 2,
+						"registration_brands": 23,
+						"claim_intellectual_property": 1,
+						"protection_trade_secrets": 36
+					},
+					{
+						"id": "kreativ",
+						"registration_patents": 2,
+						"registration_trademarks": 1,
+						"registration_tastemarks": 2,
+						"registration_brands": 12,
+						"claim_intellectual_property": 8,
+						"protection_trade_secrets": 11
+					}
+				]
+			}
+		}
+	],
+	"support": [
+		{
+			"id": "support_intro",
+			"title": "Öffentliche Förderung",
+			"chart_type": "big_fact",
+			"text": "In Berlin – wie überall in der Welt – wird Innovation öffentlich gefördert. Wichtige qualitative Faktoren wie die Errichtung oder der Betrieb von Hochschulen, insbesondere solchen der angewandten Wissenschaft, in der Nähe der Unternehmen, die Errichtung von Campi oder Standorten, an denen öffentliche und private Forschung an ähnlichen Themen angesiedelt sind, oder die Förderung von Innovationsnetzwerken und -clustern, die alle auf einen Wissens-Spillover zwischen den Beteiligten zielen, können als im Rahmen einer quantitativen Erhebung bei den Unternehmen ebensowenig erfragt werden wie Standortmaßnahmen, das die das Leben in der jeweiligen Region besonders attraktiv für hochqualifiziertes Fachpersonal machten. Deshalb wird an dieser Stelle vorrangig über die finanzielle Unterstützung von Innovation durch die öffentliche Hand berichtet.",
+			"bigFacts": [
+				{
+					"fact": "32%",
+					"unit": "aller FuE-aktiven Berliner Unternehmen erhalten öffentliche Zuschüsse für FuE-Vorhaben"
+				},
+				{
+					"fact": "17%",
+					"unit": "der FuE-aktiven Berliner Unternehmen nutzen die steuerliche Forschungszulage"
+				}
+			]
+		},
+		{
+			"id": "most_supported_branchen",
+			"title": "Wer erhält am häufigsten Innovations&shy;förderung?",
+			"chart_type": "bar_chart_filter_keys_branchen",
+			"chart_unit": "%",
+			"max_value": 70,
+			"text": "22% der innovationsaktiven Berliner Unternehmen erhielten staatliche Innovationsförderung. Der Bund ist dabei der wichtigste Zuschussgeber, gefolgt von den Ländern und der EU (nicht gezeigt). Dargestellt ist der Anteil der innovationsaktiven Unternehmen, die zwischen 2022 und 2024 Innovationsförderung erhielte, aufgeschlüsselt nach Branchen, unabhängig von Fördergeber. Lesehinweis: Der Anteil der geförderten Unternehmen besagt nichts über die Höhe der Förderung.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "nahrung",
+						"from_land": 0,
+						"from_bund": 8,
+						"from_eu": 0,
+						"insgesamt": 8
+					},
+					{
+						"id": "pharma",
+						"from_land": 10,
+						"from_bund": 38,
+						"from_eu": 6,
+						"insgesamt": 40
+					},
+					{
+						"id": "holz",
+						"from_land": 1,
+						"from_bund": 3,
+						"from_eu": 3,
+						"insgesamt": 4
+					},
+					{
+						"id": "metall",
+						"from_land": 3,
+						"from_bund": 27,
+						"from_eu": 4,
+						"insgesamt": 27
+					},
+					{
+						"id": "elektroindustrie",
+						"from_land": 16,
+						"from_bund": 49,
+						"from_eu": 18,
+						"insgesamt": 49
+					},
+					{
+						"id": "fahrzeugbau",
+						"from_land": 45,
+						"from_bund": 39,
+						"from_eu": 29,
+						"insgesamt": 62
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"from_land": 15,
+						"from_bund": 15,
+						"from_eu": 15,
+						"insgesamt": 15
+					},
+					{
+						"id": "energie",
+						"from_land": 2,
+						"from_bund": 24,
+						"from_eu": 2,
+						"insgesamt": 24
+					},
+					{
+						"id": "telekommunikation",
+						"from_land": 0,
+						"from_bund": 4,
+						"from_eu": 6,
+						"insgesamt": 6
+					},
+					{
+						"id": "software",
+						"from_land": 3,
+						"from_bund": 30,
+						"from_eu": 1,
+						"insgesamt": 33
+					},
+					{
+						"id": "finanz",
+						"from_land": 0,
+						"from_bund": 0,
+						"from_eu": 0,
+						"insgesamt": 0
+					},
+					{
+						"id": "unternehmensberatung",
+						"from_land": 8,
+						"from_bund": 21,
+						"from_eu": 0,
+						"insgesamt": 21
+					},
+					{
+						"id": "architektur",
+						"from_land": 3,
+						"from_bund": 7,
+						"from_eu": 2,
+						"insgesamt": 9
+					},
+					{
+						"id": "forschung",
+						"from_land": 30,
+						"from_bund": 52,
+						"from_eu": 2,
+						"insgesamt": 57
+					},
+					{
+						"id": "kreativ",
+						"from_land": 0,
+						"from_bund": 6,
+						"from_eu": 4,
+						"insgesamt": 8
+					}
+				],
+				"de": [
+					{
+						"id": "nahrung",
+						"from_land": 1,
+						"from_bund": 3,
+						"from_eu": 1,
+						"insgesamt": 4
+					},
+					{
+						"id": "pharma",
+						"from_land": 6,
+						"from_bund": 18,
+						"from_eu": 5,
+						"insgesamt": 24
+					},
+					{
+						"id": "holz",
+						"from_land": 6,
+						"from_bund": 8,
+						"from_eu": 0,
+						"insgesamt": 11
+					},
+					{
+						"id": "metall",
+						"from_land": 7,
+						"from_bund": 7,
+						"from_eu": 1,
+						"insgesamt": 13
+					},
+					{
+						"id": "elektroindustrie",
+						"from_land": 12,
+						"from_bund": 25,
+						"from_eu": 4,
+						"insgesamt": 30
+					},
+					{
+						"id": "fahrzeugbau",
+						"from_land": 13,
+						"from_bund": 18,
+						"from_eu": 3,
+						"insgesamt": 23
+					},
+					{
+						"id": "sonstige_konsumgueter",
+						"from_land": 4,
+						"from_bund": 7,
+						"from_eu": 2,
+						"insgesamt": 8
+					},
+					{
+						"id": "energie",
+						"from_land": 4,
+						"from_bund": 6,
+						"from_eu": 1,
+						"insgesamt": 8
+					},
+					{
+						"id": "telekommunikation",
+						"from_land": 3,
+						"from_bund": 7,
+						"from_eu": 2,
+						"insgesamt": 10
+					},
+					{
+						"id": "software",
+						"from_land": 4,
+						"from_bund": 14,
+						"from_eu": 3,
+						"insgesamt": 15
+					},
+					{
+						"id": "finanz",
+						"from_land": 4,
+						"from_bund": 3,
+						"from_eu": 0,
+						"insgesamt": 7
+					},
+					{
+						"id": "unternehmensberatung",
+						"from_land": 1,
+						"from_bund": 6,
+						"from_eu": 0,
+						"insgesamt": 6
+					},
+					{
+						"id": "architektur",
+						"from_land": 1,
+						"from_bund": 6,
+						"from_eu": 2,
+						"insgesamt": 7
+					},
+					{
+						"id": "forschung",
+						"from_land": 37,
+						"from_bund": 43,
+						"from_eu": 26,
+						"insgesamt": 55
+					},
+					{
+						"id": "kreativ",
+						"from_land": 0,
+						"from_bund": 1,
+						"from_eu": 1,
+						"insgesamt": 2
+					}
+				]
+			}
+		},
+		{
+			"id": "public_funding_fue_projects",
+			"title": "Wer erhält öffentliche Zuschüsse für FuE-Vorhaben?",
+			"chart_type": "bar_chart",
+			"chart_unit": "%",
+			"max_value": 80,
+			"text": "32% der forschungsaktiven Berliner Unternehmen (das sind 14% aller Unternehmen) erhielten öffentliche Zuschüsse für FuE-Vorhaben. Der Bund ist auch dabei der wichtigste Zuschussgeber, gefolgt von den Ländern und der EU (nicht gezeigt). Dargestellt ist der Anteil der innovationsaktiven Unternehmen, die zwischen 2022 und 2024 Innovationsförderung erhielte, aufgeschlüsselt nach Branchen, unabhängig von Fördergeber.<br/><br/>Die von der Innovationsförderung (vorheriges Diagramm) abgegrenzte Darstellung der Forschungsförderung ist erforderlich, wenn man die (antragsgebundene) Projektförderung mit der (nachträglich gewährten) steuerlichen FuE-Förderung (Folgediagramm) vergleichen will, die ausschließlich für FuE-Aktivitäten im engeren Sinne gewährt wird.",
+			"chartData": {
+				"ber": {
+					"nahrung": 1,
+					"pharma": 59,
+					"holz": 4,
+					"metall": 58,
+					"elektroindustrie": 70,
+					"fahrzeugbau": 62,
+					"sonstige_konsumgueter": 22,
+					"energie": 23,
+					"telekommunikation": 22,
+					"software": 29,
+					"finanz": 9,
+					"unternehmensberatung": 28,
+					"architektur": 34,
+					"forschung": 54,
+					"kreativ": 15
+				},
+				"de": {
+					"nahrung": 22,
+					"pharma": 31,
+					"holz": 18,
+					"metall": 23,
+					"elektroindustrie": 42,
+					"fahrzeugbau": 30,
+					"sonstige_konsumgueter": 19,
+					"energie": 32,
+					"telekommunikation": 17,
+					"software": 29,
+					"finanz": 16,
+					"unternehmensberatung": 9,
+					"architektur": 26,
+					"forschung": 73,
+					"kreativ": 6
+				}
+			}
+		},
+		{
+			"id": "applications_fue_funding",
+			"title": "Wer beantragt steuerliche FuE-Förderung?",
+			"chart_type": "bar_chart",
+			"chart_unit": "%",
+			"max_value": 40,
+			"text": "17 % der forschungsaktiven Berliner Unternehmen (das sind 8% aller Unternehmen) haben in 2024 einen Antrag auf steuerliche Forschungszulage gestellt. Dargestellt sind die Daten nach Branchen. Hinweis: Die Förderung mit Zuschüssen und die steuerliche Förderung für das selbe Projekt schließen sich gegenseitig aus. Zuschussförderung und steuerliche Förderung für jeweils unterschiedliche Projekte eines Unternehmens sind möglich. Auch hier gilt, dass die Art der Förderung nichts über deren Höhe besagt.",
+			"chartData": {
+				"ber": {
+					"nahrung": 22,
+					"pharma": 19,
+					"holz": 2,
+					"metall": 11,
+					"elektroindustrie": 38,
+					"fahrzeugbau": 32,
+					"sonstige_konsumgueter": 2,
+					"energie": 8,
+					"telekommunikation": 0,
+					"software": 21,
+					"finanz": 1,
+					"unternehmensberatung": 0,
+					"architektur": 22,
+					"forschung": 30,
+					"kreativ": 5
+				},
+				"de": {
+					"nahrung": 3,
+					"pharma": 21,
+					"holz": 12,
+					"metall": 19,
+					"elektroindustrie": 31,
+					"fahrzeugbau": 21,
+					"sonstige_konsumgueter": 11,
+					"energie": 40,
+					"telekommunikation": 18,
+					"software": 28,
+					"finanz": 6,
+					"unternehmensberatung": 10,
+					"architektur": 15,
+					"forschung": 25,
+					"kreativ": 4
+				}
+			}
+		}
+	],
+	"data_ai": [
+		{
+			"id": "data_ai_intro",
+			"title": "Datennutzung und Künstliche Intelligenz (KI)",
+			"chart_type": "big_fact",
+			"text": "Zwei aktuelle Innovationsgebiete der Digitalisierung sind die Datenwirtschaft und die Künstliche Intelligenz (KI). Eine funktionelle Datenwirtschaft innerhalb der Unternehmen wird als eine der Voraussetzungen für die erfolgreiche Digitalisierung angesehen. Das gilt für die Organisation und Nutzung der eigenen Daten ebenso wie für die Nutzung von Daten Dritter zur datengetriebenen Entwicklung oder Verbesserung von Geschäftsmodellen. Die KI gilt als eines der next big things, von denen erhebliche Wirkungen nicht nur auf das Innovationssystem, sondern auf die gesamte Arbeitsweise von Unternehmen und auf die Gesellschaft insgesamt erwartet werden. Für die Innovationsfähigkeit von Unternehmen ist wichtig, sich mit beiden Themen auseinanderzusetzen und sich diesbezüglich zu moderniesieren. Die Daten zur Datennutzung haben das Bezugsjahr 2024. Die Daten zur Nutzung von KI und zu generativer KI haben das Bezugsjahr 2025.",
+			"bigFacts": [
+				{
+					"fact": "40%",
+					"unit": "der Berliner Unternehmen benutzen frei zugängliche Daten, aber nur "
+				},
+				{
+					"fact": "11%",
+					"unit": "kaufen Daten von Dritten."
+				}
+			]
+		},
+		{
+			"id": "data_application",
+			"title": "Anwendungen von Daten",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 60,
+			"text": "Während sich die Ziele, die mit der Nutzung von Daten verfolgt werden, zwischen Berlin und Deutschland weitgehend ähneln, fällt in Berlin auf, dass die Branche der Finanzdienstleistungen mit Abstand am intensivsten an der Einführung datenbasierter Produkte arbeitet. Zusammenhänge mit der Unternehmensgröße sind in Berlin wie in Deutschland wenig ausgeprägt.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "customer_needs_marketing_strategies",
+						"insgesamt": 36,
+						"industrie": 27,
+						"dienstleistungen": 39,
+						"finanz": 49
+					},
+					{
+						"id": "tailor_offer_to_customer",
+						"insgesamt": 37,
+						"industrie": 30,
+						"dienstleistungen": 39,
+						"finanz": 68
+					},
+					{
+						"id": "reach_new_customer_groups",
+						"insgesamt": 25,
+						"industrie": 19,
+						"dienstleistungen": 28,
+						"finanz": 36
+					},
+					{
+						"id": "introduce_data_based_products",
+						"insgesamt": 14,
+						"industrie": 5,
+						"dienstleistungen": 17,
+						"finanz": 8
+					},
+					{
+						"id": "improve_quality",
+						"insgesamt": 37,
+						"industrie": 31,
+						"dienstleistungen": 39,
+						"finanz": 50
+					},
+					{
+						"id": "make_better_decisions",
+						"insgesamt": 31,
+						"industrie": 30,
+						"dienstleistungen": 31,
+						"finanz": 56
+					},
+					{
+						"id": "improve_efficiency",
+						"insgesamt": 30,
+						"industrie": 34,
+						"dienstleistungen": 29,
+						"finanz": 41
+					},
+					{
+						"id": "comply_with_regulations",
+						"insgesamt": 32,
+						"industrie": 33,
+						"dienstleistungen": 32,
+						"finanz": 55
+					}
+				],
+				"de": [
+					{
+						"id": "customer_needs_marketing_strategies",
+						"insgesamt": 32,
+						"industrie": 27,
+						"dienstleistungen": 38,
+						"finanz": 57
+					},
+					{
+						"id": "tailor_offer_to_customer",
+						"insgesamt": 37,
+						"industrie": 33,
+						"dienstleistungen": 43,
+						"finanz": 60
+					},
+					{
+						"id": "reach_new_customer_groups",
+						"insgesamt": 26,
+						"industrie": 26,
+						"dienstleistungen": 28,
+						"finanz": 32
+					},
+					{
+						"id": "introduce_data_based_products",
+						"insgesamt": 9,
+						"industrie": 5,
+						"dienstleistungen": 15,
+						"finanz": 9
+					},
+					{
+						"id": "improve_quality",
+						"insgesamt": 38,
+						"industrie": 36,
+						"dienstleistungen": 41,
+						"finanz": 40
+					},
+					{
+						"id": "make_better_decisions",
+						"insgesamt": 31,
+						"industrie": 28,
+						"dienstleistungen": 36,
+						"finanz": 42
+					},
+					{
+						"id": "improve_efficiency",
+						"insgesamt": 32,
+						"industrie": 31,
+						"dienstleistungen": 34,
+						"finanz": 48
+					},
+					{
+						"id": "comply_with_regulations",
+						"insgesamt": 32,
+						"industrie": 30,
+						"dienstleistungen": 35,
+						"finanz": 54
+					}
+				]
+			}
+		},
+		{
+			"id": "strategies_data_use",
+			"title": "Strategien der Datennutzung",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 70,
+			"text": "In Berlin fällt die Pharmaindustrie als mit Abstand intensivster Nutzer von eigenen, freien und mit Dritten ausgetauschten Daten auf. Die Befüllung von Datenräumen mit Daten wird eher im Dienstleistungsgewerbe, insbesondere der (relativ kleinen) Branche der Unternehmensberatungen betrieben. Die Branche der Software und Datenverarbeitung, die ihrerseits Tools und Ressourcen zur Datennutzung zur Verfügung stellt ist selbst eher durchschnittlich bei der Nutzung von Daten. Die Unterschiede in der Datennutzung durch Unternehmen unterschiedlicher Größe sind in Berlin wenig ausgeprägt, während alle Arten der Datennutzung im deutschen Durchschnitt mit der Betriebsgröße zunehmen.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "check_data_use",
+						"insgesamt": 34,
+						"industrie": 37,
+						"dienstleistungen": 33,
+						"software": 34,
+						"pharma": 55
+					},
+					{
+						"id": "collect_process_data",
+						"insgesamt": 27,
+						"industrie": 27,
+						"dienstleistungen": 27,
+						"software": 21,
+						"pharma": 43
+					},
+					{
+						"id": "buy_external_data",
+						"insgesamt": 11,
+						"industrie": 5,
+						"dienstleistungen": 13,
+						"software": 12,
+						"pharma": 7
+					},
+					{
+						"id": "sell_data",
+						"insgesamt": 4,
+						"industrie": 3,
+						"dienstleistungen": 4,
+						"software": 5,
+						"pharma": 0
+					},
+					{
+						"id": "use_open_data",
+						"insgesamt": 40,
+						"industrie": 35,
+						"dienstleistungen": 42,
+						"software": 43,
+						"pharma": 62
+					},
+					{
+						"id": "exchange_data",
+						"insgesamt": 26,
+						"industrie": 27,
+						"dienstleistungen": 26,
+						"software": 33,
+						"pharma": 46
+					},
+					{
+						"id": "offer_data",
+						"insgesamt": 17,
+						"industrie": 9,
+						"dienstleistungen": 19,
+						"software": 16,
+						"pharma": 4
+					}
+				],
+				"de": [
+					{
+						"id": "check_data_use",
+						"insgesamt": 36,
+						"industrie": 35,
+						"dienstleistungen": 36,
+						"software": 37,
+						"pharma": 42
+					},
+					{
+						"id": "collect_process_data",
+						"insgesamt": 28,
+						"industrie": 27,
+						"dienstleistungen": 29,
+						"software": 28,
+						"pharma": 25
+					},
+					{
+						"id": "buy_external_data",
+						"insgesamt": 6,
+						"industrie": 5,
+						"dienstleistungen": 7,
+						"software": 6,
+						"pharma": 8
+					},
+					{
+						"id": "sell_data",
+						"insgesamt": 1,
+						"industrie": 1,
+						"dienstleistungen": 2,
+						"software": 2,
+						"pharma": 1
+					},
+					{
+						"id": "use_open_data",
+						"insgesamt": 43,
+						"industrie": 42,
+						"dienstleistungen": 43,
+						"software": 44,
+						"pharma": 46
+					},
+					{
+						"id": "exchange_data",
+						"insgesamt": 23,
+						"industrie": 24,
+						"dienstleistungen": 22,
+						"software": 23,
+						"pharma": 27
+					},
+					{
+						"id": "offer_data",
+						"insgesamt": 11,
+						"industrie": 8,
+						"dienstleistungen": 15,
+						"software": 17,
+						"pharma": 11
+					}
+				]
+			}
+		},
+		{
+			"id": "most_common_data_skills",
+			"title": "Die häufigsten Data&shy;kompetenzen",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 70,
+			"text": "Während datenschutzkonforme Datenanalysesysteme am stärksten im Dienstleistungssektor verbreitet sind, spielen Echtzeitdaten in der Industrie und hier am stärksten in der Pharma-, Elektro- und Lebensmittelindustrie eine größere Rolle. Auffällig ist auch, dass die KI-Nutzung in der Berliner Industrie eine größere Rolle spielt als im Bundesdurchschnitt, während dies im Dienstleistungssektor nicht der Fall ist.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "employees_data_skills",
+						"insgesamt": 41,
+						"industrie": 24,
+						"dienstleistungen": 46,
+						"software": 56,
+						"pharma": 20
+					},
+					{
+						"id": "employees_data_responsibilities",
+						"insgesamt": 20,
+						"industrie": 13,
+						"dienstleistungen": 22,
+						"software": 29,
+						"pharma": 33
+					},
+					{
+						"id": "data_privacy_compliance",
+						"insgesamt": 51,
+						"industrie": 35,
+						"dienstleistungen": 56,
+						"software": 66,
+						"pharma": 50
+					},
+					{
+						"id": "big_data_analyses",
+						"insgesamt": 12,
+						"industrie": 4,
+						"dienstleistungen": 14,
+						"software": 18,
+						"pharma": 11
+					},
+					{
+						"id": "use_ai_methods",
+						"insgesamt": 27,
+						"industrie": 20,
+						"dienstleistungen": 29,
+						"software": 33,
+						"pharma": 20
+					},
+					{
+						"id": "real_time_analysis",
+						"insgesamt": 27,
+						"industrie": 29,
+						"dienstleistungen": 26,
+						"software": 45,
+						"pharma": 46
+					}
+				],
+				"de": [
+					{
+						"id": "employees_data_skills",
+						"insgesamt": 31,
+						"industrie": 21,
+						"dienstleistungen": 44,
+						"software": 58,
+						"pharma": 29
+					},
+					{
+						"id": "employees_data_responsibilities",
+						"insgesamt": 15,
+						"industrie": 11,
+						"dienstleistungen": 21,
+						"software": 24,
+						"pharma": 13
+					},
+					{
+						"id": "data_privacy_compliance",
+						"insgesamt": 39,
+						"industrie": 29,
+						"dienstleistungen": 51,
+						"software": 57,
+						"pharma": 43
+					},
+					{
+						"id": "big_data_analyses",
+						"insgesamt": 8,
+						"industrie": 6,
+						"dienstleistungen": 9,
+						"software": 15,
+						"pharma": 10
+					},
+					{
+						"id": "use_ai_methods",
+						"insgesamt": 18,
+						"industrie": 9,
+						"dienstleistungen": 29,
+						"software": 36,
+						"pharma": 12
+					},
+					{
+						"id": "real_time_analysis",
+						"insgesamt": 29,
+						"industrie": 32,
+						"dienstleistungen": 25,
+						"software": 29,
+						"pharma": 42
+					}
+				]
+			}
+		},
+		{
+			"id": "ai_use",
+			"title": "Einsatz von KI (alle Verfahren und Bereiche)",
+			"chart_type": "bar_chart",
+			"chart_unit": "%",
+			"max_value": 80,
+			"text": "KI wurde seit 2016 in Berlin in größerem Umfang eingesetzt als bundesweit. Das gilt für alle Branchen und für alle erfragten Verfahren. Die Nutzung durch Unternehmen in Produkten oder Verfahren ist in erheblichem Umfang gestiegen und liegt in 2025 im Durchschnitt bei 45% aller Unternehmen. Der Einsatz von KI in praktisch allen Branchen, deutet darauf hin, dass sich KI gerade zu einer neuen Basistechnologie entwickelt, die längst nicht mehr auf die Software-, Kreativ- und Beraterbranche beschränkt ist. Datenstand: 2025",
+			"chartData": {
+				"ber": {
+					"nahrung": 26,
+					"pharma": 29,
+					"holz": 7,
+					"metall": 14,
+					"elektroindustrie": 49,
+					"fahrzeugbau": 16,
+					"sonstige_konsumgueter": 26,
+					"energie": 11,
+					"telekommunikation": 55,
+					"software": 54,
+					"finanz": 48,
+					"unternehmensberatung": 49,
+					"architektur": 30,
+					"forschung": 54,
+					"kreativ": 75
+				},
+				"de": {
+					"nahrung": 12,
+					"pharma": 23,
+					"holz": 31,
+					"metall": 14,
+					"elektroindustrie": 35,
+					"fahrzeugbau": 24,
+					"sonstige_konsumgueter": 16,
+					"energie": 12,
+					"telekommunikation": 49,
+					"software": 61,
+					"finanz": 37,
+					"unternehmensberatung": 75,
+					"architektur": 18,
+					"forschung": 55,
+					"kreativ": 48
+				}
+			}
+		},
+		{
+			"id": "use_ai_processes",
+			"title": "Einsatz von KI nach Verfahren",
+			"chart_type": "matrix",
+			"text": "In 2024 ist der Einsatz von KI in Produkten oder Prozessen in Berliner Unternehmen immer noch stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Sprach- und Texterkennung und -verarbeitung sind das wichtigste Anwendungsgebiet, aber auch alle anderen KI-Verfahren haben nicht an Bedeutung verloren. Die Zahlen in den Legenden gibt den Prozentsatz der Unternehmen an, die das jeweilige KI-Verfahren nutzen. Die Fläche* der Quadrate wächst mit dem jeweiligen Prozentsatz.",
+			"chartData": {
+				"ber": [
+					{
+						"x": "nahrung",
+						"y": "speech_comprehension",
+						"value": 25
+					},
+					{
+						"x": "nahrung",
+						"y": "image_recognition",
+						"value": 16
+					},
+					{
+						"x": "nahrung",
+						"y": "machine_learning",
+						"value": 19
+					},
+					{
+						"x": "nahrung",
+						"y": "automation",
+						"value": 16
+					},
+					{
+						"x": "nahrung",
+						"y": "knowledge_based_systems",
+						"value": 23
+					},
+					{
+						"x": "pharma",
+						"y": "speech_comprehension",
+						"value": 29
+					},
+					{
+						"x": "pharma",
+						"y": "image_recognition",
+						"value": 20
+					},
+					{
+						"x": "pharma",
+						"y": "machine_learning",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "automation",
+						"value": 11
+					},
+					{
+						"x": "pharma",
+						"y": "knowledge_based_systems",
+						"value": 17
+					},
+					{
+						"x": "holz",
+						"y": "speech_comprehension",
+						"value": 7
+					},
+					{
+						"x": "holz",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "holz",
+						"y": "machine_learning",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "automation",
+						"value": 1
+					},
+					{
+						"x": "holz",
+						"y": "knowledge_based_systems",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "speech_comprehension",
+						"value": 13
+					},
+					{
+						"x": "metall",
+						"y": "image_recognition",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "machine_learning",
+						"value": 2
+					},
+					{
+						"x": "metall",
+						"y": "automation",
+						"value": 1
+					},
+					{
+						"x": "metall",
+						"y": "knowledge_based_systems",
+						"value": 2
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "speech_comprehension",
+						"value": 44
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "image_recognition",
+						"value": 23
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "machine_learning",
+						"value": 24
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 22
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "speech_comprehension",
+						"value": 16
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "image_recognition",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 9
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 2
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 3
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
+						"value": 26
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 10
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 8
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 2
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 10
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 10
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 55
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
+						"value": 28
+					},
+					{
+						"x": "telekommunikation",
+						"y": "machine_learning",
+						"value": 22
+					},
+					{
+						"x": "telekommunikation",
+						"y": "automation",
+						"value": 15
+					},
+					{
+						"x": "telekommunikation",
+						"y": "knowledge_based_systems",
+						"value": 29
+					},
+					{
+						"x": "software",
+						"y": "speech_comprehension",
+						"value": 52
+					},
+					{
+						"x": "software",
+						"y": "image_recognition",
+						"value": 26
+					},
+					{
+						"x": "software",
+						"y": "machine_learning",
+						"value": 30
+					},
+					{
+						"x": "software",
+						"y": "automation",
+						"value": 20
+					},
+					{
+						"x": "software",
+						"y": "knowledge_based_systems",
+						"value": 33
+					},
+					{
+						"x": "finanz",
+						"y": "speech_comprehension",
+						"value": 45
+					},
+					{
+						"x": "finanz",
+						"y": "image_recognition",
+						"value": 34
+					},
+					{
+						"x": "finanz",
+						"y": "machine_learning",
+						"value": 26
+					},
+					{
+						"x": "finanz",
+						"y": "automation",
+						"value": 29
+					},
+					{
+						"x": "finanz",
+						"y": "knowledge_based_systems",
+						"value": 29
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "machine_learning",
+						"value": 22
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 23
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
+						"value": 28
+					},
+					{
+						"x": "architektur",
+						"y": "speech_comprehension",
+						"value": 28
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 15
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "architektur",
+						"y": "automation",
+						"value": 11
+					},
+					{
+						"x": "architektur",
+						"y": "knowledge_based_systems",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "speech_comprehension",
+						"value": 53
+					},
+					{
+						"x": "forschung",
+						"y": "image_recognition",
+						"value": 19
+					},
+					{
+						"x": "forschung",
+						"y": "machine_learning",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "forschung",
+						"y": "knowledge_based_systems",
+						"value": 37
+					},
+					{
+						"x": "kreativ",
+						"y": "speech_comprehension",
+						"value": 75
+					},
+					{
+						"x": "kreativ",
+						"y": "image_recognition",
+						"value": 62
+					},
+					{
+						"x": "kreativ",
+						"y": "machine_learning",
+						"value": 26
+					},
+					{
+						"x": "kreativ",
+						"y": "automation",
+						"value": 26
+					},
+					{
+						"x": "kreativ",
+						"y": "knowledge_based_systems",
+						"value": 37
+					}
+				],
+				"de": [
+					{
+						"x": "nahrung",
+						"y": "speech_comprehension",
+						"value": 11
+					},
+					{
+						"x": "nahrung",
+						"y": "image_recognition",
+						"value": 7
+					},
+					{
+						"x": "nahrung",
+						"y": "machine_learning",
+						"value": 6
+					},
+					{
+						"x": "nahrung",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "nahrung",
+						"y": "knowledge_based_systems",
+						"value": 5
+					},
+					{
+						"x": "pharma",
+						"y": "speech_comprehension",
+						"value": 21
+					},
+					{
+						"x": "pharma",
+						"y": "image_recognition",
+						"value": 13
+					},
+					{
+						"x": "pharma",
+						"y": "machine_learning",
+						"value": 8
+					},
+					{
+						"x": "pharma",
+						"y": "automation",
+						"value": 5
+					},
+					{
+						"x": "pharma",
+						"y": "knowledge_based_systems",
+						"value": 10
+					},
+					{
+						"x": "holz",
+						"y": "speech_comprehension",
+						"value": 22
+					},
+					{
+						"x": "holz",
+						"y": "image_recognition",
+						"value": 14
+					},
+					{
+						"x": "holz",
+						"y": "machine_learning",
+						"value": 5
+					},
+					{
+						"x": "holz",
+						"y": "automation",
+						"value": 6
+					},
+					{
+						"x": "holz",
+						"y": "knowledge_based_systems",
+						"value": 17
+					},
+					{
+						"x": "metall",
+						"y": "speech_comprehension",
+						"value": 12
+					},
+					{
+						"x": "metall",
+						"y": "image_recognition",
+						"value": 6
+					},
+					{
+						"x": "metall",
+						"y": "machine_learning",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "automation",
+						"value": 4
+					},
+					{
+						"x": "metall",
+						"y": "knowledge_based_systems",
+						"value": 8
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "speech_comprehension",
+						"value": 29
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "image_recognition",
+						"value": 20
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "machine_learning",
+						"value": 15
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "automation",
+						"value": 10
+					},
+					{
+						"x": "elektroindustrie",
+						"y": "knowledge_based_systems",
+						"value": 16
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "speech_comprehension",
+						"value": 20
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "image_recognition",
+						"value": 11
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "machine_learning",
+						"value": 10
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "fahrzeugbau",
+						"y": "knowledge_based_systems",
+						"value": 12
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "speech_comprehension",
+						"value": 15
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "image_recognition",
+						"value": 9
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "machine_learning",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "automation",
+						"value": 5
+					},
+					{
+						"x": "sonstige_konsumgueter",
+						"y": "knowledge_based_systems",
+						"value": 6
+					},
+					{
+						"x": "energie",
+						"y": "speech_comprehension",
+						"value": 11
+					},
+					{
+						"x": "energie",
+						"y": "image_recognition",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "machine_learning",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "automation",
+						"value": 3
+					},
+					{
+						"x": "energie",
+						"y": "knowledge_based_systems",
+						"value": 7
+					},
+					{
+						"x": "telekommunikation",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "telekommunikation",
+						"y": "image_recognition",
+						"value": 32
+					},
+					{
+						"x": "telekommunikation",
+						"y": "machine_learning",
+						"value": 15
+					},
+					{
+						"x": "telekommunikation",
+						"y": "automation",
+						"value": 17
+					},
+					{
+						"x": "telekommunikation",
+						"y": "knowledge_based_systems",
+						"value": 22
+					},
+					{
+						"x": "software",
+						"y": "speech_comprehension",
+						"value": 56
+					},
+					{
+						"x": "software",
+						"y": "image_recognition",
+						"value": 31
+					},
+					{
+						"x": "software",
+						"y": "machine_learning",
+						"value": 33
+					},
+					{
+						"x": "software",
+						"y": "automation",
+						"value": 26
+					},
+					{
+						"x": "software",
+						"y": "knowledge_based_systems",
+						"value": 42
+					},
+					{
+						"x": "finanz",
+						"y": "speech_comprehension",
+						"value": 34
+					},
+					{
+						"x": "finanz",
+						"y": "image_recognition",
+						"value": 20
+					},
+					{
+						"x": "finanz",
+						"y": "machine_learning",
+						"value": 14
+					},
+					{
+						"x": "finanz",
+						"y": "automation",
+						"value": 12
+					},
+					{
+						"x": "finanz",
+						"y": "knowledge_based_systems",
+						"value": 24
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "speech_comprehension",
+						"value": 73
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "image_recognition",
+						"value": 58
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "machine_learning",
+						"value": 19
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "automation",
+						"value": 13
+					},
+					{
+						"x": "unternehmensberatung",
+						"y": "knowledge_based_systems",
+						"value": 58
+					},
+					{
+						"x": "architektur",
+						"y": "speech_comprehension",
+						"value": 17
+					},
+					{
+						"x": "architektur",
+						"y": "image_recognition",
+						"value": 9
+					},
+					{
+						"x": "architektur",
+						"y": "machine_learning",
+						"value": 8
+					},
+					{
+						"x": "architektur",
+						"y": "automation",
+						"value": 7
+					},
+					{
+						"x": "architektur",
+						"y": "knowledge_based_systems",
+						"value": 11
+					},
+					{
+						"x": "forschung",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "forschung",
+						"y": "image_recognition",
+						"value": 26
+					},
+					{
+						"x": "forschung",
+						"y": "machine_learning",
+						"value": 32
+					},
+					{
+						"x": "forschung",
+						"y": "automation",
+						"value": 18
+					},
+					{
+						"x": "forschung",
+						"y": "knowledge_based_systems",
+						"value": 28
+					},
+					{
+						"x": "kreativ",
+						"y": "speech_comprehension",
+						"value": 48
+					},
+					{
+						"x": "kreativ",
+						"y": "image_recognition",
+						"value": 38
+					},
+					{
+						"x": "kreativ",
+						"y": "machine_learning",
+						"value": 17
+					},
+					{
+						"x": "kreativ",
+						"y": "automation",
+						"value": 13
+					},
+					{
+						"x": "kreativ",
+						"y": "knowledge_based_systems",
+						"value": 19
+					}
+				]
+			}
+		},
+		{
+			"id": "use_ai_areas",
+			"title": "Einsatz von KI nach Anwendungsbereichen",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 40,
+			"text": "KI-Nutzung in Produkten und Prozessen hat in 2025 auch Einzug in praktisch alle Unternehmensbereiche von Unternehmen gefunden. In den Legenden ist wieder angegeben, wieviele Prozent aller Unternehmen 2025 KI im jeweiligen Unternehmensbereich genutzt haben.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "products_and_services",
+						"insgesamt": 38,
+						"industrie": 16,
+						"dienstleistungen": 45
+					},
+					{
+						"id": "process_automation",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 25
+					},
+					{
+						"id": "client_communication",
+						"insgesamt": 25,
+						"industrie": 15,
+						"dienstleistungen": 27
+					},
+					{
+						"id": "it_admin",
+						"insgesamt": 20,
+						"industrie": 9,
+						"dienstleistungen": 24
+					},
+					{
+						"id": "other_fields",
+						"insgesamt": 7,
+						"industrie": 3,
+						"dienstleistungen": 8
+					}
+				],
+				"de": [
+					{
+						"id": "products_and_services",
+						"insgesamt": 21,
+						"industrie": 9,
+						"dienstleistungen": 37
+					},
+					{
+						"id": "process_automation",
+						"insgesamt": 14,
+						"industrie": 9,
+						"dienstleistungen": 20
+					},
+					{
+						"id": "client_communication",
+						"insgesamt": 16,
+						"industrie": 13,
+						"dienstleistungen": 19
+					},
+					{
+						"id": "it_admin",
+						"insgesamt": 14,
+						"industrie": 8,
+						"dienstleistungen": 23
+					},
+					{
+						"id": "other_fields",
+						"insgesamt": 6,
+						"industrie": 6,
+						"dienstleistungen": 7
+					}
+				]
+			}
+		},
+		{
+			"id": "use_of_generative_ai",
+			"title": "Nutzung generativer KI",
+			"chart_type": "bar_chart_filter_keys",
+			"chart_unit": "%",
+			"max_value": 55,
+			"text": "Generative KI wurde in 2025 in 55% aller Berliner Unternehmen eingesetzt. Die rasante Verbreitung der in der Regel auf Large Language Models beruhenden generativen KI, über die beinahe täglich in den Medien berichtet wird schlägt sich auch in den Zahlen zur tatsächlichen Nutzung nieder. Um auch die eigenverantwortliche Nutzung generativer KI durch Beschäftigte außerhalb etablierter Prozesse in Unternehmen abbilden zu können, wurde bei der Frage nach generativer KI abweichend von den vorstehenden Fragen bewusst nicht nach dem Einsatz in Produkten oder Prozessen gefragt. Die Zahlen zur Nutzung liegen deshalb nochmals höher als bei den vorstehenden Fragen und umfassen neben der eigenverantwortlichen Nutzung durch Beschäftigte auch experimentelle Nutzungen, die noch nicht in Produkte oder Prozesse eigegangen sind. Die Unterschiede sind hier zwischen den Branchen größer als zwischen Berlin und Deutschland. Selbst entwickelte generative KI spielt nur in relativ wenigen Branchen eine relevante Rolle. Bei der Nutzung generativer KI halten sich vom Unternehmen intern bereitgestellte externe Lösungen und die eigenverantwortliche Nutzung durch Beschäftigte aktuell bei großen Unterschieden zwischen den Branchen etwa die Waage. Die Prozentangaben in den Legenden meinen hier wieder % aller Unternehmen der jeweiligen Branche.",
+			"chartData": {
+				"ber": [
+					{
+						"id": "insgesamt",
+						"insgesamt": 55,
+						"industrie": 38,
+						"dienstleistungen": 60
+					},
+					{
+						"id": "provision_of_internal_generative_ai_solutions",
+						"insgesamt": 12,
+						"industrie": 7,
+						"dienstleistungen": 13
+					},
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 36,
+						"industrie": 15,
+						"dienstleistungen": 42
+					},
+					{
+						"id": "provision_of_responsible_use_by_employees",
+						"insgesamt": 30,
+						"industrie": 23,
+						"dienstleistungen": 31
+					}
+				],
+				"de": [
+					{
+						"id": "insgesamt",
+						"insgesamt": 40,
+						"industrie": 27,
+						"dienstleistungen": 56
+					},
+					{
+						"id": "provision_of_internal_generative_ai_solutions",
+						"insgesamt": 7,
+						"industrie": 5,
+						"dienstleistungen": 10
+					},
+					{
+						"id": "provision_of_external_generative_ai_solutions",
+						"insgesamt": 21,
+						"industrie": 12,
+						"dienstleistungen": 33
+					},
+					{
+						"id": "provision_of_responsible_use_by_employees",
+						"insgesamt": 21,
+						"industrie": 15,
+						"dienstleistungen": 28
+					}
+				]
+			}
+		}
+	]
+}

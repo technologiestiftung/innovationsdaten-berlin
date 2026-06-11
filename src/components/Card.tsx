@@ -1,63 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
-import { isInRange } from "../utilities";
-import { useGlobalContext } from "../GlobalContext";
+import React, { useEffect, useRef } from "react";
+import { useGlobalContext } from "@/GlobalContext";
+import data from "@/data/chapters.json";
+import { ChapterItem, ChapterKeys } from "@/types/global";
+import { isInRange } from "@/utilities";
 
 type CardProps = {
-	dataKey: string;
-	title: string;
-	displayNumber?: string;
-	text?: string;
+	chapterKey: ChapterKeys;
+	chapterItem: ChapterItem;
 	onSetCurrent?: () => void;
 	isNotCurrent?: boolean;
-	last?: boolean;
-	first?: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
-	dataKey,
-	title,
-	displayNumber,
-	text,
+	chapterKey,
+	chapterItem,
 	onSetCurrent,
 	isNotCurrent,
-	last,
-	first,
 }) => {
-	const { theme, headerHeight, isMobile, smallerDesktop } = useGlobalContext();
+	const { isMobile } = useGlobalContext();
+	const { id, title, text } = chapterItem;
 	const cardRef = useRef<HTMLDivElement>(null);
-	const cardTextRef = useRef<HTMLDivElement>(null);
-	const [specificMargin, setSpecificMargin] = useState(0);
-	const [cardHeight, setCardHeight] = useState<number | null>(null);
-	const hide = false;
 
-	const getMarginTop = () => {
-		if (isMobile) {
-			return 0;
-		}
-		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
-		}
-		if (first) {
-			return specificMargin;
-		}
-		return window.innerHeight - headerHeight;
-	};
-	const checkMarginTop = () => {
-		const getMarginTopFromFuntion = getMarginTop();
-		if (getMarginTopFromFuntion < 0) {
-			return 0;
-		}
-		return getMarginTopFromFuntion;
-	};
-	const getMarginBottom = () => {
-		if (cardHeight) {
-			return (window.innerHeight - cardHeight - headerHeight) / 2;
-		}
-		if (last) {
-			return window.innerHeight - headerHeight;
-		}
-		return 0;
-	};
+	// displayNumber
+	const displayNumber = `${Object.keys(data).indexOf(chapterKey) + 1}.${data[chapterKey as keyof typeof data].findIndex((indexItem) => indexItem.id === id) + 1}`;
+	const showDisplayNumber =
+		typeof window !== "undefined" &&
+		window.location.toString().includes("localhost") &&
+		displayNumber;
+
 	const handleScroll = () => {
 		if (isMobile) {
 			return;
@@ -81,58 +51,22 @@ const Card: React.FC<CardProps> = ({
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
-	useEffect(() => {
-		if (last || first) {
-			const getCard = document.querySelector(
-				last
-					? `#${dataKey} .card:last-of-type`
-					: `#${dataKey} .card:first-of-type`,
-			);
-			if (!getCard) {
-				return;
-			}
-			const getCardHeight = getCard?.getBoundingClientRect().height;
-			const subtraction = window.innerHeight - getCardHeight - headerHeight;
-			const getMargin = subtraction / 2;
-			setSpecificMargin(getMargin);
-		}
-		if (dataKey === "welcome") {
-			const getCard = document.querySelector(
-				last
-					? `#${dataKey} .card:last-of-type`
-					: `#${dataKey} .card:first-of-type`,
-			);
-			if (!getCard) {
-				return;
-			}
-			setCardHeight(getCard?.getBoundingClientRect().height);
-		}
-	}, [headerHeight]);
+
 	return (
-		<div
-			ref={cardRef}
-			className={`card w-fit ${theme} ${isMobile ? "" : "p-6"}`}
-			style={{
-				marginTop: checkMarginTop(),
-				marginBottom: getMarginBottom(),
-			}}
-		>
-			{typeof window !== "undefined" &&
-				window.location.toString().includes("localhost") &&
-				displayNumber &&
-				!hide && <h4>{displayNumber}</h4>}
-			{window.innerWidth <= smallerDesktop ? (
-				<h3 dangerouslySetInnerHTML={{ __html: title }} />
-			) : (
+		<div className="flex items-center lg:min-h-[calc(100vh-var(--header-height))]">
+			<div
+				ref={cardRef}
+				className="w-fit max-lg:mb-[10vh] lg:p-6 lg:border-[2px] border-foreground"
+			>
+				{showDisplayNumber && <h4>{displayNumber}</h4>}
 				<h2 dangerouslySetInnerHTML={{ __html: title }} />
-			)}
-			{text && (
-				<p
-					className={`mt-4 max-w-[80ch] serif ${theme}`}
-					ref={cardTextRef}
-					dangerouslySetInnerHTML={{ __html: text }}
-				/>
-			)}
+				{text && (
+					<p
+						className="mt-4 max-w-[80ch] serif"
+						dangerouslySetInnerHTML={{ __html: text }}
+					/>
+				)}
+			</div>
 		</div>
 	);
 };
