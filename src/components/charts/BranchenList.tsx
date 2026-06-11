@@ -1,44 +1,41 @@
-import React from "react";
-import branchen from "../../data/branchen.json";
-import colors from "../../data/colors.json";
-import Icon from "../Icons";
-import { useGlobalContext } from "../../GlobalContext";
-import { BranchenItem } from "../../types/global";
+import { CSSProperties } from "react";
+import branchen from "@/data/branchen.json";
+import sektoren from "@/data/sektoren.json";
+import wordings from "@/data/wordings.json";
+import { BranchenItem, Sektoren } from "@/types/global";
+import Icon from "@/components/Icons";
 
-const BranchenList: React.FC = () => {
-	const { fontSize, isMobile } = useGlobalContext();
+const BranchenList = () => {
+	const sektorenList = sektoren.map((sektor) => sektor.id) as Sektoren[];
+
 	const DisplayBranche = ({ branche }: { branche: BranchenItem }) => {
 		return (
 			<div
-				className="flex items-center gap-3 py-2 px-5"
-				style={{ backgroundColor: branche.color }}
+				className="flex items-center gap-3 py-2 px-5 bg-[var(--bg)]"
+				style={{ "--bg": branche.color } as CSSProperties}
 			>
-				<Icon id={branche.id} setColor={colors.white} size={fontSize * 1.5} />
-				<span className="line-clamp-1 break-words ignore white bold">
+				<Icon id={branche.id} className="size-6 text-white" />
+				<p className="line-clamp-1 break-words font-bold text-white">
 					{branche.name}
-				</span>
+				</p>
 			</div>
 		);
 	};
 	return (
-		<>
-			<h3 className="mb-2">Industrie</h3>
-			<div className={`flex ${isMobile ? "flex-col" : "flex-wrap"} gap-2`}>
-				{branchen
-					.filter((branche) => branche.sektor_id === "industrie")
-					.map((branche) => (
-						<DisplayBranche key={branche.id} branche={branche} />
-					))}
-			</div>
-			<h3 className="mt-8 mb-2">Dienstleistung</h3>
-			<div className={`flex ${isMobile ? "flex-col" : "flex-wrap"} gap-2`}>
-				{branchen
-					.filter((branche) => branche.sektor_id === "dienstleistungen")
-					.map((branche) => (
-						<DisplayBranche key={branche.id} branche={branche} />
-					))}
-			</div>
-		</>
+		<div className="flex flex-col gap-8">
+			{sektorenList.map((sektor) => (
+				<div key={sektor}>
+					<h3 className="mb-2">{wordings[sektor]}</h3>
+					<div className="flex flex-col lg:flex-row lg:flex-wrap gap-2">
+						{branchen
+							.filter((branche) => branche.sektor_id === sektor)
+							.map((branche) => (
+								<DisplayBranche key={branche.id} branche={branche} />
+							))}
+					</div>
+				</div>
+			))}
+		</div>
 	);
 };
 

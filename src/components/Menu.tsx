@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
-import chapters from "../data/chapters.json";
-import { useGlobalContext } from "../GlobalContext";
+import chapters from "@/data/chapter-links.json";
+import { cn } from "@/utilities";
+import { Chapter } from "@/types/global";
 
-interface NavProps {
-	link: string;
-	title: string;
-}
 interface MenuProps {
 	chapter: string;
 	setChapter: (chapter: string) => void;
 }
 
 const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
-	const { theme, isMobile } = useGlobalContext();
-
-	const NavStep: React.FC<NavProps> = ({ link, title }) => {
+	const NavStep = ({ singleChapter }: { singleChapter: Chapter }) => {
+		const { link, title } = singleChapter;
 		const [isOpen, setIsOpen] = useState(false);
 		const [mouseIn, setMouseIn] = useState(false);
 
@@ -62,17 +58,24 @@ const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
 					setIsOpen(false);
 					setMouseIn(false);
 				}}
-				className="relative flex items-center"
+				className="relative flex items-center cursor-pointer"
 				onClick={() => scrollToIdWithOffset(link)}
 			>
 				<div
-					className={`${theme} ${isOpen || chapter === title ? "open" : ""}`}
+					className={cn(
+						// measures
+						"w-5 h-5",
+						// borders
+						"border-[2px] border-foreground",
+						// rest
+						"hover:bg-foreground",
+						// conditionals
+						(isOpen || chapter === title) && "bg-foreground",
+					)}
 				/>
 				{(isOpen || mouseIn) && (
-					<div
-						className={`absolute right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap ${theme}`}
-					>
-						<p className={`ignore bold ${theme}`}>{title}</p>
+					<div className="absolute right-full mr-2 top-1/2 -translate-y-1/2 p-2 whitespace-nowrap bg-foreground">
+						<p className="text-background font-bold">{title}</p>
 					</div>
 				)}
 			</a>
@@ -81,20 +84,19 @@ const Menu: React.FC<MenuProps> = ({ chapter, setChapter }) => {
 
 	return (
 		<nav
-			className="fixed top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10"
-			style={
-				isMobile
-					? {
-							transform: "translateX(100vw)",
-						}
-					: {}
-			}
+			className={cn(
+				// position
+				"fixed top-1/2 left-auto right-[2vw] -translate-y-1/2 max-lg:translate-x-[100vw]",
+				// layout
+				"flex flex-col gap-2",
+				// rest
+				"z-10",
+			)}
 		>
-			{chapters.map((mapChapter) => (
+			{chapters.map((singleChapter) => (
 				<NavStep
-					key={mapChapter.link}
-					link={mapChapter.link}
-					title={mapChapter.title}
+					key={singleChapter.link}
+					singleChapter={singleChapter as Chapter}
 				/>
 			))}
 		</nav>
