@@ -3,7 +3,7 @@
 		{
 			"id": "big_fact_berlin",
 			"title": "Der Gesamt&shy;umsatz der befragten Berliner Unter&shy;nehmen beträgt...",
-			"text": "Gezeigt wird der Umsatz aller befragten Branchen für das Referenzjahr der jeweils letzten Befragung, hier 2024, einschließlich Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
+			"text": "Gezeigt wird der Umsatz aller in 2025 befragten Branchen für das Referenzjahr 2024, sofern im jeweiligen Diagramm nicht anders angegeben. Daten zur Berliner Wirtschaft beinhalten Berliner Betriebstätten von Großunternehmen mit Sitz außerhalb Berlins.",
 			"chart_type": "big_fact",
 			"bigFacts": [
 				{
@@ -1081,8 +1081,8 @@
 			}
 		},
 		{
-			"id": "inno_ausgaben_2023",
-			"title": "Innovations&shy;ausgaben 2023",
+			"id": "inno_ausgaben_2024",
+			"title": "Innovations&shy;ausgaben 2024",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
 			"text": "Während in Deutschland der Maschinen- und Fahrzeugbau mit sehr großem Abstand die meisten Innovationsausgaben trägt, ist der „Innovatorenmix“ in Berlin etwas ausgeglichener: Die Hauptlast der Innovationsausgaben verteilt sich in Berlin gleichmäßiger auf 4 führende Branchen, angeführt von der Pharmaindustrie.",
@@ -1128,8 +1128,8 @@
 			}
 		},
 		{
-			"id": "fue_ausgaben_2023",
-			"title": "Forschungs- und Ent&shy;wicklungs&shy;ausgaben 2023",
+			"id": "fue_ausgaben_2024",
+			"title": "Forschungs- und Ent&shy;wicklungs&shy;ausgaben 2024",
 			"chart_type": "bar_chart",
 			"chart_unit": "€",
 			"text": "In Forschung und Entwicklungsausgaben sind Software und Pharma Spitzenreiter in Berlin. Für Deutschland erzählen die Zahlen eine ganz klare Geschichte: Unternehmen des Maschinen- und Fahrzeugbaus bleiben ganz vorne, mit mehr Ausgaben für Forschung und Entwicklung als die darauffolgenden Branchen der Elektro,- Pharma- und Softwareindustrie zusammen.",
@@ -5342,7 +5342,7 @@
 			"id": "use_ai_processes",
 			"title": "Einsatz von KI nach Verfahren",
 			"chart_type": "matrix",
-			"text": "In 2024 ist der Einsatz von KI in Produkten oder Prozessen in Berliner Unternehmen immer noch stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Sprach- und Texterkennung und -verarbeitung sind das wichtigste Anwendungsgebiet, aber auch alle anderen KI-Verfahren haben nicht an Bedeutung verloren. Die Zahlen in den Legenden gibt den Prozentsatz der Unternehmen an, die das jeweilige KI-Verfahren nutzen. Die Fläche* der Quadrate wächst mit dem jeweiligen Prozentsatz.",
+			"text": "In 2024 ist der Einsatz von KI in Produkten oder Prozessen in Berliner Unternehmen immer noch stärker verbreitet als bundesweit. Die Wirtschaft in Deutschland hat den Abstand auf Berlin aber verkleinert. Das gilt nicht nur für die hier gezeigten Branchen, sondern auch für Unternehmen aller Größenklassen. Sprach- und Texterkennung und -verarbeitung sind das wichtigste Anwendungsgebiet, aber auch alle anderen KI-Verfahren haben nicht an Bedeutung verloren. Die Zahlen in den Legenden gibt den Prozentsatz der Unternehmen an, die das jeweilige KI-Verfahren nutzen. Die Fläche der Quadrate wächst mit dem jeweiligen Prozentsatz.",
 			"chartData": {
 				"ber": [
 					{
@@ -6102,7 +6102,7 @@
 		},
 		{
 			"id": "use_ai_areas",
-			"title": "Einsatz von KI nach Anwendungsbereichen",
+			"title": "Einsatz von KI nach Anwendungs&shy;bereichen",
 			"chart_type": "bar_chart_filter_keys",
 			"chart_unit": "%",
 			"max_value": 40,
